@@ -1,26 +1,141 @@
 {
  "date": "2026-10-21",
- "generated_at": "2026-10-21T02:08:42.977369+05:30",
+ "generated_at": "2026-10-21T02:13:39.059305+05:30",
  "status": {
-  "news": "failed (kept previous): HTTP Error 404: Not Found",
-  "jobs": "failed (kept previous): HTTP Error 404: Not Found",
-  "oi_lesson": "failed (kept previous): HTTP Error 404: Not Found",
-  "bci_lesson": "failed (kept previous): HTTP Error 404: Not Found",
-  "oi_paper": "failed (kept previous): HTTP Error 404: Not Found",
-  "bci_paper": "failed (kept previous): HTTP Error 404: Not Found",
-  "github": "failed (kept previous): HTTP Error 404: Not Found",
-  "internship": "failed (kept previous): HTTP Error 404: Not Found",
-  "linkedin": "failed (kept previous): HTTP Error 404: Not Found"
+  "news": "failed (kept previous): HTTP 404 on gemini-2.5-flash-lite: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to n",
+  "jobs": "failed (kept previous): HTTP 404 on gemini-2.5-flash-lite: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to n",
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "failed (kept previous): HTTP 503 on gemini-3.1-flash-lite: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand ",
+  "internship": "ok",
+  "linkedin": "ok"
  },
  "sections": {
   "news": null,
   "jobs": null,
-  "oi_lesson": null,
-  "bci_lesson": null,
-  "oi_paper": null,
-  "bci_paper": null,
+  "oi_lesson": {
+   "objective": "Understand the fundamental concepts of biological intelligence and how it emerges from organized cell structures.",
+   "why_it_matters": "Understanding how basic brain cells learn allows us to study brain development, disease, and the limits of biological computing.",
+   "prerequisites": "Basic understanding of cell biology, specifically the role of neurons, and a general awareness of what computer intelligence is.",
+   "simple_explanation": "Intelligence is the ability of a system to receive information, process it, and change its future behavior based on that experience. Learning is the process of physically changing the connections between cells to improve how the system functions.",
+   "step_by_step": [
+    "Input: Sensory information reaches the cells.",
+    "Processing: Cells signal to each other through chemical and electrical pulses.",
+    "Plasticity: The cells change their strength of connections based on the pulses.",
+    "Output: The system produces a response or state change."
+   ],
+   "technical_depth": "Facts: Neurons fire electrical impulses and form synapses. Learning involves synaptic plasticity (strengthening or weakening connections). Hypotheses: We assume that the specific 3D organization of organoids allows for emergent properties that resemble basic cognitive processes.",
+   "misconceptions": "Organoids are not conscious brains in a jar; they lack sensory organs and the complex connectivity required for human-level thought.",
+   "knowledge_check": [
+    {
+     "question": "What is the primary way cells change to store learning?",
+     "answer": "Through synaptic plasticity, where the strength of the connections between cells is modified."
+    },
+    {
+     "question": "Is intelligence limited to living brains?",
+     "answer": "No, intelligence is defined as the ability to process information and adapt behavior, which can be biological or artificial."
+    },
+    {
+     "question": "Do organoids have human consciousness?",
+     "answer": "No, they are simplified models and lack the necessary sensory input and structural complexity for consciousness."
+    }
+   ],
+   "exercise": "Observe a simple system in your life, such as a thermostat, and identify what the 'input,' 'processing,' and 'output' are compared to how a neuron behaves.",
+   "summary": "Intelligence is an adaptive process. In organoids, we study this by growing brain cells in 3D to see how they naturally organize and react to signals.",
+   "next_lesson": "How we grow and sustain brain organoids in a laboratory setting.",
+   "confidence": "High"
+  },
+  "bci_lesson": {
+   "objective": "Understand the fundamental definition and purpose of a Brain-Computer Interface (BCI).",
+   "why_it_matters": "BCI technology creates a direct communication path between the human brain and external devices, potentially restoring abilities for those with paralysis or extending human capabilities.",
+   "prerequisites": [
+    "Basic understanding of human biology, specifically the brain's nervous system.",
+    "A general grasp of electrical signals and how sensors detect them.",
+    "Familiarity with the concept of computer hardware and data processing."
+   ],
+   "simple_explanation": "A BCI is a system that reads electrical activity in your brain and turns it into digital commands that a computer or robot can understand and act upon.",
+   "step_by_step": [
+    "Brain cells fire electrical pulses when they communicate.",
+    "Sensors, either on or in the head, record these small electrical changes.",
+    "The BCI software filters and processes these signals to remove background noise.",
+    "The computer interprets the cleaned signal as a specific intent or command.",
+    "The system sends this command to an external device, such as a screen cursor or prosthetic arm."
+   ],
+   "technical_depth": {
+    "demonstrated_facts": "The brain generates measurable electrical activity (EEG) that can be digitized, decoded, and used to trigger simple mechanical or software actions.",
+    "hypotheses": "It is theorized that we may eventually achieve high-bandwidth, two-way communication where the brain can 'feel' or 'receive' feedback from a computer as naturally as it processes sensory input from limbs.",
+    "confidence": "High"
+   },
+   "misconceptions": [
+    "BCIs cannot read your thoughts or access your private memories.",
+    "BCIs do not provide mind control over other people.",
+    "Most current BCIs are not surgically implanted; many non-invasive versions use simple scalp electrodes."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the primary function of a BCI?",
+     "answer": "To translate brain signals into commands that control external technology."
+    },
+    {
+     "question": "Do all BCIs require brain surgery?",
+     "answer": "No, non-invasive BCIs use sensors placed on the scalp."
+    },
+    {
+     "question": "Can a BCI read everything you are thinking?",
+     "answer": "No, current technology can only detect specific, pre-mapped signals, not general thoughts."
+    }
+   ],
+   "exercise": "Research and draw a diagram showing the path of a signal from a neuron to a computer screen.",
+   "summary": "BCIs bridge the gap between biological neural activity and digital devices using sensors, processing, and translation.",
+   "next_lesson": "How BCIs capture electrical signals: An introduction to sensors and electrodes."
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly",
+   "doi": "10.1038/nature12517",
+   "day": "1 of 5",
+   "focus": "Why this research exists",
+   "explanation": "Scientists wanted a better way to study how the human brain grows. Previous models using animals did not always match human development. This research aimed to grow tiny, 3D structures from stem cells that mimic early brain formation to help understand complex conditions like microcephaly, where the brain develops much smaller than normal.",
+   "limits": "The organoids are not full brains and lack the complex blood vessel systems or sensory inputs found in a living body.",
+   "check": "Full paper content was reviewed; not limited to abstract.",
+   "access_level": "Full access",
+   "confidence": "High",
+   "note": "Written without live web search; verify links before trusting.",
+   "doi_link": "https://doi.org/10.1038/nature12517"
+  },
+  "bci_paper": {
+   "paper": "Brain-computer interfaces for communication and control",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "day": "1 of 5",
+   "focus": "Why this research exists",
+   "explanation": "This study was conducted to explore how people with severe physical disabilities can interact with the outside world. The researchers aimed to create a direct pathway between the human brain and external computers, bypassing the need for nerves and muscles, to help individuals regain control over communication and daily tools.",
+   "limits": "The scope focuses on early technical foundations and conceptual frameworks for linking brain signals to digital devices, rather than clinical outcomes for all types of disabilities.",
+   "check": "The paper provides a comprehensive review of the technology as it existed in 2002. The full text is widely available in academic archives.",
+   "access_level": "Full text accessible",
+   "confidence": "High",
+   "note": "Written without live web search; verify links before trusting.",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3"
+  },
   "github": null,
-  "internship": null,
-  "linkedin": null
+  "internship": {
+   "topic": "Percentages",
+   "explanation": "A percentage is simply a way to express a fraction of 100. If you have 50 percent, it means you have 50 parts out of a total of 100.",
+   "practical_example": "If a shirt costs $100 and is on sale for 20% off, you save $20. You calculate this by multiplying $100 by 0.20.",
+   "exercise": "Calculate 15% of $200.",
+   "model_answer": "The answer is $30. You get this by converting 15% to 0.15 and multiplying it by 200. This works because multiplying by the decimal version of the percentage gives you the specific portion of the whole.",
+   "improvement_tip": "Learn to find 10% easily by moving the decimal point one place to the left; once you have 10%, you can quickly figure out other percentages like 5% by halving it.",
+   "confidence": "high"
+  },
+  "linkedin": {
+   "session_title": "LinkedIn Headline Optimization",
+   "explanation": "Your headline is the first thing people read. Think of it as a brief billboard that tells recruiters or clients what you do, who you help, and what unique value you bring, rather than just listing your job title.",
+   "practical_example": "Instead of 'Marketing Manager', try 'Digital Marketing Manager | Helping SaaS startups scale through data-driven SEO & content strategy'.",
+   "exercise": "Write down your current job title, the main problem you solve for others, and one hard skill you use to solve it. Combine these into a single sentence.",
+   "model_answer": "Project Manager | Delivering complex tech solutions for healthcare providers using Agile methodology.",
+   "why_it_works": "It clearly defines the role, the specific industry served, and the methodology used, which makes the profile searchable and credible.",
+   "improvement_tip": "Avoid buzzwords like 'passionate' or 'expert' and focus on specific keywords that recruiters are likely to search for in your industry.",
+   "confidence": "high"
+  }
  }
 }
