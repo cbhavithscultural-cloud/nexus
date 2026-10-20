@@ -1,33 +1,39 @@
 import json, os, sys, datetime, urllib.request
 import time, urllib.error
 KEY = os.environ["GEMINI_API_KEY"]
-MODEL = os.environ.get("MODEL", "gemini-2.5-flash-lite")
-URL = "https://generativelanguage.googleapis.com/v1beta/models/" + MODEL + ":generateContent"
+CANDS = [m for m in [os.environ.get("MODEL"), "gemini-3.1-flash-lite", "gemini-3.5-flash-lite", "gemini-flash-lite-latest", "gemini-3-flash-preview", "gemini-flash-latest", "gemini-2.5-flash-lite"] if m]
+BASE = "https://generativelanguage.googleapis.com/v1beta/models/"
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 now = datetime.datetime.now(IST); today = now.date().isoformat()
 def rd(p, d):
     try: return json.load(open(p))
     except Exception: return d
-if os.path.exists(f"data/days/{today}.json") and not os.environ.get("FORCE"):
+if "ok" in rd(f"data/days/{today}.json", {}).get("status", {}).values() and not os.environ.get("FORCE"):
     print("already published for", today); sys.exit(0)  # idempotent
 prev = rd("data/latest.json", {}).get("sections", {})
 st = rd("data/state.json", {"oi":0,"bci":0,"po":[0,1],"pb":[0,1],"gh":[0,1],"ip":0,"li":0})
 RULES = ("Return ONLY one JSON object, no markdown. Never invent papers, links, dates, numbers or job openings. "
          "Paraphrase; no long quotes. If unsure, say so in a 'confidence' field. Plain beginner-friendly language.")
 def call(prompt, search):
+    global CANDS
     if os.environ.get("DRY"): return {"stub": True, "prompt_start": prompt[:60], "url": "https://example.com"}
     body = {"contents": [{"parts": [{"text": RULES + "\n" + prompt}]}]}
     if search: body["tools"] = [{"google_search": {}}]
     else: body["generationConfig"] = {"responseMimeType": "application/json"}
-    for attempt in range(3):
-        try:
-            r = urllib.request.Request(URL, json.dumps(body).encode(), {"x-goog-api-key": KEY, "content-type": "application/json"})
-            out = json.load(urllib.request.urlopen(r, timeout=300))
-            t = "".join(p.get("text", "") for p in out["candidates"][0]["content"]["parts"])
-            res = json.loads(t[t.index("{"):t.rindex("}") + 1]); time.sleep(8); return res
-        except urllib.error.HTTPError as e:
-            if e.code == 429 and attempt < 2: time.sleep(40 * (attempt + 1)); continue
-            raise
+    last = None
+    for model in list(CANDS):
+        for attempt in range(3):
+            try:
+                r = urllib.request.Request(BASE + model + ":generateContent", json.dumps(body).encode(), {"x-goog-api-key": KEY, "content-type": "application/json"})
+                out = json.load(urllib.request.urlopen(r, timeout=300))
+                t = "".join(p.get("text", "") for p in out["candidates"][0]["content"]["parts"])
+                res = json.loads(t[t.index("{"):t.rindex("}") + 1])
+                CANDS = [model]; time.sleep(8); return res
+            except urllib.error.HTTPError as e:
+                detail = e.read().decode()[:160]; last = RuntimeError("HTTP %s on %s: %s" % (e.code, model, detail))
+                if e.code == 429 and attempt < 2: time.sleep(40 * (attempt + 1)); continue
+                break
+    raise last
 def ask(prompt, search=False, need=True):
     if search:
         try: return call(prompt, True)
