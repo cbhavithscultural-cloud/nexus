@@ -1,7 +1,9 @@
 import json, os, sys, datetime, urllib.request
-import time, urllib.error, urllib.parse, html, email.utils
+import time, urllib.error, urllib.parse, html, email.utils, copy
 import xml.etree.ElementTree as ET
-KEY = os.environ["GEMINI_API_KEY"]
+KEY = os.environ.get("GEMINI_API_KEY", "").strip()
+if not KEY and not os.environ.get("DRY"):
+    raise SystemExit("Missing GEMINI_API_KEY. Add it in GitHub repository Settings > Secrets and variables > Actions.")
 START = time.time()
 os.makedirs("data/days", exist_ok=True)
 def save(p, o):
@@ -37,8 +39,23 @@ LJ = rd("data/latest.json", {}); prev = LJ.get("sections", {})
 st = rd("data/state.json", dict(INIT))
 if LJ.get("date") and LJ.get("v") != 2: st, prev = dict(INIT), {}  # discard content from the old script version once
 TD = rd(f"data/days/{today}.json", {})
-done = TD.get("sections", {}) if TD.get("v") == 2 and not os.environ.get("FORCE") else {}
-dstat = TD.get("status", {}) if done else {}  # sections already ok today are reused, only failed ones retry
+# If the user reset the saved counters to the initial values, regenerate all
+# learning sections from Day 1 while retaining today's Discovery Center data
+# (robotics news and job listings). This avoids reusing stale lessons after reset.
+RESET_COUNTERS = (st.get("oi", 0) == 0 and st.get("bci", 0) == 0
+                  and st.get("po", [0, 1]) == [0, 1]
+                  and st.get("pb", [0, 1]) == [0, 1]
+                  and st.get("gh", [0, 1]) == [0, 1]
+                  and st.get("ip", 0) == 0 and st.get("li", 0) == 0)
+TODAY_CACHE_VALID = TD.get("v") == 2 and TD.get("date") == today
+if os.environ.get("FORCE") or not TODAY_CACHE_VALID:
+    done = {}
+elif RESET_COUNTERS:
+    # Keep Discovery Center's current content, but not cached lessons/career sessions.
+    done = {k: v for k, v in TD.get("sections", {}).items() if k in ("news", "jobs")}
+else:
+    done = TD.get("sections", {})
+dstat = TD.get("status", {}) if done else {}
 RULES = ("Return ONLY one JSON object, no markdown. Never invent papers, links, dates, numbers or job openings. "
          "Paraphrase; no long quotes. If unsure, say so in a 'confidence' field. Plain beginner-friendly language.")
 def call(prompt, search):
@@ -76,15 +93,135 @@ def ask(prompt, search=False, need=True):
     if search: r["note"] = "Written without live web search; verify links before trusting."
     return r
 soft_ask = lambda p, s=False: ask(p, s, False)
-SYL = {"oi": ["What is intelligence and learning","Cells and neurons","How neurons signal","Synapses and neural networks","Stem cells and differentiation","Brain organoids","Recording electrical activity with electrode arrays","What Organoid Intelligence has and has not shown"],
- "bci": ["What is a BCI","Neurons and motor cortex","EEG basics","Invasive vs non-invasive recording","Sampling and Nyquist","Filtering and artefacts","Features and classification","Motor imagery decoding"]}
+# Curriculum banks are deliberately ordered from foundations to applied topics.
+# They rotate through a broad sequence instead of repeating after only eight lessons.
+SYL = {
+ "oi": [
+  "What intelligence and learning mean in biology and engineering",
+  "Cell biology foundations for organoid intelligence",
+  "Neuron structure: dendrites, soma, axon and synapse",
+  "Membrane voltage and ion gradients",
+  "Action potentials and neural signalling",
+  "Synaptic transmission and neurotransmitters",
+  "Plasticity: how connections change with activity",
+  "Neural networks compared with artificial neural networks",
+  "Stem cells, pluripotency and differentiation",
+  "How cerebral organoids are grown in a laboratory",
+  "Brain development and regional identity in organoids",
+  "Microcephaly research using cerebral organoids",
+  "Limitations of organoids: maturity, variability and missing systems",
+  "Electrode arrays and recording extracellular activity",
+  "Reading raster plots and basic neural activity data",
+  "Stimulation versus recording in neural cultures",
+  "Closed-loop experiments: observe, respond and measure",
+  "How to define learning in a biological system",
+  "Controls, baselines and reproducibility in organoid experiments",
+  "Basic statistics for biological experiments",
+  "Interpreting figures and avoiding overclaiming",
+  "Organoid intelligence: what has been demonstrated and what remains hypothetical",
+  "Ethics, consent and governance in neural tissue research",
+  "Biological computing compared with silicon computing",
+  "Energy use and measurement challenges in biological systems",
+  "Signal-to-noise ratio in neural recordings",
+  "Data preprocessing for neural activity recordings",
+  "Correlation does not prove learning or intelligence",
+  "Experimental design: hypothesis, control and outcome measures",
+  "How to read an organoid research abstract critically",
+  "Reproducibility and batch effects in cell culture",
+  "Neural activity patterns and simple information measures",
+  "Safety and responsible communication in organoid research",
+  "Compare two organoid papers using evidence tables",
+  "Design a small literature review question in organoid intelligence",
+  "Build a glossary of core organoid intelligence terms",
+  "Explain an organoid experiment to a non-specialist",
+  "Evaluate a claim about biological learning using evidence",
+  "Review: cells, neurons, organoids and measurement",
+  "Capstone: propose a cautious, testable organoid intelligence experiment"
+ ],
+ "bci": [
+  "What a brain-computer interface is and is not",
+  "Brain anatomy relevant to movement and communication",
+  "Neurons and the motor cortex",
+  "Electrical signals and volume conduction",
+  "EEG electrodes, reference and ground",
+  "Sampling rate and the Nyquist principle",
+  "Filtering EEG and understanding artefacts",
+  "Eye, muscle and movement artefacts in EEG",
+  "Time-domain and frequency-domain features",
+  "Fourier transform intuition for EEG",
+  "Band power and common EEG frequency bands",
+  "Feature scaling and data leakage",
+  "Train, validation and test splits for BCI data",
+  "Classification basics: thresholds, LDA and SVM concepts",
+  "Confusion matrices, accuracy and balanced metrics",
+  "Motor imagery and common experimental protocols",
+  "Event-related potentials and the P300 paradigm",
+  "Steady-state visual evoked potentials",
+  "Invasive, semi-invasive and non-invasive BCIs",
+  "Electrode materials and signal quality trade-offs",
+  "BCI calibration and user-specific variation",
+  "Online versus offline BCI evaluation",
+  "Feedback, adaptation and user learning in a BCI loop",
+  "Latency, reliability and practical control trade-offs",
+  "BCI cursor control: from signal to command",
+  "Speech neuroprostheses: what the system actually decodes",
+  "Robotic arm control with a BCI: architecture and safety",
+  "Shared control: combining BCI intent with robot autonomy",
+  "How to read a BCI paper's methods and figures",
+  "Avoiding data leakage in neural decoding experiments",
+  "Clinical translation and limits of laboratory results",
+  "Accessibility, consent, privacy and neural data security",
+  "BCI performance across participants and sessions",
+  "Reproducibility and open datasets in BCI research",
+  "Design a safe offline EEG classification experiment",
+  "Compare two BCI papers with a structured evidence table",
+  "Explain sensitivity, specificity and information transfer rate",
+  "Evaluate a BCI claim without confusing accuracy and usefulness",
+  "Review: acquisition, processing, decoding, output and feedback",
+  "Capstone: design and evaluate a simple BCI control pipeline"
+ ]
+}
 PAP = {"oi": [("Cerebral organoids model human brain development and microcephaly (Lancaster 2013)","10.1038/nature12517"),("In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)","10.1016/j.neuron.2022.09.001"),("Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish (Smirnova 2023)","10.3389/fsci.2023.1017235")],
  "bci": [("Brain-computer interfaces for communication and control (Wolpaw 2002)","10.1016/S1388-2457(02)00057-3"),("Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)","10.1038/nature04970"),("A high-performance speech neuroprosthesis (Willett 2023)","10.1038/s41586-023-06377-x")]}
 REPOS = ["ros-navigation/navigation2", "ROBOTIS-GIT/turtlebot3", "moveit/moveit2"]
 PD = ["Why this research exists","Research design and method","Results and figures","Engineering, limits and ethics","Bigger picture, then a 3-question check"]
 GD = ["Understand the project","How it works","Run it in simulation and engineering judgement"]
-INT = ["Percentages","Self-introduction practice","Ratios","Debugging a robot sensor scenario","Time and work","Explaining a project clearly"]
-LI = ["Headline","About section","Project description","GitHub profile","Skills section","Networking message"]
+INT = [
+ "Read an embedded-systems internship description and extract required skills",
+ "Explain your robotics project in 60 seconds without exaggerating",
+ "Debug a robot sensor scenario using symptoms and hypotheses",
+ "Embedded C fundamentals: variables, pointers and memory safety",
+ "Microcontroller peripherals: GPIO, timers, PWM and interrupts",
+ "UART, I2C and SPI: choose the right interface",
+ "Explain sensor calibration and measurement error",
+ "Read a simple circuit diagram and identify power and ground paths",
+ "Basic electronics calculations used in embedded interviews",
+ "C programming exercise: arrays, structs and bitwise operations",
+ "Debug a motor-control problem systematically",
+ "Explain PID control with a practical robotics example",
+ "Explain an encoder and calculate wheel speed",
+ "Describe an IMU and distinguish bias from noise",
+ "Write a concise technical email to an internship recruiter",
+ "Practice a behavioural question using a truthful STAR answer",
+ "Review a datasheet and find voltage, current and timing limits",
+ "Explain a Git commit, branch and pull request",
+ "Create a one-week plan to close a real skill gap",
+ "Mock interview: explain one design decision and its trade-offs"
+]
+LI = [
+ "Write an honest headline focused on embedded systems and robotics",
+ "Draft an About section with evidence rather than generic claims",
+ "Describe a robotics project using problem, design, test and result",
+ "Improve a GitHub README so a recruiter can reproduce the project",
+ "Choose skills that can be demonstrated with projects or coursework",
+ "Write a respectful networking message asking for advice",
+ "Turn a project task into a measurable resume bullet without inventing numbers",
+ "Explain a technical challenge and how you debugged it",
+ "Organize project photos, diagrams and code links professionally",
+ "Find relevant keywords in an embedded internship description",
+ "Prepare a short follow-up message after a genuine conversation",
+ "Audit a profile for unsupported claims and unclear wording"
+]
 FIELDS = "Fields: objective, why_it_matters, prerequisites, simple_explanation, step_by_step, technical_depth, misconceptions, knowledge_check (3 questions with answers), exercise, summary, next_lesson, confidence."
 FEEDS = [("IEEE Spectrum Robotics", "https://spectrum.ieee.org/feeds/topic/robotics.rss"), ("The Robot Report", "https://www.therobotreport.com/feed/"), ("Robohub", "https://robohub.org/feed/")]
 def parse_feed(data, source):
@@ -127,7 +264,10 @@ def news():
         out.append(it); seen.append(src["url"])
     if not out: raise RuntimeError("model returned no usable items")
     st["seen"] = seen[-300:]; return {"items": out[:3]}
-JOBQ = ("robot", "embedded", "firmware", "ros ", "ros2", "autonomous", "neuro", "bci", "brain", "computer vision", "slam", "mechatronic", "control system", "perception", "motion planning")
+JOBQ = ("robot", "embedded", "firmware", "ros ", "ros2", "autonomous", "neuro", "bci", "brain-computer", "computer vision", "slam", "mechatronic", "control system", "perception", "motion planning", "electronics", "iot", "microcontroller", "electrical engineer", "electronic engineer", "robotics software", "automation engineer", "test engineer", "systems engineer")
+SENIOR_TERMS = ("senior", "staff engineer", "principal", "director", "vice president", "head of", "lead engineer", "engineering manager", "architect")
+JUNIOR_TERMS = ("intern", "internship", "graduate", "entry level", "entry-level", "junior", "trainee", "new grad", "student", "fresher", "early career", "apprentice", "associate engineer")
+INDIA_TERMS = ("india", "bengaluru", "bangalore", "hyderabad", "pune", "chennai", "mumbai", "delhi", "noida", "gurugram", "gurgaon", "manipal", "remote", "worldwide", "anywhere")
 def fetch_jobs():
     if os.environ.get("DRY"): return [{"title": "Robotics Intern", "url": "https://example.com/j", "published": "2026-10-18", "location": "Remote", "company": "TestCo", "source": "Test"}]
     out = []
@@ -142,18 +282,85 @@ def fetch_jobs():
     except Exception as e: print("jobs source failed: Arbeitnow", str(e)[:80])
     return out
 def jobs():
-    cutoff = (now - datetime.timedelta(days=45)).date().isoformat(); seen = {}
+    cutoff = (now - datetime.timedelta(days=45)).date().isoformat()
+    unique = {}
     for j in fetch_jobs():
-        t = j["title"].lower()
-        if not any(q in t for q in JOBQ) or not j["url"].startswith("https://") or not j["published"] or j["published"] < cutoff or j["published"] >= today: continue
-        j["title"] = j.pop("_t", j["title"]); seen[j["url"]] = j
-    L = sorted(seen.values(), key=lambda j: j["published"], reverse=True)[:8]
-    if not L: raise RuntimeError("no matching listings found in the job sources")
-    return {"items": [{"title": j["title"], "type": "vacancy listing (still open: not verified)", "location": j["location"], "published": j["published"], "source": j["source"], "url": j["url"], "company": j["company"]} for j in L],
-            "action": "Open one listing, read the required skills, and note which ones you can already show with a project.",
-            "note": "Sources: Remotive and Arbeitnow, mostly remote or Europe-based. For India internships, search LinkedIn Jobs (https://www.linkedin.com/jobs/search/?keywords=robotics%20intern&location=India) and Internshala yourself, and check each posting's date."}
+        raw_title = str(j.get("title", ""))
+        title = raw_title.lower()
+        location = str(j.get("location", ""))
+        haystack = title + " " + location.lower()
+        url = str(j.get("url", ""))
+        published = str(j.get("published", ""))
+        if not any(q in title for q in JOBQ):
+            continue
+        if any(q in title for q in SENIOR_TERMS):
+            continue
+        if not url.startswith("https://") or not published or published < cutoff or published >= today:
+            continue
+        junior = any(q in title for q in JUNIOR_TERMS)
+        india_or_remote = any(q in haystack for q in INDIA_TERMS)
+        # Keep relevant experienced non-senior roles too, but rank internships/fresher roles first.
+        score = (100 if junior else 0) + (30 if india_or_remote else 0)
+        score += 10 if any(q in title for q in ("embedded", "firmware", "robotics", "mechatronic", "microcontroller")) else 0
+        clean_title = j.get("_t", raw_title)
+        unique[url] = {"title": clean_title, "url": url, "published": published,
+                       "location": location or "Not specified", "company": j.get("company", "Not specified"),
+                       "source": j.get("source", "Unknown"), "_score": score}
+    ranked = sorted(unique.values(), key=lambda j: (j["_score"], j["published"]), reverse=True)[:10]
+    if not ranked:
+        raise RuntimeError("no matching recent robotics/embedded/electronics jobs found; previous listings retained")
+    return {"items": [{"title": j["title"], "type": "vacancy listing (availability not independently verified)",
+                       "location": j["location"], "published": j["published"], "source": j["source"],
+                       "url": j["url"], "company": j["company"]} for j in ranked],
+            "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+            "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."}
+
+def recent_history(section_name, limit=10):
+    """Read recent saved topics/summaries to discourage short-term repetition."""
+    found = []
+    try:
+        paths = sorted((x for x in os.listdir("data/days") if x.endswith(".json") and x[:10] < today), reverse=True)
+        for dayfile in paths[:30]:
+            obj = rd(os.path.join("data/days", dayfile), {})
+            sec = (obj.get("sections") or {}).get(section_name)
+            if not isinstance(sec, dict):
+                continue
+            label = sec.get("topic") or sec.get("paper") or sec.get("project_name") or sec.get("next_lesson") or ""
+            summary = sec.get("summary") or sec.get("simple_explanation") or sec.get("explanation") or ""
+            if label or summary:
+                found.append({"date": obj.get("date", dayfile[:10]), "topic": str(label)[:180], "summary": str(summary)[:280]})
+            if len(found) >= limit:
+                break
+    except Exception as e:
+        print("history lookup warning:", str(e)[:80])
+    return found
+
 def lesson(k):
-    i = st[k] % len(SYL[k]); r = ask(f"Write lesson {i+1} for {'Organoid Intelligence' if k=='oi' else 'Brain-Computer Interface'} beginners: '{SYL[k][i]}'. Teach prerequisites first. Separate demonstrated facts from hypotheses. {FIELDS}"); st[k] += 1; return r
+    day_number = st[k] + 1
+    i = st[k] % len(SYL[k])
+    cycle = st[k] // len(SYL[k])
+    subject = 'Organoid Intelligence' if k == 'oi' else 'Brain-Computer Interface'
+    level = ('foundation' if cycle == 0 else 'application' if cycle == 1 else 'advanced synthesis')
+    history_key = "oi_lesson" if k == "oi" else "bci_lesson"
+    recent = recent_history(history_key, 10)
+    prompt = (f"Write day {day_number} of a 365-day spiral-learning {subject} curriculum. "
+              f"Current curriculum topic {i+1} of {len(SYL[k])}: '{SYL[k][i]}'. Review cycle: {cycle+1}; level: {level}. "
+              f"Recent previous lessons to avoid duplicating: {json.dumps(recent, ensure_ascii=False)}. "
+              "Avoid repeating their wording, examples, exercise, and main takeaway. If revisiting a topic, explicitly add a new application, calculation, experiment design, critique, or engineering case. "
+              "For cycle 1, teach the topic from first principles. For cycle 2, revisit it with an applied engineering/research case, "
+              "a worked example and a common failure mode. For later cycles, use a more advanced critique, experiment-design task, "
+              "or synthesis challenge while briefly refreshing prerequisites. Do not merely repeat the previous explanation. "
+              "Teach prerequisites first, explain technical terms, and distinguish established evidence from open questions. "
+              "Do not fabricate citations, measurements, studies or results. Make the lesson useful for a 30-minute study session. " + FIELDS)
+    r = ask(prompt)
+    required = ('objective', 'simple_explanation', 'exercise', 'summary', 'next_lesson')
+    missing = [field for field in required if not r.get(field)]
+    if missing:
+        raise ValueError('lesson missing required fields: ' + ', '.join(missing))
+    if not isinstance(r.get('knowledge_check'), list) or len(r['knowledge_check']) < 2:
+        raise ValueError('lesson needs at least two knowledge-check questions')
+    st[k] += 1
+    return r
 def getj(u, h=None):
     return urllib.request.urlopen(urllib.request.Request(u, headers=h or {"User-Agent": "nexus-bot"}), timeout=60)
 def crossref(doi):
@@ -182,17 +389,47 @@ def github():
     r["confidence"] = "Based on verified repo metadata" + (" and README excerpt" if readme else "") + "; code was not run"
     st["gh"] = [ri + 1, 1] if day == 3 else [ri, day + 1]; return r
 def simple(k, label, topics):
-    i = st[k] % len(topics); r = ask(f"{label} session (15 min) on '{topics[i]}'. Audience: a beginner engineering student aiming for robotics, BCI and embedded-systems internships in India. Every example must come from that field and must not invent experience. Content: short explanation, practical example, one exercise, a model answer with why it works, and one improvement tip."); st[k] += 1; return r
+    i = st[k] % len(topics)
+    section_key = "internship" if k == "ip" else "linkedin"
+    recent = recent_history(section_key, 10)
+    r = ask(f"{label} session {st[k]+1} of the ongoing 365-day curriculum (15 min) on '{topics[i]}'. Audience: a beginner engineering student aiming for robotics, BCI and embedded-systems internships in India. Use beginner-friendly language and examples from this field. Recent sessions to avoid duplicating: {json.dumps(recent, ensure_ascii=False)}. Avoid repeating the same example or exercise; make this session practically distinct. Never invent the student's experience, achievements, job openings or numerical results. Return JSON with topic, explanation, practical_example, exercise, model_answer, why_it_works, improvement_tip, and confidence. Keep it actionable and concise.")
+    required = ('explanation', 'exercise', 'model_answer')
+    missing = [field for field in required if not r.get(field)]
+    if missing:
+        raise ValueError('practice section missing required fields: ' + ', '.join(missing))
+    st[k] += 1
+    return r
 res, status = {}, {}
 PLAN = [("oi_lesson", lambda: lesson("oi")), ("bci_lesson", lambda: lesson("bci")), ("internship", lambda: simple("ip", "Internship preparation", INT)), ("linkedin", lambda: simple("li", "LinkedIn profile improvement", LI)),
         ("oi_paper", lambda: paper("oi", "po")), ("bci_paper", lambda: paper("bci", "pb")), ("github", github), ("news", news), ("jobs", jobs)]
 busy = 0
 for name, f in PLAN:
-    if str(dstat.get(name, "")).startswith("ok"): res[name] = done[name]; status[name] = "ok"; continue
-    if busy >= 2 or time.time() - START > 1200: res[name] = prev.get(name); status[name] = "skipped: Google busy or time budget used, will retry"; continue
-    try: res[name] = f(); status[name] = "ok"; busy = 0
-    except Busy as e: res[name] = prev.get(name); status[name] = "failed (kept previous): " + str(e)[:200]; busy += 1
-    except Exception as e: res[name] = prev.get(name); status[name] = "failed (kept previous): " + str(e)[:250]
+    if str(dstat.get(name, "")).startswith("ok") and name in done:
+        res[name] = done[name]
+        status[name] = "ok (reused from today's successful run)"
+        continue
+    if busy >= 2 or time.time() - START > 1200:
+        res[name] = prev.get(name)
+        status[name] = "skipped: Google busy or time budget used; will retry"
+        continue
+    # A failed generation must not advance any curriculum/day counter or consume news URLs.
+    state_before = copy.deepcopy(st)
+    try:
+        value = f()
+        if not isinstance(value, dict) or not value:
+            raise ValueError("section output was empty or not a JSON object")
+        res[name] = value
+        status[name] = "ok"
+        busy = 0
+    except Busy as e:
+        st = state_before
+        res[name] = prev.get(name)
+        status[name] = "failed (kept previous): " + str(e)[:200]
+        busy += 1
+    except Exception as e:
+        st = state_before
+        res[name] = prev.get(name)
+        status[name] = "failed (kept previous): " + str(e)[:250]
 out = {"v": 2, "date": today, "generated_at": now.isoformat(), "status": status, "sections": res}
 save("data/latest.json", out); save(f"data/days/{today}.json", out); save("data/state.json", st)
 print(status)

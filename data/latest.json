@@ -1,170 +1,161 @@
 {
  "v": 2,
- "date": "2026-10-21",
- "generated_at": "2026-10-21T16:43:20.394690+05:30",
+ "date": "2026-10-22",
+ "generated_at": "2026-10-22T01:27:32.863028+05:30",
  "status": {
-  "oi_lesson": "ok",
-  "bci_lesson": "ok",
-  "internship": "ok",
-  "linkedin": "ok",
-  "oi_paper": "ok",
-  "bci_paper": "ok",
-  "github": "ok",
-  "news": "ok",
-  "jobs": "ok"
+  "oi_lesson": "ok (reused from today's successful run)",
+  "bci_lesson": "ok (reused from today's successful run)",
+  "internship": "ok (reused from today's successful run)",
+  "linkedin": "ok (reused from today's successful run)",
+  "oi_paper": "ok (reused from today's successful run)",
+  "bci_paper": "ok (reused from today's successful run)",
+  "github": "ok (reused from today's successful run)",
+  "news": "ok (reused from today's successful run)",
+  "jobs": "ok (reused from today's successful run)"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand the basic ideas of intelligence and learning using simple words.",
-   "why_it_matters": "Before studying how brain cells in a lab learn, we need to know what learning actually means.",
+   "objective": "Understand the basic definitions of intelligence and learning from both biological and engineering viewpoints.",
+   "why_it_matters": "Organoid intelligence combines living brain tissue with computers. To build or study these systems, we first need to define what makes something smart or able to learn.",
    "prerequisites": [
-    "Basic curiosity about how living things work",
-    "No prior science background needed"
+    "Basic awareness that living brains process information",
+    "Basic awareness that computers process information"
    ],
-   "simple_explanation": "Intelligence is the ability to solve problems and adapt to changes. Learning is changing how you act based on past experiences. Even simple living cells can do this to survive.",
+   "simple_explanation": "In biology, intelligence is how well a living thing adapts to its environment to survive, and learning is changing behavior based on experience. In engineering, intelligence is solving complex problems using rules or data, and learning is updating a system's internal settings to improve its tasks. Organoid intelligence sits right in the middle, using biological cells to perform computing tasks.",
    "step_by_step": [
-    "Step 1: Define intelligence as problem-solving.",
-    "Step 2: Define learning as changing behavior after an experience.",
-    "Step 3: Look at how single cells respond to their environment."
+    "Define biological intelligence as survival-driven adaptation and problem-solving.",
+    "Define biological learning as lasting changes in cells (like neurons) based on past inputs.",
+    "Define engineering intelligence as algorithmic decision-making and pattern recognition.",
+    "Define engineering learning as adjusting mathematical weights in a model using data.",
+    "Compare the two: biology adapts flexibly with very little energy, while computers calculate fast with rigid rules."
    ],
-   "technical_depth": "We focus on cellular adaptation and plasticity at a very high level, without complex math or jargon.",
+   "technical_depth": "Established evidence shows that biological neural networks alter synaptic strength (such as through long-term potentiation) to store information. Artificial neural networks mimic this through mathematical weight updates during training. However, it remains an open question how emergent properties like subjective awareness or high-level reasoning arise from these networks in either domain.",
    "misconceptions": [
-    "Misconception: Only humans and smart animals can learn. Fact: Even basic biological cells can change their behavior based on signals.",
-    "Misconception: Intelligence requires a whole brain. Fact: Individual brain cells can process information and adapt."
+    "Misconception: Computers already think and learn exactly like human brains. Reality: Computers use electricity and math formulas, whereas brains use complex biological chemistry and physical cellular growth.",
+    "Misconception: Intelligence requires a whole animal body. Reality: Individual cells and lab-grown tissues can show basic adaptive responses to stimuli."
    ],
    "knowledge_check": [
     {
-     "question": "What is a simple way to define learning?",
-     "answer": "Changing how you act based on experience."
+     "question": "How is biological learning generally defined?",
+     "answer": "A lasting change in behavior or cellular response based on past experience."
     },
     {
-     "question": "Do living cells need a full brain to respond to their environment?",
-     "answer": "No, individual cells can react to outside signals."
+     "question": "What is a core difference between biological and engineering intelligence?",
+     "answer": "Biology adapts flexibly for survival using wet chemistry, while engineering uses strict mathematical algorithms on hardware."
     },
     {
-     "question": "What is intelligence mainly about?",
-     "answer": "Solving problems and adapting to new situations."
+     "question": "What is an open, unresolved question in both fields?",
+     "answer": "How high-level intelligence and subjective awareness truly emerge from connected processing units."
     }
    ],
-   "exercise": "Write down one way you learned something new today and how your behavior changed because of it.",
-   "summary": "Intelligence is problem-solving, and learning is changing behavior from experience. Both can happen even at the level of individual cells.",
-   "next_lesson": "Lesson 2: What is Organoid Intelligence?",
+   "exercise": "Write down two examples from your daily life: one where you learned something biologically (like riding a bike), and one where a machine learned something (like a phone recognizing your face). Compare how they might process mistakes.",
+   "summary": "Intelligence and learning mean adapting to new information. Biology does this through living cells changing over time, while engineering does it through math and algorithms. Organoid intelligence bridges these two worlds.",
+   "next_lesson": "Day 2: Overview of neural cells and wetware computing basics.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand what a Brain-Computer Interface (BCI) is, how it works at a basic level, and what you need to know before studying it.",
-   "why_it_matters": "BCIs help people with physical disabilities communicate and control devices using only their thoughts, and they open up new ways for humans to interact with technology.",
+   "objective": "Understand what a brain-computer interface (BCI) is, what it is not, and the basic idea of how it connects the brain to external devices.",
+   "why_it_matters": "BCIs offer a way to restore lost sensory or motor functions and open new ways for humans to interact with technology, making it essential to separate real science from science fiction.",
    "prerequisites": [
-    "Basic knowledge that the human brain uses tiny electrical signals to control the body.",
-    "Understanding that computers can measure and process electrical signals.",
-    "Curiosity about how biology and technology can connect."
+    "Basic knowledge that the human body uses electrical and chemical signals to control movement and thoughts.",
+    "Basic understanding that computers process digital signals."
    ],
-   "simple_explanation": "A Brain-Computer Interface is a direct communication pathway between the brain and an external device, like a computer or a robotic arm. It listens to the electrical activity inside your brain, translates that activity into commands, and tells a machine what to do without needing muscles or speech.",
+   "simple_explanation": "Think of a BCI as a bridge. Your brain speaks the language of biology (tiny electrical pulses from brain cells), and computers speak the language of digital code (ones and zeros). A BCI is a tool that listens to your brain activity, translates it, and sends commands to a computer or machine so you can interact with the world without using your muscles or voice.",
    "step_by_step": [
-    "Brain Activity: The user thinks about a specific action, which creates electrical signals in the brain.",
-    "Signal Detection: Sensors (placed on the scalp or implanted inside the skull) pick up these tiny electrical signals.",
-    "Signal Processing: A computer receives the raw signals, filters out noise, and translates the patterns into digital commands.",
-    "Action: The computer or connected device carries out the command, such as moving a cursor on a screen."
+    "Step 1: The brain generates electrical signals when a person thinks, feels, or tries to move.",
+    "Step 2: Sensors (electrodes) placed on the scalp or inside the head detect these tiny electrical changes.",
+    "Step 3: A computer system translates these recorded signals into digital data.",
+    "Step 4: Algorithms interpret the data to figure out what the user intended to do.",
+    "Step 5: The computer or connected device carries out the intended action, like moving a cursor on a screen."
    ],
-   "technical_depth": "Demonstrated fact: Brain cells communicate via electrical and chemical activity, and external sensors can record this activity (electroencephalography, or EEG). Hypothesis: Highly complex thoughts and full internal speech can be reliably and quickly decoded in real-time for everyday consumer use, though current technology is still far from this.",
+   "technical_depth": "BCIs rely on electrophysiology\u2014measuring the electrical activity of neurons. Signals can be recorded non-invasively (from outside the skull, like EEG) or invasively (from inside the skull, touching or entering brain tissue). The system must process these noisy signals in real-time, filtering out interference from blinking, muscle movement, and electrical noise from the environment, before translating them into control signals.",
    "misconceptions": [
-    "BCIs can read your exact thoughts and secrets against your will.",
-    "BCIs are fully wireless mind-reading helmets available in stores today.",
-    "BCIs replace the human brain with computer parts."
+    "Misconception 1: BCIs can read your exact, complex thoughts like sentences in a book. Reality: Current BCIs mostly detect specific intent, like moving a cursor left or right, or spelling words letter by letter.",
+    "Misconception 2: BCIs can control your mind or write new memories into your brain. Reality: Current human BCIs are overwhelmingly one-way or very limited two-way communication tools; they cannot mind-control people."
    ],
    "knowledge_check": [
     {
-     "question": "What does BCI stand for?",
-     "answer": "Brain-Computer Interface."
+     "question": "What is the primary job of a brain-computer interface?",
+     "answer": "To translate brain signals into digital commands that control external devices."
     },
     {
-     "question": "Do BCIs require you to speak or move your muscles to control a computer?",
-     "answer": "No, they use brain signals directly."
+     "question": "Can current BCIs read your inner monologue or complex thoughts word-for-word?",
+     "answer": "No, they measure specific patterns of brain activity related to distinct intents or actions, not full private thoughts."
     },
     {
-     "question": "What do sensors detect from the brain?",
-     "answer": "Tiny electrical signals."
+     "question": "Do all BCIs require surgery to implant sensors inside the brain?",
+     "answer": "No, some BCIs are non-invasive and record signals from sensors placed on the scalp."
     }
    ],
-   "exercise": "Close your eyes and imagine moving your right hand, without actually moving it. Notice how your body prepares for the action. A BCI looks for the electrical patterns created during this exact type of mental preparation.",
-   "summary": "A BCI connects the brain directly to a machine by reading electrical brain signals, translating them with a computer, and turning them into actions.",
-   "next_lesson": "Lesson 2: How Brain Signals Are Measured (EEG, ECoG, and Implants)",
+   "exercise": "Take 5 minutes to list three everyday devices you use (like a smartphone or TV remote) and write down how a non-muscle-based control system (like a BCI) might change how you interact with just one of them.",
+   "summary": "A BCI is a communication bridge between the brain and a computer, translating biological electrical signals into digital commands. It is not mind-reading or mind-control, but rather a tool for translating user intent into device actions.",
+   "next_lesson": "Day 2: Overview of brain anatomy and how neurons communicate.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Percentages",
-   "duration_minutes": 15,
-   "confidence": "Unverified: AI-written from model knowledge, no live sources",
-   "content": {
-    "explanation": "A percentage is simply a part of a whole, where the whole is always 100. It is a way to compare numbers using a common scale.",
-    "practical_example": "If an internship pays $20 an hour and you get a 10 percent raise, you calculate 10 percent of 20, which is $2. Your new pay is $22.",
-    "exercise": "An item in a store costs $50 and is on sale for 20 percent off. What is the final price?",
-    "model_answer": {
-     "solution": "$40",
-     "why_it_works": "First, find 10 percent of 50 by moving the decimal one spot to the left, which is 5. Double that to get 20 percent, which is 10. Finally, subtract that $10 discount from the original $50 to get $40."
-    },
-    "improvement_tip": "Practice calculating tips and discounts in your head during everyday shopping to build fast mental math skills."
-   }
+   "topic": "Read an embedded-systems internship description and extract required skills",
+   "explanation": "Before applying for a robotics, BCI, or embedded systems internship in India, you need to know what companies actually want. Job descriptions contain hidden clues about the skills they value most. By breaking down the post, you can spot repeating keywords like C programming, Arduino, or ROS.",
+   "practical_example": "Imagine a startup in Bengaluru posts an internship for a 'Robotics Firmware Intern'. The description says: 'Looking for a student who knows C++, can work with microcontrollers like ESP32, and has used I2C sensors.' You extract three main skills: C++, ESP32, and I2C communication.",
+   "exercise": "Find a real internship post for an embedded systems or robotics role in India. List the top three technical skills and top two tools or software mentioned in that post.",
+   "model_answer": "Top technical skills: 1. Embedded C, 2. Circuit debugging. Top tools: 1. STM32 Nucleo board, 2. Oscilloscope.",
+   "why_it_works": "It stops you from wasting time learning random things. You focus only on the exact tools and programming languages Indian companies are asking for right now.",
+   "improvement_tip": "Do not just look at the title. Read the entire 'Requirements' or 'Responsibilities' paragraph to find tools they use daily, such as Git or KiCad.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "LinkedIn Headline Improvement",
-   "duration_minutes": 15,
-   "confidence": "Unverified: AI-written from model knowledge, no live sources",
-   "session": {
-    "explanation": "Your headline is the short line under your name. It tells people what you do and how you help, beyond just your job title.",
-    "practical_example": "Instead of 'Job Seeker at Company', use 'Data Analyst helping businesses turn numbers into sales'.",
-    "exercise": "Write down your current job role, who you help, and one main result you create for them.",
-    "model_answer": {
-     "text": "Marketing Specialist | Growing local businesses with social media",
-     "why_it_works": "It clearly states the job and shows the specific value brought to clients."
-    },
-    "tip": "Include keywords related to your target job so recruiters can find you easily in searches."
-   }
+   "topic": "Write an honest headline focused on embedded systems and robotics",
+   "explanation": "Your LinkedIn headline sits right under your name. For beginners, it should clearly state what you are studying, your key interests like robotics or BCI, and your current goal, such as looking for an internship in India.",
+   "practical_example": "Electronics Engineering Student | Passionate about Embedded Systems, Robotics & BCI | Seeking Summer Internships",
+   "exercise": "Write your own one-line headline using your current branch of study, your main technical interest, and your goal to find an internship.",
+   "model_answer": "B.Tech Undergraduate | Embedded Systems & Robotics Enthusiast | Open to Internship Opportunities",
+   "why_it_works": "It is clear, honest about your student status, and helps recruiters searching for specific keywords like embedded systems find your profile instantly.",
+   "improvement_tip": "Avoid generic buzzwords like 'rockstar' or 'guru'. Stick to clear technical terms that match the roles you want.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Cerebral organoids model human brain development and microcephaly",
+   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
+   "focus": "Growing three-dimensional human brain tissues in the lab to study how the brain develops and what goes wrong in conditions like microcephaly.",
+   "explanation": "Scientists wanted a better way to study the human brain because animal models, like mice, do not fully capture how human brains grow and develop. By using stem cells, the researchers created tiny, organized brain-like structures that mimic early human brain development, allowing them to study microcephaly (a condition where the head and brain are unusually small).",
+   "limits": "The Crossref metadata provided did not include an abstract, so this summary relies on general knowledge of the well-known 2013 study by Lancaster and colleagues.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature12517",
-   "day": "Day 1 of 5",
-   "focus": "Why this research exists",
-   "explanation": "Human brain development is hard to study because animal models do not fully match human brain size and complexity. The researchers created 3D brain-like structures, called cerebral organoids, from human stem cells to better understand how the human brain grows and to model disorders like microcephaly.",
-   "limits": "Organoids do not fully replicate a real living human brain, and growing them can sometimes lead to variable results between samples.",
-   "check": "Confirmed via available abstract and database records that the study uses human stem cells to grow 3D brain tissues for disease modeling.",
-   "access_level": "Full text NOT read. Written from model knowledge. Verify against the DOI link.",
-   "confidence": "Unverified: AI-written from model knowledge, no live sources",
-   "note": "Written without live web search; verify links before trusting.",
-   "doi_link": "https://doi.org/10.1038/nature12517"
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "1 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Brain-computer interfaces for communication and control",
+   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
+   "focus": "Understanding why brain-computer interface (BCI) research is needed to help people with severe physical disabilities.",
+   "explanation": "Many individuals suffer from conditions like ALS, brainstem stroke, or spinal cord injuries that leave them fully aware but unable to move or speak. This research exists to create technology that translates brain signals directly into computer commands, giving these individuals a new way to communicate and control their environment without needing muscles.",
+   "limits": "The abstract was empty in the verified metadata, so this explanation is based on general scientific knowledge of this foundational BCI paper.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/S1388-2457(02)00057-3",
-   "day": 1,
-   "focus": "Why this research exists",
-   "explanation": "The paper was created to explore ways for people with severe muscle and nerve damage to communicate and control devices using only their brain signals, bypassing normal physical pathways.",
-   "limits": "Early brain-computer interface tech was slow, required training, and struggled to capture clear signals consistently.",
-   "check": "Confirmed via standard academic literature databases.",
-   "access_level": "Full text NOT read. Written from model knowledge. Verify against the DOI link.",
-   "confidence": "Unverified: AI-written from model knowledge, no live sources",
-   "note": "Written without live web search; verify links before trusting.",
-   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3"
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "1 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": 1,
-   "total_days": 3,
+   "day": "1 of 3",
    "project_name": "ros-navigation/navigation2",
-   "project_url": "https://github.com/ros-navigation/navigation2",
-   "goal": "Understand the project basics and get familiar with its purpose.",
-   "project_summary": "Navigation2 is a system used to help robots move safely from one place to another using the Robot Operating System (ROS 2). It mainly uses C++.",
-   "recent_activity": "The repository was recently updated in October 2026 and is actively maintained.",
-   "license_status": "The license is not explicitly named in the basic metadata check, so users should check the repository files directly for usage rules.",
-   "beginner_challenge": "Go to the GitHub page, read the main description, and try to find the folder that contains the core source code.",
-   "knowledge_check": "What primary programming language does this project use?",
-   "confidence": "Unverified: AI-written from model knowledge, no live sources",
-   "note": "Written without live web search; verify links before trusting.",
+   "project_purpose": "A robot navigation and mapping framework built for ROS 2, primarily written in C++.",
+   "project_status": "Active, not archived, and receives regular updates.",
+   "beginner_explanation": "Nav2 is a software toolkit designed to help robots move safely from one place to another. It figures out the best paths to take, helps robots avoid obstacles in real time, and maps out environments.",
+   "key_resources": [
+    "Official documentation site for concepts, setup guides, and tutorials",
+    "Community communication channel on Slack",
+    "Professional services and leadership provided by Open Navigation"
+   ],
+   "daily_challenge": "Explore the official documentation links mentioned in the project README and find the 'Getting Started' guide to understand the basic system requirements.",
+   "knowledge_check": "What primary programming language is used for this navigation repository?",
+   "knowledge_check_answer": "C++",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "ros-navigation/navigation2",
     "html_url": "https://github.com/ros-navigation/navigation2",
     "description": "ROS 2 Navigation Framework and System",
-    "pushed_at": "2026-10-21T08:34:20Z",
+    "pushed_at": "2026-10-21T13:57:12Z",
     "language": "C++",
     "archived": false,
     "license": "NOASSERTION"
@@ -174,67 +165,67 @@
    "items": [
     {
      "category": "Deployment",
-     "url": "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
-     "what": "Gecko Robotics has signed a 300 million dollar contract with the U.S. Navy.",
-     "who": "Gecko Robotics and the U.S. Navy",
-     "how": "Not stated in the source excerpt. Background (general knowledge): The U.S. Navy uses robotics for maintenance, inspection, and repair of its fleet to improve efficiency and safety.",
-     "why": "The contract signifies that the U.S. Department of Defense views the company as a key military capability that provides functional results.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "High confidence",
-     "title": "Gecko Robotics secures $300M contract with the U.S. Navy",
-     "published": "2026-10-20",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
+     "url": "https://www.therobotreport.com/agco-to-deploy-agility-digit-humanoid-in-kansas-factory/",
+     "what": "AGCO is planning to use Agility Digit humanoid robots at a manufacturing site.",
+     "who": "AGCO and Agility Robotics.",
+     "how": "The robots will perform tasks within an agricultural equipment production facility. Background (general knowledge): Humanoid robots are designed to work in environments built for humans, often handling repetitive or manual tasks.",
+     "why": "To assist with production activities starting in 2027.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "The project is expected to begin in 2027.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "AGCO to deploy Agility Digit humanoid in Kansas factory",
+     "published": "2026-10-21",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/reservoir-launches-new-agricultural-robotics-incubator-for-washington-growers/",
+     "what": "A new incubator focused on agricultural robotics has been launched.",
+     "who": "Reservoir.",
+     "how": "The incubator will connect startups with agricultural researchers and local growers.",
+     "why": "To support the development and testing of robotics for orchards, vineyards, and berry fields.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "The program is located in Washington.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Reservoir launches new agricultural robotics incubator for Washington growers",
+     "published": "2026-10-21",
+     "source": "The Robot Report"
     },
     {
      "category": "Product",
-     "url": "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
-     "what": "The Unfold AI platform now includes a Surgery Mode that provides 3D maps of a patient's cancer anatomy during robotic prostate surgeries.",
-     "who": "Avenda Health",
-     "how": "The platform generates specific 3D visualizations to help surgeons see cancer anatomy during the operation.",
-     "why": "To provide surgeons with an enhanced, patient-specific view of cancer tissue during prostate procedures.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "High confidence",
-     "title": "Avenda Health expands Unfold AI platform to support intraoperative prostate cancer care",
-     "published": "2026-10-20",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
-    },
-    {
-     "category": "Research",
-     "url": "https://www.therobotreport.com/daimon-robotics-building-the-infrastructure-layer-for-tactile-intelligence/",
-     "what": "Daimon Robotics is developing an infrastructure system to give robots tactile intelligence, which is the sense of touch.",
-     "who": "Daimon Robotics",
-     "how": "They are linking tactile sensors, simulation tools, real-world data collection, and AI software.",
-     "why": "To improve the reliability of robots when they perform physical tasks.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "High confidence",
-     "title": "Daimon Robotics building the infrastructure layer for tactile intelligence",
+     "url": "https://www.therobotreport.com/unleash-ai-innovation-the-power-of-nvidia-rtx-pro-6000-blackwell-workstation-edition-fueled-by-pny-supplied-gpus/",
+     "what": "The release of the NVIDIA RTX PRO 6000 Blackwell Workstation edition.",
+     "who": "NVIDIA and PNY.",
+     "how": "These graphics cards provide increased computing power for AI-driven vision and control systems.",
+     "why": "To meet the growing demand for faster, more precise robotics systems that rely on AI.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "Modern robotics are increasingly dependent on high-performance AI hardware.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Unleash AI Innovation: The Power of NVIDIA RTX PRO 6000 Blackwell Workstation Edition Fueled by PNY-Supplied GPUs",
      "published": "2026-10-19",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
+     "source": "The Robot Report"
     }
    ]
   },
   "jobs": {
    "items": [
     {
-     "title": "Senior Control Systems Engineer",
+     "title": "Clinical Specialist - Physiotherapist",
      "type": "vacancy listing (still open: not verified)",
-     "location": "Lausanne",
-     "published": "2026-10-20",
+     "location": "Manchester",
+     "published": "2026-10-21",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/fusionality/senior-control-systems-engineer-lausanne-423621",
-     "company": "Fusionality"
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/trexo-robotics/clinical-specialist-physiotherapist-manchester-55262",
+     "company": "Trexo Robotics"
     },
     {
-     "title": "Senior Product Manager \u2013 JetBrains Air (Agentic Development in IDEs)",
+     "title": "Industrial Software Engineer - Railway Applications (m/w/d) 80-100%",
      "type": "vacancy listing (still open: not verified)",
-     "location": "Amsterdam",
-     "published": "2026-10-20",
+     "location": "Regensdorf",
+     "published": "2026-10-21",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.nl/jobs/companies/jetbrains/senior-product-manager-jetbrains-air-agentic-development-in-ides-amsterdam-247685",
-     "company": "jetbrains"
+     "url": "https://www.arbeitnow.ch/jobs/companies/traila/industrial-software-engineer-railway-applications-80-100-regensdorf-310451",
+     "company": "Traila"
     }
    ],
    "action": "Open one listing, read the required skills, and note which ones you can already show with a project.",
