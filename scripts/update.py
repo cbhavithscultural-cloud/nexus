@@ -22,7 +22,7 @@ def call(prompt, search):
     else: body["generationConfig"] = {"responseMimeType": "application/json"}
     last = None
     for model in list(CANDS):
-        for attempt in range(3):
+        for attempt in range(4):
             try:
                 r = urllib.request.Request(BASE + model + ":generateContent", json.dumps(body).encode(), {"x-goog-api-key": KEY, "content-type": "application/json"})
                 out = json.load(urllib.request.urlopen(r, timeout=300))
@@ -31,7 +31,7 @@ def call(prompt, search):
                 CANDS = [model]; time.sleep(8); return res
             except urllib.error.HTTPError as e:
                 detail = e.read().decode()[:160]; last = RuntimeError("HTTP %s on %s: %s" % (e.code, model, detail))
-                if e.code == 429 and attempt < 2: time.sleep(40 * (attempt + 1)); continue
+                if e.code in (429, 500, 503) and attempt < 3: time.sleep(20 * 2 ** attempt); continue
                 break
     raise last
 def ask(prompt, search=False, need=True):
@@ -40,6 +40,7 @@ def ask(prompt, search=False, need=True):
         except Exception:
             if need: raise  # news/jobs: never invent without live search
     r = call(prompt, False)
+    r["confidence"] = "Unverified: AI-written from model knowledge, no live sources"
     if search: r["note"] = "Written without live web search; verify links before trusting."
     return r
 soft_ask = lambda p, s=False: ask(p, s, False)
@@ -60,7 +61,9 @@ def lesson(k):
 def paper(k, s):
     pi, day = st[s]; t, doi = PAP[k][pi % len(PAP[k])]
     r = soft_ask(f"Five-day paper investigation, day {day} of 5: '{PD[day-1]}'. Paper: {t}, DOI {doi}. Search to confirm the abstract and details; say if only abstract was available. Do not invent results. Schema: {{\"paper\",\"doi\",\"day\",\"focus\",\"explanation\",\"limits\",\"check\",\"access_level\",\"confidence\"}}", True)
-    r["doi_link"] = "https://doi.org/" + doi; st[s] = [pi + 1, 1] if day == 5 else [pi, day + 1]; return r
+    r["doi_link"] = "https://doi.org/" + doi
+    if "note" in r: r["access_level"] = "Full text NOT read. Written from model knowledge. Verify against the DOI link."
+    st[s] = [pi + 1, 1] if day == 5 else [pi, day + 1]; return r
 def github():
     ri, day = st["gh"]; repo = REPOS[ri % len(REPOS)]
     m = json.load(urllib.request.urlopen(urllib.request.Request("https://api.github.com/repos/" + repo, headers=({"Authorization": "Bearer " + os.environ["GH_TOKEN"]} if os.environ.get("GH_TOKEN") else {})), timeout=60))
@@ -69,10 +72,12 @@ def github():
     r["verified_metadata"] = meta; st["gh"] = [ri + 1, 1] if day == 3 else [ri, day + 1]; return r
 def simple(k, label, topics):
     i = st[k] % len(topics); r = ask(f"{label} session (15 min) on '{topics[i]}': short explanation, practical example, one exercise, a model answer with why it works, and one improvement tip."); st[k] += 1; return r
+START = time.time()
 res, status = {}, {}
 for name, f in [("news", news), ("jobs", jobs), ("oi_lesson", lambda: lesson("oi")), ("bci_lesson", lambda: lesson("bci")),
                 ("oi_paper", lambda: paper("oi", "po")), ("bci_paper", lambda: paper("bci", "pb")), ("github", github),
                 ("internship", lambda: simple("ip", "Internship preparation", INT)), ("linkedin", lambda: simple("li", "LinkedIn profile improvement", LI))]:
+    if time.time() - START > 1200: res[name] = prev.get(name); status[name] = "skipped: time budget used"; continue
     try: res[name] = f(); status[name] = "ok"
     except Exception as e: res[name] = prev.get(name); status[name] = "failed (kept previous): " + str(e)[:150]
 out = {"date": today, "generated_at": now.isoformat(), "status": status, "sections": res}
