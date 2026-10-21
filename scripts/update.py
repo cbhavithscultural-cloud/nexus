@@ -8,10 +8,13 @@ now = datetime.datetime.now(IST); today = now.date().isoformat()
 def rd(p, d):
     try: return json.load(open(p))
     except Exception: return d
-if "ok" in rd(f"data/days/{today}.json", {}).get("status", {}).values() and not os.environ.get("FORCE"):
-    print("already published for", today); sys.exit(0)  # idempotent
-prev = rd("data/latest.json", {}).get("sections", {})
-st = rd("data/state.json", {"oi":0,"bci":0,"po":[0,1],"pb":[0,1],"gh":[0,1],"ip":0,"li":0})
+INIT = {"oi":0,"bci":0,"po":[0,1],"pb":[0,1],"gh":[0,1],"ip":0,"li":0}
+LJ = rd("data/latest.json", {}); prev = LJ.get("sections", {})
+st = rd("data/state.json", dict(INIT))
+if LJ.get("date") and LJ.get("v") != 2: st, prev = dict(INIT), {}  # discard content from the old script version once
+TD = rd(f"data/days/{today}.json", {})
+done = TD.get("sections", {}) if TD.get("v") == 2 and not os.environ.get("FORCE") else {}
+dstat = TD.get("status", {}) if done else {}  # sections already ok today are reused, only failed ones retry
 RULES = ("Return ONLY one JSON object, no markdown. Never invent papers, links, dates, numbers or job openings. "
          "Paraphrase; no long quotes. If unsure, say so in a 'confidence' field. Plain beginner-friendly language.")
 def call(prompt, search):
@@ -54,7 +57,7 @@ GD = ["Understand the project","How it works","Run it in simulation and engineer
 INT = ["Percentages","Self-introduction practice","Ratios","Debugging a robot sensor scenario","Time and work","Explaining a project clearly"]
 LI = ["Headline","About section","Project description","GitHub profile","Skills section","Networking message"]
 FIELDS = "Fields: objective, why_it_matters, prerequisites, simple_explanation, step_by_step, technical_depth, misconceptions, knowledge_check (3 questions with answers), exercise, summary, next_lesson, confidence."
-def news(): return ask(f"Today is {today}. Search the web for up to 3 significant real robotics developments published before {today} 00:00 IST, newest first. Only items you actually retrieved. Schema: {{\"items\":[{{\"title\",\"published\",\"source\",\"url\",\"what\",\"who\",\"how\",\"why\",\"limits\",\"learn\",\"confidence\"}}]}}", True)
+def news(): return ask(f"Today is {today}. Search the web for up to 3 significant real robotics developments published before {today} 00:00 IST, newest first. category must be one of: Research, Business, Product, Industry view, Deployment, Open source. Only items you actually retrieved. Schema: {{\"items\":[{{\"category\",\"title\",\"published\",\"source\",\"url\",\"what\",\"who\",\"how\",\"why\",\"limits\",\"learn\",\"confidence\"}}]}}", True)
 def jobs(): return ask(f"Today is {today}. Search for real robotics, embedded, BCI and neural-engineering internship/research opportunities and hiring news, India first. Label each as vacancy, hiring_announcement, trend or prediction; say whether still open is verified. Schema: {{\"items\":[{{\"title\",\"type\",\"location\",\"published\",\"source\",\"url\",\"still_open_verified\",\"note\"}}],\"action\":\"one practical step\"}}", True)
 def lesson(k):
     i = st[k] % len(SYL[k]); r = ask(f"Write lesson {i+1} for {'Organoid Intelligence' if k=='oi' else 'Brain-Computer Interface'} beginners: '{SYL[k][i]}'. Teach prerequisites first. Separate demonstrated facts from hypotheses. {FIELDS}"); st[k] += 1; return r
@@ -77,9 +80,10 @@ res, status = {}, {}
 for name, f in [("news", news), ("jobs", jobs), ("oi_lesson", lambda: lesson("oi")), ("bci_lesson", lambda: lesson("bci")),
                 ("oi_paper", lambda: paper("oi", "po")), ("bci_paper", lambda: paper("bci", "pb")), ("github", github),
                 ("internship", lambda: simple("ip", "Internship preparation", INT)), ("linkedin", lambda: simple("li", "LinkedIn profile improvement", LI))]:
+    if str(dstat.get(name, "")).startswith("ok"): res[name] = done[name]; status[name] = "ok"; continue
     if time.time() - START > 1200: res[name] = prev.get(name); status[name] = "skipped: time budget used"; continue
     try: res[name] = f(); status[name] = "ok"
     except Exception as e: res[name] = prev.get(name); status[name] = "failed (kept previous): " + str(e)[:150]
-out = {"date": today, "generated_at": now.isoformat(), "status": status, "sections": res}
+out = {"v": 2, "date": today, "generated_at": now.isoformat(), "status": status, "sections": res}
 json.dump(out, open("data/latest.json", "w"), indent=1); json.dump(out, open(f"data/days/{today}.json", "w"), indent=1); json.dump(st, open("data/state.json", "w"))
 print(status)
