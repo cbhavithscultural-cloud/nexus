@@ -1,7 +1,25 @@
 import json, os, sys, datetime, urllib.request
 import time, urllib.error
 KEY = os.environ["GEMINI_API_KEY"]
-CANDS = [m for m in [os.environ.get("MODEL"), "gemini-3.1-flash-lite", "gemini-3.5-flash-lite", "gemini-flash-lite-latest", "gemini-3-flash-preview", "gemini-flash-latest", "gemini-2.5-flash-lite"] if m]
+import re
+class Busy(Exception): pass
+def pick(names):
+    bad = ("image", "tts", "live", "audio", "embedding", "robotics", "computer", "gemma", "learnlm", "aqa", "veo", "imagen")
+    ok = [n for n in names if "flash" in n and not any(x in n for x in bad)]
+    rank = lambda n: (0 if "lite" in n else 1, 1 if ("preview" in n or "exp" in n) else 0, [-int(x) for x in re.findall(r"\d+", n)])
+    return sorted(ok, key=rank)
+def discover():
+    try:
+        r = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", headers={"x-goog-api-key": KEY})
+        out = json.load(urllib.request.urlopen(r, timeout=60))
+        names = [m["name"].split("/")[-1] for m in out.get("models", []) if "generateContent" in m.get("supportedGenerationMethods", [])]
+        found = pick(names)
+        if found: return found[:6]
+    except Exception as e:
+        print("model discovery failed:", e)
+    return [m for m in [os.environ.get("MODEL"), "gemini-flash-lite-latest", "gemini-flash-latest"] if m]
+CANDS = [] if os.environ.get("DRY") else discover()
+print("models to try:", CANDS)
 BASE = "https://generativelanguage.googleapis.com/v1beta/models/"
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 now = datetime.datetime.now(IST); today = now.date().isoformat()
@@ -19,24 +37,28 @@ RULES = ("Return ONLY one JSON object, no markdown. Never invent papers, links, 
          "Paraphrase; no long quotes. If unsure, say so in a 'confidence' field. Plain beginner-friendly language.")
 def call(prompt, search):
     global CANDS
+    if os.environ.get("DRY") == "busy": raise Busy("test")
     if os.environ.get("DRY"): return {"stub": True, "prompt_start": prompt[:60], "url": "https://example.com"}
     body = {"contents": [{"parts": [{"text": RULES + "\n" + prompt}]}]}
     if search: body["tools"] = [{"google_search": {}}]
     else: body["generationConfig"] = {"responseMimeType": "application/json"}
-    last = None
+    errs = []
     for model in list(CANDS):
-        for attempt in range(4):
+        for attempt in range(2):
             try:
                 r = urllib.request.Request(BASE + model + ":generateContent", json.dumps(body).encode(), {"x-goog-api-key": KEY, "content-type": "application/json"})
-                out = json.load(urllib.request.urlopen(r, timeout=300))
+                out = json.load(urllib.request.urlopen(r, timeout=120))
                 t = "".join(p.get("text", "") for p in out["candidates"][0]["content"]["parts"])
                 res = json.loads(t[t.index("{"):t.rindex("}") + 1])
-                CANDS = [model]; time.sleep(8); return res
+                CANDS = [model] + [m for m in CANDS if m != model]; time.sleep(6); return res
             except urllib.error.HTTPError as e:
-                detail = e.read().decode()[:160]; last = RuntimeError("HTTP %s on %s: %s" % (e.code, model, detail))
-                if e.code in (429, 500, 503) and attempt < 3: time.sleep(20 * 2 ** attempt); continue
+                msg = e.read().decode().replace("\n", " ")[:100]; errs.append((e.code, "%s:%s %s" % (model, e.code, msg)))
+                if e.code in (429, 503) and attempt == 0: time.sleep(12); continue
                 break
-    raise last
+            except Exception as e:
+                errs.append((0, "%s:%s" % (model, str(e)[:80]))); break
+    if errs and all(c in (429, 500, 503) for c, _ in errs): raise Busy("Google busy: " + "; ".join(m for _, m in errs)[:200])
+    raise RuntimeError("; ".join(m for _, m in errs)[:300] or "no models available")
 def ask(prompt, search=False, need=True):
     if search:
         try: return call(prompt, True)
@@ -77,13 +99,15 @@ def simple(k, label, topics):
     i = st[k] % len(topics); r = ask(f"{label} session (15 min) on '{topics[i]}': short explanation, practical example, one exercise, a model answer with why it works, and one improvement tip."); st[k] += 1; return r
 START = time.time()
 res, status = {}, {}
-for name, f in [("news", news), ("jobs", jobs), ("oi_lesson", lambda: lesson("oi")), ("bci_lesson", lambda: lesson("bci")),
-                ("oi_paper", lambda: paper("oi", "po")), ("bci_paper", lambda: paper("bci", "pb")), ("github", github),
-                ("internship", lambda: simple("ip", "Internship preparation", INT)), ("linkedin", lambda: simple("li", "LinkedIn profile improvement", LI))]:
+PLAN = [("oi_lesson", lambda: lesson("oi")), ("bci_lesson", lambda: lesson("bci")), ("internship", lambda: simple("ip", "Internship preparation", INT)), ("linkedin", lambda: simple("li", "LinkedIn profile improvement", LI)),
+        ("oi_paper", lambda: paper("oi", "po")), ("bci_paper", lambda: paper("bci", "pb")), ("github", github), ("news", news), ("jobs", jobs)]
+busy = 0
+for name, f in PLAN:
     if str(dstat.get(name, "")).startswith("ok"): res[name] = done[name]; status[name] = "ok"; continue
-    if time.time() - START > 1200: res[name] = prev.get(name); status[name] = "skipped: time budget used"; continue
-    try: res[name] = f(); status[name] = "ok"
-    except Exception as e: res[name] = prev.get(name); status[name] = "failed (kept previous): " + str(e)[:150]
+    if busy >= 2 or time.time() - START > 1200: res[name] = prev.get(name); status[name] = "skipped: Google busy or time budget used, will retry"; continue
+    try: res[name] = f(); status[name] = "ok"; busy = 0
+    except Busy as e: res[name] = prev.get(name); status[name] = "failed (kept previous): " + str(e)[:200]; busy += 1
+    except Exception as e: res[name] = prev.get(name); status[name] = "failed (kept previous): " + str(e)[:250]
 out = {"v": 2, "date": today, "generated_at": now.isoformat(), "status": status, "sections": res}
 json.dump(out, open("data/latest.json", "w"), indent=1); json.dump(out, open(f"data/days/{today}.json", "w"), indent=1); json.dump(st, open("data/state.json", "w"))
 print(status)
