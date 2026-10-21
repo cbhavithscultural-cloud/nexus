@@ -1,1 +1,23 @@
-{"oi": 1, "bci": 1, "po": [0, 2], "pb": [0, 2], "gh": [0, 2], "ip": 1, "li": 1}
+{
+ "oi": 1,
+ "bci": 1,
+ "po": [
+  0,
+  2
+ ],
+ "pb": [
+  0,
+  2
+ ],
+ "gh": [
+  0,
+  2
+ ],
+ "ip": 1,
+ "li": 1,
+ "seen": [
+  "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
+  "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
+  "https://www.therobotreport.com/daimon-robotics-building-the-infrastructure-layer-for-tactile-intelligence/"
+ ]
+}

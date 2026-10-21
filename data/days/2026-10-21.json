@@ -1,7 +1,7 @@
 {
  "v": 2,
  "date": "2026-10-21",
- "generated_at": "2026-10-21T16:11:31.524329+05:30",
+ "generated_at": "2026-10-21T16:43:20.394690+05:30",
  "status": {
   "oi_lesson": "ok",
   "bci_lesson": "ok",
@@ -10,8 +10,8 @@
   "oi_paper": "ok",
   "bci_paper": "ok",
   "github": "ok",
-  "news": "failed (kept previous): gemini-flash-lite-latest:429 {   \"error\": {     \"code\": 429,     \"message\": \"You exceeded your current quota, please check your p; gemini-flash-lite-latest:429 {   \"error\": {     \"code\": 429,     \"message\": \"You exceeded your current quota, please ch",
-  "jobs": "failed (kept previous): gemini-flash-lite-latest:429 {   \"error\": {     \"code\": 429,     \"message\": \"You exceeded your current quota, please check your p; gemini-flash-lite-latest:429 {   \"error\": {     \"code\": 429,     \"message\": \"You exceeded your current quota, please ch"
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
@@ -170,7 +170,75 @@
     "license": "NOASSERTION"
    }
   },
-  "news": null,
-  "jobs": null
+  "news": {
+   "items": [
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
+     "what": "Gecko Robotics has signed a 300 million dollar contract with the U.S. Navy.",
+     "who": "Gecko Robotics and the U.S. Navy",
+     "how": "Not stated in the source excerpt. Background (general knowledge): The U.S. Navy uses robotics for maintenance, inspection, and repair of its fleet to improve efficiency and safety.",
+     "why": "The contract signifies that the U.S. Department of Defense views the company as a key military capability that provides functional results.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High confidence",
+     "title": "Gecko Robotics secures $300M contract with the U.S. Navy",
+     "published": "2026-10-20",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Product",
+     "url": "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
+     "what": "The Unfold AI platform now includes a Surgery Mode that provides 3D maps of a patient's cancer anatomy during robotic prostate surgeries.",
+     "who": "Avenda Health",
+     "how": "The platform generates specific 3D visualizations to help surgeons see cancer anatomy during the operation.",
+     "why": "To provide surgeons with an enhanced, patient-specific view of cancer tissue during prostate procedures.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High confidence",
+     "title": "Avenda Health expands Unfold AI platform to support intraoperative prostate cancer care",
+     "published": "2026-10-20",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Research",
+     "url": "https://www.therobotreport.com/daimon-robotics-building-the-infrastructure-layer-for-tactile-intelligence/",
+     "what": "Daimon Robotics is developing an infrastructure system to give robots tactile intelligence, which is the sense of touch.",
+     "who": "Daimon Robotics",
+     "how": "They are linking tactile sensors, simulation tools, real-world data collection, and AI software.",
+     "why": "To improve the reliability of robots when they perform physical tasks.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High confidence",
+     "title": "Daimon Robotics building the infrastructure layer for tactile intelligence",
+     "published": "2026-10-19",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Senior Control Systems Engineer",
+     "type": "vacancy listing (still open: not verified)",
+     "location": "Lausanne",
+     "published": "2026-10-20",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/fusionality/senior-control-systems-engineer-lausanne-423621",
+     "company": "Fusionality"
+    },
+    {
+     "title": "Senior Product Manager \u2013 JetBrains Air (Agentic Development in IDEs)",
+     "type": "vacancy listing (still open: not verified)",
+     "location": "Amsterdam",
+     "published": "2026-10-20",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/jetbrains/senior-product-manager-jetbrains-air-agentic-development-in-ides-amsterdam-247685",
+     "company": "jetbrains"
+    }
+   ],
+   "action": "Open one listing, read the required skills, and note which ones you can already show with a project.",
+   "note": "Sources: Remotive and Arbeitnow, mostly remote or Europe-based. For India internships, search LinkedIn Jobs (https://www.linkedin.com/jobs/search/?keywords=robotics%20intern&location=India) and Internshala yourself, and check each posting's date."
+  }
  }
 }
