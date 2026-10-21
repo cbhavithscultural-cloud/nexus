@@ -1,7 +1,7 @@
 {
  "v": 2,
  "date": "2026-10-22",
- "generated_at": "2026-10-22T00:06:21.969614+05:30",
+ "generated_at": "2026-10-22T00:29:48.329678+05:30",
  "status": {
   "oi_lesson": "ok",
   "bci_lesson": "ok",
@@ -10,126 +10,146 @@
   "oi_paper": "ok",
   "bci_paper": "ok",
   "github": "ok",
-  "news": "ok",
-  "jobs": "ok"
+  "news": "ok (reused from today's successful run)",
+  "jobs": "ok (reused from today's successful run)"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how cells communicate and signal to each other, forming the foundational coordination needed for organoid intelligence.",
-   "why_it_matters": "Brain organoids rely on millions of individual cells working together. To understand how they process information or learn, we first need to know how cells talk to each other using chemical and electrical signals.",
-   "prerequisites": "Basic understanding that living things are made of cells, and that cells have outer membranes separating their inside from the outside.",
-   "simple_explanation": "Cells are like tiny people living in a crowded neighborhood. They cannot talk out loud, so they send chemical text messages. One cell releases a molecule (the message), which travels to a neighbor cell and binds to a specific parking spot on its surface called a receptor. This unlocks an internal chain reaction inside the receiving cell, changing how it behaves.",
-   "step_by_step": [
-    "A sending cell produces a signaling molecule, often called a ligand.",
-    "The molecule travels a short or long distance through the liquid surrounding the cells.",
-    "It encounters a receiving cell and fits precisely into a specialized protein on the cell surface called a receptor, much like a key fitting into a lock.",
-    "The receptor changes shape upon binding, triggering a cascade of chemical reactions inside the cell cytoplasm.",
-    "The final step of this cascade often activates specific genes in the nucleus, changing what the cell does or how it grows."
+   "objective": "Understand the basic definitions of intelligence and learning from both biological and engineering viewpoints.",
+   "why_it_matters": "Organoid intelligence combines living brain tissue with computers. To build or study these systems, we first need to define what makes something smart or able to learn.",
+   "prerequisites": [
+    "Basic awareness that living brains process information",
+    "Basic awareness that computers process information"
    ],
-   "technical_depth": "Established evidence demonstrates that cells utilize ligand-receptor binding to activate intracellular second messengers, such as calcium ions or cyclic AMP, altering transcription factor activity. In the context of Organoid Intelligence, researchers observe how neural progenitors use these pathways to differentiate into neurons and form functional synapses. However, exactly how complex network-level computations emerge from these basic signaling cascades remains an open question in neurobiology.",
-   "misconceptions": "A common mistake is thinking that cells physically touch or talk to every cell in the body. In reality, most chemical signaling is local, and long-distance signaling relies on specialized pathways like the bloodstream in living bodies, or specialized fluid diffusion in lab culture dishes.",
+   "simple_explanation": "In biology, intelligence is how well a living thing adapts to its environment to survive, and learning is changing behavior based on experience. In engineering, intelligence is solving complex problems using rules or data, and learning is updating a system's internal settings to improve its tasks. Organoid intelligence sits right in the middle, using biological cells to perform computing tasks.",
+   "step_by_step": [
+    "Define biological intelligence as survival-driven adaptation and problem-solving.",
+    "Define biological learning as lasting changes in cells (like neurons) based on past inputs.",
+    "Define engineering intelligence as algorithmic decision-making and pattern recognition.",
+    "Define engineering learning as adjusting mathematical weights in a model using data.",
+    "Compare the two: biology adapts flexibly with very little energy, while computers calculate fast with rigid rules."
+   ],
+   "technical_depth": "Established evidence shows that biological neural networks alter synaptic strength (such as through long-term potentiation) to store information. Artificial neural networks mimic this through mathematical weight updates during training. However, it remains an open question how emergent properties like subjective awareness or high-level reasoning arise from these networks in either domain.",
+   "misconceptions": [
+    "Misconception: Computers already think and learn exactly like human brains. Reality: Computers use electricity and math formulas, whereas brains use complex biological chemistry and physical cellular growth.",
+    "Misconception: Intelligence requires a whole animal body. Reality: Individual cells and lab-grown tissues can show basic adaptive responses to stimuli."
+   ],
    "knowledge_check": [
     {
-     "question": "What is the specialized surface protein that catches chemical signals called?",
-     "answer": "A receptor."
+     "question": "How is biological learning generally defined?",
+     "answer": "A lasting change in behavior or cellular response based on past experience."
     },
     {
-     "question": "True or False: Cells send messages using physical words.",
-     "answer": "False. They use chemical molecules, called ligands."
+     "question": "What is a core difference between biological and engineering intelligence?",
+     "answer": "Biology adapts flexibly for survival using wet chemistry, while engineering uses strict mathematical algorithms on hardware."
     },
     {
-     "question": "What usually happens inside the receiving cell after a molecule binds to its surface?",
-     "answer": "It triggers a chain reaction of chemical changes inside the cell."
+     "question": "What is an open, unresolved question in both fields?",
+     "answer": "How high-level intelligence and subjective awareness truly emerge from connected processing units."
     }
    ],
-   "exercise": "Draw a simple diagram of two cells. Label the sending cell, the signaling molecule, the receptor on the second cell, and write a one-sentence description of what happens when they connect.",
-   "summary": "Cells communicate using chemical messages called ligands that bind to receptors on other cells, triggering internal changes that allow groups of cells to coordinate their behavior.",
-   "next_lesson": "Day 3: Basic energy production and metabolism in living cells.",
+   "exercise": "Write down two examples from your daily life: one where you learned something biologically (like riding a bike), and one where a machine learned something (like a phone recognizing your face). Compare how they might process mistakes.",
+   "summary": "Intelligence and learning mean adapting to new information. Biology does this through living cells changing over time, while engineering does it through math and algorithms. Organoid intelligence bridges these two worlds.",
+   "next_lesson": "Day 2: Overview of neural cells and wetware computing basics.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand the main parts of the brain that control movement and communication to see where brain-computer interfaces connect.",
-   "why_it_matters": "Brain-computer interfaces read signals from specific brain areas. Knowing where these areas are helps us understand how thoughts turn into computer commands.",
-   "prerequisites": "Day 1: A brief introduction to how neurons send electrical signals.",
-   "simple_explanation": "Think of the brain as a specialized city. Different neighborhoods handle different jobs. The motor cortex is the neighborhood that plans and sends signals for physical movement, while language centers handle speech and writing.",
-   "step_by_step": [
-    "1. Learn that the outer layer of the brain, called the cerebral cortex, handles high-level thinking, movement, and language.",
-    "2. Locate the motor cortex, a strip of tissue running ear-to-ear across the top of the brain, which controls voluntary muscle movements.",
-    "3. Locate language areas, usually found on the left side of the brain in most people, which manage speaking and understanding words.",
-    "4. Understand that signals travel from these areas down the spinal cord to move muscles, or out to a BCI sensor placed on or in the brain."
+   "objective": "Understand what a brain-computer interface (BCI) is, what it is not, and the basic idea of how it connects the brain to external devices.",
+   "why_it_matters": "BCIs offer a way to restore lost sensory or motor functions and open new ways for humans to interact with technology, making it essential to separate real science from science fiction.",
+   "prerequisites": [
+    "Basic knowledge that the human body uses electrical and chemical signals to control movement and thoughts.",
+    "Basic understanding that computers process digital signals."
    ],
-   "technical_depth": "Established evidence shows that neurons in the primary motor cortex fire before and during voluntary movements, and their firing patterns correlate with movement direction and force. It remains an open research question exactly how populations of thousands of neurons coordinate complex, smooth actions, which makes decoding them accurately in real time a major challenge.",
-   "misconceptions": "A common mistake is thinking a single brain cell controls a single muscle. In reality, large networks of neurons work together, and individual neurons can contribute to multiple different movements.",
+   "simple_explanation": "Think of a BCI as a bridge. Your brain speaks the language of biology (tiny electrical pulses from brain cells), and computers speak the language of digital code (ones and zeros). A BCI is a tool that listens to your brain activity, translates it, and sends commands to a computer or machine so you can interact with the world without using your muscles or voice.",
+   "step_by_step": [
+    "Step 1: The brain generates electrical signals when a person thinks, feels, or tries to move.",
+    "Step 2: Sensors (electrodes) placed on the scalp or inside the head detect these tiny electrical changes.",
+    "Step 3: A computer system translates these recorded signals into digital data.",
+    "Step 4: Algorithms interpret the data to figure out what the user intended to do.",
+    "Step 5: The computer or connected device carries out the intended action, like moving a cursor on a screen."
+   ],
+   "technical_depth": "BCIs rely on electrophysiology\u2014measuring the electrical activity of neurons. Signals can be recorded non-invasively (from outside the skull, like EEG) or invasively (from inside the skull, touching or entering brain tissue). The system must process these noisy signals in real-time, filtering out interference from blinking, muscle movement, and electrical noise from the environment, before translating them into control signals.",
+   "misconceptions": [
+    "Misconception 1: BCIs can read your exact, complex thoughts like sentences in a book. Reality: Current BCIs mostly detect specific intent, like moving a cursor left or right, or spelling words letter by letter.",
+    "Misconception 2: BCIs can control your mind or write new memories into your brain. Reality: Current human BCIs are overwhelmingly one-way or very limited two-way communication tools; they cannot mind-control people."
+   ],
    "knowledge_check": [
     {
-     "question": "Which part of the brain is primarily responsible for voluntary movement?",
-     "answer": "The motor cortex."
+     "question": "What is the primary job of a brain-computer interface?",
+     "answer": "To translate brain signals into digital commands that control external devices."
     },
     {
-     "question": "Where are language-related areas typically found in most people?",
-     "answer": "On the left side of the cerebral cortex."
+     "question": "Can current BCIs read your inner monologue or complex thoughts word-for-word?",
+     "answer": "No, they measure specific patterns of brain activity related to distinct intents or actions, not full private thoughts."
     },
     {
-     "question": "True or False: A single neuron controls just one isolated muscle.",
-     "answer": "False. Networks of many neurons work together to control movement."
+     "question": "Do all BCIs require surgery to implant sensors inside the brain?",
+     "answer": "No, some BCIs are non-invasive and record signals from sensors placed on the scalp."
     }
    ],
-   "exercise": "Draw a simple outline of a brain and mark where you think the motor cortex sits (across the top from ear to ear). Write down one movement you made today and guess which side of your brain helped control it.",
-   "summary": "The brain uses specific regions like the motor cortex and language centers to control movement and communication. BCIs target these exact areas to pick up electrical signals.",
-   "next_lesson": "Day 3: Introduction to neuroimaging and how we record brain activity.",
+   "exercise": "Take 5 minutes to list three everyday devices you use (like a smartphone or TV remote) and write down how a non-muscle-based control system (like a BCI) might change how you interact with just one of them.",
+   "summary": "A BCI is a communication bridge between the brain and a computer, translating biological electrical signals into digital commands. It is not mind-reading or mind-control, but rather a tool for translating user intent into device actions.",
+   "next_lesson": "Day 2: Overview of brain anatomy and how neurons communicate.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Explain your robotics project in 60 seconds without exaggerating",
-   "explanation": "Learn how to talk about your engineering project clearly and honestly. Interviewers prefer simple, true facts over big claims.",
-   "practical_example": "Instead of saying 'I built a revolutionary AI robot that maps houses,' say 'I used an Arduino and an ultrasonic sensor to help a small robot avoid walls.'",
-   "exercise": "Write down one hobby or college project you worked on. List the tools you used and one problem you actually fixed.",
-   "model_answer": "In my college lab, I built a line-following robot. I programmed an 8-bit microcontroller in C to read signals from infrared sensors and control two DC motors via an H-bridge driver. The hardest part was tuning the sensor sensitivity for different lighting, which I solved by adding a manual calibration button.",
-   "why_it_works": "It uses the structure of What it is, How you built it, and How you solved a real problem, without making false claims.",
-   "improvement_tip": "Avoid buzzwords like 'AI-powered' or 'cutting-edge' unless your project genuinely uses those specific methods.",
+   "topic": "Read an embedded-systems internship description and extract required skills",
+   "explanation": "Before applying for a robotics, BCI, or embedded systems internship in India, you need to know what companies actually want. Job descriptions contain hidden clues about the skills they value most. By breaking down the post, you can spot repeating keywords like C programming, Arduino, or ROS.",
+   "practical_example": "Imagine a startup in Bengaluru posts an internship for a 'Robotics Firmware Intern'. The description says: 'Looking for a student who knows C++, can work with microcontrollers like ESP32, and has used I2C sensors.' You extract three main skills: C++, ESP32, and I2C communication.",
+   "exercise": "Find a real internship post for an embedded systems or robotics role in India. List the top three technical skills and top two tools or software mentioned in that post.",
+   "model_answer": "Top technical skills: 1. Embedded C, 2. Circuit debugging. Top tools: 1. STM32 Nucleo board, 2. Oscilloscope.",
+   "why_it_works": "It stops you from wasting time learning random things. You focus only on the exact tools and programming languages Indian companies are asking for right now.",
+   "improvement_tip": "Do not just look at the title. Read the entire 'Requirements' or 'Responsibilities' paragraph to find tools they use daily, such as Git or KiCad.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Drafting an About section using concrete evidence instead of generic claims",
-   "explanation": "Your About section should show what you actually do rather than using empty buzzwords like 'passionate learner' or 'hardworking'. For engineering students, this means mentioning real tools, university labs, or hands-on builds.",
-   "practical_example": "Instead of saying 'Passionate about robotics and always eager to learn,' write 'Built a line-following robot using Arduino and an infrared sensor array in my university mechatronics lab.'",
-   "exercise": "Write two short sentences for your About section. State one hardware tool or programming language you know, and name one hands-on project or university lab where you used it.",
-   "model_answer": "I am an electronics and communication engineering student focused on embedded systems and robotics. In my college microprocessors lab, I programmed STM32 microcontrollers in C to read sensor data and control DC motors.",
-   "why_it_works": "Recruiters and internship managers skim profiles quickly. Naming specific tools like STM32, C, or Arduino proves your technical skills immediately, unlike vague claims.",
-   "improvement_tip": "Keep your sentences short and clear. Do not guess numbers or invent project results if you do not have them yet.",
+   "topic": "Write an honest headline focused on embedded systems and robotics",
+   "explanation": "Your LinkedIn headline sits right under your name. For beginners, it should clearly state what you are studying, your key interests like robotics or BCI, and your current goal, such as looking for an internship in India.",
+   "practical_example": "Electronics Engineering Student | Passionate about Embedded Systems, Robotics & BCI | Seeking Summer Internships",
+   "exercise": "Write your own one-line headline using your current branch of study, your main technical interest, and your goal to find an internship.",
+   "model_answer": "B.Tech Undergraduate | Embedded Systems & Robotics Enthusiast | Open to Internship Opportunities",
+   "why_it_works": "It is clear, honest about your student status, and helps recruiters searching for specific keywords like embedded systems find your profile instantly.",
+   "improvement_tip": "Avoid generic buzzwords like 'rockstar' or 'guru'. Stick to clear technical terms that match the roles you want.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Cerebral organoids model human brain development and microcephaly",
-   "focus": "Research design and method",
-   "explanation": "Because the abstract from the database is missing, general knowledge shows that this study designed a 3D tissue culture system using human stem cells. This method allows scientists to grow miniature brain-like structures, called cerebral organoids, to watch how early human brain tissue develops and to study conditions like microcephaly.",
-   "limits": "Since the Crossref abstract was empty, this explanation relies on general scientific knowledge about the paper rather than its specific text. Confidence is moderate.",
-   "check": "No specific experimental numbers or invented paper details were used.",
+   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
+   "focus": "Growing three-dimensional human brain tissues in the lab to study how the brain develops and what goes wrong in conditions like microcephaly.",
+   "explanation": "Scientists wanted a better way to study the human brain because animal models, like mice, do not fully capture how human brains grow and develop. By using stem cells, the researchers created tiny, organized brain-like structures that mimic early human brain development, allowing them to study microcephaly (a condition where the head and brain are unusually small).",
+   "limits": "The Crossref metadata provided did not include an abstract, so this summary relies on general knowledge of the well-known 2013 study by Lancaster and colleagues.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature12517",
    "doi_link": "https://doi.org/10.1038/nature12517",
-   "day": "2 of 5",
+   "day": "1 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Brain-computer interfaces for communication and control",
-   "focus": "Research design and method",
-   "explanation": "Because the verified metadata lacks an abstract, general knowledge of this 2002 paper by Wolpaw and colleagues indicates they reviewed how brain-computer interfaces (BCIs) translate brain signals into computer commands. They focused on the overall system design, which typically includes signal detection, feature extraction, translation algorithms, and device output.",
-   "limits": "The specific methodological details and experimental designs from this exact paper cannot be verified without an abstract or full text, relying instead on general knowledge of the authors' published framework.",
-   "check": "low",
+   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
+   "focus": "Understanding why brain-computer interface (BCI) research is needed to help people with severe physical disabilities.",
+   "explanation": "Many individuals suffer from conditions like ALS, brainstem stroke, or spinal cord injuries that leave them fully aware but unable to move or speak. This research exists to create technology that translates brain signals directly into computer commands, giving these individuals a new way to communicate and control their environment without needing muscles.",
+   "limits": "The abstract was empty in the verified metadata, so this explanation is based on general scientific knowledge of this foundational BCI paper.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/S1388-2457(02)00057-3",
    "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
-   "day": "2 of 5",
+   "day": "1 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
+   "day": "1 of 3",
    "project_name": "ros-navigation/navigation2",
-   "investigation_day": 2,
-   "day_focus": "How it works",
-   "explanation": "Nav2 relies heavily on a comprehensive set of official documentation pages covering core concepts, setup guides, building and installing instructions, tutorials, and configuration options. Based on the provided README text and general software engineering principles, the system is designed to provide robust navigation capabilities for robots using the C++ language. It integrates with continuous integration workflows (like GitHub Actions, CircleCI, and Codecov) to track code health and test coverage. Furthermore, it supports multiple ROS distributions with automated source and binary build statuses.",
-   "challenge": "Try exploring the official documentation links mentioned in the README to locate the core concepts section and understand how Nav2 handles robot path planning.",
-   "knowledge_check": "What primary programming language is indicated in the repository metadata for Nav2?",
+   "project_purpose": "A robot navigation and mapping framework built for ROS 2, primarily written in C++.",
+   "project_status": "Active, not archived, and receives regular updates.",
+   "beginner_explanation": "Nav2 is a software toolkit designed to help robots move safely from one place to another. It figures out the best paths to take, helps robots avoid obstacles in real time, and maps out environments.",
+   "key_resources": [
+    "Official documentation site for concepts, setup guides, and tutorials",
+    "Community communication channel on Slack",
+    "Professional services and leadership provided by Open Navigation"
+   ],
+   "daily_challenge": "Explore the official documentation links mentioned in the project README and find the 'Getting Started' guide to understand the basic system requirements.",
+   "knowledge_check": "What primary programming language is used for this navigation repository?",
+   "knowledge_check_answer": "C++",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "ros-navigation/navigation2",
@@ -139,8 +159,7 @@
     "language": "C++",
     "archived": false,
     "license": "NOASSERTION"
-   },
-   "day": "2 of 3"
+   }
   },
   "news": {
    "items": [
