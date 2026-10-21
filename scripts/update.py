@@ -264,9 +264,10 @@ def news():
         out.append(it); seen.append(src["url"])
     if not out: raise RuntimeError("model returned no usable items")
     st["seen"] = seen[-300:]; return {"items": out[:3]}
-JOBQ = ("robot", "embedded", "firmware", "ros ", "ros2", "autonomous", "neuro", "bci", "brain", "computer vision", "slam", "mechatronic", "control system", "perception", "motion planning", "electronics", "iot")
-SENIOR_TERMS = ("senior", "staff engineer", "principal", "director", "vice president", "head of", "lead engineer", "manager", "architect")
-JUNIOR_TERMS = ("intern", "internship", "graduate", "entry level", "entry-level", "junior", "trainee", "new grad", "student")
+JOBQ = ("robot", "embedded", "firmware", "ros ", "ros2", "autonomous", "neuro", "bci", "brain-computer", "computer vision", "slam", "mechatronic", "control system", "perception", "motion planning", "electronics", "iot", "microcontroller", "electrical engineer", "electronic engineer", "robotics software", "automation engineer", "test engineer", "systems engineer")
+SENIOR_TERMS = ("senior", "staff engineer", "principal", "director", "vice president", "head of", "lead engineer", "engineering manager", "architect")
+JUNIOR_TERMS = ("intern", "internship", "graduate", "entry level", "entry-level", "junior", "trainee", "new grad", "student", "fresher", "early career", "apprentice", "associate engineer")
+INDIA_TERMS = ("india", "bengaluru", "bangalore", "hyderabad", "pune", "chennai", "mumbai", "delhi", "noida", "gurugram", "gurgaon", "manipal", "remote", "worldwide", "anywhere")
 def fetch_jobs():
     if os.environ.get("DRY"): return [{"title": "Robotics Intern", "url": "https://example.com/j", "published": "2026-10-18", "location": "Remote", "company": "TestCo", "source": "Test"}]
     out = []
@@ -281,31 +282,71 @@ def fetch_jobs():
     except Exception as e: print("jobs source failed: Arbeitnow", str(e)[:80])
     return out
 def jobs():
-    cutoff = (now - datetime.timedelta(days=45)).date().isoformat(); seen = {}
+    cutoff = (now - datetime.timedelta(days=45)).date().isoformat()
+    unique = {}
     for j in fetch_jobs():
-        t = j["title"].lower()
-        if not any(q in t for q in JOBQ) or any(q in t for q in SENIOR_TERMS):
+        raw_title = str(j.get("title", ""))
+        title = raw_title.lower()
+        location = str(j.get("location", ""))
+        haystack = title + " " + location.lower()
+        url = str(j.get("url", ""))
+        published = str(j.get("published", ""))
+        if not any(q in title for q in JOBQ):
             continue
-        if not j["url"].startswith("https://") or not j["published"] or j["published"] < cutoff or j["published"] >= today:
+        if any(q in title for q in SENIOR_TERMS):
             continue
-        # Prefer early-career roles, but keep a small number of relevant roles if feeds omit level labels.
-        j["_junior"] = any(q in t for q in JUNIOR_TERMS)
-        j["title"] = j.pop("_t", j["title"])
-        seen[j["url"]] = j
-    L = sorted(seen.values(), key=lambda j: j["published"], reverse=True)
-    L = sorted(L, key=lambda j: not j.get("_junior", False))[:8]
-    if not L: raise RuntimeError("no matching listings found in the job sources")
-    return {"items": [{"title": j["title"], "type": "vacancy listing (still open: not verified)", "location": j["location"], "published": j["published"], "source": j["source"], "url": j["url"], "company": j["company"]} for j in L],
-            "action": "Open one listing, read the required skills, and note which ones you can already show with a project.",
-            "note": "Sources: Remotive and Arbeitnow, mostly remote or Europe-based. For India internships, search LinkedIn Jobs (https://www.linkedin.com/jobs/search/?keywords=robotics%20intern&location=India) and Internshala yourself, and check each posting's date."}
+        if not url.startswith("https://") or not published or published < cutoff or published >= today:
+            continue
+        junior = any(q in title for q in JUNIOR_TERMS)
+        india_or_remote = any(q in haystack for q in INDIA_TERMS)
+        # Keep relevant experienced non-senior roles too, but rank internships/fresher roles first.
+        score = (100 if junior else 0) + (30 if india_or_remote else 0)
+        score += 10 if any(q in title for q in ("embedded", "firmware", "robotics", "mechatronic", "microcontroller")) else 0
+        clean_title = j.get("_t", raw_title)
+        unique[url] = {"title": clean_title, "url": url, "published": published,
+                       "location": location or "Not specified", "company": j.get("company", "Not specified"),
+                       "source": j.get("source", "Unknown"), "_score": score}
+    ranked = sorted(unique.values(), key=lambda j: (j["_score"], j["published"]), reverse=True)[:10]
+    if not ranked:
+        raise RuntimeError("no matching recent robotics/embedded/electronics jobs found; previous listings retained")
+    return {"items": [{"title": j["title"], "type": "vacancy listing (availability not independently verified)",
+                       "location": j["location"], "published": j["published"], "source": j["source"],
+                       "url": j["url"], "company": j["company"]} for j in ranked],
+            "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+            "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."}
+
+def recent_history(section_name, limit=10):
+    """Read recent saved topics/summaries to discourage short-term repetition."""
+    found = []
+    try:
+        paths = sorted((x for x in os.listdir("data/days") if x.endswith(".json") and x[:10] < today), reverse=True)
+        for dayfile in paths[:30]:
+            obj = rd(os.path.join("data/days", dayfile), {})
+            sec = (obj.get("sections") or {}).get(section_name)
+            if not isinstance(sec, dict):
+                continue
+            label = sec.get("topic") or sec.get("paper") or sec.get("project_name") or sec.get("next_lesson") or ""
+            summary = sec.get("summary") or sec.get("simple_explanation") or sec.get("explanation") or ""
+            if label or summary:
+                found.append({"date": obj.get("date", dayfile[:10]), "topic": str(label)[:180], "summary": str(summary)[:280]})
+            if len(found) >= limit:
+                break
+    except Exception as e:
+        print("history lookup warning:", str(e)[:80])
+    return found
+
 def lesson(k):
     day_number = st[k] + 1
     i = st[k] % len(SYL[k])
     cycle = st[k] // len(SYL[k])
     subject = 'Organoid Intelligence' if k == 'oi' else 'Brain-Computer Interface'
     level = ('foundation' if cycle == 0 else 'application' if cycle == 1 else 'advanced synthesis')
+    history_key = "oi_lesson" if k == "oi" else "bci_lesson"
+    recent = recent_history(history_key, 10)
     prompt = (f"Write day {day_number} of a 365-day spiral-learning {subject} curriculum. "
               f"Current curriculum topic {i+1} of {len(SYL[k])}: '{SYL[k][i]}'. Review cycle: {cycle+1}; level: {level}. "
+              f"Recent previous lessons to avoid duplicating: {json.dumps(recent, ensure_ascii=False)}. "
+              "Avoid repeating their wording, examples, exercise, and main takeaway. If revisiting a topic, explicitly add a new application, calculation, experiment design, critique, or engineering case. "
               "For cycle 1, teach the topic from first principles. For cycle 2, revisit it with an applied engineering/research case, "
               "a worked example and a common failure mode. For later cycles, use a more advanced critique, experiment-design task, "
               "or synthesis challenge while briefly refreshing prerequisites. Do not merely repeat the previous explanation. "
@@ -349,7 +390,9 @@ def github():
     st["gh"] = [ri + 1, 1] if day == 3 else [ri, day + 1]; return r
 def simple(k, label, topics):
     i = st[k] % len(topics)
-    r = ask(f"{label} session {i+1} of {len(topics)} (15 min) on '{topics[i]}'. Audience: a beginner engineering student aiming for robotics, BCI and embedded-systems internships in India. Use beginner-friendly language and examples from this field. Never invent the student's experience, achievements, job openings or numerical results. Return JSON with topic, explanation, practical_example, exercise, model_answer, why_it_works, improvement_tip, and confidence. Keep it actionable and concise.")
+    section_key = "internship" if k == "ip" else "linkedin"
+    recent = recent_history(section_key, 10)
+    r = ask(f"{label} session {st[k]+1} of the ongoing 365-day curriculum (15 min) on '{topics[i]}'. Audience: a beginner engineering student aiming for robotics, BCI and embedded-systems internships in India. Use beginner-friendly language and examples from this field. Recent sessions to avoid duplicating: {json.dumps(recent, ensure_ascii=False)}. Avoid repeating the same example or exercise; make this session practically distinct. Never invent the student's experience, achievements, job openings or numerical results. Return JSON with topic, explanation, practical_example, exercise, model_answer, why_it_works, improvement_tip, and confidence. Keep it actionable and concise.")
     required = ('explanation', 'exercise', 'model_answer')
     missing = [field for field in required if not r.get(field)]
     if missing:
