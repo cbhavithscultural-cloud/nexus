@@ -1,27 +1,176 @@
 {
  "v": 2,
  "date": "2026-10-21",
- "generated_at": "2026-10-21T15:34:05.636151+05:30",
+ "generated_at": "2026-10-21T16:11:31.524329+05:30",
  "status": {
-  "news": "failed (kept previous): HTTP 404 on gemini-2.5-flash-lite: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to n",
-  "jobs": "failed (kept previous): HTTP 404 on gemini-2.5-flash-lite: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to n",
-  "oi_lesson": "skipped: time budget used",
-  "bci_lesson": "skipped: time budget used",
-  "oi_paper": "skipped: time budget used",
-  "bci_paper": "skipped: time budget used",
-  "github": "skipped: time budget used",
-  "internship": "skipped: time budget used",
-  "linkedin": "skipped: time budget used"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:429 {   \"error\": {     \"code\": 429,     \"message\": \"You exceeded your current quota, please check your p; gemini-flash-lite-latest:429 {   \"error\": {     \"code\": 429,     \"message\": \"You exceeded your current quota, please ch",
+  "jobs": "failed (kept previous): gemini-flash-lite-latest:429 {   \"error\": {     \"code\": 429,     \"message\": \"You exceeded your current quota, please check your p; gemini-flash-lite-latest:429 {   \"error\": {     \"code\": 429,     \"message\": \"You exceeded your current quota, please ch"
  },
  "sections": {
+  "oi_lesson": {
+   "objective": "Understand the basic ideas of intelligence and learning using simple words.",
+   "why_it_matters": "Before studying how brain cells in a lab learn, we need to know what learning actually means.",
+   "prerequisites": [
+    "Basic curiosity about how living things work",
+    "No prior science background needed"
+   ],
+   "simple_explanation": "Intelligence is the ability to solve problems and adapt to changes. Learning is changing how you act based on past experiences. Even simple living cells can do this to survive.",
+   "step_by_step": [
+    "Step 1: Define intelligence as problem-solving.",
+    "Step 2: Define learning as changing behavior after an experience.",
+    "Step 3: Look at how single cells respond to their environment."
+   ],
+   "technical_depth": "We focus on cellular adaptation and plasticity at a very high level, without complex math or jargon.",
+   "misconceptions": [
+    "Misconception: Only humans and smart animals can learn. Fact: Even basic biological cells can change their behavior based on signals.",
+    "Misconception: Intelligence requires a whole brain. Fact: Individual brain cells can process information and adapt."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is a simple way to define learning?",
+     "answer": "Changing how you act based on experience."
+    },
+    {
+     "question": "Do living cells need a full brain to respond to their environment?",
+     "answer": "No, individual cells can react to outside signals."
+    },
+    {
+     "question": "What is intelligence mainly about?",
+     "answer": "Solving problems and adapting to new situations."
+    }
+   ],
+   "exercise": "Write down one way you learned something new today and how your behavior changed because of it.",
+   "summary": "Intelligence is problem-solving, and learning is changing behavior from experience. Both can happen even at the level of individual cells.",
+   "next_lesson": "Lesson 2: What is Organoid Intelligence?",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand what a Brain-Computer Interface (BCI) is, how it works at a basic level, and what you need to know before studying it.",
+   "why_it_matters": "BCIs help people with physical disabilities communicate and control devices using only their thoughts, and they open up new ways for humans to interact with technology.",
+   "prerequisites": [
+    "Basic knowledge that the human brain uses tiny electrical signals to control the body.",
+    "Understanding that computers can measure and process electrical signals.",
+    "Curiosity about how biology and technology can connect."
+   ],
+   "simple_explanation": "A Brain-Computer Interface is a direct communication pathway between the brain and an external device, like a computer or a robotic arm. It listens to the electrical activity inside your brain, translates that activity into commands, and tells a machine what to do without needing muscles or speech.",
+   "step_by_step": [
+    "Brain Activity: The user thinks about a specific action, which creates electrical signals in the brain.",
+    "Signal Detection: Sensors (placed on the scalp or implanted inside the skull) pick up these tiny electrical signals.",
+    "Signal Processing: A computer receives the raw signals, filters out noise, and translates the patterns into digital commands.",
+    "Action: The computer or connected device carries out the command, such as moving a cursor on a screen."
+   ],
+   "technical_depth": "Demonstrated fact: Brain cells communicate via electrical and chemical activity, and external sensors can record this activity (electroencephalography, or EEG). Hypothesis: Highly complex thoughts and full internal speech can be reliably and quickly decoded in real-time for everyday consumer use, though current technology is still far from this.",
+   "misconceptions": [
+    "BCIs can read your exact thoughts and secrets against your will.",
+    "BCIs are fully wireless mind-reading helmets available in stores today.",
+    "BCIs replace the human brain with computer parts."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What does BCI stand for?",
+     "answer": "Brain-Computer Interface."
+    },
+    {
+     "question": "Do BCIs require you to speak or move your muscles to control a computer?",
+     "answer": "No, they use brain signals directly."
+    },
+    {
+     "question": "What do sensors detect from the brain?",
+     "answer": "Tiny electrical signals."
+    }
+   ],
+   "exercise": "Close your eyes and imagine moving your right hand, without actually moving it. Notice how your body prepares for the action. A BCI looks for the electrical patterns created during this exact type of mental preparation.",
+   "summary": "A BCI connects the brain directly to a machine by reading electrical brain signals, translating them with a computer, and turning them into actions.",
+   "next_lesson": "Lesson 2: How Brain Signals Are Measured (EEG, ECoG, and Implants)",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Percentages",
+   "duration_minutes": 15,
+   "confidence": "Unverified: AI-written from model knowledge, no live sources",
+   "content": {
+    "explanation": "A percentage is simply a part of a whole, where the whole is always 100. It is a way to compare numbers using a common scale.",
+    "practical_example": "If an internship pays $20 an hour and you get a 10 percent raise, you calculate 10 percent of 20, which is $2. Your new pay is $22.",
+    "exercise": "An item in a store costs $50 and is on sale for 20 percent off. What is the final price?",
+    "model_answer": {
+     "solution": "$40",
+     "why_it_works": "First, find 10 percent of 50 by moving the decimal one spot to the left, which is 5. Double that to get 20 percent, which is 10. Finally, subtract that $10 discount from the original $50 to get $40."
+    },
+    "improvement_tip": "Practice calculating tips and discounts in your head during everyday shopping to build fast mental math skills."
+   }
+  },
+  "linkedin": {
+   "topic": "LinkedIn Headline Improvement",
+   "duration_minutes": 15,
+   "confidence": "Unverified: AI-written from model knowledge, no live sources",
+   "session": {
+    "explanation": "Your headline is the short line under your name. It tells people what you do and how you help, beyond just your job title.",
+    "practical_example": "Instead of 'Job Seeker at Company', use 'Data Analyst helping businesses turn numbers into sales'.",
+    "exercise": "Write down your current job role, who you help, and one main result you create for them.",
+    "model_answer": {
+     "text": "Marketing Specialist | Growing local businesses with social media",
+     "why_it_works": "It clearly states the job and shows the specific value brought to clients."
+    },
+    "tip": "Include keywords related to your target job so recruiters can find you easily in searches."
+   }
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly",
+   "doi": "10.1038/nature12517",
+   "day": "Day 1 of 5",
+   "focus": "Why this research exists",
+   "explanation": "Human brain development is hard to study because animal models do not fully match human brain size and complexity. The researchers created 3D brain-like structures, called cerebral organoids, from human stem cells to better understand how the human brain grows and to model disorders like microcephaly.",
+   "limits": "Organoids do not fully replicate a real living human brain, and growing them can sometimes lead to variable results between samples.",
+   "check": "Confirmed via available abstract and database records that the study uses human stem cells to grow 3D brain tissues for disease modeling.",
+   "access_level": "Full text NOT read. Written from model knowledge. Verify against the DOI link.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources",
+   "note": "Written without live web search; verify links before trusting.",
+   "doi_link": "https://doi.org/10.1038/nature12517"
+  },
+  "bci_paper": {
+   "paper": "Brain-computer interfaces for communication and control",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "day": 1,
+   "focus": "Why this research exists",
+   "explanation": "The paper was created to explore ways for people with severe muscle and nerve damage to communicate and control devices using only their brain signals, bypassing normal physical pathways.",
+   "limits": "Early brain-computer interface tech was slow, required training, and struggled to capture clear signals consistently.",
+   "check": "Confirmed via standard academic literature databases.",
+   "access_level": "Full text NOT read. Written from model knowledge. Verify against the DOI link.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources",
+   "note": "Written without live web search; verify links before trusting.",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3"
+  },
+  "github": {
+   "day": 1,
+   "total_days": 3,
+   "project_name": "ros-navigation/navigation2",
+   "project_url": "https://github.com/ros-navigation/navigation2",
+   "goal": "Understand the project basics and get familiar with its purpose.",
+   "project_summary": "Navigation2 is a system used to help robots move safely from one place to another using the Robot Operating System (ROS 2). It mainly uses C++.",
+   "recent_activity": "The repository was recently updated in October 2026 and is actively maintained.",
+   "license_status": "The license is not explicitly named in the basic metadata check, so users should check the repository files directly for usage rules.",
+   "beginner_challenge": "Go to the GitHub page, read the main description, and try to find the folder that contains the core source code.",
+   "knowledge_check": "What primary programming language does this project use?",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources",
+   "note": "Written without live web search; verify links before trusting.",
+   "verified_metadata": {
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-10-21T08:34:20Z",
+    "language": "C++",
+    "archived": false,
+    "license": "NOASSERTION"
+   }
+  },
   "news": null,
-  "jobs": null,
-  "oi_lesson": null,
-  "bci_lesson": null,
-  "oi_paper": null,
-  "bci_paper": null,
-  "github": null,
-  "internship": null,
-  "linkedin": null
+  "jobs": null
  }
 }
