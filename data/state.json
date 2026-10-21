@@ -1,26 +1,18 @@
+
 {
- "oi": 2,
- "bci": 2,
- "po": [
-  0,
-  3
- ],
- "pb": [
-  0,
-  3
- ],
- "gh": [
-  0,
-  3
- ],
- "ip": 2,
- "li": 2,
- "seen": [
-  "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
-  "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
-  "https://www.therobotreport.com/daimon-robotics-building-the-infrastructure-layer-for-tactile-intelligence/",
-  "https://www.therobotreport.com/agco-to-deploy-agility-digit-humanoid-in-kansas-factory/",
-  "https://www.therobotreport.com/reservoir-launches-new-agricultural-robotics-incubator-for-washington-growers/",
-  "https://www.therobotreport.com/unleash-ai-innovation-the-power-of-nvidia-rtx-pro-6000-blackwell-workstation-edition-fueled-by-pny-supplied-gpus/"
- ]
+  "oi": 0,
+  "bci": 0,
+  "po": [0, 1],
+  "pb": [0, 1],
+  "gh": [0, 1],
+  "ip": 0,
+  "li": 0,
+  "seen": [
+    "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
+    "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
+    "https://www.therobotreport.com/daimon-robotics-building-the-infrastructure-layer-for-tactile-intelligence/",
+    "https://www.therobotreport.com/agco-to-deploy-agility-digit-humanoid-in-kansas-factory/",
+    "https://www.therobotreport.com/reservoir-launches-new-agricultural-robotics-incubator-for-washington-growers/",
+    "https://www.therobotreport.com/unleash-ai-innovation-the-power-of-nvidia-rtx-pro-6000-blackwell-workstation-edition-fueled-by-pny-supplied-gpus/"
+  ]
 }
