@@ -2,9 +2,13 @@ name: daily-update
 on:
   schedule:
     - cron: "30 20 * * *"   # 02:00 IST
+    - cron: "30 22 * * *"   # 04:00 IST, retries failed sections only
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: nexus-update
+  cancel-in-progress: false
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -21,4 +25,4 @@ jobs:
           git config user.name nexus-bot
           git config user.email nexus-bot@users.noreply.github.com
           git add data
-          git diff --cached --quiet || (git commit -m "daily update" && git push)
+          git diff --cached --quiet || (git commit -m "daily update" && git pull --rebase --autostash && git push)
