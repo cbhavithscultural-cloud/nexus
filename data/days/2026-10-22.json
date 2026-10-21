@@ -1,0 +1,216 @@
+{
+ "v": 2,
+ "date": "2026-10-22",
+ "generated_at": "2026-10-22T00:06:21.969614+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how cells communicate and signal to each other, forming the foundational coordination needed for organoid intelligence.",
+   "why_it_matters": "Brain organoids rely on millions of individual cells working together. To understand how they process information or learn, we first need to know how cells talk to each other using chemical and electrical signals.",
+   "prerequisites": "Basic understanding that living things are made of cells, and that cells have outer membranes separating their inside from the outside.",
+   "simple_explanation": "Cells are like tiny people living in a crowded neighborhood. They cannot talk out loud, so they send chemical text messages. One cell releases a molecule (the message), which travels to a neighbor cell and binds to a specific parking spot on its surface called a receptor. This unlocks an internal chain reaction inside the receiving cell, changing how it behaves.",
+   "step_by_step": [
+    "A sending cell produces a signaling molecule, often called a ligand.",
+    "The molecule travels a short or long distance through the liquid surrounding the cells.",
+    "It encounters a receiving cell and fits precisely into a specialized protein on the cell surface called a receptor, much like a key fitting into a lock.",
+    "The receptor changes shape upon binding, triggering a cascade of chemical reactions inside the cell cytoplasm.",
+    "The final step of this cascade often activates specific genes in the nucleus, changing what the cell does or how it grows."
+   ],
+   "technical_depth": "Established evidence demonstrates that cells utilize ligand-receptor binding to activate intracellular second messengers, such as calcium ions or cyclic AMP, altering transcription factor activity. In the context of Organoid Intelligence, researchers observe how neural progenitors use these pathways to differentiate into neurons and form functional synapses. However, exactly how complex network-level computations emerge from these basic signaling cascades remains an open question in neurobiology.",
+   "misconceptions": "A common mistake is thinking that cells physically touch or talk to every cell in the body. In reality, most chemical signaling is local, and long-distance signaling relies on specialized pathways like the bloodstream in living bodies, or specialized fluid diffusion in lab culture dishes.",
+   "knowledge_check": [
+    {
+     "question": "What is the specialized surface protein that catches chemical signals called?",
+     "answer": "A receptor."
+    },
+    {
+     "question": "True or False: Cells send messages using physical words.",
+     "answer": "False. They use chemical molecules, called ligands."
+    },
+    {
+     "question": "What usually happens inside the receiving cell after a molecule binds to its surface?",
+     "answer": "It triggers a chain reaction of chemical changes inside the cell."
+    }
+   ],
+   "exercise": "Draw a simple diagram of two cells. Label the sending cell, the signaling molecule, the receptor on the second cell, and write a one-sentence description of what happens when they connect.",
+   "summary": "Cells communicate using chemical messages called ligands that bind to receptors on other cells, triggering internal changes that allow groups of cells to coordinate their behavior.",
+   "next_lesson": "Day 3: Basic energy production and metabolism in living cells.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand the main parts of the brain that control movement and communication to see where brain-computer interfaces connect.",
+   "why_it_matters": "Brain-computer interfaces read signals from specific brain areas. Knowing where these areas are helps us understand how thoughts turn into computer commands.",
+   "prerequisites": "Day 1: A brief introduction to how neurons send electrical signals.",
+   "simple_explanation": "Think of the brain as a specialized city. Different neighborhoods handle different jobs. The motor cortex is the neighborhood that plans and sends signals for physical movement, while language centers handle speech and writing.",
+   "step_by_step": [
+    "1. Learn that the outer layer of the brain, called the cerebral cortex, handles high-level thinking, movement, and language.",
+    "2. Locate the motor cortex, a strip of tissue running ear-to-ear across the top of the brain, which controls voluntary muscle movements.",
+    "3. Locate language areas, usually found on the left side of the brain in most people, which manage speaking and understanding words.",
+    "4. Understand that signals travel from these areas down the spinal cord to move muscles, or out to a BCI sensor placed on or in the brain."
+   ],
+   "technical_depth": "Established evidence shows that neurons in the primary motor cortex fire before and during voluntary movements, and their firing patterns correlate with movement direction and force. It remains an open research question exactly how populations of thousands of neurons coordinate complex, smooth actions, which makes decoding them accurately in real time a major challenge.",
+   "misconceptions": "A common mistake is thinking a single brain cell controls a single muscle. In reality, large networks of neurons work together, and individual neurons can contribute to multiple different movements.",
+   "knowledge_check": [
+    {
+     "question": "Which part of the brain is primarily responsible for voluntary movement?",
+     "answer": "The motor cortex."
+    },
+    {
+     "question": "Where are language-related areas typically found in most people?",
+     "answer": "On the left side of the cerebral cortex."
+    },
+    {
+     "question": "True or False: A single neuron controls just one isolated muscle.",
+     "answer": "False. Networks of many neurons work together to control movement."
+    }
+   ],
+   "exercise": "Draw a simple outline of a brain and mark where you think the motor cortex sits (across the top from ear to ear). Write down one movement you made today and guess which side of your brain helped control it.",
+   "summary": "The brain uses specific regions like the motor cortex and language centers to control movement and communication. BCIs target these exact areas to pick up electrical signals.",
+   "next_lesson": "Day 3: Introduction to neuroimaging and how we record brain activity.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Explain your robotics project in 60 seconds without exaggerating",
+   "explanation": "Learn how to talk about your engineering project clearly and honestly. Interviewers prefer simple, true facts over big claims.",
+   "practical_example": "Instead of saying 'I built a revolutionary AI robot that maps houses,' say 'I used an Arduino and an ultrasonic sensor to help a small robot avoid walls.'",
+   "exercise": "Write down one hobby or college project you worked on. List the tools you used and one problem you actually fixed.",
+   "model_answer": "In my college lab, I built a line-following robot. I programmed an 8-bit microcontroller in C to read signals from infrared sensors and control two DC motors via an H-bridge driver. The hardest part was tuning the sensor sensitivity for different lighting, which I solved by adding a manual calibration button.",
+   "why_it_works": "It uses the structure of What it is, How you built it, and How you solved a real problem, without making false claims.",
+   "improvement_tip": "Avoid buzzwords like 'AI-powered' or 'cutting-edge' unless your project genuinely uses those specific methods.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Drafting an About section using concrete evidence instead of generic claims",
+   "explanation": "Your About section should show what you actually do rather than using empty buzzwords like 'passionate learner' or 'hardworking'. For engineering students, this means mentioning real tools, university labs, or hands-on builds.",
+   "practical_example": "Instead of saying 'Passionate about robotics and always eager to learn,' write 'Built a line-following robot using Arduino and an infrared sensor array in my university mechatronics lab.'",
+   "exercise": "Write two short sentences for your About section. State one hardware tool or programming language you know, and name one hands-on project or university lab where you used it.",
+   "model_answer": "I am an electronics and communication engineering student focused on embedded systems and robotics. In my college microprocessors lab, I programmed STM32 microcontrollers in C to read sensor data and control DC motors.",
+   "why_it_works": "Recruiters and internship managers skim profiles quickly. Naming specific tools like STM32, C, or Arduino proves your technical skills immediately, unlike vague claims.",
+   "improvement_tip": "Keep your sentences short and clear. Do not guess numbers or invent project results if you do not have them yet.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly",
+   "focus": "Research design and method",
+   "explanation": "Because the abstract from the database is missing, general knowledge shows that this study designed a 3D tissue culture system using human stem cells. This method allows scientists to grow miniature brain-like structures, called cerebral organoids, to watch how early human brain tissue develops and to study conditions like microcephaly.",
+   "limits": "Since the Crossref abstract was empty, this explanation relies on general scientific knowledge about the paper rather than its specific text. Confidence is moderate.",
+   "check": "No specific experimental numbers or invented paper details were used.",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature12517",
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Brain-computer interfaces for communication and control",
+   "focus": "Research design and method",
+   "explanation": "Because the verified metadata lacks an abstract, general knowledge of this 2002 paper by Wolpaw and colleagues indicates they reviewed how brain-computer interfaces (BCIs) translate brain signals into computer commands. They focused on the overall system design, which typically includes signal detection, feature extraction, translation algorithms, and device output.",
+   "limits": "The specific methodological details and experimental designs from this exact paper cannot be verified without an abstract or full text, relying instead on general knowledge of the authors' published framework.",
+   "check": "low",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "project_name": "ros-navigation/navigation2",
+   "investigation_day": 2,
+   "day_focus": "How it works",
+   "explanation": "Nav2 relies heavily on a comprehensive set of official documentation pages covering core concepts, setup guides, building and installing instructions, tutorials, and configuration options. Based on the provided README text and general software engineering principles, the system is designed to provide robust navigation capabilities for robots using the C++ language. It integrates with continuous integration workflows (like GitHub Actions, CircleCI, and Codecov) to track code health and test coverage. Furthermore, it supports multiple ROS distributions with automated source and binary build statuses.",
+   "challenge": "Try exploring the official documentation links mentioned in the README to locate the core concepts section and understand how Nav2 handles robot path planning.",
+   "knowledge_check": "What primary programming language is indicated in the repository metadata for Nav2?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-10-21T13:57:12Z",
+    "language": "C++",
+    "archived": false,
+    "license": "NOASSERTION"
+   },
+   "day": "2 of 3"
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/agco-to-deploy-agility-digit-humanoid-in-kansas-factory/",
+     "what": "AGCO is planning to use Agility Digit humanoid robots at a manufacturing site.",
+     "who": "AGCO and Agility Robotics.",
+     "how": "The robots will perform tasks within an agricultural equipment production facility. Background (general knowledge): Humanoid robots are designed to work in environments built for humans, often handling repetitive or manual tasks.",
+     "why": "To assist with production activities starting in 2027.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "The project is expected to begin in 2027.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "AGCO to deploy Agility Digit humanoid in Kansas factory",
+     "published": "2026-10-21",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/reservoir-launches-new-agricultural-robotics-incubator-for-washington-growers/",
+     "what": "A new incubator focused on agricultural robotics has been launched.",
+     "who": "Reservoir.",
+     "how": "The incubator will connect startups with agricultural researchers and local growers.",
+     "why": "To support the development and testing of robotics for orchards, vineyards, and berry fields.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "The program is located in Washington.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Reservoir launches new agricultural robotics incubator for Washington growers",
+     "published": "2026-10-21",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Product",
+     "url": "https://www.therobotreport.com/unleash-ai-innovation-the-power-of-nvidia-rtx-pro-6000-blackwell-workstation-edition-fueled-by-pny-supplied-gpus/",
+     "what": "The release of the NVIDIA RTX PRO 6000 Blackwell Workstation edition.",
+     "who": "NVIDIA and PNY.",
+     "how": "These graphics cards provide increased computing power for AI-driven vision and control systems.",
+     "why": "To meet the growing demand for faster, more precise robotics systems that rely on AI.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "Modern robotics are increasingly dependent on high-performance AI hardware.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Unleash AI Innovation: The Power of NVIDIA RTX PRO 6000 Blackwell Workstation Edition Fueled by PNY-Supplied GPUs",
+     "published": "2026-10-19",
+     "source": "The Robot Report"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Clinical Specialist - Physiotherapist",
+     "type": "vacancy listing (still open: not verified)",
+     "location": "Manchester",
+     "published": "2026-10-21",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/trexo-robotics/clinical-specialist-physiotherapist-manchester-55262",
+     "company": "Trexo Robotics"
+    },
+    {
+     "title": "Industrial Software Engineer - Railway Applications (m/w/d) 80-100%",
+     "type": "vacancy listing (still open: not verified)",
+     "location": "Regensdorf",
+     "published": "2026-10-21",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/traila/industrial-software-engineer-railway-applications-80-100-regensdorf-310451",
+     "company": "Traila"
+    }
+   ],
+   "action": "Open one listing, read the required skills, and note which ones you can already show with a project.",
+   "note": "Sources: Remotive and Arbeitnow, mostly remote or Europe-based. For India internships, search LinkedIn Jobs (https://www.linkedin.com/jobs/search/?keywords=robotics%20intern&location=India) and Internshala yourself, and check each posting's date."
+  }
+ }
+}
