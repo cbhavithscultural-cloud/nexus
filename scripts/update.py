@@ -39,8 +39,23 @@ LJ = rd("data/latest.json", {}); prev = LJ.get("sections", {})
 st = rd("data/state.json", dict(INIT))
 if LJ.get("date") and LJ.get("v") != 2: st, prev = dict(INIT), {}  # discard content from the old script version once
 TD = rd(f"data/days/{today}.json", {})
-done = TD.get("sections", {}) if TD.get("v") == 2 and not os.environ.get("FORCE") else {}
-dstat = TD.get("status", {}) if done else {}  # sections already ok today are reused, only failed ones retry
+# If the user reset the saved counters to the initial values, regenerate all
+# learning sections from Day 1 while retaining today's Discovery Center data
+# (robotics news and job listings). This avoids reusing stale lessons after reset.
+RESET_COUNTERS = (st.get("oi", 0) == 0 and st.get("bci", 0) == 0
+                  and st.get("po", [0, 1]) == [0, 1]
+                  and st.get("pb", [0, 1]) == [0, 1]
+                  and st.get("gh", [0, 1]) == [0, 1]
+                  and st.get("ip", 0) == 0 and st.get("li", 0) == 0)
+TODAY_CACHE_VALID = TD.get("v") == 2 and TD.get("date") == today
+if os.environ.get("FORCE") or not TODAY_CACHE_VALID:
+    done = {}
+elif RESET_COUNTERS:
+    # Keep Discovery Center's current content, but not cached lessons/career sessions.
+    done = {k: v for k, v in TD.get("sections", {}).items() if k in ("news", "jobs")}
+else:
+    done = TD.get("sections", {})
+dstat = TD.get("status", {}) if done else {}
 RULES = ("Return ONLY one JSON object, no markdown. Never invent papers, links, dates, numbers or job openings. "
          "Paraphrase; no long quotes. If unsure, say so in a 'confidence' field. Plain beginner-friendly language.")
 def call(prompt, search):
