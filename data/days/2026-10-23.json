@@ -1,0 +1,290 @@
+{
+ "v": 2,
+ "date": "2026-10-23",
+ "generated_at": "2026-10-23T02:33:08.122303+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Explore how individual brain cells are built and how they generate tiny electrical signals.",
+   "why_it_matters": "Before we can build biocomputers from lab-grown tissue, we must understand the basic hardware: the cells that send and receive electrical messages.",
+   "prerequisites": [
+    "Basic knowledge that the brain is made of cells.",
+    "Understanding that living things are built from microscopic building blocks."
+   ],
+   "simple_explanation": "Think of brain cells as microscopic batteries and wires. They maintain a chemical charge across their outer skin. When they receive a trigger, that charge rapidly flips, sending a tiny electric pulse down their length to talk to neighboring cells.",
+   "step_by_step": [
+    "Step 1: Look at the cell membrane (the outer wall), which acts as a barrier holding different chemicals inside and outside.",
+    "Step 2: Note the tiny gates (ion channels) embedded in this wall that let charged particles pass through.",
+    "Step 3: Observe how these charged particles create a resting electrical voltage, much like a tiny battery.",
+    "Step 4: Watch how a sudden rush of particles creates a spike of electricity known as an action potential."
+   ],
+   "technical_depth": "Neurons maintain a resting potential of about -70 millivolts using sodium-potassium pumps. When stimulated, voltage-gated ion channels open, allowing sodium ions to rush inward, depolarizing the membrane and firing an action potential.",
+   "misconceptions": [
+    "Misconception: Brain cells touch each other directly to pass signals. Fact: Most communicate across a tiny gap called a synapse using chemical messengers."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What acts as the outer barrier of a brain cell?",
+     "answer": "The cell membrane."
+    },
+    {
+     "question": "What is the name of the tiny electrical spike a cell sends?",
+     "answer": "An action potential."
+    },
+    {
+     "question": "Do brain cells usually touch directly when communicating?",
+     "answer": "No, they communicate across a tiny gap called a synapse."
+    }
+   ],
+   "exercise": "Draw a simple circle representing a cell. Label the inside, the outside, and draw a few small gates on the border that let charged particles move.",
+   "summary": "Brain cells function like biological batteries and wires, using charged particles moving across their walls to create electrical signals.",
+   "next_lesson": "Day 3: How cells talk to each other across chemical synapses.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Explore specific brain regions involved in planning movement and producing communication.",
+   "why_it_matters": "To build a BCI that helps someone move a robotic arm or type on a screen, we must listen in on the exact neighborhoods of the brain responsible for physical action and language.",
+   "prerequisites": [
+    "Basic understanding that the brain uses electrical signals",
+    "Familiarity with the concept of a BCI as a bridge between brain and computer"
+   ],
+   "simple_explanation": "Think of the brain as a large office building. While the whole building is active, specific floors handle specific tasks. The motor cortex is the floor dedicated to movement, and Broca's area is the department handling speech production.",
+   "step_by_step": [
+    "First, locate the motor cortex, a strip running ear-to-ear across the top of the brain that controls voluntary muscle movements.",
+    "Next, examine the sensory cortex right beside it, which processes touch and feeling from the body.",
+    "Then, look at language centers usually found on the left side of the brain, such as Broca's area for speaking and Wernicke's area for understanding language.",
+    "Finally, understand how BCIs target these exact regions by placing sensors where movement or speech signals originate."
+   ],
+   "technical_depth": "BCI engineering relies heavily on stereotaxic coordinates to target the precentral gyrus (primary motor cortex) for motor prosthetics. Neurons here fire action potentials just before and during muscle contraction. For speech BCIs, researchers target the ventral motor cortex and inferior frontal gyrus to decode attempted vocalizations.",
+   "misconceptions": [
+    "Thinking a single spot in the brain controls a single muscle (it is actually a distributed map)",
+    "Believing that movement and speech use completely separate, unconnected brain areas"
+   ],
+   "knowledge_check": [
+    {
+     "question": "Which brain strip is primarily responsible for controlling voluntary movement?",
+     "answer": "The motor cortex"
+    },
+    {
+     "question": "Where are primary language production centers typically located?",
+     "answer": "Usually on the left side of the brain"
+    },
+    {
+     "question": "Why do BCI engineers care about the location of the motor cortex?",
+     "answer": "It is where signals for physical movement originate, making it an ideal place to record user intent."
+    }
+   ],
+   "exercise": "Sketch a simple outline of a brain and draw where you think the movement control center sits, then write down one everyday action (like typing) and guess which hand/arm area of the brain activates during it.",
+   "summary": "Specific regions of the brain, like the motor cortex and language centers, manage physical movement and communication, serving as the primary targets for BCI hardware.",
+   "next_lesson": "Day 3: Introduction to Neurons and Action Potentials",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Explain your robotics project in 60 seconds without exaggerating",
+   "explanation": "When applying for internships in India, you often have very little time to grab an interviewer's attention. Instead of listing every component you used, focus on the core problem you solved, the tools you applied, and what you personally learned. Be honest about what works and what failed, as recruiters value genuine effort over fake perfection.",
+   "practical_example": "Imagine you built a simple line-following robot for a college fest. Instead of claiming it is 'industry-grade AI', explain it simply: 'I built a two-wheeled robot using an Arduino and infrared sensors to follow a black line on a white floor. I programmed it in C++ and spent most of my time tuning the motor speeds so it would not veer off sharp corners.'",
+   "exercise": "Write down a 60-second summary of a personal project, college lab assignment, or hobby build. State the goal in one sentence, name the microcontroller or software you used, mention one specific challenge you faced, and state the current status honestly without exaggerating.",
+   "model_answer": "For my second-year project, I built a basic heart-rate monitor prototype to practice embedded C programming. I used an Arduino Nano and a pulse sensor to read data and display it on an LCD screen. My main challenge was filtering out noise when the user moved their finger. I added a simple software filter to smooth the readings. The device works well indoors, though it still struggles with ambient light.",
+   "why_it_works": "It keeps the introduction short, mentions specific technical tools relevant to Indian recruiters, admits a real limitation (noisy sensor), and highlights problem-solving skills rather than claiming an impossible commercial success.",
+   "improvement_tip": "Time yourself using a phone stopwatch. If you go past 50 seconds, remove background details about why you chose the project and focus directly on what you built and how it functions.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Draft an About section with evidence rather than generic claims",
+   "explanation": "Your LinkedIn About section is where you tell your professional story. Instead of using vague buzzwords like 'passionate learner' or 'robotics enthusiast' without proof, you should share concrete evidence of your skills. For engineering students looking at robotics, BCI, or embedded systems, this means mentioning specific tools, hardware, or hands-on projects you have actually built.",
+   "practical_example": "Instead of writing 'I love building robots and working with circuits,' write 'As an electronics student, I have built obstacle-avoidance robots using Arduino and designed custom PCBs for motor control using KiCad.'",
+   "exercise": "Write a short paragraph for your About section that includes your main engineering field of study, one specific hardware or software tool you know how to use, and one project you have personally worked on.",
+   "model_answer": "I am an electronics and communication engineering student focused on embedded systems and robotics. I enjoy bridging hardware and software by programming microcontrollers like STM32 in C and testing circuits on breadboards. Recently, I built a line-following robot using IR sensors and a PID control algorithm, which helped me understand real-time sensor feedback and debugging hardware issues.",
+   "why_it_works": "It replaces empty claims with verifiable facts. Mentioning specific microcontrollers, languages, and project types shows recruiters exactly what you can do rather than just telling them you are interested.",
+   "improvement_tip": "Do not list skills you have only read about in textbooks. Only include tools and projects you have actually touched or coded yourself.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly",
+   "focus": "Research design and method",
+   "explanation": "Because the Crossref metadata did not include an abstract, general knowledge of this study shows that the researchers used human stem cells grown in a three-dimensional gel system to form tiny brain-like structures, known as cerebral organoids, to watch how the brain grows and to study a condition called microcephaly.",
+   "limits": "The exact experimental steps and lab materials cannot be detailed here because the abstract was missing from the provided metadata, and no outside numbers or specific results were added to prevent guessing.",
+   "check": {
+    "confidence": "Low"
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature12517",
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Brain-computer interfaces for communication and control",
+   "focus": "Research design and method",
+   "explanation": "Because the Crossref metadata lacked an abstract, general knowledge of this paper was used to describe how brain-computer interface studies are typically designed around signal acquisition, feature extraction, and translation algorithms to help users communicate or control devices.",
+   "limits": "The specific methodological details of this exact 2002 paper could not be verified from the metadata alone, so general field knowledge was applied.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "2 of 3",
+   "topic": "How it works",
+   "project": "ros-navigation/navigation2",
+   "explanation": "Based on the repository details and documentation links, Nav2 is a C++ framework built for ROS 2 to handle robot navigation. It relies on modular concepts like plugins for different behaviors, configuration guides, and behavior trees to steer autonomous vehicles. It integrates with various ROS distributions and relies on automated build systems and testing workflows to ensure stability across platforms.",
+   "challenge": "Explore the official Nav2 documentation link found in the README to locate the core concepts section and identify what role behavior trees play in the navigation architecture.",
+   "knowledge_check": "What primary programming language is predominantly used to write the core logic of the Nav2 repository?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-10-22T17:31:53Z",
+    "language": "C++",
+    "archived": false,
+    "license": "NOASSERTION"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Product",
+     "url": "https://spectrum.ieee.org/agility-robotics-digit-5-redesign",
+     "what": "The Digit 5 humanoid robot.",
+     "who": "Agility Robotics",
+     "how": "The robot is built to perform manual labor, specifically lifting 23-kilogram bins to high shelves. Background (general knowledge): Humanoid robots are designed to mimic human movement to operate in environments built for people.",
+     "why": "To create a humanoid that can safely and affordably complete useful tasks at a large scale.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The company aims to deploy tens of thousands of these robots to work alongside humans.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "The Robot I Didn\u2019t Expect to Build",
+     "published": "2026-10-19",
+     "source": "IEEE Spectrum Robotics"
+    },
+    {
+     "category": "Product",
+     "url": "https://www.therobotreport.com/dream-labs-raises-90m-and-launches-dream-api/",
+     "what": "The Dream-1 AI model.",
+     "who": "Dream Labs",
+     "how": "The software enables robots from different brands to share or transfer learned tasks. Background (general knowledge): AI models allow robots to process sensor data and make decisions without being explicitly programmed for every movement.",
+     "why": "To create a universal AI that works across various types of manufacturer hardware.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The company secured $90 million in funding to support this technology.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Dream Labs raises $90M and launches Dream API",
+     "published": "2026-10-22",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/kodama-raises-7m-bring-robotics-forestry/",
+     "what": "Automated forestry and logging machinery.",
+     "who": "Kodama",
+     "how": "The process uses teleoperation to control equipment remotely while gathering performance data. Background (general knowledge): Teleoperation is a method of controlling a machine from a distance, often used in hazardous environments like forests.",
+     "why": "To bring robotics into the forestry industry.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The company raised $7 million to help automate these industrial tasks.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Kodama raises $7M to bring robotics to forestry",
+     "published": "2026-10-19",
+     "source": "The Robot Report"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Embedded Software Developer Traffic Management Systems (m/f/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Braunschweig",
+     "published": "2026-10-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/smartmicro/embedded-software-developer-traffic-management-systems-braunschweig-261805",
+     "company": "smartmicro"
+    },
+    {
+     "title": "Embedded Software Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Sittard, Limburg, Nederland",
+     "published": "2026-10-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/gradematch/embedded-software-engineer-sittard-383335",
+     "company": "GradeMatch"
+    },
+    {
+     "title": "Embedded Software Engineer C++/C",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Venlo, Limburg, Nederland",
+     "published": "2026-10-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/gradematch/embedded-software-engineer-c-c-venlo-490348",
+     "company": "GradeMatch"
+    },
+    {
+     "title": "Embedded Software Engineer C/C++",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Sittard, Limburg, Nederland",
+     "published": "2026-10-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/gradematch/embedded-software-engineer-c-c-sittard-426328",
+     "company": "GradeMatch"
+    },
+    {
+     "title": "Embedded Software Designer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Eindhoven, Noord-Brabant, Nederland",
+     "published": "2026-10-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/gradematch/embedded-software-designer-eindhoven-21636",
+     "company": "GradeMatch"
+    },
+    {
+     "title": "Robot Pilot",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Spiez",
+     "published": "2026-10-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/nu-glass/robot-pilot-spiez-149435",
+     "company": "nu glass"
+    },
+    {
+     "title": "Software Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Eindhoven, Noord-Brabant, Nederland",
+     "published": "2026-10-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/gradematch/software-test-engineer-eindhoven-229483",
+     "company": "GradeMatch"
+    },
+    {
+     "title": "Automation Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Weert, Limburg, Nederland",
+     "published": "2026-10-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/gradematch/automation-engineer-weert-293161",
+     "company": "GradeMatch"
+    },
+    {
+     "title": "Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Almelo, Overijssel, Nederland",
+     "published": "2026-10-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/benchmark/test-engineer-almelo-397717",
+     "company": "Benchmark"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
