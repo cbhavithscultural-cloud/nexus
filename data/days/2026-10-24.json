@@ -1,0 +1,265 @@
+{
+ "v": 2,
+ "date": "2026-10-24",
+ "generated_at": "2026-10-24T02:31:32.084428+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Explore the basic parts of a brain cell, including dendrites, the main body, the axon, and the connection point, to understand how biological signals move through a single cell.",
+   "why_it_matters": "Organoid intelligence relies on living brain cells grown in labs. To build or understand these living computers, we must know the specific physical parts a brain cell uses to receive, process, and send information.",
+   "prerequisites": [
+    "Basic knowledge that brain cells act like biological batteries and wires.",
+    "Understanding that cells use electrical and chemical signals to communicate."
+   ],
+   "simple_explanation": "Think of a brain cell like a tiny tree. The branches (dendrites) listen for incoming messages, the central trunk (soma) decides what to do with them, and the long root or wire (axon) sends the message out to the next cell through a special gap (synapse).",
+   "step_by_step": [
+    "Dendrites act as the listening posts, branching out to catch chemical messages from nearby cells.",
+    "The soma, or cell body, collects all these incoming signals and weighs them together.",
+    "If the signals add up enough, the cell triggers an outgoing electrical pulse down the axon.",
+    "The axon acts as a long transmission cable, carrying the pulse away from the cell body.",
+    "At the very end of the axon, the synapse serves as a tiny gap where the message jumps to the next cell's dendrite."
+   ],
+   "technical_depth": "In neurobiology, the dendrites receive neurotransmitters that open ion channels, creating graded potentials. If these potentials reach the threshold at the axon hillock, a voltage-gated action potential travels down the axon. When it reaches the axon terminal, it triggers vesicle fusion and neurotransmitter release across the synaptic cleft.",
+   "misconceptions": [
+    "Misconception: All brain cells look identical. Reality: Brain cells come in many shapes and sizes depending on their specific job in the network.",
+    "Misconception: Signals flow in any direction through the cell. Reality: Signals almost always travel in one direction: from dendrites, through the soma, down the axon, and across the synapse."
+   ],
+   "knowledge_check": [
+    {
+     "question": "Which part of the brain cell acts mainly to receive incoming messages?",
+     "answer": "Dendrites."
+    },
+    {
+     "question": "What is the name of the long wire-like part that carries the signal away from the cell body?",
+     "answer": "The axon."
+    },
+    {
+     "question": "What is the microscopic gap between two brain cells called?",
+     "answer": "A synapse."
+    }
+   ],
+   "exercise": "Draw a simple diagram of a brain cell on a piece of paper. Label the dendrites, soma, axon, and synapse. Write a one-sentence description next to each label in your own words.",
+   "summary": "A brain cell is divided into distinct functional zones: dendrites receive inputs, the soma integrates them, the axon transmits the electrical impulse, and the synapse passes the message to the next cell.",
+   "next_lesson": "Day 4: How brain cells generate electrical spikes.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how individual neurons in the motor cortex coordinate to plan and direct physical movement.",
+   "why_it_matters": "Brain-computer interfaces designed to restore mobility rely on decoding the specific electrical firing patterns of motor cortex neurons to predict where a user wants to move.",
+   "prerequisites": [
+    "Basic understanding of how neurons send electrical signals",
+    "General knowledge that the brain controls body movements"
+   ],
+   "simple_explanation": "Imagine the motor cortex as a massive control panel where different groups of cells are assigned to different body parts. When you decide to reach out your arm, specific cells fire rapidly together to send that physical command down through your spinal cord.",
+   "step_by_step": [
+    "1. Movement planning begins in your mind, signaling the motor cortex located near the top middle section of your brain.",
+    "2. Individual neurons in this area start changing how fast they fire electrical pulses depending on the direction and speed of the intended movement.",
+    "3. These electrical patterns travel out of the brain, creating the biological data that BCI sensors can pick up and translate.",
+    "4. A computer algorithm analyzes which neurons are firing the most to figure out the exact physical action the user desires."
+   ],
+   "technical_depth": "Motor cortex neurons exhibit directional tuning, meaning a single neuron fires most strongly when movement occurs in a preferred direction. By combining signals from a large population of these tuned neurons using mathematical vector summation, researchers can accurately reconstruct multi-directional arm trajectories in real time.",
+   "misconceptions": [
+    "Misconception: A single neuron controls a single specific muscle. Reality: Movement control is distributed; many neurons control multiple muscles, and individual muscles are influenced by many neurons."
+   ],
+   "knowledge_check": [
+    {
+     "question": "Where is the motor cortex located relative to the rest of the brain?",
+     "answer": "Near the top middle section of the brain."
+    },
+    {
+     "question": "What does directional tuning mean for a motor cortex neuron?",
+     "answer": "It means the neuron fires most strongly when a movement happens in a specific preferred direction."
+    },
+    {
+     "question": "How do BCI systems use motor cortex signals to predict movement?",
+     "answer": "They analyze the firing rates of large groups of neurons to calculate the intended direction and action."
+    }
+   ],
+   "exercise": "Draw a simple grid representing a population of 5 neurons. Imagine two of them firing rapidly to indicate a rightward movement, and write down a one-sentence description of how a computer might read that pattern as a 'move right' command.",
+   "summary": "The motor cortex uses populations of electrically active neurons with directional preferences to plan and execute physical movements, forming the physiological basis for movement-restoring BCIs.",
+   "next_lesson": "Day 4: Introduction to Neural Recording Methods",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Debug a robot sensor scenario using symptoms and hypotheses",
+   "explanation": "When a robot sensor stops working during an internship task, guessing randomly wastes time. Instead, use a structured method: observe the physical symptom, list possible reasons as hypotheses, and test them one by one.",
+   "practical_example": "Imagine your line-following robot's infrared sensor keeps reading zero, even when placed over a black line. Symptom: sensor value stays constant. Hypothesis 1: the wire is loose. Hypothesis 2: the ambient light is too bright. Test Hypothesis 1 first by gently checking the pin connection.",
+   "exercise": "Your BCI headset prototype shows flatline data on the screen whenever the user blinks. Write down one clear symptom and two distinct hypotheses you would test first.",
+   "model_answer": "Symptom: sudden flatline data on the screen during a blink. Hypothesis 1: the electrode gel has dried out, causing a poor scalp connection. Hypothesis 2: a motion artifact caused a temporary cable disconnect from the amplifier.",
+   "why_it_works": "Interviewers love candidates who show a calm, step-by-step problem-solving process rather than panicking or swapping parts blindly when hardware fails.",
+   "improvement_tip": "Always test the simplest and cheapest hypotheses first, like checking power supply and loose jumper wires, before assuming the sensor chip is broken.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Describe a robotics project using problem, design, test and result",
+   "explanation": "When writing about a robotics or embedded systems project on LinkedIn, avoid vague descriptions. Use a clear four-step structure: state the Problem you solved, explain your hardware and software Design, describe how you Tested it, and share the final Result.",
+   "practical_example": "Instead of saying 'I made a line follower robot', write: Problem: Standard line followers lost track on sharp turns. Design: Built an STM32-based robot using a custom 5-sensor QTR array and a proportional-derivative control algorithm. Test: Ran 50 trials on a track with sharp 90-degree corners. Result: Achieved a 95 percent completion rate without straying from the path.",
+   "exercise": "Take one school or hobby project related to robotics, BCI, or embedded systems. Write down one sentence for each of the four sections: Problem, Design, Test, and Result, focusing only on what you actually built.",
+   "model_answer": "Problem: My Arduino-based robotic arm dropped objects due to poor grip control. Design: Added an analog flex sensor to the controller glove to map hand bending directly to servo motor angles. Test: Measured the success rate of picking up lightweight objects ten times. Result: Successfully lifted objects consistently without crushing them.",
+   "why_it_works": "This method proves your engineering skills to recruiters in India by showing your complete thought process, from identifying a technical challenge to validating your solution with real tests.",
+   "improvement_tip": "Keep your sentences short and active. Focus on the tools and microcontroller names you used, as recruiters often search for specific terms like Arduino, STM32, or Python.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly",
+   "focus": "Results and figures showing how stem cells grow into tiny, brain-like structures and how the researchers studied a condition called microcephaly.",
+   "explanation": "Because the abstract is empty, general knowledge shows that the researchers grew human stem cells in a special gel to support 3D growth. The resulting tissues formed different brain regions with active neural cells. By using cells from a patient with microcephaly, they showed that the mini-brains grew smaller due to problems with cell division and premature cell death.",
+   "limits": "Since the specific abstract text was missing from the metadata, this explanation relies on general scientific knowledge of this famous 2013 Nature paper.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature12517",
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
+   "focus": "Results and figures regarding how well users can operate brain-computer interfaces.",
+   "explanation": "Because the paper abstract is missing, general knowledge of this 2002 paper indicates that it discusses how people can use brain signals, such as EEG rhythms, to control devices and spell words on a screen after training.",
+   "limits": "Specific data values, figures, and exact accuracy percentages from the paper are not available without the abstract or text, so they are omitted to prevent guessing.",
+   "check": "Medium",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "3 of 3",
+   "phase": "Run it in simulation and engineering judgement",
+   "project_name": "ros-navigation/navigation2",
+   "description": "ROS 2 Navigation Framework and System used for programming mobile robots to move autonomously.",
+   "language": "C++",
+   "simulation_and_testing_notes": "On the final day, the focus shifts to running the system inside a simulation environment and applying engineering judgement. Rather than executing physical code, developers use the documentation and tutorials to test navigation pipelines virtually. Based on the repository details, Nav2 integrates closely with various ROS distributions and relies on community-driven sponsors and continuous integration builds to verify software health across different Ubuntu versions.",
+   "small_challenge": "Review the online documentation links provided in the project text and find where the getting started or simulation setup guides are located to understand how to launch a robot in a virtual world.",
+   "knowledge_check": "What primary programming language is predominantly used for the navigation2 repository according to the provided metadata?",
+   "knowledge_check_answer": "C++",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-10-23T16:57:59Z",
+    "language": "C++",
+    "archived": false,
+    "license": "NOASSERTION"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Deployment",
+     "url": "https://spectrum.ieee.org/video-friday-rubiks-cube-robot",
+     "what": "A four-legged robot demonstrated the ability to solve a large Rubik's cube without human help.",
+     "who": "Not stated in the source excerpt",
+     "how": "The robot uses its own sensors and programming to manipulate the cube. Background (general knowledge): Quadruped robots are typically designed for navigation across uneven terrain, making precise object manipulation a complex secondary task.",
+     "why": "To showcase advancements in autonomous robotic manipulation.",
+     "limits": "The provided excerpt does not detail the specific sensing or grasping mechanisms used.",
+     "learn": "Autonomous robots are increasingly capable of solving complex mechanical puzzles.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Video Friday: Quadruped Robot Solves Giant Rubik\u2019s Cube by Itself",
+     "published": "2026-10-23",
+     "source": "IEEE Spectrum Robotics"
+    },
+    {
+     "category": "Research",
+     "url": "https://robohub.org/robot-talk-episode-167-automating-construction-with-jan-petrs/",
+     "what": "Development of deployable robotic systems designed specifically for construction and architecture tasks.",
+     "who": "Jan Petr\u0161, a roboticist and entrepreneur affiliated with EPFL and D\u00e9ploya Robotics.",
+     "how": "By creating new types of robot designs intended to be deployed on construction sites.",
+     "why": "To automate and improve workflows within the construction and architecture industries.",
+     "limits": "Specific technical details on the mechanical designs are not provided in the source.",
+     "learn": "Robotics is being integrated into the construction field to enable deployable, automated building processes.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Robot Talk Episode 167 \u2013 Automating construction, with Jan Petr\u0161",
+     "published": "2026-10-23",
+     "source": "Robohub"
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/robobusiness-rebrands-as-robotics-summit-expo-west/",
+     "what": "The RoboBusiness event has rebranded to the Robotics Summit & Expo West.",
+     "who": "The organizers of the event.",
+     "how": "By officially changing the event's name and focus.",
+     "why": "To sharpen the event's focus on the real-world deployment of artificial intelligence and robotics, mirroring their East Coast event strategy.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The industry is shifting its focus toward the practical, real-world application and deployment of robotic systems.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "RoboBusiness rebrands as Robotics Summit & Expo West",
+     "published": "2026-10-20",
+     "source": "The Robot Report"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Junior Supply Chain Engineer - Operations (H/F)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Issy-les-Moulineaux, France",
+     "published": "2026-10-23",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/withings/junior-supply-chain-engineer-operations-h-f-issy-les-moulineaux-410004",
+     "company": "Withings"
+    },
+    {
+     "title": "Test Automation Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Strasbourg, France",
+     "published": "2026-10-23",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/european-dynamics/remote-test-automation-engineer-strasbourg-449366",
+     "company": "European Dynamics"
+    },
+    {
+     "title": "Systems Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Remote job",
+     "published": "2026-10-23",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/exeon-analytics/remote-systems-engineer-zurich-94036",
+     "company": "Exeon Analytics"
+    },
+    {
+     "title": "Softwarearchitekt Embedded Systems (m/w/d) Dresden",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Dresden",
+     "published": "2026-10-23",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwarearchitekt-embedded-systems-dresden-473184",
+     "company": "MY Humancapital GmbH"
+    },
+    {
+     "title": "Softwareentwickler Automatisierungstechnik SPS (m/w/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich",
+     "published": "2026-10-23",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwareentwickler-automatisierungstechnik-sps-munich-242896",
+     "company": "MY Humancapital GmbH"
+    },
+    {
+     "title": "IoT Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Basel, Basel-Stadt, Switzerland",
+     "published": "2026-10-23",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/skycell-ag/iot-engineer-basel-443542",
+     "company": "SkyCell AG"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
