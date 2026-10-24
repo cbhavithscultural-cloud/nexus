@@ -1,226 +1,215 @@
 {
  "v": 2,
- "date": "2026-10-24",
- "generated_at": "2026-10-24T04:22:04.277937+05:30",
+ "date": "2026-10-25",
+ "generated_at": "2026-10-25T02:26:16.153806+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Explore the basic parts of a brain cell, including dendrites, the main body, the axon, and the connection point, to understand how biological signals move through a single cell.",
-   "why_it_matters": "Organoid intelligence relies on living brain cells grown in labs. To build or understand these living computers, we must know the specific physical parts a brain cell uses to receive, process, and send information.",
+   "objective": "Understand how brain cells maintain a resting electrical charge using charged particles and cell walls.",
+   "why_it_matters": "Organoid intelligence relies on growing living brain tissue in the lab, which requires keeping these microscopic biological batteries stable and charged so they can process information.",
    "prerequisites": [
-    "Basic knowledge that brain cells act like biological batteries and wires.",
-    "Understanding that cells use electrical and chemical signals to communicate."
+    "Basic knowledge that cells are enclosed by a protective outer membrane wall.",
+    "Familiarity with the concept that tiny charged particles (ions) exist inside and outside of cells."
    ],
-   "simple_explanation": "Think of a brain cell like a tiny tree. The branches (dendrites) listen for incoming messages, the central trunk (soma) decides what to do with them, and the long root or wire (axon) sends the message out to the next cell through a special gap (synapse).",
+   "simple_explanation": "Imagine a brain cell as a tiny balloon filled with salty water, sitting in another pool of salty water. The cell wall acts like a selective gatekeeper. It traps certain charged particles (ions) inside while keeping others outside. This separation creates a voltage difference, making the inside of the cell negatively charged compared to the outside, much like a tiny biological battery.",
    "step_by_step": [
-    "Dendrites act as the listening posts, branching out to catch chemical messages from nearby cells.",
-    "The soma, or cell body, collects all these incoming signals and weighs them together.",
-    "If the signals add up enough, the cell triggers an outgoing electrical pulse down the axon.",
-    "The axon acts as a long transmission cable, carrying the pulse away from the cell body.",
-    "At the very end of the axon, the synapse serves as a tiny gap where the message jumps to the next cell's dendrite."
+    "Ions are atoms or molecules carrying an electric charge, specifically sodium, potassium, and chloride in biology.",
+    "The cell membrane is a fatty wall that blocks these charged particles from freely passing through on their own.",
+    "Specialized protein tunnels embedded in the wall act as locked gates, selectively allowing specific ions to cross under certain conditions.",
+    "Tiny molecular pumps actively use cellular energy to push potassium ions in and sodium ions out, maintaining a strict imbalance.",
+    "This imbalance creates a resting membrane voltage, meaning the inside holds a negative electrical charge ready to spring into action."
    ],
-   "technical_depth": "In neurobiology, the dendrites receive neurotransmitters that open ion channels, creating graded potentials. If these potentials reach the threshold at the axon hillock, a voltage-gated action potential travels down the axon. When it reaches the axon terminal, it triggers vesicle fusion and neurotransmitter release across the synaptic cleft.",
+   "technical_depth": "The resting membrane potential of a typical neuron sits around -70 millivolts. This is established primarily by the leak of potassium ions out of the cell down their concentration gradient, guided by the Goldman-Hodgkin-Katz equation. The sodium-potassium pump (Na+/K+-ATPase) hydrolyzes ATP to continuously extrude 3 sodium ions for every 2 potassium ions imported, counteracting passive leaks and preserving the electrochemical gradient essential for excitability.",
    "misconceptions": [
-    "Misconception: All brain cells look identical. Reality: Brain cells come in many shapes and sizes depending on their specific job in the network.",
-    "Misconception: Signals flow in any direction through the cell. Reality: Signals almost always travel in one direction: from dendrites, through the soma, down the axon, and across the synapse."
+    "Misconception: The cell wall is completely solid and blocks all movement. Reality: It is selectively permeable, allowing controlled movement through specialized protein channels.",
+    "Misconception: Voltage inside the cell is positive. Reality: At rest, the inside is negative relative to the outside fluid."
    ],
    "knowledge_check": [
     {
-     "question": "Which part of the brain cell acts mainly to receive incoming messages?",
-     "answer": "Dendrites."
+     "question": "What primary particles create the electrical charge across a cell wall?",
+     "answer": "Charged particles called ions, such as sodium and potassium."
     },
     {
-     "question": "What is the name of the long wire-like part that carries the signal away from the cell body?",
-     "answer": "The axon."
+     "question": "Is the inside of a resting brain cell charged positively or negatively?",
+     "answer": "Negatively."
     },
     {
-     "question": "What is the microscopic gap between two brain cells called?",
-     "answer": "A synapse."
+     "question": "What protein machinery uses cellular energy to maintain ion gradients?",
+     "answer": "The sodium-potassium pump."
     }
    ],
-   "exercise": "Draw a simple diagram of a brain cell on a piece of paper. Label the dendrites, soma, axon, and synapse. Write a one-sentence description next to each label in your own words.",
-   "summary": "A brain cell is divided into distinct functional zones: dendrites receive inputs, the soma integrates them, the axon transmits the electrical impulse, and the synapse passes the message to the next cell.",
-   "next_lesson": "Day 4: How brain cells generate electrical spikes.",
+   "exercise": "Draw a simple circle representing a cell. Label the inside and the outside. Draw small arrows showing the sodium-potassium pump pushing sodium out and potassium in to visualize how the battery stays charged.",
+   "summary": "Brain cells act as miniature batteries by using a fatty cell wall to separate different types of charged ions, maintaining a negative internal resting voltage powered by molecular pumps.",
+   "next_lesson": "Day 5: Action potentials and how signals travel down the axon.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how individual neurons in the motor cortex coordinate to plan and direct physical movement.",
-   "why_it_matters": "Brain-computer interfaces designed to restore mobility rely on decoding the specific electrical firing patterns of motor cortex neurons to predict where a user wants to move.",
+   "objective": "Understand how electrical signals travel from neurons through brain tissue, skull, and scalp to reach BCI sensors using the principles of volume conduction.",
+   "why_it_matters": "Brain signals lose strength and blur as they pass through tissues like cerebrospinal fluid, bone, and skin. Knowing how this happens helps engineers design better sensors and software to recover the original brain activity.",
    "prerequisites": [
-    "Basic understanding of how neurons send electrical signals",
-    "General knowledge that the brain controls body movements"
+    "Neurons generate tiny electrical currents when they fire.",
+    "BCIs rely on detecting these electrical changes outside or on top of the brain."
    ],
-   "simple_explanation": "Imagine the motor cortex as a massive control panel where different groups of cells are assigned to different body parts. When you decide to reach out your arm, specific cells fire rapidly together to send that physical command down through your spinal cord.",
+   "simple_explanation": "Imagine dropping a stone in the middle of a pond; the ripples spread out in all directions. Brain activity works similarly. When neurons fire, their electrical currents flow outward through the surrounding jelly-like brain tissue, spinal fluid, skull, and skin. This spreading of electrical current through a physical medium is called volume conduction. By the time the signal reaches a sensor on the scalp (like in EEG), it has mixed with signals from many other brain areas and become much weaker, like hearing a loud concert from outside a thick brick wall.",
    "step_by_step": [
-    "1. Movement planning begins in your mind, signaling the motor cortex located near the top middle section of your brain.",
-    "2. Individual neurons in this area start changing how fast they fire electrical pulses depending on the direction and speed of the intended movement.",
-    "3. These electrical patterns travel out of the brain, creating the biological data that BCI sensors can pick up and translate.",
-    "4. A computer algorithm analyzes which neurons are firing the most to figure out the exact physical action the user desires."
+    "A group of neurons fires, creating a localized electric current.",
+    "The surrounding tissues act as a volume conductor, allowing the electrical charges to flow outward in three dimensions.",
+    "As the current spreads, it travels through resistive barriers like the skull, which dampens and smears the signal.",
+    "Sensors (electrodes) on the scalp or brain surface pick up the resulting blended voltage changes."
    ],
-   "technical_depth": "Motor cortex neurons exhibit directional tuning, meaning a single neuron fires most strongly when movement occurs in a preferred direction. By combining signals from a large population of these tuned neurons using mathematical vector summation, researchers can accurately reconstruct multi-directional arm trajectories in real time.",
+   "technical_depth": "Volume conduction is governed by physics principles similar to Ohm's law in resistive media. Biological tissues have different electrical conductivities. For instance, the skull has a much lower conductivity than cerebrospinal fluid or scalp tissue, causing electrical currents to spread laterally rather than straight through. This creates a spatial smearing effect, meaning a single scalp electrode records a blended average of activity from a large patch of cortex rather than a single neuron.",
    "misconceptions": [
-    "Misconception: A single neuron controls a single specific muscle. Reality: Movement control is distributed; many neurons control multiple muscles, and individual muscles are influenced by many neurons."
+    "Misconception: An EEG electrode directly records the electrical signal of the neuron directly beneath it. Fact: Because of volume conduction, scalp signals are a heavily mixed combination of activity from millions of distant neurons."
    ],
    "knowledge_check": [
     {
-     "question": "Where is the motor cortex located relative to the rest of the brain?",
-     "answer": "Near the top middle section of the brain."
+     "question": "What is volume conduction?",
+     "answer": "The process by which electrical currents from active neurons spread outward through the surrounding biological tissues and fluids."
     },
     {
-     "question": "What does directional tuning mean for a motor cortex neuron?",
-     "answer": "It means the neuron fires most strongly when a movement happens in a specific preferred direction."
+     "question": "Which biological layer offers the most resistance to electrical signals traveling from the brain to the scalp?",
+     "answer": "The skull."
     },
     {
-     "question": "How do BCI systems use motor cortex signals to predict movement?",
-     "answer": "They analyze the firing rates of large groups of neurons to calculate the intended direction and action."
+     "question": "How does volume conduction affect the signals picked up by scalp sensors?",
+     "answer": "It weakens and blurs them, blending signals from many different brain areas together."
     }
    ],
-   "exercise": "Draw a simple grid representing a population of 5 neurons. Imagine two of them firing rapidly to indicate a rightward movement, and write down a one-sentence description of how a computer might read that pattern as a 'move right' command.",
-   "summary": "The motor cortex uses populations of electrically active neurons with directional preferences to plan and execute physical movements, forming the physiological basis for movement-restoring BCIs.",
-   "next_lesson": "Day 4: Introduction to Neural Recording Methods",
+   "exercise": "Take a bowl of water and gently tap the surface in one spot to create ripples. Notice how the waves spread outward and lose their sharp definition as they travel. Relate this physical spreading to how electrical current travels through brain tissue and the skull.",
+   "summary": "Electrical signals from neurons spread outward through surrounding tissues via volume conduction, becoming weaker and more blurred by the time they reach BCI sensors due to the high resistance of barriers like the skull.",
+   "next_lesson": "Day 5: Signal-to-Noise Ratio and Artifacts in Neural Recording",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Debug a robot sensor scenario using symptoms and hypotheses",
-   "explanation": "When a robot sensor stops working during an internship task, guessing randomly wastes time. Instead, use a structured method: observe the physical symptom, list possible reasons as hypotheses, and test them one by one.",
-   "practical_example": "Imagine your line-following robot's infrared sensor keeps reading zero, even when placed over a black line. Symptom: sensor value stays constant. Hypothesis 1: the wire is loose. Hypothesis 2: the ambient light is too bright. Test Hypothesis 1 first by gently checking the pin connection.",
-   "exercise": "Your BCI headset prototype shows flatline data on the screen whenever the user blinks. Write down one clear symptom and two distinct hypotheses you would test first.",
-   "model_answer": "Symptom: sudden flatline data on the screen during a blink. Hypothesis 1: the electrode gel has dried out, causing a poor scalp connection. Hypothesis 2: a motion artifact caused a temporary cable disconnect from the amplifier.",
-   "why_it_works": "Interviewers love candidates who show a calm, step-by-step problem-solving process rather than panicking or swapping parts blindly when hardware fails.",
-   "improvement_tip": "Always test the simplest and cheapest hypotheses first, like checking power supply and loose jumper wires, before assuming the sensor chip is broken.",
+   "topic": "Embedded C fundamentals: variables, pointers and memory safety",
+   "explanation": "In robotics and embedded systems, microcontrollers have very little memory. A variable holds a data value, while a pointer holds the physical memory address where that data lives. Using pointers incorrectly can cause your robot's software to crash by accidentally changing critical system memory.",
+   "practical_example": "Imagine writing firmware for a BCI headset. You have a variable storing the raw EEG signal value. If you pass this variable directly to a function, the function gets a copy. If you pass a pointer to the variable, the function can update the actual value in real time without wasting memory making copies.",
+   "exercise": "Write a short C code snippet that creates a variable for a motor speed, defines a pointer to point to that variable, and uses the pointer to change the motor speed value.",
+   "model_answer": "int motor_speed = 50;\nint *speed_ptr = &motor_speed;\n*speed_ptr = 100;",
+   "why_it_works": "The asterisk (*) defines the pointer and also dereferences it to change the actual value stored at that memory address, updating the original variable safely.",
+   "improvement_tip": "Always check that your pointer is not pointing to a null address before trying to change its value to prevent device crashes.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Describe a robotics project using problem, design, test and result",
-   "explanation": "When writing about a robotics or embedded systems project on LinkedIn, avoid vague descriptions. Use a clear four-step structure: state the Problem you solved, explain your hardware and software Design, describe how you Tested it, and share the final Result.",
-   "practical_example": "Instead of saying 'I made a line follower robot', write: Problem: Standard line followers lost track on sharp turns. Design: Built an STM32-based robot using a custom 5-sensor QTR array and a proportional-derivative control algorithm. Test: Ran 50 trials on a track with sharp 90-degree corners. Result: Achieved a 95 percent completion rate without straying from the path.",
-   "exercise": "Take one school or hobby project related to robotics, BCI, or embedded systems. Write down one sentence for each of the four sections: Problem, Design, Test, and Result, focusing only on what you actually built.",
-   "model_answer": "Problem: My Arduino-based robotic arm dropped objects due to poor grip control. Design: Added an analog flex sensor to the controller glove to map hand bending directly to servo motor angles. Test: Measured the success rate of picking up lightweight objects ten times. Result: Successfully lifted objects consistently without crushing them.",
-   "why_it_works": "This method proves your engineering skills to recruiters in India by showing your complete thought process, from identifying a technical challenge to validating your solution with real tests.",
-   "improvement_tip": "Keep your sentences short and active. Focus on the tools and microcontroller names you used, as recruiters often search for specific terms like Arduino, STM32, or Python.",
+   "topic": "Improve a GitHub README so a recruiter can reproduce the project",
+   "explanation": "When a recruiter or engineer clicks your GitHub link from LinkedIn, they want to know immediately what your project does and how to run it themselves. For robotics, BCI, and embedded projects, a great README acts as a clear user manual. It includes a short summary, a list of hardware parts, software tools, and simple step-by-step instructions to test your code.",
+   "practical_example": "Imagine you built a simple obstacle-avoiding robot using an Arduino and an ultrasonic sensor. Instead of leaving the README empty, you add sections: 'What it is', 'Parts used' (like Arduino Uno and HC-SR04), and 'How to run' (showing the exact steps to upload the code via the Arduino IDE).",
+   "exercise": "Open the GitHub repository for one of your past robotics, BCI, or embedded projects. Add a quick 'Getting Started' section that lists the physical hardware or software tools needed, plus two simple steps to run the code.",
+   "model_answer": "Hardware Required: Arduino Nano, HC-SR04 ultrasonic sensor. Software Required: Arduino IDE. Steps to Run: 1. Connect the sensor pins to digital pins 9 and 10 on the Arduino. 2. Open robot.ino in the Arduino IDE and click Upload.",
+   "why_it_works": "It proves to recruiters that your project is real, organized, and easy for someone else to understand or test, which builds immediate trust in your practical engineering skills.",
+   "improvement_tip": "Add a short, five-second GIF or video link right at the top of your README showing your robot moving or your BCI sensor reading data.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Cerebral organoids model human brain development and microcephaly",
-   "focus": "Results and figures showing how stem cells grow into tiny, brain-like structures and how the researchers studied a condition called microcephaly.",
-   "explanation": "Because the abstract is empty, general knowledge shows that the researchers grew human stem cells in a special gel to support 3D growth. The resulting tissues formed different brain regions with active neural cells. By using cells from a patient with microcephaly, they showed that the mini-brains grew smaller due to problems with cell division and premature cell death.",
-   "limits": "Since the specific abstract text was missing from the metadata, this explanation relies on general scientific knowledge of this famous 2013 Nature paper.",
+   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
+   "focus": "Building tiny, three-dimensional lab-grown brain tissues to study how the human brain grows and what goes wrong in microcephaly.",
+   "explanation": "Scientists used stem cells to grow brain-like structures in a gel matrix, allowing different brain regions to form naturally. They used cells from a patient with microcephaly (a condition resulting in a smaller head and brain) to see how the disorder affects tissue growth.",
+   "limits": "The abstract was not provided by the database, so this explanation relies on general scientific knowledge of this famous study. These organoids are still much simpler than a real human brain and lack blood vessels.",
    "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature12517",
    "doi_link": "https://doi.org/10.1038/nature12517",
-   "day": "3 of 5",
+   "day": "4 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
-   "focus": "Results and figures regarding how well users can operate brain-computer interfaces.",
-   "explanation": "Because the paper abstract is missing, general knowledge of this 2002 paper indicates that it discusses how people can use brain signals, such as EEG rhythms, to control devices and spell words on a screen after training.",
-   "limits": "Specific data values, figures, and exact accuracy percentages from the paper are not available without the abstract or text, so they are omitted to prevent guessing.",
-   "check": "Medium",
+   "paper": "Brain\u2013computer interfaces for communication and control",
+   "focus": "Engineering, limits, and ethics of brain-computer interfaces (BCIs)",
+   "explanation": "This paper looks at how computers can read brain signals to let people communicate and move objects without using muscles. Because the abstract was missing, this summary is based on general knowledge of the authors' widely recognized work in this field.",
+   "limits": "Brain signals can be noisy and hard to read clearly. Setting up the equipment takes time, and users need a lot of training to control the system well.",
+   "check": "The paper metadata is verified, but since the Crossref abstract was blank, general knowledge was used with medium confidence.",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/S1388-2457(02)00057-3",
    "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
-   "day": "3 of 5",
+   "day": "4 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "3 of 3",
-   "phase": "Run it in simulation and engineering judgement",
-   "project_name": "ros-navigation/navigation2",
-   "description": "ROS 2 Navigation Framework and System used for programming mobile robots to move autonomously.",
-   "language": "C++",
-   "simulation_and_testing_notes": "On the final day, the focus shifts to running the system inside a simulation environment and applying engineering judgement. Rather than executing physical code, developers use the documentation and tutorials to test navigation pipelines virtually. Based on the repository details, Nav2 integrates closely with various ROS distributions and relies on community-driven sponsors and continuous integration builds to verify software health across different Ubuntu versions.",
-   "small_challenge": "Review the online documentation links provided in the project text and find where the getting started or simulation setup guides are located to understand how to launch a robot in a virtual world.",
-   "knowledge_check": "What primary programming language is predominantly used for the navigation2 repository according to the provided metadata?",
-   "knowledge_check_answer": "C++",
+   "day": "1 of 3",
+   "total_days": 3,
+   "phase": "Understand the project",
+   "project_name": "turtlebot3",
+   "repository_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+   "primary_language": "C++",
+   "license": "Apache-2.0",
+   "summary": "This repository contains software packages for the TurtleBot3 robot, built to work with the Robot Operating System (ROS). It is actively maintained for modern ROS versions and supports various simulations, hardware components, and add-on tools.",
+   "key_findings": [
+    "The project is not archived, meaning it is still actively managed.",
+    "It relies heavily on C++ for its codebase.",
+    "It connects to a larger ecosystem of related open-source tools, including message definitions, simulation packages, and hardware drivers."
+   ],
+   "beginner_explanation": "Imagine building a small robot that needs to move around, avoid obstacles, and map rooms. Instead of writing every single line of code from scratch, developers use ROS (Robot Operating System) as a foundation. This repository provides the specific software glue needed to control the TurtleBot3 robot using ROS.",
+   "challenge": "Browse the list of related open-source projects in the README and identify at least three repositories that deal with simulations or robot arms.",
+   "knowledge_check": "What is the main programming language used in this repository according to the verified metadata?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
-    "full_name": "ros-navigation/navigation2",
-    "html_url": "https://github.com/ros-navigation/navigation2",
-    "description": "ROS 2 Navigation Framework and System",
-    "pushed_at": "2026-10-23T16:57:59Z",
+    "full_name": "ROBOTIS-GIT/turtlebot3",
+    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+    "description": "ROS packages for Turtlebot3",
+    "pushed_at": "2026-06-15T11:50:39Z",
     "language": "C++",
     "archived": false,
-    "license": "NOASSERTION"
+    "license": "Apache-2.0"
    }
   },
   "news": {
    "items": [
     {
-     "category": "Deployment",
-     "url": "https://spectrum.ieee.org/video-friday-rubiks-cube-robot",
-     "what": "A four-legged robot demonstrated the ability to solve a large Rubik's cube without human help.",
-     "who": "Not stated in the source excerpt",
-     "how": "The robot uses its own sensors and programming to manipulate the cube. Background (general knowledge): Quadruped robots are typically designed for navigation across uneven terrain, making precise object manipulation a complex secondary task.",
-     "why": "To showcase advancements in autonomous robotic manipulation.",
-     "limits": "The provided excerpt does not detail the specific sensing or grasping mechanisms used.",
-     "learn": "Autonomous robots are increasingly capable of solving complex mechanical puzzles.",
+     "category": "Business",
+     "url": "https://www.therobotreport.com/eka-robotics-raises-150m-scale-vision-force-action-model-robots/",
+     "what": "Eka Robotics secured $150 million in funding.",
+     "who": "Eka Robotics",
+     "how": "The company is creating a system that combines vision, force, and action to help robots understand physical environments. Background (general knowledge): Reinforcement learning is a machine learning method where robots learn by trial and error through rewards.",
+     "why": "To develop robot intuition regarding physics using large-scale machine learning.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The investment aims to advance how robots perceive and interact with physical tasks.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Video Friday: Quadruped Robot Solves Giant Rubik\u2019s Cube by Itself",
-     "published": "2026-10-23",
-     "source": "IEEE Spectrum Robotics"
+     "title": "Eka Robotics raises $150M to scale its vision-force-action model for robots",
+     "published": "2026-10-24",
+     "source": "The Robot Report"
     },
     {
      "category": "Research",
-     "url": "https://robohub.org/robot-talk-episode-167-automating-construction-with-jan-petrs/",
-     "what": "Development of deployable robotic systems designed specifically for construction and architecture tasks.",
-     "who": "Jan Petr\u0161, a roboticist and entrepreneur affiliated with EPFL and D\u00e9ploya Robotics.",
-     "how": "By creating new types of robot designs intended to be deployed on construction sites.",
-     "why": "To automate and improve workflows within the construction and architecture industries.",
-     "limits": "Specific technical details on the mechanical designs are not provided in the source.",
-     "learn": "Robotics is being integrated into the construction field to enable deployable, automated building processes.",
+     "url": "https://robohub.org/powered-by-muscle-cells-a-paper-thin-robot-swims-through-watery-maze/",
+     "what": "MIT researchers developed an ultra-thin, muscle-powered robot.",
+     "who": "MIT engineers",
+     "how": "The robot utilizes living muscle cells for locomotion, allowing it to move through water. Background (general knowledge): Biohybrid robots combine biological materials with synthetic components.",
+     "why": "To explore more efficient designs for small, specialized robots.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Integrating biological cells into small-scale robotics can enable movement in aquatic environments.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Robot Talk Episode 167 \u2013 Automating construction, with Jan Petr\u0161",
-     "published": "2026-10-23",
+     "title": "Powered by muscle cells, a paper-thin robot swims through watery maze",
+     "published": "2026-10-19",
      "source": "Robohub"
     },
     {
      "category": "Business",
-     "url": "https://www.therobotreport.com/robobusiness-rebrands-as-robotics-summit-expo-west/",
-     "what": "The RoboBusiness event has rebranded to the Robotics Summit & Expo West.",
-     "who": "The organizers of the event.",
-     "how": "By officially changing the event's name and focus.",
-     "why": "To sharpen the event's focus on the real-world deployment of artificial intelligence and robotics, mirroring their East Coast event strategy.",
+     "url": "https://www.therobotreport.com/generative-bionics-to-launch-physical-ai-data-factory-in-italy/",
+     "what": "Generative Bionics is establishing a facility to produce AI data in Italy.",
+     "who": "Generative Bionics",
+     "how": "They are building a 'Physical AI Data Factory' to collect information specifically from humanoid robots.",
+     "why": "To promote European independence in robotics by keeping humanoid data generation within the continent.",
      "limits": "Not stated in the source excerpt",
-     "learn": "The industry is shifting its focus toward the practical, real-world application and deployment of robotic systems.",
+     "learn": "Data production and sovereignty are becoming central topics in European robotics development.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "RoboBusiness rebrands as Robotics Summit & Expo West",
-     "published": "2026-10-20",
+     "title": "Generative Bionics to launch Physical AI Data Factory in Italy",
+     "published": "2026-10-24",
      "source": "The Robot Report"
     }
    ]
   },
   "jobs": {
    "items": [
-    {
-     "title": "Junior Supply Chain Engineer - Operations (H/F)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Issy-les-Moulineaux, France",
-     "published": "2026-10-23",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/withings/junior-supply-chain-engineer-operations-h-f-issy-les-moulineaux-410004",
-     "company": "Withings"
-    },
-    {
-     "title": "Test Automation Engineer",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Strasbourg, France",
-     "published": "2026-10-23",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/european-dynamics/remote-test-automation-engineer-strasbourg-449366",
-     "company": "European Dynamics"
-    },
     {
      "title": "Systems Engineer",
      "type": "vacancy listing (availability not independently verified)",
@@ -231,31 +220,49 @@
      "company": "Exeon Analytics"
     },
     {
-     "title": "Softwarearchitekt Embedded Systems (m/w/d) Dresden",
+     "title": "Software Engineer \u2013 Embedded Systems (All genders)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Dresden",
-     "published": "2026-10-23",
+     "location": "Munich, Bavaria",
+     "published": "2026-10-24",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwarearchitekt-embedded-systems-dresden-473184",
-     "company": "MY Humancapital GmbH"
+     "url": "https://www.arbeitnow.com/jobs/companies/skdse/software-engineer-embedded-systems-all-genders-munich-bavaria-376950",
+     "company": "Skdse"
     },
     {
-     "title": "Softwareentwickler Automatisierungstechnik SPS (m/w/d)",
+     "title": "Field Robotics Engineer \u2013 Data Operations (All Genders)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich",
-     "published": "2026-10-23",
+     "location": "Munich, Bavaria",
+     "published": "2026-10-24",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwareentwickler-automatisierungstechnik-sps-munich-242896",
-     "company": "MY Humancapital GmbH"
+     "url": "https://www.arbeitnow.com/jobs/companies/skdse/field-robotics-engineer-data-operations-all-genders-munich-bavaria-429407",
+     "company": "Skdse"
     },
     {
-     "title": "IoT Engineer",
+     "title": "Mechatronics Test Engineer (m/f/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Basel, Basel-Stadt, Switzerland",
-     "published": "2026-10-23",
+     "location": "Munich, Bavaria",
+     "published": "2026-10-24",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/skycell-ag/iot-engineer-basel-443542",
-     "company": "SkyCell AG"
+     "url": "https://www.arbeitnow.com/jobs/companies/agilerobotsse/mechatronics-test-engineer-munich-bavaria-451948",
+     "company": "Agilerobotsse"
+    },
+    {
+     "title": "Data Platform Engineer \u2013 Data Operations (all genders)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich, Bavaria",
+     "published": "2026-10-24",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/skdse/data-platform-engineer-data-operations-all-genders-munich-bavaria-125008",
+     "company": "Skdse"
+    },
+    {
+     "title": "Robot Service Engineer - Data Collection (m/f/d) Fixed-term 18 months",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich, Bavaria",
+     "published": "2026-10-24",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/agilerobotsse/robot-service-engineer-data-collection-fixed-term-18-months-munich-bavaria-136566",
+     "company": "Agilerobotsse"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",

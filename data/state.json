@@ -1,20 +1,20 @@
 {
- "oi": 3,
- "bci": 3,
+ "oi": 4,
+ "bci": 4,
  "po": [
   0,
-  4
+  5
  ],
  "pb": [
   0,
-  4
+  5
  ],
  "gh": [
   1,
-  1
+  2
  ],
- "ip": 3,
- "li": 3,
+ "ip": 4,
+ "li": 4,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -27,6 +27,9 @@
   "https://www.therobotreport.com/kodama-raises-7m-bring-robotics-forestry/",
   "https://spectrum.ieee.org/video-friday-rubiks-cube-robot",
   "https://robohub.org/robot-talk-episode-167-automating-construction-with-jan-petrs/",
-  "https://www.therobotreport.com/robobusiness-rebrands-as-robotics-summit-expo-west/"
+  "https://www.therobotreport.com/robobusiness-rebrands-as-robotics-summit-expo-west/",
+  "https://www.therobotreport.com/eka-robotics-raises-150m-scale-vision-force-action-model-robots/",
+  "https://robohub.org/powered-by-muscle-cells-a-paper-thin-robot-swims-through-watery-maze/",
+  "https://www.therobotreport.com/generative-bionics-to-launch-physical-ai-data-factory-in-italy/"
  ]
 }
