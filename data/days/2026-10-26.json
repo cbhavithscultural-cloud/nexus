@@ -1,0 +1,261 @@
+{
+ "v": 2,
+ "date": "2026-10-26",
+ "generated_at": "2026-10-26T02:27:20.788039+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): model returned no usable items",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how the electrical spike travels continuously down the axon without losing strength.",
+   "why_it_matters": "In living brain tissue and lab-grown brain organoids, signals must travel over long distances without fading. Knowing how this happens helps engineers design better ways to send commands to lab-grown neural networks.",
+   "prerequisites": [
+    "Brain cells maintain a resting voltage using charged particles.",
+    "Neurons have long wire-like extensions called axons."
+   ],
+   "simple_explanation": "Imagine a row of falling dominoes. When the first domino falls, it knocks over the next one, and that one knocks over the next, keeping the push just as strong at the end of the line as it was at the start. An electrical signal in a brain cell works the same way: one spot opening its gates triggers the next spot to do the exact same thing.",
+   "step_by_step": [
+    "A trigger near the cell body causes tiny gate openings in the cell wall at the start of the axon.",
+    "Positively charged particles rush inside, flipping the local voltage from negative to positive.",
+    "This sudden local change forces the adjacent gates just a bit further down the axon to pop open.",
+    "The wave moves forward step by step, while the previous spots quickly reset themselves so the signal only travels in one direction."
+   ],
+   "technical_depth": "This self-propagating wave relies on voltage-gated ion channels. As sodium channels open and depolarize one patch of membrane, the electrical shift spreads locally to trigger neighboring voltage-gated channels. Refractory periods ensure unidirectional propagation by temporarily disabling channels that just fired.",
+   "misconceptions": [
+    {
+     "misconception": "Electricity flows through an axon just like a metal wire.",
+     "correction": "Unlike metal wires that passively let current fade over distance, axons actively regenerate the electrical signal at every tiny section so it stays strong."
+    }
+   ],
+   "knowledge_check": [
+    {
+     "question": "Does an action potential fade as it travels down a long axon?",
+     "answer": "No, because each section of the axon regenerates the signal freshly."
+    },
+    {
+     "question": "What prevents the signal from running backward toward the cell body?",
+     "answer": "A resting recovery period behind the moving wave keeps the gates temporarily locked."
+    },
+    {
+     "question": "What opens the gates further down the axon?",
+     "answer": "The electrical change from the active spot right next to them."
+    }
+   ],
+   "exercise": "Draw a straight line representing an axon. Mark five sequential spots. Write down how a positive charge entering spot one triggers spot two, repeating the process down the line.",
+   "summary": "Signals travel down axons through a chain-reaction wave where each section of the cell wall freshly regenerates the electrical spike.",
+   "next_lesson": "Day 6: How insulation speeds up brain signals.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how EEG electrodes pick up electrical signals, why reference electrodes are needed to measure voltage differences, and the role of ground electrodes in safety and noise reduction.",
+   "why_it_matters": "Brain signals are extremely small voltage fluctuations measured relative to another point on the body. Without a proper reference and ground system, electrical noise from the environment would completely drown out the brain's signals.",
+   "prerequisites": [
+    "Basic electrical concepts like voltage, which is the difference in electrical charge between two points.",
+    "The understanding that neurons generate tiny electrical currents that travel through tissue and bone."
+   ],
+   "simple_explanation": "Imagine measuring the height of a hill. You cannot just state a number without deciding where sea level is\u2014your reference point. In EEG, sensors cannot read an absolute brain signal on their own. Instead, they measure the difference in electrical activity between a sensor on the scalp and a sensor placed on a neutral spot like the earlobe or mastoid bone. Meanwhile, a ground electrode acts as a safety shield, draining away unwanted electrical interference from things like nearby lamps or wall power.",
+   "step_by_step": [
+    "1. Electrical Contact: A conductive gel or paste is applied to the scalp to help pass tiny brain signals from the skin into the metal EEG electrode.",
+    "2. Differential Measurement: The recording hardware constantly compares the voltage at a scalp electrode against the voltage at a reference electrode.",
+    "3. Grounding: A separate ground electrode absorbs stray environmental electrical noise, helping the recording system ignore outside interference."
+   ],
+   "technical_depth": "EEG amplifiers use differential amplifiers to measure the voltage difference between an active recording electrode and a reference electrode ($V_{active} - V_{reference}$). Common-mode rejection ratio (CMRR) is the hardware's ability to cancel out signals that appear identically at both inputs, such as 50 or 60 Hz line noise from wall power. The ground electrode sets the patient's body electrical potential relative to the amplifier, keeping the signals within the safe operating range of the hardware.",
+   "misconceptions": [
+    "Misconception: An EEG electrode measures the absolute electrical charge of a single brain area. Fact: It always measures a relative voltage difference between two specific physical points.",
+    "Misconception: The ground electrode records brain waves. Fact: The ground electrode is strictly for safety and noise stabilization and does not contribute to the brain signal data."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What does an EEG electrode actually measure?",
+     "answer": "It measures the voltage difference between a scalp location and a reference point."
+    },
+    {
+     "question": "Why is a ground electrode important?",
+     "answer": "It helps stabilize electrical potential and reduces environmental noise like power line interference."
+    },
+    {
+     "question": "Can you have an EEG recording without a reference electrode?",
+     "answer": "No, voltage is always a measurement of the difference between two points, requiring at least one reference."
+    }
+   ],
+   "exercise": "Draw a simple diagram showing a scalp electrode, a reference electrode placed on an earlobe, and a differential amplifier calculating the difference between them.",
+   "summary": "EEG electrodes capture minute scalp voltages, which are only meaningful when compared against a reference electrode. A ground electrode protects the user and helps filter out external electrical noise.",
+   "next_lesson": "Day 6: Electrode Placement Systems (The 10-20 International System)",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Microcontroller peripherals: GPIO, timers, PWM and interrupts",
+   "explanation": "Microcontroller peripherals are hardware tools built inside the chip that help it talk to the outside world without constantly wasting the main processor's time. GPIO means General Purpose Input and Output, used to read buttons or blink LEDs. Timers count internal clock ticks to measure time accurately. PWM, or Pulse Width Modulation, rapidly turns a pin on and off to control motor speed or dim lights. Interrupts act like a doorbell, pausing the main code instantly when an important external event happens, such as a sensor signal.",
+   "practical_example": "Imagine building a robotic arm in an internship project. You use a GPIO pin to read a safety button, a timer to schedule sensor readings every 10 milliseconds, PWM to control the grip motor speed, and an interrupt to instantly stop the arm if an emergency bumper is pressed.",
+   "exercise": "Write down how you would configure a timer and an interrupt to make a robot's status LED flash every second without using a blocking delay function in your main loop.",
+   "model_answer": "I would set up a hardware timer to generate an interrupt overflow every one second. Inside the interrupt service routine, I would toggle the state of the GPIO pin connected to the LED, keeping the main loop free for other tasks.",
+   "why_it_works": "Using hardware timers and interrupts avoids wasting processor cycles on waiting loops, ensuring your robot stays responsive to critical sensor inputs.",
+   "improvement_tip": "Keep your interrupt service routines extremely short and fast, setting a flag variable instead of doing heavy math inside the interrupt itself.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Choose skills that can be demonstrated with projects or coursework",
+   "explanation": "Listing random software tools on LinkedIn does not convince a recruiter you can build physical or embedded systems. Instead, pick core skills like C++ programming, Arduino, or ROS (Robot Operating System) that you can directly back up with a GitHub repository, a university lab report, or a class assignment.",
+   "practical_example": "Instead of listing general traits like 'problem solving', list specific tools you actually used in a class or side project, such as 'STM32 Microcontrollers', 'I2C Communication', or 'Python for Signal Processing'.",
+   "exercise": "Look at the skills section of your LinkedIn profile. Remove any tool or software that you have never used in a physical project, lab experiment, or graded coursework.",
+   "model_answer": "Skills added: Embedded C, Arduino IDE, Circuit Debugging, Git. (Each skill is tied to a specific blinking-LED or motor-control project found on my GitHub).",
+   "why_it_works": "Recruiters hiring for robotics and embedded roles in India want proof. When your listed skills match the code and hardware visible in your projects, it builds instant trust.",
+   "improvement_tip": "Do not exceed ten skills. A short, focused list of verifiable engineering tools stands out more than a long list of random software.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly",
+   "focus": "Growing tiny, three-dimensional lab models of the human brain from stem cells to study early brain growth and a condition called microcephaly.",
+   "explanation": "Scientists used human stem cells to grow brain-like structures in a gel droplet. These mini-brains developed different brain regions and layers similar to a real developing human brain. They also used cells from a patient with microcephaly (a condition resulting in a smaller head and brain) to show that the model can help explain how this disorder develops.",
+   "limits": "Since the abstract was missing from the database, this summary uses general knowledge about the published study. Lab-grown mini-brains are still much simpler than a real human brain and lack blood vessels or full sensory inputs.",
+   "check": "1. What did scientists use to grow these brain models? 2. What condition did they model using patient cells? 3. What is one major limitation of these lab-grown brain models?",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature12517",
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "5 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
+   "focus": "How brain-computer interfaces (BCIs) let people control devices using only brain signals without needing muscle movement.",
+   "explanation": "Because the abstract was missing, general knowledge shows this paper looks at how brain signals can be measured and translated into computer commands, helping people with severe physical disabilities communicate and interact with the world.",
+   "limits": "The Crossref abstract was empty, so this summary relies on general knowledge of the paper's widely known topics.",
+   "check": {
+    "question_1": "What main problem does this paper address?",
+    "answer_1": "Helping people with severe motor impairments communicate and control devices.",
+    "question_2": "What is the core technology discussed?",
+    "answer_2": "Brain-computer interfaces (BCIs).",
+    "question_3": "Why is the explanation general?",
+    "answer_3": "Because the provided database entry lacked an abstract."
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "5 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "2 of 3",
+   "topic": "How it works",
+   "project": "ROBOTIS-GIT/turtlebot3",
+   "explanation": "Today we look at how the TurtleBot3 project is structured and how it operates using related software pieces. The main repository contains ROS (Robot Operating System) packages written primarily in C++. It relies on a modular setup, meaning different parts of the robot are handled by separate companion projects listed in the documentation. For instance, there are specialized packages for handling sensors like distance lasers, controlling motors using the Dynamixel SDK, running simulations, and even adding robotic arms or machine learning capabilities. Instead of a single massive file, the system uses multiple cooperative repositories to control movement, process data, and connect with hardware controllers like OpenCR.",
+   "challenge": "Review the list of related open-source projects in the repository details and identify which ones deal with hardware drivers versus simulations.",
+   "knowledge_check": "What primary programming language is used for these ROS packages according to the repository metadata?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ROBOTIS-GIT/turtlebot3",
+    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+    "description": "ROS packages for Turtlebot3",
+    "pushed_at": "2026-06-15T11:50:39Z",
+    "language": "C++",
+    "archived": false,
+    "license": "Apache-2.0"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/eka-robotics-raises-150m-scale-vision-force-action-model-robots/",
+     "what": "Eka Robotics secured $150 million in funding.",
+     "who": "Eka Robotics",
+     "how": "The company is creating a system that combines vision, force, and action to help robots understand physical environments. Background (general knowledge): Reinforcement learning is a machine learning method where robots learn by trial and error through rewards.",
+     "why": "To develop robot intuition regarding physics using large-scale machine learning.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The investment aims to advance how robots perceive and interact with physical tasks.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Eka Robotics raises $150M to scale its vision-force-action model for robots",
+     "published": "2026-10-24",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Research",
+     "url": "https://robohub.org/powered-by-muscle-cells-a-paper-thin-robot-swims-through-watery-maze/",
+     "what": "MIT researchers developed an ultra-thin, muscle-powered robot.",
+     "who": "MIT engineers",
+     "how": "The robot utilizes living muscle cells for locomotion, allowing it to move through water. Background (general knowledge): Biohybrid robots combine biological materials with synthetic components.",
+     "why": "To explore more efficient designs for small, specialized robots.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Integrating biological cells into small-scale robotics can enable movement in aquatic environments.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Powered by muscle cells, a paper-thin robot swims through watery maze",
+     "published": "2026-10-19",
+     "source": "Robohub"
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/generative-bionics-to-launch-physical-ai-data-factory-in-italy/",
+     "what": "Generative Bionics is establishing a facility to produce AI data in Italy.",
+     "who": "Generative Bionics",
+     "how": "They are building a 'Physical AI Data Factory' to collect information specifically from humanoid robots.",
+     "why": "To promote European independence in robotics by keeping humanoid data generation within the continent.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Data production and sovereignty are becoming central topics in European robotics development.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Generative Bionics to launch Physical AI Data Factory in Italy",
+     "published": "2026-10-24",
+     "source": "The Robot Report"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Software Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Remote job",
+     "published": "2026-10-25",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-487044",
+     "company": "SwissPeak Partners GmbH"
+    },
+    {
+     "title": "Software Engineer \u2013 Embedded Security",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Z\u00fcrich",
+     "published": "2026-10-25",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/cdds-ag/software-engineer-embedded-security-zurich-357319",
+     "company": "CDDS AG"
+    },
+    {
+     "title": "IoT Embedded Systems Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Bern, Berne, Switzerland",
+     "published": "2026-10-25",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-257010",
+     "company": "SwissPeak Partners GmbH"
+    },
+    {
+     "title": "Test Automation Engineer (m/f/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Gilching, Bayern, Germany",
+     "published": "2026-10-25",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/quantum-systems-gmbh/test-automation-engineer-gilching-9716",
+     "company": "Quantum-Systems GmbH"
+    },
+    {
+     "title": "Mechanisch monteur",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Berkel en Rodenrijs",
+     "published": "2026-10-25",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/technison/mechanisch-monteur-berkel-en-rodenrijs-32220",
+     "company": "Technison"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}

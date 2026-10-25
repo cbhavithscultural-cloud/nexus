@@ -1,156 +1,154 @@
 {
  "v": 2,
- "date": "2026-10-25",
- "generated_at": "2026-10-25T04:18:11.290373+05:30",
+ "date": "2026-10-26",
+ "generated_at": "2026-10-26T02:27:20.788039+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): model returned no usable items",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how brain cells maintain a resting electrical charge using charged particles and cell walls.",
-   "why_it_matters": "Organoid intelligence relies on growing living brain tissue in the lab, which requires keeping these microscopic biological batteries stable and charged so they can process information.",
+   "objective": "Understand how the electrical spike travels continuously down the axon without losing strength.",
+   "why_it_matters": "In living brain tissue and lab-grown brain organoids, signals must travel over long distances without fading. Knowing how this happens helps engineers design better ways to send commands to lab-grown neural networks.",
    "prerequisites": [
-    "Basic knowledge that cells are enclosed by a protective outer membrane wall.",
-    "Familiarity with the concept that tiny charged particles (ions) exist inside and outside of cells."
+    "Brain cells maintain a resting voltage using charged particles.",
+    "Neurons have long wire-like extensions called axons."
    ],
-   "simple_explanation": "Imagine a brain cell as a tiny balloon filled with salty water, sitting in another pool of salty water. The cell wall acts like a selective gatekeeper. It traps certain charged particles (ions) inside while keeping others outside. This separation creates a voltage difference, making the inside of the cell negatively charged compared to the outside, much like a tiny biological battery.",
+   "simple_explanation": "Imagine a row of falling dominoes. When the first domino falls, it knocks over the next one, and that one knocks over the next, keeping the push just as strong at the end of the line as it was at the start. An electrical signal in a brain cell works the same way: one spot opening its gates triggers the next spot to do the exact same thing.",
    "step_by_step": [
-    "Ions are atoms or molecules carrying an electric charge, specifically sodium, potassium, and chloride in biology.",
-    "The cell membrane is a fatty wall that blocks these charged particles from freely passing through on their own.",
-    "Specialized protein tunnels embedded in the wall act as locked gates, selectively allowing specific ions to cross under certain conditions.",
-    "Tiny molecular pumps actively use cellular energy to push potassium ions in and sodium ions out, maintaining a strict imbalance.",
-    "This imbalance creates a resting membrane voltage, meaning the inside holds a negative electrical charge ready to spring into action."
+    "A trigger near the cell body causes tiny gate openings in the cell wall at the start of the axon.",
+    "Positively charged particles rush inside, flipping the local voltage from negative to positive.",
+    "This sudden local change forces the adjacent gates just a bit further down the axon to pop open.",
+    "The wave moves forward step by step, while the previous spots quickly reset themselves so the signal only travels in one direction."
    ],
-   "technical_depth": "The resting membrane potential of a typical neuron sits around -70 millivolts. This is established primarily by the leak of potassium ions out of the cell down their concentration gradient, guided by the Goldman-Hodgkin-Katz equation. The sodium-potassium pump (Na+/K+-ATPase) hydrolyzes ATP to continuously extrude 3 sodium ions for every 2 potassium ions imported, counteracting passive leaks and preserving the electrochemical gradient essential for excitability.",
+   "technical_depth": "This self-propagating wave relies on voltage-gated ion channels. As sodium channels open and depolarize one patch of membrane, the electrical shift spreads locally to trigger neighboring voltage-gated channels. Refractory periods ensure unidirectional propagation by temporarily disabling channels that just fired.",
    "misconceptions": [
-    "Misconception: The cell wall is completely solid and blocks all movement. Reality: It is selectively permeable, allowing controlled movement through specialized protein channels.",
-    "Misconception: Voltage inside the cell is positive. Reality: At rest, the inside is negative relative to the outside fluid."
+    {
+     "misconception": "Electricity flows through an axon just like a metal wire.",
+     "correction": "Unlike metal wires that passively let current fade over distance, axons actively regenerate the electrical signal at every tiny section so it stays strong."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What primary particles create the electrical charge across a cell wall?",
-     "answer": "Charged particles called ions, such as sodium and potassium."
+     "question": "Does an action potential fade as it travels down a long axon?",
+     "answer": "No, because each section of the axon regenerates the signal freshly."
     },
     {
-     "question": "Is the inside of a resting brain cell charged positively or negatively?",
-     "answer": "Negatively."
+     "question": "What prevents the signal from running backward toward the cell body?",
+     "answer": "A resting recovery period behind the moving wave keeps the gates temporarily locked."
     },
     {
-     "question": "What protein machinery uses cellular energy to maintain ion gradients?",
-     "answer": "The sodium-potassium pump."
+     "question": "What opens the gates further down the axon?",
+     "answer": "The electrical change from the active spot right next to them."
     }
    ],
-   "exercise": "Draw a simple circle representing a cell. Label the inside and the outside. Draw small arrows showing the sodium-potassium pump pushing sodium out and potassium in to visualize how the battery stays charged.",
-   "summary": "Brain cells act as miniature batteries by using a fatty cell wall to separate different types of charged ions, maintaining a negative internal resting voltage powered by molecular pumps.",
-   "next_lesson": "Day 5: Action potentials and how signals travel down the axon.",
+   "exercise": "Draw a straight line representing an axon. Mark five sequential spots. Write down how a positive charge entering spot one triggers spot two, repeating the process down the line.",
+   "summary": "Signals travel down axons through a chain-reaction wave where each section of the cell wall freshly regenerates the electrical spike.",
+   "next_lesson": "Day 6: How insulation speeds up brain signals.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how electrical signals travel from neurons through brain tissue, skull, and scalp to reach BCI sensors using the principles of volume conduction.",
-   "why_it_matters": "Brain signals lose strength and blur as they pass through tissues like cerebrospinal fluid, bone, and skin. Knowing how this happens helps engineers design better sensors and software to recover the original brain activity.",
+   "objective": "Understand how EEG electrodes pick up electrical signals, why reference electrodes are needed to measure voltage differences, and the role of ground electrodes in safety and noise reduction.",
+   "why_it_matters": "Brain signals are extremely small voltage fluctuations measured relative to another point on the body. Without a proper reference and ground system, electrical noise from the environment would completely drown out the brain's signals.",
    "prerequisites": [
-    "Neurons generate tiny electrical currents when they fire.",
-    "BCIs rely on detecting these electrical changes outside or on top of the brain."
+    "Basic electrical concepts like voltage, which is the difference in electrical charge between two points.",
+    "The understanding that neurons generate tiny electrical currents that travel through tissue and bone."
    ],
-   "simple_explanation": "Imagine dropping a stone in the middle of a pond; the ripples spread out in all directions. Brain activity works similarly. When neurons fire, their electrical currents flow outward through the surrounding jelly-like brain tissue, spinal fluid, skull, and skin. This spreading of electrical current through a physical medium is called volume conduction. By the time the signal reaches a sensor on the scalp (like in EEG), it has mixed with signals from many other brain areas and become much weaker, like hearing a loud concert from outside a thick brick wall.",
+   "simple_explanation": "Imagine measuring the height of a hill. You cannot just state a number without deciding where sea level is\u2014your reference point. In EEG, sensors cannot read an absolute brain signal on their own. Instead, they measure the difference in electrical activity between a sensor on the scalp and a sensor placed on a neutral spot like the earlobe or mastoid bone. Meanwhile, a ground electrode acts as a safety shield, draining away unwanted electrical interference from things like nearby lamps or wall power.",
    "step_by_step": [
-    "A group of neurons fires, creating a localized electric current.",
-    "The surrounding tissues act as a volume conductor, allowing the electrical charges to flow outward in three dimensions.",
-    "As the current spreads, it travels through resistive barriers like the skull, which dampens and smears the signal.",
-    "Sensors (electrodes) on the scalp or brain surface pick up the resulting blended voltage changes."
+    "1. Electrical Contact: A conductive gel or paste is applied to the scalp to help pass tiny brain signals from the skin into the metal EEG electrode.",
+    "2. Differential Measurement: The recording hardware constantly compares the voltage at a scalp electrode against the voltage at a reference electrode.",
+    "3. Grounding: A separate ground electrode absorbs stray environmental electrical noise, helping the recording system ignore outside interference."
    ],
-   "technical_depth": "Volume conduction is governed by physics principles similar to Ohm's law in resistive media. Biological tissues have different electrical conductivities. For instance, the skull has a much lower conductivity than cerebrospinal fluid or scalp tissue, causing electrical currents to spread laterally rather than straight through. This creates a spatial smearing effect, meaning a single scalp electrode records a blended average of activity from a large patch of cortex rather than a single neuron.",
+   "technical_depth": "EEG amplifiers use differential amplifiers to measure the voltage difference between an active recording electrode and a reference electrode ($V_{active} - V_{reference}$). Common-mode rejection ratio (CMRR) is the hardware's ability to cancel out signals that appear identically at both inputs, such as 50 or 60 Hz line noise from wall power. The ground electrode sets the patient's body electrical potential relative to the amplifier, keeping the signals within the safe operating range of the hardware.",
    "misconceptions": [
-    "Misconception: An EEG electrode directly records the electrical signal of the neuron directly beneath it. Fact: Because of volume conduction, scalp signals are a heavily mixed combination of activity from millions of distant neurons."
+    "Misconception: An EEG electrode measures the absolute electrical charge of a single brain area. Fact: It always measures a relative voltage difference between two specific physical points.",
+    "Misconception: The ground electrode records brain waves. Fact: The ground electrode is strictly for safety and noise stabilization and does not contribute to the brain signal data."
    ],
    "knowledge_check": [
     {
-     "question": "What is volume conduction?",
-     "answer": "The process by which electrical currents from active neurons spread outward through the surrounding biological tissues and fluids."
+     "question": "What does an EEG electrode actually measure?",
+     "answer": "It measures the voltage difference between a scalp location and a reference point."
     },
     {
-     "question": "Which biological layer offers the most resistance to electrical signals traveling from the brain to the scalp?",
-     "answer": "The skull."
+     "question": "Why is a ground electrode important?",
+     "answer": "It helps stabilize electrical potential and reduces environmental noise like power line interference."
     },
     {
-     "question": "How does volume conduction affect the signals picked up by scalp sensors?",
-     "answer": "It weakens and blurs them, blending signals from many different brain areas together."
+     "question": "Can you have an EEG recording without a reference electrode?",
+     "answer": "No, voltage is always a measurement of the difference between two points, requiring at least one reference."
     }
    ],
-   "exercise": "Take a bowl of water and gently tap the surface in one spot to create ripples. Notice how the waves spread outward and lose their sharp definition as they travel. Relate this physical spreading to how electrical current travels through brain tissue and the skull.",
-   "summary": "Electrical signals from neurons spread outward through surrounding tissues via volume conduction, becoming weaker and more blurred by the time they reach BCI sensors due to the high resistance of barriers like the skull.",
-   "next_lesson": "Day 5: Signal-to-Noise Ratio and Artifacts in Neural Recording",
+   "exercise": "Draw a simple diagram showing a scalp electrode, a reference electrode placed on an earlobe, and a differential amplifier calculating the difference between them.",
+   "summary": "EEG electrodes capture minute scalp voltages, which are only meaningful when compared against a reference electrode. A ground electrode protects the user and helps filter out external electrical noise.",
+   "next_lesson": "Day 6: Electrode Placement Systems (The 10-20 International System)",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Embedded C fundamentals: variables, pointers and memory safety",
-   "explanation": "In robotics and embedded systems, microcontrollers have very little memory. A variable holds a data value, while a pointer holds the physical memory address where that data lives. Using pointers incorrectly can cause your robot's software to crash by accidentally changing critical system memory.",
-   "practical_example": "Imagine writing firmware for a BCI headset. You have a variable storing the raw EEG signal value. If you pass this variable directly to a function, the function gets a copy. If you pass a pointer to the variable, the function can update the actual value in real time without wasting memory making copies.",
-   "exercise": "Write a short C code snippet that creates a variable for a motor speed, defines a pointer to point to that variable, and uses the pointer to change the motor speed value.",
-   "model_answer": "int motor_speed = 50;\nint *speed_ptr = &motor_speed;\n*speed_ptr = 100;",
-   "why_it_works": "The asterisk (*) defines the pointer and also dereferences it to change the actual value stored at that memory address, updating the original variable safely.",
-   "improvement_tip": "Always check that your pointer is not pointing to a null address before trying to change its value to prevent device crashes.",
+   "topic": "Microcontroller peripherals: GPIO, timers, PWM and interrupts",
+   "explanation": "Microcontroller peripherals are hardware tools built inside the chip that help it talk to the outside world without constantly wasting the main processor's time. GPIO means General Purpose Input and Output, used to read buttons or blink LEDs. Timers count internal clock ticks to measure time accurately. PWM, or Pulse Width Modulation, rapidly turns a pin on and off to control motor speed or dim lights. Interrupts act like a doorbell, pausing the main code instantly when an important external event happens, such as a sensor signal.",
+   "practical_example": "Imagine building a robotic arm in an internship project. You use a GPIO pin to read a safety button, a timer to schedule sensor readings every 10 milliseconds, PWM to control the grip motor speed, and an interrupt to instantly stop the arm if an emergency bumper is pressed.",
+   "exercise": "Write down how you would configure a timer and an interrupt to make a robot's status LED flash every second without using a blocking delay function in your main loop.",
+   "model_answer": "I would set up a hardware timer to generate an interrupt overflow every one second. Inside the interrupt service routine, I would toggle the state of the GPIO pin connected to the LED, keeping the main loop free for other tasks.",
+   "why_it_works": "Using hardware timers and interrupts avoids wasting processor cycles on waiting loops, ensuring your robot stays responsive to critical sensor inputs.",
+   "improvement_tip": "Keep your interrupt service routines extremely short and fast, setting a flag variable instead of doing heavy math inside the interrupt itself.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Improve a GitHub README so a recruiter can reproduce the project",
-   "explanation": "When a recruiter or engineer clicks your GitHub link from LinkedIn, they want to know immediately what your project does and how to run it themselves. For robotics, BCI, and embedded projects, a great README acts as a clear user manual. It includes a short summary, a list of hardware parts, software tools, and simple step-by-step instructions to test your code.",
-   "practical_example": "Imagine you built a simple obstacle-avoiding robot using an Arduino and an ultrasonic sensor. Instead of leaving the README empty, you add sections: 'What it is', 'Parts used' (like Arduino Uno and HC-SR04), and 'How to run' (showing the exact steps to upload the code via the Arduino IDE).",
-   "exercise": "Open the GitHub repository for one of your past robotics, BCI, or embedded projects. Add a quick 'Getting Started' section that lists the physical hardware or software tools needed, plus two simple steps to run the code.",
-   "model_answer": "Hardware Required: Arduino Nano, HC-SR04 ultrasonic sensor. Software Required: Arduino IDE. Steps to Run: 1. Connect the sensor pins to digital pins 9 and 10 on the Arduino. 2. Open robot.ino in the Arduino IDE and click Upload.",
-   "why_it_works": "It proves to recruiters that your project is real, organized, and easy for someone else to understand or test, which builds immediate trust in your practical engineering skills.",
-   "improvement_tip": "Add a short, five-second GIF or video link right at the top of your README showing your robot moving or your BCI sensor reading data.",
+   "topic": "Choose skills that can be demonstrated with projects or coursework",
+   "explanation": "Listing random software tools on LinkedIn does not convince a recruiter you can build physical or embedded systems. Instead, pick core skills like C++ programming, Arduino, or ROS (Robot Operating System) that you can directly back up with a GitHub repository, a university lab report, or a class assignment.",
+   "practical_example": "Instead of listing general traits like 'problem solving', list specific tools you actually used in a class or side project, such as 'STM32 Microcontrollers', 'I2C Communication', or 'Python for Signal Processing'.",
+   "exercise": "Look at the skills section of your LinkedIn profile. Remove any tool or software that you have never used in a physical project, lab experiment, or graded coursework.",
+   "model_answer": "Skills added: Embedded C, Arduino IDE, Circuit Debugging, Git. (Each skill is tied to a specific blinking-LED or motor-control project found on my GitHub).",
+   "why_it_works": "Recruiters hiring for robotics and embedded roles in India want proof. When your listed skills match the code and hardware visible in your projects, it builds instant trust.",
+   "improvement_tip": "Do not exceed ten skills. A short, focused list of verifiable engineering tools stands out more than a long list of random software.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
-   "focus": "Building tiny, three-dimensional lab-grown brain tissues to study how the human brain grows and what goes wrong in microcephaly.",
-   "explanation": "Scientists used stem cells to grow brain-like structures in a gel matrix, allowing different brain regions to form naturally. They used cells from a patient with microcephaly (a condition resulting in a smaller head and brain) to see how the disorder affects tissue growth.",
-   "limits": "The abstract was not provided by the database, so this explanation relies on general scientific knowledge of this famous study. These organoids are still much simpler than a real human brain and lack blood vessels.",
-   "check": "high",
+   "paper": "Cerebral organoids model human brain development and microcephaly",
+   "focus": "Growing tiny, three-dimensional lab models of the human brain from stem cells to study early brain growth and a condition called microcephaly.",
+   "explanation": "Scientists used human stem cells to grow brain-like structures in a gel droplet. These mini-brains developed different brain regions and layers similar to a real developing human brain. They also used cells from a patient with microcephaly (a condition resulting in a smaller head and brain) to show that the model can help explain how this disorder develops.",
+   "limits": "Since the abstract was missing from the database, this summary uses general knowledge about the published study. Lab-grown mini-brains are still much simpler than a real human brain and lack blood vessels or full sensory inputs.",
+   "check": "1. What did scientists use to grow these brain models? 2. What condition did they model using patient cells? 3. What is one major limitation of these lab-grown brain models?",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature12517",
    "doi_link": "https://doi.org/10.1038/nature12517",
-   "day": "4 of 5",
+   "day": "5 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Brain\u2013computer interfaces for communication and control",
-   "focus": "Engineering, limits, and ethics of brain-computer interfaces (BCIs)",
-   "explanation": "This paper looks at how computers can read brain signals to let people communicate and move objects without using muscles. Because the abstract was missing, this summary is based on general knowledge of the authors' widely recognized work in this field.",
-   "limits": "Brain signals can be noisy and hard to read clearly. Setting up the equipment takes time, and users need a lot of training to control the system well.",
-   "check": "The paper metadata is verified, but since the Crossref abstract was blank, general knowledge was used with medium confidence.",
+   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
+   "focus": "How brain-computer interfaces (BCIs) let people control devices using only brain signals without needing muscle movement.",
+   "explanation": "Because the abstract was missing, general knowledge shows this paper looks at how brain signals can be measured and translated into computer commands, helping people with severe physical disabilities communicate and interact with the world.",
+   "limits": "The Crossref abstract was empty, so this summary relies on general knowledge of the paper's widely known topics.",
+   "check": {
+    "question_1": "What main problem does this paper address?",
+    "answer_1": "Helping people with severe motor impairments communicate and control devices.",
+    "question_2": "What is the core technology discussed?",
+    "answer_2": "Brain-computer interfaces (BCIs).",
+    "question_3": "Why is the explanation general?",
+    "answer_3": "Because the provided database entry lacked an abstract."
+   },
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/S1388-2457(02)00057-3",
    "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
-   "day": "4 of 5",
+   "day": "5 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "1 of 3",
-   "total_days": 3,
-   "phase": "Understand the project",
-   "project_name": "turtlebot3",
-   "repository_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
-   "primary_language": "C++",
-   "license": "Apache-2.0",
-   "summary": "This repository contains software packages for the TurtleBot3 robot, built to work with the Robot Operating System (ROS). It is actively maintained for modern ROS versions and supports various simulations, hardware components, and add-on tools.",
-   "key_findings": [
-    "The project is not archived, meaning it is still actively managed.",
-    "It relies heavily on C++ for its codebase.",
-    "It connects to a larger ecosystem of related open-source tools, including message definitions, simulation packages, and hardware drivers."
-   ],
-   "beginner_explanation": "Imagine building a small robot that needs to move around, avoid obstacles, and map rooms. Instead of writing every single line of code from scratch, developers use ROS (Robot Operating System) as a foundation. This repository provides the specific software glue needed to control the TurtleBot3 robot using ROS.",
-   "challenge": "Browse the list of related open-source projects in the README and identify at least three repositories that deal with simulations or robot arms.",
-   "knowledge_check": "What is the main programming language used in this repository according to the verified metadata?",
+   "day": "2 of 3",
+   "topic": "How it works",
+   "project": "ROBOTIS-GIT/turtlebot3",
+   "explanation": "Today we look at how the TurtleBot3 project is structured and how it operates using related software pieces. The main repository contains ROS (Robot Operating System) packages written primarily in C++. It relies on a modular setup, meaning different parts of the robot are handled by separate companion projects listed in the documentation. For instance, there are specialized packages for handling sensors like distance lasers, controlling motors using the Dynamixel SDK, running simulations, and even adding robotic arms or machine learning capabilities. Instead of a single massive file, the system uses multiple cooperative repositories to control movement, process data, and connect with hardware controllers like OpenCR.",
+   "challenge": "Review the list of related open-source projects in the repository details and identify which ones deal with hardware drivers versus simulations.",
+   "knowledge_check": "What primary programming language is used for these ROS packages according to the repository metadata?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "ROBOTIS-GIT/turtlebot3",
@@ -211,58 +209,49 @@
   "jobs": {
    "items": [
     {
-     "title": "Systems Engineer",
+     "title": "Software Test Engineer",
      "type": "vacancy listing (availability not independently verified)",
      "location": "Remote job",
-     "published": "2026-10-23",
+     "published": "2026-10-25",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/exeon-analytics/remote-systems-engineer-zurich-94036",
-     "company": "Exeon Analytics"
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-487044",
+     "company": "SwissPeak Partners GmbH"
     },
     {
-     "title": "Software Engineer \u2013 Embedded Systems (All genders)",
+     "title": "Software Engineer \u2013 Embedded Security",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich, Bavaria",
-     "published": "2026-10-24",
+     "location": "Z\u00fcrich",
+     "published": "2026-10-25",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/skdse/software-engineer-embedded-systems-all-genders-munich-bavaria-376950",
-     "company": "Skdse"
+     "url": "https://www.arbeitnow.ch/jobs/companies/cdds-ag/software-engineer-embedded-security-zurich-357319",
+     "company": "CDDS AG"
     },
     {
-     "title": "Field Robotics Engineer \u2013 Data Operations (All Genders)",
+     "title": "IoT Embedded Systems Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich, Bavaria",
-     "published": "2026-10-24",
+     "location": "Bern, Berne, Switzerland",
+     "published": "2026-10-25",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/skdse/field-robotics-engineer-data-operations-all-genders-munich-bavaria-429407",
-     "company": "Skdse"
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-257010",
+     "company": "SwissPeak Partners GmbH"
     },
     {
-     "title": "Mechatronics Test Engineer (m/f/d)",
+     "title": "Test Automation Engineer (m/f/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich, Bavaria",
-     "published": "2026-10-24",
+     "location": "Gilching, Bayern, Germany",
+     "published": "2026-10-25",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/agilerobotsse/mechatronics-test-engineer-munich-bavaria-451948",
-     "company": "Agilerobotsse"
+     "url": "https://www.arbeitnow.com/jobs/companies/quantum-systems-gmbh/test-automation-engineer-gilching-9716",
+     "company": "Quantum-Systems GmbH"
     },
     {
-     "title": "Data Platform Engineer \u2013 Data Operations (all genders)",
+     "title": "Mechanisch monteur",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich, Bavaria",
-     "published": "2026-10-24",
+     "location": "Berkel en Rodenrijs",
+     "published": "2026-10-25",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/skdse/data-platform-engineer-data-operations-all-genders-munich-bavaria-125008",
-     "company": "Skdse"
-    },
-    {
-     "title": "Robot Service Engineer - Data Collection (m/f/d) Fixed-term 18 months",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich, Bavaria",
-     "published": "2026-10-24",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/agilerobotsse/robot-service-engineer-data-collection-fixed-term-18-months-munich-bavaria-136566",
-     "company": "Agilerobotsse"
+     "url": "https://www.arbeitnow.nl/jobs/companies/technison/mechanisch-monteur-berkel-en-rodenrijs-32220",
+     "company": "Technison"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
