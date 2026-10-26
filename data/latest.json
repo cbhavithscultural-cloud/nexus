@@ -1,154 +1,147 @@
 {
  "v": 2,
- "date": "2026-10-26",
- "generated_at": "2026-10-26T04:15:55.903443+05:30",
+ "date": "2026-10-27",
+ "generated_at": "2026-10-27T02:34:35.672986+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 863); gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 914); gemini-3.1-flash-lite:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high deman",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how the electrical spike travels continuously down the axon without losing strength.",
-   "why_it_matters": "In living brain tissue and lab-grown brain organoids, signals must travel over long distances without fading. Knowing how this happens helps engineers design better ways to send commands to lab-grown neural networks.",
+   "objective": "Understand how brain cells pass chemical messages across gaps using neurotransmitters.",
+   "why_it_matters": "When growing brain tissue in a lab for organoid intelligence, researchers must ensure these chemical handoffs work properly so the cells can process information and learn.",
    "prerequisites": [
-    "Brain cells maintain a resting voltage using charged particles.",
-    "Neurons have long wire-like extensions called axons."
+    "How brain cells generate electrical signals",
+    "Basic structure of a brain cell, specifically the ending of an axon"
    ],
-   "simple_explanation": "Imagine a row of falling dominoes. When the first domino falls, it knocks over the next one, and that one knocks over the next, keeping the push just as strong at the end of the line as it was at the start. An electrical signal in a brain cell works the same way: one spot opening its gates triggers the next spot to do the exact same thing.",
+   "simple_explanation": "When an electrical wave reaches the end of a brain cell's wire, it cannot jump the tiny physical gap to the next cell. Instead, it triggers the release of tiny chemical messenger packets. These chemicals float across the gap and land on special docking ports on the next cell, telling it whether to spark its own electrical wave or stay quiet.",
    "step_by_step": [
-    "A trigger near the cell body causes tiny gate openings in the cell wall at the start of the axon.",
-    "Positively charged particles rush inside, flipping the local voltage from negative to positive.",
-    "This sudden local change forces the adjacent gates just a bit further down the axon to pop open.",
-    "The wave moves forward step by step, while the previous spots quickly reset themselves so the signal only travels in one direction."
+    "The electrical signal travels down the wire to the very end of the cell.",
+    "This arrival opens tiny gates, letting charged mineral particles rush inside the cell tip.",
+    "The rush of particles causes tiny bubbles filled with chemical messengers to fuse with the cell wall and spill their contents into the gap.",
+    "The chemicals drift across the tiny space and lock onto matching receptor shapes on the receiving cell.",
+    "This lock-and-key action opens new channels on the receiving cell, changing its internal electrical state."
    ],
-   "technical_depth": "This self-propagating wave relies on voltage-gated ion channels. As sodium channels open and depolarize one patch of membrane, the electrical shift spreads locally to trigger neighboring voltage-gated channels. Refractory periods ensure unidirectional propagation by temporarily disabling channels that just fired.",
+   "technical_depth": "The chemical gap is called the synapse. The releasing cell is the presynaptic neuron, and the receiving cell is the postsynaptic neuron. Established evidence shows that neurotransmitters like glutamate excite the receiving cell while GABA inhibits it. An open research question is how lab-grown brain organoids regulate the exact density of these receptors over time.",
    "misconceptions": [
-    {
-     "misconception": "Electricity flows through an axon just like a metal wire.",
-     "correction": "Unlike metal wires that passively let current fade over distance, axons actively regenerate the electrical signal at every tiny section so it stays strong."
-    }
+    "Misconception: Electricity flows directly from one brain cell to the next like a metal wire. Reality: In most cases, the electrical signal stops at the gap and turns into a chemical signal before becoming electrical again in the next cell."
    ],
    "knowledge_check": [
     {
-     "question": "Does an action potential fade as it travels down a long axon?",
-     "answer": "No, because each section of the axon regenerates the signal freshly."
+     "question": "What stops the electrical signal from jumping directly between cells?",
+     "answer": "A tiny physical gap separates the cells."
     },
     {
-     "question": "What prevents the signal from running backward toward the cell body?",
-     "answer": "A resting recovery period behind the moving wave keeps the gates temporarily locked."
+     "question": "What carries the message across the gap?",
+     "answer": "Chemical messengers called neurotransmitters."
     },
     {
-     "question": "What opens the gates further down the axon?",
-     "answer": "The electrical change from the active spot right next to them."
+     "question": "What happens when these chemicals land on the receiving cell?",
+     "answer": "They open matching docking ports, changing the receiving cell's electrical state."
     }
    ],
-   "exercise": "Draw a straight line representing an axon. Mark five sequential spots. Write down how a positive charge entering spot one triggers spot two, repeating the process down the line.",
-   "summary": "Signals travel down axons through a chain-reaction wave where each section of the cell wall freshly regenerates the electrical spike.",
-   "next_lesson": "Day 6: How insulation speeds up brain signals.",
+   "exercise": "Draw two touching cell outlines with a tiny gap between them. Label the releasing side, the chemical packets, the gap, and the docking ports on the receiving side.",
+   "summary": "Brain cells communicate across microscopic gaps by turning electrical spikes into chemical signals, which then start a new electrical wave in the next cell.",
+   "next_lesson": "Day 7: How receptors shape different types of cell signals.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how EEG electrodes pick up electrical signals, why reference electrodes are needed to measure voltage differences, and the role of ground electrodes in safety and noise reduction.",
-   "why_it_matters": "Brain signals are extremely small voltage fluctuations measured relative to another point on the body. Without a proper reference and ground system, electrical noise from the environment would completely drown out the brain's signals.",
+   "objective": "Understand how continuous analog brain waves are turned into digital computer data using sampling rate and the Nyquist principle.",
+   "why_it_matters": "Computers cannot read continuous waves directly; they must take snapshots at regular intervals. Knowing how fast to take these snapshots ensures we do not lose important brain activity details.",
    "prerequisites": [
-    "Basic electrical concepts like voltage, which is the difference in electrical charge between two points.",
-    "The understanding that neurons generate tiny electrical currents that travel through tissue and bone."
+    "Basic understanding of how BCI hardware measures electrical brain signals.",
+    "Concept of wave frequency (how fast a wave repeats)."
    ],
-   "simple_explanation": "Imagine measuring the height of a hill. You cannot just state a number without deciding where sea level is\u2014your reference point. In EEG, sensors cannot read an absolute brain signal on their own. Instead, they measure the difference in electrical activity between a sensor on the scalp and a sensor placed on a neutral spot like the earlobe or mastoid bone. Meanwhile, a ground electrode acts as a safety shield, draining away unwanted electrical interference from things like nearby lamps or wall power.",
+   "simple_explanation": "Imagine filming a fast-spinning fan with a camera. If the camera takes pictures too slowly, the fan blades might look like they are standing still or spinning backward. This optical illusion happens in computers too. To accurately capture a brain wave, a BCI computer must take digital snapshots (samples) at least twice as fast as the highest frequency wave we want to measure.",
    "step_by_step": [
-    "1. Electrical Contact: A conductive gel or paste is applied to the scalp to help pass tiny brain signals from the skin into the metal EEG electrode.",
-    "2. Differential Measurement: The recording hardware constantly compares the voltage at a scalp electrode against the voltage at a reference electrode.",
-    "3. Grounding: A separate ground electrode absorbs stray environmental electrical noise, helping the recording system ignore outside interference."
+    "1. Continuous brain signals flow out of the scalp as smooth analog waves.",
+    "2. An analog-to-digital converter (ADC) measures the height of the wave at regular time intervals.",
+    "3. The speed of these measurements is called the sampling rate, measured in Hertz (samples per second).",
+    "4. The Nyquist principle states that your sampling rate must be strictly greater than twice the highest frequency present in your signal to capture it without distortion."
    ],
-   "technical_depth": "EEG amplifiers use differential amplifiers to measure the voltage difference between an active recording electrode and a reference electrode ($V_{active} - V_{reference}$). Common-mode rejection ratio (CMRR) is the hardware's ability to cancel out signals that appear identically at both inputs, such as 50 or 60 Hz line noise from wall power. The ground electrode sets the patient's body electrical potential relative to the amplifier, keeping the signals within the safe operating range of the hardware.",
+   "technical_depth": "If you sample below the Nyquist rate, high-frequency signals fold back into lower frequencies, an error known as aliasing. In BCI engineering, hardware typically uses anti-aliasing low-pass filters before digitization to strip out unwanted high-frequency noise (like 50 or 60 Hz electrical grid interference) that could corrupt the sampled brain data.",
    "misconceptions": [
-    "Misconception: An EEG electrode measures the absolute electrical charge of a single brain area. Fact: It always measures a relative voltage difference between two specific physical points.",
-    "Misconception: The ground electrode records brain waves. Fact: The ground electrode is strictly for safety and noise stabilization and does not contribute to the brain signal data."
+    "Misconception: Sampling a signal exactly twice its highest frequency is enough for clean data recovery.",
+    "Correction: Twice is the theoretical minimum limit, but in real-world BCI engineering, we sample much faster (oversampling) to safely reconstruct clean waveforms."
    ],
    "knowledge_check": [
     {
-     "question": "What does an EEG electrode actually measure?",
-     "answer": "It measures the voltage difference between a scalp location and a reference point."
+     "question": "What does sampling rate measure?",
+     "answer": "The number of digital snapshots taken per second from a continuous signal."
     },
     {
-     "question": "Why is a ground electrode important?",
-     "answer": "It helps stabilize electrical potential and reduces environmental noise like power line interference."
+     "question": "According to the Nyquist principle, what is the minimum sampling rate needed to capture a 40 Hz brain wave?",
+     "answer": "At least 80 Hz (twice the highest frequency)."
     },
     {
-     "question": "Can you have an EEG recording without a reference electrode?",
-     "answer": "No, voltage is always a measurement of the difference between two points, requiring at least one reference."
+     "question": "What is the term for the distortion error that occurs when you sample a signal too slowly?",
+     "answer": "Aliasing."
     }
    ],
-   "exercise": "Draw a simple diagram showing a scalp electrode, a reference electrode placed on an earlobe, and a differential amplifier calculating the difference between them.",
-   "summary": "EEG electrodes capture minute scalp voltages, which are only meaningful when compared against a reference electrode. A ground electrode protects the user and helps filter out external electrical noise.",
-   "next_lesson": "Day 6: Electrode Placement Systems (The 10-20 International System)",
+   "exercise": "Calculate the minimum Nyquist sampling rate required if a researcher wants to cleanly record a high-gamma brain wave peaking at 120 Hz.",
+   "summary": "Converting brain signals from analog waves to digital numbers requires regular snapshots. The Nyquist principle establishes that the sampling rate must be at least double the highest frequency of interest to prevent data distortion.",
+   "next_lesson": "Day 7: Analog-to-Digital Conversion and Quantization",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Microcontroller peripherals: GPIO, timers, PWM and interrupts",
-   "explanation": "Microcontroller peripherals are hardware tools built inside the chip that help it talk to the outside world without constantly wasting the main processor's time. GPIO means General Purpose Input and Output, used to read buttons or blink LEDs. Timers count internal clock ticks to measure time accurately. PWM, or Pulse Width Modulation, rapidly turns a pin on and off to control motor speed or dim lights. Interrupts act like a doorbell, pausing the main code instantly when an important external event happens, such as a sensor signal.",
-   "practical_example": "Imagine building a robotic arm in an internship project. You use a GPIO pin to read a safety button, a timer to schedule sensor readings every 10 milliseconds, PWM to control the grip motor speed, and an interrupt to instantly stop the arm if an emergency bumper is pressed.",
-   "exercise": "Write down how you would configure a timer and an interrupt to make a robot's status LED flash every second without using a blocking delay function in your main loop.",
-   "model_answer": "I would set up a hardware timer to generate an interrupt overflow every one second. Inside the interrupt service routine, I would toggle the state of the GPIO pin connected to the LED, keeping the main loop free for other tasks.",
-   "why_it_works": "Using hardware timers and interrupts avoids wasting processor cycles on waiting loops, ensuring your robot stays responsive to critical sensor inputs.",
-   "improvement_tip": "Keep your interrupt service routines extremely short and fast, setting a flag variable instead of doing heavy math inside the interrupt itself.",
+   "topic": "UART, I2C and SPI: choose the right interface",
+   "explanation": "Microcontrollers need to talk to sensors, displays, and other chips. UART uses two wires and sends data one bit after another, great for simple point-to-point links like GPS modules. I2C uses two shared wires and addresses multiple devices, perfect for slow sensors like temperature gauges. SPI uses four wires and streams data very fast, ideal for screens or high-speed data loggers.",
+   "practical_example": "Imagine building a robot arm in India with an OLED display, a gyro sensor, and a Bluetooth module. You use UART to link the Bluetooth module for wireless commands, I2C to connect the gyro sensor to save wiring space, and SPI to drive the fast OLED display so it updates smoothly.",
+   "exercise": "You are designing an embedded system that requires reading a slow compass sensor and writing data to a high-speed SD card. Which communication interface would you pick for each component, and why?",
+   "model_answer": "I would use I2C for the compass sensor because it only needs two wires and handles slow data well, saving precious microcontroller pins. I would use SPI for the SD card because writing files requires fast data transfer rates that SPI supports easily.",
+   "why_it_works": "It matches the speed and pin requirements of each hardware component to the strengths of the correct communication protocol, showing a practical understanding of embedded system design.",
+   "improvement_tip": "When justifying your choice in an interview, always mention the number of wires or pins required and the speed needs of the device.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Choose skills that can be demonstrated with projects or coursework",
-   "explanation": "Listing random software tools on LinkedIn does not convince a recruiter you can build physical or embedded systems. Instead, pick core skills like C++ programming, Arduino, or ROS (Robot Operating System) that you can directly back up with a GitHub repository, a university lab report, or a class assignment.",
-   "practical_example": "Instead of listing general traits like 'problem solving', list specific tools you actually used in a class or side project, such as 'STM32 Microcontrollers', 'I2C Communication', or 'Python for Signal Processing'.",
-   "exercise": "Look at the skills section of your LinkedIn profile. Remove any tool or software that you have never used in a physical project, lab experiment, or graded coursework.",
-   "model_answer": "Skills added: Embedded C, Arduino IDE, Circuit Debugging, Git. (Each skill is tied to a specific blinking-LED or motor-control project found on my GitHub).",
-   "why_it_works": "Recruiters hiring for robotics and embedded roles in India want proof. When your listed skills match the code and hardware visible in your projects, it builds instant trust.",
-   "improvement_tip": "Do not exceed ten skills. A short, focused list of verifiable engineering tools stands out more than a long list of random software.",
+   "topic": "Write a respectful networking message asking for advice",
+   "explanation": "When reaching out to engineers or researchers in robotics, BCI, or embedded systems on LinkedIn, asking for a job directly often fails. Instead, ask for genuine career or project advice related to their specific work. Keep the message short, show that you read their profile, and respect their time.",
+   "practical_example": "Instead of saying 'Please give me an internship in embedded systems,' say 'Hello [Name], I read your recent post about optimizing RTOS on microcontrollers and found it fascinating as an electronics student in India. Would you be open to sharing a brief tip on how to transition academic embedded projects into industry-level work?'",
+   "exercise": "Find a professional on LinkedIn who works in robotics, BCI, or embedded systems in India. Write a four-sentence outreach message that mentions one specific detail from their background and asks for learning advice rather than a job.",
+   "model_answer": "Hi [Name], I'm an engineering student in India focusing on embedded systems. I saw your post on implementing CAN protocol for mobile robots and learned a lot from it. As someone starting out, what is one foundational skill you recommend mastering before building custom PCBs? Thank you for your time!",
+   "why_it_works": "It focuses on learning rather than asking for a handout, respects the professional's expertise by mentioning a real topic they care about, and keeps the question specific and easy to answer quickly.",
+   "improvement_tip": "Never send the exact same template to multiple people. Always customize at least one sentence based on their recent posts or articles.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Cerebral organoids model human brain development and microcephaly",
-   "focus": "Growing tiny, three-dimensional lab models of the human brain from stem cells to study early brain growth and a condition called microcephaly.",
-   "explanation": "Scientists used human stem cells to grow brain-like structures in a gel droplet. These mini-brains developed different brain regions and layers similar to a real developing human brain. They also used cells from a patient with microcephaly (a condition resulting in a smaller head and brain) to show that the model can help explain how this disorder develops.",
-   "limits": "Since the abstract was missing from the database, this summary uses general knowledge about the published study. Lab-grown mini-brains are still much simpler than a real human brain and lack blood vessels or full sensory inputs.",
-   "check": "1. What did scientists use to grow these brain models? 2. What condition did they model using patient cells? 3. What is one major limitation of these lab-grown brain models?",
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
+   "focus": "Testing if lab-grown brain cells can learn to play a simple digital game, like Pong, when hooked up to a computer.",
+   "explanation": "Scientists wanted to see if living neurons outside a body can change their activity to control something on a screen based on feedback. Because the Crossref abstract was empty, this explanation relies on general knowledge of the study.",
+   "limits": "The provided metadata abstract was blank, so specific details about the study's exact setup rely on general knowledge rather than the paper's specific text.",
+   "check": "low",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1038/nature12517",
-   "doi_link": "https://doi.org/10.1038/nature12517",
-   "day": "5 of 5",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "1 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
-   "focus": "How brain-computer interfaces (BCIs) let people control devices using only brain signals without needing muscle movement.",
-   "explanation": "Because the abstract was missing, general knowledge shows this paper looks at how brain signals can be measured and translated into computer commands, helping people with severe physical disabilities communicate and interact with the world.",
-   "limits": "The Crossref abstract was empty, so this summary relies on general knowledge of the paper's widely known topics.",
-   "check": {
-    "question_1": "What main problem does this paper address?",
-    "answer_1": "Helping people with severe motor impairments communicate and control devices.",
-    "question_2": "What is the core technology discussed?",
-    "answer_2": "Brain-computer interfaces (BCIs).",
-    "question_3": "Why is the explanation general?",
-    "answer_3": "Because the provided database entry lacked an abstract."
-   },
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
+   "focus": "Testing if a brain-computer interface can let a paralyzed person control external devices using brain signals.",
+   "explanation": "The study exists because researchers wanted to help people with severe paralysis move objects or use computers directly with their thoughts, bypassing injured spinal cords. Since the official abstract text was not provided in the metadata, this explanation is based on general scientific knowledge of this well-known 2006 Nature paper by Hochberg and colleagues.",
+   "limits": "The abstract text was missing from the verified metadata, so this summary relies on general background knowledge rather than specific text from the abstract.",
+   "check": "medium",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1016/S1388-2457(02)00057-3",
-   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
-   "day": "5 of 5",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "1 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "2 of 3",
-   "topic": "How it works",
-   "project": "ROBOTIS-GIT/turtlebot3",
-   "explanation": "Today we look at how the TurtleBot3 project is structured and how it operates using related software pieces. The main repository contains ROS (Robot Operating System) packages written primarily in C++. It relies on a modular setup, meaning different parts of the robot are handled by separate companion projects listed in the documentation. For instance, there are specialized packages for handling sensors like distance lasers, controlling motors using the Dynamixel SDK, running simulations, and even adding robotic arms or machine learning capabilities. Instead of a single massive file, the system uses multiple cooperative repositories to control movement, process data, and connect with hardware controllers like OpenCR.",
-   "challenge": "Review the list of related open-source projects in the repository details and identify which ones deal with hardware drivers versus simulations.",
-   "knowledge_check": "What primary programming language is used for these ROS packages according to the repository metadata?",
+   "day": "3 of 3",
+   "focus": "Run it in simulation and engineering judgement",
+   "project_name": "ROBOTIS-GIT/turtlebot3",
+   "summary": "This final day looks at using simulation tools and making professional assessments about the TurtleBot3 software. Based on the project details, the repository provides core ROS packages written mainly in C++ and supports modern ROS versions like Humble and Jazzy. Instead of claiming any code execution, we look at how simulation packages are linked in the README as related projects.",
+   "simulation_and_judgment": "In robotics engineering, running software in a virtual simulation before deploying it to physical hardware is a standard safety and testing practice. The repository references related simulation packages, which allows developers to test robot behaviors safely.",
+   "small_challenge": "Explore the list of related open-source projects in the README and identify which one specifically handles simulations for the TurtleBot3.",
+   "knowledge_check": "What primary programming language is indicated for this repository based on the verified metadata?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "ROBOTIS-GIT/turtlebot3",
@@ -195,6 +188,15 @@
   "jobs": {
    "items": [
     {
+     "title": "Junior Engine Control System & Monitoring Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich, Germany",
+     "published": "2026-10-26",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/the-exploration-company/junior-engine-control-system-monitoring-engineer-munich-361342",
+     "company": "The Exploration Company"
+    },
+    {
      "title": "Software Test Engineer",
      "type": "vacancy listing (availability not independently verified)",
      "location": "Remote job",
@@ -202,6 +204,24 @@
      "source": "Arbeitnow",
      "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-487044",
      "company": "SwissPeak Partners GmbH"
+    },
+    {
+     "title": "Embedded Development Ingenieur (m/w/x)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich",
+     "published": "2026-10-26",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/k-tronik-gmbh/embedded-development-ingenieur-munich-15762",
+     "company": "K-tronik GmbH"
+    },
+    {
+     "title": "Staff Solutions Engineer - Embedded Finance",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "NL - Amsterdam",
+     "published": "2026-10-26",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/airwallex/staff-solutions-engineer-embedded-finance-amsterdam-158753",
+     "company": "Airwallex"
     },
     {
      "title": "Software Engineer \u2013 Embedded Security",
@@ -222,22 +242,40 @@
      "company": "SwissPeak Partners GmbH"
     },
     {
-     "title": "Test Automation Engineer (m/f/d)",
+     "title": "Propulsion Test Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Gilching, Bayern, Germany",
-     "published": "2026-10-25",
+     "location": "Bordeaux, France",
+     "published": "2026-10-26",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/quantum-systems-gmbh/test-automation-engineer-gilching-9716",
-     "company": "Quantum-Systems GmbH"
+     "url": "https://www.arbeitnow.fr/jobs/companies/the-exploration-company/propulsion-test-engineer-bordeaux-411077",
+     "company": "The Exploration Company"
     },
     {
-     "title": "Mechanisch monteur",
+     "title": "AIT Electrical Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Berkel en Rodenrijs",
-     "published": "2026-10-25",
+     "location": "Bordeaux, France",
+     "published": "2026-10-26",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.nl/jobs/companies/technison/mechanisch-monteur-berkel-en-rodenrijs-32220",
-     "company": "Technison"
+     "url": "https://www.arbeitnow.fr/jobs/companies/the-exploration-company/ait-electrical-engineer-bordeaux-176451",
+     "company": "The Exploration Company"
+    },
+    {
+     "title": "OT Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Basel",
+     "published": "2026-10-26",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/bell-food-group/ot-engineer-basel-393706",
+     "company": "Bell Food Group"
+    },
+    {
+     "title": "Instandhaltungsspezialist/Automatiker (m/w/d) Roche Diagnostics",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Rotkreuz",
+     "published": "2026-10-26",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/we-make-it-gmbh/instandhaltungsspezialist-automatiker-roche-diagnostics-rotkreuz-358045",
+     "company": "We make it GmbH"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
