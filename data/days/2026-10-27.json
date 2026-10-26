@@ -1,17 +1,17 @@
 {
  "v": 2,
  "date": "2026-10-27",
- "generated_at": "2026-10-27T02:34:35.672986+05:30",
+ "generated_at": "2026-10-27T04:27:28.316360+05:30",
  "status": {
-  "oi_lesson": "ok",
-  "bci_lesson": "ok",
-  "internship": "ok",
-  "linkedin": "ok",
-  "oi_paper": "ok",
-  "bci_paper": "ok",
-  "github": "ok",
-  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 863); gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 914); gemini-3.1-flash-lite:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high deman",
-  "jobs": "ok"
+  "oi_lesson": "ok (reused from today's successful run)",
+  "bci_lesson": "ok (reused from today's successful run)",
+  "internship": "ok (reused from today's successful run)",
+  "linkedin": "ok (reused from today's successful run)",
+  "oi_paper": "ok (reused from today's successful run)",
+  "bci_paper": "ok (reused from today's successful run)",
+  "github": "ok (reused from today's successful run)",
+  "news": "ok",
+  "jobs": "ok (reused from today's successful run)"
  },
  "sections": {
   "oi_lesson": {
@@ -157,31 +157,31 @@
    "items": [
     {
      "category": "Deployment",
-     "url": "https://www.therobotreport.com/teradyne-robotics-partners-sereact-scale-physical-ai-retail-logistics/",
-     "what": "Teradyne Robotics and Sereact are collaborating to expand the use of AI-driven robots in warehouses and shops.",
-     "who": "Teradyne Robotics and Sereact.",
-     "how": "They are deploying dual-arm robot systems to customer locations. Background (general knowledge): Dual-arm robots are often used to mimic human-like tasks in complex environments.",
-     "why": "To implement physical AI technology in retail and logistics settings.",
+     "url": "https://www.therobotreport.com/agility-gxo-logistics-plan-expanded-deployment-digit-humanoid/",
+     "what": "GXO Logistics is increasing the use of the Digit humanoid robot at their facilities.",
+     "who": "Agility Robotics and GXO Logistics.",
+     "how": "Digit will be deployed at two additional sites following tests with robots from various companies. Background (general knowledge): Humanoid robots are designed to move and work in spaces originally built for humans.",
+     "why": "To continue the integration of humanoid technology into logistics operations.",
      "limits": "Not stated in the source excerpt.",
-     "learn": "High",
+     "learn": "The expansion suggests successful initial testing of human-shaped robots in warehouse settings.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Teradyne Robotics partners with Sereact to scale physical AI in retail and logistics",
-     "published": "2026-10-25",
+     "title": "Agility and GXO Logistics plan expanded deployment of Digit humanoid",
+     "published": "2026-10-26",
      "source": "The Robot Report"
     },
     {
-     "category": "Industry view",
-     "url": "https://www.therobotreport.com/webinar-discuss-how-fcc-robotics-ruling-affects-automation-buyers/",
-     "what": "Industry experts are holding a meeting to explain how new FCC rules regarding connected systems impact people who purchase robots.",
-     "who": "Industry leaders.",
-     "how": "Hosting a webinar to provide guidance to buyers. Background (general knowledge): The FCC often regulates wireless communication protocols used by connected robotic devices.",
-     "why": "To help customers understand and navigate recent restrictions on connected robotics.",
-     "limits": "The specific details of the FCC ruling are not provided in the source.",
-     "learn": "High",
+     "category": "Research",
+     "url": "https://robohub.org/robots-in-society-business-and-culture-september-2026/",
+     "what": "Researchers developed a robotic hand capable of walking.",
+     "who": "Amirhossein Kazemipour, Hehui Zheng, and Robert Katzschmann.",
+     "how": "The robot uses its fingers to support itself and move. Background (general knowledge): Locomotion research explores how robots can move across terrain using non-traditional limb structures.",
+     "why": "To study self-supported movement and manipulation using an anthropomorphic design.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "Robotics research is exploring unconventional ways for machines to move and interact with their environment.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Webinar to discuss how the FCC robotics ruling affects automation buyers",
-     "published": "2026-10-24",
-     "source": "The Robot Report"
+     "title": "Robots in Society, Business and Culture: September 2026",
+     "published": "2026-10-26",
+     "source": "Robohub"
     }
    ]
   },
