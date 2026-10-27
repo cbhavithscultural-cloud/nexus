@@ -1,227 +1,223 @@
 {
  "v": 2,
- "date": "2026-10-27",
- "generated_at": "2026-10-27T04:27:28.316360+05:30",
+ "date": "2026-10-28",
+ "generated_at": "2026-10-28T02:37:41.577575+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
   "news": "ok",
-  "jobs": "ok (reused from today's successful run)"
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how brain cells pass chemical messages across gaps using neurotransmitters.",
-   "why_it_matters": "When growing brain tissue in a lab for organoid intelligence, researchers must ensure these chemical handoffs work properly so the cells can process information and learn.",
+   "objective": "Understand how brain cell connections strengthen or weaken based on activity levels, known as neural plasticity.",
+   "why_it_matters": "Plasticity is the biological mechanism underlying learning and memory. For organoid intelligence, harnessing this flexibility allows living tissue computed in a lab to adapt, store information, and solve dynamic problems over time.",
    "prerequisites": [
-    "How brain cells generate electrical signals",
-    "Basic structure of a brain cell, specifically the ending of an axon"
+    "Brain cells communicate through specialized gaps called synapses.",
+    "Chemical signals trigger electrical changes in neighboring cells."
    ],
-   "simple_explanation": "When an electrical wave reaches the end of a brain cell's wire, it cannot jump the tiny physical gap to the next cell. Instead, it triggers the release of tiny chemical messenger packets. These chemicals float across the gap and land on special docking ports on the next cell, telling it whether to spark its own electrical wave or stay quiet.",
+   "simple_explanation": "Think of brain connections like paths in a forest. If you walk the same path every single day, it becomes a clear, wide trail. If you stop walking on it, weeds grow over it and it fades away. In brain tissue, connections that fire together frequently become stronger and easier to activate next time, while unused connections weaken.",
    "step_by_step": [
-    "The electrical signal travels down the wire to the very end of the cell.",
-    "This arrival opens tiny gates, letting charged mineral particles rush inside the cell tip.",
-    "The rush of particles causes tiny bubbles filled with chemical messengers to fuse with the cell wall and spill their contents into the gap.",
-    "The chemicals drift across the tiny space and lock onto matching receptor shapes on the receiving cell.",
-    "This lock-and-key action opens new channels on the receiving cell, changing its internal electrical state."
+    "When a sending cell constantly activates a receiving cell, the receiving cell notices this teamwork.",
+    "Inside the receiving cell, chemical tags and building blocks are sent to that specific connection point.",
+    "The connection site grows physically larger and places more receptor tools on its surface.",
+    "Next time a signal arrives, the receiving cell responds much more strongly than before."
    ],
-   "technical_depth": "The chemical gap is called the synapse. The releasing cell is the presynaptic neuron, and the receiving cell is the postsynaptic neuron. Established evidence shows that neurotransmitters like glutamate excite the receiving cell while GABA inhibits it. An open research question is how lab-grown brain organoids regulate the exact density of these receptors over time.",
+   "technical_depth": "At the cellular level, this is heavily driven by processes like Long-Term Potentiation (LTP) and Long-Term Depression (LTD). Repeated high-frequency stimulation causes calcium ions to flood into the receiving cell through special gates (such as NMDA receptors). This calcium surge activates enzymes that insert more chemical receptors into the cell wall, boosting future signal strength.",
    "misconceptions": [
-    "Misconception: Electricity flows directly from one brain cell to the next like a metal wire. Reality: In most cases, the electrical signal stops at the gap and turns into a chemical signal before becoming electrical again in the next cell."
+    "Misconception: Brain cells physically move around to form new partnerships when we learn. Fact: The cells mostly stay in place; instead, the microscopic contact points between them change in strength and size."
    ],
    "knowledge_check": [
     {
-     "question": "What stops the electrical signal from jumping directly between cells?",
-     "answer": "A tiny physical gap separates the cells."
+     "question": "What is the core idea behind neural plasticity?",
+     "answer": "Connections between brain cells change their strength based on how often they are used."
     },
     {
-     "question": "What carries the message across the gap?",
-     "answer": "Chemical messengers called neurotransmitters."
+     "question": "What ion plays a major trigger role inside the cell during strengthening?",
+     "answer": "Calcium."
     },
     {
-     "question": "What happens when these chemicals land on the receiving cell?",
-     "answer": "They open matching docking ports, changing the receiving cell's electrical state."
+     "question": "Why is plasticity important for organoid intelligence?",
+     "answer": "It is the physical basis that allows the living tissue to learn and adapt from experience."
     }
    ],
-   "exercise": "Draw two touching cell outlines with a tiny gap between them. Label the releasing side, the chemical packets, the gap, and the docking ports on the receiving side.",
-   "summary": "Brain cells communicate across microscopic gaps by turning electrical spikes into chemical signals, which then start a new electrical wave in the next cell.",
-   "next_lesson": "Day 7: How receptors shape different types of cell signals.",
+   "exercise": "Draw two cells connected by a single line. Label one sending and one receiving. Now, draw a thick, bold line between them to represent repeated activity, and write down one short sentence describing what changed.",
+   "summary": "Neural plasticity allows brain connections to strengthen with frequent use and weaken with neglect, serving as the biological foundation for all learning and memory.",
+   "next_lesson": "Day 8: How organoid networks organize into functional loops.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how continuous analog brain waves are turned into digital computer data using sampling rate and the Nyquist principle.",
-   "why_it_matters": "Computers cannot read continuous waves directly; they must take snapshots at regular intervals. Knowing how fast to take these snapshots ensures we do not lose important brain activity details.",
+   "objective": "Learn how to clean raw EEG recordings by removing unwanted background noise and bodily artifacts using digital filters.",
+   "why_it_matters": "Brain signals measured at the scalp are extremely tiny and easily polluted by everyday body movements, which can trick a BCI into misinterpreting user intent.",
    "prerequisites": [
-    "Basic understanding of how BCI hardware measures electrical brain signals.",
-    "Concept of wave frequency (how fast a wave repeats)."
+    "Understanding how scalp electrodes capture electrical voltages (Day 6)",
+    "Basic knowledge of analog-to-digital conversion and sampling rates (Day 7)"
    ],
-   "simple_explanation": "Imagine filming a fast-spinning fan with a camera. If the camera takes pictures too slowly, the fan blades might look like they are standing still or spinning backward. This optical illusion happens in computers too. To accurately capture a brain wave, a BCI computer must take digital snapshots (samples) at least twice as fast as the highest frequency wave we want to measure.",
+   "simple_explanation": "When you record brain activity, you also accidentally record things you do not want, like blinking your eyes, clenching your jaw, or stray electricity from wall sockets. Filtering is like a digital sieve that lets the clean brain waves pass through while blocking out these unwanted signals, known as artifacts.",
    "step_by_step": [
-    "1. Continuous brain signals flow out of the scalp as smooth analog waves.",
-    "2. An analog-to-digital converter (ADC) measures the height of the wave at regular time intervals.",
-    "3. The speed of these measurements is called the sampling rate, measured in Hertz (samples per second).",
-    "4. The Nyquist principle states that your sampling rate must be strictly greater than twice the highest frequency present in your signal to capture it without distortion."
+    "Identify the frequency range of your target brain wave, such as alpha waves which typically oscillate between 8 and 12 times per second.",
+    "Apply a high-pass filter to remove very slow, drifting baseline shifts caused by sweating or head movement.",
+    "Apply a low-pass filter to remove fast, high-frequency electrical noise originating from muscles.",
+    "Apply a notch filter to specifically target and eliminate the steady hum of standard electrical power grids (typically 50 or 60 Hertz)."
    ],
-   "technical_depth": "If you sample below the Nyquist rate, high-frequency signals fold back into lower frequencies, an error known as aliasing. In BCI engineering, hardware typically uses anti-aliasing low-pass filters before digitization to strip out unwanted high-frequency noise (like 50 or 60 Hz electrical grid interference) that could corrupt the sampled brain data.",
+   "technical_depth": "Digital filters alter the phase and amplitude of signals. Finite Impulse Response (FIR) filters offer linear phase preservation, ensuring that the time relationships between different brain wave components remain undistorted, whereas Infinite Impulse Response (IIR) filters are computationally efficient but can introduce phase distortion if not carefully designed.",
    "misconceptions": [
-    "Misconception: Sampling a signal exactly twice its highest frequency is enough for clean data recovery.",
-    "Correction: Twice is the theoretical minimum limit, but in real-world BCI engineering, we sample much faster (oversampling) to safely reconstruct clean waveforms."
+    "Filtering can completely recover a brain signal that was totally buried under massive physical movement.",
+    "All electrical noise coming from the body is considered a true neurological signal."
    ],
    "knowledge_check": [
     {
-     "question": "What does sampling rate measure?",
-     "answer": "The number of digital snapshots taken per second from a continuous signal."
+     "question": "What is an artifact in EEG recording?",
+     "answer": "An unwanted electrical signal that does not originate from the brain, such as eye blinks or muscle tension."
     },
     {
-     "question": "According to the Nyquist principle, what is the minimum sampling rate needed to capture a 40 Hz brain wave?",
-     "answer": "At least 80 Hz (twice the highest frequency)."
+     "question": "Which filter type is best for removing steady electrical outlet hum?",
+     "answer": "A notch filter."
     },
     {
-     "question": "What is the term for the distortion error that occurs when you sample a signal too slowly?",
-     "answer": "Aliasing."
+     "question": "Why must we be careful when filtering EEG data?",
+     "answer": "Because overly aggressive filtering can accidentally distort or erase genuine, useful brain wave patterns."
     }
    ],
-   "exercise": "Calculate the minimum Nyquist sampling rate required if a researcher wants to cleanly record a high-gamma brain wave peaking at 120 Hz.",
-   "summary": "Converting brain signals from analog waves to digital numbers requires regular snapshots. The Nyquist principle establishes that the sampling rate must be at least double the highest frequency of interest to prevent data distortion.",
-   "next_lesson": "Day 7: Analog-to-Digital Conversion and Quantization",
+   "exercise": "Examine a segment of raw EEG data containing a sharp spike caused by a deliberate eye blink, and note how it dwarfs the background brain rhythms in amplitude.",
+   "summary": "EEG signals are routinely contaminated by physical movements and environmental noise. Digital filters\u2014such as high-pass, low-pass, and notch filters\u2014allow BCI engineers to isolate clean neural data by selectively blocking these specific frequency bands of interference.",
+   "next_lesson": "Introduction to frequency bands and power spectral density",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "UART, I2C and SPI: choose the right interface",
-   "explanation": "Microcontrollers need to talk to sensors, displays, and other chips. UART uses two wires and sends data one bit after another, great for simple point-to-point links like GPS modules. I2C uses two shared wires and addresses multiple devices, perfect for slow sensors like temperature gauges. SPI uses four wires and streams data very fast, ideal for screens or high-speed data loggers.",
-   "practical_example": "Imagine building a robot arm in India with an OLED display, a gyro sensor, and a Bluetooth module. You use UART to link the Bluetooth module for wireless commands, I2C to connect the gyro sensor to save wiring space, and SPI to drive the fast OLED display so it updates smoothly.",
-   "exercise": "You are designing an embedded system that requires reading a slow compass sensor and writing data to a high-speed SD card. Which communication interface would you pick for each component, and why?",
-   "model_answer": "I would use I2C for the compass sensor because it only needs two wires and handles slow data well, saving precious microcontroller pins. I would use SPI for the SD card because writing files requires fast data transfer rates that SPI supports easily.",
-   "why_it_works": "It matches the speed and pin requirements of each hardware component to the strengths of the correct communication protocol, showing a practical understanding of embedded system design.",
-   "improvement_tip": "When justifying your choice in an interview, always mention the number of wires or pins required and the speed needs of the device.",
+   "topic": "Explain sensor calibration and measurement error",
+   "explanation": "Sensors in robots and brain-computer interfaces never tell the exact truth. Measurement error is the difference between what the sensor reports and reality. It has two parts: bias, which is a constant offset (like a weighing scale starting at 1 kg instead of zero), and random noise, which bounces around unpredictably. Calibration is the process of adjusting your sensor readings using known reference points to cancel out bias.",
+   "practical_example": "Imagine an IMU (Inertial Measurement Unit) sensor on a balancing robot. When sitting completely still on a flat table, it reports a tilt of 2 degrees instead of 0 degrees. That constant 2-degree shift is your bias error. During calibration, you record this offset and subtract 2 degrees from all future readings in your code.",
+   "exercise": "You are preparing a distance sensor for an automated delivery cart internship task. You place it exactly 50 cm away from a wall, but it reads 53 cm every single time you test it. What kind of error is this, and what simple math operation should you write in your embedded code to fix it?",
+   "model_answer": "This is a systematic error or bias because it is consistently off by the exact same amount (+3 cm). To fix it, you should subtract 3 cm from every raw measurement value your sensor gives you before using it in your navigation code.",
+   "why_it_works": "It directly targets the constant offset without overcomplicating things, making your distance measurements accurate right away for the robot's logic.",
+   "improvement_tip": "Do not just test at one distance. Test at multiple known points (e.g., 20 cm, 50 cm, 100 cm) to see if the error changes, which would mean you need a scaling factor instead of a simple subtraction.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Write a respectful networking message asking for advice",
-   "explanation": "When reaching out to engineers or researchers in robotics, BCI, or embedded systems on LinkedIn, asking for a job directly often fails. Instead, ask for genuine career or project advice related to their specific work. Keep the message short, show that you read their profile, and respect their time.",
-   "practical_example": "Instead of saying 'Please give me an internship in embedded systems,' say 'Hello [Name], I read your recent post about optimizing RTOS on microcontrollers and found it fascinating as an electronics student in India. Would you be open to sharing a brief tip on how to transition academic embedded projects into industry-level work?'",
-   "exercise": "Find a professional on LinkedIn who works in robotics, BCI, or embedded systems in India. Write a four-sentence outreach message that mentions one specific detail from their background and asks for learning advice rather than a job.",
-   "model_answer": "Hi [Name], I'm an engineering student in India focusing on embedded systems. I saw your post on implementing CAN protocol for mobile robots and learned a lot from it. As someone starting out, what is one foundational skill you recommend mastering before building custom PCBs? Thank you for your time!",
-   "why_it_works": "It focuses on learning rather than asking for a handout, respects the professional's expertise by mentioning a real topic they care about, and keeps the question specific and easy to answer quickly.",
-   "improvement_tip": "Never send the exact same template to multiple people. Always customize at least one sentence based on their recent posts or articles.",
+   "topic": "Turn a project task into a measurable resume bullet without inventing numbers",
+   "explanation": "When writing bullet points for a robotics or embedded systems project, students often feel pressured to invent impressive numbers like 'improved speed by 50%' when they only ran a simple test. Instead of guessing metrics, you can use factual measurements you actually recorded during your university lab or personal project, such as compilation time, sensor polling frequency, or memory usage, without making up fake achievements.",
+   "practical_example": "Instead of writing a vague task like 'Worked on an Arduino line follower robot', focus on what you actually measured. If you timed how fast your sensor read data or tracked how much battery power your code used during a test, use those real observations.",
+   "exercise": "Look at one project on your resume involving an embedded system, robot, or BCI setup. Write down one task you did, then add a real, non-invented metric you actually observed during testing, such as loop execution time in milliseconds or sensor data update rate.",
+   "model_answer": "Programmed an ESP32 microcontroller in C++ to read infrared sensor data at 50 Hz for an autonomous navigation robot, keeping loop execution time under 20 milliseconds during lab tests.",
+   "why_it_works": "It uses concrete, truthful engineering details that you can actually prove if a recruiter asks about your code or lab test, avoiding fake numbers while still showing technical depth.",
+   "improvement_tip": "If you did not measure anything quantitative during your project, check your code logs, serial monitor outputs, or hardware datasheets to find real numbers before adding them to your LinkedIn profile.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
-   "focus": "Testing if lab-grown brain cells can learn to play a simple digital game, like Pong, when hooked up to a computer.",
-   "explanation": "Scientists wanted to see if living neurons outside a body can change their activity to control something on a screen based on feedback. Because the Crossref abstract was empty, this explanation relies on general knowledge of the study.",
-   "limits": "The provided metadata abstract was blank, so specific details about the study's exact setup rely on general knowledge rather than the paper's specific text.",
-   "check": "low",
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
+   "focus": "Research design and method for testing lab-grown brain cells inside a virtual environment.",
+   "explanation": "Because the verified metadata lacks an abstract, general knowledge of this study suggests the researchers connected living human and mouse brain cells to a computer system running a simple table tennis game, sending electrical signals to the cells and reading their responses to see if they could adapt.",
+   "limits": "The abstract was missing from the verified metadata, so this explanation relies on general knowledge of the study's known setup rather than specific text from the abstract.",
+   "check": {
+    "confidence": "medium",
+    "used_abstract": false,
+    "invented_facts": false
+   },
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/j.neuron.2022.09.001",
    "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
-   "focus": "Testing if a brain-computer interface can let a paralyzed person control external devices using brain signals.",
-   "explanation": "The study exists because researchers wanted to help people with severe paralysis move objects or use computers directly with their thoughts, bypassing injured spinal cords. Since the official abstract text was not provided in the metadata, this explanation is based on general scientific knowledge of this well-known 2006 Nature paper by Hochberg and colleagues.",
-   "limits": "The abstract text was missing from the verified metadata, so this summary relies on general background knowledge rather than specific text from the abstract.",
-   "check": "medium",
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "How the study was set up and the methods used to test brain-computer interface technology.",
+   "explanation": "Because the paper's abstract text was not provided, we rely on general knowledge of this famous 2006 Nature study. The researchers implanted a tiny sensor (the BrainGate array) into the motor cortex of a participant with paralysis. They recorded electrical activity from a group of brain cells while the participant imagined moving their hand, and translated these brain signals using a computer to control external devices like a cursor on a screen.",
+   "limits": "Since the specific abstract was missing, exact details on participant screening, trial duration, and exact signal processing algorithms cannot be confirmed here.",
+   "check": "Medium",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature04970",
    "doi_link": "https://doi.org/10.1038/nature04970",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "3 of 3",
-   "focus": "Run it in simulation and engineering judgement",
-   "project_name": "ROBOTIS-GIT/turtlebot3",
-   "summary": "This final day looks at using simulation tools and making professional assessments about the TurtleBot3 software. Based on the project details, the repository provides core ROS packages written mainly in C++ and supports modern ROS versions like Humble and Jazzy. Instead of claiming any code execution, we look at how simulation packages are linked in the README as related projects.",
-   "simulation_and_judgment": "In robotics engineering, running software in a virtual simulation before deploying it to physical hardware is a standard safety and testing practice. The repository references related simulation packages, which allows developers to test robot behaviors safely.",
-   "small_challenge": "Explore the list of related open-source projects in the README and identify which one specifically handles simulations for the TurtleBot3.",
-   "knowledge_check": "What primary programming language is indicated for this repository based on the verified metadata?",
+   "investigation_day": "Day 1 of 3: Understand the project",
+   "project_name": "moveit/moveit2",
+   "project_description": "A software platform used for robot motion planning, built to work with the Robot Operating System 2 (ROS 2).",
+   "primary_language": "C++",
+   "license": "BSD-3-Clause",
+   "key_findings": [
+    "The repository is actively maintained and serves as the ROS 2 version of the original MoveIt framework.",
+    "It provides tools for robotic manipulation, prototyping, and algorithm testing.",
+    "Development happens on the main branch, while specific versions align with different ROS 2 distributions like Humble and Jazzy."
+   ],
+   "small_challenge": "Locate the installation instructions in the README and determine whether you would prefer a binary installation or building the project from source.",
+   "knowledge_check": "What underlying robot framework is MoveIt 2 designed to integrate with?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
-    "full_name": "ROBOTIS-GIT/turtlebot3",
-    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
-    "description": "ROS packages for Turtlebot3",
-    "pushed_at": "2026-06-15T11:50:39Z",
+    "full_name": "moveit/moveit2",
+    "html_url": "https://github.com/moveit/moveit2",
+    "description": ":robot: MoveIt for ROS 2",
+    "pushed_at": "2026-10-26T16:22:29Z",
     "language": "C++",
     "archived": false,
-    "license": "Apache-2.0"
-   }
+    "license": "BSD-3-Clause"
+   },
+   "day": "1 of 3"
   },
   "news": {
    "items": [
     {
      "category": "Deployment",
-     "url": "https://www.therobotreport.com/agility-gxo-logistics-plan-expanded-deployment-digit-humanoid/",
-     "what": "GXO Logistics is increasing the use of the Digit humanoid robot at their facilities.",
-     "who": "Agility Robotics and GXO Logistics.",
-     "how": "Digit will be deployed at two additional sites following tests with robots from various companies. Background (general knowledge): Humanoid robots are designed to move and work in spaces originally built for humans.",
-     "why": "To continue the integration of humanoid technology into logistics operations.",
-     "limits": "Not stated in the source excerpt.",
-     "learn": "The expansion suggests successful initial testing of human-shaped robots in warehouse settings.",
+     "url": "https://www.therobotreport.com/anybotics-begins-delivering-anymal-x-legged-robot-explosive-atmospheres/",
+     "what": "The ANYmal X legged inspection robot has started shipping to customers.",
+     "who": "ANYbotics",
+     "how": "The robot is engineered specifically to meet high safety requirements for hazardous industrial environments. Background (general knowledge): Explosive atmospheres refer to areas where gases, vapors, or dust can easily ignite, requiring specialized spark-proof machinery.",
+     "why": "To perform inspections in dangerous oil, gas, and chemical industry settings safely.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The robot is built for strict safety compliance in volatile industrial zones.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Agility and GXO Logistics plan expanded deployment of Digit humanoid",
-     "published": "2026-10-26",
+     "title": "ANYbotics begins delivering ANYmal X legged robot for explosive atmospheres",
+     "published": "2026-10-27",
      "source": "The Robot Report"
     },
     {
-     "category": "Research",
-     "url": "https://robohub.org/robots-in-society-business-and-culture-september-2026/",
-     "what": "Researchers developed a robotic hand capable of walking.",
-     "who": "Amirhossein Kazemipour, Hehui Zheng, and Robert Katzschmann.",
-     "how": "The robot uses its fingers to support itself and move. Background (general knowledge): Locomotion research explores how robots can move across terrain using non-traditional limb structures.",
-     "why": "To study self-supported movement and manipulation using an anthropomorphic design.",
-     "limits": "Not stated in the source excerpt.",
-     "learn": "Robotics research is exploring unconventional ways for machines to move and interact with their environment.",
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/embotech-bmw-move-1m-vehicles-automated-driving-technology/",
+     "what": "An automated driving system has successfully moved one million vehicles.",
+     "who": "Embotech and BMW",
+     "how": "The technology manages the movement of 3,500 vehicles daily, operating continuously across locations in the U.K. and Germany.",
+     "why": "To automate and streamline vehicle logistics within manufacturing sites.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Autonomous driving technology is being applied to internal site logistics for large-scale vehicle movement.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Robots in Society, Business and Culture: September 2026",
-     "published": "2026-10-26",
-     "source": "Robohub"
+     "title": "Embotech and BMW move 1M vehicles with automated driving technology",
+     "published": "2026-10-27",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Product",
+     "url": "https://www.therobotreport.com/xpanner-launches-new-autonomous-pile-driver-solar-farm-contruction/",
+     "what": "The X1 Piling R6, a robot that autonomously installs solar farm support posts.",
+     "who": "Xpanner",
+     "how": "It uses automation to drive piles into the ground, requiring only one human operator to manage the process.",
+     "why": "To increase the accuracy of post placement and reduce the amount of physical labor needed on construction sites.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Robotic automation is being used to simplify and improve the efficiency of building solar power infrastructure.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Xpanner launches autonomous pile driver for solar farm contruction",
+     "published": "2026-10-27",
+     "source": "The Robot Report"
     }
    ]
   },
   "jobs": {
    "items": [
     {
-     "title": "Junior Engine Control System & Monitoring Engineer",
+     "title": "Algorithm Engineer (m/f/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich, Germany",
-     "published": "2026-10-26",
+     "location": "Hamburg",
+     "published": "2026-10-27",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/the-exploration-company/junior-engine-control-system-monitoring-engineer-munich-361342",
-     "company": "The Exploration Company"
-    },
-    {
-     "title": "Software Test Engineer",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Remote job",
-     "published": "2026-10-25",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-487044",
-     "company": "SwissPeak Partners GmbH"
-    },
-    {
-     "title": "Embedded Development Ingenieur (m/w/x)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich",
-     "published": "2026-10-26",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/k-tronik-gmbh/embedded-development-ingenieur-munich-15762",
-     "company": "K-tronik GmbH"
-    },
-    {
-     "title": "Staff Solutions Engineer - Embedded Finance",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "NL - Amsterdam",
-     "published": "2026-10-26",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.nl/jobs/companies/airwallex/staff-solutions-engineer-embedded-finance-amsterdam-158753",
-     "company": "Airwallex"
+     "url": "https://www.arbeitnow.com/jobs/companies/anori-tech/algorithm-engineer-hamburg-466227",
+     "company": "Anori Tech"
     },
     {
      "title": "Software Engineer \u2013 Embedded Security",
@@ -233,31 +229,31 @@
      "company": "CDDS AG"
     },
     {
-     "title": "IoT Embedded Systems Engineer",
+     "title": "Elektroniker / Automatisierungstechniker (m/w/d) f\u00fcr Inbetriebnahme",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Bern, Berne, Switzerland",
-     "published": "2026-10-25",
+     "location": "Bornheim",
+     "published": "2026-10-27",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-257010",
-     "company": "SwissPeak Partners GmbH"
+     "url": "https://www.arbeitnow.com/jobs/companies/personalized-nutrition-systems-gmbh/elektroniker-automatisierungstechniker-fur-inbetriebnahme-bornheim-431689",
+     "company": "Personalized Nutrition Systems GmbH"
     },
     {
-     "title": "Propulsion Test Engineer",
+     "title": "Leittechnik-/OT-Systemingenieur ABB 800xA (m/w/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Bordeaux, France",
-     "published": "2026-10-26",
+     "location": "Baden",
+     "published": "2026-10-27",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/the-exploration-company/propulsion-test-engineer-bordeaux-411077",
-     "company": "The Exploration Company"
+     "url": "https://www.arbeitnow.ch/jobs/companies/topteam-engineering-gmbh/leittechnik-ot-systemingenieur-abb-800xa-baden-19664",
+     "company": "TopTeam Engineering GmbH"
     },
     {
-     "title": "AIT Electrical Engineer",
+     "title": "Mechanisch monteur",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Bordeaux, France",
-     "published": "2026-10-26",
+     "location": "Berkel en Rodenrijs",
+     "published": "2026-10-27",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/the-exploration-company/ait-electrical-engineer-bordeaux-176451",
-     "company": "The Exploration Company"
+     "url": "https://www.arbeitnow.nl/jobs/companies/technison/mechanisch-monteur-berkel-en-rodenrijs-66320",
+     "company": "Technison"
     },
     {
      "title": "OT Engineer",

@@ -1,0 +1,281 @@
+{
+ "v": 2,
+ "date": "2026-10-28",
+ "generated_at": "2026-10-28T02:37:41.577575+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how brain cell connections strengthen or weaken based on activity levels, known as neural plasticity.",
+   "why_it_matters": "Plasticity is the biological mechanism underlying learning and memory. For organoid intelligence, harnessing this flexibility allows living tissue computed in a lab to adapt, store information, and solve dynamic problems over time.",
+   "prerequisites": [
+    "Brain cells communicate through specialized gaps called synapses.",
+    "Chemical signals trigger electrical changes in neighboring cells."
+   ],
+   "simple_explanation": "Think of brain connections like paths in a forest. If you walk the same path every single day, it becomes a clear, wide trail. If you stop walking on it, weeds grow over it and it fades away. In brain tissue, connections that fire together frequently become stronger and easier to activate next time, while unused connections weaken.",
+   "step_by_step": [
+    "When a sending cell constantly activates a receiving cell, the receiving cell notices this teamwork.",
+    "Inside the receiving cell, chemical tags and building blocks are sent to that specific connection point.",
+    "The connection site grows physically larger and places more receptor tools on its surface.",
+    "Next time a signal arrives, the receiving cell responds much more strongly than before."
+   ],
+   "technical_depth": "At the cellular level, this is heavily driven by processes like Long-Term Potentiation (LTP) and Long-Term Depression (LTD). Repeated high-frequency stimulation causes calcium ions to flood into the receiving cell through special gates (such as NMDA receptors). This calcium surge activates enzymes that insert more chemical receptors into the cell wall, boosting future signal strength.",
+   "misconceptions": [
+    "Misconception: Brain cells physically move around to form new partnerships when we learn. Fact: The cells mostly stay in place; instead, the microscopic contact points between them change in strength and size."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the core idea behind neural plasticity?",
+     "answer": "Connections between brain cells change their strength based on how often they are used."
+    },
+    {
+     "question": "What ion plays a major trigger role inside the cell during strengthening?",
+     "answer": "Calcium."
+    },
+    {
+     "question": "Why is plasticity important for organoid intelligence?",
+     "answer": "It is the physical basis that allows the living tissue to learn and adapt from experience."
+    }
+   ],
+   "exercise": "Draw two cells connected by a single line. Label one sending and one receiving. Now, draw a thick, bold line between them to represent repeated activity, and write down one short sentence describing what changed.",
+   "summary": "Neural plasticity allows brain connections to strengthen with frequent use and weaken with neglect, serving as the biological foundation for all learning and memory.",
+   "next_lesson": "Day 8: How organoid networks organize into functional loops.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Learn how to clean raw EEG recordings by removing unwanted background noise and bodily artifacts using digital filters.",
+   "why_it_matters": "Brain signals measured at the scalp are extremely tiny and easily polluted by everyday body movements, which can trick a BCI into misinterpreting user intent.",
+   "prerequisites": [
+    "Understanding how scalp electrodes capture electrical voltages (Day 6)",
+    "Basic knowledge of analog-to-digital conversion and sampling rates (Day 7)"
+   ],
+   "simple_explanation": "When you record brain activity, you also accidentally record things you do not want, like blinking your eyes, clenching your jaw, or stray electricity from wall sockets. Filtering is like a digital sieve that lets the clean brain waves pass through while blocking out these unwanted signals, known as artifacts.",
+   "step_by_step": [
+    "Identify the frequency range of your target brain wave, such as alpha waves which typically oscillate between 8 and 12 times per second.",
+    "Apply a high-pass filter to remove very slow, drifting baseline shifts caused by sweating or head movement.",
+    "Apply a low-pass filter to remove fast, high-frequency electrical noise originating from muscles.",
+    "Apply a notch filter to specifically target and eliminate the steady hum of standard electrical power grids (typically 50 or 60 Hertz)."
+   ],
+   "technical_depth": "Digital filters alter the phase and amplitude of signals. Finite Impulse Response (FIR) filters offer linear phase preservation, ensuring that the time relationships between different brain wave components remain undistorted, whereas Infinite Impulse Response (IIR) filters are computationally efficient but can introduce phase distortion if not carefully designed.",
+   "misconceptions": [
+    "Filtering can completely recover a brain signal that was totally buried under massive physical movement.",
+    "All electrical noise coming from the body is considered a true neurological signal."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is an artifact in EEG recording?",
+     "answer": "An unwanted electrical signal that does not originate from the brain, such as eye blinks or muscle tension."
+    },
+    {
+     "question": "Which filter type is best for removing steady electrical outlet hum?",
+     "answer": "A notch filter."
+    },
+    {
+     "question": "Why must we be careful when filtering EEG data?",
+     "answer": "Because overly aggressive filtering can accidentally distort or erase genuine, useful brain wave patterns."
+    }
+   ],
+   "exercise": "Examine a segment of raw EEG data containing a sharp spike caused by a deliberate eye blink, and note how it dwarfs the background brain rhythms in amplitude.",
+   "summary": "EEG signals are routinely contaminated by physical movements and environmental noise. Digital filters\u2014such as high-pass, low-pass, and notch filters\u2014allow BCI engineers to isolate clean neural data by selectively blocking these specific frequency bands of interference.",
+   "next_lesson": "Introduction to frequency bands and power spectral density",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Explain sensor calibration and measurement error",
+   "explanation": "Sensors in robots and brain-computer interfaces never tell the exact truth. Measurement error is the difference between what the sensor reports and reality. It has two parts: bias, which is a constant offset (like a weighing scale starting at 1 kg instead of zero), and random noise, which bounces around unpredictably. Calibration is the process of adjusting your sensor readings using known reference points to cancel out bias.",
+   "practical_example": "Imagine an IMU (Inertial Measurement Unit) sensor on a balancing robot. When sitting completely still on a flat table, it reports a tilt of 2 degrees instead of 0 degrees. That constant 2-degree shift is your bias error. During calibration, you record this offset and subtract 2 degrees from all future readings in your code.",
+   "exercise": "You are preparing a distance sensor for an automated delivery cart internship task. You place it exactly 50 cm away from a wall, but it reads 53 cm every single time you test it. What kind of error is this, and what simple math operation should you write in your embedded code to fix it?",
+   "model_answer": "This is a systematic error or bias because it is consistently off by the exact same amount (+3 cm). To fix it, you should subtract 3 cm from every raw measurement value your sensor gives you before using it in your navigation code.",
+   "why_it_works": "It directly targets the constant offset without overcomplicating things, making your distance measurements accurate right away for the robot's logic.",
+   "improvement_tip": "Do not just test at one distance. Test at multiple known points (e.g., 20 cm, 50 cm, 100 cm) to see if the error changes, which would mean you need a scaling factor instead of a simple subtraction.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Turn a project task into a measurable resume bullet without inventing numbers",
+   "explanation": "When writing bullet points for a robotics or embedded systems project, students often feel pressured to invent impressive numbers like 'improved speed by 50%' when they only ran a simple test. Instead of guessing metrics, you can use factual measurements you actually recorded during your university lab or personal project, such as compilation time, sensor polling frequency, or memory usage, without making up fake achievements.",
+   "practical_example": "Instead of writing a vague task like 'Worked on an Arduino line follower robot', focus on what you actually measured. If you timed how fast your sensor read data or tracked how much battery power your code used during a test, use those real observations.",
+   "exercise": "Look at one project on your resume involving an embedded system, robot, or BCI setup. Write down one task you did, then add a real, non-invented metric you actually observed during testing, such as loop execution time in milliseconds or sensor data update rate.",
+   "model_answer": "Programmed an ESP32 microcontroller in C++ to read infrared sensor data at 50 Hz for an autonomous navigation robot, keeping loop execution time under 20 milliseconds during lab tests.",
+   "why_it_works": "It uses concrete, truthful engineering details that you can actually prove if a recruiter asks about your code or lab test, avoiding fake numbers while still showing technical depth.",
+   "improvement_tip": "If you did not measure anything quantitative during your project, check your code logs, serial monitor outputs, or hardware datasheets to find real numbers before adding them to your LinkedIn profile.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
+   "focus": "Research design and method for testing lab-grown brain cells inside a virtual environment.",
+   "explanation": "Because the verified metadata lacks an abstract, general knowledge of this study suggests the researchers connected living human and mouse brain cells to a computer system running a simple table tennis game, sending electrical signals to the cells and reading their responses to see if they could adapt.",
+   "limits": "The abstract was missing from the verified metadata, so this explanation relies on general knowledge of the study's known setup rather than specific text from the abstract.",
+   "check": {
+    "confidence": "medium",
+    "used_abstract": false,
+    "invented_facts": false
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "How the study was set up and the methods used to test brain-computer interface technology.",
+   "explanation": "Because the paper's abstract text was not provided, we rely on general knowledge of this famous 2006 Nature study. The researchers implanted a tiny sensor (the BrainGate array) into the motor cortex of a participant with paralysis. They recorded electrical activity from a group of brain cells while the participant imagined moving their hand, and translated these brain signals using a computer to control external devices like a cursor on a screen.",
+   "limits": "Since the specific abstract was missing, exact details on participant screening, trial duration, and exact signal processing algorithms cannot be confirmed here.",
+   "check": "Medium",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "investigation_day": "Day 1 of 3: Understand the project",
+   "project_name": "moveit/moveit2",
+   "project_description": "A software platform used for robot motion planning, built to work with the Robot Operating System 2 (ROS 2).",
+   "primary_language": "C++",
+   "license": "BSD-3-Clause",
+   "key_findings": [
+    "The repository is actively maintained and serves as the ROS 2 version of the original MoveIt framework.",
+    "It provides tools for robotic manipulation, prototyping, and algorithm testing.",
+    "Development happens on the main branch, while specific versions align with different ROS 2 distributions like Humble and Jazzy."
+   ],
+   "small_challenge": "Locate the installation instructions in the README and determine whether you would prefer a binary installation or building the project from source.",
+   "knowledge_check": "What underlying robot framework is MoveIt 2 designed to integrate with?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "moveit/moveit2",
+    "html_url": "https://github.com/moveit/moveit2",
+    "description": ":robot: MoveIt for ROS 2",
+    "pushed_at": "2026-10-26T16:22:29Z",
+    "language": "C++",
+    "archived": false,
+    "license": "BSD-3-Clause"
+   },
+   "day": "1 of 3"
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/anybotics-begins-delivering-anymal-x-legged-robot-explosive-atmospheres/",
+     "what": "The ANYmal X legged inspection robot has started shipping to customers.",
+     "who": "ANYbotics",
+     "how": "The robot is engineered specifically to meet high safety requirements for hazardous industrial environments. Background (general knowledge): Explosive atmospheres refer to areas where gases, vapors, or dust can easily ignite, requiring specialized spark-proof machinery.",
+     "why": "To perform inspections in dangerous oil, gas, and chemical industry settings safely.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The robot is built for strict safety compliance in volatile industrial zones.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "ANYbotics begins delivering ANYmal X legged robot for explosive atmospheres",
+     "published": "2026-10-27",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/embotech-bmw-move-1m-vehicles-automated-driving-technology/",
+     "what": "An automated driving system has successfully moved one million vehicles.",
+     "who": "Embotech and BMW",
+     "how": "The technology manages the movement of 3,500 vehicles daily, operating continuously across locations in the U.K. and Germany.",
+     "why": "To automate and streamline vehicle logistics within manufacturing sites.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Autonomous driving technology is being applied to internal site logistics for large-scale vehicle movement.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Embotech and BMW move 1M vehicles with automated driving technology",
+     "published": "2026-10-27",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Product",
+     "url": "https://www.therobotreport.com/xpanner-launches-new-autonomous-pile-driver-solar-farm-contruction/",
+     "what": "The X1 Piling R6, a robot that autonomously installs solar farm support posts.",
+     "who": "Xpanner",
+     "how": "It uses automation to drive piles into the ground, requiring only one human operator to manage the process.",
+     "why": "To increase the accuracy of post placement and reduce the amount of physical labor needed on construction sites.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Robotic automation is being used to simplify and improve the efficiency of building solar power infrastructure.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Xpanner launches autonomous pile driver for solar farm contruction",
+     "published": "2026-10-27",
+     "source": "The Robot Report"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Algorithm Engineer (m/f/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Hamburg",
+     "published": "2026-10-27",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/anori-tech/algorithm-engineer-hamburg-466227",
+     "company": "Anori Tech"
+    },
+    {
+     "title": "Software Engineer \u2013 Embedded Security",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Z\u00fcrich",
+     "published": "2026-10-25",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/cdds-ag/software-engineer-embedded-security-zurich-357319",
+     "company": "CDDS AG"
+    },
+    {
+     "title": "Elektroniker / Automatisierungstechniker (m/w/d) f\u00fcr Inbetriebnahme",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Bornheim",
+     "published": "2026-10-27",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/personalized-nutrition-systems-gmbh/elektroniker-automatisierungstechniker-fur-inbetriebnahme-bornheim-431689",
+     "company": "Personalized Nutrition Systems GmbH"
+    },
+    {
+     "title": "Leittechnik-/OT-Systemingenieur ABB 800xA (m/w/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Baden",
+     "published": "2026-10-27",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/topteam-engineering-gmbh/leittechnik-ot-systemingenieur-abb-800xa-baden-19664",
+     "company": "TopTeam Engineering GmbH"
+    },
+    {
+     "title": "Mechanisch monteur",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Berkel en Rodenrijs",
+     "published": "2026-10-27",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/technison/mechanisch-monteur-berkel-en-rodenrijs-66320",
+     "company": "Technison"
+    },
+    {
+     "title": "OT Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Basel",
+     "published": "2026-10-26",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/bell-food-group/ot-engineer-basel-393706",
+     "company": "Bell Food Group"
+    },
+    {
+     "title": "Instandhaltungsspezialist/Automatiker (m/w/d) Roche Diagnostics",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Rotkreuz",
+     "published": "2026-10-26",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/we-make-it-gmbh/instandhaltungsspezialist-automatiker-roche-diagnostics-rotkreuz-358045",
+     "company": "We make it GmbH"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
