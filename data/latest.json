@@ -1,277 +1,231 @@
 {
  "v": 2,
- "date": "2026-10-28",
- "generated_at": "2026-10-28T04:25:03.561850+05:30",
+ "date": "2026-10-29",
+ "generated_at": "2026-10-29T02:43:33.724496+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how brain cell connections strengthen or weaken based on activity levels, known as neural plasticity.",
-   "why_it_matters": "Plasticity is the biological mechanism underlying learning and memory. For organoid intelligence, harnessing this flexibility allows living tissue computed in a lab to adapt, store information, and solve dynamic problems over time.",
+   "objective": "Compare biological neural networks in living tissue with artificial neural networks used in computer science.",
+   "why_it_matters": "Understanding how living brain tissue differs from computer models helps researchers figure out what makes biological computing uniquely powerful and energy-efficient.",
    "prerequisites": [
-    "Brain cells communicate through specialized gaps called synapses.",
-    "Chemical signals trigger electrical changes in neighboring cells."
+    "Basic knowledge of how biological cells pass electrical and chemical signals",
+    "Familiarity with the idea that computers use math to mimic learning"
    ],
-   "simple_explanation": "Think of brain connections like paths in a forest. If you walk the same path every single day, it becomes a clear, wide trail. If you stop walking on it, weeds grow over it and it fades away. In brain tissue, connections that fire together frequently become stronger and easier to activate next time, while unused connections weaken.",
+   "simple_explanation": "An artificial neural network (ANN) is a computer program made of math layers that pass numbers to each other to recognize patterns. A biological neural network is a living web of cells that use actual physical chemistry, moving ions, and changing physical shapes to process information.",
    "step_by_step": [
-    "When a sending cell constantly activates a receiving cell, the receiving cell notices this teamwork.",
-    "Inside the receiving cell, chemical tags and building blocks are sent to that specific connection point.",
-    "The connection site grows physically larger and places more receptor tools on its surface.",
-    "Next time a signal arrives, the receiving cell responds much more strongly than before."
+    "Step 1: Look at the basic building block. Computers use a simple math formula (an artificial neuron) that multiplies inputs by weights and adds them up. Biology uses a living cell with physical branches, receptors, and chemical reactions.",
+    "Step 2: Examine how they are wired. Artificial networks usually have strict layers where information flows in one clean direction. Biological networks feature messy, multi-directional loops with billions of connections going everywhere.",
+    "Step 3: Compare how they learn. Computers adjust numbers in code using massive amounts of pre-calculated error correction. Brain cells physically grow, shrink, and alter their connections based on real-time chemical feedback.",
+    "Step 4: Contrast power usage. Artificial networks require massive server farms and megawatts of electricity to train. Living tissue runs on a tiny fraction of that energy using simple sugar metabolism."
    ],
-   "technical_depth": "At the cellular level, this is heavily driven by processes like Long-Term Potentiation (LTP) and Long-Term Depression (LTD). Repeated high-frequency stimulation causes calcium ions to flood into the receiving cell through special gates (such as NMDA receptors). This calcium surge activates enzymes that insert more chemical receptors into the cell wall, boosting future signal strength.",
+   "technical_depth": "Artificial neural networks use static mathematical weights and activation functions like ReLU, trained primarily through backpropagation of error. Biological networks rely on analog, continuous-time biochemical signaling, where processing and memory happen at the exact same location (the synapse), avoiding the data-transfer bottleneck of traditional computer architectures.",
    "misconceptions": [
-    "Misconception: Brain cells physically move around to form new partnerships when we learn. Fact: The cells mostly stay in place; instead, the microscopic contact points between them change in strength and size."
+    "Misconception: Artificial neural networks actually think like human brains. Reality: ANNs are inspired by brain structure, but they use completely different math and rules compared to living cells.",
+    "Misconception: Brain cells turn on and off like computer transistors. Reality: Biological neurons are constantly active, sending continuous baseline signals and adjusting timing rather than just flipping bits."
    ],
    "knowledge_check": [
     {
-     "question": "What is the core idea behind neural plasticity?",
-     "answer": "Connections between brain cells change their strength based on how often they are used."
+     "question": "What is the main building block of an artificial neural network?",
+     "answer": "A math formula that multiplies inputs by weights and adds them together."
     },
     {
-     "question": "What ion plays a major trigger role inside the cell during strengthening?",
-     "answer": "Calcium."
+     "question": "How do biological networks differ from artificial networks in their wiring?",
+     "answer": "Biological networks feature messy, multi-directional loops, whereas ANNs typically use structured, directional layers."
     },
     {
-     "question": "Why is plasticity important for organoid intelligence?",
-     "answer": "It is the physical basis that allows the living tissue to learn and adapt from experience."
+     "question": "What is a major advantage of biological networks over computer models regarding energy?",
+     "answer": "Biological networks operate on a tiny fraction of the energy required by large computer systems."
     }
    ],
-   "exercise": "Draw two cells connected by a single line. Label one sending and one receiving. Now, draw a thick, bold line between them to represent repeated activity, and write down one short sentence describing what changed.",
-   "summary": "Neural plasticity allows brain connections to strengthen with frequent use and weaken with neglect, serving as the biological foundation for all learning and memory.",
-   "next_lesson": "Day 8: How organoid networks organize into functional loops.",
+   "exercise": "Draw a simple diagram comparing a computer flowchart with strict layers on one side to a chaotic, looping web of biological cells on the other. Label where math happens in the computer model and where chemistry happens in the biological model.",
+   "summary": "While artificial neural networks use structured math and layered code to spot patterns, biological neural networks use living, energy-efficient cells that change their physical structure and chemistry to process information.",
+   "next_lesson": "Day 9: Introduction to microelectrode arrays and how we listen to organoids.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Learn how to clean raw EEG recordings by removing unwanted background noise and bodily artifacts using digital filters.",
-   "why_it_matters": "Brain signals measured at the scalp are extremely tiny and easily polluted by everyday body movements, which can trick a BCI into misinterpreting user intent.",
+   "objective": "Understand how physical movements, blinking, and facial muscle contractions create unwanted signals in EEG recordings and how to recognize them.",
+   "why_it_matters": "When a user blinks or clenches their jaw, the electrical activity from those muscles is much larger than the tiny brain waves, which can trick a BCI into making the wrong move.",
    "prerequisites": [
-    "Understanding how scalp electrodes capture electrical voltages (Day 6)",
-    "Basic knowledge of analog-to-digital conversion and sampling rates (Day 7)"
+    "Basic knowledge of EEG electrodes and scalp placement",
+    "Understanding that brain signals are measured in microvolts"
    ],
-   "simple_explanation": "When you record brain activity, you also accidentally record things you do not want, like blinking your eyes, clenching your jaw, or stray electricity from wall sockets. Filtering is like a digital sieve that lets the clean brain waves pass through while blocking out these unwanted signals, known as artifacts.",
+   "simple_explanation": "Your body acts like a giant antenna. Whenever you blink your eyes, move your eyeballs, or tense a facial muscle, those actions generate large electrical spikes. Because EEG sensors sit on the surface of your head, they pick up these muscle and movement signals along with your brain waves, muddying the data.",
    "step_by_step": [
-    "Identify the frequency range of your target brain wave, such as alpha waves which typically oscillate between 8 and 12 times per second.",
-    "Apply a high-pass filter to remove very slow, drifting baseline shifts caused by sweating or head movement.",
-    "Apply a low-pass filter to remove fast, high-frequency electrical noise originating from muscles.",
-    "Apply a notch filter to specifically target and eliminate the steady hum of standard electrical power grids (typically 50 or 60 Hertz)."
+    "Recognize that ocular artifacts come from eye blinks and horizontal or vertical eye movements.",
+    "Understand that electromyographic (EMG) artifacts come from tension in scalp, jaw, and neck muscles.",
+    "Observe how eye blinks create massive slow-wave voltage spikes mostly visible at the front of the head.",
+    "Observe how muscle tension creates fast, jagged, high-frequency static spread across sensors near the edges of the cap."
    ],
-   "technical_depth": "Digital filters alter the phase and amplitude of signals. Finite Impulse Response (FIR) filters offer linear phase preservation, ensuring that the time relationships between different brain wave components remain undistorted, whereas Infinite Impulse Response (IIR) filters are computationally efficient but can introduce phase distortion if not carefully designed.",
+   "technical_depth": "The eyeball itself is a dipole, having a positive charge at the cornea and a negative charge at the retina. When the eye moves or blinks, this electric dipole shifts orientation, creating large potential changes recorded by frontal electrodes (Electrooculography, or EOG). Meanwhile, muscle fibers fire at much higher frequencies than typical EEG rhythms, creating broad-band power increases that overlap with useful cognitive bands if not properly identified.",
    "misconceptions": [
-    "Filtering can completely recover a brain signal that was totally buried under massive physical movement.",
-    "All electrical noise coming from the body is considered a true neurological signal."
+    "Believing that sitting completely still eliminates all body-related noise, ignoring involuntary actions like tiny micro-saccades and heartbeats.",
+    "Assuming that any sudden spike in the EEG graph is automatically a burst of intense brain activity."
    ],
    "knowledge_check": [
     {
-     "question": "What is an artifact in EEG recording?",
-     "answer": "An unwanted electrical signal that does not originate from the brain, such as eye blinks or muscle tension."
+     "question": "What is the primary electrical source of an eye-blink artifact in an EEG?",
+     "answer": "The permanent electrical dipole of the eyeball itself, with a positive cornea and negative retina."
     },
     {
-     "question": "Which filter type is best for removing steady electrical outlet hum?",
-     "answer": "A notch filter."
+     "question": "How do muscle (EMG) artifacts generally look different from eye-blink artifacts?",
+     "answer": "Muscle artifacts are fast, jagged, and high-frequency, whereas eye blinks appear as large, slow voltage changes."
     },
     {
-     "question": "Why must we be careful when filtering EEG data?",
-     "answer": "Because overly aggressive filtering can accidentally distort or erase genuine, useful brain wave patterns."
+     "question": "Why are frontal electrodes most affected by eye movements?",
+     "answer": "Because they are physically closest to the eyes and the pathways where the eye dipole shifts."
     }
    ],
-   "exercise": "Examine a segment of raw EEG data containing a sharp spike caused by a deliberate eye blink, and note how it dwarfs the background brain rhythms in amplitude.",
-   "summary": "EEG signals are routinely contaminated by physical movements and environmental noise. Digital filters\u2014such as high-pass, low-pass, and notch filters\u2014allow BCI engineers to isolate clean neural data by selectively blocking these specific frequency bands of interference.",
-   "next_lesson": "Introduction to frequency bands and power spectral density",
+   "exercise": "Watch a video feed of a person blinking and clenching their jaw while looking at an EEG display screen. Try to manually match the timing of their physical movements with the massive spikes and static bursts appearing on the recording channels.",
+   "summary": "Non-neural movements like blinking, eye shifting, and jaw clenching generate distinct electrical patterns that overpower delicate brain signals, making artifact recognition an essential BCI skill.",
+   "next_lesson": "Introduction to automated artifact removal techniques like Independent Component Analysis (ICA)",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Explain sensor calibration and measurement error",
-   "explanation": "Sensors in robots and brain-computer interfaces never tell the exact truth. Measurement error is the difference between what the sensor reports and reality. It has two parts: bias, which is a constant offset (like a weighing scale starting at 1 kg instead of zero), and random noise, which bounces around unpredictably. Calibration is the process of adjusting your sensor readings using known reference points to cancel out bias.",
-   "practical_example": "Imagine an IMU (Inertial Measurement Unit) sensor on a balancing robot. When sitting completely still on a flat table, it reports a tilt of 2 degrees instead of 0 degrees. That constant 2-degree shift is your bias error. During calibration, you record this offset and subtract 2 degrees from all future readings in your code.",
-   "exercise": "You are preparing a distance sensor for an automated delivery cart internship task. You place it exactly 50 cm away from a wall, but it reads 53 cm every single time you test it. What kind of error is this, and what simple math operation should you write in your embedded code to fix it?",
-   "model_answer": "This is a systematic error or bias because it is consistently off by the exact same amount (+3 cm). To fix it, you should subtract 3 cm from every raw measurement value your sensor gives you before using it in your navigation code.",
-   "why_it_works": "It directly targets the constant offset without overcomplicating things, making your distance measurements accurate right away for the robot's logic.",
-   "improvement_tip": "Do not just test at one distance. Test at multiple known points (e.g., 20 cm, 50 cm, 100 cm) to see if the error changes, which would mean you need a scaling factor instead of a simple subtraction.",
+   "topic": "Read a simple circuit diagram and identify power and ground paths",
+   "explanation": "Before you can build or debug hardware for a robot or brain-computer interface, you must trace how electricity flows through a circuit diagram (schematic). The power path carries the positive voltage (often labeled VCC, 5V, or 3.3V) from the source, like a battery or voltage regulator, to the components. The ground path provides the return route back to the negative terminal (labeled GND) to complete the circuit loop. If either path is broken, your microcontroller or sensor will not turn on.",
+   "practical_example": "Imagine you are wiring an EEG headset sensor or a small motor driver on a breadboard. On the schematic, you look for the thick or marked line connected to the 5V pin, which traces the power path into your chip's VCC pin. Then you follow the line leading to the triangle or rake-like symbol, which marks the ground path returning to your battery's negative terminal. Tracing these two first prevents accidental short circuits.",
+   "exercise": "Look at a basic schematic for an Arduino connected to an LED and a resistor. Without turning on the power, trace the path with your finger or pencil from the 5V pin through the resistor and LED, and find where it connects back to the GND pin. Write down the names of the pins involved in this loop.",
+   "model_answer": "The power path starts at the Arduino 5V pin, goes through the resistor, passes through the LED from the anode to the cathode, and the ground path completes by connecting from the cathode side back to the Arduino GND pin.",
+   "why_it_works": "Explicitly separating power and ground tracing prevents wiring mistakes that can fry sensitive components like microcontrollers or bio-amplifiers during your internship tasks.",
+   "improvement_tip": "Always locate and highlight all GND and VCC symbols on a new schematic using a highlighter or software tool before looking at any signal or data lines.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Turn a project task into a measurable resume bullet without inventing numbers",
-   "explanation": "When writing bullet points for a robotics or embedded systems project, students often feel pressured to invent impressive numbers like 'improved speed by 50%' when they only ran a simple test. Instead of guessing metrics, you can use factual measurements you actually recorded during your university lab or personal project, such as compilation time, sensor polling frequency, or memory usage, without making up fake achievements.",
-   "practical_example": "Instead of writing a vague task like 'Worked on an Arduino line follower robot', focus on what you actually measured. If you timed how fast your sensor read data or tracked how much battery power your code used during a test, use those real observations.",
-   "exercise": "Look at one project on your resume involving an embedded system, robot, or BCI setup. Write down one task you did, then add a real, non-invented metric you actually observed during testing, such as loop execution time in milliseconds or sensor data update rate.",
-   "model_answer": "Programmed an ESP32 microcontroller in C++ to read infrared sensor data at 50 Hz for an autonomous navigation robot, keeping loop execution time under 20 milliseconds during lab tests.",
-   "why_it_works": "It uses concrete, truthful engineering details that you can actually prove if a recruiter asks about your code or lab test, avoiding fake numbers while still showing technical depth.",
-   "improvement_tip": "If you did not measure anything quantitative during your project, check your code logs, serial monitor outputs, or hardware datasheets to find real numbers before adding them to your LinkedIn profile.",
+   "topic": "Explain a technical challenge and how you debugged it",
+   "explanation": "Recruiters and engineers hiring for robotics, BCI, and embedded systems want to see how you think when things break, which happens constantly with hardware and code. Instead of hiding bugs, write a short LinkedIn post or featured section entry highlighting a specific troubleshooting step, such as fixing a sensor glitch or a serial communication delay, focusing on your logical method rather than a magic fix.",
+   "practical_example": "Share a post about how your Arduino or ESP32 microcontroller kept resetting unexpectedly during a motor test, and how you traced the issue using a multimeter to find a voltage drop rather than randomly changing code.",
+   "exercise": "Write a 3-sentence LinkedIn update about a real hardware or software bug you faced in a recent lab or personal project, naming the tool you used to investigate it.",
+   "model_answer": "While building a line-following robot, my microcontroller kept freezing whenever the DC motors started spinning. Instead of rewriting the firmware, I used a multimeter and noticed the motor voltage was pulling down the logic power rail. Adding a separate battery for the motors and sharing the common ground completely solved the reset issue.",
+   "why_it_works": "It shows technical resourcefulness, proves you actually built the project yourself, and demonstrates a methodical approach to hardware troubleshooting that engineering managers value.",
+   "improvement_tip": "Avoid generic phrases like 'fixed a bug.' Always name the specific tool or concept you used to find the root cause, like an oscilloscope, serial monitor, or multimeter.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
-   "focus": "Research design and method for testing lab-grown brain cells inside a virtual environment.",
-   "explanation": "Because the verified metadata lacks an abstract, general knowledge of this study suggests the researchers connected living human and mouse brain cells to a computer system running a simple table tennis game, sending electrical signals to the cells and reading their responses to see if they could adapt.",
-   "limits": "The abstract was missing from the verified metadata, so this explanation relies on general knowledge of the study's known setup rather than specific text from the abstract.",
-   "check": {
-    "confidence": "medium",
-    "used_abstract": false,
-    "invented_facts": false
-   },
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
+   "focus": "Results and figures",
+   "explanation": "Because the abstract was not provided, we rely on general knowledge of this study. The researchers connected lab-grown human and mouse brain cells to a computer simulation of the game Pong. They watched to see if the cells could change their electrical activity to play the game better based on feedback, and they used the term sentience to describe this basic ability to process and react to environment changes.",
+   "limits": "Since the specific abstract text was missing, exact numerical results and figure details are omitted to avoid guessing.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/j.neuron.2022.09.001",
    "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
    "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
-   "focus": "How the study was set up and the methods used to test brain-computer interface technology.",
-   "explanation": "Because the paper's abstract text was not provided, we rely on general knowledge of this famous 2006 Nature study. The researchers implanted a tiny sensor (the BrainGate array) into the motor cortex of a participant with paralysis. They recorded electrical activity from a group of brain cells while the participant imagined moving their hand, and translated these brain signals using a computer to control external devices like a cursor on a screen.",
-   "limits": "Since the specific abstract was missing, exact details on participant screening, trial duration, and exact signal processing algorithms cannot be confirmed here.",
-   "check": "Medium",
+   "focus": "Day 3 focuses on the results and figures, meaning what the researchers actually found and how they showed it in their charts and graphs.",
+   "explanation": "Because the provided metadata lacks an abstract, and specific numerical results cannot be invented, this explanation relies on general knowledge of the study. The paper demonstrated that a participant with paralysis could use a brain-computer interface to mentally control devices like a computer cursor. The figures likely displayed brain cell firing patterns alongside the movement of the cursor on a screen to prove the connection.",
+   "limits": "Exact numerical data, specific figure details, and statistical results are not available without the abstract or full text.",
+   "check": "medium",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature04970",
    "doi_link": "https://doi.org/10.1038/nature04970",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "investigation_day": "Day 1 of 3: Understand the project",
+   "day": "2 of 3",
+   "investigation_topic": "How it works",
    "project_name": "moveit/moveit2",
-   "project_description": "A software platform used for robot motion planning, built to work with the Robot Operating System 2 (ROS 2).",
-   "primary_language": "C++",
-   "license": "BSD-3-Clause",
-   "key_findings": [
-    "The repository is actively maintained and serves as the ROS 2 version of the original MoveIt framework.",
-    "It provides tools for robotic manipulation, prototyping, and algorithm testing.",
-    "Development happens on the main branch, while specific versions align with different ROS 2 distributions like Humble and Jazzy."
-   ],
-   "small_challenge": "Locate the installation instructions in the README and determine whether you would prefer a binary installation or building the project from source.",
-   "knowledge_check": "What underlying robot framework is MoveIt 2 designed to integrate with?",
+   "explanation": "Based on the repository metadata and README file, MoveIt 2 is a motion planning framework built specifically for ROS 2 (Robot Operating System 2). While the README excerpt provided does not detail the exact internal C++ algorithms or line-by-line execution flow, it outlines how the framework is structured through stable release branches, active continuous integration testing, and binary or source installations. General knowledge suggests that a robotics framework like this coordinates kinematic calculations, collision checking, and trajectory generation to help robotic arms move smoothly, but the provided text focuses mainly on its organization, branch policies for different ROS distros, and build status tracking rather than internal code logic.",
+   "small_challenge": "Look at the branch policy table in the README description. Try to figure out which branch is meant for active development with potential breaking changes, and which branches are kept stable for specific releases.",
+   "knowledge_check": "Based on the provided text, is MoveIt 2 designed to run on ROS 1 or ROS 2?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "moveit/moveit2",
     "html_url": "https://github.com/moveit/moveit2",
     "description": ":robot: MoveIt for ROS 2",
-    "pushed_at": "2026-10-26T16:22:29Z",
+    "pushed_at": "2026-10-28T19:03:40Z",
     "language": "C++",
     "archived": false,
     "license": "BSD-3-Clause"
-   },
-   "day": "1 of 3"
+   }
   },
   "news": {
    "items": [
     {
-     "category": "Deployment",
-     "url": "https://www.therobotreport.com/anybotics-begins-delivering-anymal-x-legged-robot-explosive-atmospheres/",
-     "what": "The ANYmal X legged inspection robot has started shipping to customers.",
-     "who": "ANYbotics",
-     "how": "The robot is engineered specifically to meet high safety requirements for hazardous industrial environments. Background (general knowledge): Explosive atmospheres refer to areas where gases, vapors, or dust can easily ignite, requiring specialized spark-proof machinery.",
-     "why": "To perform inspections in dangerous oil, gas, and chemical industry settings safely.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "The robot is built for strict safety compliance in volatile industrial zones.",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "ANYbotics begins delivering ANYmal X legged robot for explosive atmospheres",
-     "published": "2026-10-27",
-     "source": "The Robot Report"
+     "category": "Research",
+     "url": "https://www.therobotreport.com/worldoracle-tests-whether-world-models-can-reliably-predict-real-world-executions/",
+     "what": "WorldOracle evaluation of robot world models",
+     "who": "WorldOracle",
+     "how": "The system tests if digital simulations of physical environments accurately predict robot actions. Background (general knowledge): World models are AI systems that try to understand and predict how physical objects behave in the real world.",
+     "why": "To identify discrepancies between virtual predictions and actual physical results, such as failed grasp attempts.",
+     "limits": "The model incorrectly predicted a successful grasp when the robot actually missed the target.",
+     "learn": "Current world models still struggle with high-accuracy predictions of physical robot tasks.",
+     "title": "WorldOracle Tests Whether World Models Can Reliably Predict Real-World Executions",
+     "published": "2026-10-28",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     },
     {
-     "category": "Deployment",
-     "url": "https://www.therobotreport.com/embotech-bmw-move-1m-vehicles-automated-driving-technology/",
-     "what": "An automated driving system has successfully moved one million vehicles.",
-     "who": "Embotech and BMW",
-     "how": "The technology manages the movement of 3,500 vehicles daily, operating continuously across locations in the U.K. and Germany.",
-     "why": "To automate and streamline vehicle logistics within manufacturing sites.",
+     "category": "Business",
+     "url": "https://www.therobotreport.com/warp-sciences-emerges-stealth-apply-robotics-drug-research/",
+     "what": "Launch of Warp Sciences for automated pharmaceutical discovery",
+     "who": "Warp Sciences, with co-founders from companies including OpenAI and Meta",
+     "how": "Developing robotic infrastructure specifically designed for drug research in the United States.",
+     "why": "To create automated systems for the drug discovery process.",
      "limits": "Not stated in the source excerpt",
-     "learn": "Autonomous driving technology is being applied to internal site logistics for large-scale vehicle movement.",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Embotech and BMW move 1M vehicles with automated driving technology",
-     "published": "2026-10-27",
-     "source": "The Robot Report"
+     "learn": "Experts from major AI firms are shifting focus toward robotic automation in medical research.",
+     "title": "Warp Sciences emerges from stealth, to apply robotics to drug research",
+     "published": "2026-10-28",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     },
     {
-     "category": "Product",
-     "url": "https://www.therobotreport.com/xpanner-launches-new-autonomous-pile-driver-solar-farm-contruction/",
-     "what": "The X1 Piling R6, a robot that autonomously installs solar farm support posts.",
-     "who": "Xpanner",
-     "how": "It uses automation to drive piles into the ground, requiring only one human operator to manage the process.",
-     "why": "To increase the accuracy of post placement and reduce the amount of physical labor needed on construction sites.",
+     "category": "Business",
+     "url": "https://www.therobotreport.com/bedrock-robotics-nears-1b-in-total-funding-as-demand-for-autonomous-heavy-equipment-surges/",
+     "what": "Bedrock Robotics funding for autonomous heavy machinery",
+     "who": "Bedrock Robotics",
+     "how": "Utilizing $600 million in new funding to scale up autonomous construction technology.",
+     "why": "To meet rising market demand and help solve labor shortages in the construction industry.",
      "limits": "Not stated in the source excerpt",
-     "learn": "Robotic automation is being used to simplify and improve the efficiency of building solar power infrastructure.",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Xpanner launches autonomous pile driver for solar farm contruction",
+     "learn": "There is significant investment toward automating heavy equipment to address worker deficits in construction.",
+     "title": "Bedrock Robotics nears $1B in total funding as demand for autonomous heavy equipment surges",
      "published": "2026-10-27",
-     "source": "The Robot Report"
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     }
    ]
   },
   "jobs": {
    "items": [
     {
-     "title": "Algorithm Engineer (m/f/d)",
+     "title": "Autonomy Engineer Intern, Simulation & Robotics, 2027 (Zurich)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Hamburg",
-     "published": "2026-10-27",
+     "location": "Zurich, Switzerland",
+     "published": "2026-10-28",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/anori-tech/algorithm-engineer-hamburg-466227",
-     "company": "Anori Tech"
+     "url": "https://www.arbeitnow.ch/jobs/companies/skydio/autonomy-engineer-intern-simulation-robotics-2027-zurich-101548",
+     "company": "Skydio"
     },
     {
-     "title": "Software Engineer \u2013 Embedded Security",
+     "title": "FPGA Firmware Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Z\u00fcrich",
-     "published": "2026-10-25",
+     "location": "Edinburgh",
+     "published": "2026-10-28",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/cdds-ag/software-engineer-embedded-security-zurich-357319",
-     "company": "CDDS AG"
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/singular-photonics/fpga-firmware-engineer-edinburgh-382520",
+     "company": "Singular Photonics"
     },
     {
-     "title": "Elektroniker / Automatisierungstechniker (m/w/d) f\u00fcr Inbetriebnahme",
+     "title": "Techniker / Mechatroniker \u2013 Robotik & Anwendungstechnik (m/w/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Bornheim",
-     "published": "2026-10-27",
+     "location": "Hanover",
+     "published": "2026-10-28",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/personalized-nutrition-systems-gmbh/elektroniker-automatisierungstechniker-fur-inbetriebnahme-bornheim-431689",
-     "company": "Personalized Nutrition Systems GmbH"
-    },
-    {
-     "title": "Leittechnik-/OT-Systemingenieur ABB 800xA (m/w/d)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Baden",
-     "published": "2026-10-27",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/topteam-engineering-gmbh/leittechnik-ot-systemingenieur-abb-800xa-baden-19664",
-     "company": "TopTeam Engineering GmbH"
-    },
-    {
-     "title": "Mechanisch monteur",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Berkel en Rodenrijs",
-     "published": "2026-10-27",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.nl/jobs/companies/technison/mechanisch-monteur-berkel-en-rodenrijs-66320",
-     "company": "Technison"
-    },
-    {
-     "title": "OT Engineer",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Basel",
-     "published": "2026-10-26",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/bell-food-group/ot-engineer-basel-393706",
-     "company": "Bell Food Group"
-    },
-    {
-     "title": "Instandhaltungsspezialist/Automatiker (m/w/d) Roche Diagnostics",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Rotkreuz",
-     "published": "2026-10-26",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/we-make-it-gmbh/instandhaltungsspezialist-automatiker-roche-diagnostics-rotkreuz-358045",
-     "company": "We make it GmbH"
+     "url": "https://www.arbeitnow.com/jobs/companies/softgripping-gmbh/techniker-mechatroniker-robotik-anwendungstechnik-hanover-301900",
+     "company": "SoftGripping GmbH"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",

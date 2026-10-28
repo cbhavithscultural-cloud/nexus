@@ -1,0 +1,235 @@
+{
+ "v": 2,
+ "date": "2026-10-29",
+ "generated_at": "2026-10-29T02:43:33.724496+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Compare biological neural networks in living tissue with artificial neural networks used in computer science.",
+   "why_it_matters": "Understanding how living brain tissue differs from computer models helps researchers figure out what makes biological computing uniquely powerful and energy-efficient.",
+   "prerequisites": [
+    "Basic knowledge of how biological cells pass electrical and chemical signals",
+    "Familiarity with the idea that computers use math to mimic learning"
+   ],
+   "simple_explanation": "An artificial neural network (ANN) is a computer program made of math layers that pass numbers to each other to recognize patterns. A biological neural network is a living web of cells that use actual physical chemistry, moving ions, and changing physical shapes to process information.",
+   "step_by_step": [
+    "Step 1: Look at the basic building block. Computers use a simple math formula (an artificial neuron) that multiplies inputs by weights and adds them up. Biology uses a living cell with physical branches, receptors, and chemical reactions.",
+    "Step 2: Examine how they are wired. Artificial networks usually have strict layers where information flows in one clean direction. Biological networks feature messy, multi-directional loops with billions of connections going everywhere.",
+    "Step 3: Compare how they learn. Computers adjust numbers in code using massive amounts of pre-calculated error correction. Brain cells physically grow, shrink, and alter their connections based on real-time chemical feedback.",
+    "Step 4: Contrast power usage. Artificial networks require massive server farms and megawatts of electricity to train. Living tissue runs on a tiny fraction of that energy using simple sugar metabolism."
+   ],
+   "technical_depth": "Artificial neural networks use static mathematical weights and activation functions like ReLU, trained primarily through backpropagation of error. Biological networks rely on analog, continuous-time biochemical signaling, where processing and memory happen at the exact same location (the synapse), avoiding the data-transfer bottleneck of traditional computer architectures.",
+   "misconceptions": [
+    "Misconception: Artificial neural networks actually think like human brains. Reality: ANNs are inspired by brain structure, but they use completely different math and rules compared to living cells.",
+    "Misconception: Brain cells turn on and off like computer transistors. Reality: Biological neurons are constantly active, sending continuous baseline signals and adjusting timing rather than just flipping bits."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the main building block of an artificial neural network?",
+     "answer": "A math formula that multiplies inputs by weights and adds them together."
+    },
+    {
+     "question": "How do biological networks differ from artificial networks in their wiring?",
+     "answer": "Biological networks feature messy, multi-directional loops, whereas ANNs typically use structured, directional layers."
+    },
+    {
+     "question": "What is a major advantage of biological networks over computer models regarding energy?",
+     "answer": "Biological networks operate on a tiny fraction of the energy required by large computer systems."
+    }
+   ],
+   "exercise": "Draw a simple diagram comparing a computer flowchart with strict layers on one side to a chaotic, looping web of biological cells on the other. Label where math happens in the computer model and where chemistry happens in the biological model.",
+   "summary": "While artificial neural networks use structured math and layered code to spot patterns, biological neural networks use living, energy-efficient cells that change their physical structure and chemistry to process information.",
+   "next_lesson": "Day 9: Introduction to microelectrode arrays and how we listen to organoids.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how physical movements, blinking, and facial muscle contractions create unwanted signals in EEG recordings and how to recognize them.",
+   "why_it_matters": "When a user blinks or clenches their jaw, the electrical activity from those muscles is much larger than the tiny brain waves, which can trick a BCI into making the wrong move.",
+   "prerequisites": [
+    "Basic knowledge of EEG electrodes and scalp placement",
+    "Understanding that brain signals are measured in microvolts"
+   ],
+   "simple_explanation": "Your body acts like a giant antenna. Whenever you blink your eyes, move your eyeballs, or tense a facial muscle, those actions generate large electrical spikes. Because EEG sensors sit on the surface of your head, they pick up these muscle and movement signals along with your brain waves, muddying the data.",
+   "step_by_step": [
+    "Recognize that ocular artifacts come from eye blinks and horizontal or vertical eye movements.",
+    "Understand that electromyographic (EMG) artifacts come from tension in scalp, jaw, and neck muscles.",
+    "Observe how eye blinks create massive slow-wave voltage spikes mostly visible at the front of the head.",
+    "Observe how muscle tension creates fast, jagged, high-frequency static spread across sensors near the edges of the cap."
+   ],
+   "technical_depth": "The eyeball itself is a dipole, having a positive charge at the cornea and a negative charge at the retina. When the eye moves or blinks, this electric dipole shifts orientation, creating large potential changes recorded by frontal electrodes (Electrooculography, or EOG). Meanwhile, muscle fibers fire at much higher frequencies than typical EEG rhythms, creating broad-band power increases that overlap with useful cognitive bands if not properly identified.",
+   "misconceptions": [
+    "Believing that sitting completely still eliminates all body-related noise, ignoring involuntary actions like tiny micro-saccades and heartbeats.",
+    "Assuming that any sudden spike in the EEG graph is automatically a burst of intense brain activity."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the primary electrical source of an eye-blink artifact in an EEG?",
+     "answer": "The permanent electrical dipole of the eyeball itself, with a positive cornea and negative retina."
+    },
+    {
+     "question": "How do muscle (EMG) artifacts generally look different from eye-blink artifacts?",
+     "answer": "Muscle artifacts are fast, jagged, and high-frequency, whereas eye blinks appear as large, slow voltage changes."
+    },
+    {
+     "question": "Why are frontal electrodes most affected by eye movements?",
+     "answer": "Because they are physically closest to the eyes and the pathways where the eye dipole shifts."
+    }
+   ],
+   "exercise": "Watch a video feed of a person blinking and clenching their jaw while looking at an EEG display screen. Try to manually match the timing of their physical movements with the massive spikes and static bursts appearing on the recording channels.",
+   "summary": "Non-neural movements like blinking, eye shifting, and jaw clenching generate distinct electrical patterns that overpower delicate brain signals, making artifact recognition an essential BCI skill.",
+   "next_lesson": "Introduction to automated artifact removal techniques like Independent Component Analysis (ICA)",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Read a simple circuit diagram and identify power and ground paths",
+   "explanation": "Before you can build or debug hardware for a robot or brain-computer interface, you must trace how electricity flows through a circuit diagram (schematic). The power path carries the positive voltage (often labeled VCC, 5V, or 3.3V) from the source, like a battery or voltage regulator, to the components. The ground path provides the return route back to the negative terminal (labeled GND) to complete the circuit loop. If either path is broken, your microcontroller or sensor will not turn on.",
+   "practical_example": "Imagine you are wiring an EEG headset sensor or a small motor driver on a breadboard. On the schematic, you look for the thick or marked line connected to the 5V pin, which traces the power path into your chip's VCC pin. Then you follow the line leading to the triangle or rake-like symbol, which marks the ground path returning to your battery's negative terminal. Tracing these two first prevents accidental short circuits.",
+   "exercise": "Look at a basic schematic for an Arduino connected to an LED and a resistor. Without turning on the power, trace the path with your finger or pencil from the 5V pin through the resistor and LED, and find where it connects back to the GND pin. Write down the names of the pins involved in this loop.",
+   "model_answer": "The power path starts at the Arduino 5V pin, goes through the resistor, passes through the LED from the anode to the cathode, and the ground path completes by connecting from the cathode side back to the Arduino GND pin.",
+   "why_it_works": "Explicitly separating power and ground tracing prevents wiring mistakes that can fry sensitive components like microcontrollers or bio-amplifiers during your internship tasks.",
+   "improvement_tip": "Always locate and highlight all GND and VCC symbols on a new schematic using a highlighter or software tool before looking at any signal or data lines.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Explain a technical challenge and how you debugged it",
+   "explanation": "Recruiters and engineers hiring for robotics, BCI, and embedded systems want to see how you think when things break, which happens constantly with hardware and code. Instead of hiding bugs, write a short LinkedIn post or featured section entry highlighting a specific troubleshooting step, such as fixing a sensor glitch or a serial communication delay, focusing on your logical method rather than a magic fix.",
+   "practical_example": "Share a post about how your Arduino or ESP32 microcontroller kept resetting unexpectedly during a motor test, and how you traced the issue using a multimeter to find a voltage drop rather than randomly changing code.",
+   "exercise": "Write a 3-sentence LinkedIn update about a real hardware or software bug you faced in a recent lab or personal project, naming the tool you used to investigate it.",
+   "model_answer": "While building a line-following robot, my microcontroller kept freezing whenever the DC motors started spinning. Instead of rewriting the firmware, I used a multimeter and noticed the motor voltage was pulling down the logic power rail. Adding a separate battery for the motors and sharing the common ground completely solved the reset issue.",
+   "why_it_works": "It shows technical resourcefulness, proves you actually built the project yourself, and demonstrates a methodical approach to hardware troubleshooting that engineering managers value.",
+   "improvement_tip": "Avoid generic phrases like 'fixed a bug.' Always name the specific tool or concept you used to find the root cause, like an oscilloscope, serial monitor, or multimeter.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
+   "focus": "Results and figures",
+   "explanation": "Because the abstract was not provided, we rely on general knowledge of this study. The researchers connected lab-grown human and mouse brain cells to a computer simulation of the game Pong. They watched to see if the cells could change their electrical activity to play the game better based on feedback, and they used the term sentience to describe this basic ability to process and react to environment changes.",
+   "limits": "Since the specific abstract text was missing, exact numerical results and figure details are omitted to avoid guessing.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "Day 3 focuses on the results and figures, meaning what the researchers actually found and how they showed it in their charts and graphs.",
+   "explanation": "Because the provided metadata lacks an abstract, and specific numerical results cannot be invented, this explanation relies on general knowledge of the study. The paper demonstrated that a participant with paralysis could use a brain-computer interface to mentally control devices like a computer cursor. The figures likely displayed brain cell firing patterns alongside the movement of the cursor on a screen to prove the connection.",
+   "limits": "Exact numerical data, specific figure details, and statistical results are not available without the abstract or full text.",
+   "check": "medium",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "2 of 3",
+   "investigation_topic": "How it works",
+   "project_name": "moveit/moveit2",
+   "explanation": "Based on the repository metadata and README file, MoveIt 2 is a motion planning framework built specifically for ROS 2 (Robot Operating System 2). While the README excerpt provided does not detail the exact internal C++ algorithms or line-by-line execution flow, it outlines how the framework is structured through stable release branches, active continuous integration testing, and binary or source installations. General knowledge suggests that a robotics framework like this coordinates kinematic calculations, collision checking, and trajectory generation to help robotic arms move smoothly, but the provided text focuses mainly on its organization, branch policies for different ROS distros, and build status tracking rather than internal code logic.",
+   "small_challenge": "Look at the branch policy table in the README description. Try to figure out which branch is meant for active development with potential breaking changes, and which branches are kept stable for specific releases.",
+   "knowledge_check": "Based on the provided text, is MoveIt 2 designed to run on ROS 1 or ROS 2?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "moveit/moveit2",
+    "html_url": "https://github.com/moveit/moveit2",
+    "description": ":robot: MoveIt for ROS 2",
+    "pushed_at": "2026-10-28T19:03:40Z",
+    "language": "C++",
+    "archived": false,
+    "license": "BSD-3-Clause"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Research",
+     "url": "https://www.therobotreport.com/worldoracle-tests-whether-world-models-can-reliably-predict-real-world-executions/",
+     "what": "WorldOracle evaluation of robot world models",
+     "who": "WorldOracle",
+     "how": "The system tests if digital simulations of physical environments accurately predict robot actions. Background (general knowledge): World models are AI systems that try to understand and predict how physical objects behave in the real world.",
+     "why": "To identify discrepancies between virtual predictions and actual physical results, such as failed grasp attempts.",
+     "limits": "The model incorrectly predicted a successful grasp when the robot actually missed the target.",
+     "learn": "Current world models still struggle with high-accuracy predictions of physical robot tasks.",
+     "title": "WorldOracle Tests Whether World Models Can Reliably Predict Real-World Executions",
+     "published": "2026-10-28",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/warp-sciences-emerges-stealth-apply-robotics-drug-research/",
+     "what": "Launch of Warp Sciences for automated pharmaceutical discovery",
+     "who": "Warp Sciences, with co-founders from companies including OpenAI and Meta",
+     "how": "Developing robotic infrastructure specifically designed for drug research in the United States.",
+     "why": "To create automated systems for the drug discovery process.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Experts from major AI firms are shifting focus toward robotic automation in medical research.",
+     "title": "Warp Sciences emerges from stealth, to apply robotics to drug research",
+     "published": "2026-10-28",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/bedrock-robotics-nears-1b-in-total-funding-as-demand-for-autonomous-heavy-equipment-surges/",
+     "what": "Bedrock Robotics funding for autonomous heavy machinery",
+     "who": "Bedrock Robotics",
+     "how": "Utilizing $600 million in new funding to scale up autonomous construction technology.",
+     "why": "To meet rising market demand and help solve labor shortages in the construction industry.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "There is significant investment toward automating heavy equipment to address worker deficits in construction.",
+     "title": "Bedrock Robotics nears $1B in total funding as demand for autonomous heavy equipment surges",
+     "published": "2026-10-27",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Autonomy Engineer Intern, Simulation & Robotics, 2027 (Zurich)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Zurich, Switzerland",
+     "published": "2026-10-28",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/skydio/autonomy-engineer-intern-simulation-robotics-2027-zurich-101548",
+     "company": "Skydio"
+    },
+    {
+     "title": "FPGA Firmware Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Edinburgh",
+     "published": "2026-10-28",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/singular-photonics/fpga-firmware-engineer-edinburgh-382520",
+     "company": "Singular Photonics"
+    },
+    {
+     "title": "Techniker / Mechatroniker \u2013 Robotik & Anwendungstechnik (m/w/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Hanover",
+     "published": "2026-10-28",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/softgripping-gmbh/techniker-mechatroniker-robotik-anwendungstechnik-hanover-301900",
+     "company": "SoftGripping GmbH"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
