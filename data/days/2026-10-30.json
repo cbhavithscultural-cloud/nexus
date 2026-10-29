@@ -1,0 +1,258 @@
+{
+ "v": 2,
+ "date": "2026-10-30",
+ "generated_at": "2026-10-30T02:45:12.832793+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how stem cells act as the blank-slate starting point for growing brain organoids through pluripotency and differentiation.",
+   "why_it_matters": "Before we can listen to brain organoids using electrodes or study how they learn, we must know how to build them. Growing a living brain tissue model starts with unspecialized master cells that can turn into any cell type in the human body.",
+   "prerequisites": [
+    "Basic knowledge that the human body is made of specialized cells like neurons.",
+    "Understanding that organoid intelligence relies on living human cells grown in a lab."
+   ],
+   "simple_explanation": "Imagine a box of Lego bricks before any of them are glued together. Right now, they can become a house, a car, or a bridge. Stem cells are like those versatile Lego bricks. They are unspecialized cells that have not chosen a career yet. 'Pluripotency' is their superpower of being able to become almost any tissue in the body. 'Differentiation' is the process of a cell choosing its job, like deciding to become a brain cell instead of a skin cell.",
+   "step_by_step": [
+    "Start with pluripotent stem cells, which are like blank canvases that can copy themselves indefinitely or transform into anything.",
+    "Apply specific chemical cues and growth factors\u2014sort of like nutritional recipe instructions\u2014to signal the cells to begin changing.",
+    "Watch the cells undergo differentiation, where they gradually lose their blank-slate status and switch on specific genes to become nervous system precursors.",
+    "Allow these specialized precursors to self-organize into three-dimensional clumps, eventually forming the early layers of a brain organoid."
+   ],
+   "technical_depth": "Pluripotent stem cells, including induced pluripotent stem cells (iPSCs) generated from adult skin or blood cells, express key transcription factors like OCT4, SOX2, and NANOG that maintain their unspecialized state. Differentiation involves silencing these pluripotency genes while activating lineage-specific genetic pathways, such as neural induction via dual SMAD inhibition, which drives cells toward a neuroectodermal fate.",
+   "misconceptions": [
+    "Misconception: Stem cells are already tiny brain cells just waiting to grow larger. Fact: Stem cells are entirely generic and lack any specialized brain structures or electrical properties until they differentiate.",
+    "Misconception: Differentiation happens instantly when you add a chemical. Fact: It is a gradual, multi-step biological transition where cells slowly shift their gene expression over days or weeks."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What does the term 'pluripotency' mean?",
+     "answer": "It is the ability of a stem cell to develop into almost any type of cell in the human body."
+    },
+    {
+     "question": "What triggers a stem cell to begin differentiating?",
+     "answer": "Specific chemical cues and growth factors that signal the cell to activate certain genes and adopt a specialized role."
+    },
+    {
+     "question": "Why are stem cells important for organoid intelligence?",
+     "answer": "They provide the blank-slate starting material required to grow living human neural tissues in the lab."
+    }
+   ],
+   "exercise": "Draw a simple flowchart on paper showing a single blank circle (stem cell) branching out into two distinct pathways: one turning into a skin cell and the other turning into a neuron, labeling the transition point with the word 'differentiation'.",
+   "summary": "Stem cells serve as the unspecialized foundation for organoids. Through pluripotency, they hold infinite potential, and through differentiation, guided by chemical signals, they transform into the functional neural cells needed for wetware computing.",
+   "next_lesson": "Day 10: How we guide stem cells to form early brain structures.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how to extract time-domain and frequency-domain features from raw brain waves so a computer can interpret user intent.",
+   "why_it_matters": "Raw brain signals are too complex for computers to understand directly. Extracting features simplifies the data into meaningful numbers, like wave height or rhythm speed, which the BCI uses to control a device.",
+   "prerequisites": [
+    "Basic understanding of digital signals and sampling from digital conversion",
+    "Familiarity with brain wave frequencies like alpha and beta rhythms"
+   ],
+   "simple_explanation": "Imagine listening to an orchestra. You can focus on two things: the overall loudness changing second-by-second (time-domain) or the distinct notes played by different instruments, like a high flute versus a low cello (frequency-domain). BCI computers use both perspectives to understand what the brain is doing.",
+   "step_by_step": [
+    "Collect clean digital brain wave data over a short window of time, such as one second.",
+    "Calculate time-domain features by looking directly at how the voltage changes from moment to moment, measuring attributes like signal average or variance.",
+    "Convert the signal into the frequency domain using mathematical tools to see how much power exists in specific wave speeds, like relaxation rhythms or active thinking rhythms.",
+    "Combine these calculated features into a simple list of numbers that represent the current mental state."
+   ],
+   "technical_depth": "Time-domain features analyze the signal amplitude directly as a function of time, utilizing metrics like Root Mean Square (RMS) or Zero-Crossing Rate to capture signal energy and frequency shifts without transformation. Frequency-domain features map the signal into the spectral domain, typically employing algorithms like the Fast Fourier Transform (FFT) to quantify power distribution across distinct bands.",
+   "misconceptions": [
+    "Thinking that time-domain and frequency-domain features are completely separate types of data; they are actually just two different mathematical ways of looking at the exact same electrical recording."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What does a time-domain feature measure directly?",
+     "answer": "Changes in signal voltage or amplitude over time."
+    },
+    {
+     "question": "What is the main goal of converting a signal to the frequency domain?",
+     "answer": "To see how much power is present in specific wave speeds or rhythms."
+    },
+    {
+     "question": "Why do BCI systems extract features instead of using raw signals?",
+     "answer": "To turn complex brain data into simplified numerical summaries that a computer can easily process."
+    }
+   ],
+   "exercise": "Take a mental note of your breathing for ten seconds. Think of the overall rise and fall as your time-domain view, and the speed of your breaths as your frequency-domain view. Write down one sentence describing how looking at height versus speed gives different information.",
+   "summary": "Time-domain features track raw signal changes over time, while frequency-domain features break the signal down into distinct rhythmic speeds, providing a complete feature set for BCI translation.",
+   "next_lesson": "Introduction to machine learning classifiers for BCI",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Basic electronics calculations used in embedded interviews",
+   "explanation": "Interviewers often test your ability to use Ohm's Law (Voltage equals Current times Resistance, or V = I * R) and the Power formula (Power equals Voltage times Current, or P = V * I) to size components correctly. In embedded systems, robotics, and brain-computer interfaces, you must calculate resistor values to limit current so you do not burn out delicate components like LEDs, sensors, or microcontroller pins.",
+   "practical_example": "Imagine you are wiring an indicator LED on your robot. The microcontroller outputs 5 volts, but your LED can only safely handle 2 volts and needs 20 milliamperes (0.02 amps) of current. To find the resistor needed, first calculate the voltage the resistor must drop: 5V minus 2V equals 3V. Then, use Ohm's Law to find resistance: Voltage divided by Current (3V / 0.02A), which equals 150 ohms.",
+   "exercise": "You connect a 3.3-volt microcontroller output pin to an infrared sensor that requires 3.3 volts and 10 milliamperes (0.010 amps). Wait, what if you need to drop a 5-volt supply down to 3.3 volts for a BCI chip using a resistor, and the chip draws 5 milliamperes? Calculate the required resistance value.",
+   "model_answer": "First, find the voltage the resistor must drop: 5 volts minus 3.3 volts equals 1.7 volts. Next, convert milliamperes to amperes if needed, or keep it consistent: 5 milliamperes is 0.005 amperes. Finally, apply Ohm's Law (R = V / I): 1.7 volts divided by 0.005 amperes equals 340 ohms.",
+   "why_it_works": "Interviewers look for your methodical approach: identifying given values, choosing the right formula, handling units correctly (like converting mA to A), and computing the final result without guessing.",
+   "improvement_tip": "Always double-check your unit conversions, especially moving between milliamperes and amperes, as simple math slips are the most common reason candidates lose points in technical rounds.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Organize project photos, diagrams and code links professionally",
+   "explanation": "When showcasing engineering projects on LinkedIn, visual proof matters just as much as your code. Recruiters want to see clear circuit diagrams, photos of your physical hardware setups, and direct links to your repositories structured neatly so they can understand your build at a glance.",
+   "practical_example": "For an EEG headset or Arduino motor controller project, upload a clean picture of your breadboard layout, a block diagram showing how components connect, and a direct GitHub link right beside them in your featured section.",
+   "exercise": "Take one of your past robotics, BCI, or embedded systems projects and gather three things: one photo of the physical build or circuit, one simple connection diagram, and your GitHub repository link. Draft how you will arrange them together on your profile.",
+   "model_answer": "Project: Line-Following Robot for College Fest. 1. Hardware Photo: [Attached image showing chassis and sensor placement]. 2. System Diagram: [Attached schematic of motor driver and microcontroller connections]. 3. Source Code: github.com/username/line-follower-robot.",
+   "why_it_works": "It gives technical recruiters immediate visual evidence that you know how to build physical systems and wire circuits correctly, saving them time and proving your technical competence beyond text.",
+   "improvement_tip": "Always ensure your wiring diagrams are legible and your code links are public before posting them on your profile.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
+   "focus": "Engineering living brain cells into computers to play a simple virtual game, and the technical and moral boundaries of this research.",
+   "explanation": "This day looks at how scientists build these systems, the physical and biological limits of keeping lab-grown neurons alive and functioning, and the moral questions raised by giving biological tissue simple learning abilities.",
+   "limits": "The Crossref metadata lacks an abstract, so this explanation relies on general scientific knowledge about the study rather than specific paper results.",
+   "check": {
+    "confidence": "high"
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "4 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "Engineering, limits and ethics of brain-computer interfaces",
+   "explanation": "This study tested whether a person with paralysis could use brain signals to control external items, like a computer cursor or a robotic hand, using a small sensor placed on the brain.",
+   "limits": "The system required wires connecting the brain sensor to computers, the software needed frequent recalibration, and the research only involved a very small number of human participants for a limited time.",
+   "check": "The metadata abstract was empty, so general scientific knowledge about this well-known brain-computer interface study was used to explain the engineering goals, boundaries, and ethical considerations.",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "4 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "3 of 3",
+   "phase": "Run it in simulation and engineering judgement",
+   "project": "moveit/moveit2",
+   "description": "A widely used robotics manipulation framework designed for ROS 2, utilized for motion planning, building commercial applications, testing designs, and comparing algorithms.",
+   "language": "C++",
+   "license": "BSD-3-Clause",
+   "simulation_and_testing_notes": "Continuous integration badges in the documentation show active testing across various distributions like Jazzy and Humble, helping developers ensure their robotic arm setups and motion planning algorithms work smoothly before deploying to physical hardware.",
+   "engineering_judgement": "Because MoveIt 2 manages physical robot safety and movement, relying purely on text code is not enough. Simulating the robot's environment first helps catch collision or path planning errors safely.",
+   "small_challenge": "Review the installation options in the documentation and decide whether a binary install or a source build fits your current setup best.",
+   "knowledge_check": "What framework does MoveIt 2 build upon for its core robotics capabilities?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "moveit/moveit2",
+    "html_url": "https://github.com/moveit/moveit2",
+    "description": ":robot: MoveIt for ROS 2",
+    "pushed_at": "2026-10-28T19:03:40Z",
+    "language": "C++",
+    "archived": false,
+    "license": "BSD-3-Clause"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Product",
+     "url": "https://www.therobotreport.com/agibot-introduces-worken-measure-robot-productivity-innovation-day-2026/",
+     "what": "AGIBOT launched new hardware and software tools including the AHA3 platform, GO-3 Preview, WITA-Omni 1.0 model, G2 Max robot, Link-U OS 1.0, and a productivity tool called Worken.",
+     "who": "AGIBOT",
+     "how": "The company introduced an integrated platform alongside an operating system and a specific tool to track robot output. Background (general knowledge): Robot productivity tools help factory managers understand how efficiently machines complete tasks compared to human workers.",
+     "why": "To provide a comprehensive framework for operating, building, and measuring the performance of their robotic systems.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The importance of having an integrated software-hardware ecosystem in modern robotics.",
+     "title": "AGIBOT introduces Worken to measure robot productivity at AGIBOT Innovation Day 2026",
+     "published": "2026-10-29",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/north-american-robot-orders-climb-24-8-q3-2026-says-a3/",
+     "what": "Robot orders in North America increased by nearly 25% during the third quarter of 2026.",
+     "who": "A3 (Association for Advancing Automation)",
+     "how": "Orders were tracked across various sectors, with automotive component manufacturing showing the most significant growth by nearly doubling its demand.",
+     "why": "General growth in automation adoption across multiple industry sectors.",
+     "limits": "The source does not specify the exact total number of robots ordered.",
+     "learn": "The automotive supply chain is currently a major driver for increased industrial robot investment.",
+     "title": "North American robot orders climb 24.8% in Q3 of 2026, says A3",
+     "published": "2026-10-29",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/what-symbotic-growth-with-walmart-teaches-robotics-startups-about-anchor-customers/",
+     "what": "Analysis of the strategic relationship between Symbotic and Walmart regarding business scaling.",
+     "who": "Symbotic and Walmart",
+     "how": "By acting as an 'anchor customer,' Walmart provided the capital and scale necessary for the startup to grow its operations.",
+     "why": "To highlight the pros and cons of relying on a single large customer for rapid growth.",
+     "limits": "Confidence: High. The text explains risks such as contract limitations and the difficulty of finding new customers.",
+     "learn": "While big partners help startups grow, they create risks like being too dependent on one client and making it harder to diversify.",
+     "title": "What Symbotic\u2019s Walmart growth teaches robotics startups about anchor customers",
+     "published": "2026-10-29",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Embedded Softwareentwickler (m/w/d) / Regelungstechnik",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Aalen",
+     "published": "2026-10-29",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/k-tronik-gmbh/embedded-softwareentwickler-regelungstechnik-aalen-181924",
+     "company": "K-tronik GmbH"
+    },
+    {
+     "title": "Ing\u00e9nieur BE en \u00e9lectronique embarqu\u00e9e & \u00e9lectrique F/H",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Le Poir\u00e9-sur-Vie",
+     "published": "2026-10-29",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/fc-consulting/ingenieur-be-en-electronique-embarquee-electrique-f-h-le-poire-sur-vie-37910",
+     "company": "FC Consulting"
+    },
+    {
+     "title": "Ingenieur:in Automationstechnik Halbleiter",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Dresden",
+     "published": "2026-10-29",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/wabcon/ingenieurin-automationstechnik-halbleiter-dresden-19450",
+     "company": "wabcon"
+    },
+    {
+     "title": "Ing\u00e9nieur MES (h/f)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Lausanne",
+     "published": "2026-10-29",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/enova-consulting/ingenieur-mes-h-f-lausanne-340137",
+     "company": "Enova Consulting"
+    },
+    {
+     "title": "Electronics Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Zurich",
+     "published": "2026-10-29",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/auterion/electronics-engineer-zurich-481084",
+     "company": "Auterion"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}

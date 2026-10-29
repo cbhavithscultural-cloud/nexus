@@ -1,20 +1,20 @@
 {
- "oi": 8,
- "bci": 8,
+ "oi": 9,
+ "bci": 9,
  "po": [
   1,
-  4
+  5
  ],
  "pb": [
   1,
-  4
+  5
  ],
  "gh": [
-  2,
-  3
+  3,
+  1
  ],
- "ip": 8,
- "li": 8,
+ "ip": 9,
+ "li": 9,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -40,6 +40,9 @@
   "https://www.therobotreport.com/xpanner-launches-new-autonomous-pile-driver-solar-farm-contruction/",
   "https://www.therobotreport.com/worldoracle-tests-whether-world-models-can-reliably-predict-real-world-executions/",
   "https://www.therobotreport.com/warp-sciences-emerges-stealth-apply-robotics-drug-research/",
-  "https://www.therobotreport.com/bedrock-robotics-nears-1b-in-total-funding-as-demand-for-autonomous-heavy-equipment-surges/"
+  "https://www.therobotreport.com/bedrock-robotics-nears-1b-in-total-funding-as-demand-for-autonomous-heavy-equipment-surges/",
+  "https://www.therobotreport.com/agibot-introduces-worken-measure-robot-productivity-innovation-day-2026/",
+  "https://www.therobotreport.com/north-american-robot-orders-climb-24-8-q3-2026-says-a3/",
+  "https://www.therobotreport.com/what-symbotic-growth-with-walmart-teaches-robotics-startups-about-anchor-customers/"
  ]
 }
