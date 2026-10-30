@@ -1,17 +1,17 @@
 {
  "v": 2,
  "date": "2026-10-31",
- "generated_at": "2026-10-31T02:42:15.994020+05:30",
+ "generated_at": "2026-10-31T04:27:32.043708+05:30",
  "status": {
-  "oi_lesson": "ok",
-  "bci_lesson": "ok",
-  "internship": "ok",
-  "linkedin": "ok",
-  "oi_paper": "ok",
-  "bci_paper": "ok",
-  "github": "ok",
-  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 11 column 4 (char 855); gemini-3.5-flash-lite:Extra data: line 11 column 4 (char 836); gemini-3.1-flash-lite:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high deman",
-  "jobs": "ok"
+  "oi_lesson": "ok (reused from today's successful run)",
+  "bci_lesson": "ok (reused from today's successful run)",
+  "internship": "ok (reused from today's successful run)",
+  "linkedin": "ok (reused from today's successful run)",
+  "oi_paper": "ok (reused from today's successful run)",
+  "bci_paper": "ok (reused from today's successful run)",
+  "github": "ok (reused from today's successful run)",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 11 column 4 (char 768); gemini-3.5-flash-lite:Extra data: line 11 column 4 (char 974); gemini-3.1-flash-lite:Extra data: line 11 column 4 (char 899); gemini-2.5-flash-lite:404 {   \"error\": {     \"code\": 404, ",
+  "jobs": "ok (reused from today's successful run)"
  },
  "sections": {
   "oi_lesson": {
