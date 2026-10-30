@@ -1,160 +1,182 @@
 {
  "v": 2,
- "date": "2026-10-30",
- "generated_at": "2026-10-30T04:29:55.401686+05:30",
+ "date": "2026-10-31",
+ "generated_at": "2026-10-31T02:42:15.994020+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 11 column 4 (char 855); gemini-3.5-flash-lite:Extra data: line 11 column 4 (char 836); gemini-3.1-flash-lite:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high deman",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how stem cells act as the blank-slate starting point for growing brain organoids through pluripotency and differentiation.",
-   "why_it_matters": "Before we can listen to brain organoids using electrodes or study how they learn, we must know how to build them. Growing a living brain tissue model starts with unspecialized master cells that can turn into any cell type in the human body.",
+   "objective": "Understand the physical environment and equipment used to cultivate cerebral organoids in a laboratory setting.",
+   "why_it_matters": "Growing living brain tissue outside the human body requires carefully replicating the supportive conditions of the womb, making lab hardware essential for all organoid intelligence research.",
    "prerequisites": [
-    "Basic knowledge that the human body is made of specialized cells like neurons.",
-    "Understanding that organoid intelligence relies on living human cells grown in a lab."
+    "Basic knowledge of stem cells as unspecialized foundational cells",
+    "Understanding that living cells require specific nutrients and oxygen to survive"
    ],
-   "simple_explanation": "Imagine a box of Lego bricks before any of them are glued together. Right now, they can become a house, a car, or a bridge. Stem cells are like those versatile Lego bricks. They are unspecialized cells that have not chosen a career yet. 'Pluripotency' is their superpower of being able to become almost any tissue in the body. 'Differentiation' is the process of a cell choosing its job, like deciding to become a brain cell instead of a skin cell.",
+   "simple_explanation": "Growing a cerebral organoid is a bit like baking bread or brewing kombucha, but with extreme rules for cleanliness. Scientists place stem cells inside tiny plastic dishes filled with a liquid soup of nutrients, vitamins, and proteins. This liquid is kept warm inside a specialized machine called an incubator that mimics human body temperature and breathing air.",
    "step_by_step": [
-    "Start with pluripotent stem cells, which are like blank canvases that can copy themselves indefinitely or transform into anything.",
-    "Apply specific chemical cues and growth factors\u2014sort of like nutritional recipe instructions\u2014to signal the cells to begin changing.",
-    "Watch the cells undergo differentiation, where they gradually lose their blank-slate status and switch on specific genes to become nervous system precursors.",
-    "Allow these specialized precursors to self-organize into three-dimensional clumps, eventually forming the early layers of a brain organoid."
+    "Prepare a sterile workspace inside a laminar flow hood to keep bacteria and mold away from the cells.",
+    "Place the stem cells into specialized round-bottom wells so they clump together into a tiny cluster.",
+    "Add a liquid growth medium containing amino acids, sugars, and growth factors that act as synthetic blood plasma.",
+    "Transfer the culture dish into an incubator maintained at body temperature with a controlled amount of carbon dioxide.",
+    "Gently stir or rock the liquid using an orbital shaker so the cells get a steady supply of oxygen and nutrients without suffocating in the center."
    ],
-   "technical_depth": "Pluripotent stem cells, including induced pluripotent stem cells (iPSCs) generated from adult skin or blood cells, express key transcription factors like OCT4, SOX2, and NANOG that maintain their unspecialized state. Differentiation involves silencing these pluripotency genes while activating lineage-specific genetic pathways, such as neural induction via dual SMAD inhibition, which drives cells toward a neuroectodermal fate.",
+   "technical_depth": "The primary piece of lab hardware is the CO2 incubator, which keeps temperatures precisely at 37 degrees Celsius and carbon dioxide at 5 percent to stabilize the pH of the liquid medium via a bicarbonate buffer system. Because organoids grow outward, their inner cells risk dying from a lack of oxygen diffusion if they exceed a fraction of a millimeter in size, which is why dynamic stirring systems or spinning bioreactors are often introduced.",
    "misconceptions": [
-    "Misconception: Stem cells are already tiny brain cells just waiting to grow larger. Fact: Stem cells are entirely generic and lack any specialized brain structures or electrical properties until they differentiate.",
-    "Misconception: Differentiation happens instantly when you add a chemical. Fact: It is a gradual, multi-step biological transition where cells slowly shift their gene expression over days or weeks."
+    "Misconception: Organoids are grown in open bowls on standard lab counters. Reality: They require strictly sterile, enclosed environments because single stray bacteria can ruin the entire culture.",
+    "Misconception: Organoids are hooked up to mechanical blood pumps. Reality: Early-stage organoids rely entirely on passive absorption of nutrients from the surrounding liquid rather than artificial blood vessels."
    ],
    "knowledge_check": [
     {
-     "question": "What does the term 'pluripotency' mean?",
-     "answer": "It is the ability of a stem cell to develop into almost any type of cell in the human body."
+     "question": "What machine maintains the correct temperature and air mix for growing organoids?",
+     "answer": "A CO2 incubator."
     },
     {
-     "question": "What triggers a stem cell to begin differentiating?",
-     "answer": "Specific chemical cues and growth factors that signal the cell to activate certain genes and adopt a specialized role."
+     "question": "Why is it important to gently stir or shake the liquid medium during organoid growth?",
+     "answer": "To help oxygen and nutrients reach the cells in the center of the growing tissue."
     },
     {
-     "question": "Why are stem cells important for organoid intelligence?",
-     "answer": "They provide the blank-slate starting material required to grow living human neural tissues in the lab."
+     "question": "What is the primary reason why sterile conditions are mandatory in this process?",
+     "answer": "To prevent bacteria and mold from contaminating and destroying the living tissue."
     }
    ],
-   "exercise": "Draw a simple flowchart on paper showing a single blank circle (stem cell) branching out into two distinct pathways: one turning into a skin cell and the other turning into a neuron, labeling the transition point with the word 'differentiation'.",
-   "summary": "Stem cells serve as the unspecialized foundation for organoids. Through pluripotency, they hold infinite potential, and through differentiation, guided by chemical signals, they transform into the functional neural cells needed for wetware computing.",
-   "next_lesson": "Day 10: How we guide stem cells to form early brain structures.",
+   "exercise": "Draw a simple diagram of an organoid lab setup, labeling the incubator, the nutrient liquid dish, and the incubator's heat and gas controls, noting how each mimics human biology.",
+   "summary": "Growing cerebral organoids in a lab requires mimicking the human body's environment using sterile dishes, liquid nutrient soups, warm incubators, and gentle motion devices to keep the living tissue alive and oxygenated.",
+   "next_lesson": "Day 11: How we use scaffolds and gels to give organoids a physical shape.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how to extract time-domain and frequency-domain features from raw brain waves so a computer can interpret user intent.",
-   "why_it_matters": "Raw brain signals are too complex for computers to understand directly. Extracting features simplifies the data into meaningful numbers, like wave height or rhythm speed, which the BCI uses to control a device.",
+   "objective": "Understand how the Fourier transform translates complex EEG wave data from a time-based view into individual speed components using simple building blocks.",
+   "why_it_matters": "Raw brain recordings are messy squiggles that mix all brain wave speeds together. To understand what a user is thinking or feeling, a BCI must separate these blended speeds so the computer can read them clearly.",
    "prerequisites": [
-    "Basic understanding of digital signals and sampling from digital conversion",
-    "Familiarity with brain wave frequencies like alpha and beta rhythms"
+    "Basic awareness that brain signals are waves changing over time",
+    "Familiarity with the concept of wave speeds, or frequencies, measured in Hertz"
    ],
-   "simple_explanation": "Imagine listening to an orchestra. You can focus on two things: the overall loudness changing second-by-second (time-domain) or the distinct notes played by different instruments, like a high flute versus a low cello (frequency-domain). BCI computers use both perspectives to understand what the brain is doing.",
+   "simple_explanation": "Imagine hearing a heavy musical chord played on a piano. To figure out what notes are inside that sound, your ear breaks the combined noise down into individual pure tones. The Fourier transform acts like a mathematical prism, taking a complex, jumbled brain wave and splitting it cleanly into its separate pure frequency ingredients.",
    "step_by_step": [
-    "Collect clean digital brain wave data over a short window of time, such as one second.",
-    "Calculate time-domain features by looking directly at how the voltage changes from moment to moment, measuring attributes like signal average or variance.",
-    "Convert the signal into the frequency domain using mathematical tools to see how much power exists in specific wave speeds, like relaxation rhythms or active thinking rhythms.",
-    "Combine these calculated features into a simple list of numbers that represent the current mental state."
+    "Start with a raw, squiggly EEG recording that shows voltage changing over time.",
+    "Imagine a set of pure, smooth sine waves moving at different fixed speeds, from slow to fast.",
+    "The Fourier algorithm tests how much each pure sine wave matches the shape of your messy EEG squiggle.",
+    "When a test wave matches a speed hidden inside the brain wave, it resonates strongly.",
+    "The output collects all these matches, creating a clear chart that shows how much power belongs to each distinct speed."
    ],
-   "technical_depth": "Time-domain features analyze the signal amplitude directly as a function of time, utilizing metrics like Root Mean Square (RMS) or Zero-Crossing Rate to capture signal energy and frequency shifts without transformation. Frequency-domain features map the signal into the spectral domain, typically employing algorithms like the Fast Fourier Transform (FFT) to quantify power distribution across distinct bands.",
+   "technical_depth": "Mathematically, the Fourier transform projects a time-domain function onto a basis of sinusoidal functions of various frequencies. For discrete computer processing, BCI software uses the Fast Fourier Transform (FFT), an optimized algorithm that drastically reduces computation time by breaking the calculation into smaller, repeating chunks.",
    "misconceptions": [
-    "Thinking that time-domain and frequency-domain features are completely separate types of data; they are actually just two different mathematical ways of looking at the exact same electrical recording."
+    {
+     "misconception": "The Fourier transform physically alters the brain signals.",
+     "correction": "It is purely a mathematical translation tool performed by the computer; the original recorded data remains untouched."
+    },
+    {
+     "misconception": "It tells you the exact location inside the brain where a thought originates.",
+     "correction": "Standard Fourier transforms analyze frequencies over time or entire channels, not spatial coordinates on the scalp."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What does a time-domain feature measure directly?",
-     "answer": "Changes in signal voltage or amplitude over time."
+     "question": "What does a raw EEG graph show on its horizontal axis?",
+     "answer": "Time."
     },
     {
-     "question": "What is the main goal of converting a signal to the frequency domain?",
-     "answer": "To see how much power is present in specific wave speeds or rhythms."
+     "question": "What is the primary job of the Fourier transform in a BCI pipeline?",
+     "answer": "To convert time-domain wave data into frequency-domain components."
     },
     {
-     "question": "Why do BCI systems extract features instead of using raw signals?",
-     "answer": "To turn complex brain data into simplified numerical summaries that a computer can easily process."
+     "question": "Why is the Fast Fourier Transform (FFT) commonly used instead of a standard transform?",
+     "answer": "It speeds up calculations significantly so computers can analyze signals efficiently."
     }
    ],
-   "exercise": "Take a mental note of your breathing for ten seconds. Think of the overall rise and fall as your time-domain view, and the speed of your breaths as your frequency-domain view. Write down one sentence describing how looking at height versus speed gives different information.",
-   "summary": "Time-domain features track raw signal changes over time, while frequency-domain features break the signal down into distinct rhythmic speeds, providing a complete feature set for BCI translation.",
-   "next_lesson": "Introduction to machine learning classifiers for BCI",
+   "exercise": "Take a piece of paper and draw a messy, overlapping wave by combining a wide curve and a tight, jittery line. Write down a short description of how you would separate the slow movement from the fast jitter using a set of matching templates.",
+   "summary": "The Fourier transform is a mathematical technique that unpacks complex, overlapping EEG wave shapes into individual pure frequency speeds, giving BCI systems a clear breakdown of the brain's rhythmic activity.",
+   "next_lesson": "Translating frequency features into actionable computer commands for BCI control",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Basic electronics calculations used in embedded interviews",
-   "explanation": "Interviewers often test your ability to use Ohm's Law (Voltage equals Current times Resistance, or V = I * R) and the Power formula (Power equals Voltage times Current, or P = V * I) to size components correctly. In embedded systems, robotics, and brain-computer interfaces, you must calculate resistor values to limit current so you do not burn out delicate components like LEDs, sensors, or microcontroller pins.",
-   "practical_example": "Imagine you are wiring an indicator LED on your robot. The microcontroller outputs 5 volts, but your LED can only safely handle 2 volts and needs 20 milliamperes (0.02 amps) of current. To find the resistor needed, first calculate the voltage the resistor must drop: 5V minus 2V equals 3V. Then, use Ohm's Law to find resistance: Voltage divided by Current (3V / 0.02A), which equals 150 ohms.",
-   "exercise": "You connect a 3.3-volt microcontroller output pin to an infrared sensor that requires 3.3 volts and 10 milliamperes (0.010 amps). Wait, what if you need to drop a 5-volt supply down to 3.3 volts for a BCI chip using a resistor, and the chip draws 5 milliamperes? Calculate the required resistance value.",
-   "model_answer": "First, find the voltage the resistor must drop: 5 volts minus 3.3 volts equals 1.7 volts. Next, convert milliamperes to amperes if needed, or keep it consistent: 5 milliamperes is 0.005 amperes. Finally, apply Ohm's Law (R = V / I): 1.7 volts divided by 0.005 amperes equals 340 ohms.",
-   "why_it_works": "Interviewers look for your methodical approach: identifying given values, choosing the right formula, handling units correctly (like converting mA to A), and computing the final result without guessing.",
-   "improvement_tip": "Always double-check your unit conversions, especially moving between milliamperes and amperes, as simple math slips are the most common reason candidates lose points in technical rounds.",
+   "topic": "C programming exercise: arrays, structs and bitwise operations",
+   "explanation": "In embedded systems and robotics, you often need to pack multiple small pieces of data into limited memory. Arrays let you store a list of readings, structs let you group related data together, and bitwise operations (like shifts and masks) let you pack multiple boolean flags into a single byte to save memory.",
+   "practical_example": "Imagine programming a rehabilitation BCI device that tracks four digital sensor flags (ready, error, active, low-battery) for three different electrode channels. Instead of using separate variables for each flag, you group a channel's data into a struct containing an array of recent readings and a single byte where each bit represents one of the four status flags.",
+   "exercise": "Write a C struct named 'ElectrodeChannel' that contains an array of 5 integers for sensor readings and an unsigned char named 'flags'. Then, write a single line of C code using a bitwise OR operator to set the 3rd bit of 'flags' to indicate an error state.",
+   "model_answer": "struct ElectrodeChannel { int readings[5]; unsigned char flags; }; struct ElectrodeChannel ch1; ch1.flags |= (1 << 2);",
+   "why_it_works": "The struct groups the array and the flags byte together cleanly. The expression (1 << 2) shifts the binary number 1 left by 2 positions (resulting in 00000100), and the |= operator sets that specific bit in the flags variable without changing the other bits.",
+   "improvement_tip": "Always comment your bitwise operations during interviews to show the interviewer you understand exactly which bit mask corresponds to which hardware status.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Organize project photos, diagrams and code links professionally",
-   "explanation": "When showcasing engineering projects on LinkedIn, visual proof matters just as much as your code. Recruiters want to see clear circuit diagrams, photos of your physical hardware setups, and direct links to your repositories structured neatly so they can understand your build at a glance.",
-   "practical_example": "For an EEG headset or Arduino motor controller project, upload a clean picture of your breadboard layout, a block diagram showing how components connect, and a direct GitHub link right beside them in your featured section.",
-   "exercise": "Take one of your past robotics, BCI, or embedded systems projects and gather three things: one photo of the physical build or circuit, one simple connection diagram, and your GitHub repository link. Draft how you will arrange them together on your profile.",
-   "model_answer": "Project: Line-Following Robot for College Fest. 1. Hardware Photo: [Attached image showing chassis and sensor placement]. 2. System Diagram: [Attached schematic of motor driver and microcontroller connections]. 3. Source Code: github.com/username/line-follower-robot.",
-   "why_it_works": "It gives technical recruiters immediate visual evidence that you know how to build physical systems and wire circuits correctly, saving them time and proving your technical competence beyond text.",
-   "improvement_tip": "Always ensure your wiring diagrams are legible and your code links are public before posting them on your profile.",
+   "topic": "Find relevant keywords in an embedded internship description",
+   "explanation": "To get your LinkedIn profile noticed by recruiters searching for interns in India, you need to use the same words they use in their job postings. For embedded systems, robotics, and BCI, companies often look for specific technical terms like 'I2C', 'STM32', 'ROS2', or 'EEG signal processing' rather than general phrases. Read an actual internship description, highlight the core technical tools and skills repeatedly requested, and weave those exact terms into your LinkedIn profile.",
+   "practical_example": "If an embedded internship posting in Bengaluru mentions 'Microcontroller programming', 'UART communication', and 'ESP32', do not just write 'worked with microchips' on your profile. Instead, use those exact terms to describe a university lab project where you programmed an ESP32 to send sensor data via UART.",
+   "exercise": "Find one real internship posting for a robotics or embedded role in India. Copy it, underline every specific hardware, software, or protocol mentioned, and pick two that match a project you have actually built.",
+   "model_answer": "Identified keywords from an internship post: 'STM32', 'GPIO', and 'FreeRTOS'. Applied to my profile: Developed a multi-sensor obstacle detection system using an STM32 microcontroller, configuring GPIO pins and implementing FreeRTOS for task management.",
+   "why_it_works": "Recruiters and automated hiring filters search LinkedIn using exact technical keywords. Using the exact terms from real job descriptions helps your profile appear when they look for students with your specific hardware and software background.",
+   "improvement_tip": "Only add keywords for tools or protocols you have genuinely used in a project or coursework. Do not list terms you have only read about, as interviewers will easily spot the difference.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
-   "focus": "Engineering living brain cells into computers to play a simple virtual game, and the technical and moral boundaries of this research.",
-   "explanation": "This day looks at how scientists build these systems, the physical and biological limits of keeping lab-grown neurons alive and functioning, and the moral questions raised by giving biological tissue simple learning abilities.",
-   "limits": "The Crossref metadata lacks an abstract, so this explanation relies on general scientific knowledge about the study rather than specific paper results.",
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
+   "focus": "Testing if lab-grown human and mouse brain cells can learn to play a simple computer game like Pong.",
+   "explanation": "Researchers connected living brain cells in a dish to a computer setup that simulated a basic game. They found the cells could adapt their electrical activity to respond to signals from the game, suggesting a basic ability to learn from their environment.",
+   "limits": "Since the abstract was missing, this summary uses general scientific knowledge about the study. The exact numbers and deeper claims about 'sentience' are debated by other scientists.",
    "check": {
-    "confidence": "high"
+    "question_1": "Did the study use living brain cells?",
+    "question_2": "What simple game was simulated for the cells?",
+    "question_3": "Why is the idea of cell 'sentience' debated by experts?",
+    "confidence": "medium"
    },
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/j.neuron.2022.09.001",
    "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
-   "day": "4 of 5",
+   "day": "5 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
-   "focus": "Engineering, limits and ethics of brain-computer interfaces",
-   "explanation": "This study tested whether a person with paralysis could use brain signals to control external items, like a computer cursor or a robotic hand, using a small sensor placed on the brain.",
-   "limits": "The system required wires connecting the brain sensor to computers, the software needed frequent recalibration, and the research only involved a very small number of human participants for a limited time.",
-   "check": "The metadata abstract was empty, so general scientific knowledge about this well-known brain-computer interface study was used to explain the engineering goals, boundaries, and ethical considerations.",
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
+   "focus": "Testing if brain signals from a paralyzed person can directly control a computer cursor and other devices.",
+   "explanation": "This study is the final step of our review, looking at the big picture of brain-computer interfaces. It explores how a human with tetraplegia used a tiny sensor placed on the brain's surface to translate thoughts into physical actions, like moving a computer mouse or turning on lights, without moving their limbs.",
+   "limits": "The provided metadata lacked an abstract, so this explanation relies on general scientific knowledge of the referenced milestone paper. Long-term safety and everyday usability are still being studied.",
+   "check": [
+    "What is the main goal of testing this brain sensor on a human?",
+    "How does the brain sensor help someone with tetraplegia interact with technology?",
+    "Why is studying the big picture of brain-computer interfaces important for future medical devices?"
+   ],
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature04970",
    "doi_link": "https://doi.org/10.1038/nature04970",
-   "day": "4 of 5",
+   "day": "5 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "3 of 3",
-   "phase": "Run it in simulation and engineering judgement",
-   "project": "moveit/moveit2",
-   "description": "A widely used robotics manipulation framework designed for ROS 2, utilized for motion planning, building commercial applications, testing designs, and comparing algorithms.",
-   "language": "C++",
-   "license": "BSD-3-Clause",
-   "simulation_and_testing_notes": "Continuous integration badges in the documentation show active testing across various distributions like Jazzy and Humble, helping developers ensure their robotic arm setups and motion planning algorithms work smoothly before deploying to physical hardware.",
-   "engineering_judgement": "Because MoveIt 2 manages physical robot safety and movement, relying purely on text code is not enough. Simulating the robot's environment first helps catch collision or path planning errors safely.",
-   "small_challenge": "Review the installation options in the documentation and decide whether a binary install or a source build fits your current setup best.",
-   "knowledge_check": "What framework does MoveIt 2 build upon for its core robotics capabilities?",
+   "day": "1 of 3",
+   "project_name": "ros-navigation/navigation2",
+   "project_description": "A navigation framework and system built for ROS 2, primarily written in C++, helping robots move autonomously.",
+   "project_status": "Active and actively maintained, with continuous integration workflows and regular builds for various ROS distributions.",
+   "key_features": [
+    "Robot navigation framework for ROS 2",
+    "Extensive documentation covering concepts, setup guides, tutorials, and APIs",
+    "Plugin-based architecture allowing custom navigation algorithms",
+    "Supported by commercial sponsors and organizations in the robotics industry"
+   ],
+   "beginner_explanation": "Navigation2 (or Nav2) is like a GPS and driving instructor for robots. It helps a robot figure out where it is, plan a safe path to a destination, and avoid obstacles along the way. It is designed to work with the Robot Operating System (ROS 2).",
+   "small_challenge": "Explore the provided links in the documentation to locate the 'Getting Started' guide and read about the basic concepts of how robots plan paths.",
+   "knowledge_check": {
+    "question": "What is the primary programming language used for the Navigation2 repository?",
+    "answer": "C++"
+   },
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
-    "full_name": "moveit/moveit2",
-    "html_url": "https://github.com/moveit/moveit2",
-    "description": ":robot: MoveIt for ROS 2",
-    "pushed_at": "2026-10-28T19:03:40Z",
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-10-29T21:29:34Z",
     "language": "C++",
     "archived": false,
-    "license": "BSD-3-Clause"
+    "license": "NOASSERTION"
    }
   },
   "news": {
@@ -206,49 +228,67 @@
   "jobs": {
    "items": [
     {
-     "title": "Embedded Softwareentwickler (m/w/d) / Regelungstechnik",
+     "title": "Intern Power Electronics Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Aalen",
-     "published": "2026-10-29",
+     "location": "Satigny, Switzerland",
+     "published": "2026-10-30",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/k-tronik-gmbh/embedded-softwareentwickler-regelungstechnik-aalen-181924",
-     "company": "K-tronik GmbH"
+     "url": "https://www.arbeitnow.ch/jobs/companies/secheron-s-dot-a/intern-power-electronics-engineer-satigny-254031",
+     "company": "Secheron S Dot A"
     },
     {
-     "title": "Ing\u00e9nieur BE en \u00e9lectronique embarqu\u00e9e & \u00e9lectrique F/H",
+     "title": "Software Test Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Le Poir\u00e9-sur-Vie",
-     "published": "2026-10-29",
+     "location": "Remote job",
+     "published": "2026-10-30",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/fc-consulting/ingenieur-be-en-electronique-embarquee-electrique-f-h-le-poire-sur-vie-37910",
-     "company": "FC Consulting"
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-463546",
+     "company": "SwissPeak Partners GmbH"
     },
     {
-     "title": "Ingenieur:in Automationstechnik Halbleiter",
+     "title": "Softwarearchitekt Embedded Systems (m/w/d) Dresden",
      "type": "vacancy listing (availability not independently verified)",
      "location": "Dresden",
-     "published": "2026-10-29",
+     "published": "2026-10-30",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/wabcon/ingenieurin-automationstechnik-halbleiter-dresden-19450",
-     "company": "wabcon"
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwarearchitekt-embedded-systems-dresden-2838",
+     "company": "MY Humancapital GmbH"
     },
     {
-     "title": "Ing\u00e9nieur MES (h/f)",
+     "title": "IoT Embedded Systems Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Lausanne",
-     "published": "2026-10-29",
+     "location": "Bern, Berne, Switzerland",
+     "published": "2026-10-30",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/enova-consulting/ingenieur-mes-h-f-lausanne-340137",
-     "company": "Enova Consulting"
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-438797",
+     "company": "SwissPeak Partners GmbH"
     },
     {
-     "title": "Electronics Engineer",
+     "title": "Softwareentwickler Automatisierungstechnik SPS (m/w/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Zurich",
-     "published": "2026-10-29",
+     "location": "Munich",
+     "published": "2026-10-30",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/auterion/electronics-engineer-zurich-481084",
-     "company": "Auterion"
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwareentwickler-automatisierungstechnik-sps-munich-329086",
+     "company": "MY Humancapital GmbH"
+    },
+    {
+     "title": "Projektleiter/in Automation 80 - 100 %",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Z\u00fcrich",
+     "published": "2026-10-30",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/twojobs/projektleiter-in-automation-80-100-zurich-178987",
+     "company": "two.jobs"
+    },
+    {
+     "title": "Test Automation Engineer UiPath",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Z\u00fcrich",
+     "published": "2026-10-30",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/infometis-ag/test-automation-engineer-uipath-zurich-440417",
+     "company": "Infometis AG"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
