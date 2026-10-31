@@ -1,12 +1,21 @@
 {
-  "oi": 0,
-  "bci": 0,
-  "po": [0, 1],
-  "pb": [0, 1],
-  "gh": [0, 1],
-  "ip": 0,
-  "li": 0,
-  "seen": [
+ "oi": 1,
+ "bci": 1,
+ "po": [
+  0,
+  2
+ ],
+ "pb": [
+  0,
+  2
+ ],
+ "gh": [
+  0,
+  2
+ ],
+ "ip": 1,
+ "li": 1,
+ "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
   "https://www.therobotreport.com/daimon-robotics-building-the-infrastructure-layer-for-tactile-intelligence/",
@@ -34,6 +43,9 @@
   "https://www.therobotreport.com/bedrock-robotics-nears-1b-in-total-funding-as-demand-for-autonomous-heavy-equipment-surges/",
   "https://www.therobotreport.com/agibot-introduces-worken-measure-robot-productivity-innovation-day-2026/",
   "https://www.therobotreport.com/north-american-robot-orders-climb-24-8-q3-2026-says-a3/",
-  "https://www.therobotreport.com/what-symbotic-growth-with-walmart-teaches-robotics-startups-about-anchor-customers/"
+  "https://www.therobotreport.com/what-symbotic-growth-with-walmart-teaches-robotics-startups-about-anchor-customers/",
+  "https://www.therobotreport.com/percepto-launches-axion-ai-platform-unify-inspection-data-analysis/",
+  "https://www.therobotreport.com/humanoid-developer-agility-now-expects-raise-465m-spac-deal/",
+  "https://www.therobotreport.com/white-house-makes-section-232-determination-regarding-foreign-made-robots/"
  ]
 }

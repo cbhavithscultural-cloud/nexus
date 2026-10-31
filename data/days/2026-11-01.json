@@ -1,0 +1,280 @@
+{
+ "v": 2,
+ "date": "2026-11-01",
+ "generated_at": "2026-11-01T02:34:59.975122+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand the fundamental definitions of intelligence and learning from both living biological perspectives and engineered digital systems.",
+   "why_it_matters": "Before building computers out of living brain tissue, we must clearly define what it means for a system to process information, solve problems, and adapt to its environment.",
+   "prerequisites": [
+    "Basic curiosity about how computers and brains work",
+    "General awareness that living things react to their surroundings"
+   ],
+   "simple_explanation": "Intelligence is the ability to acquire knowledge and use it to adapt to changing situations. Learning is the process of updating how you behave based on new experiences. In biology, intelligence happens through living cells reorganizing themselves to survive. In engineering, intelligence happens through mathematical rules and computer code running on silicon chips to solve defined tasks.",
+   "step_by_step": [
+    "Define biological intelligence as an organism's capacity to sense its environment, make decisions, and survive by altering its physical structure and internal chemistry.",
+    "Define engineered intelligence as a machine's capacity to process data, optimize parameters, and execute predefined tasks using structured logic or statistical patterns.",
+    "Compare how biology handles surprise (by growing new physical connections) versus how traditional software handles surprise (by recalculating numbers using predefined algorithms).",
+    "Introduce organoid intelligence as a hybrid approach that uses living neural tissue inside a lab setting to perform computing tasks."
+   ],
+   "technical_depth": "Biological intelligence relies on decentralized, self-organizing networks of cells that consume chemical energy to continuously update their synaptic weights and structural morphologies. Engineered intelligence, particularly machine learning, relies on centralized or parallelized mathematical optimization over static datasets. Organoid intelligence attempts to harness the adaptive plasticity of living neural networks to execute computational workflows, bridging wetware and hardware paradigms.",
+   "misconceptions": [
+    "Misconception: Computers and brains learn in the exact same way because artificial neural networks are modeled after neurons. Correction: While artificial networks use static mathematical weights updated by algorithms, biological networks use living cells that physically change, consume biological nutrients, and self-direct their growth."
+   ],
+   "knowledge_check": [
+    {
+     "question": "How does biological intelligence primarily adapt to new information?",
+     "answer": "Through living cells changing their physical structures and internal chemistry over time."
+    },
+    {
+     "question": "What is the primary mechanism of engineered intelligence?",
+     "answer": "Mathematical algorithms and data processing running on digital hardware."
+    },
+    {
+     "question": "What is organoid intelligence?",
+     "answer": "An emerging field that uses living brain cell cultures in a lab to perform computing and adaptive tasks."
+    }
+   ],
+   "exercise": "Write a short paragraph comparing a thermostat adjusting room temperature to a human adjusting a jacket when cold. Identify which represents simple engineered feedback and which represents biological adaptation.",
+   "summary": "Intelligence and learning are defined differently depending on whether you look at living organisms or digital machines. Biology adapts through physical and chemical changes in living cells, while engineering adapts through mathematical optimization. Organoid intelligence aims to combine the best traits of both worlds.",
+   "next_lesson": "Day 2: Overview of neural cells and wetware computing basics.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Define clearly what a brain-computer interface is, what it is not, and the fundamental boundaries of how it interacts with the human nervous system.",
+   "why_it_matters": "Understanding the actual boundaries of BCI technology helps separate clinical reality from science fiction, guiding proper system design and managing user expectations.",
+   "prerequisites": [
+    "Basic awareness that the brain uses electrical and chemical signals to function",
+    "General familiarity with computers taking inputs to produce outputs"
+   ],
+   "simple_explanation": "A brain-computer interface (BCI) acts as a translator. It listens to electrical activity generated when you think or intend to move, and it turns those patterns into commands for an external device, like a screen cursor or a robotic limb. Crucially, it does not read private thoughts, tap into your memory archives, or control your mind from the outside.",
+   "step_by_step": [
+    "1. Intent generation: The user forms a clear physical or mental goal, such as deciding to move a hand.",
+    "2. Signal detection: Sensors placed on the scalp or implanted inside the head capture the electrical activity associated with that goal.",
+    "3. Translation: Software analyzes the captured signals, looking for specific patterns.",
+    "4. Device action: The computer executes a command matching the translated pattern, such as typing a letter or moving a wheel chair."
+   ],
+   "technical_depth": "From an engineering perspective, a BCI consists of an input transducer (electrodes), a signal processing pipeline (amplification, filtering, feature extraction, and classification), and an output actuator (the digital or mechanical device). It is strictly a closed-loop or open-loop control system operating on observable, macroscopic electrical voltage changes or metabolic shifts. It lacks access to the complex semantic context of internal monologue or episodic memory.",
+   "misconceptions": [
+    "Misconception: BCIs can read your inner thoughts, secrets, or memories.\nFact: BCIs only detect specific, coarse electrical patterns associated with deliberate motor intent, attention, or specific mental tasks, not complex inner language or memories.",
+    "Misconception: BCIs can force a person's brain to do things against their will.\nFact: BCIs are strictly output translation devices; they translate user intent into computer commands and cannot inject thoughts or override free will."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the primary function of a brain-computer interface?",
+     "answer": "To translate electrical signals of neural intent into actionable commands for external devices."
+    },
+    {
+     "question": "Can a BCI extract a user's private thoughts or hidden memories?",
+     "answer": "No, BCIs only detect specific patterns related to targeted tasks or motor intentions, not complex inner thoughts or memories."
+    },
+    {
+     "question": "Is a BCI considered an input device or an output device for a computer?",
+     "answer": "It serves as an input device, providing control signals derived from neural activity."
+    }
+   ],
+   "exercise": "List three everyday consumer devices (like a keyboard, a mouse, or a voice assistant) and write a single sentence for each explaining how a BCI acts differently from them as an input method.",
+   "summary": "A BCI bridges the gap between neural intent and digital action by translating physical brain signals into computer commands, remaining strictly confined to detectable surface or implanted electrical patterns rather than reading inner thoughts.",
+   "next_lesson": "Day 2: Overview of brain anatomy and how neurons communicate.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Categorize extracted internship skills into hardware, software and core engineering",
+   "explanation": "Once you highlight keywords from an embedded systems or robotics job posting in India, the next step is grouping them. Separating skills into software (like C programming or Python), hardware (like Arduino, STM32, or sensors), and core concepts (like communication protocols or debugging) helps you see where your resume is strong and where it has gaps.",
+   "practical_example": "Imagine an internship posting for a smart prosthetic arm asking for: Embedded C, Arduino, soldering, I2C protocol, and basic circuit testing. You group Embedded C under software, Arduino and soldering under hardware, and I2C protocol under core engineering.",
+   "exercise": "Take a mental list of three common requirements for an entry-level robotics internship in India: STM32 microcontroller, reading schematics, and Git version control. Sort each one into its correct category: hardware, software, or core engineering.",
+   "model_answer": "STM32 microcontroller goes to hardware, reading schematics goes to core engineering, and Git version control goes to software.",
+   "why_it_works": "Sorting skills stops you from feeling overwhelmed by a long list of requirements and clearly shows whether you need to practice more coding, build more hardware circuits, or study theory.",
+   "improvement_tip": "Do not list more than three categories; keep your sorting simple so you can quickly identify your weak spots before applying.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Refining your LinkedIn headline to avoid exaggerated titles",
+   "explanation": "Many engineering students feel pressured to use flashy titles like 'Embedded Systems Expert' or 'Robotics Guru' in their LinkedIn headline. Recruiters hiring interns in India spot these exaggerations quickly and prefer honest headlines that clearly state your current student status, your specific technical focus, and what you are actively learning or building.",
+   "practical_example": "Instead of writing 'AI Robotics Specialist | Future CTO', use a straightforward layout like 'Electronics and Communication Engineering Student | Learning STM32 and ROS2 | Aspiring Embedded Systems Intern'.",
+   "exercise": "Review your current LinkedIn headline. Remove any buzzwords that claim mastery over hardware or software you are still learning. Write a new headline that states your degree, your primary technical interest (such as BCI, embedded systems, or robotics), and your active goal.",
+   "model_answer": "B.Tech Undergraduate | Exploring Firmware Development & Microcontrollers | Seeking Embedded Systems Internships",
+   "why_it_works": "It instantly informs the recruiter of your academic background, shows humility by focusing on exploration rather than false expertise, and clearly communicates your current internship goal without making unprovable claims.",
+   "improvement_tip": "Keep your headline under 120 characters so it does not get cut off on mobile screens when recruiters search for candidates on the go.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
+   "focus": "Growing tiny, three-dimensional brain-like tissues in the lab to study how the human brain develops and to understand conditions like microcephaly.",
+   "explanation": "This research was started because scientists needed a better way to study the human brain. Animal models like mice do not always act or grow like human brains. By using human stem cells, researchers hoped to create mini-brains that mimic early human development more closely.",
+   "limits": "The abstract metadata was not available, so this explanation relies on general scientific knowledge of the paper. We must verify the exact details directly from the full text to ensure complete accuracy.",
+   "check": "low",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature12517",
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "1 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
+   "focus": "Why this research exists: the core motivation behind studying brain-computer interfaces.",
+   "explanation": "This paper was written to help people who have severe physical disabilities and cannot move or speak normally. The authors wanted to explore how a person's brain signals could be translated directly by a computer to operate devices, allowing them to communicate and control their environment without needing muscles.",
+   "limits": "The official abstract text was not provided in the metadata, so this explanation relies on general background knowledge of the paper's widely known goals.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "1 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "Navigation2 (Nav2)",
+   "repository_url": "https://github.com/ros-navigation/navigation2",
+   "primary_language": "C++",
+   "project_description": "A navigation framework and system designed for ROS 2 (Robot Operating System), helping robots move safely from point A to point B.",
+   "project_status": "Active, not archived, with regular updates and continuous integration builds across multiple ROS distributions.",
+   "key_resources": [
+    "Official documentation site with setup guides, tutorials, and concepts",
+    "Community communication channel via Slack",
+    "Dedicated API documentation and migration guides"
+   ],
+   "sponsors_and_backers": "Supported by several corporate sponsors and maintained with leadership from Open Navigation LLC.",
+   "beginner_explanation": "Nav2 is like a GPS and driving brain for robots. If you have a robot that needs to move around a warehouse or a room without bumping into things, this software helps it figure out where it is, plan a safe route, and steer itself there.",
+   "challenge": "Explore the official Nav2 documentation link provided in the README and identify at least two core concepts or plugins that the system uses to help a robot navigate.",
+   "knowledge_check": "What primary programming language is predominantly used to build the Navigation2 framework?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-10-30T22:40:41Z",
+    "language": "C++",
+    "archived": false,
+    "license": "NOASSERTION"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Product",
+     "url": "https://www.therobotreport.com/percepto-launches-axion-ai-platform-unify-inspection-data-analysis/",
+     "what": "Launch of Axion, a new physical AI platform for analyzing infrastructure data.",
+     "who": "Percepto",
+     "how": "It acts as a hardware-agnostic platform to unify data analysis. Background (general knowledge): Hardware-agnostic means the software works with various robot brands rather than just one.",
+     "why": "To provide better visibility across mission-critical infrastructure.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Percepto launches Axion AI platform to unify inspection data analysis",
+     "published": "2026-10-31",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/humanoid-developer-agility-now-expects-raise-465m-spac-deal/",
+     "what": "Agility updated its expected fundraising total for a merger with Churchill Capital Corp XI.",
+     "who": "Agility",
+     "how": "Through a SPAC deal (Special Purpose Acquisition Company). Background (general knowledge): A SPAC is a company without operations that raises money to acquire an existing company, taking it public.",
+     "why": "To secure capital for business development, though the total is $155 million lower than previous estimates.",
+     "limits": "The source does not explain why the target amount was lowered.",
+     "learn": "Medium",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Humanoid developer Agility now expects to raise $465M in SPAC deal",
+     "published": "2026-10-30",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/white-house-makes-section-232-determination-regarding-foreign-made-robots/",
+     "what": "A formal U.S. government determination regarding imported robotics.",
+     "who": "U.S. Secretary of Commerce",
+     "how": "A Section 232 investigation was conducted to analyze supply chains. Background (general knowledge): Section 232 investigations are used to determine if imports threaten national security.",
+     "why": "The investigation concluded that relying on foreign-made robots is a national security risk.",
+     "limits": "The excerpt does not describe specific consequences or policy changes resulting from the finding.",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "White House makes Section 232 determination regarding foreign-made robots",
+     "published": "2026-10-30",
+     "source": "The Robot Report"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Internship - Radiation Testing of Electronic Components and Test Automation",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich, Germany",
+     "published": "2026-10-31",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/the-exploration-company/internship-radiation-testing-of-electronic-components-and-test-automation-munich-351117",
+     "company": "The Exploration Company"
+    },
+    {
+     "title": "Intern Power Electronics Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Satigny, Switzerland",
+     "published": "2026-10-30",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/secheron-s-dot-a/intern-power-electronics-engineer-satigny-254031",
+     "company": "Secheron S Dot A"
+    },
+    {
+     "title": "Lead Plant Robotics Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Germany",
+     "published": "2026-10-31",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/stealthrocketrystartup/lead-plant-robotics-engineer-germany-140746",
+     "company": "Stealthrocketrystartup"
+    },
+    {
+     "title": "Embedded Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Headquarter",
+     "published": "2026-10-31",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/aim-solutions/embedded-engineer-eindhoven-135627",
+     "company": "Aim Solutions"
+    },
+    {
+     "title": "Electronics Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Freienbach",
+     "published": "2026-10-31",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/3brain-ag/electronics-engineer-freienbach-418073",
+     "company": "3Brain AG"
+    },
+    {
+     "title": "Projektleiter/in Automation 80 - 100 %",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Z\u00fcrich",
+     "published": "2026-10-30",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/twojobs/projektleiter-in-automation-80-100-zurich-178987",
+     "company": "two.jobs"
+    },
+    {
+     "title": "Test Automation Engineer UiPath",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Z\u00fcrich",
+     "published": "2026-10-30",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/infometis-ag/test-automation-engineer-uipath-zurich-440417",
+     "company": "Infometis AG"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
