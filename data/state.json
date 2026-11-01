@@ -1,20 +1,20 @@
 {
- "oi": 1,
- "bci": 1,
+ "oi": 2,
+ "bci": 2,
  "po": [
   0,
-  2
+  3
  ],
  "pb": [
   0,
-  2
+  3
  ],
  "gh": [
   0,
-  2
+  3
  ],
- "ip": 1,
- "li": 1,
+ "ip": 2,
+ "li": 2,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -46,6 +46,9 @@
   "https://www.therobotreport.com/what-symbotic-growth-with-walmart-teaches-robotics-startups-about-anchor-customers/",
   "https://www.therobotreport.com/percepto-launches-axion-ai-platform-unify-inspection-data-analysis/",
   "https://www.therobotreport.com/humanoid-developer-agility-now-expects-raise-465m-spac-deal/",
-  "https://www.therobotreport.com/white-house-makes-section-232-determination-regarding-foreign-made-robots/"
+  "https://www.therobotreport.com/white-house-makes-section-232-determination-regarding-foreign-made-robots/",
+  "https://www.therobotreport.com/28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-means-for-robotics/",
+  "https://www.therobotreport.com/solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engineering-for-motion-density-and-uptime/",
+  "https://robohub.org/robot-talk-episode-168-advancing-robotics-with-novel-electronics-with-zlatka-stoeva/"
  ]
 }
