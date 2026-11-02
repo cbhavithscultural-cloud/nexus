@@ -1,153 +1,155 @@
 {
  "v": 2,
- "date": "2026-11-02",
- "generated_at": "2026-11-02T04:26:22.319506+05:30",
+ "date": "2026-11-03",
+ "generated_at": "2026-11-03T02:45:52.860889+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 968); gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 821); gemini-3.1-flash-lite:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high deman",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Explore how cells manage energy, handle waste, and maintain internal stability to support living brain tissue for organoid intelligence.",
-   "why_it_matters": "Living brain tissues require a constant supply of energy and clean maintenance to survive outside the human body. Understanding these basic cell survival rules helps us keep lab-grown brain models alive and functional for computing tasks.",
-   "prerequisites": [
-    "Basic knowledge of cells as tiny living units",
-    "Understanding that brain tissue needs nutrients to stay alive"
-   ],
-   "simple_explanation": "Think of a brain cell like a tiny, bustling factory. It needs power generators to create energy, waste-removal crews to clean up mess, and strict quality control to make sure its internal parts keep working. Without these everyday factory operations, the cell stops working and cannot process information.",
+   "objective": "Understand the four main anatomical parts of a brain cell\u2014dendrites, soma, axon, and synapse\u2014and how their physical layout shapes biological computation.",
+   "why_it_matters": "Organoid intelligence relies on brain cells forming networks. Knowing how each part of a neuron handles information allows engineers to design better physical layouts, scaffolds, and listening devices to interface with living tissue.",
+   "prerequisites": "Basic familiarity with living cells and the understanding that brain cells process information using electrical and chemical signals.",
+   "simple_explanation": "Think of a neuron as a specialized biological wire with four functional zones. First, branch-like antennae called dendrites catch incoming messages from other cells. Second, the central cell body, or soma, acts like a processing hub that adds up all the incoming messages. Third, a long, slender cable called an axon carries the outgoing message away from the center. Finally, the tip of the axon meets the next cell at a tiny gap called a synapse, passing the message along.",
    "step_by_step": [
-    "Energy production: Cells take in simple sugars and oxygen, converting them into usable cellular fuel using specialized internal structures called mitochondria.",
-    "Protein manufacturing: Inside the cell, specific instructions from the genetic code are read to build tiny molecular machines that do all the heavy lifting.",
-    "Waste management: Cells constantly break down broken parts and ship out garbage so toxic buildup does not damage the delicate machinery.",
-    "Membrane maintenance: Cells use energy pumps to keep their inner environment stable, separate from the surrounding fluid."
+    "Visualize the neuron as a directional highway for information, moving strictly from the input zones to the output zones.",
+    "Examine the dendrites: these are tree-like branches spreading outward to maximize the surface area available for catching signals from neighboring cells.",
+    "Trace the signal to the soma: the central body collects the incoming electrical charges. If the total charge reaches a certain threshold, it triggers a strong outgoing pulse.",
+    "Follow the axon: a single long cable that conducts this outgoing pulse away from the soma toward other cells without losing strength.",
+    "Observe the synapse: the microscopic terminal space where the electrical signal pauses, converts into a chemical messenger, and bridges the gap to touch the next cell's dendrite."
    ],
-   "technical_depth": "Cellular homeostasis relies on metabolic pathways, specifically oxidative phosphorylation in mitochondria to generate ATP, and protein turnover via the ubiquitin-proteasome system. In organoid cultures, supplying oxygen and glucose evenly across dense layers of tissue remains a major engineering hurdle because inner cells often starve due to lack of blood vessels.",
+   "technical_depth": "Neurons are polarized structures designed for directional signal propagation. The anatomical compartmentalization\u2014dendrites (receptive), soma (integrative), axon (conductive), and synapse (communicative)\u2014ensures that signals flow efficiently through wetware networks. In organoid cultures, tracking these individual structures is challenging because cells grow in dense, tangled three-dimensional clumps rather than flat, orderly layers.",
    "misconceptions": [
-    "Misconception: Brain cells can survive indefinitely if you just pour liquid sugar over them. Correction: They also need continuous oxygen, proper waste removal, and precise chemical balance to avoid dying."
+    "Misconception: All parts of a neuron send signals in every direction equally. Fact: Signals flow in a strict, polarized path from dendrites to soma, down the axon, and across the synapse.",
+    "Misconception: Neurons are simple round cells with a few short hairs. Fact: They have highly specialized, asymmetric shapes with extremely long, thin extensions tailored for specific physical tasks."
    ],
    "knowledge_check": [
     {
-     "question": "What internal cell structure is primarily responsible for generating energy?",
-     "answer": "Mitochondria."
+     "question": "Which part of the neuron is primarily responsible for receiving incoming messages?",
+     "answer": "Dendrites."
     },
     {
-     "question": "Why is waste management crucial for brain cells?",
-     "answer": "To prevent the buildup of toxic byproducts that damage internal cellular machinery."
+     "question": "What is the function of the soma?",
+     "answer": "It acts as the central cell body that integrates incoming signals."
     },
     {
-     "question": "What is a major challenge for keeping inner cells alive in a large organoid?",
-     "answer": "The lack of blood vessels makes it hard to deliver enough oxygen and nutrients to the center."
+     "question": "Where do neurons pass messages to one another?",
+     "answer": "At the synapse, which is the microscopic gap between cells."
     }
    ],
-   "exercise": "Draw a simple diagram of a cell factory, labeling the energy generator, the waste removal crew, and the nutrient input gate. Write one sentence on what happens if the waste removal crew stops working.",
-   "summary": "Cell biology foundations involve keeping living tissue powered, clean, and stable. For organoid intelligence, managing these basic survival needs is just as important as studying how neurons fire electrical signals.",
-   "next_lesson": "Day 3: Nutrient diffusion limits and how we feed living brain tissues.",
+   "exercise": "Draw a simple diagram of a neuron on paper. Label the four main parts (dendrites, soma, axon, synapse) and use arrows to show the single direction that information travels through the cell.",
+   "summary": "A neuron is split into distinct physical zones: dendrites collect inputs, the soma integrates them, the axon transmits the outgoing pulse, and the synapse passes the message to the next neighbor.",
+   "next_lesson": "Day 4: How brain cells generate electrical spikes.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Explore specific brain regions responsible for voluntary movement and speech generation to understand where BCI signals originate.",
-   "why_it_matters": "Knowing the physical layout of the brain allows BCI developers to place sensors near the exact tissue zones that manage motor commands and language, leading to more responsive assistive devices.",
+   "objective": "Understand how individual neurons fire action potentials and how large populations in the motor cortex coordinate to drive voluntary movement for BCI control.",
+   "why_it_matters": "BCIs that restore movement rely on decoding the collective electrical activity of motor cortex cells. Knowing how single cells generate electrical spikes and how groups of cells represent direction allows us to turn physical intent into smooth digital commands.",
    "prerequisites": [
-    "Basic understanding of neurons sending electrical messages",
-    "General awareness that the brain controls the body"
+    "Basic knowledge of brain anatomy and the cerebral cortex",
+    "Understanding that brain activity generates measurable electrical currents"
    ],
-   "simple_explanation": "The outer layer of the brain, called the cerebral cortex, is divided into specific neighborhoods. One major neighborhood, the motor cortex, acts like a control panel for moving muscles. Another neighborhood handles language and communication. When you decide to move an arm or speak, these dedicated areas light up with electrical activity that BCI hardware can record.",
+   "simple_explanation": "Inside your brain, nerve cells called neurons communicate using tiny electrical pulses. When you decide to move your arm, a specific neighborhood called the motor cortex sends these electrical signals down to your muscles. Instead of a single neuron telling a muscle to move, a large team of neurons votes together. Some fire faster when you move left, others when you move right. A BCI listens to this population vote to figure out where you want to go.",
    "step_by_step": [
-    "Visualize the outer wrinkled layer of the brain, known as the cerebral cortex, which processes higher-level thoughts and actions.",
-    "Locate the strip of tissue running ear-to-ear across the top of the head called the motor cortex, which maps out commands to different body parts.",
-    "Identify language-associated zones, typically found in the left hemisphere for most people, which manage speech production and comprehension.",
-    "Recognize that BCI sensors placed on or inside the skull are positioned to listen closely to these specific functional zones."
+    "1. Neuron Resting State: A resting neuron maintains a difference in electrical charge across its outer membrane, acting like a tiny charged battery.",
+    "2. The Action Potential: When stimulated, tiny gates open up, letting charged ions rush inside. This creates a sudden, sharp electrical spike called an action potential.",
+    "3. Synaptic Transmission: This electrical spike travels down the axon to the next cell, releasing chemical messengers across a small gap called a synapse.",
+    "4. Motor Cortex Organization: Neurons in the motor cortex are arranged in a rough map representing different body parts, with large areas dedicated to high-precision parts like the hands and fingers.",
+    "5. Population Coding: Rather than relying on one cell, the motor cortex uses population coding\u2014combining the individual firing rates of hundreds of cells to determine the exact speed and direction of a movement."
    ],
-   "technical_depth": "The motor cortex is organized topographically, meaning adjacent strips of tissue control adjacent body parts, forming a distorted map known as the motor homunculus. Areas requiring fine motor control, like the hands and mouth, occupy significantly larger chunks of cortical real estate than large muscle groups like the legs or back. For communication-focused BCIs, signals are often gathered from speech motor areas or language networks to decode attempted verbal output or typing intent.",
+   "technical_depth": "At the cellular level, an action potential is triggered when the membrane potential depolarizes past a specific threshold, typically around -55 millivolts, causing voltage-gated sodium channels to open. In BCI applications, we record these spikes using microelectrode arrays implanted directly into the cortical tissue. Because individual spikes can be noisy or prone to cell drift, algorithms often compute a weighted sum of firing rates across a neural ensemble to estimate movement vectors accurately in real time.",
    "misconceptions": [
-    {
-     "myth": "A single thought originates from just one tiny, isolated dot in the brain.",
-     "fact": "Complex actions and communication rely on distributed networks of millions of neurons firing together across multiple interconnected regions."
-    }
+    "Misconception: A single neuron is solely responsible for a specific muscle movement. Fact: Movements are controlled by distributed networks where thousands of neurons contribute overlapping pieces of information.",
+    "Misconception: Neurons physically touch each other to pass signals. Fact: Most neurons communicate chemically across a microscopic synaptic cleft."
    ],
    "knowledge_check": [
     {
-     "question": "Which cortical area is primarily responsible for planning and executing physical movement?",
-     "answer": "The motor cortex."
+     "question": "What is the name of the sharp electrical spike a neuron fires when activated?",
+     "answer": "An action potential."
     },
     {
-     "question": "Why do the hands and fingers take up more space in the motor cortex than the thighs?",
-     "answer": "Body parts requiring intricate, precise movements are allocated a larger physical territory of brain tissue for detailed control."
+     "question": "How do motor cortex neurons represent the direction of a movement?",
+     "answer": "Through population coding, where the combined firing rates of many neurons collectively indicate direction."
     },
     {
-     "question": "What is the primary outer layer of the brain called where these movement and communication areas reside?",
-     "answer": "The cerebral cortex."
+     "question": "Why do BCI systems often record from groups of neurons rather than just one?",
+     "answer": "Because single neurons can be noisy or drift over time, whereas groups of neurons provide a more stable and accurate signal."
     }
    ],
-   "exercise": "Sketch a simple outline of a brain and draw a line indicating where the motor cortex sits. Label which general areas of this strip would coordinate hand movement versus foot movement based on the concept of the motor homunculus.",
-   "summary": "Movement and communication are managed by distinct, specialized neighborhoods within the cerebral cortex, such as the motor cortex and language centers, providing targeted geographic landmarks for placing BCI recording hardware.",
-   "next_lesson": "Day 3: Introduction to Neural Recording Methods",
+   "exercise": "Sketch a simple diagram showing a neuron receiving signals, firing an action potential down its axon, and passing the message to another cell. Label the resting state, threshold, and spike.",
+   "summary": "Neurons communicate via rapid electrical action potentials. The motor cortex organizes these cells to manage voluntary movement, using population coding so that BCI systems can translate team-level neural firing into precise digital motion.",
+   "next_lesson": "Introduction to invasive recording hardware like microelectrode arrays",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Structure a 60-second robotics project pitch using the Problem-Action-Result format",
-   "explanation": "When an internship interviewer in India asks you to talk about your project, rambling loses their attention. A clear 60-second pitch has three parts: the real-world problem you tackled, the specific hardware and software tools you implemented, and the honest, factual result or limitation you observed.",
-   "practical_example": "Instead of saying 'I built an amazing autonomous rescue robot that never fails', say 'Our college lab needed a way to map small indoor spaces. I programmed an ESP32 microcontroller and an ultrasonic sensor using Embedded C to detect walls and avoid obstacles. While it occasionally missed narrow corners, it successfully mapped a simple room layout.'",
-   "exercise": "Write down a 60-second script for your own robotics, BCI, or embedded systems project. Split it into three sentences: one for the problem, one for your actions, and one for the actual result.",
-   "model_answer": "Problem: My student project needed to read raw brainwave signals to test simple control commands. Action: I used an Arduino and a basic EEG sensor, writing code to filter out power line noise using a software bandpass filter. Result: While noise still interfered during sudden movements, I successfully managed to detect steady-state concentration spikes to turn an LED on and off.",
-   "why_it_works": "It keeps your introduction grounded in reality. Interviewers respect honest descriptions of what your code and hardware actually achieved rather than exaggerated claims.",
-   "improvement_tip": "Time yourself with a stopwatch while reading your script aloud to ensure it stays well under the 60-second mark.",
+   "topic": "Debug a robot sensor scenario using symptoms and hypotheses",
+   "explanation": "When a robot's distance sensor gives erratic readings during a lab test, guessing randomly wastes precious time. A systematic debugging method relies on observing the exact symptom, forming a logical hypothesis about why it is failing, and testing that single assumption before moving on.",
+   "practical_example": "Imagine an ultrasonic distance sensor on a mobile robot keeps reporting zero centimeters, even when the robot is clearly far away from any walls.",
+   "exercise": "List two different hypotheses for why the ultrasonic sensor is reporting zero centimeters, and write down a quick test for each hypothesis.",
+   "model_answer": "Hypothesis 1: The signal wire is loose on the microcontroller pin. Test: Gently wiggle the jumper wire while watching the serial monitor to see if valid numbers appear. Hypothesis 2: The operating voltage is too low due to a weak battery drop. Test: Measure the voltage across the sensor's VCC and GND pins with a multimeter to ensure it gets a steady 5 volts.",
+   "why_it_works": "Isolating variables one at a time stops you from making random code changes that might introduce new bugs, ensuring you find the actual physical or logical root cause quickly.",
+   "improvement_tip": "Always check your hardware connections and power supply first before rewriting your sensor reading code.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Use a mini-portfolio narrative in your About section instead of a resume summary",
-   "explanation": "Instead of turning your LinkedIn About section into a boring list of skills or a copy-paste of your resume, use it as a short story that guides the reader directly to your best engineering proof points. For robotics, BCI, and embedded systems students, this means briefly stating what you enjoy building, pointing directly to a specific hardware or software project you completed, and ending with what you want to learn next.",
-   "practical_example": "Instead of writing 'Hardworking engineering student skilled in C++ and microcontrollers looking for internships,' write a short narrative: 'I enjoy connecting software to physical hardware. Recently, I programmed an STM32 microcontroller to read sensor data and display it in real time, which taught me how to handle communication protocols like I2C. I am currently exploring how to apply these embedded skills to brain-computer interface and robotics projects.'",
-   "exercise": "Draft a three-sentence About section for your LinkedIn profile. Sentence one: state your core engineering interest (e.g., embedded systems or robotics). Sentence two: mention one real project tool or hardware component you worked with and what you learned from it. Sentence three: state what type of internship role you are currently seeking in India.",
-   "model_answer": "I am an electronics engineering student focused on embedded systems and robotics. In my last university lab project, I used an Arduino and C++ to build a line-following robot, which helped me understand motor control and debugging sensor noise. I am currently looking for summer 2027 embedded engineering internship opportunities in India where I can help build reliable firmware.",
-   "why_it_works": "It replaces empty buzzwords with factual proof of your hands-on interests and guides the recruiter smoothly from your passion to your actual technical exposure.",
-   "improvement_tip": "Keep your paragraphs short and easy to read on a mobile phone screen, as many recruiters first view LinkedIn profiles on their phones.",
+   "topic": "Writing a Featured Section Project Post Using Problem, Design, Test, and Result",
+   "explanation": "Building on how to structure a project overall, this session focuses specifically on drafting a LinkedIn Featured section post for a robotics or embedded systems project using the Problem, Design, Test, and Result framework. Instead of generic summaries, break your post into four clear paragraphs so recruiters in India can quickly evaluate your hands-on engineering capability.",
+   "practical_example": "For a line-following robot project, write a short post structured as follows: Problem (the robot drifted off the track on sharp curves), Design (used an Arduino Uno, an IR sensor array, and an L298N motor driver with custom PID control logic in C++), Test (ran the robot on a test track 10 times at varying speeds), and Result (successfully completed the track without losing the line at medium speed, as recorded in the attached GitHub repository video).",
+   "exercise": "Draft a four-part post for your own university robotics, BCI, or embedded systems project. Write one sentence for each section: Problem, Design, Test, and Result, using only facts from your actual lab or personal build.",
+   "model_answer": "Problem: Our EEG-based brain-computer interface prototype suffered from excessive noise interference when reading raw alpha waves. Design: We implemented a hardware low-pass filter circuit alongside a digital bandpass filter in Python. Test: We recorded signal readings across 5 trials with and without the filter applied. Result: The filtered output successfully isolated the target frequency band for basic motor imagery detection, as documented in our project repository.",
+   "why_it_works": "Engineering managers and technical recruiters scan LinkedIn profiles quickly. Using the Problem, Design, Test, and Result structure makes your technical thought process transparent, showing you can identify an issue, engineer a solution, validate it with testing, and observe the outcome.",
+   "improvement_tip": "Keep sentences short and avoid buzzwords. Let your specific hardware components, microcontrollers, and software tools tell the engineering story.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Cerebral organoids model human brain development and microcephaly",
-   "focus": "Research design and method",
-   "explanation": "Because the Crossref metadata did not include an abstract, general knowledge of this study shows that the researchers grew human stem cells inside a special gel droplet to support three-dimensional growth, allowing them to create tiny, brain-like structures called cerebral organoids. They also used cells from a patient with microcephaly to see if the organoids would mimic the condition.",
-   "limits": "Since the specific abstract text was missing from the metadata, this explanation relies on general scientific knowledge of the 2013 Lancaster et al. study rather than the exact text of the paper.",
-   "check": "The metadata provided by Crossref was missing the abstract. Therefore, general knowledge was used as instructed, and no specific numbers or unverified results from the text were invented.",
+   "paper": "Cerebral organoids model human brain development and microcephaly (2013)",
+   "focus": "What the experiments showed about brain organoids and microcephaly.",
+   "explanation": "Because the abstract was missing, general knowledge shows that the researchers grew three-dimensional brain-like tissues from human stem cells. They found that these organoids developed different brain regions and mimicked early human brain development. By using cells from a patient with microcephaly (a condition resulting in a smaller head and brain), they demonstrated that the patient's organoids grew significantly smaller due to premature exhaustion of neural stem cells.",
+   "limits": "The provided abstract was empty, so this explanation relies on general scientific knowledge of the 2013 Lancaster et al. Nature paper rather than specific text from the abstract.",
+   "check": {
+    "confidence": "high"
+   },
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature12517",
    "doi_link": "https://doi.org/10.1038/nature12517",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
    "paper": "Brain\u2013computer interfaces for communication and control (Wolpaw 2002)",
-   "focus": "Research design and methods used to study brain-computer interfaces (BCIs).",
-   "explanation": "Because the provided database record lacks an abstract, general knowledge of this paper indicates that it reviews how BCIs translate brain signals\u2014such as EEG activity\u2014into device commands. The research design typically involves evaluating signal acquisition, feature extraction, translation algorithms, and device output to measure how accurately and quickly users can communicate or control items without using muscles.",
-   "limits": "The Crossref abstract was empty, so this explanation relies on general knowledge of the paper's widely known contents rather than specific text from the abstract.",
-   "check": "medium",
+   "focus": "The results and figures of the study, focusing on how well users learned to control brain signals and the main components of a BCI system.",
+   "explanation": "Because the provided abstract is empty, general knowledge of this seminal 2002 paper is used. The paper details how users can learn to modulate their brain waves (like sensorimotor rhythms or P300 potentials) to operate a computer cursor or spelling device. Figures typically illustrate the closed-loop cycle: signal acquisition, feature extraction, translation algorithm, and device output.",
+   "limits": "The exact numerical accuracy rates, speeds, and specific figure contents from the original publication are not included here to avoid inventing unverified data. Confidence is moderate due to the missing abstract.",
+   "check": "The metadata matches the verified Crossref record, and no specific numbers or unverified figures were invented.",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/S1388-2457(02)00057-3",
    "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "2 of 3",
-   "project_name": "navigation2",
-   "topic": "How it works",
-   "explanation": "Based on the repository details and README, Nav2 is the ROS 2 navigation framework written in C++. It relies on a modular architecture pointing to external concepts, guides, and plugins for building and running autonomous mobile robots. The project is actively maintained and supported by Open Navigation alongside corporate sponsors like Dexory, Nvidia, AMD, Polymath Robotics, Stereolabs, 3Laws Robotics, and Staer, which provide hardware, software, and financial backing. Continuous integration and build statuses track its compatibility across different ROS distributions such as Humble, Jazzy, and Lyrical.",
+   "day": "3 of 3",
+   "topic": "Run it in simulation and engineering judgement",
+   "project_name": "ros-navigation/navigation2",
+   "explanation": "On the final day of investigation, the focus shifts to testing the software in a virtual environment, known as simulation, and applying practical engineering judgment based on the provided project details. The project is the ROS 2 Navigation Framework, written primarily in C++, and is heavily supported by various industry sponsors and active community builds across multiple ROS distributions.",
+   "simulation_practice": "In robotics development, running code in simulation before deploying it to physical hardware helps ensure safety and saves time. While we did not physically run this code, standard practice for Nav2 involves launching a simulated robot in a virtual world to test path planning, obstacle avoidance, and mapping.",
+   "engineering_judgement": "Engineering judgment means evaluating the readiness, maintainability, and community backing of a project. For Nav2, the repository shows active status, CI testing, and major corporate backing, indicating it is a robust framework suitable for production robotics, provided the team has experience with ROS 2.",
+   "small_challenge": "Review the documentation links in the README and identify where the getting started guide is located to prepare for a local setup.",
+   "knowledge_check": "What is the primary programming language used for the Navigation2 framework according to the repository metadata?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
-   "challenge": "Review the documentation links provided in the README to identify which guide you would use first to set up Nav2 for a new robot.",
-   "knowledge_check": "What primary programming language is used to build the Navigation2 framework based on the repository metadata?",
    "verified_metadata": {
     "full_name": "ros-navigation/navigation2",
     "html_url": "https://github.com/ros-navigation/navigation2",
     "description": "ROS 2 Navigation Framework and System",
-    "pushed_at": "2026-10-30T22:40:41Z",
+    "pushed_at": "2026-11-02T19:38:36Z",
     "language": "C++",
     "archived": false,
     "license": "NOASSERTION"
@@ -202,22 +204,40 @@
   "jobs": {
    "items": [
     {
-     "title": "Intern Power Electronics Engineer",
+     "title": "Robotics Engineering Intern",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Satigny, Switzerland",
-     "published": "2026-10-30",
+     "location": "Garching",
+     "published": "2026-11-02",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/secheron-s-dot-a/intern-power-electronics-engineer-satigny-254031",
-     "company": "Secheron S Dot A"
+     "url": "https://www.arbeitnow.com/jobs/companies/vetaion-gmbh/robotics-engineering-intern-garching-442817",
+     "company": "Vetaion GmbH"
     },
     {
-     "title": "Embedded Software-Entwickler (m/w/d) Regelungstechnik",
+     "title": "Embedded Software-Architekt C (m/w/x) Funkkommunikation",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Oberkochen , Baden-W\u00fcrttemberg, Deutschland",
-     "published": "2026-11-01",
+     "location": "Berlin",
+     "published": "2026-11-02",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/encontec-gmbh/embedded-software-entwickler-regelungstechnik-oberkochen-252000",
-     "company": "encontec GmbH"
+     "url": "https://www.arbeitnow.com/jobs/companies/k-tronik-gmbh/embedded-software-architekt-c-funkkommunikation-berlin-418368",
+     "company": "K-tronik GmbH"
+    },
+    {
+     "title": "Robotics",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "London",
+     "published": "2026-11-02",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/genesis/robotics-london-178032",
+     "company": "Genesis"
+    },
+    {
+     "title": "Mechatronic Design & Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Z\u00fcrich",
+     "published": "2026-11-02",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/wingtra-2/mechatronic-design-test-engineer-zurich-385014",
+     "company": "Wingtra 2"
     },
     {
      "title": "Staff Software Engineer - Robotics Platform",
@@ -247,49 +267,31 @@
      "company": "Aim Solutions"
     },
     {
-     "title": "Data Operations & Labeling Specialist (All Genders)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Not specified",
-     "published": "2026-11-01",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/skdse/data-operations-labeling-specialist-all-genders-133669",
-     "company": "Skdse"
-    },
-    {
-     "title": "Marketing Automation Engineer",
+     "title": "Robot Learning",
      "type": "vacancy listing (availability not independently verified)",
      "location": "London",
-     "published": "2026-11-01",
+     "published": "2026-11-02",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.co.uk/jobs/companies/privateequityinsights/marketing-automation-engineer-london-419068",
-     "company": "Privateequityinsights"
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/genesis/robot-learning-london-442038",
+     "company": "Genesis"
     },
     {
-     "title": "AI Automation Engineer",
+     "title": "Robot Teleoperation Specialist",
      "type": "vacancy listing (availability not independently verified)",
      "location": "London",
-     "published": "2026-11-01",
+     "published": "2026-11-02",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.co.uk/jobs/companies/privateequityinsights/ai-automation-engineer-london-435673",
-     "company": "Privateequityinsights"
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/genesis/robot-teleoperation-specialist-london-56425",
+     "company": "Genesis"
     },
     {
-     "title": "Systems Engineer  (Excavator Automation)",
+     "title": "Automatiker / Projektbetreuer (w/m)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Zurich",
-     "published": "2026-11-01",
+     "location": "Rotkreuz",
+     "published": "2026-11-02",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/gravis-robotics/systems-engineer-excavator-automation-zurich-5810",
-     "company": "Gravis Robotics"
-    },
-    {
-     "title": "Electronics Engineer",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Freienbach",
-     "published": "2026-10-31",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/3brain-ag/electronics-engineer-freienbach-418073",
-     "company": "3Brain AG"
+     "url": "https://www.arbeitnow.ch/jobs/companies/hardi-personal/automatiker-projektbetreuer-w-m-rotkreuz-470074",
+     "company": "H\u00e4rdi Personal"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",

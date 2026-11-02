@@ -1,0 +1,301 @@
+{
+ "v": 2,
+ "date": "2026-11-03",
+ "generated_at": "2026-11-03T02:45:52.860889+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 968); gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 821); gemini-3.1-flash-lite:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high deman",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand the four main anatomical parts of a brain cell\u2014dendrites, soma, axon, and synapse\u2014and how their physical layout shapes biological computation.",
+   "why_it_matters": "Organoid intelligence relies on brain cells forming networks. Knowing how each part of a neuron handles information allows engineers to design better physical layouts, scaffolds, and listening devices to interface with living tissue.",
+   "prerequisites": "Basic familiarity with living cells and the understanding that brain cells process information using electrical and chemical signals.",
+   "simple_explanation": "Think of a neuron as a specialized biological wire with four functional zones. First, branch-like antennae called dendrites catch incoming messages from other cells. Second, the central cell body, or soma, acts like a processing hub that adds up all the incoming messages. Third, a long, slender cable called an axon carries the outgoing message away from the center. Finally, the tip of the axon meets the next cell at a tiny gap called a synapse, passing the message along.",
+   "step_by_step": [
+    "Visualize the neuron as a directional highway for information, moving strictly from the input zones to the output zones.",
+    "Examine the dendrites: these are tree-like branches spreading outward to maximize the surface area available for catching signals from neighboring cells.",
+    "Trace the signal to the soma: the central body collects the incoming electrical charges. If the total charge reaches a certain threshold, it triggers a strong outgoing pulse.",
+    "Follow the axon: a single long cable that conducts this outgoing pulse away from the soma toward other cells without losing strength.",
+    "Observe the synapse: the microscopic terminal space where the electrical signal pauses, converts into a chemical messenger, and bridges the gap to touch the next cell's dendrite."
+   ],
+   "technical_depth": "Neurons are polarized structures designed for directional signal propagation. The anatomical compartmentalization\u2014dendrites (receptive), soma (integrative), axon (conductive), and synapse (communicative)\u2014ensures that signals flow efficiently through wetware networks. In organoid cultures, tracking these individual structures is challenging because cells grow in dense, tangled three-dimensional clumps rather than flat, orderly layers.",
+   "misconceptions": [
+    "Misconception: All parts of a neuron send signals in every direction equally. Fact: Signals flow in a strict, polarized path from dendrites to soma, down the axon, and across the synapse.",
+    "Misconception: Neurons are simple round cells with a few short hairs. Fact: They have highly specialized, asymmetric shapes with extremely long, thin extensions tailored for specific physical tasks."
+   ],
+   "knowledge_check": [
+    {
+     "question": "Which part of the neuron is primarily responsible for receiving incoming messages?",
+     "answer": "Dendrites."
+    },
+    {
+     "question": "What is the function of the soma?",
+     "answer": "It acts as the central cell body that integrates incoming signals."
+    },
+    {
+     "question": "Where do neurons pass messages to one another?",
+     "answer": "At the synapse, which is the microscopic gap between cells."
+    }
+   ],
+   "exercise": "Draw a simple diagram of a neuron on paper. Label the four main parts (dendrites, soma, axon, synapse) and use arrows to show the single direction that information travels through the cell.",
+   "summary": "A neuron is split into distinct physical zones: dendrites collect inputs, the soma integrates them, the axon transmits the outgoing pulse, and the synapse passes the message to the next neighbor.",
+   "next_lesson": "Day 4: How brain cells generate electrical spikes.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how individual neurons fire action potentials and how large populations in the motor cortex coordinate to drive voluntary movement for BCI control.",
+   "why_it_matters": "BCIs that restore movement rely on decoding the collective electrical activity of motor cortex cells. Knowing how single cells generate electrical spikes and how groups of cells represent direction allows us to turn physical intent into smooth digital commands.",
+   "prerequisites": [
+    "Basic knowledge of brain anatomy and the cerebral cortex",
+    "Understanding that brain activity generates measurable electrical currents"
+   ],
+   "simple_explanation": "Inside your brain, nerve cells called neurons communicate using tiny electrical pulses. When you decide to move your arm, a specific neighborhood called the motor cortex sends these electrical signals down to your muscles. Instead of a single neuron telling a muscle to move, a large team of neurons votes together. Some fire faster when you move left, others when you move right. A BCI listens to this population vote to figure out where you want to go.",
+   "step_by_step": [
+    "1. Neuron Resting State: A resting neuron maintains a difference in electrical charge across its outer membrane, acting like a tiny charged battery.",
+    "2. The Action Potential: When stimulated, tiny gates open up, letting charged ions rush inside. This creates a sudden, sharp electrical spike called an action potential.",
+    "3. Synaptic Transmission: This electrical spike travels down the axon to the next cell, releasing chemical messengers across a small gap called a synapse.",
+    "4. Motor Cortex Organization: Neurons in the motor cortex are arranged in a rough map representing different body parts, with large areas dedicated to high-precision parts like the hands and fingers.",
+    "5. Population Coding: Rather than relying on one cell, the motor cortex uses population coding\u2014combining the individual firing rates of hundreds of cells to determine the exact speed and direction of a movement."
+   ],
+   "technical_depth": "At the cellular level, an action potential is triggered when the membrane potential depolarizes past a specific threshold, typically around -55 millivolts, causing voltage-gated sodium channels to open. In BCI applications, we record these spikes using microelectrode arrays implanted directly into the cortical tissue. Because individual spikes can be noisy or prone to cell drift, algorithms often compute a weighted sum of firing rates across a neural ensemble to estimate movement vectors accurately in real time.",
+   "misconceptions": [
+    "Misconception: A single neuron is solely responsible for a specific muscle movement. Fact: Movements are controlled by distributed networks where thousands of neurons contribute overlapping pieces of information.",
+    "Misconception: Neurons physically touch each other to pass signals. Fact: Most neurons communicate chemically across a microscopic synaptic cleft."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the name of the sharp electrical spike a neuron fires when activated?",
+     "answer": "An action potential."
+    },
+    {
+     "question": "How do motor cortex neurons represent the direction of a movement?",
+     "answer": "Through population coding, where the combined firing rates of many neurons collectively indicate direction."
+    },
+    {
+     "question": "Why do BCI systems often record from groups of neurons rather than just one?",
+     "answer": "Because single neurons can be noisy or drift over time, whereas groups of neurons provide a more stable and accurate signal."
+    }
+   ],
+   "exercise": "Sketch a simple diagram showing a neuron receiving signals, firing an action potential down its axon, and passing the message to another cell. Label the resting state, threshold, and spike.",
+   "summary": "Neurons communicate via rapid electrical action potentials. The motor cortex organizes these cells to manage voluntary movement, using population coding so that BCI systems can translate team-level neural firing into precise digital motion.",
+   "next_lesson": "Introduction to invasive recording hardware like microelectrode arrays",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Debug a robot sensor scenario using symptoms and hypotheses",
+   "explanation": "When a robot's distance sensor gives erratic readings during a lab test, guessing randomly wastes precious time. A systematic debugging method relies on observing the exact symptom, forming a logical hypothesis about why it is failing, and testing that single assumption before moving on.",
+   "practical_example": "Imagine an ultrasonic distance sensor on a mobile robot keeps reporting zero centimeters, even when the robot is clearly far away from any walls.",
+   "exercise": "List two different hypotheses for why the ultrasonic sensor is reporting zero centimeters, and write down a quick test for each hypothesis.",
+   "model_answer": "Hypothesis 1: The signal wire is loose on the microcontroller pin. Test: Gently wiggle the jumper wire while watching the serial monitor to see if valid numbers appear. Hypothesis 2: The operating voltage is too low due to a weak battery drop. Test: Measure the voltage across the sensor's VCC and GND pins with a multimeter to ensure it gets a steady 5 volts.",
+   "why_it_works": "Isolating variables one at a time stops you from making random code changes that might introduce new bugs, ensuring you find the actual physical or logical root cause quickly.",
+   "improvement_tip": "Always check your hardware connections and power supply first before rewriting your sensor reading code.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Writing a Featured Section Project Post Using Problem, Design, Test, and Result",
+   "explanation": "Building on how to structure a project overall, this session focuses specifically on drafting a LinkedIn Featured section post for a robotics or embedded systems project using the Problem, Design, Test, and Result framework. Instead of generic summaries, break your post into four clear paragraphs so recruiters in India can quickly evaluate your hands-on engineering capability.",
+   "practical_example": "For a line-following robot project, write a short post structured as follows: Problem (the robot drifted off the track on sharp curves), Design (used an Arduino Uno, an IR sensor array, and an L298N motor driver with custom PID control logic in C++), Test (ran the robot on a test track 10 times at varying speeds), and Result (successfully completed the track without losing the line at medium speed, as recorded in the attached GitHub repository video).",
+   "exercise": "Draft a four-part post for your own university robotics, BCI, or embedded systems project. Write one sentence for each section: Problem, Design, Test, and Result, using only facts from your actual lab or personal build.",
+   "model_answer": "Problem: Our EEG-based brain-computer interface prototype suffered from excessive noise interference when reading raw alpha waves. Design: We implemented a hardware low-pass filter circuit alongside a digital bandpass filter in Python. Test: We recorded signal readings across 5 trials with and without the filter applied. Result: The filtered output successfully isolated the target frequency band for basic motor imagery detection, as documented in our project repository.",
+   "why_it_works": "Engineering managers and technical recruiters scan LinkedIn profiles quickly. Using the Problem, Design, Test, and Result structure makes your technical thought process transparent, showing you can identify an issue, engineer a solution, validate it with testing, and observe the outcome.",
+   "improvement_tip": "Keep sentences short and avoid buzzwords. Let your specific hardware components, microcontrollers, and software tools tell the engineering story.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly (2013)",
+   "focus": "What the experiments showed about brain organoids and microcephaly.",
+   "explanation": "Because the abstract was missing, general knowledge shows that the researchers grew three-dimensional brain-like tissues from human stem cells. They found that these organoids developed different brain regions and mimicked early human brain development. By using cells from a patient with microcephaly (a condition resulting in a smaller head and brain), they demonstrated that the patient's organoids grew significantly smaller due to premature exhaustion of neural stem cells.",
+   "limits": "The provided abstract was empty, so this explanation relies on general scientific knowledge of the 2013 Lancaster et al. Nature paper rather than specific text from the abstract.",
+   "check": {
+    "confidence": "high"
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature12517",
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Brain\u2013computer interfaces for communication and control (Wolpaw 2002)",
+   "focus": "The results and figures of the study, focusing on how well users learned to control brain signals and the main components of a BCI system.",
+   "explanation": "Because the provided abstract is empty, general knowledge of this seminal 2002 paper is used. The paper details how users can learn to modulate their brain waves (like sensorimotor rhythms or P300 potentials) to operate a computer cursor or spelling device. Figures typically illustrate the closed-loop cycle: signal acquisition, feature extraction, translation algorithm, and device output.",
+   "limits": "The exact numerical accuracy rates, speeds, and specific figure contents from the original publication are not included here to avoid inventing unverified data. Confidence is moderate due to the missing abstract.",
+   "check": "The metadata matches the verified Crossref record, and no specific numbers or unverified figures were invented.",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "3 of 3",
+   "topic": "Run it in simulation and engineering judgement",
+   "project_name": "ros-navigation/navigation2",
+   "explanation": "On the final day of investigation, the focus shifts to testing the software in a virtual environment, known as simulation, and applying practical engineering judgment based on the provided project details. The project is the ROS 2 Navigation Framework, written primarily in C++, and is heavily supported by various industry sponsors and active community builds across multiple ROS distributions.",
+   "simulation_practice": "In robotics development, running code in simulation before deploying it to physical hardware helps ensure safety and saves time. While we did not physically run this code, standard practice for Nav2 involves launching a simulated robot in a virtual world to test path planning, obstacle avoidance, and mapping.",
+   "engineering_judgement": "Engineering judgment means evaluating the readiness, maintainability, and community backing of a project. For Nav2, the repository shows active status, CI testing, and major corporate backing, indicating it is a robust framework suitable for production robotics, provided the team has experience with ROS 2.",
+   "small_challenge": "Review the documentation links in the README and identify where the getting started guide is located to prepare for a local setup.",
+   "knowledge_check": "What is the primary programming language used for the Navigation2 framework according to the repository metadata?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-11-02T19:38:36Z",
+    "language": "C++",
+    "archived": false,
+    "license": "NOASSERTION"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Research",
+     "url": "https://www.therobotreport.com/28-zero-day-findings-in-less-than-two-days-what-ai-speed-discovery-means-for-robotics/",
+     "what": "Security researchers used AI to uncover 28 software vulnerabilities in less than 48 hours.",
+     "who": "VicOne",
+     "how": "The team used AI-assisted research tools to scan software supporting the physical AI ecosystem. Background (general knowledge): A zero-day finding refers to a security flaw that is unknown to the software developers, leaving systems vulnerable until a fix is created.",
+     "why": "To identify security weaknesses more quickly within complex robotics software.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Artificial intelligence can significantly accelerate the identification of security risks in robotic systems.",
+     "title": "28 Zero-Day Findings in Less Than Two Days: What AI-Speed Discovery Means for Robotics",
+     "published": "2026-11-01",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/solving-the-interconnect-challenge-in-modern-robotics-how-3m-is-engineering-for-motion-density-and-uptime/",
+     "what": "Mechanical and electrical connectors are becoming more critical as robots become faster and more data-reliant.",
+     "who": "3M",
+     "how": "Engineering components specifically for high-speed motion, component density, and reliable continuous operation. Background (general knowledge): An interconnect is the physical link, such as cables or connectors, that allows different electronic parts of a robot to communicate.",
+     "why": "Modern robots rely heavily on AI-driven vision and control systems that require robust data connections.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Hardware physical reliability is a primary constraint for the development of advanced robotic capabilities.",
+     "title": "Solving the Interconnect Challenge in Modern Robotics: How 3M Is Engineering for Motion, Density, and Uptime",
+     "published": "2026-11-01",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Research",
+     "url": "https://robohub.org/robot-talk-episode-168-advancing-robotics-with-novel-electronics-with-zlatka-stoeva/",
+     "what": "The development of flexible, stretchable, and soft printed electronics.",
+     "who": "Zlatka Stoeva (DZP Technologies)",
+     "how": "Utilizing specialized advanced materials developed through chemistry to create electronics that can bend or stretch. Background (general knowledge): Flexible electronics allow robots to have skin-like sensors or soft limbs that are more capable of interacting safely with humans.",
+     "why": "To enable more dexterous and capable robots.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Advancements in material science are changing how robots are built at the component level.",
+     "title": "Robot Talk Episode 168 \u2013 Advancing robotics with novel electronics, with Zlatka Stoeva",
+     "published": "2026-10-30",
+     "source": "Robohub",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Robotics Engineering Intern",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Garching",
+     "published": "2026-11-02",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/vetaion-gmbh/robotics-engineering-intern-garching-442817",
+     "company": "Vetaion GmbH"
+    },
+    {
+     "title": "Embedded Software-Architekt C (m/w/x) Funkkommunikation",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Berlin",
+     "published": "2026-11-02",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/k-tronik-gmbh/embedded-software-architekt-c-funkkommunikation-berlin-418368",
+     "company": "K-tronik GmbH"
+    },
+    {
+     "title": "Robotics",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "London",
+     "published": "2026-11-02",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/genesis/robotics-london-178032",
+     "company": "Genesis"
+    },
+    {
+     "title": "Mechatronic Design & Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Z\u00fcrich",
+     "published": "2026-11-02",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/wingtra-2/mechatronic-design-test-engineer-zurich-385014",
+     "company": "Wingtra 2"
+    },
+    {
+     "title": "Staff Software Engineer - Robotics Platform",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Zurich",
+     "published": "2026-11-01",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/gravis-robotics/staff-software-engineer-robotics-platform-zurich-200464",
+     "company": "Gravis Robotics"
+    },
+    {
+     "title": "Software Engineer II - Embedded Platform",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Den Bosch",
+     "published": "2026-11-01",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/hudl/software-engineer-ii-embedded-platform-den-bosch-78831",
+     "company": "Hudl"
+    },
+    {
+     "title": "Embedded Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Headquarter",
+     "published": "2026-10-31",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/aim-solutions/embedded-engineer-eindhoven-135627",
+     "company": "Aim Solutions"
+    },
+    {
+     "title": "Robot Learning",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "London",
+     "published": "2026-11-02",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/genesis/robot-learning-london-442038",
+     "company": "Genesis"
+    },
+    {
+     "title": "Robot Teleoperation Specialist",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "London",
+     "published": "2026-11-02",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/genesis/robot-teleoperation-specialist-london-56425",
+     "company": "Genesis"
+    },
+    {
+     "title": "Automatiker / Projektbetreuer (w/m)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Rotkreuz",
+     "published": "2026-11-02",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/hardi-personal/automatiker-projektbetreuer-w-m-rotkreuz-470074",
+     "company": "H\u00e4rdi Personal"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
