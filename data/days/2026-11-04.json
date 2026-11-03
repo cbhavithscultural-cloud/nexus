@@ -1,0 +1,244 @@
+{
+ "v": 2,
+ "date": "2026-11-04",
+ "generated_at": "2026-11-04T02:48:16.987107+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how membrane voltage and ion gradients work in brain cells from first principles, specifically focusing on the distribution of sodium and potassium ions.",
+   "why_it_matters": "Organoid intelligence relies on living neural tissue. To understand or influence how lab-grown brain cells compute information, we must understand the chemical and electrical forces that charge these cellular batteries.",
+   "prerequisites": [
+    "Basic awareness that cells have an outer wall (membrane) separating inside from outside.",
+    "Familiarity with atomic charges, specifically positive and negative ions."
+   ],
+   "simple_explanation": "Imagine a brain cell as a tiny battery. The cell wall keeps different types of charged particles\u2014mostly sodium and potassium\u2014segregated between the inside and the outside. Because there are more positive charges on the outside and fewer on the inside, the interior stays negatively charged at rest. This difference in charge is called membrane voltage.",
+   "step_by_step": [
+    "Step 1: Look at the cell membrane, a fatty barrier that blocks charged particles from freely crossing.",
+    "Step 2: Observe the unequal distribution of ions: potassium ions (positively charged) are heavily concentrated inside the cell, while sodium ions (also positively charged) are heavily concentrated outside.",
+    "Step 3: Tiny protein gateways called leak channels allow a small number of potassium ions to drift outward, leaving behind trapped negative molecules inside the cell.",
+    "Step 4: Specialized molecular protein pumps actively work to push leaked sodium back out and potassium back in, maintaining the resting state.",
+    "Step 5: The resulting voltage difference across the membrane stays stable until an external trigger disturbs it."
+   ],
+   "technical_depth": "At rest, a typical mammalian neuron maintains a membrane potential of roughly -70 millivolts. This state is governed by the Goldman-Hodgkin-Katz equation and maintained largely by the Na+/K+-ATPase pump, which consumes cellular energy (ATP) to move three sodium ions out for every two potassium ions brought in. While leak channels permit passive diffusion down electrochemical gradients, the high resting permeability to potassium primarily sets the negative resting potential.",
+   "misconceptions": [
+    "Misconception: The cell interior is packed with negative ions. Correction: The interior contains plenty of positive potassium ions, but it also contains trapped, large negative proteins, and the overall net charge difference near the membrane is what creates the negative voltage.",
+    "Misconception: Ions cross the membrane freely at all times. Correction: The lipid bilayer is impermeable to ions; they must cross via specific protein channels or pumps."
+   ],
+   "knowledge_check": [
+    {
+     "question": "Which ion is found in higher concentrations inside a resting neuron compared to the outside?",
+     "answer": "Potassium (K+)."
+    },
+    {
+     "question": "What protein structure actively uses energy to reset ion concentrations?",
+     "answer": "The sodium-potassium pump (Na+/K+-ATPase)."
+    },
+    {
+     "question": "Why does a resting neuron maintain a negative internal voltage?",
+     "answer": "Due to the unequal distribution of ions across the membrane and the outward drift of positive potassium ions through leak channels, leaving negative charges behind."
+    }
+   ],
+   "exercise": "Draw a simple circle representing a cell. Label the inside and outside. Place sodium ions mostly on the outside and potassium ions mostly on the inside, then draw arrows showing how leak channels and pumps move them.",
+   "summary": "Membrane voltage and ion gradients form the baseline energy state of every neural cell. By managing chemical concentrations of sodium and potassium across a fatty wall, neurons maintain a negative resting charge ready to respond to signals.",
+   "next_lesson": "Day 5: Action potentials and how signals travel down the axon.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how electrical current flows from active brain cells through the head tissues to reach recording sensors, a phenomenon known as volume conduction.",
+   "why_it_matters": "Knowing how electrical signals travel through brain tissue, spinal fluid, and the skull helps BCI engineers figure out why signals recorded at the surface look blurry or weaker compared to signals recorded directly on the brain.",
+   "prerequisites": [
+    "Basic understanding of how neurons generate tiny electrical charges",
+    "Familiarity with the idea that brain signals travel outward to sensors"
+   ],
+   "simple_explanation": "Imagine dropping a stone into a pond. The ripples spread out across the entire surface of the water, not just in one straight line. In the same way, when a group of brain cells fires an electrical charge, that electricity spreads in all directions through the surrounding fluid, brain tissue, and bone. This spreading effect is called volume conduction. By the time the signal reaches a sensor on the scalp or an implant inside the head, it has mixed with signals from other areas, making it look wider and fuzzier than it did at its source.",
+   "step_by_step": [
+    "Neurons generate an electrical charge when active.",
+    "This electricity enters the salty fluid surrounding the cells and moves outward in three dimensions.",
+    "The electrical current passes through different layers of tissue, including the brain membrane, cerebrospinal fluid, skull, and scalp.",
+    "Each layer resists the electrical flow differently, with the skull acting as a strong insulator that blurs the signal.",
+    "Sensors capture the final blended and weakened result of this widespread electrical travel."
+   ],
+   "technical_depth": "Volume conduction is governed by physics principles similar to electric fields in a resistor-capacitor network. Because the human head is a heterogeneous volume conductor with varying electrical conductivities (e.g., cerebrospinal fluid is very conductive, while the skull has high electrical resistance), scalp electrodes measure a spatial average of many distant neural sources rather than a single pinpointed neuron. This creates the inverse problem: trying to mathematically reconstruct the original deep brain sources from mixed surface recordings.",
+   "misconceptions": [
+    "Misconception: A scalp electrode only measures the brain tissue directly underneath it. Reality: Volume conduction causes a single scalp sensor to pick up blended signals from wide areas of the brain.",
+    "Misconception: Electricity travels instantly and without loss through the head. Reality: Different layers of tissue weaken and scatter the electrical signal significantly before it reaches any sensor."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is volume conduction?",
+     "answer": "The spreading of electrical current from active brain cells outward through surrounding tissues and fluids."
+    },
+    {
+     "question": "Which head layer acts as a major electrical insulator that blurs scalp signals?",
+     "answer": "The skull."
+    },
+    {
+     "question": "Why do scalp sensors capture mixed signals instead of single-neuron activity?",
+     "answer": "Because volume conduction blends electrical currents from many different brain regions together by the time they reach the surface."
+    }
+   ],
+   "exercise": "Take a bowl of water and gently tap the surface in one spot with your finger to create ripples. Observe how the wave spreads out across the entire bowl and loses its sharp point. Relate this visual spreading effect to how electrical signals travel from neurons through head tissue to reach a BCI sensor.",
+   "summary": "Volume conduction explains how electrical signals spread outward from active brain cells through the head, causing signals at the sensors to appear weaker and more blended due to the varying resistance of intervening tissues like the skull.",
+   "next_lesson": "Introduction to signal filtering techniques to isolate clean neural data",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Avoiding null pointer dereferences and buffer overflows in embedded C",
+   "explanation": "When writing C code for a microcontroller in a robot or brain-computer interface, memory safety is critical. A null pointer points to address zero, which does not hold valid data, and trying to read or write to it crashes the program. A buffer overflow happens when you write past the end of an array, overwriting important memory used by other variables. Interviewers ask about this to ensure your code will not crash unexpectedly during operation.",
+   "practical_example": "Imagine your robot has an array of five sensor readings, but your loop tries to save a sixth reading into the array. That extra data spills over into neighboring memory, corrupting variables like your motor speed settings and causing the robot to drive wildly out of control.",
+   "exercise": "Look at a short C function that copies incoming neural signal data from a temporary buffer into a fixed-size storage array. Find the missing bounds check that could cause a buffer overflow, and add a safe check to ensure the index never exceeds the array size.",
+   "model_answer": "You must add an if statement before copying the data, checking that the current index is strictly less than the maximum size of the target array, and also verifying that the pointer is not NULL before dereferencing it.",
+   "why_it_works": "Adding explicit checks prevents the program from writing outside allocated memory or attempting to access invalid addresses, stopping crashes before they happen on physical hardware.",
+   "improvement_tip": "Always define array sizes using uppercase macros or 'const' variables rather than hardcoding numbers, making it easier to update limits safely across your codebase.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Adding a hardware bill of materials and wiring guide to your GitHub README",
+   "explanation": "When an engineering recruiter or hiring manager clicks your GitHub link from your LinkedIn profile, they need to know what physical components are required to build your project. For robotics, BCI, and embedded systems, a README must clearly list the exact microcontrollers, sensors, and wiring connections so someone else can replicate your hardware setup.",
+   "practical_example": "Instead of just writing 'used an EEG headset and an Arduino', list the exact components like 'Arduino Uno, OpenBCI Cyton board, and jumper wires' along with a simple pinout mapping table showing which pin connects to where.",
+   "exercise": "Open the GitHub repository for your best robotics, BCI, or embedded project. Add a new section titled 'Bill of Materials & Wiring' to your README, listing your hardware parts and a basic connection guide based strictly on your actual build notes.",
+   "model_answer": "## Bill of Materials & Wiring\n- **Microcontroller:** STM32 Nucleo-F446RE\n- **Sensor:** MPU6050 Accelerometer/Gyroscope\n- **Connections:** Connect the MPU6050 VCC to 3.3V, GND to GND, SCL to PB8, and SDA to PB9.",
+   "why_it_works": "It proves to engineering recruiters that you understand the physical integration side of embedded systems and robotics, not just writing abstract software code.",
+   "improvement_tip": "If you used a custom PCB or a specific breadboard layout, include a clear photo or exported schematic image right next to your text list.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
+   "focus": "Growing tiny, three-dimensional brain-like tissues from human stem cells to study how the brain develops and what goes wrong in microcephaly.",
+   "explanation": "Scientists used human stem cells to grow small brain structures in the lab. They wanted to see if these organoids could mimic real early human brain growth. By using cells from a patient with microcephaly (a condition where the head and brain are smaller), they could study the disease up close.",
+   "limits": "The abstract was not available in the database, so this explanation relies on general scientific knowledge about this famous study rather than specific text from the paper.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature12517",
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "4 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Brain\u2013computer interfaces for communication and control",
+   "focus": "Engineering methods, technical limits, and ethical considerations of brain-computer interfaces.",
+   "explanation": "This paper looks at how we can build systems that let people communicate and control devices using brain signals, while also considering what stops these systems from working better and the moral issues involved.",
+   "limits": "Technical hurdles include reading brain signals accurately through the skull and scalp, and the fact that using these systems can be slow and tiring for the user. Since the abstract was not available, these limits are based on general knowledge of the paper's known themes.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "4 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "TurtleBot3",
+   "repository": "ROBOTIS-GIT/turtlebot3",
+   "summary": "This project provides the software packages needed to run TurtleBot3, a popular small robot used for learning and working with the Robot Operating System (ROS). It uses C++, is actively maintained, and is shared under an Apache 2.0 license.",
+   "key_findings": [
+    "The codebase is primarily written in C++.",
+    "It supports modern ROS versions like Humble and Jazzy, alongside older versions.",
+    "It connects to a larger ecosystem of tools, including simulation software, sensor drivers, and machine learning packages."
+   ],
+   "beginner_friendly_explanation": "Imagine building a smart robot car. Instead of writing every single line of code from scratch to make the wheels turn or sensors read distances, you use a collection of pre-made code tools called ROS packages. This repository contains those core tools specifically designed for the TurtleBot3 robot.",
+   "challenge": "Explore the list of related open-source projects in the repository description and identify which ones might be used if you wanted to test the robot virtually instead of with physical hardware.",
+   "knowledge_check": "What primary programming language is used in this repository based on the provided metadata?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ROBOTIS-GIT/turtlebot3",
+    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+    "description": "ROS packages for Turtlebot3",
+    "pushed_at": "2026-06-15T11:50:39Z",
+    "language": "C++",
+    "archived": false,
+    "license": "Apache-2.0"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/new-iso-interoperability-standard-covers-collaboration-among-mobile-robots-from-multiple-vendors/",
+     "what": "A new international standard, ISO 21423:2026, has been established.",
+     "who": "ISO (International Organization for Standardization)",
+     "how": "It provides a common framework for communication and coordination between mobile robots made by different companies. Background (general knowledge): Standardizing how robots talk to each other is essential for running fleets made of robots from different manufacturers in the same building.",
+     "why": "To enable robots from various vendors to work together effectively.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The industry is moving toward open communication protocols for mobile robots.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "New ISO interoperability standard covers collaboration among mobile robots from multiple vendors",
+     "published": "2026-11-03",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/agility-robotics-shareholders-approve-25b-humanoid-spac/",
+     "what": "Shareholders approved a deal to take Agility Robotics public through a special purpose acquisition company (SPAC).",
+     "who": "Agility Robotics and Churchill Capital XI",
+     "how": "The deal will generate roughly $465 million to support the scaling of their humanoid robot, Digit, for use in industrial settings.",
+     "why": "To provide capital for growing the deployment of humanoid robots.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Humanoid robotics companies are attracting significant financial investment for industrial scaling.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Churchill Capital XI shareholders approve $2.5B Agility Robotics humanoid SPAC",
+     "published": "2026-11-03",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Research",
+     "url": "https://robohub.org/muscle-coordination-can-be-mimicked-by-electric-motors-it-could-lead-to-improved-robots/",
+     "what": "Researchers found that muscle coordination patterns can be recreated using electric motors.",
+     "who": "Not stated in the source excerpt",
+     "how": "By observing how muscle fibers naturally coordinate, this movement can be applied to motor systems. Background (general knowledge): Biological systems use complex signaling to coordinate muscle groups; mimicking this in robotics could lead to more fluid and efficient movement.",
+     "why": "To potentially improve the performance and movement of robotic systems.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Biological movement principles can inform engineering designs for robotic hardware.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Muscle coordination can be mimicked by electric motors \u2013 it could lead to improved robots",
+     "published": "2026-11-02",
+     "source": "Robohub"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Test Engineer (f/m/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Not specified",
+     "published": "2026-11-03",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/think-cell/test-engineer-324787",
+     "company": "Think Cell"
+    },
+    {
+     "title": "Homologation & Certification Engineer, Energy Systems",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Nyon",
+     "published": "2026-11-03",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/eh-energy/homologation-certification-engineer-energy-systems-nyon-202443",
+     "company": "Eh Energy"
+    },
+    {
+     "title": "Product Certification Engineer, Fuel Cell Systems",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Nyon",
+     "published": "2026-11-03",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/eh-energy/product-certification-engineer-fuel-cell-systems-nyon-62290",
+     "company": "Eh Energy"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
