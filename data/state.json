@@ -1,20 +1,20 @@
 {
- "oi": 4,
- "bci": 4,
+ "oi": 5,
+ "bci": 5,
  "po": [
-  0,
-  5
+  1,
+  1
  ],
  "pb": [
-  0,
-  5
+  1,
+  1
  ],
  "gh": [
   1,
-  2
+  3
  ],
- "ip": 4,
- "li": 4,
+ "ip": 5,
+ "li": 5,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -52,6 +52,9 @@
   "https://robohub.org/robot-talk-episode-168-advancing-robotics-with-novel-electronics-with-zlatka-stoeva/",
   "https://www.therobotreport.com/new-iso-interoperability-standard-covers-collaboration-among-mobile-robots-from-multiple-vendors/",
   "https://www.therobotreport.com/agility-robotics-shareholders-approve-25b-humanoid-spac/",
-  "https://robohub.org/muscle-coordination-can-be-mimicked-by-electric-motors-it-could-lead-to-improved-robots/"
+  "https://robohub.org/muscle-coordination-can-be-mimicked-by-electric-motors-it-could-lead-to-improved-robots/",
+  "https://www.therobotreport.com/liberai-unveils-liber-0-a-world-action-model-that-grounds-human-experience-in-robot-action/",
+  "https://www.therobotreport.com/tutor-intelligence-raises-series-b-to-scale-model-training-robot-deployments/",
+  "https://www.therobotreport.com/gentherm-designs-thermaffyx-protect-move-patients-during-robotic-surgeries/"
  ]
 }
