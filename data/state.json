@@ -1,20 +1,20 @@
 {
- "oi": 5,
- "bci": 5,
+ "oi": 6,
+ "bci": 6,
  "po": [
   1,
-  1
+  2
  ],
  "pb": [
   1,
-  1
+  2
  ],
  "gh": [
-  1,
-  3
+  2,
+  1
  ],
- "ip": 5,
- "li": 5,
+ "ip": 6,
+ "li": 6,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -55,6 +55,9 @@
   "https://robohub.org/muscle-coordination-can-be-mimicked-by-electric-motors-it-could-lead-to-improved-robots/",
   "https://www.therobotreport.com/liberai-unveils-liber-0-a-world-action-model-that-grounds-human-experience-in-robot-action/",
   "https://www.therobotreport.com/tutor-intelligence-raises-series-b-to-scale-model-training-robot-deployments/",
-  "https://www.therobotreport.com/gentherm-designs-thermaffyx-protect-move-patients-during-robotic-surgeries/"
+  "https://www.therobotreport.com/gentherm-designs-thermaffyx-protect-move-patients-during-robotic-surgeries/",
+  "https://www.therobotreport.com/chinese-regulators-block-softbanks-5-4b-acquisition-of-abb-robotics/",
+  "https://www.therobotreport.com/agility-robotics-begins-trading-on-nasdaq/",
+  "https://www.therobotreport.com/how-ambi-robotics-helps-customers-prepare-peak-season/"
  ]
 }

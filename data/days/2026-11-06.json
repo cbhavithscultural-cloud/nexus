@@ -1,0 +1,284 @@
+{
+ "v": 2,
+ "date": "2026-11-06",
+ "generated_at": "2026-11-06T02:48:17.957203+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Explore how neurotransmitters act as molecular keys to pass messages across synapses, and examine how lab-grown organoids utilize these same chemical messengers.",
+   "why_it_matters": "Understanding synaptic transmission is essential for organoid intelligence because it explains how lab-grown neural networks talk to each other and process information chemically rather than just through electrical wires.",
+   "prerequisites": "Basic familiarity with how neurons are structured and how electrical signals travel down the main fiber of a brain cell.",
+   "simple_explanation": "Imagine two friends trying to pass a note across a wide stream where they cannot reach each other. The first friend writes a message and places it in a tiny floating capsule. This capsule drifts across the water to the other side, where a waiting friend opens it and reads the instructions. In the brain, neurons use tiny chemical molecules called neurotransmitters to cross the microscopic gap between them, acting like specialized mail delivery between cells.",
+   "step_by_step": [
+    "An electrical wave travels down the sending cell until it reaches the very end of the fiber.",
+    "This wave triggers tiny stored packages, called vesicles, to move and fuse with the outer wall of the cell.",
+    "The packages release their chemical cargo into the narrow gap, known as the synaptic cleft, between the two cells.",
+    "The chemical molecules drift across the gap and lock onto specific proteins, called receptors, on the receiving cell's surface.",
+    "This locking action opens tiny gates on the receiving cell, letting charged particles flow inside to either start or stop a new electrical wave."
+   ],
+   "technical_depth": "At the molecular level, arriving electrical changes prompt calcium ions to rush into the terminal, driving SNARE proteins to mediate vesicle fusion. Once released, neurotransmitters like glutamate or GABA bind to ionotropic or metabotropic receptors, rapidly altering postsynaptic membrane potential or initiating intracellular signaling cascades. In neural organoids, verifying that these chemical pathways function normally is a key benchmark for assessing wetware computing capability.",
+   "misconceptions": [
+    "Misconception: Neurons physically touch each other to pass signals. Fact: They are separated by a tiny fluid-filled gap and rely entirely on chemicals to bridge the space.",
+    "Misconception: Every neurotransmitter does the exact same job. Fact: Some chemicals encourage the receiving cell to fire an electrical wave, while others actively quiet it down."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the microscopic gap between two communicating brain cells called?",
+     "answer": "The synaptic cleft."
+    },
+    {
+     "question": "What role do vesicles play during synaptic transmission?",
+     "answer": "They store and transport neurotransmitter chemicals before releasing them into the gap."
+    },
+    {
+     "question": "What happens when a neurotransmitter binds to a receptor on the receiving cell?",
+     "answer": "It opens gates that let charged particles in, which helps start or stop a new electrical wave."
+    }
+   ],
+   "exercise": "Draw a simple diagram showing a sending cell, a tiny gap, and a receiving cell. Label where the chemical packages are stored, where they release their cargo, and where the receiving locks are located on the opposite side.",
+   "summary": "Neurons bridge the physical gap between them by converting electrical signals into chemical messages. These neurotransmitters drift across the fluid-filled space and bind to specific receptors, passing the computational baton to the next cell in line.",
+   "next_lesson": "Day 7: How receptors shape different types of cell signals.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how a BCI system determines how frequently to record brain activity to ensure accurate signal representation without loss or error.",
+   "why_it_matters": "If a BCI records data too slowly, high-speed neural rhythms are 'lost' or misrepresented, causing the system to misinterpret brain patterns, which leads to poor control of external devices.",
+   "prerequisites": "Basic understanding that brain activity is a continuous electrical wave and computers can only process data as discrete snapshots or numbers.",
+   "simple_explanation": "Think of filming a spinning wheel. If your camera frame rate is too slow, the wheel will appear to spin backwards or stop entirely. The Nyquist principle is the rule that tells us exactly how fast our 'camera' (the BCI sensor) must record to perfectly capture the 'spinning' (the frequency of the brain wave).",
+   "step_by_step": [
+    "Identify the fastest brain frequency you need to measure (e.g., Gamma waves at 40Hz).",
+    "Double that number to determine your minimum sampling rate (the Nyquist rate).",
+    "Set your hardware recording speed slightly higher than this minimum to account for real-world signal variability.",
+    "Store these digital samples as a sequence of numbers that represent the original continuous wave."
+   ],
+   "technical_depth": "The Nyquist-Shannon sampling theorem states that for a signal to be reconstructed perfectly, it must be sampled at a rate greater than twice its maximum frequency component (f_s > 2f_max). Frequencies higher than half the sampling rate (the Nyquist frequency) cause 'aliasing,' where high-frequency noise is mathematically disguised as slow, fake brain activity.",
+   "misconceptions": "Many assume that faster is always better. While higher sampling rates provide better resolution, they also generate massive amounts of data that require more battery power and processing memory, which is a major constraint for wearable BCI devices.",
+   "knowledge_check": [
+    {
+     "question": "If you want to track a brain signal oscillating at 100Hz, what is the minimum sampling rate required?",
+     "answer": "200Hz."
+    },
+    {
+     "question": "What is the primary consequence of sampling at a rate lower than the Nyquist rate?",
+     "answer": "Aliasing, where high-frequency signals appear as false, slower waves."
+    },
+    {
+     "question": "Does sampling significantly faster than the Nyquist rate improve the signal measurement beyond perfection?",
+     "answer": "No, it reaches a point of diminishing returns while increasing power consumption and storage costs."
+    }
+   ],
+   "exercise": "Calculate the required sampling rate for a BCI system designed to measure Beta waves (up to 30Hz) and Gamma waves (up to 100Hz). Explain which one dictates the overall sampling rate if you wanted to measure both simultaneously.",
+   "summary": "To digitize neural signals accurately, one must sample at least twice as fast as the highest frequency present. Failure to do so leads to aliasing, where high-speed signals corrupt the recorded data.",
+   "next_lesson": "Day 7: Analog-to-Digital Conversion and Quantization",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Selecting Communication Protocols based on Hardware Constraints",
+   "explanation": "When connecting components to a microcontroller, you must balance data speed, wiring complexity, and device count. UART is simple but lacks a shared clock, making it less reliable for high-speed synchronization. I2C allows many sensors on just two wires by using unique addresses, but it is slower. SPI is the fastest because it uses a dedicated clock line and separate lines for sending and receiving, but it requires more wires (pins) for every device added.",
+   "practical_example": "Imagine building a BCI headset: use I2C for a slow-changing temperature sensor on the board, UART to send debug logs to your laptop, and SPI to quickly read high-frequency brainwave data from an Analog-to-Digital Converter chip.",
+   "exercise": "You have a microcontroller with limited pins and need to connect an OLED display, a motor driver, and a data-logging memory chip. Which protocols would you choose to minimize pin usage while maintaining necessary speed?",
+   "model_answer": "Use I2C for the OLED and the memory chip since they can share the same two wires via addressing. Use a dedicated interface like PWM or a specific control signal for the motor driver to keep it separate from the data bus.",
+   "why_it_works": "Sharing the I2C bus saves physical pins on your microcontroller, which is crucial when your board has limited IO capabilities. Choosing SPI for high-speed data vs I2C for low-speed settings ensures each device operates at its required efficiency.",
+   "improvement_tip": "When reading a datasheet, look for the 'Maximum Clock Frequency' and 'Pinout' sections; these will tell you immediately if a device is compatible with your chosen protocol's speed and your remaining available pins.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Crafting a specific inquiry for professional mentorship in technical fields",
+   "explanation": "Networking is most effective when you ask for perspective rather than favors. Instead of asking for a job, request insight on how a professional navigated a specific technical challenge or tool choice that you are currently studying. This shows you are a serious student and respects the professional's time.",
+   "practical_example": "If a professional recently posted about implementing a specific filter in a BCI project or using a specific real-time operating system for embedded hardware, reach out to ask about their decision-making process for that specific choice.",
+   "exercise": "Identify one engineer in your field who has recently shared a technical update. Draft a message that specifically references their recent work and asks one question about their approach or learning path, keeping the message under three sentences.",
+   "model_answer": "Hi [Name], I saw your recent post about the challenges of latency in your latest robotics build. I am currently working on a similar project using an STM32 and I was curious: what was the biggest factor that helped you stabilize your signal processing? I would appreciate any brief advice you could offer as I refine my own approach.",
+   "why_it_works": "It demonstrates that you are following their work, highlights your own relevant technical focus, and poses a low-effort, high-value question that allows them to share expertise easily.",
+   "improvement_tip": "Always check their recent 'Activity' section first. Mentioning a specific detail from their post proves you aren't just sending mass connection requests.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
+   "focus": "The purpose of this research is to discover if clusters of living brain cells grown in a laboratory can learn to complete a task when given feedback from a digital environment.",
+   "explanation": "Scientists wanted to see if biological brain cells possess the ability to adapt and process information similarly to how a full brain does. By connecting a dish of neurons to a simple computer game, they tested if the cells could use sensory input to change their behavior and master the game's objectives.",
+   "limits": "Because the abstract was not provided, this summary is based on general knowledge of the study's widely reported experimental goals. Results and specific success metrics are not included here to ensure accuracy.",
+   "check": "I am confident in describing the general intent of this experiment, but I have noted the missing abstract information as requested.",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "1 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "Bridging the gap between the brain and external technology for people with paralysis.",
+   "explanation": "This research explores whether a human with severe paralysis can control a computer cursor or robotic device using only their thoughts. By implanting a small sensor in the brain's motor cortex, scientists aimed to translate electrical brain signals into physical actions to improve quality of life.",
+   "limits": "The provided abstract was unavailable, so this explanation relies on general knowledge of the well-documented study results and aims.",
+   "check": "High confidence in the general research goal and methodology.",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "1 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "project_name": "TurtleBot3",
+   "summary": "This repository provides the core software packages for the TurtleBot3 robot, designed to work with the Robot Operating System (ROS). It is a well-supported ecosystem that includes various tools for simulation, sensor drivers, and specialized robot applications.",
+   "key_features": [
+    "Compatibility with multiple ROS versions like Humble and Jazzy.",
+    "Access to a comprehensive suite of related projects, including simulation tools and machine learning modules.",
+    "Direct integration with hardware components such as Dynamixel motors and LDS sensors."
+   ],
+   "engineering_assessment": "The project is highly structured, modular, and actively maintained. The separation of hardware drivers from higher-level simulation packages makes it an industry standard for educational and research robotics. Using the provided simulation packages is a recommended way to validate control code before deploying it to physical hardware.",
+   "knowledge_check": "What is the primary middleware framework required to run these TurtleBot3 packages?",
+   "beginner_challenge": "Attempt to launch the TurtleBot3 simulation environment using the repository's provided documentation to see the virtual robot respond to keyboard inputs.",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "data_sources": "Project repository metadata and README documentation.",
+   "verified_metadata": {
+    "full_name": "ROBOTIS-GIT/turtlebot3",
+    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+    "description": "ROS packages for Turtlebot3",
+    "pushed_at": "2026-06-15T11:50:39Z",
+    "language": "C++",
+    "archived": false,
+    "license": "Apache-2.0"
+   },
+   "day": "3 of 3"
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/chinese-regulators-block-softbanks-5-4b-acquisition-of-abb-robotics/",
+     "what": "China stopped SoftBank from buying ABB Robotics.",
+     "who": "SoftBank and ABB Robotics.",
+     "how": "Not stated in the source excerpt. Background (general knowledge): Regulatory bodies often review large international deals to ensure fair competition and national security.",
+     "why": "Officials worried that robot data might go to other countries and be used to improve AI systems.",
+     "limits": "The acquisition is blocked.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Chinese regulators block SoftBank\u2019s $5.4B acquisition of ABB Robotics",
+     "published": "2026-11-05",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/agility-robotics-begins-trading-on-nasdaq/",
+     "what": "Agility Robotics has started selling its stock on the Nasdaq exchange.",
+     "who": "Agility Robotics.",
+     "how": "By becoming a publicly listed company. Background (general knowledge): A public listing allows a company to raise money by selling shares to individual and institutional investors.",
+     "why": "Not stated in the source excerpt.",
+     "limits": "They are noted as the first U.S.-based legged humanoid robot maker to reach this milestone.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Agility Robotics begins trading on Nasdaq",
+     "published": "2026-11-05",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/how-ambi-robotics-helps-customers-prepare-peak-season/",
+     "what": "Ambi Robotics is deploying eight new systems to help clients prepare for high-demand periods.",
+     "who": "Ambi Robotics and their customers.",
+     "how": "By installing new robotic systems before the peak season begins.",
+     "why": "To help customers manage the operational demands of their busy seasons.",
+     "limits": "The source only specifies the number of systems being installed.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "How Ambi Robotics helps its customers prepare for peak season",
+     "published": "2026-11-05",
+     "source": "The Robot Report"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "French Speaking Fitbit Customer Support Specialist - Work In Sofia, Bulgaria",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "France",
+     "published": "2026-11-05",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/patrique-mercier-recruitment-fr/remote-french-speaking-fitbit-customer-support-specialist-work-in-sofia-bulgaria-france-250328",
+     "company": "Patrique Mercier Recruitment Fr"
+    },
+    {
+     "title": "Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Bern",
+     "published": "2026-11-05",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/coopers-group-ag/test-engineer-bern-487432",
+     "company": "Coopers Group AG"
+    },
+    {
+     "title": "German Speaking Partner Technical Solutions Consultant - Work In Sofia, Bulgaria",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Switzerland",
+     "published": "2026-11-04",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/patrique-mercier-recruitment-fr/remote-german-speaking-partner-technical-solutions-consultant-work-in-sofia-bulgaria-switzerland-78528",
+     "company": "Patrique Mercier Recruitment Fr"
+    },
+    {
+     "title": "Robotics Operations Specialist",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-05",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/mistralai/robotics-operations-specialist-paris-459006",
+     "company": "Mistral.ai"
+    },
+    {
+     "title": "Applied Scientist Lead (Robotics), EMEA",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-05",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/mistralai/applied-scientist-lead-robotics-emea-paris-466277",
+     "company": "Mistral.ai"
+    },
+    {
+     "title": "Elektroniker f\u00fcr Automatisierungstechnik (m/w/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Hamburg",
+     "published": "2026-11-05",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/hrw-gebaudetechnik/elektroniker-fur-automatisierungstechnik-hamburg-498721",
+     "company": "HRW Geb\u00e4udetechnik"
+    },
+    {
+     "title": "Steuerungstechniker:in Kundendienst",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "W\u00fcrenlos",
+     "published": "2026-11-05",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/aksa-wurenlos-ag/steuerungstechnikerinn-kundendienst-wurenlos-48898",
+     "company": "AKSA W\u00fcrenlos AG"
+    },
+    {
+     "title": "Homologation & Certification Engineer, Energy Systems",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Nyon",
+     "published": "2026-11-04",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/eh-group/homologation-certification-engineer-energy-systems-nyon-272389",
+     "company": "Eh Group"
+    },
+    {
+     "title": "Product Certification Engineer, Fuel Cell Systems",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Nyon",
+     "published": "2026-11-04",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/eh-group/product-certification-engineer-fuel-cell-systems-nyon-267368",
+     "company": "Eh Group"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}

@@ -1,162 +1,144 @@
 {
  "v": 2,
- "date": "2026-11-05",
- "generated_at": "2026-11-05T04:36:08.349768+05:30",
+ "date": "2026-11-06",
+ "generated_at": "2026-11-06T02:48:17.957203+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Explore how an electrical signal crosses the tiny gap between two neurons to continue its journey through a network.",
-   "why_it_matters": "While electrical spikes travel swiftly within a single cell, thoughts and organoid computations depend entirely on how these signals safely cross the physical barrier separating neighboring brain cells.",
-   "prerequisites": [
-    "Basic understanding of how neurons generate internal electrical spikes",
-    "Awareness that brain tissue is made of individual cells not directly glued together"
-   ],
-   "simple_explanation": "When an electrical wave reaches the very end of an axon, it cannot jump the empty physical space to the next cell. Instead, the electrical signal transforms into a cloud of tiny chemical messenger molecules. These chemicals float across the microscopic gap, land on specific molecular docks on the neighboring cell, and trigger a brand-new electrical wave in that receiver cell.",
+   "objective": "Explore how neurotransmitters act as molecular keys to pass messages across synapses, and examine how lab-grown organoids utilize these same chemical messengers.",
+   "why_it_matters": "Understanding synaptic transmission is essential for organoid intelligence because it explains how lab-grown neural networks talk to each other and process information chemically rather than just through electrical wires.",
+   "prerequisites": "Basic familiarity with how neurons are structured and how electrical signals travel down the main fiber of a brain cell.",
+   "simple_explanation": "Imagine two friends trying to pass a note across a wide stream where they cannot reach each other. The first friend writes a message and places it in a tiny floating capsule. This capsule drifts across the water to the other side, where a waiting friend opens it and reads the instructions. In the brain, neurons use tiny chemical molecules called neurotransmitters to cross the microscopic gap between them, acting like specialized mail delivery between cells.",
    "step_by_step": [
-    "An electrical spike arrives at the terminal tip of a transmitting axon.",
-    "The electrical change causes small storage bubbles filled with neurotransmitters to merge with the outer cell wall.",
-    "Chemical messengers spill out into the microscopic space between the cells, known as the synaptic cleft.",
-    "The chemicals bind to specialized receptor proteins on the receiving cell's surface, acting like a key fitting into a lock.",
-    "This binding opens microscopic gated entryways, allowing charged ions to flow into the receiver cell and start a fresh electrical wave."
+    "An electrical wave travels down the sending cell until it reaches the very end of the fiber.",
+    "This wave triggers tiny stored packages, called vesicles, to move and fuse with the outer wall of the cell.",
+    "The packages release their chemical cargo into the narrow gap, known as the synaptic cleft, between the two cells.",
+    "The chemical molecules drift across the gap and lock onto specific proteins, called receptors, on the receiving cell's surface.",
+    "This locking action opens tiny gates on the receiving cell, letting charged particles flow inside to either start or stop a new electrical wave."
    ],
-   "technical_depth": "This process is called synaptic transmission. The conversion from electrical to chemical and back to electrical introduces a tiny delay, usually a fraction of a millisecond. In organoid intelligence research, recording these chemical-to-electrical events helps scientists map how lab-grown neural networks process distributed information over time.",
+   "technical_depth": "At the molecular level, arriving electrical changes prompt calcium ions to rush into the terminal, driving SNARE proteins to mediate vesicle fusion. Once released, neurotransmitters like glutamate or GABA bind to ionotropic or metabotropic receptors, rapidly altering postsynaptic membrane potential or initiating intracellular signaling cascades. In neural organoids, verifying that these chemical pathways function normally is a key benchmark for assessing wetware computing capability.",
    "misconceptions": [
-    "Electricity physically jumps through empty space from one brain cell to the next.",
-    "Chemical signals and electrical signals are completely separate systems that never interact.",
-    "A single chemical messenger always tells the receiving cell to fire an electrical spike."
+    "Misconception: Neurons physically touch each other to pass signals. Fact: They are separated by a tiny fluid-filled gap and rely entirely on chemicals to bridge the space.",
+    "Misconception: Every neurotransmitter does the exact same job. Fact: Some chemicals encourage the receiving cell to fire an electrical wave, while others actively quiet it down."
    ],
    "knowledge_check": [
     {
-     "question": "What physically separates the transmitting neuron from the receiving neuron?",
-     "answer": "A tiny microscopic gap called the synaptic cleft."
+     "question": "What is the microscopic gap between two communicating brain cells called?",
+     "answer": "The synaptic cleft."
     },
     {
-     "question": "What translates the electrical spike into a chemical signal?",
-     "answer": "Neurotransmitter molecules released from storage bubbles when the electrical spike arrives at the axon tip."
+     "question": "What role do vesicles play during synaptic transmission?",
+     "answer": "They store and transport neurotransmitter chemicals before releasing them into the gap."
     },
     {
-     "question": "How does the receiving cell respond to the chemical messengers?",
-     "answer": "The chemicals bind to receptors, opening gates that let ions in to start a new electrical wave."
+     "question": "What happens when a neurotransmitter binds to a receptor on the receiving cell?",
+     "answer": "It opens gates that let charged particles in, which helps start or stop a new electrical wave."
     }
    ],
-   "exercise": "Draw a simple three-step comic strip showing an electrical wave turning into a chemical cloud, crossing a small gap, and turning back into an electrical wave on the other side.",
-   "summary": "Neurons communicate across microscopic gaps by converting internal electrical spikes into external chemical messages that prompt new electrical waves in neighboring cells.",
-   "next_lesson": "Day 6: How insulation speeds up brain signals.",
+   "exercise": "Draw a simple diagram showing a sending cell, a tiny gap, and a receiving cell. Label where the chemical packages are stored, where they release their cargo, and where the receiving locks are located on the opposite side.",
+   "summary": "Neurons bridge the physical gap between them by converting electrical signals into chemical messages. These neurotransmitters drift across the fluid-filled space and bind to specific receptors, passing the computational baton to the next cell in line.",
+   "next_lesson": "Day 7: How receptors shape different types of cell signals.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how EEG electrodes, reference electrodes, and ground electrodes work together to capture safe, meaningful scalp voltage measurements.",
-   "why_it_matters": "Brain signals measured at the scalp are exceptionally tiny voltages. Without a proper reference point to subtract background noise and a ground electrode to keep electrical safety stable, raw EEG data is too messy to translate into computer commands.",
-   "prerequisites": [
-    "Basic knowledge of how neural electrical activity creates tiny voltage changes",
-    "Familiarity with scalp sensors capturing these surface signals"
-   ],
-   "simple_explanation": "Imagine measuring the height of a tiny hill. Instead of measuring from the center of the Earth, you measure its height relative to a nearby baseline table (the reference). Meanwhile, a grounding wire acts like a safety valve, draining away random static electricity from room appliances so it does not interfere with your measurement.",
+   "objective": "Understand how a BCI system determines how frequently to record brain activity to ensure accurate signal representation without loss or error.",
+   "why_it_matters": "If a BCI records data too slowly, high-speed neural rhythms are 'lost' or misrepresented, causing the system to misinterpret brain patterns, which leads to poor control of external devices.",
+   "prerequisites": "Basic understanding that brain activity is a continuous electrical wave and computers can only process data as discrete snapshots or numbers.",
+   "simple_explanation": "Think of filming a spinning wheel. If your camera frame rate is too slow, the wheel will appear to spin backwards or stop entirely. The Nyquist principle is the rule that tells us exactly how fast our 'camera' (the BCI sensor) must record to perfectly capture the 'spinning' (the frequency of the brain wave).",
    "step_by_step": [
-    "Place active sensors on the scalp to detect tiny voltage shifts.",
-    "Attach a reference electrode to a relatively inactive spot\u2014such as an earlobe\u2014to serve as a baseline comparison.",
-    "Subtract the reference voltage from each active sensor's voltage to isolate the true brain signal.",
-    "Attach a ground electrode to provide a safe electrical pathway for household interference to escape safely."
+    "Identify the fastest brain frequency you need to measure (e.g., Gamma waves at 40Hz).",
+    "Double that number to determine your minimum sampling rate (the Nyquist rate).",
+    "Set your hardware recording speed slightly higher than this minimum to account for real-world signal variability.",
+    "Store these digital samples as a sequence of numbers that represent the original continuous wave."
    ],
-   "technical_depth": "Differential amplifiers measure the electrical difference between an active recording electrode and a reference electrode. Common-mode rejection ratio (CMRR) determines how well the system discards interference picked up equally by both sensors. The ground electrode sets the body's baseline electrical potential relative to the amplifier hardware, ensuring stable operation and user safety.",
-   "misconceptions": [
-    "Misconception: A reference electrode captures zero electrical activity. Reality: Every spot on the body has some electrical activity, which is why choosing a neutral reference site is crucial.",
-    "Misconception: The ground electrode records brain signals. Reality: The ground electrode is strictly for safety and baseline stabilization, not for tracking neural data."
-   ],
+   "technical_depth": "The Nyquist-Shannon sampling theorem states that for a signal to be reconstructed perfectly, it must be sampled at a rate greater than twice its maximum frequency component (f_s > 2f_max). Frequencies higher than half the sampling rate (the Nyquist frequency) cause 'aliasing,' where high-frequency noise is mathematically disguised as slow, fake brain activity.",
+   "misconceptions": "Many assume that faster is always better. While higher sampling rates provide better resolution, they also generate massive amounts of data that require more battery power and processing memory, which is a major constraint for wearable BCI devices.",
    "knowledge_check": [
     {
-     "question": "What is the primary job of a reference electrode?",
-     "answer": "To provide a stable baseline voltage that is subtracted from active electrode readings to isolate brain signals."
+     "question": "If you want to track a brain signal oscillating at 100Hz, what is the minimum sampling rate required?",
+     "answer": "200Hz."
     },
     {
-     "question": "Why is a ground electrode necessary in an EEG setup?",
-     "answer": "It helps stabilize the patient's electrical potential and protects them by draining away external electrical noise."
+     "question": "What is the primary consequence of sampling at a rate lower than the Nyquist rate?",
+     "answer": "Aliasing, where high-frequency signals appear as false, slower waves."
     },
     {
-     "question": "What type of amplifier component compares the active and reference signals?",
-     "answer": "A differential amplifier."
+     "question": "Does sampling significantly faster than the Nyquist rate improve the signal measurement beyond perfection?",
+     "answer": "No, it reaches a point of diminishing returns while increasing power consumption and storage costs."
     }
    ],
-   "exercise": "Draw a simple diagram showing an active sensor on the scalp, a reference sensor on the ear, and a ground sensor. Use arrows to show how background electrical noise is handled by the ground and subtracted by the reference.",
-   "summary": "EEG recordings rely on comparing active scalp sensors against a neutral reference point using differential amplification, while a dedicated ground electrode ensures safety and filters out environmental electrical interference.",
-   "next_lesson": "Electrode Placement Systems (The 10-20 International System)",
+   "exercise": "Calculate the required sampling rate for a BCI system designed to measure Beta waves (up to 30Hz) and Gamma waves (up to 100Hz). Explain which one dictates the overall sampling rate if you wanted to measure both simultaneously.",
+   "summary": "To digitize neural signals accurately, one must sample at least twice as fast as the highest frequency present. Failure to do so leads to aliasing, where high-speed signals corrupt the recorded data.",
+   "next_lesson": "Day 7: Analog-to-Digital Conversion and Quantization",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Configuring GPIO, Timers, and PWM for Servo Motor Control",
-   "explanation": "To make a robot arm move to a precise angle or steer a BCI-controlled wheelchair, your microcontroller needs to generate a Pulse Width Modulation (PWM) signal. Instead of toggling pins manually in code, which wastes CPU cycles, you use an internal timer peripheral to handle the timing and a GPIO pin to output the pulses automatically.",
-   "practical_example": "Imagine building a robotic gripper for an Indian engineering college tech fest. You configure a timer to trigger every 20 milliseconds, and you use its output compare register to set the PWM pulse width between 1 and 2 milliseconds, which tells the servo motor to rotate to 0 or 180 degrees.",
-   "exercise": "Write out the step-by-step logic you would explain to an interviewer to configure a timer-driven PWM channel on an STM32 or similar microcontroller to control a servo motor.",
-   "model_answer": "First, enable the clock for the specific GPIO pin and the timer peripheral. Second, configure the GPIO pin to alternate function mode so the hardware timer can control it directly. Third, set the timer prescaler and period registers to achieve a 50Hz frequency. Fourth, set the capture/compare register to the desired pulse width value, and finally, enable the timer counter.",
-   "why_it_works": "This approach uses dedicated hardware blocks inside the microcontroller. Once configured, the hardware generates the exact PWM waveform independently, leaving the main CPU free to process sensor data or user inputs without jitter.",
-   "improvement_tip": "When answering in an interview, explicitly mention why hardware PWM is better than a software delay loop (it prevents timing jitter and frees up the CPU).",
+   "topic": "Selecting Communication Protocols based on Hardware Constraints",
+   "explanation": "When connecting components to a microcontroller, you must balance data speed, wiring complexity, and device count. UART is simple but lacks a shared clock, making it less reliable for high-speed synchronization. I2C allows many sensors on just two wires by using unique addresses, but it is slower. SPI is the fastest because it uses a dedicated clock line and separate lines for sending and receiving, but it requires more wires (pins) for every device added.",
+   "practical_example": "Imagine building a BCI headset: use I2C for a slow-changing temperature sensor on the board, UART to send debug logs to your laptop, and SPI to quickly read high-frequency brainwave data from an Analog-to-Digital Converter chip.",
+   "exercise": "You have a microcontroller with limited pins and need to connect an OLED display, a motor driver, and a data-logging memory chip. Which protocols would you choose to minimize pin usage while maintaining necessary speed?",
+   "model_answer": "Use I2C for the OLED and the memory chip since they can share the same two wires via addressing. Use a dedicated interface like PWM or a specific control signal for the motor driver to keep it separate from the data bus.",
+   "why_it_works": "Sharing the I2C bus saves physical pins on your microcontroller, which is crucial when your board has limited IO capabilities. Choosing SPI for high-speed data vs I2C for low-speed settings ensures each device operates at its required efficiency.",
+   "improvement_tip": "When reading a datasheet, look for the 'Maximum Clock Frequency' and 'Pinout' sections; these will tell you immediately if a device is compatible with your chosen protocol's speed and your remaining available pins.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Mapping your LinkedIn skill badges to specific university lab modules",
-   "explanation": "Recruiters looking at your LinkedIn skills section want proof, not just a list of buzzwords. For engineering students targeting Indian internships in robotics, BCI, or embedded systems, you can strengthen your profile by selecting skills that tie directly into graded coursework or hands-on university lab assignments rather than tools you barely know.",
-   "practical_example": "Instead of listing generic skills like 'Problem Solving' or 'Engineering', list 'Timer Interrupts' and link them to the exact embedded systems lab assignment where you wrote bare-metal C code for an ARM Cortex microcontroller to read sensor data.",
-   "exercise": "Review your university grade sheet or lab manual from your past semesters. Pick two technical skills related to robotics or embedded hardware that you were tested on or built a physical circuit for, and prepare to add them to your LinkedIn profile.",
-   "model_answer": "Skill added: 'Printed Circuit Board (PCB) Design'. Context for verification: Demonstrated through the 5th-semester electronics lab project where I laid out a dual-layer schematic for an operational amplifier circuit using KiCad.",
-   "why_it_works": "It helps bridge the gap between academic learning and industry expectations. When hiring managers see a skill, they can immediately map it to a concrete university project or lab deliverable you have already completed.",
-   "improvement_tip": "Do not add skills that you only read about in a textbook or watched a tutorial on; reserve your top LinkedIn skills for tools and concepts you have personally wired, tested, and troubleshot.",
+   "topic": "Crafting a specific inquiry for professional mentorship in technical fields",
+   "explanation": "Networking is most effective when you ask for perspective rather than favors. Instead of asking for a job, request insight on how a professional navigated a specific technical challenge or tool choice that you are currently studying. This shows you are a serious student and respects the professional's time.",
+   "practical_example": "If a professional recently posted about implementing a specific filter in a BCI project or using a specific real-time operating system for embedded hardware, reach out to ask about their decision-making process for that specific choice.",
+   "exercise": "Identify one engineer in your field who has recently shared a technical update. Draft a message that specifically references their recent work and asks one question about their approach or learning path, keeping the message under three sentences.",
+   "model_answer": "Hi [Name], I saw your recent post about the challenges of latency in your latest robotics build. I am currently working on a similar project using an STM32 and I was curious: what was the biggest factor that helped you stabilize your signal processing? I would appreciate any brief advice you could offer as I refine my own approach.",
+   "why_it_works": "It demonstrates that you are following their work, highlights your own relevant technical focus, and poses a low-effort, high-value question that allows them to share expertise easily.",
+   "improvement_tip": "Always check their recent 'Activity' section first. Mentioning a specific detail from their post proves you aren't just sending mass connection requests.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
-   "focus": "Growing tiny, three-dimensional brain-like structures in the lab using human stem cells to study early brain growth and a condition called microcephaly.",
-   "explanation": "Scientists used special gel and spinning bioreactors to help human stem cells grow into complex tissues that resemble different regions of the developing human brain. By using cells from a patient with microcephaly (a condition resulting in a smaller head and brain), they could watch how the brain tissue grew differently compared to healthy cells.",
-   "limits": "The abstract was not available in the database, so this explanation relies on general scientific knowledge about this well-known study rather than specific text details.",
-   "check": {
-    "q1": "What main tissue did the scientists grow in the lab?",
-    "q2": "What specific brain condition did they model using patient cells?",
-    "q3": "Why is growing these 3D tissues helpful compared to flat cell cultures?",
-    "confidence": "medium"
-   },
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
+   "focus": "The purpose of this research is to discover if clusters of living brain cells grown in a laboratory can learn to complete a task when given feedback from a digital environment.",
+   "explanation": "Scientists wanted to see if biological brain cells possess the ability to adapt and process information similarly to how a full brain does. By connecting a dish of neurons to a simple computer game, they tested if the cells could use sensory input to change their behavior and master the game's objectives.",
+   "limits": "Because the abstract was not provided, this summary is based on general knowledge of the study's widely reported experimental goals. Results and specific success metrics are not included here to ensure accuracy.",
+   "check": "I am confident in describing the general intent of this experiment, but I have noted the missing abstract information as requested.",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1038/nature12517",
-   "doi_link": "https://doi.org/10.1038/nature12517",
-   "day": "5 of 5",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "1 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
-   "focus": "How brain-computer interfaces (BCIs) let people control devices directly using brain signals instead of muscles.",
-   "explanation": "Because the abstract was not provided, based on general knowledge this paper reviews how brain signals are picked up, translated by a computer, and turned into actions like typing or moving a cursor.",
-   "limits": "The provided metadata lacked an abstract, so this summary relies on general knowledge of the paper's widely known themes rather than specific text details.",
-   "check": {
-    "question_1": "What is the main goal of a brain-computer interface?",
-    "answer_1": "To help people communicate and control devices using brain signals without needing muscle movement.",
-    "question_2": "Where do the signals come from?",
-    "answer_2": "Brain activity measured from the scalp or directly from the brain tissue.",
-    "question_3": "Why is this technology important?",
-    "answer_3": "It offers new ways for people with severe physical disabilities to interact with the world.",
-    "confidence": "medium"
-   },
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "Bridging the gap between the brain and external technology for people with paralysis.",
+   "explanation": "This research explores whether a human with severe paralysis can control a computer cursor or robotic device using only their thoughts. By implanting a small sensor in the brain's motor cortex, scientists aimed to translate electrical brain signals into physical actions to improve quality of life.",
+   "limits": "The provided abstract was unavailable, so this explanation relies on general knowledge of the well-documented study results and aims.",
+   "check": "High confidence in the general research goal and methodology.",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1016/S1388-2457(02)00057-3",
-   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
-   "day": "5 of 5",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "1 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "2 of 3",
-   "topic": "How it works",
-   "project_name": "ROBOTIS-GIT/turtlebot3",
-   "explanation": "TurtleBot3 relies on a collection of software packages built for the Robot Operating System (ROS). Based on the project structure, it uses core packages for basic movement, simulation tools to test code without physical hardware, message definitions for communication, and extra packages for features like machine learning and robotic arms. It is written primarily in C++ and connects to various hardware drivers to control motors and sensors.",
-   "challenge": "Review the list of related open-source projects in the repository overview and identify which package name is designed for running simulations.",
-   "knowledge_check": "What primary robotics framework do these C++ packages rely on to function?",
+   "project_name": "TurtleBot3",
+   "summary": "This repository provides the core software packages for the TurtleBot3 robot, designed to work with the Robot Operating System (ROS). It is a well-supported ecosystem that includes various tools for simulation, sensor drivers, and specialized robot applications.",
+   "key_features": [
+    "Compatibility with multiple ROS versions like Humble and Jazzy.",
+    "Access to a comprehensive suite of related projects, including simulation tools and machine learning modules.",
+    "Direct integration with hardware components such as Dynamixel motors and LDS sensors."
+   ],
+   "engineering_assessment": "The project is highly structured, modular, and actively maintained. The separation of hardware drivers from higher-level simulation packages makes it an industry standard for educational and research robotics. Using the provided simulation packages is a recommended way to validate control code before deploying it to physical hardware.",
+   "knowledge_check": "What is the primary middleware framework required to run these TurtleBot3 packages?",
+   "beginner_challenge": "Attempt to launch the TurtleBot3 simulation environment using the repository's provided documentation to see the virtual robot respond to keyboard inputs.",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "data_sources": "Project repository metadata and README documentation.",
    "verified_metadata": {
     "full_name": "ROBOTIS-GIT/turtlebot3",
     "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
@@ -165,56 +147,72 @@
     "language": "C++",
     "archived": false,
     "license": "Apache-2.0"
-   }
+   },
+   "day": "3 of 3"
   },
   "news": {
    "items": [
     {
-     "category": "Research",
-     "url": "https://www.therobotreport.com/liberai-unveils-liber-0-a-world-action-model-that-grounds-human-experience-in-robot-action/",
-     "what": "LiberAI created a new AI model called Liber-0 that lets robots learn from human behavior.",
-     "who": "LiberAI",
-     "how": "The system was trained using over 2.2 million hours of human experience. Background (general knowledge): World action models allow AI to predict the consequences of physical movements, helping robots perform tasks without needing specific training for every individual action.",
-     "why": "To enable robots to manipulate objects without prior task-specific training.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "High",
-     "title": "LiberAI Unveils Liber-0, a World Action Model That Grounds Human Experience in Robot Action",
-     "published": "2026-11-04",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
+     "category": "Business",
+     "url": "https://www.therobotreport.com/chinese-regulators-block-softbanks-5-4b-acquisition-of-abb-robotics/",
+     "what": "China stopped SoftBank from buying ABB Robotics.",
+     "who": "SoftBank and ABB Robotics.",
+     "how": "Not stated in the source excerpt. Background (general knowledge): Regulatory bodies often review large international deals to ensure fair competition and national security.",
+     "why": "Officials worried that robot data might go to other countries and be used to improve AI systems.",
+     "limits": "The acquisition is blocked.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Chinese regulators block SoftBank\u2019s $5.4B acquisition of ABB Robotics",
+     "published": "2026-11-05",
+     "source": "The Robot Report"
     },
     {
      "category": "Business",
-     "url": "https://www.therobotreport.com/tutor-intelligence-raises-series-b-to-scale-model-training-robot-deployments/",
-     "what": "Tutor Intelligence secured Series B funding to grow their robot business.",
-     "who": "Tutor Intelligence",
-     "how": "The company will use the capital to develop picking robots and advance their networked intelligence systems.",
-     "why": "To increase the scale of their commercial robot deployments and training models.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "High",
-     "title": "Tutor Intelligence raises Series B to scale model training, robot deployments",
-     "published": "2026-11-03",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
+     "url": "https://www.therobotreport.com/agility-robotics-begins-trading-on-nasdaq/",
+     "what": "Agility Robotics has started selling its stock on the Nasdaq exchange.",
+     "who": "Agility Robotics.",
+     "how": "By becoming a publicly listed company. Background (general knowledge): A public listing allows a company to raise money by selling shares to individual and institutional investors.",
+     "why": "Not stated in the source excerpt.",
+     "limits": "They are noted as the first U.S.-based legged humanoid robot maker to reach this milestone.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Agility Robotics begins trading on Nasdaq",
+     "published": "2026-11-05",
+     "source": "The Robot Report"
     },
     {
-     "category": "Product",
-     "url": "https://www.therobotreport.com/gentherm-designs-thermaffyx-protect-move-patients-during-robotic-surgeries/",
-     "what": "A new device called ThermAffyx was designed to help with patient safety during robotic surgeries.",
-     "who": "Gentherm",
-     "how": "It provides a system to secure and heat patients while using a small amount of space in the operating room.",
-     "why": "To improve patient positioning and thermal management during procedures that use surgical robots.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "High",
-     "title": "Gentherm designs ThermAffyx to secure, heat patients during robotic surgeries",
-     "published": "2026-11-02",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/how-ambi-robotics-helps-customers-prepare-peak-season/",
+     "what": "Ambi Robotics is deploying eight new systems to help clients prepare for high-demand periods.",
+     "who": "Ambi Robotics and their customers.",
+     "how": "By installing new robotic systems before the peak season begins.",
+     "why": "To help customers manage the operational demands of their busy seasons.",
+     "limits": "The source only specifies the number of systems being installed.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "How Ambi Robotics helps its customers prepare for peak season",
+     "published": "2026-11-05",
+     "source": "The Robot Report"
     }
    ]
   },
   "jobs": {
    "items": [
+    {
+     "title": "French Speaking Fitbit Customer Support Specialist - Work In Sofia, Bulgaria",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "France",
+     "published": "2026-11-05",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/patrique-mercier-recruitment-fr/remote-french-speaking-fitbit-customer-support-specialist-work-in-sofia-bulgaria-france-250328",
+     "company": "Patrique Mercier Recruitment Fr"
+    },
+    {
+     "title": "Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Bern",
+     "published": "2026-11-05",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/coopers-group-ag/test-engineer-bern-487432",
+     "company": "Coopers Group AG"
+    },
     {
      "title": "German Speaking Partner Technical Solutions Consultant - Work In Sofia, Bulgaria",
      "type": "vacancy listing (availability not independently verified)",
@@ -225,55 +223,37 @@
      "company": "Patrique Mercier Recruitment Fr"
     },
     {
-     "title": "French Speaking Partner Technical Solutions Consultant - Work In Sofia, Bulgaria",
+     "title": "Robotics Operations Specialist",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Switzerland",
-     "published": "2026-11-04",
+     "location": "Paris",
+     "published": "2026-11-05",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/patrique-mercier-recruitment-fr/remote-french-speaking-partner-technical-solutions-consultant-work-in-sofia-bulgaria-switzerland-462732",
-     "company": "Patrique Mercier Recruitment Fr"
+     "url": "https://www.arbeitnow.fr/jobs/companies/mistralai/robotics-operations-specialist-paris-459006",
+     "company": "Mistral.ai"
     },
     {
-     "title": "French Speaking Fitbit Customer Support Specialist - Work In Sofia, Bulgaria",
+     "title": "Applied Scientist Lead (Robotics), EMEA",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Switzerland",
-     "published": "2026-11-04",
+     "location": "Paris",
+     "published": "2026-11-05",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/patrique-mercier-recruitment-fr/remote-french-speaking-fitbit-customer-support-specialist-work-in-sofia-bulgaria-switzerland-469655",
-     "company": "Patrique Mercier Recruitment Fr"
+     "url": "https://www.arbeitnow.fr/jobs/companies/mistralai/applied-scientist-lead-robotics-emea-paris-466277",
+     "company": "Mistral.ai"
     },
     {
-     "title": "Software Test Engineer",
+     "title": "Elektroniker f\u00fcr Automatisierungstechnik (m/w/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Remote job",
-     "published": "2026-11-04",
+     "location": "Hamburg",
+     "published": "2026-11-05",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-122043",
-     "company": "SwissPeak Partners GmbH"
+     "url": "https://www.arbeitnow.com/jobs/companies/hrw-gebaudetechnik/elektroniker-fur-automatisierungstechnik-hamburg-498721",
+     "company": "HRW Geb\u00e4udetechnik"
     },
     {
-     "title": "IoT Embedded Systems Engineer",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Bern, Berne, Switzerland",
-     "published": "2026-11-04",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-27488",
-     "company": "SwissPeak Partners GmbH"
-    },
-    {
-     "title": "SPS-Programmierer / Automatisierungstechniker (m/w/d)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Dohna",
-     "published": "2026-11-04",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/hioffice/sps-programmierer-automatisierungstechniker-dohna-318581",
-     "company": "HiOffice"
-    },
-    {
-     "title": "Steuerungstechniker:inn Kundendienst",
+     "title": "Steuerungstechniker:in Kundendienst",
      "type": "vacancy listing (availability not independently verified)",
      "location": "W\u00fcrenlos",
-     "published": "2026-11-04",
+     "published": "2026-11-05",
      "source": "Arbeitnow",
      "url": "https://www.arbeitnow.ch/jobs/companies/aksa-wurenlos-ag/steuerungstechnikerinn-kundendienst-wurenlos-48898",
      "company": "AKSA W\u00fcrenlos AG"
@@ -295,15 +275,6 @@
      "source": "Arbeitnow",
      "url": "https://www.arbeitnow.ch/jobs/companies/eh-group/product-certification-engineer-fuel-cell-systems-nyon-267368",
      "company": "Eh Group"
-    },
-    {
-     "title": "SPS Programmierer / Software Engineer (w/m)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Lucerne",
-     "published": "2026-11-04",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/hardi-personal/sps-programmierer-software-engineer-w-m-lucerne-27386",
-     "company": "H\u00e4rdi Personal"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
