@@ -1,194 +1,210 @@
 {
  "v": 2,
- "date": "2026-11-06",
- "generated_at": "2026-11-06T04:36:21.575805+05:30",
+ "date": "2026-11-07",
+ "generated_at": "2026-11-07T02:44:05.857365+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Explore how neurotransmitters act as molecular keys to pass messages across synapses, and examine how lab-grown organoids utilize these same chemical messengers.",
-   "why_it_matters": "Understanding synaptic transmission is essential for organoid intelligence because it explains how lab-grown neural networks talk to each other and process information chemically rather than just through electrical wires.",
-   "prerequisites": "Basic familiarity with how neurons are structured and how electrical signals travel down the main fiber of a brain cell.",
-   "simple_explanation": "Imagine two friends trying to pass a note across a wide stream where they cannot reach each other. The first friend writes a message and places it in a tiny floating capsule. This capsule drifts across the water to the other side, where a waiting friend opens it and reads the instructions. In the brain, neurons use tiny chemical molecules called neurotransmitters to cross the microscopic gap between them, acting like specialized mail delivery between cells.",
-   "step_by_step": [
-    "An electrical wave travels down the sending cell until it reaches the very end of the fiber.",
-    "This wave triggers tiny stored packages, called vesicles, to move and fuse with the outer wall of the cell.",
-    "The packages release their chemical cargo into the narrow gap, known as the synaptic cleft, between the two cells.",
-    "The chemical molecules drift across the gap and lock onto specific proteins, called receptors, on the receiving cell's surface.",
-    "This locking action opens tiny gates on the receiving cell, letting charged particles flow inside to either start or stop a new electrical wave."
+   "objective": "Understand how physical connections between brain cells change their strength based on how often they are used, known as neural plasticity.",
+   "why_it_matters": "Plasticity is the biological mechanism behind learning and memory. For organoid intelligence, harnessing this natural ability to adapt allows living tissue in a dish to store information and solve computational problems over time.",
+   "prerequisites": [
+    "Basic knowledge of how neurons send chemical messages across the tiny space between them",
+    "Understanding that brain cells form networks rather than acting entirely alone"
    ],
-   "technical_depth": "At the molecular level, arriving electrical changes prompt calcium ions to rush into the terminal, driving SNARE proteins to mediate vesicle fusion. Once released, neurotransmitters like glutamate or GABA bind to ionotropic or metabotropic receptors, rapidly altering postsynaptic membrane potential or initiating intracellular signaling cascades. In neural organoids, verifying that these chemical pathways function normally is a key benchmark for assessing wetware computing capability.",
+   "simple_explanation": "Imagine a grassy path in a park. If only one person walks across it once, the grass bounces back and leaves no trace. But if hundreds of people walk down that exact same route every day, a clear dirt path forms. Brain connections work similarly: when two connected cells fire signals together repeatedly, the bridge between them grows stronger and more efficient.",
+   "step_by_step": [
+    "Neurons communicate by sending messages across a tiny gap called a synapse.",
+    "When a sending cell triggers a receiving cell repeatedly, the connection experiences frequent activity.",
+    "Inside the receiving cell, chemical changes occur that make it more sensitive to future messages from that specific sender.",
+    "Over time, this enhanced sensitivity means future signals travel across the gap much more easily, representing a physical trace of learning."
+   ],
+   "technical_depth": "At a microscopic level, plasticity often involves altering the number of receptor proteins embedded in the membrane of the receiving neuron. Frequent activation triggers internal cellular pathways that insert more receptors into the synapse. With more receptors waiting to catch chemical messages, the resulting electrical response becomes larger. This process demonstrates how a biological system alters its own hardware dynamically.",
    "misconceptions": [
-    "Misconception: Neurons physically touch each other to pass signals. Fact: They are separated by a tiny fluid-filled gap and rely entirely on chemicals to bridge the space.",
-    "Misconception: Every neurotransmitter does the exact same job. Fact: Some chemicals encourage the receiving cell to fire an electrical wave, while others actively quiet it down."
+    {
+     "misconception": "Brain cells grow entirely new physical branches every time you learn a single fact.",
+     "correction": "Most daily learning and memory updates happen by strengthening or weakening existing chemical connections at the synapse, rather than constantly building brand new long-range pathways."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What is the microscopic gap between two communicating brain cells called?",
-     "answer": "The synaptic cleft."
+     "question": "What is the biological term for the ability of brain connections to change their strength?",
+     "answer": "Neural plasticity."
     },
     {
-     "question": "What role do vesicles play during synaptic transmission?",
-     "answer": "They store and transport neurotransmitter chemicals before releasing them into the gap."
+     "question": "Does frequent activity at a synapse generally make the connection stronger or weaker?",
+     "answer": "Stronger."
     },
     {
-     "question": "What happens when a neurotransmitter binds to a receptor on the receiving cell?",
-     "answer": "It opens gates that let charged particles in, which helps start or stop a new electrical wave."
+     "question": "Why is plasticity essential for organoid intelligence?",
+     "answer": "It provides the mechanism for the living tissue to adapt, learn, and process information based on experience rather than fixed programming."
     }
    ],
-   "exercise": "Draw a simple diagram showing a sending cell, a tiny gap, and a receiving cell. Label where the chemical packages are stored, where they release their cargo, and where the receiving locks are located on the opposite side.",
-   "summary": "Neurons bridge the physical gap between them by converting electrical signals into chemical messages. These neurotransmitters drift across the fluid-filled space and bind to specific receptors, passing the computational baton to the next cell in line.",
-   "next_lesson": "Day 7: How receptors shape different types of cell signals.",
+   "exercise": "Draw two circles representing connected cells. Write down two simple rules for how their connecting bridge could change: one rule for when they fire together often, and one rule for when they rarely interact.",
+   "summary": "Neural plasticity allows living brain networks to modify their internal connection strengths based on use. This dynamic adjustment serves as the core foundation for biological learning, memory storage, and adaptive computing in organoids.",
+   "next_lesson": "Day 8: How we measure changes in organoid network activity over time.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how a BCI system determines how frequently to record brain activity to ensure accurate signal representation without loss or error.",
-   "why_it_matters": "If a BCI records data too slowly, high-speed neural rhythms are 'lost' or misrepresented, causing the system to misinterpret brain patterns, which leads to poor control of external devices.",
-   "prerequisites": "Basic understanding that brain activity is a continuous electrical wave and computers can only process data as discrete snapshots or numbers.",
-   "simple_explanation": "Think of filming a spinning wheel. If your camera frame rate is too slow, the wheel will appear to spin backwards or stop entirely. The Nyquist principle is the rule that tells us exactly how fast our 'camera' (the BCI sensor) must record to perfectly capture the 'spinning' (the frequency of the brain wave).",
-   "step_by_step": [
-    "Identify the fastest brain frequency you need to measure (e.g., Gamma waves at 40Hz).",
-    "Double that number to determine your minimum sampling rate (the Nyquist rate).",
-    "Set your hardware recording speed slightly higher than this minimum to account for real-world signal variability.",
-    "Store these digital samples as a sequence of numbers that represent the original continuous wave."
+   "objective": "Understand how physical filters manipulate EEG frequencies and how to identify non-brain noise signals in raw recordings.",
+   "why_it_matters": "Real-world brain-computer interfaces are constantly bombarded by outside electrical noise and body movements, making it impossible to interpret user intent without cleaning the data first.",
+   "prerequisites": [
+    "Basic knowledge of electrical frequencies and waves",
+    "Familiarity with how scalp sensors pick up voltage changes"
    ],
-   "technical_depth": "The Nyquist-Shannon sampling theorem states that for a signal to be reconstructed perfectly, it must be sampled at a rate greater than twice its maximum frequency component (f_s > 2f_max). Frequencies higher than half the sampling rate (the Nyquist frequency) cause 'aliasing,' where high-frequency noise is mathematically disguised as slow, fake brain activity.",
-   "misconceptions": "Many assume that faster is always better. While higher sampling rates provide better resolution, they also generate massive amounts of data that require more battery power and processing memory, which is a major constraint for wearable BCI devices.",
+   "simple_explanation": "Imagine listening to your favorite song while standing next to a loud highway. The music is the brain signal, and the highway traffic is the noise. Filtering is like turning down the volume of the highway so you can hear the music clearly.",
+   "step_by_step": [
+    "Inspect the raw, unfiltered EEG stream to spot sudden spikes or slow drifting baselines.",
+    "Decide which frequency ranges are needed for the specific BCI task, such as ignoring very slow head-movement drifts.",
+    "Apply a mathematical digital filter to block unwanted frequency bands while letting brain waves pass through untouched.",
+    "Check the cleaned signal to ensure the actual brain activity remains intact without distortion."
+   ],
+   "technical_depth": "Digital filters rely on mathematical algorithms applied to sampled time-series data. Finite Impulse Response (FIR) and Infinite Impulse Response (IIR) filters shape the frequency spectrum. A low-pass filter lets slow waves pass and blocks fast ones, a high-pass filter does the opposite, and a notch filter targets a very narrow frequency, like the constant hum of standard wall power outlets.",
+   "misconceptions": [
+    "Believing that filtering can completely restore a brain signal that was completely buried under massive movement noise.",
+    "Thinking that applying a filter changes the actual physical brain tissue rather than just cleaning up the recorded digital numbers."
+   ],
    "knowledge_check": [
     {
-     "question": "If you want to track a brain signal oscillating at 100Hz, what is the minimum sampling rate required?",
-     "answer": "200Hz."
+     "question": "What is the main purpose of a digital filter in a BCI setup?",
+     "answer": "To remove unwanted noise and interference while keeping the useful brain signals intact."
     },
     {
-     "question": "What is the primary consequence of sampling at a rate lower than the Nyquist rate?",
-     "answer": "Aliasing, where high-frequency signals appear as false, slower waves."
+     "question": "Which filter type would you use to block a steady electrical hum from nearby wall outlets?",
+     "answer": "A notch filter, which targets a very specific frequency."
     },
     {
-     "question": "Does sampling significantly faster than the Nyquist rate improve the signal measurement beyond perfection?",
-     "answer": "No, it reaches a point of diminishing returns while increasing power consumption and storage costs."
+     "question": "Does filtering fix a signal that was completely destroyed by heavy physical movement?",
+     "answer": "No, if the noise completely overwhelms the brain data, filtering cannot magically recreate the lost neural information."
     }
    ],
-   "exercise": "Calculate the required sampling rate for a BCI system designed to measure Beta waves (up to 30Hz) and Gamma waves (up to 100Hz). Explain which one dictates the overall sampling rate if you wanted to measure both simultaneously.",
-   "summary": "To digitize neural signals accurately, one must sample at least twice as fast as the highest frequency present. Failure to do so leads to aliasing, where high-speed signals corrupt the recorded data.",
-   "next_lesson": "Day 7: Analog-to-Digital Conversion and Quantization",
+   "exercise": "Look at a sample recording of an eye blink on an EEG screen. Note how it creates a sudden, large voltage jump. Describe how a high-pass filter might help reduce the slow, drifting baseline that often accompanies these blinks.",
+   "summary": "Filtering is an essential cleanup step in BCI engineering that uses mathematical algorithms to separate valuable brain rhythms from body movements and environmental electrical noise.",
+   "next_lesson": "Introduction to common BCI software tools and data formats",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Selecting Communication Protocols based on Hardware Constraints",
-   "explanation": "When connecting components to a microcontroller, you must balance data speed, wiring complexity, and device count. UART is simple but lacks a shared clock, making it less reliable for high-speed synchronization. I2C allows many sensors on just two wires by using unique addresses, but it is slower. SPI is the fastest because it uses a dedicated clock line and separate lines for sending and receiving, but it requires more wires (pins) for every device added.",
-   "practical_example": "Imagine building a BCI headset: use I2C for a slow-changing temperature sensor on the board, UART to send debug logs to your laptop, and SPI to quickly read high-frequency brainwave data from an Analog-to-Digital Converter chip.",
-   "exercise": "You have a microcontroller with limited pins and need to connect an OLED display, a motor driver, and a data-logging memory chip. Which protocols would you choose to minimize pin usage while maintaining necessary speed?",
-   "model_answer": "Use I2C for the OLED and the memory chip since they can share the same two wires via addressing. Use a dedicated interface like PWM or a specific control signal for the motor driver to keep it separate from the data bus.",
-   "why_it_works": "Sharing the I2C bus saves physical pins on your microcontroller, which is crucial when your board has limited IO capabilities. Choosing SPI for high-speed data vs I2C for low-speed settings ensures each device operates at its required efficiency.",
-   "improvement_tip": "When reading a datasheet, look for the 'Maximum Clock Frequency' and 'Pinout' sections; these will tell you immediately if a device is compatible with your chosen protocol's speed and your remaining available pins.",
+   "topic": "Compensating for Sensor Bias and Noise in C",
+   "explanation": "Even after understanding what sensor bias and random noise are, your microcontroller code must actively handle them. Bias is a fixed shift you can fix by subtracting a known offset, while noise bounces around randomly. To smooth out noisy readings from an ultrasonic distance sensor or a brain-computer interface signal, you can write a simple moving average filter in C that averages the last few samples.",
+   "practical_example": "Imagine your robot's infrared distance sensor always reads 3 centimeters too close due to a mounting tilt (bias), and its numbers jump up and down by 2 centimeters every millisecond due to electrical noise. In your C code, you first subtract 3 from the raw reading, and then you feed that corrected value into an array of the last 4 readings to calculate a rolling average.",
+   "exercise": "Write a short embedded C function that takes a new sensor reading, adds it to a circular buffer of size 4, removes the oldest reading, and returns the current average of the buffer to smooth out the noise.",
+   "model_answer": "int smoothSensorReading(int new_reading) {\n    static int buffer[4] = {0};\n    static int index = 0;\n    int sum = 0;\n    \n    buffer[index] = new_reading;\n    index = (index + 1) % 4;\n    \n    for(int i = 0; i < 4; i++) {\n        sum += buffer[i];\n    }\n    return sum / 4;\n}",
+   "why_it_works": "Using a circular buffer avoids heavy memory allocation and keeps execution time predictable, which is essential for real-time loops in robotics and embedded systems where timing consistency prevents control instability.",
+   "improvement_tip": "When discussing this in an internship interview, mention that while a moving average filter smooths noise, it also introduces a slight delay in reaction time, showing you understand the trade-offs of digital signal processing.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Crafting a specific inquiry for professional mentorship in technical fields",
-   "explanation": "Networking is most effective when you ask for perspective rather than favors. Instead of asking for a job, request insight on how a professional navigated a specific technical challenge or tool choice that you are currently studying. This shows you are a serious student and respects the professional's time.",
-   "practical_example": "If a professional recently posted about implementing a specific filter in a BCI project or using a specific real-time operating system for embedded hardware, reach out to ask about their decision-making process for that specific choice.",
-   "exercise": "Identify one engineer in your field who has recently shared a technical update. Draft a message that specifically references their recent work and asks one question about their approach or learning path, keeping the message under three sentences.",
-   "model_answer": "Hi [Name], I saw your recent post about the challenges of latency in your latest robotics build. I am currently working on a similar project using an STM32 and I was curious: what was the biggest factor that helped you stabilize your signal processing? I would appreciate any brief advice you could offer as I refine my own approach.",
-   "why_it_works": "It demonstrates that you are following their work, highlights your own relevant technical focus, and poses a low-effort, high-value question that allows them to share expertise easily.",
-   "improvement_tip": "Always check their recent 'Activity' section first. Mentioning a specific detail from their post proves you aren't just sending mass connection requests.",
+   "topic": "Turning qualitative project observations into verifiable scale and frequency metrics without guessing",
+   "explanation": "If your robotics, BCI, or embedded project did not involve speedups or percentage gains, you can still show scale and frequency using facts you actually logged, such as sampling rates, communication frequencies, loop intervals, or dataset sizes.",
+   "practical_example": "Instead of saying 'Optimized motor response time significantly,' look at your actual code logs to write 'Configured PWM frequency to 20kHz and polled encoder feedback every 10 milliseconds.'",
+   "exercise": "Review a recent embedded or robotics lab report. Identify one task where you changed a configuration setting, loop timing, or input frequency, and write a bullet point using that exact logged value.",
+   "model_answer": "Implemented FreeRTOS task scheduling to poll IMU sensor data at 100Hz, maintaining stable thread execution across a 5-minute continuous test run.",
+   "why_it_works": "It uses verifiable engineering constraints and configuration parameters rather than empty adjectives or fake percentage improvements.",
+   "improvement_tip": "Check your serial monitor logs, oscilloscope screenshots, or code initialization files to find real numbers before you start writing.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
-   "focus": "The purpose of this research is to discover if clusters of living brain cells grown in a laboratory can learn to complete a task when given feedback from a digital environment.",
-   "explanation": "Scientists wanted to see if biological brain cells possess the ability to adapt and process information similarly to how a full brain does. By connecting a dish of neurons to a simple computer game, they tested if the cells could use sensory input to change their behavior and master the game's objectives.",
-   "limits": "Because the abstract was not provided, this summary is based on general knowledge of the study's widely reported experimental goals. Results and specific success metrics are not included here to ensure accuracy.",
-   "check": "I am confident in describing the general intent of this experiment, but I have noted the missing abstract information as requested.",
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
+   "focus": "Research design and method",
+   "explanation": "This study tested whether living brain cells in a lab dish could learn to play a simple computer game, similar to Pong, by receiving electrical signals that showed where the game ball was located.",
+   "limits": "The Crossref abstract was empty, so this explanation relies on general knowledge of the published study's publicly known methodology rather than the specific text of the abstract.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/j.neuron.2022.09.001",
    "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
-   "focus": "Bridging the gap between the brain and external technology for people with paralysis.",
-   "explanation": "This research explores whether a human with severe paralysis can control a computer cursor or robotic device using only their thoughts. By implanting a small sensor in the brain's motor cortex, scientists aimed to translate electrical brain signals into physical actions to improve quality of life.",
-   "limits": "The provided abstract was unavailable, so this explanation relies on general knowledge of the well-documented study results and aims.",
-   "check": "High confidence in the general research goal and methodology.",
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (2006)",
+   "focus": "How the study was set up to test brain-controlled computer cursors and devices in a human participant.",
+   "explanation": "Because the paper's abstract text was not provided in the metadata, general knowledge indicates that this study tested a brain-computer interface (the BrainGate system) by implanting a small sensor into the motor cortex of a participant with paralysis, allowing them to translate brain signals into digital actions.",
+   "limits": "Since the specific abstract text was missing, this summary relies on general knowledge of the study's known methods rather than specific details from the text.",
+   "check": {
+    "confidence": "medium"
+   },
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature04970",
    "doi_link": "https://doi.org/10.1038/nature04970",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "project_name": "TurtleBot3",
-   "summary": "This repository provides the core software packages for the TurtleBot3 robot, designed to work with the Robot Operating System (ROS). It is a well-supported ecosystem that includes various tools for simulation, sensor drivers, and specialized robot applications.",
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "moveit/moveit2",
+   "language": "C++",
+   "description": "A popular open-source software platform used for robotic arm motion planning, manipulation, and related tasks, built specifically to run on ROS 2 (Robot Operating System 2).",
    "key_features": [
-    "Compatibility with multiple ROS versions like Humble and Jazzy.",
-    "Access to a comprehensive suite of related projects, including simulation tools and machine learning modules.",
-    "Direct integration with hardware components such as Dynamixel motors and LDS sensors."
+    "Motion planning for robots",
+    "Tools for commercial applications and prototyping",
+    "Algorithm benchmarking"
    ],
-   "engineering_assessment": "The project is highly structured, modular, and actively maintained. The separation of hardware drivers from higher-level simulation packages makes it an industry standard for educational and research robotics. Using the provided simulation packages is a recommended way to validate control code before deploying it to physical hardware.",
-   "knowledge_check": "What is the primary middleware framework required to run these TurtleBot3 packages?",
-   "beginner_challenge": "Attempt to launch the TurtleBot3 simulation environment using the repository's provided documentation to see the virtual robot respond to keyboard inputs.",
+   "getting_started": "Users can install the framework using pre-compiled binaries or build it directly from source by following the official tutorials and documentation.",
+   "challenge": "Find the section in the project details that explains how the code is organized into different active ROS 2 versions or distributions, and identify which branch is used for general active development.",
+   "knowledge_check": "What underlying robotic framework does MoveIt 2 rely on?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
-   "data_sources": "Project repository metadata and README documentation.",
    "verified_metadata": {
-    "full_name": "ROBOTIS-GIT/turtlebot3",
-    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
-    "description": "ROS packages for Turtlebot3",
-    "pushed_at": "2026-06-15T11:50:39Z",
+    "full_name": "moveit/moveit2",
+    "html_url": "https://github.com/moveit/moveit2",
+    "description": ":robot: MoveIt for ROS 2",
+    "pushed_at": "2026-10-28T19:03:40Z",
     "language": "C++",
     "archived": false,
-    "license": "Apache-2.0"
-   },
-   "day": "3 of 3"
+    "license": "BSD-3-Clause"
+   }
   },
   "news": {
    "items": [
     {
      "category": "Business",
-     "url": "https://www.therobotreport.com/chinese-regulators-block-softbanks-5-4b-acquisition-of-abb-robotics/",
-     "what": "China stopped SoftBank from buying ABB Robotics.",
-     "who": "SoftBank and ABB Robotics.",
-     "how": "Not stated in the source excerpt. Background (general knowledge): Regulatory bodies often review large international deals to ensure fair competition and national security.",
-     "why": "Officials worried that robot data might go to other countries and be used to improve AI systems.",
-     "limits": "The acquisition is blocked.",
+     "url": "https://www.therobotreport.com/how-did-agility-robotics-perform-on-its-first-day-on-the-stock-market/",
+     "what": "Agility Robotics began trading on the Nasdaq stock exchange.",
+     "who": "Agility Robotics",
+     "how": "The company went public and ended its first trading day at $11.49, which is 2% higher than its starting price. Background (general knowledge): An initial public offering (IPO) is when a company sells shares to the public for the first time.",
+     "why": "Not stated in the source excerpt",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Chinese regulators block SoftBank\u2019s $5.4B acquisition of ABB Robotics",
-     "published": "2026-11-05",
+     "title": "How did Agility Robotics perform on its first day on the stock market?",
+     "published": "2026-11-06",
      "source": "The Robot Report"
     },
     {
-     "category": "Business",
-     "url": "https://www.therobotreport.com/agility-robotics-begins-trading-on-nasdaq/",
-     "what": "Agility Robotics has started selling its stock on the Nasdaq exchange.",
-     "who": "Agility Robotics.",
-     "how": "By becoming a publicly listed company. Background (general knowledge): A public listing allows a company to raise money by selling shares to individual and institutional investors.",
-     "why": "Not stated in the source excerpt.",
-     "limits": "They are noted as the first U.S.-based legged humanoid robot maker to reach this milestone.",
+     "category": "Research",
+     "url": "https://robohub.org/robots-in-society-business-and-culture-october-2026/",
+     "what": "A biohybrid robot that moves using electrical stimulation.",
+     "who": "Not stated in the source excerpt",
+     "how": "The robot is triggered to push off the ground when it receives an electrical impulse. Background (general knowledge): Biohybrid robots combine biological materials, like muscle or nerve cells, with mechanical parts.",
+     "why": "Not stated in the source excerpt",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Agility Robotics begins trading on Nasdaq",
-     "published": "2026-11-05",
-     "source": "The Robot Report"
+     "title": "Robots in society, business and culture: October 2026",
+     "published": "2026-11-04",
+     "source": "Robohub"
     },
     {
-     "category": "Deployment",
-     "url": "https://www.therobotreport.com/how-ambi-robotics-helps-customers-prepare-peak-season/",
-     "what": "Ambi Robotics is deploying eight new systems to help clients prepare for high-demand periods.",
-     "who": "Ambi Robotics and their customers.",
-     "how": "By installing new robotic systems before the peak season begins.",
-     "why": "To help customers manage the operational demands of their busy seasons.",
-     "limits": "The source only specifies the number of systems being installed.",
+     "category": "Product",
+     "url": "https://www.therobotreport.com/how-globallogic-helped-haystack-robotics-build-uv-disinfection-robot/",
+     "what": "Development of a robot designed for UV-based disinfection.",
+     "who": "Haystack Robotics and GlobalLogic",
+     "how": "GlobalLogic assisted in the design process with a focus on creating a machine that is not limited to a single environment or use case. Background (general knowledge): UV light is commonly used in medical settings to kill bacteria and viruses on surfaces.",
+     "why": "To create a versatile robot rather than one designed for a single specific environment.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "How Ambi Robotics helps its customers prepare for peak season",
-     "published": "2026-11-05",
+     "title": "How GlobalLogic helped Haystack Robotics build a UV disinfection robot",
+     "published": "2026-11-04",
      "source": "The Robot Report"
     }
    ]
@@ -196,85 +212,58 @@
   "jobs": {
    "items": [
     {
-     "title": "French Speaking Fitbit Customer Support Specialist - Work In Sofia, Bulgaria",
+     "title": "Internationaler Servicetechniker (DJ130)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "France",
-     "published": "2026-11-05",
+     "location": "Winterthur",
+     "published": "2026-11-06",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/patrique-mercier-recruitment-fr/remote-french-speaking-fitbit-customer-support-specialist-work-in-sofia-bulgaria-france-250328",
-     "company": "Patrique Mercier Recruitment Fr"
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/internationaler-servicetechniker-dj130-winterthur-99159",
+     "company": "Excellent Go4"
     },
     {
-     "title": "Test Engineer",
+     "title": "Edge AI & Computer Vision Intern",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Bern",
-     "published": "2026-11-05",
+     "location": "\u00c9palinges, Switzerland",
+     "published": "2026-11-06",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/coopers-group-ag/test-engineer-bern-487432",
-     "company": "Coopers Group AG"
+     "url": "https://www.arbeitnow.ch/jobs/companies/distalmotion/edge-ai-computer-vision-intern-epalinges-162054",
+     "company": "Distalmotion"
     },
     {
-     "title": "German Speaking Partner Technical Solutions Consultant - Work In Sofia, Bulgaria",
+     "title": "Softwarearchitekt Embedded Systems (m/w/d) Dresden",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Switzerland",
-     "published": "2026-11-04",
+     "location": "Dresden",
+     "published": "2026-11-06",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/patrique-mercier-recruitment-fr/remote-german-speaking-partner-technical-solutions-consultant-work-in-sofia-bulgaria-switzerland-78528",
-     "company": "Patrique Mercier Recruitment Fr"
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwarearchitekt-embedded-systems-dresden-66626",
+     "company": "MY Humancapital GmbH"
     },
     {
-     "title": "Robotics Operations Specialist",
+     "title": "Product Owner WIFI, RF & Embedded Systems",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-05",
+     "location": "Lyon, France",
+     "published": "2026-11-06",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/mistralai/robotics-operations-specialist-paris-459006",
-     "company": "Mistral.ai"
+     "url": "https://www.arbeitnow.fr/jobs/companies/exotec/product-owner-wifi-rf-embedded-systems-lyon-410377",
+     "company": "Exotec"
     },
     {
-     "title": "Applied Scientist Lead (Robotics), EMEA",
+     "title": "Product Owner WIFI, RF & Embedded Systems",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-05",
+     "location": "Lille, France",
+     "published": "2026-11-06",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/mistralai/applied-scientist-lead-robotics-emea-paris-466277",
-     "company": "Mistral.ai"
+     "url": "https://www.arbeitnow.fr/jobs/companies/exotec/product-owner-wifi-rf-embedded-systems-lille-41062",
+     "company": "Exotec"
     },
     {
-     "title": "Elektroniker f\u00fcr Automatisierungstechnik (m/w/d)",
+     "title": "Softwareentwickler Automatisierungstechnik SPS (m/w/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Hamburg",
-     "published": "2026-11-05",
+     "location": "Munich",
+     "published": "2026-11-06",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/hrw-gebaudetechnik/elektroniker-fur-automatisierungstechnik-hamburg-498721",
-     "company": "HRW Geb\u00e4udetechnik"
-    },
-    {
-     "title": "Steuerungstechniker:in Kundendienst",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "W\u00fcrenlos",
-     "published": "2026-11-05",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/aksa-wurenlos-ag/steuerungstechnikerinn-kundendienst-wurenlos-48898",
-     "company": "AKSA W\u00fcrenlos AG"
-    },
-    {
-     "title": "Homologation & Certification Engineer, Energy Systems",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Nyon",
-     "published": "2026-11-04",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/eh-group/homologation-certification-engineer-energy-systems-nyon-272389",
-     "company": "Eh Group"
-    },
-    {
-     "title": "Product Certification Engineer, Fuel Cell Systems",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Nyon",
-     "published": "2026-11-04",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/eh-group/product-certification-engineer-fuel-cell-systems-nyon-267368",
-     "company": "Eh Group"
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwareentwickler-automatisierungstechnik-sps-munich-403500",
+     "company": "MY Humancapital GmbH"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",

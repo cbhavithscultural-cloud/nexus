@@ -1,20 +1,20 @@
 {
- "oi": 6,
- "bci": 6,
+ "oi": 7,
+ "bci": 7,
  "po": [
   1,
-  2
+  3
  ],
  "pb": [
   1,
-  2
+  3
  ],
  "gh": [
   2,
-  1
+  2
  ],
- "ip": 6,
- "li": 6,
+ "ip": 7,
+ "li": 7,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -58,6 +58,9 @@
   "https://www.therobotreport.com/gentherm-designs-thermaffyx-protect-move-patients-during-robotic-surgeries/",
   "https://www.therobotreport.com/chinese-regulators-block-softbanks-5-4b-acquisition-of-abb-robotics/",
   "https://www.therobotreport.com/agility-robotics-begins-trading-on-nasdaq/",
-  "https://www.therobotreport.com/how-ambi-robotics-helps-customers-prepare-peak-season/"
+  "https://www.therobotreport.com/how-ambi-robotics-helps-customers-prepare-peak-season/",
+  "https://www.therobotreport.com/how-did-agility-robotics-perform-on-its-first-day-on-the-stock-market/",
+  "https://robohub.org/robots-in-society-business-and-culture-october-2026/",
+  "https://www.therobotreport.com/how-globallogic-helped-haystack-robotics-build-uv-disinfection-robot/"
  ]
 }

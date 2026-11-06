@@ -1,0 +1,273 @@
+{
+ "v": 2,
+ "date": "2026-11-07",
+ "generated_at": "2026-11-07T02:44:05.857365+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how physical connections between brain cells change their strength based on how often they are used, known as neural plasticity.",
+   "why_it_matters": "Plasticity is the biological mechanism behind learning and memory. For organoid intelligence, harnessing this natural ability to adapt allows living tissue in a dish to store information and solve computational problems over time.",
+   "prerequisites": [
+    "Basic knowledge of how neurons send chemical messages across the tiny space between them",
+    "Understanding that brain cells form networks rather than acting entirely alone"
+   ],
+   "simple_explanation": "Imagine a grassy path in a park. If only one person walks across it once, the grass bounces back and leaves no trace. But if hundreds of people walk down that exact same route every day, a clear dirt path forms. Brain connections work similarly: when two connected cells fire signals together repeatedly, the bridge between them grows stronger and more efficient.",
+   "step_by_step": [
+    "Neurons communicate by sending messages across a tiny gap called a synapse.",
+    "When a sending cell triggers a receiving cell repeatedly, the connection experiences frequent activity.",
+    "Inside the receiving cell, chemical changes occur that make it more sensitive to future messages from that specific sender.",
+    "Over time, this enhanced sensitivity means future signals travel across the gap much more easily, representing a physical trace of learning."
+   ],
+   "technical_depth": "At a microscopic level, plasticity often involves altering the number of receptor proteins embedded in the membrane of the receiving neuron. Frequent activation triggers internal cellular pathways that insert more receptors into the synapse. With more receptors waiting to catch chemical messages, the resulting electrical response becomes larger. This process demonstrates how a biological system alters its own hardware dynamically.",
+   "misconceptions": [
+    {
+     "misconception": "Brain cells grow entirely new physical branches every time you learn a single fact.",
+     "correction": "Most daily learning and memory updates happen by strengthening or weakening existing chemical connections at the synapse, rather than constantly building brand new long-range pathways."
+    }
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the biological term for the ability of brain connections to change their strength?",
+     "answer": "Neural plasticity."
+    },
+    {
+     "question": "Does frequent activity at a synapse generally make the connection stronger or weaker?",
+     "answer": "Stronger."
+    },
+    {
+     "question": "Why is plasticity essential for organoid intelligence?",
+     "answer": "It provides the mechanism for the living tissue to adapt, learn, and process information based on experience rather than fixed programming."
+    }
+   ],
+   "exercise": "Draw two circles representing connected cells. Write down two simple rules for how their connecting bridge could change: one rule for when they fire together often, and one rule for when they rarely interact.",
+   "summary": "Neural plasticity allows living brain networks to modify their internal connection strengths based on use. This dynamic adjustment serves as the core foundation for biological learning, memory storage, and adaptive computing in organoids.",
+   "next_lesson": "Day 8: How we measure changes in organoid network activity over time.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how physical filters manipulate EEG frequencies and how to identify non-brain noise signals in raw recordings.",
+   "why_it_matters": "Real-world brain-computer interfaces are constantly bombarded by outside electrical noise and body movements, making it impossible to interpret user intent without cleaning the data first.",
+   "prerequisites": [
+    "Basic knowledge of electrical frequencies and waves",
+    "Familiarity with how scalp sensors pick up voltage changes"
+   ],
+   "simple_explanation": "Imagine listening to your favorite song while standing next to a loud highway. The music is the brain signal, and the highway traffic is the noise. Filtering is like turning down the volume of the highway so you can hear the music clearly.",
+   "step_by_step": [
+    "Inspect the raw, unfiltered EEG stream to spot sudden spikes or slow drifting baselines.",
+    "Decide which frequency ranges are needed for the specific BCI task, such as ignoring very slow head-movement drifts.",
+    "Apply a mathematical digital filter to block unwanted frequency bands while letting brain waves pass through untouched.",
+    "Check the cleaned signal to ensure the actual brain activity remains intact without distortion."
+   ],
+   "technical_depth": "Digital filters rely on mathematical algorithms applied to sampled time-series data. Finite Impulse Response (FIR) and Infinite Impulse Response (IIR) filters shape the frequency spectrum. A low-pass filter lets slow waves pass and blocks fast ones, a high-pass filter does the opposite, and a notch filter targets a very narrow frequency, like the constant hum of standard wall power outlets.",
+   "misconceptions": [
+    "Believing that filtering can completely restore a brain signal that was completely buried under massive movement noise.",
+    "Thinking that applying a filter changes the actual physical brain tissue rather than just cleaning up the recorded digital numbers."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the main purpose of a digital filter in a BCI setup?",
+     "answer": "To remove unwanted noise and interference while keeping the useful brain signals intact."
+    },
+    {
+     "question": "Which filter type would you use to block a steady electrical hum from nearby wall outlets?",
+     "answer": "A notch filter, which targets a very specific frequency."
+    },
+    {
+     "question": "Does filtering fix a signal that was completely destroyed by heavy physical movement?",
+     "answer": "No, if the noise completely overwhelms the brain data, filtering cannot magically recreate the lost neural information."
+    }
+   ],
+   "exercise": "Look at a sample recording of an eye blink on an EEG screen. Note how it creates a sudden, large voltage jump. Describe how a high-pass filter might help reduce the slow, drifting baseline that often accompanies these blinks.",
+   "summary": "Filtering is an essential cleanup step in BCI engineering that uses mathematical algorithms to separate valuable brain rhythms from body movements and environmental electrical noise.",
+   "next_lesson": "Introduction to common BCI software tools and data formats",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Compensating for Sensor Bias and Noise in C",
+   "explanation": "Even after understanding what sensor bias and random noise are, your microcontroller code must actively handle them. Bias is a fixed shift you can fix by subtracting a known offset, while noise bounces around randomly. To smooth out noisy readings from an ultrasonic distance sensor or a brain-computer interface signal, you can write a simple moving average filter in C that averages the last few samples.",
+   "practical_example": "Imagine your robot's infrared distance sensor always reads 3 centimeters too close due to a mounting tilt (bias), and its numbers jump up and down by 2 centimeters every millisecond due to electrical noise. In your C code, you first subtract 3 from the raw reading, and then you feed that corrected value into an array of the last 4 readings to calculate a rolling average.",
+   "exercise": "Write a short embedded C function that takes a new sensor reading, adds it to a circular buffer of size 4, removes the oldest reading, and returns the current average of the buffer to smooth out the noise.",
+   "model_answer": "int smoothSensorReading(int new_reading) {\n    static int buffer[4] = {0};\n    static int index = 0;\n    int sum = 0;\n    \n    buffer[index] = new_reading;\n    index = (index + 1) % 4;\n    \n    for(int i = 0; i < 4; i++) {\n        sum += buffer[i];\n    }\n    return sum / 4;\n}",
+   "why_it_works": "Using a circular buffer avoids heavy memory allocation and keeps execution time predictable, which is essential for real-time loops in robotics and embedded systems where timing consistency prevents control instability.",
+   "improvement_tip": "When discussing this in an internship interview, mention that while a moving average filter smooths noise, it also introduces a slight delay in reaction time, showing you understand the trade-offs of digital signal processing.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Turning qualitative project observations into verifiable scale and frequency metrics without guessing",
+   "explanation": "If your robotics, BCI, or embedded project did not involve speedups or percentage gains, you can still show scale and frequency using facts you actually logged, such as sampling rates, communication frequencies, loop intervals, or dataset sizes.",
+   "practical_example": "Instead of saying 'Optimized motor response time significantly,' look at your actual code logs to write 'Configured PWM frequency to 20kHz and polled encoder feedback every 10 milliseconds.'",
+   "exercise": "Review a recent embedded or robotics lab report. Identify one task where you changed a configuration setting, loop timing, or input frequency, and write a bullet point using that exact logged value.",
+   "model_answer": "Implemented FreeRTOS task scheduling to poll IMU sensor data at 100Hz, maintaining stable thread execution across a 5-minute continuous test run.",
+   "why_it_works": "It uses verifiable engineering constraints and configuration parameters rather than empty adjectives or fake percentage improvements.",
+   "improvement_tip": "Check your serial monitor logs, oscilloscope screenshots, or code initialization files to find real numbers before you start writing.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
+   "focus": "Research design and method",
+   "explanation": "This study tested whether living brain cells in a lab dish could learn to play a simple computer game, similar to Pong, by receiving electrical signals that showed where the game ball was located.",
+   "limits": "The Crossref abstract was empty, so this explanation relies on general knowledge of the published study's publicly known methodology rather than the specific text of the abstract.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (2006)",
+   "focus": "How the study was set up to test brain-controlled computer cursors and devices in a human participant.",
+   "explanation": "Because the paper's abstract text was not provided in the metadata, general knowledge indicates that this study tested a brain-computer interface (the BrainGate system) by implanting a small sensor into the motor cortex of a participant with paralysis, allowing them to translate brain signals into digital actions.",
+   "limits": "Since the specific abstract text was missing, this summary relies on general knowledge of the study's known methods rather than specific details from the text.",
+   "check": {
+    "confidence": "medium"
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "moveit/moveit2",
+   "language": "C++",
+   "description": "A popular open-source software platform used for robotic arm motion planning, manipulation, and related tasks, built specifically to run on ROS 2 (Robot Operating System 2).",
+   "key_features": [
+    "Motion planning for robots",
+    "Tools for commercial applications and prototyping",
+    "Algorithm benchmarking"
+   ],
+   "getting_started": "Users can install the framework using pre-compiled binaries or build it directly from source by following the official tutorials and documentation.",
+   "challenge": "Find the section in the project details that explains how the code is organized into different active ROS 2 versions or distributions, and identify which branch is used for general active development.",
+   "knowledge_check": "What underlying robotic framework does MoveIt 2 rely on?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "moveit/moveit2",
+    "html_url": "https://github.com/moveit/moveit2",
+    "description": ":robot: MoveIt for ROS 2",
+    "pushed_at": "2026-10-28T19:03:40Z",
+    "language": "C++",
+    "archived": false,
+    "license": "BSD-3-Clause"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/how-did-agility-robotics-perform-on-its-first-day-on-the-stock-market/",
+     "what": "Agility Robotics began trading on the Nasdaq stock exchange.",
+     "who": "Agility Robotics",
+     "how": "The company went public and ended its first trading day at $11.49, which is 2% higher than its starting price. Background (general knowledge): An initial public offering (IPO) is when a company sells shares to the public for the first time.",
+     "why": "Not stated in the source excerpt",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "How did Agility Robotics perform on its first day on the stock market?",
+     "published": "2026-11-06",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Research",
+     "url": "https://robohub.org/robots-in-society-business-and-culture-october-2026/",
+     "what": "A biohybrid robot that moves using electrical stimulation.",
+     "who": "Not stated in the source excerpt",
+     "how": "The robot is triggered to push off the ground when it receives an electrical impulse. Background (general knowledge): Biohybrid robots combine biological materials, like muscle or nerve cells, with mechanical parts.",
+     "why": "Not stated in the source excerpt",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Robots in society, business and culture: October 2026",
+     "published": "2026-11-04",
+     "source": "Robohub"
+    },
+    {
+     "category": "Product",
+     "url": "https://www.therobotreport.com/how-globallogic-helped-haystack-robotics-build-uv-disinfection-robot/",
+     "what": "Development of a robot designed for UV-based disinfection.",
+     "who": "Haystack Robotics and GlobalLogic",
+     "how": "GlobalLogic assisted in the design process with a focus on creating a machine that is not limited to a single environment or use case. Background (general knowledge): UV light is commonly used in medical settings to kill bacteria and viruses on surfaces.",
+     "why": "To create a versatile robot rather than one designed for a single specific environment.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "How GlobalLogic helped Haystack Robotics build a UV disinfection robot",
+     "published": "2026-11-04",
+     "source": "The Robot Report"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Internationaler Servicetechniker (DJ130)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Winterthur",
+     "published": "2026-11-06",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/internationaler-servicetechniker-dj130-winterthur-99159",
+     "company": "Excellent Go4"
+    },
+    {
+     "title": "Edge AI & Computer Vision Intern",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "\u00c9palinges, Switzerland",
+     "published": "2026-11-06",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/distalmotion/edge-ai-computer-vision-intern-epalinges-162054",
+     "company": "Distalmotion"
+    },
+    {
+     "title": "Softwarearchitekt Embedded Systems (m/w/d) Dresden",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Dresden",
+     "published": "2026-11-06",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwarearchitekt-embedded-systems-dresden-66626",
+     "company": "MY Humancapital GmbH"
+    },
+    {
+     "title": "Product Owner WIFI, RF & Embedded Systems",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Lyon, France",
+     "published": "2026-11-06",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/exotec/product-owner-wifi-rf-embedded-systems-lyon-410377",
+     "company": "Exotec"
+    },
+    {
+     "title": "Product Owner WIFI, RF & Embedded Systems",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Lille, France",
+     "published": "2026-11-06",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/exotec/product-owner-wifi-rf-embedded-systems-lille-41062",
+     "company": "Exotec"
+    },
+    {
+     "title": "Softwareentwickler Automatisierungstechnik SPS (m/w/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich",
+     "published": "2026-11-06",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwareentwickler-automatisierungstechnik-sps-munich-403500",
+     "company": "MY Humancapital GmbH"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
