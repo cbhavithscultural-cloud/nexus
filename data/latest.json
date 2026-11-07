@@ -1,157 +1,148 @@
 {
  "v": 2,
- "date": "2026-11-07",
- "generated_at": "2026-11-07T04:31:41.511534+05:30",
+ "date": "2026-11-08",
+ "generated_at": "2026-11-08T02:40:12.753185+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how physical connections between brain cells change their strength based on how often they are used, known as neural plasticity.",
-   "why_it_matters": "Plasticity is the biological mechanism behind learning and memory. For organoid intelligence, harnessing this natural ability to adapt allows living tissue in a dish to store information and solve computational problems over time.",
+   "objective": "Understand the fundamental differences and similarities between biological neural networks (found in brains and organoids) and artificial neural networks (used in computer science).",
+   "why_it_matters": "Organoid intelligence bridges living biology and computing. Knowing how organic brain tissue compares to silicon-based math models helps us figure out what biological computers do better than standard AI, and vice versa.",
    "prerequisites": [
-    "Basic knowledge of how neurons send chemical messages across the tiny space between them",
-    "Understanding that brain cells form networks rather than acting entirely alone"
+    "Basic knowledge of how biological neurons pass signals using electricity and chemicals",
+    "General awareness that computers process data using math and algorithms"
    ],
-   "simple_explanation": "Imagine a grassy path in a park. If only one person walks across it once, the grass bounces back and leaves no trace. But if hundreds of people walk down that exact same route every day, a clear dirt path forms. Brain connections work similarly: when two connected cells fire signals together repeatedly, the bridge between them grows stronger and more efficient.",
+   "simple_explanation": "Imagine two ways to solve a maze. Artificial neural networks (ANNs) are like computer programs running millions of rigid math equations very quickly on silicon chips. Biological neural networks are like a living colony of ants working together; they change their own physical paths, use very little energy, and adapt on the fly. In organoid intelligence, we study how living cells do computing without a pre-written software program.",
    "step_by_step": [
-    "Neurons communicate by sending messages across a tiny gap called a synapse.",
-    "When a sending cell triggers a receiving cell repeatedly, the connection experiences frequent activity.",
-    "Inside the receiving cell, chemical changes occur that make it more sensitive to future messages from that specific sender.",
-    "Over time, this enhanced sensitivity means future signals travel across the gap much more easily, representing a physical trace of learning."
+    "Look at the basic building block: Artificial networks use abstract numbers called 'weights' and 'activation functions'. Biological networks use real physical cells, membranes, ions, and neurotransmitters.",
+    "Examine how they learn: Computers learn by updating numbers through heavy math formulas (like calculus and gradient descent). Brain cells learn by growing new physical connections, strengthening synapses, and changing chemical sensitivities.",
+    "Compare energy use: A computer running a large AI model needs massive power stations or heavy electricity. A human brain runs on about 20 watts of energy, roughly the power of a dim lightbulb, which is similar to the efficiency goals of organoid computing.",
+    "Identify the operational differences: ANNs are deterministic, meaning the same input always gives the exact same output. Biological tissues are dynamic, noisy, and constantly shifting even without new input."
    ],
-   "technical_depth": "At a microscopic level, plasticity often involves altering the number of receptor proteins embedded in the membrane of the receiving neuron. Frequent activation triggers internal cellular pathways that insert more receptors into the synapse. With more receptors waiting to catch chemical messages, the resulting electrical response becomes larger. This process demonstrates how a biological system alters its own hardware dynamically.",
+   "technical_depth": "Artificial neural networks use matrix multiplications and activation functions like ReLU or Sigmoid to map inputs to outputs. Biological networks rely on stochastic (random-seeming) ion channel gating, asynchronous event timing, and continuous morphological remodeling. While deep learning excels at static pattern recognition with massive datasets, biological networks achieve general intelligence, few-shot learning, and extreme energy efficiency through physical plasticity.",
    "misconceptions": [
-    {
-     "misconception": "Brain cells grow entirely new physical branches every time you learn a single fact.",
-     "correction": "Most daily learning and memory updates happen by strengthening or weakening existing chemical connections at the synapse, rather than constantly building brand new long-range pathways."
-    }
+    "Misconception: Brains and artificial neural networks work the exact same way because AI was modeled on the brain. Fact: Early AI was loosely inspired by brain cells, but modern ANNs use math techniques (like backpropagation) that do not happen in real biological brains.",
+    "Misconception: Organoids are just living computer chips ready to run software. Fact: Organoids are living tissues that respond to stimuli with organic growth and chemical signalling, not programmed code execution."
    ],
    "knowledge_check": [
     {
-     "question": "What is the biological term for the ability of brain connections to change their strength?",
-     "answer": "Neural plasticity."
+     "question": "What is a major physical difference between artificial neural networks and biological ones?",
+     "answer": "Artificial networks use math numbers and computer code on silicon chips, whereas biological networks use living cells, ions, and physical connections."
     },
     {
-     "question": "Does frequent activity at a synapse generally make the connection stronger or weaker?",
-     "answer": "Stronger."
+     "question": "How does energy consumption generally compare between biological brains and heavy AI computing?",
+     "answer": "Biological brains run on very low power (around 20 watts), while large artificial intelligence systems often require substantial electricity and cooling."
     },
     {
-     "question": "Why is plasticity essential for organoid intelligence?",
-     "answer": "It provides the mechanism for the living tissue to adapt, learn, and process information based on experience rather than fixed programming."
+     "question": "Are biological neural networks strictly deterministic like standard computer programs?",
+     "answer": "No, biological networks are dynamic, noisy, and constantly changing, whereas standard computer programs give the exact same output for the same input."
     }
    ],
-   "exercise": "Draw two circles representing connected cells. Write down two simple rules for how their connecting bridge could change: one rule for when they fire together often, and one rule for when they rarely interact.",
-   "summary": "Neural plasticity allows living brain networks to modify their internal connection strengths based on use. This dynamic adjustment serves as the core foundation for biological learning, memory storage, and adaptive computing in organoids.",
-   "next_lesson": "Day 8: How we measure changes in organoid network activity over time.",
+   "exercise": "Draw a simple comparison chart on paper with two columns: 'Artificial Neural Network' and 'Biological Neural Network'. List three features for each, focusing on how they handle power, learning, and structure.",
+   "summary": "While artificial neural networks use rigid math and digital code on silicon chips, biological neural networks use living, energy-efficient cells that change their physical shape and chemistry to process information.",
+   "next_lesson": "Day 9: Introduction to microelectrode arrays and how we listen to organoids.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how physical filters manipulate EEG frequencies and how to identify non-brain noise signals in raw recordings.",
-   "why_it_matters": "Real-world brain-computer interfaces are constantly bombarded by outside electrical noise and body movements, making it impossible to interpret user intent without cleaning the data first.",
+   "objective": "Understand how physical actions like blinking, facial expressions, and head shifts produce electrical noise in EEG recordings, and learn how to identify these non-brain signals.",
+   "why_it_matters": "Muscles and eyes generate electrical currents that are much stronger than brain waves. If a BCI misinterprets a blink or jaw clench as a mental command, the system will execute the wrong action, making artifact management critical for reliable control.",
    "prerequisites": [
-    "Basic knowledge of electrical frequencies and waves",
-    "Familiarity with how scalp sensors pick up voltage changes"
+    "Basic awareness that EEG sensors record electrical voltage changes on the scalp.",
+    "Understanding that volume conduction allows electrical currents to spread through head tissue."
    ],
-   "simple_explanation": "Imagine listening to your favorite song while standing next to a loud highway. The music is the brain signal, and the highway traffic is the noise. Filtering is like turning down the volume of the highway so you can hear the music clearly.",
+   "simple_explanation": "Your brain is not the only thing in your body that uses electricity. Every time you blink your eyes, look around, or tense your jaw, your body creates large electrical spikes. Because EEG sensors sit on the outside of your head, they pick up these body movements just as easily as they pick up thoughts. These unwanted body signals are called artifacts. Think of them like static or loud background noise on a telephone call that drowns out the person speaking.",
    "step_by_step": [
-    "Inspect the raw, unfiltered EEG stream to spot sudden spikes or slow drifting baselines.",
-    "Decide which frequency ranges are needed for the specific BCI task, such as ignoring very slow head-movement drifts.",
-    "Apply a mathematical digital filter to block unwanted frequency bands while letting brain waves pass through untouched.",
-    "Check the cleaned signal to ensure the actual brain activity remains intact without distortion."
+    "1. Examine the origin of eye signals: The human eyeball acts like a tiny battery with a positive side (the front) and a negative side (the back). When you blink or roll your eyes, this internal battery moves, creating massive slow rolling waves on nearby forehead sensors.",
+    "2. Observe muscle signals (electromyography or EMG): Tensing your jaw, swallowing, or frowning fires up facial muscles. These muscle fibers contract rapidly, producing chaotic, high-frequency static that blankets all EEG channels.",
+    "3. Check physical movement artifacts: Simple head tilting or cable swaying can shift the physical contact between the skin and the sensor, causing sudden, sharp voltage jumps called motion artifacts.",
+    "4. Compare shapes: Learn to visually spot artifacts by looking for sudden, massive voltage spikes that do not match normal brain rhythms."
    ],
-   "technical_depth": "Digital filters rely on mathematical algorithms applied to sampled time-series data. Finite Impulse Response (FIR) and Infinite Impulse Response (IIR) filters shape the frequency spectrum. A low-pass filter lets slow waves pass and blocks fast ones, a high-pass filter does the opposite, and a notch filter targets a very narrow frequency, like the constant hum of standard wall power outlets.",
+   "technical_depth": "From a signal processing standpoint, ocular artifacts dominate low-frequency bands (below 4 Hz) due to the slow movement of the corneo-retinal dipole during blinks. Conversely, myogenic (muscle) artifacts possess a broad frequency spectrum extending well past 100 Hz, often overlapping with gamma-band neural activity. Because muscle interference has high amplitude and wide frequency dispersion, standard low-pass filtering alone is insufficient to remove it without destroying high-frequency neural features.",
    "misconceptions": [
-    "Believing that filtering can completely restore a brain signal that was completely buried under massive movement noise.",
-    "Thinking that applying a filter changes the actual physical brain tissue rather than just cleaning up the recorded digital numbers."
+    "Misconception: BCI software automatically ignores all physical body movements.",
+    "Correction: Software cannot tell the difference on its own unless explicitly trained or paired with special monitoring sensors; unmanaged artifacts routinely corrupt BCI accuracy."
    ],
    "knowledge_check": [
     {
-     "question": "What is the main purpose of a digital filter in a BCI setup?",
-     "answer": "To remove unwanted noise and interference while keeping the useful brain signals intact."
+     "question": "Why do eye blinks create large waves in front EEG channels?",
+     "answer": "The eye acts like a charged battery with positive and front-facing poles; moving it shifts this electrical field toward nearby sensors."
     },
     {
-     "question": "Which filter type would you use to block a steady electrical hum from nearby wall outlets?",
-     "answer": "A notch filter, which targets a very specific frequency."
+     "question": "What frequency range do muscle tension artifacts typically affect?",
+     "answer": "They spread across a very wide frequency range, often extending past 100 Hz into high-frequency bands."
     },
     {
-     "question": "Does filtering fix a signal that was completely destroyed by heavy physical movement?",
-     "answer": "No, if the noise completely overwhelms the brain data, filtering cannot magically recreate the lost neural information."
+     "question": "How do motion artifacts occur?",
+     "answer": "Physical movement or cable pulling alters the contact between the electrode and the skin, causing sudden voltage jumps."
     }
    ],
-   "exercise": "Look at a sample recording of an eye blink on an EEG screen. Note how it creates a sudden, large voltage jump. Describe how a high-pass filter might help reduce the slow, drifting baseline that often accompanies these blinks.",
-   "summary": "Filtering is an essential cleanup step in BCI engineering that uses mathematical algorithms to separate valuable brain rhythms from body movements and environmental electrical noise.",
-   "next_lesson": "Introduction to common BCI software tools and data formats",
+   "exercise": "Sit in front of your computer and record a 1-minute baseline of resting data. For the first 20 seconds, stay completely still. For the next 20 seconds, blink heavily every two seconds. For the final 20 seconds, clench your jaw gently. Open your raw data viewing tool and observe how the visual waveform changes shape drastically during the blinking and clenching phases compared to the still phase.",
+   "summary": "Non-neural body actions like eye blinks, gaze shifts, and muscle flexing create powerful electrical disruptions called artifacts that easily overpower delicate brain rhythms on an EEG recording.",
+   "next_lesson": "Introduction to basic time-domain analysis metrics like mean amplitude and variance",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Compensating for Sensor Bias and Noise in C",
-   "explanation": "Even after understanding what sensor bias and random noise are, your microcontroller code must actively handle them. Bias is a fixed shift you can fix by subtracting a known offset, while noise bounces around randomly. To smooth out noisy readings from an ultrasonic distance sensor or a brain-computer interface signal, you can write a simple moving average filter in C that averages the last few samples.",
-   "practical_example": "Imagine your robot's infrared distance sensor always reads 3 centimeters too close due to a mounting tilt (bias), and its numbers jump up and down by 2 centimeters every millisecond due to electrical noise. In your C code, you first subtract 3 from the raw reading, and then you feed that corrected value into an array of the last 4 readings to calculate a rolling average.",
-   "exercise": "Write a short embedded C function that takes a new sensor reading, adds it to a circular buffer of size 4, removes the oldest reading, and returns the current average of the buffer to smooth out the noise.",
-   "model_answer": "int smoothSensorReading(int new_reading) {\n    static int buffer[4] = {0};\n    static int index = 0;\n    int sum = 0;\n    \n    buffer[index] = new_reading;\n    index = (index + 1) % 4;\n    \n    for(int i = 0; i < 4; i++) {\n        sum += buffer[i];\n    }\n    return sum / 4;\n}",
-   "why_it_works": "Using a circular buffer avoids heavy memory allocation and keeps execution time predictable, which is essential for real-time loops in robotics and embedded systems where timing consistency prevents control instability.",
-   "improvement_tip": "When discussing this in an internship interview, mention that while a moving average filter smooths noise, it also introduces a slight delay in reaction time, showing you understand the trade-offs of digital signal processing.",
+   "topic": "Read a simple circuit diagram and identify power and ground paths",
+   "explanation": "Before assembling hardware for a robot or neural sensor interface, you must trace how current flows through a schematic. The power path brings positive voltage from a battery or regulator to your components, while the ground path provides the complete return loop back to the source to close the circuit.",
+   "practical_example": "Imagine looking at the schematic for a simple obstacle-detecting robot. You locate the battery symbol, follow the positive line marked '5V' to find where it branches out to power the microcontroller and the ultrasonic sensor, and then trace the black lines leading to the ground symbol.",
+   "exercise": "Take a basic diagram containing a battery, a switch, a resistor, and an LED. Write down the exact steps to trace the power path from the positive battery terminal to the LED anode, and the ground path from the LED cathode back to the negative terminal.",
+   "model_answer": "1. Start at the positive terminal of the battery (VCC). 2. Follow the line through the closed switch to one side of the current-limiting resistor. 3. Continue from the other side of the resistor to the positive leg (anode) of the LED. 4. From the negative leg (cathode) of the LED, follow the trace to the negative terminal or ground symbol of the battery to complete the return path.",
+   "why_it_works": "Breaking the schematic down into a step-by-step trace prevents missed connections, which is the number one cause of hardware failing to turn on during a live internship lab test.",
+   "improvement_tip": "Always use different colored pencils or digital highlight tools to trace power lines in red and ground lines in black to avoid confusion on dense schematics.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Turning qualitative project observations into verifiable scale and frequency metrics without guessing",
-   "explanation": "If your robotics, BCI, or embedded project did not involve speedups or percentage gains, you can still show scale and frequency using facts you actually logged, such as sampling rates, communication frequencies, loop intervals, or dataset sizes.",
-   "practical_example": "Instead of saying 'Optimized motor response time significantly,' look at your actual code logs to write 'Configured PWM frequency to 20kHz and polled encoder feedback every 10 milliseconds.'",
-   "exercise": "Review a recent embedded or robotics lab report. Identify one task where you changed a configuration setting, loop timing, or input frequency, and write a bullet point using that exact logged value.",
-   "model_answer": "Implemented FreeRTOS task scheduling to poll IMU sensor data at 100Hz, maintaining stable thread execution across a 5-minute continuous test run.",
-   "why_it_works": "It uses verifiable engineering constraints and configuration parameters rather than empty adjectives or fake percentage improvements.",
-   "improvement_tip": "Check your serial monitor logs, oscilloscope screenshots, or code initialization files to find real numbers before you start writing.",
+   "topic": "Writing a structured bug diary update for a hardware-software integration glitch",
+   "explanation": "Debugging physical systems like a microcontroller talking to a sensor often involves mysterious errors like erratic sensor readings or random resets. Instead of just saying you fixed a bug, this session teaches you how to publish a short LinkedIn activity post detailing your troubleshooting log\u2014specifically how you isolated whether the issue was a loose wiring connection, a power supply voltage drop, or a faulty communication protocol like SPI. This proves to Indian engineering recruiters that you have the patience and systematic mindset required for embedded systems and robotics roles.",
+   "practical_example": "If your line-following robot's motor driver kept cutting out whenever the DC motors spun up, you do not just write 'fixed motor bug.' Instead, share the exact troubleshooting steps: you first measured the voltage drop using a multimeter, realized the motor current was pulling down the microcontroller's logic voltage, and resolved it by separating the power rails and adding a decoupling capacitor.",
+   "exercise": "Draft a short, three-sentence LinkedIn post update about a real hardware or software glitch you faced in a college lab or personal project. State the symptom you observed, the diagnostic tool or method you used to trace the root cause, and the final fix you applied.",
+   "model_answer": "While testing my STM32-based sensor node, the microcontroller kept resetting randomly during data transmission. I used an oscilloscope to monitor the 3.3V power line and noticed a severe voltage sag whenever the Wi-Fi module activated. Adding a 100uF electrolytic capacitor across the power rails stabilized the voltage and completely stopped the unexpected reboots.",
+   "why_it_works": "It demonstrates practical engineering competence by mentioning real diagnostic tools like an oscilloscope or multimeter, showing hiring managers that you know how to handle physical hardware challenges beyond writing clean software.",
+   "improvement_tip": "Never claim a bug fix solved a problem if you only guessed the solution; always highlight the specific measurement or logic check that helped you find the true root cause.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
-   "focus": "Research design and method",
-   "explanation": "This study tested whether living brain cells in a lab dish could learn to play a simple computer game, similar to Pong, by receiving electrical signals that showed where the game ball was located.",
-   "limits": "The Crossref abstract was empty, so this explanation relies on general knowledge of the published study's publicly known methodology rather than the specific text of the abstract.",
-   "check": "high",
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
+   "focus": "Results and figures",
+   "explanation": "Because the abstract was not provided, we rely on general knowledge of the study. The researchers reported that living brain cells connected to a computer could learn to play a simple virtual tennis game, similar to Pong, by changing their electrical activity based on feedback.",
+   "limits": "Specific numerical results and details from the paper's figures could not be verified directly from the abstract.",
+   "check": {
+    "confidence": "moderate"
+   },
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/j.neuron.2022.09.001",
    "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (2006)",
-   "focus": "How the study was set up to test brain-controlled computer cursors and devices in a human participant.",
-   "explanation": "Because the paper's abstract text was not provided in the metadata, general knowledge indicates that this study tested a brain-computer interface (the BrainGate system) by implanting a small sensor into the motor cortex of a participant with paralysis, allowing them to translate brain signals into digital actions.",
-   "limits": "Since the specific abstract text was missing, this summary relies on general knowledge of the study's known methods rather than specific details from the text.",
-   "check": {
-    "confidence": "medium"
-   },
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "Day 3 focuses on the results and figures, meaning what the researchers actually found and how they displayed their data.",
+   "explanation": "Because the provided abstract is empty, general knowledge indicates that this paper showed a human participant with paralysis could use a brain implant to control external items like a computer cursor or a robotic hand just by thinking about movement. The figures likely displayed brain cell activity alongside the movement paths on a screen. Confidence: moderate due to missing abstract text.",
+   "limits": "Since no abstract text was provided in the metadata and exact numerical data cannot be guessed, specific figure details are omitted to avoid inventing results.",
+   "check": "The explanation uses only general knowledge without inventing specific numbers or unverified data.",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature04970",
    "doi_link": "https://doi.org/10.1038/nature04970",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "1 of 3",
-   "phase": "Understand the project",
-   "project_name": "moveit/moveit2",
-   "language": "C++",
-   "description": "A popular open-source software platform used for robotic arm motion planning, manipulation, and related tasks, built specifically to run on ROS 2 (Robot Operating System 2).",
-   "key_features": [
-    "Motion planning for robots",
-    "Tools for commercial applications and prototyping",
-    "Algorithm benchmarking"
-   ],
-   "getting_started": "Users can install the framework using pre-compiled binaries or build it directly from source by following the official tutorials and documentation.",
-   "challenge": "Find the section in the project details that explains how the code is organized into different active ROS 2 versions or distributions, and identify which branch is used for general active development.",
-   "knowledge_check": "What underlying robotic framework does MoveIt 2 rely on?",
+   "day": "2 of 3",
+   "topic": "How it works",
+   "project": "moveit/moveit2",
+   "explanation": "Based on the project files and details, MoveIt 2 functions as a motion planning framework built specifically for the Robot Operating System 2 (ROS 2). It helps developers create robot applications, test designs, and run algorithms by managing tasks like arm movements. The project relies on C++ and is organized around different branches: a main branch for active development that receives frequent updates, and stable release branches (like humble and jazzy) that only receive bug fixes. Continuous integration tools are used to check formatting and code health automatically across these versions.",
+   "challenge": "Review the branch policy table in the documentation to identify which branch is meant for active development and which ones are meant for stable releases.",
+   "knowledge_check": "What underlying robotic framework does this version of MoveIt use?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "moveit/moveit2",
@@ -166,45 +157,42 @@
   "news": {
    "items": [
     {
-     "category": "Business",
-     "url": "https://www.therobotreport.com/how-did-agility-robotics-perform-on-its-first-day-on-the-stock-market/",
-     "what": "Agility Robotics began trading on the Nasdaq stock exchange.",
-     "who": "Agility Robotics",
-     "how": "The company went public and ended its first trading day at $11.49, which is 2% higher than its starting price. Background (general knowledge): An initial public offering (IPO) is when a company sells shares to the public for the first time.",
-     "why": "Not stated in the source excerpt",
+     "category": "Product",
+     "url": "https://www.therobotreport.com/boston-dynamics-built-stretch-gen-2-for-reliable-consistent-performance/",
+     "what": "Boston Dynamics released the second generation of their Stretch robot.",
+     "who": "Boston Dynamics",
+     "how": "The development of this new model spanned two and a half years with a focus on improving operational consistency.",
+     "why": "To provide more reliable and consistent performance in logistics applications.",
      "limits": "Not stated in the source excerpt",
-     "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "How did Agility Robotics perform on its first day on the stock market?",
-     "published": "2026-11-06",
+     "title": "Boston Dynamics built Stretch Gen 2 for reliable, consistent performance",
+     "published": "2026-11-07",
      "source": "The Robot Report"
     },
     {
-     "category": "Research",
-     "url": "https://robohub.org/robots-in-society-business-and-culture-october-2026/",
-     "what": "A biohybrid robot that moves using electrical stimulation.",
-     "who": "Not stated in the source excerpt",
-     "how": "The robot is triggered to push off the ground when it receives an electrical impulse. Background (general knowledge): Biohybrid robots combine biological materials, like muscle or nerve cells, with mechanical parts.",
-     "why": "Not stated in the source excerpt",
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/how-point-one-turned-gps-accuracy-into-robotics-platform/",
+     "what": "The application of high-precision GPS technology to robotics navigation.",
+     "who": "Point One",
+     "how": "Using precise location data to allow robots to coordinate and maneuver through real-world environments. Background (general knowledge): GPS uses satellite signals to triangulate position, but high-precision systems use ground stations to correct errors for centimeter-level accuracy.",
+     "why": "To enable robots to scale operations and navigate complex spaces effectively.",
      "limits": "Not stated in the source excerpt",
-     "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Robots in society, business and culture: October 2026",
-     "published": "2026-11-04",
-     "source": "Robohub"
+     "title": "How Point One turned GPS accuracy into a robotics platform",
+     "published": "2026-11-07",
+     "source": "The Robot Report"
     },
     {
-     "category": "Product",
-     "url": "https://www.therobotreport.com/how-globallogic-helped-haystack-robotics-build-uv-disinfection-robot/",
-     "what": "Development of a robot designed for UV-based disinfection.",
-     "who": "Haystack Robotics and GlobalLogic",
-     "how": "GlobalLogic assisted in the design process with a focus on creating a machine that is not limited to a single environment or use case. Background (general knowledge): UV light is commonly used in medical settings to kill bacteria and viruses on surfaces.",
-     "why": "To create a versatile robot rather than one designed for a single specific environment.",
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/industry-experts-discuss-china-blocking-softbank-acquisition-abb-robotics/",
+     "what": "The blocking of SoftBank's attempt to purchase ABB Robotics by Chinese regulators.",
+     "who": "Chinese regulators, SoftBank, and ABB Robotics",
+     "how": "Governmental prohibition of the acquisition based on regulatory review.",
+     "why": "Experts suggest the move is motivated by broader concerns regarding artificial intelligence and the management of sensitive data.",
      "limits": "Not stated in the source excerpt",
-     "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "How GlobalLogic helped Haystack Robotics build a UV disinfection robot",
-     "published": "2026-11-04",
+     "title": "Industry experts discuss China blocking SoftBank acquisition of ABB Robotics",
+     "published": "2026-11-07",
      "source": "The Robot Report"
     }
    ]
@@ -219,51 +207,6 @@
      "source": "Arbeitnow",
      "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/internationaler-servicetechniker-dj130-winterthur-99159",
      "company": "Excellent Go4"
-    },
-    {
-     "title": "Edge AI & Computer Vision Intern",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "\u00c9palinges, Switzerland",
-     "published": "2026-11-06",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/distalmotion/edge-ai-computer-vision-intern-epalinges-162054",
-     "company": "Distalmotion"
-    },
-    {
-     "title": "Softwarearchitekt Embedded Systems (m/w/d) Dresden",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Dresden",
-     "published": "2026-11-06",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwarearchitekt-embedded-systems-dresden-66626",
-     "company": "MY Humancapital GmbH"
-    },
-    {
-     "title": "Product Owner WIFI, RF & Embedded Systems",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Lyon, France",
-     "published": "2026-11-06",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/exotec/product-owner-wifi-rf-embedded-systems-lyon-410377",
-     "company": "Exotec"
-    },
-    {
-     "title": "Product Owner WIFI, RF & Embedded Systems",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Lille, France",
-     "published": "2026-11-06",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/exotec/product-owner-wifi-rf-embedded-systems-lille-41062",
-     "company": "Exotec"
-    },
-    {
-     "title": "Softwareentwickler Automatisierungstechnik SPS (m/w/d)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich",
-     "published": "2026-11-06",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwareentwickler-automatisierungstechnik-sps-munich-403500",
-     "company": "MY Humancapital GmbH"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
