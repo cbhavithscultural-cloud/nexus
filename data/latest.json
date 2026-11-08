@@ -1,148 +1,151 @@
 {
  "v": 2,
- "date": "2026-11-08",
- "generated_at": "2026-11-08T04:26:55.769157+05:30",
+ "date": "2026-11-09",
+ "generated_at": "2026-11-09T02:39:33.233304+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand the fundamental differences and similarities between biological neural networks (found in brains and organoids) and artificial neural networks (used in computer science).",
-   "why_it_matters": "Organoid intelligence bridges living biology and computing. Knowing how organic brain tissue compares to silicon-based math models helps us figure out what biological computers do better than standard AI, and vice versa.",
+   "objective": "Understand how stem cells act as the blank-slate starting point for brain organoids and how chemical cues guide them to become mature neural cell types.",
+   "why_it_matters": "Before we can listen to electrical spikes or study learning in a brain organoid, we have to build the tissue from scratch. Knowing how raw biological material transforms into functional brain cells is the absolute foundation of growing living computers.",
    "prerequisites": [
-    "Basic knowledge of how biological neurons pass signals using electricity and chemicals",
-    "General awareness that computers process data using math and algorithms"
+    "Basic awareness that living tissues are made of specialized cells like neurons.",
+    "Understanding that cells need nutrients and a stable liquid environment to survive."
    ],
-   "simple_explanation": "Imagine two ways to solve a maze. Artificial neural networks (ANNs) are like computer programs running millions of rigid math equations very quickly on silicon chips. Biological neural networks are like a living colony of ants working together; they change their own physical paths, use very little energy, and adapt on the fly. In organoid intelligence, we study how living cells do computing without a pre-written software program.",
+   "simple_explanation": "Imagine building a house from a box of blank, interchangeable blocks. Stem cells are like those blank blocks: they have no permanent job yet. Because of a superpower called pluripotency, they can potentially turn into any cell type in the body. By adding specific chemical signals to their liquid bath, scientists act like master builders, telling these blank cells to transform\u2014or differentiate\u2014into skin, muscle, or in the case of organoid intelligence, specialized brain cells.",
    "step_by_step": [
-    "Look at the basic building block: Artificial networks use abstract numbers called 'weights' and 'activation functions'. Biological networks use real physical cells, membranes, ions, and neurotransmitters.",
-    "Examine how they learn: Computers learn by updating numbers through heavy math formulas (like calculus and gradient descent). Brain cells learn by growing new physical connections, strengthening synapses, and changing chemical sensitivities.",
-    "Compare energy use: A computer running a large AI model needs massive power stations or heavy electricity. A human brain runs on about 20 watts of energy, roughly the power of a dim lightbulb, which is similar to the efficiency goals of organoid computing.",
-    "Identify the operational differences: ANNs are deterministic, meaning the same input always gives the exact same output. Biological tissues are dynamic, noisy, and constantly shifting even without new input."
+    "Step 1: Start with human pluripotent stem cells, which can be grown indefinitely in a lab dish while maintaining their blank-slate status.",
+    "Step 2: Introduce targeted chemical signals (like specific proteins or growth factors) into the nutrient broth to mimic the molecular environment of early human embryonic development.",
+    "Step 3: Watch the cells receive these chemical instructions through their surface receptors, which trigger internal changes in their genetic instructions.",
+    "Step 4: Observe the cells as they exit their blank state and commit to becoming neural progenitor cells (early brain precursors).",
+    "Step 5: Allow these precursors to further specialize into functional neurons and supportive glial cells over several weeks."
    ],
-   "technical_depth": "Artificial neural networks use matrix multiplications and activation functions like ReLU or Sigmoid to map inputs to outputs. Biological networks rely on stochastic (random-seeming) ion channel gating, asynchronous event timing, and continuous morphological remodeling. While deep learning excels at static pattern recognition with massive datasets, biological networks achieve general intelligence, few-shot learning, and extreme energy efficiency through physical plasticity.",
+   "technical_depth": "Pluripotency is governed by a specific network of transcription factors (such as Oct4, Sox2, and Nanog) that keep the cell's chromatin in an open, highly accessible state, allowing many different genes to be turned on or off. Differentiation involves silencing these pluripotency markers while sequentially activating lineage-specific genes. In organoid protocols, researchers use dual SMAD inhibition (blocking specific signaling pathways) to efficiently push stem cells away from becoming skin and pull them toward a neuroectoderm fate, which naturally forms the basis of the central nervous system.",
    "misconceptions": [
-    "Misconception: Brains and artificial neural networks work the exact same way because AI was modeled on the brain. Fact: Early AI was loosely inspired by brain cells, but modern ANNs use math techniques (like backpropagation) that do not happen in real biological brains.",
-    "Misconception: Organoids are just living computer chips ready to run software. Fact: Organoids are living tissues that respond to stimuli with organic growth and chemical signalling, not programmed code execution."
+    {
+     "misconception": "Stem cells are tiny brains right from the start.",
+     "correction": "Stem cells are completely unspecialized and unorganized; they do not process information or generate electrical signals until they fully differentiate into mature neurons."
+    },
+    {
+     "misconception": "Stem cells automatically turn into brain cells on their own in a dish.",
+     "correction": "Without precise chemical nudges and carefully timed environmental cues, stem cells will either die, grow randomly, or turn into non-brain tissues."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What is a major physical difference between artificial neural networks and biological ones?",
-     "answer": "Artificial networks use math numbers and computer code on silicon chips, whereas biological networks use living cells, ions, and physical connections."
+     "question": "What does the term 'pluripotency' mean for a stem cell?",
+     "answer": "It means the cell has the potential to develop into many different cell types of the body."
     },
     {
-     "question": "How does energy consumption generally compare between biological brains and heavy AI computing?",
-     "answer": "Biological brains run on very low power (around 20 watts), while large artificial intelligence systems often require substantial electricity and cooling."
+     "question": "What is the role of chemical signals in stem cell culture?",
+     "answer": "They act as instructions that guide the blank stem cells to differentiate into specific cell types, such as brain precursors."
     },
     {
-     "question": "Are biological neural networks strictly deterministic like standard computer programs?",
-     "answer": "No, biological networks are dynamic, noisy, and constantly changing, whereas standard computer programs give the exact same output for the same input."
+     "question": "Why must stem cells change their gene activity during differentiation?",
+     "answer": "To turn off their blank-slate instructions and turn on the specific functional instructions needed to become a specialized cell like a neuron."
     }
    ],
-   "exercise": "Draw a simple comparison chart on paper with two columns: 'Artificial Neural Network' and 'Biological Neural Network'. List three features for each, focusing on how they handle power, learning, and structure.",
-   "summary": "While artificial neural networks use rigid math and digital code on silicon chips, biological neural networks use living, energy-efficient cells that change their physical shape and chemistry to process information.",
-   "next_lesson": "Day 9: Introduction to microelectrode arrays and how we listen to organoids.",
+   "exercise": "Draw a simple flowchart on paper showing a blank circle representing a stem cell on the left, an arrow labeled 'Chemical Cues' in the middle, and three specialized cell types (a neuron, a support cell, and an off-target cell) on the right to visualize how steering works.",
+   "summary": "Stem cells provide the raw, unspecialized building blocks for organoids. Through the process of guided differentiation using precise chemical signals, these blank cells take on specific neural identities, forming the cellular workforce required for wetware computing.",
+   "next_lesson": "Day 10: How we guide stem cells to form early brain structures.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how physical actions like blinking, facial expressions, and head shifts produce electrical noise in EEG recordings, and learn how to identify these non-brain signals.",
-   "why_it_matters": "Muscles and eyes generate electrical currents that are much stronger than brain waves. If a BCI misinterprets a blink or jaw clench as a mental command, the system will execute the wrong action, making artifact management critical for reliable control.",
-   "prerequisites": [
-    "Basic awareness that EEG sensors record electrical voltage changes on the scalp.",
-    "Understanding that volume conduction allows electrical currents to spread through head tissue."
-   ],
-   "simple_explanation": "Your brain is not the only thing in your body that uses electricity. Every time you blink your eyes, look around, or tense your jaw, your body creates large electrical spikes. Because EEG sensors sit on the outside of your head, they pick up these body movements just as easily as they pick up thoughts. These unwanted body signals are called artifacts. Think of them like static or loud background noise on a telephone call that drowns out the person speaking.",
+   "objective": "Understand how to extract both time-domain and frequency-domain features from neural data to prepare clean inputs for a BCI decoder.",
+   "why_it_matters": "Raw brain signals are too complex for a computer to understand directly. Turning them into structured mathematical features lets the system accurately translate what the user is trying to do.",
+   "prerequisites": "Familiarity with digital sampling (turning analog waves into numbers) and basic brain wave rhythms like alpha and beta activity.",
+   "simple_explanation": "Imagine listening to an orchestra. Looking at the whole sound wave moving up and down on a screen is a time-domain view. Separating that sound into individual musical notes played by different instruments is a frequency-domain view. BCI systems need both views to figure out brain intent.",
    "step_by_step": [
-    "1. Examine the origin of eye signals: The human eyeball acts like a tiny battery with a positive side (the front) and a negative side (the back). When you blink or roll your eyes, this internal battery moves, creating massive slow rolling waves on nearby forehead sensors.",
-    "2. Observe muscle signals (electromyography or EMG): Tensing your jaw, swallowing, or frowning fires up facial muscles. These muscle fibers contract rapidly, producing chaotic, high-frequency static that blankets all EEG channels.",
-    "3. Check physical movement artifacts: Simple head tilting or cable swaying can shift the physical contact between the skin and the sensor, causing sudden, sharp voltage jumps called motion artifacts.",
-    "4. Compare shapes: Learn to visually spot artifacts by looking for sudden, massive voltage spikes that do not match normal brain rhythms."
+    "Step 1: Collect a short window of digitized brain wave samples over a fixed duration, such as one second.",
+    "Step 2: Calculate time-domain properties across that window, tracking how the signal voltage changes directly over time.",
+    "Step 3: Apply a mathematical transform tool to split that same window into its component frequency speeds.",
+    "Step 4: Combine these computed values into a structured feature vector that represents the brain state for that specific time window."
    ],
-   "technical_depth": "From a signal processing standpoint, ocular artifacts dominate low-frequency bands (below 4 Hz) due to the slow movement of the corneo-retinal dipole during blinks. Conversely, myogenic (muscle) artifacts possess a broad frequency spectrum extending well past 100 Hz, often overlapping with gamma-band neural activity. Because muscle interference has high amplitude and wide frequency dispersion, standard low-pass filtering alone is insufficient to remove it without destroying high-frequency neural features.",
+   "technical_depth": "Time-domain features capture amplitude variations, signal energy, and waveform shapes directly in the temporal coordinate system. Frequency-domain features measure spectral power density across specific bands using mathematical transforms. Combining both domains gives algorithms a multi-dimensional picture of neural activity, improving classification accuracy.",
    "misconceptions": [
-    "Misconception: BCI software automatically ignores all physical body movements.",
-    "Correction: Software cannot tell the difference on its own unless explicitly trained or paired with special monitoring sensors; unmanaged artifacts routinely corrupt BCI accuracy."
+    "Misconception: Frequency analysis tells you exactly when an event happened in time. Correction: Standard frequency analysis smears temporal information across the chosen window, which is why combining it with time-domain metrics is necessary."
    ],
    "knowledge_check": [
     {
-     "question": "Why do eye blinks create large waves in front EEG channels?",
-     "answer": "The eye acts like a charged battery with positive and front-facing poles; moving it shifts this electrical field toward nearby sensors."
+     "question": "What does a time-domain feature measure?",
+     "answer": "It measures how the signal amplitude changes directly over time."
     },
     {
-     "question": "What frequency range do muscle tension artifacts typically affect?",
-     "answer": "They spread across a very wide frequency range, often extending past 100 Hz into high-frequency bands."
+     "question": "What does a frequency-domain feature measure?",
+     "answer": "It measures the strength of specific rhythmic speeds within the signal."
     },
     {
-     "question": "How do motion artifacts occur?",
-     "answer": "Physical movement or cable pulling alters the contact between the electrode and the skin, causing sudden voltage jumps."
+     "question": "Why do BCI systems often use both feature types together?",
+     "answer": "Because combining them provides a more complete description of the neural data than either method alone."
     }
    ],
-   "exercise": "Sit in front of your computer and record a 1-minute baseline of resting data. For the first 20 seconds, stay completely still. For the next 20 seconds, blink heavily every two seconds. For the final 20 seconds, clench your jaw gently. Open your raw data viewing tool and observe how the visual waveform changes shape drastically during the blinking and clenching phases compared to the still phase.",
-   "summary": "Non-neural body actions like eye blinks, gaze shifts, and muscle flexing create powerful electrical disruptions called artifacts that easily overpower delicate brain rhythms on an EEG recording.",
-   "next_lesson": "Introduction to basic time-domain analysis metrics like mean amplitude and variance",
+   "exercise": "Take a short sequence of recorded numbers representing an EEG signal window. Calculate the simple average (mean) for the time-domain view, and list out the relative power levels for low, medium, and high rhythmic speeds for the frequency-domain view.",
+   "summary": "Neural signals can be analyzed by looking at raw changes over time or by splitting them into distinct rhythmic speeds. Using both approaches gives BCI decoders the detailed information they need to spot user intent.",
+   "next_lesson": "Introduction to feature selection and dimensionality reduction in BCI",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Read a simple circuit diagram and identify power and ground paths",
-   "explanation": "Before assembling hardware for a robot or neural sensor interface, you must trace how current flows through a schematic. The power path brings positive voltage from a battery or regulator to your components, while the ground path provides the complete return loop back to the source to close the circuit.",
-   "practical_example": "Imagine looking at the schematic for a simple obstacle-detecting robot. You locate the battery symbol, follow the positive line marked '5V' to find where it branches out to power the microcontroller and the ultrasonic sensor, and then trace the black lines leading to the ground symbol.",
-   "exercise": "Take a basic diagram containing a battery, a switch, a resistor, and an LED. Write down the exact steps to trace the power path from the positive battery terminal to the LED anode, and the ground path from the LED cathode back to the negative terminal.",
-   "model_answer": "1. Start at the positive terminal of the battery (VCC). 2. Follow the line through the closed switch to one side of the current-limiting resistor. 3. Continue from the other side of the resistor to the positive leg (anode) of the LED. 4. From the negative leg (cathode) of the LED, follow the trace to the negative terminal or ground symbol of the battery to complete the return path.",
-   "why_it_works": "Breaking the schematic down into a step-by-step trace prevents missed connections, which is the number one cause of hardware failing to turn on during a live internship lab test.",
-   "improvement_tip": "Always use different colored pencils or digital highlight tools to trace power lines in red and ground lines in black to avoid confusion on dense schematics.",
+   "topic": "Calculating resistor values for LED indicators in robotics and BCI prototypes",
+   "explanation": "When building a robot or a brain-computer interface (BCI) prototype, you often need to connect indicator LEDs to your microcontroller's digital pins to show system status. Because microcontroller pins usually output 3.3V or 5V while standard LEDs can only handle lower voltages and specific currents without burning out, you must calculate the correct current-limiting resistor value using Ohm's Law.",
+   "practical_example": "Imagine you are wiring a status LED for a custom EEG headband prototype. Your microcontroller pin provides a 3.3V supply, your chosen green LED has a forward voltage drop of 2.0V, and the safe operating current is 10 milliamps (0.01 amps). To find the required resistor, you first subtract the LED's voltage from the supply voltage (3.3V - 2.0V = 1.3V) and then divide that result by the current in amps (1.3V / 0.01A = 130 ohms).",
+   "exercise": "Calculate the resistor value needed if you connect a red LED to a 5V microcontroller pin on an Arduino-based robot. Assume the red LED requires a forward voltage of 1.8V and a safe current of 20 milliamps (0.02 amps).",
+   "model_answer": "First, find the voltage across the resistor by subtracting the LED forward voltage from the supply voltage: 5V - 1.8V = 3.2V. Next, apply Ohm's Law by dividing this voltage by the current in amps: 3.2V / 0.02A = 160 ohms. You should use a 160-ohm resistor (or the next standard commercial value, like 180 ohms, to be safe).",
+   "why_it_works": "This calculation ensures that excess voltage is dropped safely across the resistor rather than burning out the delicate semiconductor material inside the LED, protecting your hardware during testing.",
+   "improvement_tip": "Always round your calculated resistor value up to the next standard commercial resistor size (like 220 ohms instead of an exact 160 ohms if unavailable) to slightly lower the current and protect your hardware.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Writing a structured bug diary update for a hardware-software integration glitch",
-   "explanation": "Debugging physical systems like a microcontroller talking to a sensor often involves mysterious errors like erratic sensor readings or random resets. Instead of just saying you fixed a bug, this session teaches you how to publish a short LinkedIn activity post detailing your troubleshooting log\u2014specifically how you isolated whether the issue was a loose wiring connection, a power supply voltage drop, or a faulty communication protocol like SPI. This proves to Indian engineering recruiters that you have the patience and systematic mindset required for embedded systems and robotics roles.",
-   "practical_example": "If your line-following robot's motor driver kept cutting out whenever the DC motors spun up, you do not just write 'fixed motor bug.' Instead, share the exact troubleshooting steps: you first measured the voltage drop using a multimeter, realized the motor current was pulling down the microcontroller's logic voltage, and resolved it by separating the power rails and adding a decoupling capacitor.",
-   "exercise": "Draft a short, three-sentence LinkedIn post update about a real hardware or software glitch you faced in a college lab or personal project. State the symptom you observed, the diagnostic tool or method you used to trace the root cause, and the final fix you applied.",
-   "model_answer": "While testing my STM32-based sensor node, the microcontroller kept resetting randomly during data transmission. I used an oscilloscope to monitor the 3.3V power line and noticed a severe voltage sag whenever the Wi-Fi module activated. Adding a 100uF electrolytic capacitor across the power rails stabilized the voltage and completely stopped the unexpected reboots.",
-   "why_it_works": "It demonstrates practical engineering competence by mentioning real diagnostic tools like an oscilloscope or multimeter, showing hiring managers that you know how to handle physical hardware challenges beyond writing clean software.",
-   "improvement_tip": "Never claim a bug fix solved a problem if you only guessed the solution; always highlight the specific measurement or logic check that helped you find the true root cause.",
+   "topic": "Organizing your Featured section media folders for hardware, schematics, and repositories",
+   "explanation": "After organizing individual project files, the next step is structuring your LinkedIn Featured section so recruiters can instantly find your hardware build photos, circuit schematics, and GitHub code links without clicking through clutter.",
+   "practical_example": "Instead of dropping random images and links in your Featured section, group them logically under one project: Link 1 pointing to your GitHub code, Link 2 pointing to your wiring schematic PDF, and the main thumbnail showing your actual physical prototype built on the breadboard or chassis.",
+   "exercise": "Review your LinkedIn Featured section. Create a single, clean showcase item for your best robotics, BCI, or embedded project that clearly links to the GitHub repository and pairs it with one clear photo of the physical circuit setup.",
+   "model_answer": "Featured Project: Line-Following Robot using STM32. Thumbnail: Clear photo of the assembled chassis and sensor array. Link: Direct GitHub repository containing the C source files and hardware wiring diagram.",
+   "why_it_works": "Engineering recruiters evaluating student interns have very little time. Giving them immediate, categorized access to both the physical build proof and the source code prevents friction and builds instant credibility.",
+   "improvement_tip": "Always use a real photograph of your hardware build as the preview image instead of a generic stock graphic or company logo.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
-   "focus": "Results and figures",
-   "explanation": "Because the abstract was not provided, we rely on general knowledge of the study. The researchers reported that living brain cells connected to a computer could learn to play a simple virtual tennis game, similar to Pong, by changing their electrical activity based on feedback.",
-   "limits": "Specific numerical results and details from the paper's figures could not be verified directly from the abstract.",
-   "check": {
-    "confidence": "moderate"
-   },
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
+   "focus": "Engineering, limits, and ethics of living brain cells connected to computer simulations.",
+   "explanation": "This day looks at how scientists build these systems, what rules or limits stop them from growing too complex, and the moral questions around giving lab-grown brain cells a simple kind of awareness.",
+   "limits": "Since the official abstract text was empty, this explanation relies on general scientific knowledge about wetware computing and bioethics.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/j.neuron.2022.09.001",
    "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
-   "day": "3 of 5",
+   "day": "4 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
-   "focus": "Day 3 focuses on the results and figures, meaning what the researchers actually found and how they displayed their data.",
-   "explanation": "Because the provided abstract is empty, general knowledge indicates that this paper showed a human participant with paralysis could use a brain implant to control external items like a computer cursor or a robotic hand just by thinking about movement. The figures likely displayed brain cell activity alongside the movement paths on a screen. Confidence: moderate due to missing abstract text.",
-   "limits": "Since no abstract text was provided in the metadata and exact numerical data cannot be guessed, specific figure details are omitted to avoid inventing results.",
-   "check": "The explanation uses only general knowledge without inventing specific numbers or unverified data.",
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
+   "focus": "Engineering, limits and ethics of brain-computer interfaces",
+   "explanation": "This study tested whether a person with paralysis could use their brain signals to move external objects, like a computer cursor. Because the official abstract text was empty, this explanation relies on general knowledge of the 2006 Hochberg et al. study.",
+   "limits": "The technology requires invasive brain surgery, the equipment is stationary and complex, and long-term safety and stability of the brain sensors are still being studied.",
+   "check": "The metadata was verified via Crossref, but the abstract was missing, so general knowledge was used with medium confidence.",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature04970",
    "doi_link": "https://doi.org/10.1038/nature04970",
-   "day": "3 of 5",
+   "day": "4 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "2 of 3",
-   "topic": "How it works",
-   "project": "moveit/moveit2",
-   "explanation": "Based on the project files and details, MoveIt 2 functions as a motion planning framework built specifically for the Robot Operating System 2 (ROS 2). It helps developers create robot applications, test designs, and run algorithms by managing tasks like arm movements. The project relies on C++ and is organized around different branches: a main branch for active development that receives frequent updates, and stable release branches (like humble and jazzy) that only receive bug fixes. Continuous integration tools are used to check formatting and code health automatically across these versions.",
-   "challenge": "Review the branch policy table in the documentation to identify which branch is meant for active development and which ones are meant for stable releases.",
-   "knowledge_check": "What underlying robotic framework does this version of MoveIt use?",
+   "day": "3 of 3",
+   "phase": "Run it in simulation and engineering judgement",
+   "repository": "moveit/moveit2",
+   "description": "MoveIt for ROS 2, a popular open source platform for robot arm control, motion planning, and algorithm testing.",
+   "simulation_and_judgement": "At this final stage of investigation, the focus shifts to how this software performs in a virtual or simulated environment. Because MoveIt handles physical robot manipulation, testing the code safely in simulation before deploying it to real hardware is an essential engineering step to prevent costly accidents.",
+   "project_status": "The repository is active and written primarily in C++, utilizing continuous integration workflows to ensure ongoing code quality and stable releases across various ROS distributions.",
+   "challenge": "Try to find the instructions for building the source code or installing binaries provided in the README, and identify which ROS versions (such as Humble or Jazzy) are officially supported.",
+   "knowledge_check": "Why is testing motion planning software in a simulation environment important before trying it on a real physical robot?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "moveit/moveit2",
@@ -157,56 +160,95 @@
   "news": {
    "items": [
     {
-     "category": "Product",
-     "url": "https://www.therobotreport.com/boston-dynamics-built-stretch-gen-2-for-reliable-consistent-performance/",
-     "what": "Boston Dynamics released the second generation of their Stretch robot.",
-     "who": "Boston Dynamics",
-     "how": "The development of this new model spanned two and a half years with a focus on improving operational consistency.",
-     "why": "To provide more reliable and consistent performance in logistics applications.",
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/arm-institute-members-grows-more-than-500-organizations/",
+     "what": "The ARM Institute membership has expanded to over 500 member organizations.",
+     "who": "ARM Institute",
+     "how": "Not stated in the source excerpt. Background (general knowledge): The ARM Institute is a public-private partnership focused on accelerating the development and adoption of robotics and workforce training.",
+     "why": "The organization is preparing for its 10th annual member meeting in Pittsburgh.",
      "limits": "Not stated in the source excerpt",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Boston Dynamics built Stretch Gen 2 for reliable, consistent performance",
+     "learn": "Not stated in the source excerpt",
+     "title": "ARM Institute consortium grows to more than 500 organizations",
+     "published": "2026-11-08",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/robot-integration-brings-high-precision-production-to-midmarket-manufacturers/",
+     "what": "Expert opinion suggests that industrial and collaborative robots can improve production precision for mid-sized manufacturers.",
+     "who": "Midmarket manufacturers",
+     "how": "Through proper robot integration. Background (general knowledge): System integration involves designing, programming, and installing robots into existing factory workflows.",
+     "why": "To help midmarket businesses achieve high-precision manufacturing results.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Not stated in the source excerpt",
+     "title": "Robot integration brings high-precision production to midmarket manufacturers",
      "published": "2026-11-07",
-     "source": "The Robot Report"
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     },
     {
      "category": "Deployment",
-     "url": "https://www.therobotreport.com/how-point-one-turned-gps-accuracy-into-robotics-platform/",
-     "what": "The application of high-precision GPS technology to robotics navigation.",
-     "who": "Point One",
-     "how": "Using precise location data to allow robots to coordinate and maneuver through real-world environments. Background (general knowledge): GPS uses satellite signals to triangulate position, but high-precision systems use ground stations to correct errors for centimeter-level accuracy.",
-     "why": "To enable robots to scale operations and navigate complex spaces effectively.",
-     "limits": "Not stated in the source excerpt",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "How Point One turned GPS accuracy into a robotics platform",
-     "published": "2026-11-07",
-     "source": "The Robot Report"
-    },
-    {
-     "category": "Industry view",
-     "url": "https://www.therobotreport.com/industry-experts-discuss-china-blocking-softbank-acquisition-abb-robotics/",
-     "what": "The blocking of SoftBank's attempt to purchase ABB Robotics by Chinese regulators.",
-     "who": "Chinese regulators, SoftBank, and ABB Robotics",
-     "how": "Governmental prohibition of the acquisition based on regulatory review.",
-     "why": "Experts suggest the move is motivated by broader concerns regarding artificial intelligence and the management of sensitive data.",
-     "limits": "Not stated in the source excerpt",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Industry experts discuss China blocking SoftBank acquisition of ABB Robotics",
-     "published": "2026-11-07",
-     "source": "The Robot Report"
+     "url": "https://spectrum.ieee.org/drone-delivery-noise",
+     "what": "Local residents report noise disturbances from drone delivery operations.",
+     "who": "Residents in Baton Rouge, Louisiana",
+     "how": "Flying robots, commonly known as drones, operate in residential areas. Background (general knowledge): Delivery drones often use multiple rotors that create distinct high-frequency noise profiles.",
+     "why": "The robots are being used for delivery services, which has negatively impacted the quality of life for neighbors and local wildlife.",
+     "limits": "The impact on wildlife and human activity is anecdotal based on resident concerns.",
+     "learn": "Not stated in the source excerpt",
+     "title": "Are Drone Ports the Next Annoying Tech Neighbor?",
+     "published": "2026-11-05",
+     "source": "IEEE Spectrum Robotics",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     }
    ]
   },
   "jobs": {
    "items": [
     {
-     "title": "Internationaler Servicetechniker (DJ130)",
+     "title": "Software Test Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Winterthur",
-     "published": "2026-11-06",
+     "location": "Remote job",
+     "published": "2026-11-08",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/internationaler-servicetechniker-dj130-winterthur-99159",
-     "company": "Excellent Go4"
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-255669",
+     "company": "SwissPeak Partners GmbH"
+    },
+    {
+     "title": "IoT Embedded Systems Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Bern, Berne, Switzerland",
+     "published": "2026-11-08",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-391319",
+     "company": "SwissPeak Partners GmbH"
+    },
+    {
+     "title": "System Test Automation Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "London, United Kingdom",
+     "published": "2026-11-08",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/wayve/system-test-automation-engineer-london-united-kingdom-401378",
+     "company": "Wayve"
+    },
+    {
+     "title": "Stage M2 : Recherche en optique non lin\u00e9aire appliqu\u00e9e \u00e0 la caract\u00e9risation de dispositifs \u00e9lectroniques neuromorphiques - 6 mois",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Gardanne, Provence-Alpes-C\u00f4te d'Azur, France",
+     "published": "2026-11-08",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/institut-mines-telecom/stage-m2-recherche-en-optique-non-lineaire-appliquee-a-la-caracterisation-de-dispositifs-electroniques-neuromorphiques-6-mois-gardanne-72504",
+     "company": "Institut Mines-T\u00e9l\u00e9com"
+    },
+    {
+     "title": "ENGINEER/POST-DOC POSITION OFFER : in Stretchable Electronics & Optics for Artificial Skin \u2013 12 months",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Gardanne, Provence-Alpes-C\u00f4te d'Azur, France",
+     "published": "2026-11-08",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/institut-mines-telecom/engineer-post-doc-position-offer-in-stretchable-electronics-optics-for-artificial-skin-12-months-gardanne-185994",
+     "company": "Institut Mines-T\u00e9l\u00e9com"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
