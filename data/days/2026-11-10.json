@@ -1,0 +1,293 @@
+{
+ "v": 2,
+ "date": "2026-11-10",
+ "generated_at": "2026-11-10T02:52:40.442263+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand the step-by-step laboratory environment and physical equipment used to culture cerebral organoids from start to finish.",
+   "why_it_matters": "Growing living brain tissue outside the human body requires carefully mimicking natural biological conditions. Knowing how scientists build and maintain this environment helps us understand the practical limits of wetware computing hardware.",
+   "prerequisites": [
+    "Basic awareness that stem cells are unspecialized building blocks",
+    "Understanding that living cells require steady nutrients and oxygen"
+   ],
+   "simple_explanation": "Growing a cerebral organoid in a lab is similar to baking or hydroponic gardening, but with extreme biological controls. Scientists place stem cells inside specialized plastic dishes filled with warm liquid food. They keep these dishes in warm, high-humidity incubators that mimic human body temperature and place them on gentle shakers so oxygen can reach every cell.",
+   "step_by_step": [
+    "Step 1: Prepare specialized culture plates made of treated plastic that prevent cells from sticking randomly to the bottom.",
+    "Step 2: Mix liquid nutrient broth (cell culture media) containing vital sugars, amino acids, and vitamins to feed the developing tissue.",
+    "Step 3: Transfer the cell mixture into an incubator set to human body temperature with carefully controlled carbon dioxide levels to keep the liquid's pH stable.",
+    "Step 4: Mount the culture dishes onto orbital shakers or specialized bioreactors that swirl the liquid gently, ensuring oxygen and food circulate evenly without damaging fragile cells."
+   ],
+   "technical_depth": "Culturing relies on maintaining strict homeostasis in vitro. Liquid media typically uses a buffering system, such as bicarbonate and HEPES, alongside phenol red to visually track pH changes. Incubators maintain 37 degrees Celsius and 5 percent carbon dioxide. Because organoids lack blood vessels, mechanical agitation or perfusion systems are essential to maximize passive diffusion of oxygen and nutrients through the tissue layers.",
+   "misconceptions": [
+    "Misconception: Organoids are grown in open glass beakers exposed to room air. Reality: They require strictly sterile, enclosed containers inside filtered incubators to prevent bacterial or fungal contamination."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What primary environmental factor do lab incubators mimic for growing organoids?",
+     "answer": "Human body temperature and internal atmospheric conditions."
+    },
+    {
+     "question": "Why do culture dishes need to be gently shaken or stirred?",
+     "answer": "To help circulate oxygen and nutrients evenly throughout the growing tissue."
+    },
+    {
+     "question": "What is the main purpose of the liquid nutrient broth?",
+     "answer": "To provide vital sugars, amino acids, and vitamins that feed the living cells."
+    }
+   ],
+   "exercise": "Draw a simple diagram of an organoid lab setup, labeling the incubator, the culture dish, the liquid nutrient layer, and the motion device used for mixing.",
+   "summary": "Growing cerebral organoids requires a tightly controlled artificial environment using warm incubators, specialized liquid nutrient broths, sterile culture dishes, and gentle motion devices to keep the living brain tissue alive and oxygenated.",
+   "next_lesson": "Day 11: How we use scaffolds and gels to give organoids a physical shape.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how the Fourier transform unpacks a complex EEG wave into its component frequencies from first principles.",
+   "why_it_matters": "Raw EEG data looks like a messy, overlapping scribble. The Fourier transform acts like a musical prism, turning that jumbled wave into a clear list of pure frequencies so a BCI can tell what mental state a user is in.",
+   "prerequisites": [
+    "Basic understanding of how waves have height (amplitude) and speed (frequency)",
+    "Familiarity with digital signals as collections of numbers over time"
+   ],
+   "simple_explanation": "Imagine hearing a loud musical chord played on a piano. Your ear does not hear just one sound; it splits the chord into individual notes (high, medium, and low). The Fourier transform does the exact same thing for brain waves. It takes a squiggly line from an EEG sensor and tells you exactly how much of each frequency speed (like slow delta or fast beta waves) is hiding inside that squiggle.",
+   "step_by_step": [
+    "Start with a raw, squiggly EEG voltage line recorded over a few seconds.",
+    "Introduce a set of mathematical reference waves (pure sine waves) running at specific speeds, like 1 wave per second, 2 waves per second, and so on.",
+    "Compare your messy EEG line against each reference wave one by one to see how well they match up.",
+    "If a specific reference speed matches a repeating pattern hidden in your EEG, it scores high.",
+    "Plot these scores on a new chart where the bottom axis is speed (frequency) and the height axis is strength (amplitude)."
+   ],
+   "technical_depth": "The Fourier transform operates on the principle of orthogonal sinusoidal basis functions. By taking the inner product of the time-domain signal with sine and cosine waves of varying frequencies, it converts a time-varying signal into a complex-valued frequency spectrum containing both magnitude and phase information.",
+   "misconceptions": [
+    "Thinking the Fourier transform creates new brain data out of nowhere (it only reorganizes existing data)",
+    "Believing brain waves are made of neat, pure sine waves in reality (they are actually messy and transient)"
+   ],
+   "knowledge_check": [
+    {
+     "question": "What does a raw EEG signal look like before a Fourier transform is applied?",
+     "answer": "A messy, overlapping squiggly line of voltage over time."
+    },
+    {
+     "question": "What are the two main axes of the resulting frequency spectrum chart?",
+     "answer": "Frequency (speed) on the horizontal axis and amplitude (strength) on the vertical axis."
+    },
+    {
+     "question": "Why do we use pure reference waves in this process?",
+     "answer": "To test how strongly each specific speed is present in the messy brain signal."
+    }
+   ],
+   "exercise": "Take a piece of graph paper and draw two simple waves: one wide and slow, one narrow and fast. Now try sketching what a combined wave would look like if you added their heights together at every point, and practice mentally separating them back out.",
+   "summary": "The Fourier transform converts complex time-domain brain signals into clear frequency spectra by measuring how well the raw data matches pure mathematical wave speeds.",
+   "next_lesson": "Introduction to power spectral density (PSD) estimation",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Using bitfields and arrays to pack BCI sensor status flags",
+   "explanation": "In embedded systems and brain-computer interface (BCI) firmware, memory is scarce. Instead of wasting an entire byte for a single true/false flag, you can use bitwise operations and structs to pack multiple status flags into a single byte. An array of these packed structs lets you log historical states efficiently.",
+   "practical_example": "Imagine a BCI headset tracking 8 electrode channels. You need to store whether each channel has high impedance, low battery, or data clipping. Instead of using 24 separate variables, you pack three boolean flags into a single byte per channel using bitwise masks.",
+   "exercise": "Write a C struct containing an 8-bit integer representing packed flags for a sensor channel. Then, write a function that takes an array of 4 such sensor channels and uses bitwise AND to return how many channels currently have their third flag set to 1.",
+   "model_answer": "struct Sensor { unsigned char flags; }; int countActiveFlags(struct Sensor sensors[], int size) { int count = 0; for(int i = 0; i < size; i++) { if(sensors[i].flags & (1 << 2)) { count++; } } return count; }",
+   "why_it_works": "The expression (1 << 2) creates a bitmask with a 1 at the third position. Using the bitwise AND operator (&) checks if that specific bit is active without altering the rest of the packed data, keeping memory usage minimal.",
+   "improvement_tip": "Always document which bit position corresponds to which flag using `#define` macros or enums to make your embedded C code easier to read and maintain.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Extracting and mapping internship keywords from a robotics job description to your experience section",
+   "explanation": "Job descriptions tell you exactly what recruiters are searching for on LinkedIn. This session focuses on finding recurring action terms and specific software tools in an actual internship posting, then placing those exact terms into your LinkedIn Experience or Projects descriptions without keyword stuffing.",
+   "practical_example": "If a robotics internship posting in Pune mentions 'ROS2 navigation stack' and 'sensor fusion', look at your college rover project. Instead of writing 'worked on a robot', you will update it to state you used the ROS2 navigation stack for autonomous mapping.",
+   "exercise": "Take one real internship posting for an embedded systems or BCI role in India. Highlight three technical terms they repeat most often, then write one bullet point for your LinkedIn profile that naturally includes one of those terms based on actual work you did.",
+   "model_answer": "Developed firmware for an STM32 microcontroller to acquire raw EEG signals, implementing I2C communication protocols as specified in the lab assignment.",
+   "why_it_works": "Recruiters use automated search filters on LinkedIn looking for exact tool matches. Using the exact terminology from job descriptions helps your profile appear in their searches while remaining truthful about your student projects.",
+   "improvement_tip": "Never copy a whole sentence from a job description into your profile. Only use the specific tool names, protocols, or frameworks that match work you have genuinely completed.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
+   "focus": "Testing if living brain cells in a lab dish can learn to play a simple computer game like Pong.",
+   "explanation": "Researchers connected human and mouse brain cells to a computer simulation of the game Pong. They sent electrical signals to show where the virtual ball was, and the cells learned to move a paddle to hit the ball back over time.",
+   "limits": "The abstract was missing, so this summary relies on general scientific knowledge about the published experiment. Whether this truly counts as 'sentience' is heavily debated by experts.",
+   "check": [
+    "Did the brain cells learn to interact with a computer simulation?",
+    "Why is calling this 'sentience' controversial among scientists?",
+    "What are the main limits of relying on general knowledge when the abstract text is missing?"
+   ],
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "5 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "Using brain signals from a sensor placed on the motor cortex to let a paralyzed person control a computer screen and other devices.",
+   "explanation": "Because the abstract was missing in the metadata, general knowledge indicates this study tested a brain-computer interface (BrainGate) in a human participant, allowing them to move a cursor, check email, and operate simple objects using thoughts alone.",
+   "limits": "Since the abstract was unavailable, specific trial details, participant numbers, and exact technical results are not mentioned here.",
+   "check": {
+    "question_1": "What is the main goal of this study?",
+    "answer_1": "To see if a human with paralysis can control external devices using brain signals.",
+    "question_2": "Where was the technology tested?",
+    "answer_2": "In a human clinical trial using a brain sensor.",
+    "question_3": "Are specific performance numbers included here?",
+    "answer_3": "No, because the abstract text was missing from the record."
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "5 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "Navigation2 (Nav2)",
+   "repository_url": "https://github.com/ros-navigation/navigation2",
+   "primary_language": "C++",
+   "project_description": "A framework and system designed for robot navigation using ROS 2 (Robot Operating System).",
+   "is_archived": false,
+   "recent_activity": "Active updates, with the most recent code push logged in November 2026.",
+   "key_resources": {
+    "documentation": "https://docs.nav2.org/",
+    "api_docs": "https://api.nav2.org/",
+    "community": "Slack workspace linked in the project repository"
+   },
+   "sponsors": [
+    "Open Navigation LLC",
+    "Dexory",
+    "Nvidia",
+    "AMD",
+    "Polymath Robotics",
+    "Stereolabs",
+    "3Laws Robotics",
+    "Staer"
+   ],
+   "beginner_explanation": "Nav2 helps robots move safely and autonomously from one place to another. Think of it as a smart GPS and driving assistant built specifically for robots, helping them plan paths, avoid obstacles, and map out their surroundings.",
+   "beginner_challenge": "Explore the official documentation site linked in the README and find the 'Getting Started' guide to read the basic requirements for setting up the framework.",
+   "knowledge_check": {
+    "question": "What primary programming language is used to build the Navigation2 repository?",
+    "options": [
+     "Python",
+     "C++",
+     "Java",
+     "Rust"
+    ],
+    "correct_answer": "C++"
+   },
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-11-09T21:19:32Z",
+    "language": "C++",
+    "archived": false,
+    "license": "NOASSERTION"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/how-minimize-wi-fi-roaming-interruptions-autonomous-mobile-robots/",
+     "what": "Using dedicated Wi-Fi scanning to keep mobile robots connected while moving.",
+     "who": "Synaptics",
+     "how": "Implementing specific scanning architectures designed for robot mobility. Background (general knowledge): Robots often disconnect or lag when switching between different Wi-Fi access points in large facilities, similar to how a phone might struggle when moving between cell towers.",
+     "why": "To boost the reliability and overall performance of mobile robots.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "How to minimize Wi-Fi roaming interruptions for autonomous mobile robots",
+     "published": "2026-11-09",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Industry view",
+     "url": "https://spectrum.ieee.org/agentic-robotics",
+     "what": "The strategy of using massive amounts of data from human demonstrations to train robots.",
+     "who": "Various robotics companies",
+     "how": "Collecting large datasets of human manual tasks and using AI to ingest this data so robots can replicate the actions. Background (general knowledge): This is part of a trend called imitation learning, where AI models learn by observing human behavior rather than being manually programmed for every step.",
+     "why": "To solve difficult robotics problems and enable robots to perform most tasks currently handled by humans.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Can Agentic Robotics Solve Robotics\u2019 Data Scaling Problem?",
+     "published": "2026-11-09",
+     "source": "IEEE Spectrum Robotics"
+    },
+    {
+     "category": "Product",
+     "url": "https://spectrum.ieee.org/video-friday-home-cable-robot",
+     "what": "A room-scale robot that uses cables to move around a home and clean.",
+     "who": "Not stated in the source excerpt",
+     "how": "The system utilizes a cable-driven mechanism to maneuver within a room environment. Background (general knowledge): Cable-driven robots use tensioned wires connected to motors to pull the device through space, often allowing for high speed and precision compared to traditional wheeled or legged designs.",
+     "why": "To tidy up living spaces.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Video Friday: Room-Scale Cable-Driven Home Robot Tidies Up",
+     "published": "2026-11-06",
+     "source": "IEEE Spectrum Robotics"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Software Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Remote job",
+     "published": "2026-11-08",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-255669",
+     "company": "SwissPeak Partners GmbH"
+    },
+    {
+     "title": "IoT Embedded Systems Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Bern, Berne, Switzerland",
+     "published": "2026-11-08",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-391319",
+     "company": "SwissPeak Partners GmbH"
+    },
+    {
+     "title": "Test Engineer (m/w/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Berlin",
+     "published": "2026-11-09",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/citema-group-gmbh/test-engineer-berlin-378661",
+     "company": "citema group GmbH"
+    },
+    {
+     "title": "Satellite Systems Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Toulouse, Occitanie",
+     "published": "2026-11-09",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/loftorbital/satellite-systems-engineer-toulouse-occitanie-261545",
+     "company": "Loftorbital"
+    },
+    {
+     "title": "Automatiker EFZ \u2013 1580378",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Langenthal",
+     "published": "2026-11-09",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/anker-swiss-ag/automatiker-efz-1580378-langenthal-191875",
+     "company": "Anker Swiss AG"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
