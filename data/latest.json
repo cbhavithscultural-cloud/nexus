@@ -1,192 +1,154 @@
 {
  "v": 2,
- "date": "2026-11-10",
- "generated_at": "2026-11-10T04:35:03.622003+05:30",
+ "date": "2026-11-11",
+ "generated_at": "2026-11-11T02:46:23.996440+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high demand. Sp; gemini-flash-lite-latest:Extra data: line 11 column 4 (char 853); gemini-3.5-flash-lite:Extra data: line 10 column 4 (c",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand the step-by-step laboratory environment and physical equipment used to culture cerebral organoids from start to finish.",
-   "why_it_matters": "Growing living brain tissue outside the human body requires carefully mimicking natural biological conditions. Knowing how scientists build and maintain this environment helps us understand the practical limits of wetware computing hardware.",
+   "objective": "Understand how a growing brain organoid organizes itself into distinct physical regions, mimicking parts of the developing human brain.",
+   "why_it_matters": "Real brains are not uniform blobs of cells; they have specialized neighborhoods like the cortex for thinking and the midbrain for processing movement. For biocomputing, knowing how to encourage these distinct regions helps us build organoids with predictable, organized wiring rather than random cell clumps.",
    "prerequisites": [
-    "Basic awareness that stem cells are unspecialized building blocks",
-    "Understanding that living cells require steady nutrients and oxygen"
+    "Basic knowledge of stem cells and how they receive chemical signals to change identities.",
+    "Understanding that organoids grow inside supportive gels and liquid broths."
    ],
-   "simple_explanation": "Growing a cerebral organoid in a lab is similar to baking or hydroponic gardening, but with extreme biological controls. Scientists place stem cells inside specialized plastic dishes filled with warm liquid food. They keep these dishes in warm, high-humidity incubators that mimic human body temperature and place them on gentle shakers so oxygen can reach every cell.",
+   "simple_explanation": "Imagine baking a loaf of bread that naturally develops a crust on the outside, a soft center, and nutty pockets throughout without you carving it out. Brain organoids do something similar. As stem cells multiply and mature, different groups receive different local chemical instructions. Guided by these invisible rules, cells migrate and group together to form distinct patches that resemble different parts of a real embryonic brain, such as the forebrain or hindbrain.",
    "step_by_step": [
-    "Step 1: Prepare specialized culture plates made of treated plastic that prevent cells from sticking randomly to the bottom.",
-    "Step 2: Mix liquid nutrient broth (cell culture media) containing vital sugars, amino acids, and vitamins to feed the developing tissue.",
-    "Step 3: Transfer the cell mixture into an incubator set to human body temperature with carefully controlled carbon dioxide levels to keep the liquid's pH stable.",
-    "Step 4: Mount the culture dishes onto orbital shakers or specialized bioreactors that swirl the liquid gently, ensuring oxygen and food circulate evenly without damaging fragile cells."
+    "Start with unspecialized stem cells clumped together inside a supportive gel matrix.",
+    "Introduce specific signaling molecules into the liquid nutrient broth that mimic the chemical gradients found in a developing human embryo.",
+    "Observe how cells on the outside of the cluster respond differently than cells trapped in the center due to varying exposure to these chemicals.",
+    "Watch as these chemical cues prompt cells to turn on specific genetic programs, causing them to sort themselves into distinct layers and regional clusters."
    ],
-   "technical_depth": "Culturing relies on maintaining strict homeostasis in vitro. Liquid media typically uses a buffering system, such as bicarbonate and HEPES, alongside phenol red to visually track pH changes. Incubators maintain 37 degrees Celsius and 5 percent carbon dioxide. Because organoids lack blood vessels, mechanical agitation or perfusion systems are essential to maximize passive diffusion of oxygen and nutrients through the tissue layers.",
+   "technical_depth": "During natural development, morphogens (signaling proteins like WNT, BMP, and Sonic Hedgehog) form concentration gradients across tissues. In organoid culture, scientists either rely on the tissue's self-organizing tendency (uncorrected regionalization) or apply targeted local inhibitors and activators (guided regionalization) to encourage specific brain structures like the cerebral cortex or the optic cup to form adjacent to one another.",
    "misconceptions": [
-    "Misconception: Organoids are grown in open glass beakers exposed to room air. Reality: They require strictly sterile, enclosed containers inside filtered incubators to prevent bacterial or fungal contamination."
+    {
+     "myth": "An organoid automatically builds a complete, miniaturized adult human brain with every tiny structure intact.",
+     "fact": "Organoids only mimic early embryonic or fetal stages of development and typically lack a full complement of interconnected regional systems."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What primary environmental factor do lab incubators mimic for growing organoids?",
-     "answer": "Human body temperature and internal atmospheric conditions."
+     "question": "What guides cells in an organoid to form different regional identities?",
+     "answer": "Chemical signaling molecules and gradients that instruct cells which genetic programs to activate."
     },
     {
-     "question": "Why do culture dishes need to be gently shaken or stirred?",
-     "answer": "To help circulate oxygen and nutrients evenly throughout the growing tissue."
+     "question": "Do brain organoids form uniform, identical tissue throughout?",
+     "answer": "No, they naturally tend to sort into distinct regional patches mimicking different parts of the developing brain."
     },
     {
-     "question": "What is the main purpose of the liquid nutrient broth?",
-     "answer": "To provide vital sugars, amino acids, and vitamins that feed the living cells."
+     "question": "What is the primary developmental stage that current organoids best resemble?",
+     "answer": "Early embryonic or fetal brain development stages."
     }
    ],
-   "exercise": "Draw a simple diagram of an organoid lab setup, labeling the incubator, the culture dish, the liquid nutrient layer, and the motion device used for mixing.",
-   "summary": "Growing cerebral organoids requires a tightly controlled artificial environment using warm incubators, specialized liquid nutrient broths, sterile culture dishes, and gentle motion devices to keep the living brain tissue alive and oxygenated.",
-   "next_lesson": "Day 11: How we use scaffolds and gels to give organoids a physical shape.",
+   "exercise": "Sketch a simple circle representing an organoid in a dish. Draw two different shaded zones inside it to represent how different chemical signals might split the tissue into a 'forebrain-like' region and a 'midbrain-like' region.",
+   "summary": "Regional identity in organoids refers to how unguided or guided stem cell clusters self-organize into distinct patches resembling various parts of the developing embryonic brain through chemical signaling gradients.",
+   "next_lesson": "Day 12: How we track cell types inside organoids using microscopic imaging and markers.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how the Fourier transform unpacks a complex EEG wave into its component frequencies from first principles.",
-   "why_it_matters": "Raw EEG data looks like a messy, overlapping scribble. The Fourier transform acts like a musical prism, turning that jumbled wave into a clear list of pure frequencies so a BCI can tell what mental state a user is in.",
+   "objective": "Understand how EEG frequency bands are defined by speed ranges and how measuring band power translates brain rhythms into distinct mental states for BCI control.",
+   "why_it_matters": "Raw EEG signals look like chaotic squiggles. By sorting these waves into specific speed categories\u2014known as frequency bands\u2014BCI systems can cleanly identify whether a user is relaxed, focused, or moving.",
    "prerequisites": [
-    "Basic understanding of how waves have height (amplitude) and speed (frequency)",
-    "Familiarity with digital signals as collections of numbers over time"
+    "Basic knowledge of how the Fourier transform breaks down complex brain waves into individual speeds",
+    "Understanding that EEG sensors pick up electrical fluctuations from large groups of active brain cells"
    ],
-   "simple_explanation": "Imagine hearing a loud musical chord played on a piano. Your ear does not hear just one sound; it splits the chord into individual notes (high, medium, and low). The Fourier transform does the exact same thing for brain waves. It takes a squiggly line from an EEG sensor and tells you exactly how much of each frequency speed (like slow delta or fast beta waves) is hiding inside that squiggle.",
+   "simple_explanation": "Imagine listening to an orchestra. Instead of hearing a wall of noise, you can separate the sounds into deep bass, middle instruments, and high flutes. The brain does something similar, generating different speeds of electrical activity all at once. Band power measures how loud or strong a specific speed range is during a given moment.",
    "step_by_step": [
-    "Start with a raw, squiggly EEG voltage line recorded over a few seconds.",
-    "Introduce a set of mathematical reference waves (pure sine waves) running at specific speeds, like 1 wave per second, 2 waves per second, and so on.",
-    "Compare your messy EEG line against each reference wave one by one to see how well they match up.",
-    "If a specific reference speed matches a repeating pattern hidden in your EEG, it scores high.",
-    "Plot these scores on a new chart where the bottom axis is speed (frequency) and the height axis is strength (amplitude)."
+    "Take a short slice of clean, filtered EEG time-series data.",
+    "Apply a mathematical spectrum tool to view how much energy exists at each individual speed (in Hertz, or cycles per second).",
+    "Group the resulting spectrum into standard frequency bands: Delta (slowest, deep sleep), Theta (drowsy or memory processing), Alpha (relaxed with eyes closed), Beta (active thinking), and Gamma (high-level processing).",
+    "Calculate the total power (energy) within each specific band to use as a feature for your BCI controller."
    ],
-   "technical_depth": "The Fourier transform operates on the principle of orthogonal sinusoidal basis functions. By taking the inner product of the time-domain signal with sine and cosine waves of varying frequencies, it converts a time-varying signal into a complex-valued frequency spectrum containing both magnitude and phase information.",
+   "technical_depth": "Band power is formally computed by integrating the Power Spectral Density (PSD) over a defined frequency interval (e.g., 8 to 12 Hz for Alpha). Because raw EEG amplitude varies wildly across different scalp locations and users, BCI applications often use relative band power\u2014the power of a single band divided by the total power across all bands\u2014to normalize the features and make the decoder robust.",
    "misconceptions": [
-    "Thinking the Fourier transform creates new brain data out of nowhere (it only reorganizes existing data)",
-    "Believing brain waves are made of neat, pure sine waves in reality (they are actually messy and transient)"
+    "Misconception: A single frequency band exclusively controls one specific mental task.\nReality: Brain bands overlap heavily; multiple bands are active during nearly every human action or thought.",
+    "Misconception: Higher frequency bands always mean a person is smarter or working harder.\nReality: Frequency bands simply reflect different types of neural synchronization, not raw intelligence."
    ],
    "knowledge_check": [
     {
-     "question": "What does a raw EEG signal look like before a Fourier transform is applied?",
-     "answer": "A messy, overlapping squiggly line of voltage over time."
+     "question": "What unit is used to measure the speed of EEG frequency bands?",
+     "answer": "Hertz (Hz), representing cycles per second."
     },
     {
-     "question": "What are the two main axes of the resulting frequency spectrum chart?",
-     "answer": "Frequency (speed) on the horizontal axis and amplitude (strength) on the vertical axis."
+     "question": "Which standard frequency band is typically associated with a relaxed, eyes-closed human state?",
+     "answer": "The Alpha band (roughly 8 to 12 Hz)."
     },
     {
-     "question": "Why do we use pure reference waves in this process?",
-     "answer": "To test how strongly each specific speed is present in the messy brain signal."
+     "question": "Why do BCI engineers often calculate relative band power instead of absolute power?",
+     "answer": "To normalize data against individual variations in skull thickness and signal strength across users."
     }
    ],
-   "exercise": "Take a piece of graph paper and draw two simple waves: one wide and slow, one narrow and fast. Now try sketching what a combined wave would look like if you added their heights together at every point, and practice mentally separating them back out.",
-   "summary": "The Fourier transform converts complex time-domain brain signals into clear frequency spectra by measuring how well the raw data matches pure mathematical wave speeds.",
-   "next_lesson": "Introduction to power spectral density (PSD) estimation",
+   "exercise": "Review a set of simulated band power values over a 5-second window. Identify which band dominates when the user closes their eyes versus when they open them and solve a simple math check calculating the ratio of Alpha power to total spectrum power.",
+   "summary": "Dividing brain waves into standard frequency bands lets BCI systems isolate meaningful mental patterns from background noise, turning broad EEG readings into targeted control features.",
+   "next_lesson": "Introduction to event-related synchronization (ERS) and desynchronization (ERD)",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Using bitfields and arrays to pack BCI sensor status flags",
-   "explanation": "In embedded systems and brain-computer interface (BCI) firmware, memory is scarce. Instead of wasting an entire byte for a single true/false flag, you can use bitwise operations and structs to pack multiple status flags into a single byte. An array of these packed structs lets you log historical states efficiently.",
-   "practical_example": "Imagine a BCI headset tracking 8 electrode channels. You need to store whether each channel has high impedance, low battery, or data clipping. Instead of using 24 separate variables, you pack three boolean flags into a single byte per channel using bitwise masks.",
-   "exercise": "Write a C struct containing an 8-bit integer representing packed flags for a sensor channel. Then, write a function that takes an array of 4 such sensor channels and uses bitwise AND to return how many channels currently have their third flag set to 1.",
-   "model_answer": "struct Sensor { unsigned char flags; }; int countActiveFlags(struct Sensor sensors[], int size) { int count = 0; for(int i = 0; i < size; i++) { if(sensors[i].flags & (1 << 2)) { count++; } } return count; }",
-   "why_it_works": "The expression (1 << 2) creates a bitmask with a 1 at the third position. Using the bitwise AND operator (&) checks if that specific bit is active without altering the rest of the packed data, keeping memory usage minimal.",
-   "improvement_tip": "Always document which bit position corresponds to which flag using `#define` macros or enums to make your embedded C code easier to read and maintain.",
+   "topic": "Debug a motor-control problem systematically",
+   "explanation": "When a robot wheel refuses to spin or a motorized wheelchair prototype jerks unpredictably, random guessing wastes time. Systematic debugging means splitting the system into smaller blocks\u2014power supply, microcontroller control signals, and the motor driver\u2014and testing one block at a time to isolate the exact point of failure.",
+   "practical_example": "Imagine your robot's right DC motor remains completely still even though your microcontroller code runs. Instead of rewriting the code, you test systematically: first check if the motor battery is dead using a multimeter, then check if the PWM control wire is sending a signal from the microcontroller pin, and finally check if the motor driver chip is getting hot or damaged.",
+   "exercise": "List the three main hardware and software checks you would perform in order if a servo motor buzzes loudly but fails to rotate to the commanded angle.",
+   "model_answer": "1. Check the physical gear train to ensure nothing is jammed mechanically. 2. Verify that the external power supply shares a common ground with the microcontroller and provides enough current. 3. Check the PWM signal frequency and pulse width configuration in your timer code to ensure it matches the servo requirements.",
+   "why_it_works": "Isolating problems block by block prevents you from chasing ghost bugs and helps you explain your troubleshooting thought process clearly during a technical internship interview.",
+   "improvement_tip": "Always check your common ground connections first when dealing with power-related motor issues, as floating grounds are the most common hidden cause of failure.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Extracting and mapping internship keywords from a robotics job description to your experience section",
-   "explanation": "Job descriptions tell you exactly what recruiters are searching for on LinkedIn. This session focuses on finding recurring action terms and specific software tools in an actual internship posting, then placing those exact terms into your LinkedIn Experience or Projects descriptions without keyword stuffing.",
-   "practical_example": "If a robotics internship posting in Pune mentions 'ROS2 navigation stack' and 'sensor fusion', look at your college rover project. Instead of writing 'worked on a robot', you will update it to state you used the ROS2 navigation stack for autonomous mapping.",
-   "exercise": "Take one real internship posting for an embedded systems or BCI role in India. Highlight three technical terms they repeat most often, then write one bullet point for your LinkedIn profile that naturally includes one of those terms based on actual work you did.",
-   "model_answer": "Developed firmware for an STM32 microcontroller to acquire raw EEG signals, implementing I2C communication protocols as specified in the lab assignment.",
-   "why_it_works": "Recruiters use automated search filters on LinkedIn looking for exact tool matches. Using the exact terminology from job descriptions helps your profile appear in their searches while remaining truthful about your student projects.",
-   "improvement_tip": "Never copy a whole sentence from a job description into your profile. Only use the specific tool names, protocols, or frameworks that match work you have genuinely completed.",
+   "topic": "Prepare a short follow-up message after a genuine conversation",
+   "explanation": "After chatting with an engineer or recruiter at a tech event or online session, sending a brief, contextual follow-up helps keep the connection alive. Keep it polite, reference one specific detail you discussed, and avoid asking directly for an internship right away.",
+   "practical_example": "If you spoke with an embedded systems engineer about debugging I2C communication issues on an STM32 board, your follow-up message should mention that specific topic rather than a generic greeting.",
+   "exercise": "Draft a short LinkedIn message to someone you recently spoke with about a brain-computer interface signal filtering challenge, thanking them and sharing a relevant article or thought.",
+   "model_answer": "Hi Rahul, thank you for sharing your advice on filtering EEG signals during our chat yesterday. I read the guide you suggested on notch filters and found the section on reducing 50Hz power line interference especially useful for my current university project.",
+   "why_it_works": "It reminds the person who you are, shows genuine interest in their advice, and demonstrates that you actually listened to what they shared without awkwardly begging for a job.",
+   "improvement_tip": "Send the follow-up message within twenty-four to forty-eight hours while the conversation is still fresh in both of your minds.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
-   "focus": "Testing if living brain cells in a lab dish can learn to play a simple computer game like Pong.",
-   "explanation": "Researchers connected human and mouse brain cells to a computer simulation of the game Pong. They sent electrical signals to show where the virtual ball was, and the cells learned to move a paddle to hit the ball back over time.",
-   "limits": "The abstract was missing, so this summary relies on general scientific knowledge about the published experiment. Whether this truly counts as 'sentience' is heavily debated by experts.",
-   "check": [
-    "Did the brain cells learn to interact with a computer simulation?",
-    "Why is calling this 'sentience' controversial among scientists?",
-    "What are the main limits of relying on general knowledge when the abstract text is missing?"
-   ],
+   "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish (Smirnova 2023)",
+   "focus": "Why this research exists: introducing organoid intelligence (OI) to build biological computers using lab-grown human brain tissues.",
+   "explanation": "Traditional computers are hitting limits in energy efficiency and learning flexibility. Researchers want to use tiny, lab-grown human brain cell structures (organoids) because human brains are remarkably good at learning, processing information, and using very little energy. This paper outlines a plan to grow these brain tissues reliably, connect them to computers, and study how they might learn and compute while considering the ethical implications.",
+   "limits": "Brain organoids are still very simple compared to a real human brain, and we are just starting to figure out how to feed them, record their signals, and train them safely.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1016/j.neuron.2022.09.001",
-   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
-   "day": "5 of 5",
-   "access_level": "Metadata only Verify against the DOI link."
+   "doi": "10.3389/fsci.2023.1017235",
+   "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
+   "day": "1 of 5",
+   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
-   "focus": "Using brain signals from a sensor placed on the motor cortex to let a paralyzed person control a computer screen and other devices.",
-   "explanation": "Because the abstract was missing in the metadata, general knowledge indicates this study tested a brain-computer interface (BrainGate) in a human participant, allowing them to move a cursor, check email, and operate simple objects using thoughts alone.",
-   "limits": "Since the abstract was unavailable, specific trial details, participant numbers, and exact technical results are not mentioned here.",
-   "check": {
-    "question_1": "What is the main goal of this study?",
-    "answer_1": "To see if a human with paralysis can control external devices using brain signals.",
-    "question_2": "Where was the technology tested?",
-    "answer_2": "In a human clinical trial using a brain sensor.",
-    "question_3": "Are specific performance numbers included here?",
-    "answer_3": "No, because the abstract text was missing from the record."
-   },
+   "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
+   "focus": "Decoding attempted speech directly from brain activity into text to help people with paralysis communicate faster and more accurately.",
+   "explanation": "Past technologies struggled to understand speech accurately when using large word lists or natural sentences. This research exists to push the boundaries of speed and accuracy by using tiny sensors placed directly in the brain to capture detailed brain signals.",
+   "limits": "The abstract cuts off early, and results are based on a single study participant with ALS.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1038/nature04970",
-   "doi_link": "https://doi.org/10.1038/nature04970",
-   "day": "5 of 5",
-   "access_level": "Metadata only Verify against the DOI link."
+   "doi": "10.1038/s41586-023-06377-x",
+   "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
+   "day": "1 of 5",
+   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "github": {
-   "day": "1 of 3",
-   "phase": "Understand the project",
-   "project_name": "Navigation2 (Nav2)",
-   "repository_url": "https://github.com/ros-navigation/navigation2",
-   "primary_language": "C++",
-   "project_description": "A framework and system designed for robot navigation using ROS 2 (Robot Operating System).",
-   "is_archived": false,
-   "recent_activity": "Active updates, with the most recent code push logged in November 2026.",
-   "key_resources": {
-    "documentation": "https://docs.nav2.org/",
-    "api_docs": "https://api.nav2.org/",
-    "community": "Slack workspace linked in the project repository"
-   },
-   "sponsors": [
-    "Open Navigation LLC",
-    "Dexory",
-    "Nvidia",
-    "AMD",
-    "Polymath Robotics",
-    "Stereolabs",
-    "3Laws Robotics",
-    "Staer"
-   ],
-   "beginner_explanation": "Nav2 helps robots move safely and autonomously from one place to another. Think of it as a smart GPS and driving assistant built specifically for robots, helping them plan paths, avoid obstacles, and map out their surroundings.",
-   "beginner_challenge": "Explore the official documentation site linked in the README and find the 'Getting Started' guide to read the basic requirements for setting up the framework.",
-   "knowledge_check": {
-    "question": "What primary programming language is used to build the Navigation2 repository?",
-    "options": [
-     "Python",
-     "C++",
-     "Java",
-     "Rust"
-    ],
-    "correct_answer": "C++"
-   },
+   "day": "2 of 3",
+   "project": "ros-navigation/navigation2",
+   "focus": "How it works",
+   "explanation": "Based on the provided repository information, Nav2 is a C++ framework and system designed for ROS 2 navigation. It relies on various configuration files, plugins, and tutorials to help robots move safely and autonomously. While specific internal mechanics are not fully detailed in the snippet, general knowledge of ROS 2 navigation indicates that it typically processes sensor data to map environments, plan paths, and control robot movement using a modular architecture.",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "challenge": "Review the concepts and getting started links listed in the README to identify at least two main components that make up a robot navigation stack.",
+   "knowledge_check": "What primary programming language is used to build the core elements of the navigation2 repository according to the metadata?",
    "verified_metadata": {
     "full_name": "ros-navigation/navigation2",
     "html_url": "https://github.com/ros-navigation/navigation2",
     "description": "ROS 2 Navigation Framework and System",
-    "pushed_at": "2026-11-09T21:19:32Z",
+    "pushed_at": "2026-11-10T00:34:52Z",
     "language": "C++",
     "archived": false,
     "license": "NOASSERTION"
@@ -241,49 +203,40 @@
   "jobs": {
    "items": [
     {
-     "title": "Software Test Engineer",
+     "title": "Werkstudent Embedded Systems / Linux (m/w/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Remote job",
-     "published": "2026-11-08",
+     "location": "Bad Salzuflen",
+     "published": "2026-11-10",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-255669",
-     "company": "SwissPeak Partners GmbH"
+     "url": "https://www.arbeitnow.com/jobs/companies/salz-automation-gmbh/werkstudent-embedded-systems-linux-bad-salzuflen-152814",
+     "company": "SALZ Automation GmbH"
     },
     {
-     "title": "IoT Embedded Systems Engineer",
+     "title": "Internship - UAV Robotics/Mechatronics (Drone Prototyping, Integration & Field Testing)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Bern, Berne, Switzerland",
-     "published": "2026-11-08",
+     "location": "Delft",
+     "published": "2026-11-10",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-391319",
-     "company": "SwissPeak Partners GmbH"
+     "url": "https://www.arbeitnow.nl/jobs/companies/fiducial/internship-uav-robotics-mechatronics-drone-prototyping-integration-field-testing-delft-234540",
+     "company": "Fiducial"
     },
     {
-     "title": "Test Engineer (m/w/d)",
+     "title": "SPS-Betreuer / Elektrotechniker (m/w/d) mit IT-Affinit\u00e4t",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Berlin",
-     "published": "2026-11-09",
+     "location": "Wolfegg",
+     "published": "2026-11-10",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/citema-group-gmbh/test-engineer-berlin-378661",
-     "company": "citema group GmbH"
+     "url": "https://www.arbeitnow.com/jobs/companies/binderholz/sps-betreuer-elektrotechniker-mit-it-affinitat-wolfegg-311624",
+     "company": "binderholz"
     },
     {
-     "title": "Satellite Systems Engineer",
+     "title": "OT Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Toulouse, Occitanie",
-     "published": "2026-11-09",
+     "location": "Basel",
+     "published": "2026-11-10",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/loftorbital/satellite-systems-engineer-toulouse-occitanie-261545",
-     "company": "Loftorbital"
-    },
-    {
-     "title": "Automatiker EFZ \u2013 1580378",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Langenthal",
-     "published": "2026-11-09",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/anker-swiss-ag/automatiker-efz-1580378-langenthal-191875",
-     "company": "Anker Swiss AG"
+     "url": "https://www.arbeitnow.ch/jobs/companies/bell-food-group/ot-engineer-basel-164616",
+     "company": "Bell Food Group"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
