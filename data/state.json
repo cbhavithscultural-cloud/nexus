@@ -1,20 +1,20 @@
 {
- "oi": 11,
- "bci": 11,
+ "oi": 12,
+ "bci": 12,
  "po": [
   2,
-  2
+  3
  ],
  "pb": [
   2,
-  2
- ],
- "gh": [
-  3,
   3
  ],
- "ip": 11,
- "li": 11,
+ "gh": [
+  4,
+  1
+ ],
+ "ip": 12,
+ "li": 12,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -70,6 +70,9 @@
   "https://spectrum.ieee.org/drone-delivery-noise",
   "https://www.therobotreport.com/how-minimize-wi-fi-roaming-interruptions-autonomous-mobile-robots/",
   "https://spectrum.ieee.org/agentic-robotics",
-  "https://spectrum.ieee.org/video-friday-home-cable-robot"
+  "https://spectrum.ieee.org/video-friday-home-cable-robot",
+  "https://www.therobotreport.com/can-ai-agents-program-industrial-robots-without-training-data-berkeley-says-yes/",
+  "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/",
+  "https://robohub.org/ai100-report-released-embodied-ai-highlighted-as-grand-challenge/"
  ]
 }

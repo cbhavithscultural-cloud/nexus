@@ -1,0 +1,237 @@
+{
+ "v": 2,
+ "date": "2026-11-12",
+ "generated_at": "2026-11-12T03:25:49.390713+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how scientists use cerebral organoids to study microcephaly, a condition marked by abnormal brain size reduction.",
+   "why_it_matters": "Studying microcephaly with real human brain tissue helps researchers see how developmental disruptions unfold, guiding future treatments and deepening our understanding of human brain growth.",
+   "prerequisites": [
+    "Basic knowledge of stem cells and how they form early brain layers",
+    "Understanding that organoids mimic miniature aspects of human brain development"
+   ],
+   "simple_explanation": "Microcephaly is a condition where a person's brain develops to a much smaller size than typical. Because we cannot easily study live human embryonic brain growth, scientists grow tiny lab models called cerebral organoids using stem cells taken from patients. By comparing organoids grown from healthy cells versus microcephaly cells, researchers can watch how cell division and tissue growth go differently in real time.",
+   "step_by_step": [
+    "Step 1: Collect skin or blood cells from a patient and reprogram them back into induced pluripotent stem cells (iPSCs).",
+    "Step 2: Trigger these stem cells to form tiny three-dimensional brain organoids in a nutrient bath.",
+    "Step 3: Monitor growth over several weeks, measuring the overall physical size and structural layers of the organoid.",
+    "Step 4: Use microscopic imaging to count dividing cells and see if neural progenitor cells are multiplying properly or dying too early."
+   ],
+   "technical_depth": "At a cellular level, microcephaly often stems from premature differentiation or abnormal cell division timing in neural progenitor cells (NPCs). In healthy development, NPCs divide symmetrically to expand the stem cell pool before generating neurons. In many microcephaly organoid models, researchers observe premature cell cycle exit, where NPCs stop dividing and turn into neurons too early, resulting in a depleted progenitor pool and a significantly smaller tissue structure overall.",
+   "misconceptions": [
+    "Misconception: Microcephaly organoids are fully functioning, conscious miniature brains. Fact: They are simple clumps of specific brain tissue types that lack sensory input, blood circulation, and real consciousness.",
+    "Misconception: All microcephaly organoids look identical. Fact: There is natural variation in how individual organoids grow, so scientists must test many samples to find reliable patterns."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is microcephaly?",
+     "answer": "A condition characterized by an abnormally small brain size relative to typical development."
+    },
+    {
+     "question": "Why are cerebral organoids useful for studying microcephaly?",
+     "answer": "They provide a human-specific tissue model to observe how early brain growth and cell division unfold."
+    },
+    {
+     "question": "What is one cellular cause often observed in microcephaly organoid models?",
+     "answer": "Premature cell cycle exit, where neural progenitor cells stop dividing and turn into neurons too early."
+    }
+   ],
+   "exercise": "Sketch a timeline of a 4-week experiment comparing a healthy stem cell line to a patient-derived microcephaly cell line, noting when you would measure tissue size and cell division markers.",
+   "summary": "Patient-derived cerebral organoids serve as powerful living models to study human-specific developmental conditions like microcephaly, helping researchers uncover how disrupted cell division leads to reduced brain size.",
+   "next_lesson": "Day 13: Introduction to neurodevelopmental disease modeling beyond microcephaly.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how feature scaling brings neural metrics to a common numeric range and learn how to prevent data leakage during training to ensure valid BCI decoding.",
+   "why_it_matters": "Brain signals combine various scales, such as microvolts for raw amplitudes and decibels for frequency power. Unscaled data can confuse machine learning decoders, and data leakage can make a BCI system look surprisingly accurate in the lab while failing completely in real-world use.",
+   "prerequisites": [
+    "Basic familiarity with machine learning training loops",
+    "Understanding of how neural data is split into features like amplitude or band power"
+   ],
+   "simple_explanation": "Imagine training a BCI to tell apart two mental tasks using two features: one feature measures wave height in microvolts (numbers ranging from 1 to 5), and another measures power in a wide band (numbers ranging from 1,000 to 50,000). A computer learning algorithm naturally assumes the bigger numbers are much more important. Feature scaling shrinks or stretches all numbers so they play on a fair, even field. Data leakage happens when information from your test data accidentally sneaks into your training step, giving you fake, overly optimistic performance scores.",
+   "step_by_step": [
+    "Step 1: Collect your training dataset of extracted neural features.",
+    "Step 2: Calculate scaling parameters (like the average and spread) strictly using only the training portion of the data.",
+    "Step 3: Apply these exact parameters to scale both the training and the unseen evaluation datasets separately.",
+    "Step 4: Train your BCI decoding model exclusively on the scaled training features.",
+    "Step 5: Test the model on the unseen evaluation data to gauge real-world accuracy."
+   ],
+   "technical_depth": "Feature scaling methods include standardization (subtracting the mean and dividing by the standard deviation) and min-max normalization. In BCI pipelines, applying scaling across the entire dataset before splitting into training and validation sets is a major error known as data leakage. Because the global mean or variance incorporates information from the validation set, the model gains unearned insight into the test distribution, resulting in artificially inflated decoding accuracy that collapses during live BCI closed-loop operation.",
+   "misconceptions": [
+    {
+     "misconception": "It is safe to normalize the entire dataset at once to save time.",
+     "correction": "Normalizing the whole dataset leaks future information into the training phase, invalidating your test results."
+    },
+    {
+     "misconception": "All BCI decoding algorithms require strict feature scaling.",
+     "correction": "While tree-based models are relatively immune to scale differences, distance-based and gradient-based models are extremely sensitive to unscaled inputs."
+    }
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the primary danger of data leakage in BCI model development?",
+     "answer": "It creates overly optimistic performance metrics during offline testing that fail to replicate during live use."
+    },
+    {
+     "question": "When should you compute scaling statistics like the mean and standard deviation?",
+     "answer": "Exclusively on the training dataset portion, before applying them to the testing set."
+    },
+    {
+     "question": "Why do raw neural features often require scaling?",
+     "answer": "Different features can have vastly different numerical units and ranges, which can bias machine learning decoders."
+    }
+   ],
+   "exercise": "Take a small set of mock EEG power values and amplitude values. Split them into a training group and a test group. Calculate the average and standard deviation of the training group only, use those values to transform both groups, and note why you must keep the test group separate during the calculation step.",
+   "summary": "Feature scaling puts disparate neural metrics onto a fair mathematical playing field, while strict adherence to separation prevents data leakage and ensures your BCI performance scores are honest and reproducible.",
+   "next_lesson": "Introduction to cross-validation strategies for time-series and BCI data",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Explain PID control with a practical robotics example",
+   "explanation": "PID stands for Proportional, Integral, and Derivative control. It is a mathematical method used in microcontrollers to make physical systems, like a robot motor, reach and maintain a desired target without overshooting. Proportional corrects for the current error, Integral corrects for past accumulated errors, and Derivative predicts future errors based on the rate of change.",
+   "practical_example": "Imagine an automated delivery robot in an Indian warehouse trying to follow a straight line using a motor encoder. If you only use Proportional control, the motor might slow down as it approaches the target speed, but never quite reach it due to friction, or it might constantly overshoot and wiggle side to side. Adding Integral helps eliminate that tiny remaining steady-state error, while Derivative acts like a shock absorber to prevent jerky overshooting.",
+   "exercise": "Describe how you would adjust a single motor's speed loop if the robot's wheel constantly overshoots the target RPM before settling down. Which of the three PID terms is likely set too high?",
+   "model_answer": "If the wheel constantly overshoots the target RPM, the Proportional (P) term or the Derivative (D) term might be misconfigured, but excessive overshooting specifically points to an overly aggressive Proportional term amplifying the current error too much.",
+   "why_it_works": "Breaking down PID into its three distinct behaviors helps engineering students visualize how software logic directly influences physical hardware motion, a common requirement in robotics and embedded systems internship interviews.",
+   "improvement_tip": "When answering interview questions about control systems, avoid quoting textbook definitions. Instead, explain the real-world physical symptom each term fixes, such as using the D-term to stop oscillations.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Audit a profile for unsupported claims and unclear wording",
+   "explanation": "Recruiters and engineers reading your LinkedIn profile want clear proof of what you actually built, not vague buzzwords. In robotics, BCI, and embedded systems, phrases like 'expert in AI robotics' or 'built advanced systems' raise red flags if there are no specifics. This session shows you how to spot and fix vague, exaggerated, or confusing claims on your profile using concrete facts from your university labs or personal projects.",
+   "practical_example": "Vague wording: 'Worked on brain-computer interface algorithms and smart robots.' Clear, honest wording: 'Wrote a C script in university lab to filter 8-channel EEG alpha waves using an Arduino Uno and custom analog filters.'",
+   "exercise": "Review one project description on your LinkedIn profile. Find any broad claims (like 'expert', 'mastered', or 'built advanced systems') or vague terms, and replace them with the exact hardware tool, programming language, or physical task you performed.",
+   "model_answer": "Before: 'Developed a high-speed obstacle-avoidance robot.' After: 'Programmed an ATmega328P microcontroller in Embedded C to process ultrasonic sensor distance data and control two DC motors for obstacle avoidance during the university robotics lab final exam.'",
+   "why_it_works": "It replaces boastful, unsupported adjectives with verifiable engineering details. Hiring managers in India value honesty and want to see precisely which tools and microcontrollers you have hands-on experience with.",
+   "improvement_tip": "If you cannot back up a statement with a specific tool, file in your repository, or lab report, tone it down to describe what you attempted or learned instead.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish",
+   "focus": "Research design and method",
+   "explanation": "The study outlines a plan to use lab-grown human brain cell clusters, known as brain organoids, combined with advanced engineering tools. Researchers use special systems to keep the cells healthy, microscopic sensors to read electrical signals from the cells, and computer links to test if the organoids can learn and process information.",
+   "limits": "The text describes a framework and tools still in development rather than a completed experiment with final data.",
+   "check": {
+    "confidence": "high"
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.3389/fsci.2023.1017235",
+   "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
+   "day": "2 of 5",
+   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
+   "focus": "Research design and method",
+   "explanation": "The study tested a speech brain-computer interface by recording brain cell signals using tiny sensors placed inside the brain. A person with paralysis due to ALS tried to speak, and computer algorithms translated those brain signals into text on a screen.",
+   "limits": "The abstract mentions testing with a single participant, but does not provide full details on every step of the experimental setup.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/s41586-023-06377-x",
+   "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
+   "day": "2 of 5",
+   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
+  },
+  "github": {
+   "day": "3 of 3",
+   "phase": "Run it in simulation and engineering judgement",
+   "project_name": "ros-navigation/navigation2",
+   "description": "Nav2 is a ROS 2 navigation framework and system written in C++ that helps robots move safely and autonomously.",
+   "simulation_and_testing_insights": "The project uses automated build tracking and CI workflows to test different ROS distributions like Humble, Jazzy, and Lyrical on Ubuntu, ensuring code stability before physical deployment.",
+   "engineering_judgement": "Using simulation is a critical safety and development step in robotics. It allows developers to test path planning, obstacle avoidance, and mapping in a virtual environment before risking expensive hardware in the real world.",
+   "challenge": "Find the section in the documentation that covers 'Getting Started' and outline the initial steps needed to spin up a basic robot simulation.",
+   "knowledge_check": "Why is testing software in a simulation important for robotics projects like Nav2?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-11-11T17:44:39Z",
+    "language": "C++",
+    "archived": false,
+    "license": "NOASSERTION"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Open source",
+     "url": "https://www.therobotreport.com/can-ai-agents-program-industrial-robots-without-training-data-berkeley-says-yes/",
+     "what": "Researchers from UC Berkeley and NVIDIA released open-source software tools that allow AI agents to write, test, and improve programs for industrial robots.",
+     "who": "UC Berkeley and NVIDIA.",
+     "how": "The agents generate code that can be run in a simulated environment to fix errors before being deployed to physical machines. Background (general knowledge): AI agents are automated software programs capable of performing complex tasks by making decisions without direct human input for every step.",
+     "why": "To enable the programming of robots without needing pre-existing training datasets.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Can AI agents program industrial robots without training data? Berkeley says yes",
+     "published": "2026-11-11",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/",
+     "what": "Serve Robotics is providing an API that lets other companies build their own delivery applications on its existing network of over 2,000 delivery robots.",
+     "who": "Serve Robotics.",
+     "how": "By using the company's application programming interface (API) to access the robot fleet. Background (general knowledge): An API acts as a bridge that allows different software systems to talk to each other, enabling third parties to use a platform's functionality.",
+     "why": "To allow third-party developers to create new services on established infrastructure.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Serve Robotics opens robot delivery network for others to build on",
+     "published": "2026-11-11",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Research",
+     "url": "https://robohub.org/ai100-report-released-embodied-ai-highlighted-as-grand-challenge/",
+     "what": "The AI100 project released a report identifying 'embodied AI'\u2014intelligence connected to a physical body\u2014as a major long-term challenge for the field.",
+     "who": "The One Hundred Year Study on Artificial Intelligence (AI100).",
+     "how": "The study conducts longitudinal research to track the advancement and societal effects of AI technology over a century. Background (general knowledge): Embodied AI refers to artificial intelligence systems that interact with the physical world through a robotic body, such as sensing and moving.",
+     "why": "To assess the current state and progress of artificial intelligence development.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "AI100 report released: embodied AI highlighted as grand challenge",
+     "published": "2026-11-11",
+     "source": "Robohub"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "AI Automation Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-11",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/ai-automation-engineer-paris-496766",
+     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+    },
+    {
+     "title": "Payload Systems Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Lausanne",
+     "published": "2026-11-11",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/enova-consulting/payload-systems-test-engineer-lausanne-103679",
+     "company": "Enova Consulting"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}

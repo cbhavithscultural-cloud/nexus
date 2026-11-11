@@ -1,154 +1,163 @@
 {
  "v": 2,
- "date": "2026-11-11",
- "generated_at": "2026-11-11T04:30:38.924005+05:30",
+ "date": "2026-11-12",
+ "generated_at": "2026-11-12T03:25:49.390713+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 780); gemini-3.5-flash-lite:Extra data: line 11 column 4 (char 864); gemini-3.1-flash-lite:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high deman",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how a growing brain organoid organizes itself into distinct physical regions, mimicking parts of the developing human brain.",
-   "why_it_matters": "Real brains are not uniform blobs of cells; they have specialized neighborhoods like the cortex for thinking and the midbrain for processing movement. For biocomputing, knowing how to encourage these distinct regions helps us build organoids with predictable, organized wiring rather than random cell clumps.",
+   "objective": "Understand how scientists use cerebral organoids to study microcephaly, a condition marked by abnormal brain size reduction.",
+   "why_it_matters": "Studying microcephaly with real human brain tissue helps researchers see how developmental disruptions unfold, guiding future treatments and deepening our understanding of human brain growth.",
    "prerequisites": [
-    "Basic knowledge of stem cells and how they receive chemical signals to change identities.",
-    "Understanding that organoids grow inside supportive gels and liquid broths."
+    "Basic knowledge of stem cells and how they form early brain layers",
+    "Understanding that organoids mimic miniature aspects of human brain development"
    ],
-   "simple_explanation": "Imagine baking a loaf of bread that naturally develops a crust on the outside, a soft center, and nutty pockets throughout without you carving it out. Brain organoids do something similar. As stem cells multiply and mature, different groups receive different local chemical instructions. Guided by these invisible rules, cells migrate and group together to form distinct patches that resemble different parts of a real embryonic brain, such as the forebrain or hindbrain.",
+   "simple_explanation": "Microcephaly is a condition where a person's brain develops to a much smaller size than typical. Because we cannot easily study live human embryonic brain growth, scientists grow tiny lab models called cerebral organoids using stem cells taken from patients. By comparing organoids grown from healthy cells versus microcephaly cells, researchers can watch how cell division and tissue growth go differently in real time.",
    "step_by_step": [
-    "Start with unspecialized stem cells clumped together inside a supportive gel matrix.",
-    "Introduce specific signaling molecules into the liquid nutrient broth that mimic the chemical gradients found in a developing human embryo.",
-    "Observe how cells on the outside of the cluster respond differently than cells trapped in the center due to varying exposure to these chemicals.",
-    "Watch as these chemical cues prompt cells to turn on specific genetic programs, causing them to sort themselves into distinct layers and regional clusters."
+    "Step 1: Collect skin or blood cells from a patient and reprogram them back into induced pluripotent stem cells (iPSCs).",
+    "Step 2: Trigger these stem cells to form tiny three-dimensional brain organoids in a nutrient bath.",
+    "Step 3: Monitor growth over several weeks, measuring the overall physical size and structural layers of the organoid.",
+    "Step 4: Use microscopic imaging to count dividing cells and see if neural progenitor cells are multiplying properly or dying too early."
    ],
-   "technical_depth": "During natural development, morphogens (signaling proteins like WNT, BMP, and Sonic Hedgehog) form concentration gradients across tissues. In organoid culture, scientists either rely on the tissue's self-organizing tendency (uncorrected regionalization) or apply targeted local inhibitors and activators (guided regionalization) to encourage specific brain structures like the cerebral cortex or the optic cup to form adjacent to one another.",
+   "technical_depth": "At a cellular level, microcephaly often stems from premature differentiation or abnormal cell division timing in neural progenitor cells (NPCs). In healthy development, NPCs divide symmetrically to expand the stem cell pool before generating neurons. In many microcephaly organoid models, researchers observe premature cell cycle exit, where NPCs stop dividing and turn into neurons too early, resulting in a depleted progenitor pool and a significantly smaller tissue structure overall.",
    "misconceptions": [
-    {
-     "myth": "An organoid automatically builds a complete, miniaturized adult human brain with every tiny structure intact.",
-     "fact": "Organoids only mimic early embryonic or fetal stages of development and typically lack a full complement of interconnected regional systems."
-    }
+    "Misconception: Microcephaly organoids are fully functioning, conscious miniature brains. Fact: They are simple clumps of specific brain tissue types that lack sensory input, blood circulation, and real consciousness.",
+    "Misconception: All microcephaly organoids look identical. Fact: There is natural variation in how individual organoids grow, so scientists must test many samples to find reliable patterns."
    ],
    "knowledge_check": [
     {
-     "question": "What guides cells in an organoid to form different regional identities?",
-     "answer": "Chemical signaling molecules and gradients that instruct cells which genetic programs to activate."
+     "question": "What is microcephaly?",
+     "answer": "A condition characterized by an abnormally small brain size relative to typical development."
     },
     {
-     "question": "Do brain organoids form uniform, identical tissue throughout?",
-     "answer": "No, they naturally tend to sort into distinct regional patches mimicking different parts of the developing brain."
+     "question": "Why are cerebral organoids useful for studying microcephaly?",
+     "answer": "They provide a human-specific tissue model to observe how early brain growth and cell division unfold."
     },
     {
-     "question": "What is the primary developmental stage that current organoids best resemble?",
-     "answer": "Early embryonic or fetal brain development stages."
+     "question": "What is one cellular cause often observed in microcephaly organoid models?",
+     "answer": "Premature cell cycle exit, where neural progenitor cells stop dividing and turn into neurons too early."
     }
    ],
-   "exercise": "Sketch a simple circle representing an organoid in a dish. Draw two different shaded zones inside it to represent how different chemical signals might split the tissue into a 'forebrain-like' region and a 'midbrain-like' region.",
-   "summary": "Regional identity in organoids refers to how unguided or guided stem cell clusters self-organize into distinct patches resembling various parts of the developing embryonic brain through chemical signaling gradients.",
-   "next_lesson": "Day 12: How we track cell types inside organoids using microscopic imaging and markers.",
+   "exercise": "Sketch a timeline of a 4-week experiment comparing a healthy stem cell line to a patient-derived microcephaly cell line, noting when you would measure tissue size and cell division markers.",
+   "summary": "Patient-derived cerebral organoids serve as powerful living models to study human-specific developmental conditions like microcephaly, helping researchers uncover how disrupted cell division leads to reduced brain size.",
+   "next_lesson": "Day 13: Introduction to neurodevelopmental disease modeling beyond microcephaly.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how EEG frequency bands are defined by speed ranges and how measuring band power translates brain rhythms into distinct mental states for BCI control.",
-   "why_it_matters": "Raw EEG signals look like chaotic squiggles. By sorting these waves into specific speed categories\u2014known as frequency bands\u2014BCI systems can cleanly identify whether a user is relaxed, focused, or moving.",
+   "objective": "Understand how feature scaling brings neural metrics to a common numeric range and learn how to prevent data leakage during training to ensure valid BCI decoding.",
+   "why_it_matters": "Brain signals combine various scales, such as microvolts for raw amplitudes and decibels for frequency power. Unscaled data can confuse machine learning decoders, and data leakage can make a BCI system look surprisingly accurate in the lab while failing completely in real-world use.",
    "prerequisites": [
-    "Basic knowledge of how the Fourier transform breaks down complex brain waves into individual speeds",
-    "Understanding that EEG sensors pick up electrical fluctuations from large groups of active brain cells"
+    "Basic familiarity with machine learning training loops",
+    "Understanding of how neural data is split into features like amplitude or band power"
    ],
-   "simple_explanation": "Imagine listening to an orchestra. Instead of hearing a wall of noise, you can separate the sounds into deep bass, middle instruments, and high flutes. The brain does something similar, generating different speeds of electrical activity all at once. Band power measures how loud or strong a specific speed range is during a given moment.",
+   "simple_explanation": "Imagine training a BCI to tell apart two mental tasks using two features: one feature measures wave height in microvolts (numbers ranging from 1 to 5), and another measures power in a wide band (numbers ranging from 1,000 to 50,000). A computer learning algorithm naturally assumes the bigger numbers are much more important. Feature scaling shrinks or stretches all numbers so they play on a fair, even field. Data leakage happens when information from your test data accidentally sneaks into your training step, giving you fake, overly optimistic performance scores.",
    "step_by_step": [
-    "Take a short slice of clean, filtered EEG time-series data.",
-    "Apply a mathematical spectrum tool to view how much energy exists at each individual speed (in Hertz, or cycles per second).",
-    "Group the resulting spectrum into standard frequency bands: Delta (slowest, deep sleep), Theta (drowsy or memory processing), Alpha (relaxed with eyes closed), Beta (active thinking), and Gamma (high-level processing).",
-    "Calculate the total power (energy) within each specific band to use as a feature for your BCI controller."
+    "Step 1: Collect your training dataset of extracted neural features.",
+    "Step 2: Calculate scaling parameters (like the average and spread) strictly using only the training portion of the data.",
+    "Step 3: Apply these exact parameters to scale both the training and the unseen evaluation datasets separately.",
+    "Step 4: Train your BCI decoding model exclusively on the scaled training features.",
+    "Step 5: Test the model on the unseen evaluation data to gauge real-world accuracy."
    ],
-   "technical_depth": "Band power is formally computed by integrating the Power Spectral Density (PSD) over a defined frequency interval (e.g., 8 to 12 Hz for Alpha). Because raw EEG amplitude varies wildly across different scalp locations and users, BCI applications often use relative band power\u2014the power of a single band divided by the total power across all bands\u2014to normalize the features and make the decoder robust.",
+   "technical_depth": "Feature scaling methods include standardization (subtracting the mean and dividing by the standard deviation) and min-max normalization. In BCI pipelines, applying scaling across the entire dataset before splitting into training and validation sets is a major error known as data leakage. Because the global mean or variance incorporates information from the validation set, the model gains unearned insight into the test distribution, resulting in artificially inflated decoding accuracy that collapses during live BCI closed-loop operation.",
    "misconceptions": [
-    "Misconception: A single frequency band exclusively controls one specific mental task.\nReality: Brain bands overlap heavily; multiple bands are active during nearly every human action or thought.",
-    "Misconception: Higher frequency bands always mean a person is smarter or working harder.\nReality: Frequency bands simply reflect different types of neural synchronization, not raw intelligence."
+    {
+     "misconception": "It is safe to normalize the entire dataset at once to save time.",
+     "correction": "Normalizing the whole dataset leaks future information into the training phase, invalidating your test results."
+    },
+    {
+     "misconception": "All BCI decoding algorithms require strict feature scaling.",
+     "correction": "While tree-based models are relatively immune to scale differences, distance-based and gradient-based models are extremely sensitive to unscaled inputs."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What unit is used to measure the speed of EEG frequency bands?",
-     "answer": "Hertz (Hz), representing cycles per second."
+     "question": "What is the primary danger of data leakage in BCI model development?",
+     "answer": "It creates overly optimistic performance metrics during offline testing that fail to replicate during live use."
     },
     {
-     "question": "Which standard frequency band is typically associated with a relaxed, eyes-closed human state?",
-     "answer": "The Alpha band (roughly 8 to 12 Hz)."
+     "question": "When should you compute scaling statistics like the mean and standard deviation?",
+     "answer": "Exclusively on the training dataset portion, before applying them to the testing set."
     },
     {
-     "question": "Why do BCI engineers often calculate relative band power instead of absolute power?",
-     "answer": "To normalize data against individual variations in skull thickness and signal strength across users."
+     "question": "Why do raw neural features often require scaling?",
+     "answer": "Different features can have vastly different numerical units and ranges, which can bias machine learning decoders."
     }
    ],
-   "exercise": "Review a set of simulated band power values over a 5-second window. Identify which band dominates when the user closes their eyes versus when they open them and solve a simple math check calculating the ratio of Alpha power to total spectrum power.",
-   "summary": "Dividing brain waves into standard frequency bands lets BCI systems isolate meaningful mental patterns from background noise, turning broad EEG readings into targeted control features.",
-   "next_lesson": "Introduction to event-related synchronization (ERS) and desynchronization (ERD)",
+   "exercise": "Take a small set of mock EEG power values and amplitude values. Split them into a training group and a test group. Calculate the average and standard deviation of the training group only, use those values to transform both groups, and note why you must keep the test group separate during the calculation step.",
+   "summary": "Feature scaling puts disparate neural metrics onto a fair mathematical playing field, while strict adherence to separation prevents data leakage and ensures your BCI performance scores are honest and reproducible.",
+   "next_lesson": "Introduction to cross-validation strategies for time-series and BCI data",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Debug a motor-control problem systematically",
-   "explanation": "When a robot wheel refuses to spin or a motorized wheelchair prototype jerks unpredictably, random guessing wastes time. Systematic debugging means splitting the system into smaller blocks\u2014power supply, microcontroller control signals, and the motor driver\u2014and testing one block at a time to isolate the exact point of failure.",
-   "practical_example": "Imagine your robot's right DC motor remains completely still even though your microcontroller code runs. Instead of rewriting the code, you test systematically: first check if the motor battery is dead using a multimeter, then check if the PWM control wire is sending a signal from the microcontroller pin, and finally check if the motor driver chip is getting hot or damaged.",
-   "exercise": "List the three main hardware and software checks you would perform in order if a servo motor buzzes loudly but fails to rotate to the commanded angle.",
-   "model_answer": "1. Check the physical gear train to ensure nothing is jammed mechanically. 2. Verify that the external power supply shares a common ground with the microcontroller and provides enough current. 3. Check the PWM signal frequency and pulse width configuration in your timer code to ensure it matches the servo requirements.",
-   "why_it_works": "Isolating problems block by block prevents you from chasing ghost bugs and helps you explain your troubleshooting thought process clearly during a technical internship interview.",
-   "improvement_tip": "Always check your common ground connections first when dealing with power-related motor issues, as floating grounds are the most common hidden cause of failure.",
+   "topic": "Explain PID control with a practical robotics example",
+   "explanation": "PID stands for Proportional, Integral, and Derivative control. It is a mathematical method used in microcontrollers to make physical systems, like a robot motor, reach and maintain a desired target without overshooting. Proportional corrects for the current error, Integral corrects for past accumulated errors, and Derivative predicts future errors based on the rate of change.",
+   "practical_example": "Imagine an automated delivery robot in an Indian warehouse trying to follow a straight line using a motor encoder. If you only use Proportional control, the motor might slow down as it approaches the target speed, but never quite reach it due to friction, or it might constantly overshoot and wiggle side to side. Adding Integral helps eliminate that tiny remaining steady-state error, while Derivative acts like a shock absorber to prevent jerky overshooting.",
+   "exercise": "Describe how you would adjust a single motor's speed loop if the robot's wheel constantly overshoots the target RPM before settling down. Which of the three PID terms is likely set too high?",
+   "model_answer": "If the wheel constantly overshoots the target RPM, the Proportional (P) term or the Derivative (D) term might be misconfigured, but excessive overshooting specifically points to an overly aggressive Proportional term amplifying the current error too much.",
+   "why_it_works": "Breaking down PID into its three distinct behaviors helps engineering students visualize how software logic directly influences physical hardware motion, a common requirement in robotics and embedded systems internship interviews.",
+   "improvement_tip": "When answering interview questions about control systems, avoid quoting textbook definitions. Instead, explain the real-world physical symptom each term fixes, such as using the D-term to stop oscillations.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Prepare a short follow-up message after a genuine conversation",
-   "explanation": "After chatting with an engineer or recruiter at a tech event or online session, sending a brief, contextual follow-up helps keep the connection alive. Keep it polite, reference one specific detail you discussed, and avoid asking directly for an internship right away.",
-   "practical_example": "If you spoke with an embedded systems engineer about debugging I2C communication issues on an STM32 board, your follow-up message should mention that specific topic rather than a generic greeting.",
-   "exercise": "Draft a short LinkedIn message to someone you recently spoke with about a brain-computer interface signal filtering challenge, thanking them and sharing a relevant article or thought.",
-   "model_answer": "Hi Rahul, thank you for sharing your advice on filtering EEG signals during our chat yesterday. I read the guide you suggested on notch filters and found the section on reducing 50Hz power line interference especially useful for my current university project.",
-   "why_it_works": "It reminds the person who you are, shows genuine interest in their advice, and demonstrates that you actually listened to what they shared without awkwardly begging for a job.",
-   "improvement_tip": "Send the follow-up message within twenty-four to forty-eight hours while the conversation is still fresh in both of your minds.",
+   "topic": "Audit a profile for unsupported claims and unclear wording",
+   "explanation": "Recruiters and engineers reading your LinkedIn profile want clear proof of what you actually built, not vague buzzwords. In robotics, BCI, and embedded systems, phrases like 'expert in AI robotics' or 'built advanced systems' raise red flags if there are no specifics. This session shows you how to spot and fix vague, exaggerated, or confusing claims on your profile using concrete facts from your university labs or personal projects.",
+   "practical_example": "Vague wording: 'Worked on brain-computer interface algorithms and smart robots.' Clear, honest wording: 'Wrote a C script in university lab to filter 8-channel EEG alpha waves using an Arduino Uno and custom analog filters.'",
+   "exercise": "Review one project description on your LinkedIn profile. Find any broad claims (like 'expert', 'mastered', or 'built advanced systems') or vague terms, and replace them with the exact hardware tool, programming language, or physical task you performed.",
+   "model_answer": "Before: 'Developed a high-speed obstacle-avoidance robot.' After: 'Programmed an ATmega328P microcontroller in Embedded C to process ultrasonic sensor distance data and control two DC motors for obstacle avoidance during the university robotics lab final exam.'",
+   "why_it_works": "It replaces boastful, unsupported adjectives with verifiable engineering details. Hiring managers in India value honesty and want to see precisely which tools and microcontrollers you have hands-on experience with.",
+   "improvement_tip": "If you cannot back up a statement with a specific tool, file in your repository, or lab report, tone it down to describe what you attempted or learned instead.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish (Smirnova 2023)",
-   "focus": "Why this research exists: introducing organoid intelligence (OI) to build biological computers using lab-grown human brain tissues.",
-   "explanation": "Traditional computers are hitting limits in energy efficiency and learning flexibility. Researchers want to use tiny, lab-grown human brain cell structures (organoids) because human brains are remarkably good at learning, processing information, and using very little energy. This paper outlines a plan to grow these brain tissues reliably, connect them to computers, and study how they might learn and compute while considering the ethical implications.",
-   "limits": "Brain organoids are still very simple compared to a real human brain, and we are just starting to figure out how to feed them, record their signals, and train them safely.",
-   "check": "high",
+   "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish",
+   "focus": "Research design and method",
+   "explanation": "The study outlines a plan to use lab-grown human brain cell clusters, known as brain organoids, combined with advanced engineering tools. Researchers use special systems to keep the cells healthy, microscopic sensors to read electrical signals from the cells, and computer links to test if the organoids can learn and process information.",
+   "limits": "The text describes a framework and tools still in development rather than a completed experiment with final data.",
+   "check": {
+    "confidence": "high"
+   },
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.3389/fsci.2023.1017235",
    "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "bci_paper": {
    "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
-   "focus": "Decoding attempted speech directly from brain activity into text to help people with paralysis communicate faster and more accurately.",
-   "explanation": "Past technologies struggled to understand speech accurately when using large word lists or natural sentences. This research exists to push the boundaries of speed and accuracy by using tiny sensors placed directly in the brain to capture detailed brain signals.",
-   "limits": "The abstract cuts off early, and results are based on a single study participant with ALS.",
+   "focus": "Research design and method",
+   "explanation": "The study tested a speech brain-computer interface by recording brain cell signals using tiny sensors placed inside the brain. A person with paralysis due to ALS tried to speak, and computer algorithms translated those brain signals into text on a screen.",
+   "limits": "The abstract mentions testing with a single participant, but does not provide full details on every step of the experimental setup.",
    "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/s41586-023-06377-x",
    "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "github": {
-   "day": "2 of 3",
-   "project": "ros-navigation/navigation2",
-   "focus": "How it works",
-   "explanation": "Based on the provided repository information, Nav2 is a C++ framework and system designed for ROS 2 navigation. It relies on various configuration files, plugins, and tutorials to help robots move safely and autonomously. While specific internal mechanics are not fully detailed in the snippet, general knowledge of ROS 2 navigation indicates that it typically processes sensor data to map environments, plan paths, and control robot movement using a modular architecture.",
+   "day": "3 of 3",
+   "phase": "Run it in simulation and engineering judgement",
+   "project_name": "ros-navigation/navigation2",
+   "description": "Nav2 is a ROS 2 navigation framework and system written in C++ that helps robots move safely and autonomously.",
+   "simulation_and_testing_insights": "The project uses automated build tracking and CI workflows to test different ROS distributions like Humble, Jazzy, and Lyrical on Ubuntu, ensuring code stability before physical deployment.",
+   "engineering_judgement": "Using simulation is a critical safety and development step in robotics. It allows developers to test path planning, obstacle avoidance, and mapping in a virtual environment before risking expensive hardware in the real world.",
+   "challenge": "Find the section in the documentation that covers 'Getting Started' and outline the initial steps needed to spin up a basic robot simulation.",
+   "knowledge_check": "Why is testing software in a simulation important for robotics projects like Nav2?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
-   "challenge": "Review the concepts and getting started links listed in the README to identify at least two main components that make up a robot navigation stack.",
-   "knowledge_check": "What primary programming language is used to build the core elements of the navigation2 repository according to the metadata?",
    "verified_metadata": {
     "full_name": "ros-navigation/navigation2",
     "html_url": "https://github.com/ros-navigation/navigation2",
     "description": "ROS 2 Navigation Framework and System",
-    "pushed_at": "2026-11-10T00:34:52Z",
+    "pushed_at": "2026-11-11T17:44:39Z",
     "language": "C++",
     "archived": false,
     "license": "NOASSERTION"
@@ -157,86 +166,68 @@
   "news": {
    "items": [
     {
-     "category": "Deployment",
-     "url": "https://www.therobotreport.com/how-minimize-wi-fi-roaming-interruptions-autonomous-mobile-robots/",
-     "what": "Using dedicated Wi-Fi scanning to keep mobile robots connected while moving.",
-     "who": "Synaptics",
-     "how": "Implementing specific scanning architectures designed for robot mobility. Background (general knowledge): Robots often disconnect or lag when switching between different Wi-Fi access points in large facilities, similar to how a phone might struggle when moving between cell towers.",
-     "why": "To boost the reliability and overall performance of mobile robots.",
-     "limits": "Not stated in the source excerpt",
+     "category": "Open source",
+     "url": "https://www.therobotreport.com/can-ai-agents-program-industrial-robots-without-training-data-berkeley-says-yes/",
+     "what": "Researchers from UC Berkeley and NVIDIA released open-source software tools that allow AI agents to write, test, and improve programs for industrial robots.",
+     "who": "UC Berkeley and NVIDIA.",
+     "how": "The agents generate code that can be run in a simulated environment to fix errors before being deployed to physical machines. Background (general knowledge): AI agents are automated software programs capable of performing complex tasks by making decisions without direct human input for every step.",
+     "why": "To enable the programming of robots without needing pre-existing training datasets.",
+     "limits": "Not stated in the source excerpt.",
      "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "How to minimize Wi-Fi roaming interruptions for autonomous mobile robots",
-     "published": "2026-11-09",
+     "title": "Can AI agents program industrial robots without training data? Berkeley says yes",
+     "published": "2026-11-11",
      "source": "The Robot Report"
     },
     {
-     "category": "Industry view",
-     "url": "https://spectrum.ieee.org/agentic-robotics",
-     "what": "The strategy of using massive amounts of data from human demonstrations to train robots.",
-     "who": "Various robotics companies",
-     "how": "Collecting large datasets of human manual tasks and using AI to ingest this data so robots can replicate the actions. Background (general knowledge): This is part of a trend called imitation learning, where AI models learn by observing human behavior rather than being manually programmed for every step.",
-     "why": "To solve difficult robotics problems and enable robots to perform most tasks currently handled by humans.",
-     "limits": "Not stated in the source excerpt",
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/",
+     "what": "Serve Robotics is providing an API that lets other companies build their own delivery applications on its existing network of over 2,000 delivery robots.",
+     "who": "Serve Robotics.",
+     "how": "By using the company's application programming interface (API) to access the robot fleet. Background (general knowledge): An API acts as a bridge that allows different software systems to talk to each other, enabling third parties to use a platform's functionality.",
+     "why": "To allow third-party developers to create new services on established infrastructure.",
+     "limits": "Not stated in the source excerpt.",
      "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Can Agentic Robotics Solve Robotics\u2019 Data Scaling Problem?",
-     "published": "2026-11-09",
-     "source": "IEEE Spectrum Robotics"
+     "title": "Serve Robotics opens robot delivery network for others to build on",
+     "published": "2026-11-11",
+     "source": "The Robot Report"
     },
     {
-     "category": "Product",
-     "url": "https://spectrum.ieee.org/video-friday-home-cable-robot",
-     "what": "A room-scale robot that uses cables to move around a home and clean.",
-     "who": "Not stated in the source excerpt",
-     "how": "The system utilizes a cable-driven mechanism to maneuver within a room environment. Background (general knowledge): Cable-driven robots use tensioned wires connected to motors to pull the device through space, often allowing for high speed and precision compared to traditional wheeled or legged designs.",
-     "why": "To tidy up living spaces.",
-     "limits": "Not stated in the source excerpt",
+     "category": "Research",
+     "url": "https://robohub.org/ai100-report-released-embodied-ai-highlighted-as-grand-challenge/",
+     "what": "The AI100 project released a report identifying 'embodied AI'\u2014intelligence connected to a physical body\u2014as a major long-term challenge for the field.",
+     "who": "The One Hundred Year Study on Artificial Intelligence (AI100).",
+     "how": "The study conducts longitudinal research to track the advancement and societal effects of AI technology over a century. Background (general knowledge): Embodied AI refers to artificial intelligence systems that interact with the physical world through a robotic body, such as sensing and moving.",
+     "why": "To assess the current state and progress of artificial intelligence development.",
+     "limits": "Not stated in the source excerpt.",
      "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Video Friday: Room-Scale Cable-Driven Home Robot Tidies Up",
-     "published": "2026-11-06",
-     "source": "IEEE Spectrum Robotics"
+     "title": "AI100 report released: embodied AI highlighted as grand challenge",
+     "published": "2026-11-11",
+     "source": "Robohub"
     }
    ]
   },
   "jobs": {
    "items": [
     {
-     "title": "Werkstudent Embedded Systems / Linux (m/w/d)",
+     "title": "AI Automation Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Bad Salzuflen",
-     "published": "2026-11-10",
+     "location": "Paris",
+     "published": "2026-11-11",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/salz-automation-gmbh/werkstudent-embedded-systems-linux-bad-salzuflen-152814",
-     "company": "SALZ Automation GmbH"
+     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/ai-automation-engineer-paris-496766",
+     "company": "Signal Processing Engineer (RF Processing & Analytics)"
     },
     {
-     "title": "Internship - UAV Robotics/Mechatronics (Drone Prototyping, Integration & Field Testing)",
+     "title": "Payload Systems Test Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Delft",
-     "published": "2026-11-10",
+     "location": "Lausanne",
+     "published": "2026-11-11",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.nl/jobs/companies/fiducial/internship-uav-robotics-mechatronics-drone-prototyping-integration-field-testing-delft-234540",
-     "company": "Fiducial"
-    },
-    {
-     "title": "SPS-Betreuer / Elektrotechniker (m/w/d) mit IT-Affinit\u00e4t",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Wolfegg",
-     "published": "2026-11-10",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/binderholz/sps-betreuer-elektrotechniker-mit-it-affinitat-wolfegg-311624",
-     "company": "binderholz"
-    },
-    {
-     "title": "OT Engineer",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Basel",
-     "published": "2026-11-10",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/bell-food-group/ot-engineer-basel-164616",
-     "company": "Bell Food Group"
+     "url": "https://www.arbeitnow.ch/jobs/companies/enova-consulting/payload-systems-test-engineer-lausanne-103679",
+     "company": "Enova Consulting"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
