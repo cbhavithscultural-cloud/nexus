@@ -1,166 +1,170 @@
 {
  "v": 2,
- "date": "2026-11-12",
- "generated_at": "2026-11-12T04:42:58.267330+05:30",
+ "date": "2026-11-13",
+ "generated_at": "2026-11-13T02:49:38.595979+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 857); gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 719); gemini-3.1-flash-lite:Extra data: line 11 column 4 (char 722); gemini-2.5-flash-lite:404 {   \"error\": {     \"code\": 404, ",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how scientists use cerebral organoids to study microcephaly, a condition marked by abnormal brain size reduction.",
-   "why_it_matters": "Studying microcephaly with real human brain tissue helps researchers see how developmental disruptions unfold, guiding future treatments and deepening our understanding of human brain growth.",
+   "objective": "Understand the current physical and biological limits of brain organoids, focusing on why they resemble early embryonic stages rather than mature adult tissue, why they vary between batches, and what vital biological systems they lack.",
+   "why_it_matters": "Before we can reliably use organoids for advanced biocomputing or complex disease modeling, we must understand their physical shortcomings. Knowing what is missing prevents us from overestimating their current capabilities.",
    "prerequisites": [
-    "Basic knowledge of stem cells and how they form early brain layers",
-    "Understanding that organoids mimic miniature aspects of human brain development"
+    "Basic knowledge of how stem cells grow into early brain structures",
+    "Familiarity with how living brain tissue requires oxygen and nutrients to survive"
    ],
-   "simple_explanation": "Microcephaly is a condition where a person's brain develops to a much smaller size than typical. Because we cannot easily study live human embryonic brain growth, scientists grow tiny lab models called cerebral organoids using stem cells taken from patients. By comparing organoids grown from healthy cells versus microcephaly cells, researchers can watch how cell division and tissue growth go differently in real time.",
+   "simple_explanation": "Brain organoids are incredible scientific achievements, but they are not fully functioning human brains. Think of them like a rough model home built out of blocks: it has rooms and walls, but it lacks plumbing, electricity, and the finishing touches of an inhabited house. Similarly, lab-grown brain tissue often stops growing at an immature embryonic stage, varies a lot in shape from one attempt to the next, and lacks a blood supply or immune system.",
    "step_by_step": [
-    "Step 1: Collect skin or blood cells from a patient and reprogram them back into induced pluripotent stem cells (iPSCs).",
-    "Step 2: Trigger these stem cells to form tiny three-dimensional brain organoids in a nutrient bath.",
-    "Step 3: Monitor growth over several weeks, measuring the overall physical size and structural layers of the organoid.",
-    "Step 4: Use microscopic imaging to count dividing cells and see if neural progenitor cells are multiplying properly or dying too early."
+    "Maturity gap: Organoids develop along an internal biological clock that resembles an early embryonic or fetal stage, meaning their cells and synapses do not fully mature into adult-like configurations.",
+    "Variability challenge: Because organoids grow largely on their own from clumped stem cells, no two organoids look or wire up exactly alike. This makes it difficult to standardize experiments.",
+    "Missing systems: A real human brain relies on a vast network of blood vessels to deliver oxygen and remove waste, plus specialized immune cells to protect it. Organoids lack these integrated support networks.",
+    "The core consequence: Without blood vessels, oxygen can only diffuse a short distance into the tissue, causing cells in the very center of large organoids to run out of nutrients and die."
    ],
-   "technical_depth": "At a cellular level, microcephaly often stems from premature differentiation or abnormal cell division timing in neural progenitor cells (NPCs). In healthy development, NPCs divide symmetrically to expand the stem cell pool before generating neurons. In many microcephaly organoid models, researchers observe premature cell cycle exit, where NPCs stop dividing and turn into neurons too early, resulting in a depleted progenitor pool and a significantly smaller tissue structure overall.",
+   "technical_depth": "From a bioengineering standpoint, diffusion limits are a primary bottleneck. Without a vascular tree (capillaries, arteries, and veins) integrated into the 3D tissue, passive diffusion restricts viable tissue thickness to roughly a few hundred micrometers. Furthermore, transcriptomic analyses show that organoid cells express fetal-stage genes rather than adult isoforms, reflecting an incomplete developmental program in vitro.",
    "misconceptions": [
-    "Misconception: Microcephaly organoids are fully functioning, conscious miniature brains. Fact: They are simple clumps of specific brain tissue types that lack sensory input, blood circulation, and real consciousness.",
-    "Misconception: All microcephaly organoids look identical. Fact: There is natural variation in how individual organoids grow, so scientists must test many samples to find reliable patterns."
+    "Misconception: Organoids can think, feel, or experience consciousness because they contain brain cells.\nFact: Organoids lack the complex, interconnected sensory systems, global networks, and mature architecture required for conscious experience.",
+    "Misconception: Every organoid grown from the same batch is identical.\nFact: Self-organization leads to high structural variability, meaning every single organoid forms a slightly different internal layout."
    ],
    "knowledge_check": [
     {
-     "question": "What is microcephaly?",
-     "answer": "A condition characterized by an abnormally small brain size relative to typical development."
+     "question": "What developmental stage do most current brain organoids closely resemble?",
+     "answer": "Early embryonic or fetal stages."
     },
     {
-     "question": "Why are cerebral organoids useful for studying microcephaly?",
-     "answer": "They provide a human-specific tissue model to observe how early brain growth and cell division unfold."
+     "question": "Why do large organoids often develop dead cells in their centers?",
+     "answer": "They lack a blood vessel network, meaning oxygen and nutrients can only reach the outer layers via simple diffusion."
     },
     {
-     "question": "What is one cellular cause often observed in microcephaly organoid models?",
-     "answer": "Premature cell cycle exit, where neural progenitor cells stop dividing and turn into neurons too early."
+     "question": "What does 'variability' mean in the context of organoid growth?",
+     "answer": "It means different organoids grow into distinct shapes and internal wiring patterns, making them hard to standardize."
     }
    ],
-   "exercise": "Sketch a timeline of a 4-week experiment comparing a healthy stem cell line to a patient-derived microcephaly cell line, noting when you would measure tissue size and cell division markers.",
-   "summary": "Patient-derived cerebral organoids serve as powerful living models to study human-specific developmental conditions like microcephaly, helping researchers uncover how disrupted cell division leads to reduced brain size.",
-   "next_lesson": "Day 13: Introduction to neurodevelopmental disease modeling beyond microcephaly.",
+   "exercise": "Imagine you are designing a growth plan for a new batch of organoids. List two engineering hurdles you would face due to missing systems (such as the lack of blood vessels or immune cells) and write down a brief idea for how scientists might try to solve one of them in the lab.",
+   "summary": "Brain organoids face three major hurdles: they stay stuck at an immature developmental stage, they vary wildly in their internal structure between experiments, and they lack crucial supporting systems like blood vessels and immune cells.",
+   "next_lesson": "Day 14: How we try to supply oxygen and nutrients using artificial blood vessel channels.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how feature scaling brings neural metrics to a common numeric range and learn how to prevent data leakage during training to ensure valid BCI decoding.",
-   "why_it_matters": "Brain signals combine various scales, such as microvolts for raw amplitudes and decibels for frequency power. Unscaled data can confuse machine learning decoders, and data leakage can make a BCI system look surprisingly accurate in the lab while failing completely in real-world use.",
+   "objective": "Understand how to partition brain-computer interface data into training, validation, and test sets to properly evaluate machine learning decoders without cheating.",
+   "why_it_matters": "Without splitting data correctly, a BCI algorithm might memorize past recording sessions instead of learning how to decode new thoughts. Proper data partitioning ensures your system actually works when a new user tries it.",
    "prerequisites": [
-    "Basic familiarity with machine learning training loops",
-    "Understanding of how neural data is split into features like amplitude or band power"
+    "Basic familiarity with machine learning models that learn patterns from examples",
+    "Understanding that brain data varies greatly from person to person and session to session"
    ],
-   "simple_explanation": "Imagine training a BCI to tell apart two mental tasks using two features: one feature measures wave height in microvolts (numbers ranging from 1 to 5), and another measures power in a wide band (numbers ranging from 1,000 to 50,000). A computer learning algorithm naturally assumes the bigger numbers are much more important. Feature scaling shrinks or stretches all numbers so they play on a fair, even field. Data leakage happens when information from your test data accidentally sneaks into your training step, giving you fake, overly optimistic performance scores.",
+   "simple_explanation": "Imagine studying for a major test. If your teacher gives you the exact answer key to study and then tests you on those same questions, you will get an A, but you haven't actually learned anything. In BCI, we split our data into three piles: a training pile to teach the model, a validation pile to tune its settings, and a secret test pile that the model never sees until the very end to check its real-world skill.",
    "step_by_step": [
-    "Step 1: Collect your training dataset of extracted neural features.",
-    "Step 2: Calculate scaling parameters (like the average and spread) strictly using only the training portion of the data.",
-    "Step 3: Apply these exact parameters to scale both the training and the unseen evaluation datasets separately.",
-    "Step 4: Train your BCI decoding model exclusively on the scaled training features.",
-    "Step 5: Test the model on the unseen evaluation data to gauge real-world accuracy."
+    "Gather your recorded brain signals and associated user intent labels from a BCI session.",
+    "Set aside a large portion (around 60 to 70 percent) of your data as the training set, which the computer uses to build its initial decoding rules.",
+    "Reserve a smaller portion (around 15 to 20 percent) as the validation set, used to tweak settings and compare different model designs during development.",
+    "Lock away the remaining portion (15 to 20 percent) as the final test set, touching it only once at the very end to measure how well the final model performs on unseen data."
    ],
-   "technical_depth": "Feature scaling methods include standardization (subtracting the mean and dividing by the standard deviation) and min-max normalization. In BCI pipelines, applying scaling across the entire dataset before splitting into training and validation sets is a major error known as data leakage. Because the global mean or variance incorporates information from the validation set, the model gains unearned insight into the test distribution, resulting in artificially inflated decoding accuracy that collapses during live BCI closed-loop operation.",
+   "technical_depth": "In time-series neural data, standard random shuffling fails because adjacent data points share high temporal correlation. If you randomly mix samples into train and test sets, the model cheats by using information from neighboring milliseconds. Therefore, BCI data splits must respect chronological boundaries or entire experimental blocks to prevent data leakage.",
    "misconceptions": [
-    {
-     "misconception": "It is safe to normalize the entire dataset at once to save time.",
-     "correction": "Normalizing the whole dataset leaks future information into the training phase, invalidating your test results."
-    },
-    {
-     "misconception": "All BCI decoding algorithms require strict feature scaling.",
-     "correction": "While tree-based models are relatively immune to scale differences, distance-based and gradient-based models are extremely sensitive to unscaled inputs."
-    }
+    "Misconception: More training data is all you need for a good BCI score. Reality: If your test set leaks into your training set, even a massive dataset will yield falsely inflated performance metrics.",
+    "Misconception: You can tune your model's settings using the test set. Reality: The test set must remain completely untouched until the final evaluation to avoid biased results."
    ],
    "knowledge_check": [
     {
-     "question": "What is the primary danger of data leakage in BCI model development?",
-     "answer": "It creates overly optimistic performance metrics during offline testing that fail to replicate during live use."
+     "question": "What is the primary purpose of the test set in BCI evaluation?",
+     "answer": "To provide a final, unbiased assessment of how well the model generalizes to completely unseen data."
     },
     {
-     "question": "When should you compute scaling statistics like the mean and standard deviation?",
-     "answer": "Exclusively on the training dataset portion, before applying them to the testing set."
+     "question": "Why can't we randomly shuffle BCI time-series data across train and test splits?",
+     "answer": "Because adjacent time points are extremely similar, leading to data leakage where the model memorizes neighboring states rather than learning general patterns."
     },
     {
-     "question": "Why do raw neural features often require scaling?",
-     "answer": "Different features can have vastly different numerical units and ranges, which can bias machine learning decoders."
+     "question": "When should you look at or evaluate your final test set?",
+     "answer": "Only once, after all model training and hyperparameter tuning are completely finished."
     }
    ],
-   "exercise": "Take a small set of mock EEG power values and amplitude values. Split them into a training group and a test group. Calculate the average and standard deviation of the training group only, use those values to transform both groups, and note why you must keep the test group separate during the calculation step.",
-   "summary": "Feature scaling puts disparate neural metrics onto a fair mathematical playing field, while strict adherence to separation prevents data leakage and ensures your BCI performance scores are honest and reproducible.",
-   "next_lesson": "Introduction to cross-validation strategies for time-series and BCI data",
+   "exercise": "Take a hypothetical recording of 10 experimental trials of motor imagery. Sketch out how you would divide these trials into training, validation, and test groups by grouping entire trials together rather than splitting individual trials down the middle.",
+   "summary": "Dividing BCI data into separate training, validation, and test sets prevents machine learning models from cheating. By keeping test data completely hidden during training and tuning, engineers get an honest measure of how well their BCI system will perform in real life.",
+   "next_lesson": "Introduction to overfitting and underfitting in BCI decoders",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Explain PID control with a practical robotics example",
-   "explanation": "PID stands for Proportional, Integral, and Derivative control. It is a mathematical method used in microcontrollers to make physical systems, like a robot motor, reach and maintain a desired target without overshooting. Proportional corrects for the current error, Integral corrects for past accumulated errors, and Derivative predicts future errors based on the rate of change.",
-   "practical_example": "Imagine an automated delivery robot in an Indian warehouse trying to follow a straight line using a motor encoder. If you only use Proportional control, the motor might slow down as it approaches the target speed, but never quite reach it due to friction, or it might constantly overshoot and wiggle side to side. Adding Integral helps eliminate that tiny remaining steady-state error, while Derivative acts like a shock absorber to prevent jerky overshooting.",
-   "exercise": "Describe how you would adjust a single motor's speed loop if the robot's wheel constantly overshoots the target RPM before settling down. Which of the three PID terms is likely set too high?",
-   "model_answer": "If the wheel constantly overshoots the target RPM, the Proportional (P) term or the Derivative (D) term might be misconfigured, but excessive overshooting specifically points to an overly aggressive Proportional term amplifying the current error too much.",
-   "why_it_works": "Breaking down PID into its three distinct behaviors helps engineering students visualize how software logic directly influences physical hardware motion, a common requirement in robotics and embedded systems internship interviews.",
-   "improvement_tip": "When answering interview questions about control systems, avoid quoting textbook definitions. Instead, explain the real-world physical symptom each term fixes, such as using the D-term to stop oscillations.",
+   "topic": "Explain an encoder and calculate wheel speed",
+   "explanation": "An encoder is a small sensor attached to a motor that translates physical rotation into electrical pulses. As the motor shaft turns, the encoder generates a set number of pulses per revolution. By counting these pulses over a fixed amount of time using a microcontroller timer, you can figure out how fast your robot wheel is spinning.",
+   "practical_example": "Imagine building a small delivery robot for an engineering college fest in India. Your DC motor has a quadrature encoder rated at 360 pulses per revolution. If your microcontroller counts 1800 pulses in exactly one second, the wheel completes 5 full rotations in that second, meaning its speed is 5 rotations per second.",
+   "exercise": "Write down the formula to find the wheel speed in rotations per minute (RPM) if your microcontroller counts 720 pulses in 2 seconds, assuming the encoder gives 360 pulses per full rotation.",
+   "model_answer": "First, find rotations per second by dividing total pulses by encoder pulses per revolution (720 / 360 = 2 rotations in 2 seconds). Next, divide by the time in seconds to get rotations per second (2 / 2 = 1 rotation per second). Finally, multiply by 60 to get RPM (1 * 60 = 60 RPM).",
+   "why_it_works": "This method converts raw hardware interrupts or timer pulse counts into meaningful physical units, giving your robot precise feedback on its movement.",
+   "improvement_tip": "When writing your embedded code, use hardware timer interrupts to count pulses instead of a software delay loop, ensuring you never miss a pulse while the CPU is busy.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Audit a profile for unsupported claims and unclear wording",
-   "explanation": "Recruiters and engineers reading your LinkedIn profile want clear proof of what you actually built, not vague buzzwords. In robotics, BCI, and embedded systems, phrases like 'expert in AI robotics' or 'built advanced systems' raise red flags if there are no specifics. This session shows you how to spot and fix vague, exaggerated, or confusing claims on your profile using concrete facts from your university labs or personal projects.",
-   "practical_example": "Vague wording: 'Worked on brain-computer interface algorithms and smart robots.' Clear, honest wording: 'Wrote a C script in university lab to filter 8-channel EEG alpha waves using an Arduino Uno and custom analog filters.'",
-   "exercise": "Review one project description on your LinkedIn profile. Find any broad claims (like 'expert', 'mastered', or 'built advanced systems') or vague terms, and replace them with the exact hardware tool, programming language, or physical task you performed.",
-   "model_answer": "Before: 'Developed a high-speed obstacle-avoidance robot.' After: 'Programmed an ATmega328P microcontroller in Embedded C to process ultrasonic sensor distance data and control two DC motors for obstacle avoidance during the university robotics lab final exam.'",
-   "why_it_works": "It replaces boastful, unsupported adjectives with verifiable engineering details. Hiring managers in India value honesty and want to see precisely which tools and microcontrollers you have hands-on experience with.",
-   "improvement_tip": "If you cannot back up a statement with a specific tool, file in your repository, or lab report, tone it down to describe what you attempted or learned instead.",
+   "topic": "Write an honest headline focused on embedded systems and robotics",
+   "explanation": "Your LinkedIn headline sits right under your name and is one of the first things recruiters see. Many engineering students use generic titles like 'Aspiring Engineer' or pile on unproven buzzwords. An honest, effective headline for an internship seeker should clearly state your current status, your core technical focus areas, and what you are building or learning right now without making false claims.",
+   "practical_example": "Instead of writing 'AI Robotics Expert and Guru', a beginner student can write: 'Electronics & Communication Engineering Student | Building Embedded Systems & Arduino/ESP32 Projects | Seeking Summer 2027 Robotics Internships'",
+   "exercise": "Draft your own 1-line LinkedIn headline by combining three true elements: your current degree and year, your main hands-on tool or interest (such as STM32, ROS, or EEG sensors), and the specific type of internship role you are actively targeting in India.",
+   "model_answer": "B.Tech ECE Student | Hands-on with STM32 & Embedded C | Interested in IoT and Robotics Internships",
+   "why_it_works": "It tells the recruiter instantly who you are, what hardware you actually work with, and what opportunity you want, all while remaining completely truthful to your student status.",
+   "improvement_tip": "Avoid words like 'expert', 'master', or 'genius' if you are still studying. Let your linked project descriptions and GitHub links prove your actual skill level instead.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish",
-   "focus": "Research design and method",
-   "explanation": "The study outlines a plan to use lab-grown human brain cell clusters, known as brain organoids, combined with advanced engineering tools. Researchers use special systems to keep the cells healthy, microscopic sensors to read electrical signals from the cells, and computer links to test if the organoids can learn and process information.",
-   "limits": "The text describes a framework and tools still in development rather than a completed experiment with final data.",
-   "check": {
-    "confidence": "high"
-   },
+   "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish (Smirnova 2023)",
+   "focus": "Results and figures regarding brain organoids for biological computing and learning.",
+   "explanation": "The paper discusses laboratory-grown brain cell structures that can support learning and memory functions. By using special 3D growth methods and microfluidic systems, researchers can keep these organoids healthy and study their electrical signals using advanced microelectrode arrays. The goal is to connect these living tissues to computers and sensors for biological computing.",
+   "limits": "The abstract does not provide specific numerical data, graphs, or detailed experimental results, focusing instead on the proposed framework and technological goals.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.3389/fsci.2023.1017235",
    "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "bci_paper": {
    "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
-   "focus": "Research design and method",
-   "explanation": "The study tested a speech brain-computer interface by recording brain cell signals using tiny sensors placed inside the brain. A person with paralysis due to ALS tried to speak, and computer algorithms translated those brain signals into text on a screen.",
-   "limits": "The abstract mentions testing with a single participant, but does not provide full details on every step of the experimental setup.",
-   "check": "high",
+   "focus": "Results and figures from brain-computer interface tests translating attempted speech into text.",
+   "explanation": "The study's participant achieved a low word error rate of 9.1 percent on a 50-word vocabulary and 23.8 percent on a large 125,000-word vocabulary. The system translated attempted speech at a speed of 62 words per minute, which is faster than previous records and closer to natural conversation.",
+   "limits": "Details are limited to the provided abstract text.",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/s41586-023-06377-x",
    "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "github": {
-   "day": "3 of 3",
-   "phase": "Run it in simulation and engineering judgement",
-   "project_name": "ros-navigation/navigation2",
-   "description": "Nav2 is a ROS 2 navigation framework and system written in C++ that helps robots move safely and autonomously.",
-   "simulation_and_testing_insights": "The project uses automated build tracking and CI workflows to test different ROS distributions like Humble, Jazzy, and Lyrical on Ubuntu, ensuring code stability before physical deployment.",
-   "engineering_judgement": "Using simulation is a critical safety and development step in robotics. It allows developers to test path planning, obstacle avoidance, and mapping in a virtual environment before risking expensive hardware in the real world.",
-   "challenge": "Find the section in the documentation that covers 'Getting Started' and outline the initial steps needed to spin up a basic robot simulation.",
-   "knowledge_check": "Why is testing software in a simulation important for robotics projects like Nav2?",
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "ROBOTIS-GIT/turtlebot3",
+   "description": "A collection of software packages built for the TurtleBot3 robot using the Robot Operating System (ROS), primarily written in C++.",
+   "status": {
+    "is_archived": false,
+    "last_updated": "2026-11-12T02:15:00Z",
+    "license": "Apache-2.0"
+   },
+   "key_components": [
+    "Core turtlebot3 software packages",
+    "Simulation tools",
+    "Machine learning and racing add-ons",
+    "Hardware drivers for sensors and controllers"
+   ],
+   "learning_resources": [
+    "Official manuals for hardware and software",
+    "YouTube channels and playlists for video guides",
+    "Community spaces like Discord and the ROS discourse"
+   ],
+   "challenge": "Browse through the list of related open-source projects in the repository details and identify at least three simulation or driver-related packages mentioned.",
+   "knowledge_check": "What primary programming language is indicated for this repository, and is the project currently archived?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
-    "full_name": "ros-navigation/navigation2",
-    "html_url": "https://github.com/ros-navigation/navigation2",
-    "description": "ROS 2 Navigation Framework and System",
-    "pushed_at": "2026-11-11T17:44:39Z",
+    "full_name": "ROBOTIS-GIT/turtlebot3",
+    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+    "description": "ROS packages for Turtlebot3",
+    "pushed_at": "2026-11-12T02:15:00Z",
     "language": "C++",
     "archived": false,
-    "license": "NOASSERTION"
+    "license": "Apache-2.0"
    }
   },
   "news": {
@@ -212,22 +216,67 @@
   "jobs": {
    "items": [
     {
-     "title": "AI Automation Engineer",
+     "title": "Robot Learning Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-11",
+     "location": "M\u00fcnchen, Germany",
+     "published": "2026-11-12",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/ai-automation-engineer-paris-496766",
-     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+     "url": "https://www.arbeitnow.com/jobs/companies/rohlik/robot-learning-engineer-munich-46345",
+     "company": "Rohlik"
     },
     {
-     "title": "Payload Systems Test Engineer",
+     "title": "Leitung Automation 80\u2013100 % (m/w/d) (MW)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Lausanne",
-     "published": "2026-11-11",
+     "location": "Aarau",
+     "published": "2026-11-12",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/enova-consulting/payload-systems-test-engineer-lausanne-103679",
-     "company": "Enova Consulting"
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/leitung-automation-80-100-mw-aarau-445356",
+     "company": "Excellent Go4"
+    },
+    {
+     "title": "Projektleiter Automation / SPS & HMI (m/w/d), 100% (MW)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "St. Gallen",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/projektleiter-automation-sps-hmi-100-mw-st-gallen-415254",
+     "company": "Excellent Go4"
+    },
+    {
+     "title": "SPS-Programmierer Automation & Anlagenbau (m/w/d) Nr. MW",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Oberb\u00fcren",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/sps-programmierer-automation-anlagenbau-nr-mw-oberburen-484166",
+     "company": "Excellent Go4"
+    },
+    {
+     "title": "Automation Engineer / Elektrotechniker Anlagenbau (100%) Nr. MW",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Altdorf",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/automation-engineer-elektrotechniker-anlagenbau-100-nr-mw-altdorf-425867",
+     "company": "Excellent Go4"
+    },
+    {
+     "title": "Team Lead Electrical Engineering (gn)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Wohlen",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/twojobs/team-lead-electrical-engineering-gn-wohlen-190258",
+     "company": "two.jobs"
+    },
+    {
+     "title": "Model-Based Systems Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Delft",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/quantware/model-based-systems-engineer-delft-440279",
+     "company": "Quantware"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",

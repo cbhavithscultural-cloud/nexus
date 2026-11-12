@@ -1,0 +1,286 @@
+{
+ "v": 2,
+ "date": "2026-11-13",
+ "generated_at": "2026-11-13T02:49:38.595979+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 857); gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 719); gemini-3.1-flash-lite:Extra data: line 11 column 4 (char 722); gemini-2.5-flash-lite:404 {   \"error\": {     \"code\": 404, ",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand the current physical and biological limits of brain organoids, focusing on why they resemble early embryonic stages rather than mature adult tissue, why they vary between batches, and what vital biological systems they lack.",
+   "why_it_matters": "Before we can reliably use organoids for advanced biocomputing or complex disease modeling, we must understand their physical shortcomings. Knowing what is missing prevents us from overestimating their current capabilities.",
+   "prerequisites": [
+    "Basic knowledge of how stem cells grow into early brain structures",
+    "Familiarity with how living brain tissue requires oxygen and nutrients to survive"
+   ],
+   "simple_explanation": "Brain organoids are incredible scientific achievements, but they are not fully functioning human brains. Think of them like a rough model home built out of blocks: it has rooms and walls, but it lacks plumbing, electricity, and the finishing touches of an inhabited house. Similarly, lab-grown brain tissue often stops growing at an immature embryonic stage, varies a lot in shape from one attempt to the next, and lacks a blood supply or immune system.",
+   "step_by_step": [
+    "Maturity gap: Organoids develop along an internal biological clock that resembles an early embryonic or fetal stage, meaning their cells and synapses do not fully mature into adult-like configurations.",
+    "Variability challenge: Because organoids grow largely on their own from clumped stem cells, no two organoids look or wire up exactly alike. This makes it difficult to standardize experiments.",
+    "Missing systems: A real human brain relies on a vast network of blood vessels to deliver oxygen and remove waste, plus specialized immune cells to protect it. Organoids lack these integrated support networks.",
+    "The core consequence: Without blood vessels, oxygen can only diffuse a short distance into the tissue, causing cells in the very center of large organoids to run out of nutrients and die."
+   ],
+   "technical_depth": "From a bioengineering standpoint, diffusion limits are a primary bottleneck. Without a vascular tree (capillaries, arteries, and veins) integrated into the 3D tissue, passive diffusion restricts viable tissue thickness to roughly a few hundred micrometers. Furthermore, transcriptomic analyses show that organoid cells express fetal-stage genes rather than adult isoforms, reflecting an incomplete developmental program in vitro.",
+   "misconceptions": [
+    "Misconception: Organoids can think, feel, or experience consciousness because they contain brain cells.\nFact: Organoids lack the complex, interconnected sensory systems, global networks, and mature architecture required for conscious experience.",
+    "Misconception: Every organoid grown from the same batch is identical.\nFact: Self-organization leads to high structural variability, meaning every single organoid forms a slightly different internal layout."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What developmental stage do most current brain organoids closely resemble?",
+     "answer": "Early embryonic or fetal stages."
+    },
+    {
+     "question": "Why do large organoids often develop dead cells in their centers?",
+     "answer": "They lack a blood vessel network, meaning oxygen and nutrients can only reach the outer layers via simple diffusion."
+    },
+    {
+     "question": "What does 'variability' mean in the context of organoid growth?",
+     "answer": "It means different organoids grow into distinct shapes and internal wiring patterns, making them hard to standardize."
+    }
+   ],
+   "exercise": "Imagine you are designing a growth plan for a new batch of organoids. List two engineering hurdles you would face due to missing systems (such as the lack of blood vessels or immune cells) and write down a brief idea for how scientists might try to solve one of them in the lab.",
+   "summary": "Brain organoids face three major hurdles: they stay stuck at an immature developmental stage, they vary wildly in their internal structure between experiments, and they lack crucial supporting systems like blood vessels and immune cells.",
+   "next_lesson": "Day 14: How we try to supply oxygen and nutrients using artificial blood vessel channels.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how to partition brain-computer interface data into training, validation, and test sets to properly evaluate machine learning decoders without cheating.",
+   "why_it_matters": "Without splitting data correctly, a BCI algorithm might memorize past recording sessions instead of learning how to decode new thoughts. Proper data partitioning ensures your system actually works when a new user tries it.",
+   "prerequisites": [
+    "Basic familiarity with machine learning models that learn patterns from examples",
+    "Understanding that brain data varies greatly from person to person and session to session"
+   ],
+   "simple_explanation": "Imagine studying for a major test. If your teacher gives you the exact answer key to study and then tests you on those same questions, you will get an A, but you haven't actually learned anything. In BCI, we split our data into three piles: a training pile to teach the model, a validation pile to tune its settings, and a secret test pile that the model never sees until the very end to check its real-world skill.",
+   "step_by_step": [
+    "Gather your recorded brain signals and associated user intent labels from a BCI session.",
+    "Set aside a large portion (around 60 to 70 percent) of your data as the training set, which the computer uses to build its initial decoding rules.",
+    "Reserve a smaller portion (around 15 to 20 percent) as the validation set, used to tweak settings and compare different model designs during development.",
+    "Lock away the remaining portion (15 to 20 percent) as the final test set, touching it only once at the very end to measure how well the final model performs on unseen data."
+   ],
+   "technical_depth": "In time-series neural data, standard random shuffling fails because adjacent data points share high temporal correlation. If you randomly mix samples into train and test sets, the model cheats by using information from neighboring milliseconds. Therefore, BCI data splits must respect chronological boundaries or entire experimental blocks to prevent data leakage.",
+   "misconceptions": [
+    "Misconception: More training data is all you need for a good BCI score. Reality: If your test set leaks into your training set, even a massive dataset will yield falsely inflated performance metrics.",
+    "Misconception: You can tune your model's settings using the test set. Reality: The test set must remain completely untouched until the final evaluation to avoid biased results."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the primary purpose of the test set in BCI evaluation?",
+     "answer": "To provide a final, unbiased assessment of how well the model generalizes to completely unseen data."
+    },
+    {
+     "question": "Why can't we randomly shuffle BCI time-series data across train and test splits?",
+     "answer": "Because adjacent time points are extremely similar, leading to data leakage where the model memorizes neighboring states rather than learning general patterns."
+    },
+    {
+     "question": "When should you look at or evaluate your final test set?",
+     "answer": "Only once, after all model training and hyperparameter tuning are completely finished."
+    }
+   ],
+   "exercise": "Take a hypothetical recording of 10 experimental trials of motor imagery. Sketch out how you would divide these trials into training, validation, and test groups by grouping entire trials together rather than splitting individual trials down the middle.",
+   "summary": "Dividing BCI data into separate training, validation, and test sets prevents machine learning models from cheating. By keeping test data completely hidden during training and tuning, engineers get an honest measure of how well their BCI system will perform in real life.",
+   "next_lesson": "Introduction to overfitting and underfitting in BCI decoders",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Explain an encoder and calculate wheel speed",
+   "explanation": "An encoder is a small sensor attached to a motor that translates physical rotation into electrical pulses. As the motor shaft turns, the encoder generates a set number of pulses per revolution. By counting these pulses over a fixed amount of time using a microcontroller timer, you can figure out how fast your robot wheel is spinning.",
+   "practical_example": "Imagine building a small delivery robot for an engineering college fest in India. Your DC motor has a quadrature encoder rated at 360 pulses per revolution. If your microcontroller counts 1800 pulses in exactly one second, the wheel completes 5 full rotations in that second, meaning its speed is 5 rotations per second.",
+   "exercise": "Write down the formula to find the wheel speed in rotations per minute (RPM) if your microcontroller counts 720 pulses in 2 seconds, assuming the encoder gives 360 pulses per full rotation.",
+   "model_answer": "First, find rotations per second by dividing total pulses by encoder pulses per revolution (720 / 360 = 2 rotations in 2 seconds). Next, divide by the time in seconds to get rotations per second (2 / 2 = 1 rotation per second). Finally, multiply by 60 to get RPM (1 * 60 = 60 RPM).",
+   "why_it_works": "This method converts raw hardware interrupts or timer pulse counts into meaningful physical units, giving your robot precise feedback on its movement.",
+   "improvement_tip": "When writing your embedded code, use hardware timer interrupts to count pulses instead of a software delay loop, ensuring you never miss a pulse while the CPU is busy.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Write an honest headline focused on embedded systems and robotics",
+   "explanation": "Your LinkedIn headline sits right under your name and is one of the first things recruiters see. Many engineering students use generic titles like 'Aspiring Engineer' or pile on unproven buzzwords. An honest, effective headline for an internship seeker should clearly state your current status, your core technical focus areas, and what you are building or learning right now without making false claims.",
+   "practical_example": "Instead of writing 'AI Robotics Expert and Guru', a beginner student can write: 'Electronics & Communication Engineering Student | Building Embedded Systems & Arduino/ESP32 Projects | Seeking Summer 2027 Robotics Internships'",
+   "exercise": "Draft your own 1-line LinkedIn headline by combining three true elements: your current degree and year, your main hands-on tool or interest (such as STM32, ROS, or EEG sensors), and the specific type of internship role you are actively targeting in India.",
+   "model_answer": "B.Tech ECE Student | Hands-on with STM32 & Embedded C | Interested in IoT and Robotics Internships",
+   "why_it_works": "It tells the recruiter instantly who you are, what hardware you actually work with, and what opportunity you want, all while remaining completely truthful to your student status.",
+   "improvement_tip": "Avoid words like 'expert', 'master', or 'genius' if you are still studying. Let your linked project descriptions and GitHub links prove your actual skill level instead.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish (Smirnova 2023)",
+   "focus": "Results and figures regarding brain organoids for biological computing and learning.",
+   "explanation": "The paper discusses laboratory-grown brain cell structures that can support learning and memory functions. By using special 3D growth methods and microfluidic systems, researchers can keep these organoids healthy and study their electrical signals using advanced microelectrode arrays. The goal is to connect these living tissues to computers and sensors for biological computing.",
+   "limits": "The abstract does not provide specific numerical data, graphs, or detailed experimental results, focusing instead on the proposed framework and technological goals.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.3389/fsci.2023.1017235",
+   "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
+   "day": "3 of 5",
+   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
+   "focus": "Results and figures from brain-computer interface tests translating attempted speech into text.",
+   "explanation": "The study's participant achieved a low word error rate of 9.1 percent on a 50-word vocabulary and 23.8 percent on a large 125,000-word vocabulary. The system translated attempted speech at a speed of 62 words per minute, which is faster than previous records and closer to natural conversation.",
+   "limits": "Details are limited to the provided abstract text.",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/s41586-023-06377-x",
+   "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
+   "day": "3 of 5",
+   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
+  },
+  "github": {
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "ROBOTIS-GIT/turtlebot3",
+   "description": "A collection of software packages built for the TurtleBot3 robot using the Robot Operating System (ROS), primarily written in C++.",
+   "status": {
+    "is_archived": false,
+    "last_updated": "2026-11-12T02:15:00Z",
+    "license": "Apache-2.0"
+   },
+   "key_components": [
+    "Core turtlebot3 software packages",
+    "Simulation tools",
+    "Machine learning and racing add-ons",
+    "Hardware drivers for sensors and controllers"
+   ],
+   "learning_resources": [
+    "Official manuals for hardware and software",
+    "YouTube channels and playlists for video guides",
+    "Community spaces like Discord and the ROS discourse"
+   ],
+   "challenge": "Browse through the list of related open-source projects in the repository details and identify at least three simulation or driver-related packages mentioned.",
+   "knowledge_check": "What primary programming language is indicated for this repository, and is the project currently archived?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ROBOTIS-GIT/turtlebot3",
+    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+    "description": "ROS packages for Turtlebot3",
+    "pushed_at": "2026-11-12T02:15:00Z",
+    "language": "C++",
+    "archived": false,
+    "license": "Apache-2.0"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Open source",
+     "url": "https://www.therobotreport.com/can-ai-agents-program-industrial-robots-without-training-data-berkeley-says-yes/",
+     "what": "Researchers from UC Berkeley and NVIDIA released open-source software tools that allow AI agents to write, test, and improve programs for industrial robots.",
+     "who": "UC Berkeley and NVIDIA.",
+     "how": "The agents generate code that can be run in a simulated environment to fix errors before being deployed to physical machines. Background (general knowledge): AI agents are automated software programs capable of performing complex tasks by making decisions without direct human input for every step.",
+     "why": "To enable the programming of robots without needing pre-existing training datasets.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Can AI agents program industrial robots without training data? Berkeley says yes",
+     "published": "2026-11-11",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/serve-robotics-opens-robot-delivery-network-for-others-to-build-on/",
+     "what": "Serve Robotics is providing an API that lets other companies build their own delivery applications on its existing network of over 2,000 delivery robots.",
+     "who": "Serve Robotics.",
+     "how": "By using the company's application programming interface (API) to access the robot fleet. Background (general knowledge): An API acts as a bridge that allows different software systems to talk to each other, enabling third parties to use a platform's functionality.",
+     "why": "To allow third-party developers to create new services on established infrastructure.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Serve Robotics opens robot delivery network for others to build on",
+     "published": "2026-11-11",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Research",
+     "url": "https://robohub.org/ai100-report-released-embodied-ai-highlighted-as-grand-challenge/",
+     "what": "The AI100 project released a report identifying 'embodied AI'\u2014intelligence connected to a physical body\u2014as a major long-term challenge for the field.",
+     "who": "The One Hundred Year Study on Artificial Intelligence (AI100).",
+     "how": "The study conducts longitudinal research to track the advancement and societal effects of AI technology over a century. Background (general knowledge): Embodied AI refers to artificial intelligence systems that interact with the physical world through a robotic body, such as sensing and moving.",
+     "why": "To assess the current state and progress of artificial intelligence development.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "AI100 report released: embodied AI highlighted as grand challenge",
+     "published": "2026-11-11",
+     "source": "Robohub"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Robot Learning Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "M\u00fcnchen, Germany",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/rohlik/robot-learning-engineer-munich-46345",
+     "company": "Rohlik"
+    },
+    {
+     "title": "Leitung Automation 80\u2013100 % (m/w/d) (MW)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Aarau",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/leitung-automation-80-100-mw-aarau-445356",
+     "company": "Excellent Go4"
+    },
+    {
+     "title": "Projektleiter Automation / SPS & HMI (m/w/d), 100% (MW)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "St. Gallen",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/projektleiter-automation-sps-hmi-100-mw-st-gallen-415254",
+     "company": "Excellent Go4"
+    },
+    {
+     "title": "SPS-Programmierer Automation & Anlagenbau (m/w/d) Nr. MW",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Oberb\u00fcren",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/sps-programmierer-automation-anlagenbau-nr-mw-oberburen-484166",
+     "company": "Excellent Go4"
+    },
+    {
+     "title": "Automation Engineer / Elektrotechniker Anlagenbau (100%) Nr. MW",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Altdorf",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/automation-engineer-elektrotechniker-anlagenbau-100-nr-mw-altdorf-425867",
+     "company": "Excellent Go4"
+    },
+    {
+     "title": "Team Lead Electrical Engineering (gn)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Wohlen",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/twojobs/team-lead-electrical-engineering-gn-wohlen-190258",
+     "company": "two.jobs"
+    },
+    {
+     "title": "Model-Based Systems Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Delft",
+     "published": "2026-11-12",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/quantware/model-based-systems-engineer-delft-440279",
+     "company": "Quantware"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
