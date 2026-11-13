@@ -1,20 +1,20 @@
 {
- "oi": 13,
- "bci": 13,
+ "oi": 14,
+ "bci": 14,
  "po": [
   2,
-  4
+  5
  ],
  "pb": [
   2,
-  4
+  5
  ],
  "gh": [
   4,
-  2
+  3
  ],
- "ip": 13,
- "li": 13,
+ "ip": 14,
+ "li": 14,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",

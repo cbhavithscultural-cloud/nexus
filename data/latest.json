@@ -1,161 +1,157 @@
 {
  "v": 2,
- "date": "2026-11-13",
- "generated_at": "2026-11-13T04:36:18.830285+05:30",
+ "date": "2026-11-14",
+ "generated_at": "2026-11-14T02:50:18.092879+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "failed (kept previous): gemini-flash-lite-latest:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high demand. Sp; gemini-flash-lite-latest:Extra data: line 10 column 4 (char 721); gemini-3.5-flash-lite:503 {   \"error\": {     \"code\": ",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 987); gemini-3.5-flash-lite:Extra data: line 11 column 4 (char 988); gemini-3.1-flash-lite:Extra data: line 10 column 4 (char 746); gemini-2.5-flash-lite:404 {   \"error\": {     \"code\": 404, ",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand the current physical and biological limits of brain organoids, focusing on why they resemble early embryonic stages rather than mature adult tissue, why they vary between batches, and what vital biological systems they lack.",
-   "why_it_matters": "Before we can reliably use organoids for advanced biocomputing or complex disease modeling, we must understand their physical shortcomings. Knowing what is missing prevents us from overestimating their current capabilities.",
+   "objective": "Understand how tiny electronic grids called electrode arrays capture the electrical chatter of brain organoids from the outside.",
+   "why_it_matters": "To use brain organoids for biological computing or disease study, we need a way to listen to their thoughts. Electrode arrays act as the vital communication bridge, turning silent living tissue into readable data streams.",
    "prerequisites": [
-    "Basic knowledge of how stem cells grow into early brain structures",
-    "Familiarity with how living brain tissue requires oxygen and nutrients to survive"
+    "Neurons use electrical spikes called action potentials to communicate.",
+    "Brain cells sit in fluid and generate tiny voltage changes in their surrounding environment."
    ],
-   "simple_explanation": "Brain organoids are incredible scientific achievements, but they are not fully functioning human brains. Think of them like a rough model home built out of blocks: it has rooms and walls, but it lacks plumbing, electricity, and the finishing touches of an inhabited house. Similarly, lab-grown brain tissue often stops growing at an immature embryonic stage, varies a lot in shape from one attempt to the next, and lacks a blood supply or immune system.",
+   "simple_explanation": "Imagine placing a tiny listening device right next to a chatting group of people. An electrode array is essentially a small glass or silicon chip covered in microscopic metal dots. When neurons inside an organoid fire electrical signals, they cause tiny ripples of voltage in the surrounding fluid. These metal dots pick up those ripples, allowing computers to record the brain cells talking.",
    "step_by_step": [
-    "Maturity gap: Organoids develop along an internal biological clock that resembles an early embryonic or fetal stage, meaning their cells and synapses do not fully mature into adult-like configurations.",
-    "Variability challenge: Because organoids grow largely on their own from clumped stem cells, no two organoids look or wire up exactly alike. This makes it difficult to standardize experiments.",
-    "Missing systems: A real human brain relies on a vast network of blood vessels to deliver oxygen and remove waste, plus specialized immune cells to protect it. Organoids lack these integrated support networks.",
-    "The core consequence: Without blood vessels, oxygen can only diffuse a short distance into the tissue, causing cells in the very center of large organoids to run out of nutrients and die."
+    "Grow a healthy brain organoid on top of a flat glass dish that has tiny metal points embedded in the bottom.",
+    "Ensure the bottom of the organoid makes close physical contact with the metal sensor dots.",
+    "As neurons fire electrical spikes internally, ions move, creating an extracellular voltage shift right outside the cell wall.",
+    "The metal electrode senses this microscopic voltage change and sends it as a tiny electrical pulse to an external amplifier.",
+    "Computers translate these amplified voltage bumps into digital spike waveforms that researchers can analyze."
    ],
-   "technical_depth": "From a bioengineering standpoint, diffusion limits are a primary bottleneck. Without a vascular tree (capillaries, arteries, and veins) integrated into the 3D tissue, passive diffusion restricts viable tissue thickness to roughly a few hundred micrometers. Furthermore, transcriptomic analyses show that organoid cells express fetal-stage genes rather than adult isoforms, reflecting an incomplete developmental program in vitro.",
+   "technical_depth": "Extracellular recording measures the voltage field potential generated by ionic currents flowing across nearby cell membranes, rather than recording the internal voltage of a single cell. Because the metal sensor is outside the cell, it typically detects fast transient spikes from neurons sitting directly on top of it, alongside slower local field potentials representing the combined activity of a larger surrounding tissue volume. Signal-to-noise ratio is a major engineering challenge, requiring high-density microfabrication and low-noise amplifiers to isolate weak biological signals from thermal noise.",
    "misconceptions": [
-    "Misconception: Organoids can think, feel, or experience consciousness because they contain brain cells.\nFact: Organoids lack the complex, interconnected sensory systems, global networks, and mature architecture required for conscious experience.",
-    "Misconception: Every organoid grown from the same batch is identical.\nFact: Self-organization leads to high structural variability, meaning every single organoid forms a slightly different internal layout."
+    "Misconception: The tiny metal points actually pierce inside every single living neuron. Reality: Extracellular electrodes sit outside the cells, acting like microscopic eavesdroppers rather than internal prober needles.",
+    "Misconception: Each electrode records only one specific neuron. Reality: A single electrode often picks up mixed signals from multiple neighboring cells, requiring software to separate them."
    ],
    "knowledge_check": [
     {
-     "question": "What developmental stage do most current brain organoids closely resemble?",
-     "answer": "Early embryonic or fetal stages."
+     "question": "What is the primary function of an electrode array in organoid research?",
+     "answer": "To record and translate the electrical activity produced by organoid cells into readable computer data."
     },
     {
-     "question": "Why do large organoids often develop dead cells in their centers?",
-     "answer": "They lack a blood vessel network, meaning oxygen and nutrients can only reach the outer layers via simple diffusion."
+     "question": "Does extracellular recording measure voltage inside or outside the cell?",
+     "answer": "Outside the cell, in the surrounding fluid environment."
     },
     {
-     "question": "What does 'variability' mean in the context of organoid growth?",
-     "answer": "It means different organoids grow into distinct shapes and internal wiring patterns, making them hard to standardize."
+     "question": "Why can a single electrode sometimes pick up signals from more than one neuron?",
+     "answer": "Because it senses the collective electrical field in its immediate neighborhood, which can include overlapping signals from several nearby active cells."
     }
    ],
-   "exercise": "Imagine you are designing a growth plan for a new batch of organoids. List two engineering hurdles you would face due to missing systems (such as the lack of blood vessels or immune cells) and write down a brief idea for how scientists might try to solve one of them in the lab.",
-   "summary": "Brain organoids face three major hurdles: they stay stuck at an immature developmental stage, they vary wildly in their internal structure between experiments, and they lack crucial supporting systems like blood vessels and immune cells.",
-   "next_lesson": "Day 14: How we try to supply oxygen and nutrients using artificial blood vessel channels.",
+   "exercise": "Draw a simple diagram showing a round organoid resting on a flat surface with tiny dots at the base. Label the neuron inside, the extracellular fluid space, the electrode dot, and the wire leading to a computer screen showing wave spikes.",
+   "summary": "Electrode arrays use tiny external sensors to detect microscopic voltage shifts in the fluid surrounding active organoid neurons, translating biological signals into measurable data without piercing the cells.",
+   "next_lesson": "Day 15: How we analyze recorded electrical data to find patterns.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how to partition brain-computer interface data into training, validation, and test sets to properly evaluate machine learning decoders without cheating.",
-   "why_it_matters": "Without splitting data correctly, a BCI algorithm might memorize past recording sessions instead of learning how to decode new thoughts. Proper data partitioning ensures your system actually works when a new user tries it.",
+   "objective": "Understand how a brain-computer interface translates cleaned neural features into distinct user commands using basic decision boundaries, simple thresholds, and two core machine learning models: Linear Discriminant Analysis and Support Vector Machines.",
+   "why_it_matters": "Once you have cleaned and selected your brain features, your BCI needs a decision-maker. Classification algorithms act as the translation engine, deciding whether a pattern of brain activity represents a left-hand movement, a right-hand movement, or rest.",
    "prerequisites": [
-    "Basic familiarity with machine learning models that learn patterns from examples",
-    "Understanding that brain data varies greatly from person to person and session to session"
+    "Basic familiarity with plotting numbers on a 2D graph (X and Y coordinates).",
+    "An understanding that BCI features are numeric values extracted from brain waves."
    ],
-   "simple_explanation": "Imagine studying for a major test. If your teacher gives you the exact answer key to study and then tests you on those same questions, you will get an A, but you haven't actually learned anything. In BCI, we split our data into three piles: a training pile to teach the model, a validation pile to tune its settings, and a secret test pile that the model never sees until the very end to check its real-world skill.",
+   "simple_explanation": "Imagine sorting apples and oranges by their weight and color on a graph. A classification algorithm draws a line through that graph. Everything on one side of the line is an apple command, and everything on the other side is an orange command. In a BCI, this line separates different mental intentions.",
    "step_by_step": [
-    "Gather your recorded brain signals and associated user intent labels from a BCI session.",
-    "Set aside a large portion (around 60 to 70 percent) of your data as the training set, which the computer uses to build its initial decoding rules.",
-    "Reserve a smaller portion (around 15 to 20 percent) as the validation set, used to tweak settings and compare different model designs during development.",
-    "Lock away the remaining portion (15 to 20 percent) as the final test set, touching it only once at the very end to measure how well the final model performs on unseen data."
+    "Step 1: Collect extracted neural features (like band power values) for two different mental tasks.",
+    "Step 2: Plot these feature values on a coordinate grid, where each dot represents a single trial of brain activity.",
+    "Step 3: Apply a threshold (a single flat cutoff line) if you only have one feature, separating high values from low values.",
+    "Step 4: Use Linear Discriminant Analysis (LDA) to find a straight line or plane that best separates two groups of multi-feature data while keeping the groups as compact as possible.",
+    "Step 5: Use a Support Vector Machine (SVM) to find a boundary line that maximizes the safety margin between the closest data points of each group."
    ],
-   "technical_depth": "In time-series neural data, standard random shuffling fails because adjacent data points share high temporal correlation. If you randomly mix samples into train and test sets, the model cheats by using information from neighboring milliseconds. Therefore, BCI data splits must respect chronological boundaries or entire experimental blocks to prevent data leakage.",
+   "technical_depth": "Thresholding is the simplest form of classification, relying on a single scalar value. LDA assumes that the data for each class follows a Gaussian distribution with shared covariance, calculating a linear projection that maximizes between-class variance relative to within-class variance. SVMs optimize a margin around a hyperplane, focusing strictly on the critical borderline samples known as support vectors, which makes them robust against many types of noise.",
    "misconceptions": [
-    "Misconception: More training data is all you need for a good BCI score. Reality: If your test set leaks into your training set, even a massive dataset will yield falsely inflated performance metrics.",
-    "Misconception: You can tune your model's settings using the test set. Reality: The test set must remain completely untouched until the final evaluation to avoid biased results."
+    {
+     "misconception": "Classification algorithms can read raw thoughts directly.",
+     "correction": "Classifiers only math-match pre-extracted numbers to pre-assigned category labels; they do not understand thoughts."
+    },
+    {
+     "misconception": "More complex models are always better for BCI.",
+     "correction": "Simple linear classifiers like LDA often outperform complex models on small, noisy BCI datasets because they are less prone to overfitting."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What is the primary purpose of the test set in BCI evaluation?",
-     "answer": "To provide a final, unbiased assessment of how well the model generalizes to completely unseen data."
+     "question": "What is the primary job of a BCI classifier?",
+     "answer": "To translate numerical brain features into discrete user commands or intent categories."
     },
     {
-     "question": "Why can't we randomly shuffle BCI time-series data across train and test splits?",
-     "answer": "Because adjacent time points are extremely similar, leading to data leakage where the model memorizes neighboring states rather than learning general patterns."
+     "question": "How does LDA separate two classes of data?",
+     "answer": "By finding a linear boundary that maximizes the distance between the averages of the groups while minimizing the spread within each group."
     },
     {
-     "question": "When should you look at or evaluate your final test set?",
-     "answer": "Only once, after all model training and hyperparameter tuning are completely finished."
+     "question": "What unique priority does an SVM have when drawing its decision boundary?",
+     "answer": "It maximizes the safety margin between the decision line and the closest data points from each class."
     }
    ],
-   "exercise": "Take a hypothetical recording of 10 experimental trials of motor imagery. Sketch out how you would divide these trials into training, validation, and test groups by grouping entire trials together rather than splitting individual trials down the middle.",
-   "summary": "Dividing BCI data into separate training, validation, and test sets prevents machine learning models from cheating. By keeping test data completely hidden during training and tuning, engineers get an honest measure of how well their BCI system will perform in real life.",
-   "next_lesson": "Introduction to overfitting and underfitting in BCI decoders",
+   "exercise": "Take a piece of paper and draw ten dots representing left-hand trials and ten dots representing right-hand trials using two features (like alpha power and beta power). Try to draw a straight line that cleanly separates the two groups, and mark the points that sit closest to your dividing line.",
+   "summary": "BCI classifiers take numerical neural features and draw boundary lines to categorize user intent. Simple thresholds use single cutoffs, LDA finds optimal linear separations based on data distributions, and SVMs maximize safety margins around critical boundary points.",
+   "next_lesson": "Introduction to non-linear classification and kernel methods in BCI",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Explain an encoder and calculate wheel speed",
-   "explanation": "An encoder is a small sensor attached to a motor that translates physical rotation into electrical pulses. As the motor shaft turns, the encoder generates a set number of pulses per revolution. By counting these pulses over a fixed amount of time using a microcontroller timer, you can figure out how fast your robot wheel is spinning.",
-   "practical_example": "Imagine building a small delivery robot for an engineering college fest in India. Your DC motor has a quadrature encoder rated at 360 pulses per revolution. If your microcontroller counts 1800 pulses in exactly one second, the wheel completes 5 full rotations in that second, meaning its speed is 5 rotations per second.",
-   "exercise": "Write down the formula to find the wheel speed in rotations per minute (RPM) if your microcontroller counts 720 pulses in 2 seconds, assuming the encoder gives 360 pulses per full rotation.",
-   "model_answer": "First, find rotations per second by dividing total pulses by encoder pulses per revolution (720 / 360 = 2 rotations in 2 seconds). Next, divide by the time in seconds to get rotations per second (2 / 2 = 1 rotation per second). Finally, multiply by 60 to get RPM (1 * 60 = 60 RPM).",
-   "why_it_works": "This method converts raw hardware interrupts or timer pulse counts into meaningful physical units, giving your robot precise feedback on its movement.",
-   "improvement_tip": "When writing your embedded code, use hardware timer interrupts to count pulses instead of a software delay loop, ensuring you never miss a pulse while the CPU is busy.",
+   "topic": "Describe an IMU and distinguish bias from noise",
+   "explanation": "An Inertial Measurement Unit (IMU) combines accelerometers to measure linear motion and gyroscopes to measure rotation. Sensors are imperfect, so raw readings suffer from two distinct errors. Bias is a constant offset where the sensor reports a non-zero value even when completely still. Noise is random, high-frequency fluctuation bouncing back and forth around the true value due to electrical and thermal factors.",
+   "practical_example": "Imagine a differential-drive delivery robot trying to move straight in an Indian hostel corridor. Even when the robot sits completely stationary on the floor, its gyroscope reports a tiny rotation rate of 0.5 degrees per second (bias). Meanwhile, individual sensor readings jitter up and down by plus or minus 0.2 degrees every millisecond (noise).",
+   "exercise": "Suppose your IMU sits flat on your desk. You log ten consecutive angular velocity readings in degrees per second: 1.1, 1.3, 1.2, 1.2, 1.4, 1.2, 1.3, 1.1, 1.2, 1.2. Calculate the estimated sensor bias assuming the true physical rotation is zero.",
+   "model_answer": "To find the bias, calculate the average of the ten readings: (1.1 + 1.3 + 1.2 + 1.2 + 1.4 + 1.2 + 1.3 + 1.1 + 1.2 + 1.2) / 10 = 1.2 degrees per second. The constant bias is therefore 1.2, while the minor variations around this 1.2 average represent the noise.",
+   "why_it_works": "Averaging static readings filters out the random jitter (noise) and exposes the persistent systematic error (bias), which your microcontroller firmware can then subtract as an offset in subsequent control loops.",
+   "improvement_tip": "When writing your firmware, keep the robot completely still during startup for a few seconds to measure and store the bias automatically before starting navigation.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Write an honest headline focused on embedded systems and robotics",
-   "explanation": "Your LinkedIn headline sits right under your name and is one of the first things recruiters see. Many engineering students use generic titles like 'Aspiring Engineer' or pile on unproven buzzwords. An honest, effective headline for an internship seeker should clearly state your current status, your core technical focus areas, and what you are building or learning right now without making false claims.",
-   "practical_example": "Instead of writing 'AI Robotics Expert and Guru', a beginner student can write: 'Electronics & Communication Engineering Student | Building Embedded Systems & Arduino/ESP32 Projects | Seeking Summer 2027 Robotics Internships'",
-   "exercise": "Draft your own 1-line LinkedIn headline by combining three true elements: your current degree and year, your main hands-on tool or interest (such as STM32, ROS, or EEG sensors), and the specific type of internship role you are actively targeting in India.",
-   "model_answer": "B.Tech ECE Student | Hands-on with STM32 & Embedded C | Interested in IoT and Robotics Internships",
-   "why_it_works": "It tells the recruiter instantly who you are, what hardware you actually work with, and what opportunity you want, all while remaining completely truthful to your student status.",
-   "improvement_tip": "Avoid words like 'expert', 'master', or 'genius' if you are still studying. Let your linked project descriptions and GitHub links prove your actual skill level instead.",
+   "topic": "Draft an About section with evidence rather than generic claims",
+   "explanation": "Your LinkedIn About section is where you tell your personal engineering story. Recruiters in robotics, BCI, and embedded systems skip past generic phrases like 'passionate tech enthusiast' because they lack substance. Instead, you need to anchor your profile in real proof, such as the specific microcontrollers you program, the sensors you interface with, and the hands-on labs or student projects you have completed.",
+   "practical_example": "Instead of writing: 'I am a passionate engineering student skilled in advanced robotics and embedded development looking for exciting opportunities,' write: 'I am an electronics engineering undergraduate in India currently building and debugging microcontroller-based mobile robots and biosignal acquisition circuits using C, Python, and STM32 boards.'",
+   "exercise": "Draft a three-sentence About section for yourself. Sentence 1: State your current degree, major, and your specific technical focus (e.g., embedded systems or robotics). Sentence 2: Mention one hardware tool, programming language, or lab equipment you regularly use. Sentence 3: State what kind of internship role you are actively seeking in India.",
+   "model_answer": "I am an electronics and communication engineering student based in India, focusing on embedded firmware and robotics hardware integration. Over the past year, I have programmed STM32 and Arduino microcontrollers in C for sensor-based navigation tasks and EEG signal filtering experiments in university labs. I am currently seeking a summer 2027 embedded systems internship where I can contribute to PCB testing and low-level driver development.",
+   "why_it_works": "It replaces unverified claims with concrete nouns: specific boards like STM32, programming languages like C, and real educational contexts like university labs. It gives recruiters immediate confidence in your foundational skills without exaggerating your experience.",
+   "improvement_tip": "Keep paragraphs short and easy to skim on mobile screens. Use bullet points if you want to list your core hardware tools or programming languages clearly.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
    "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish (Smirnova 2023)",
-   "focus": "Results and figures regarding brain organoids for biological computing and learning.",
-   "explanation": "The paper discusses laboratory-grown brain cell structures that can support learning and memory functions. By using special 3D growth methods and microfluidic systems, researchers can keep these organoids healthy and study their electrical signals using advanced microelectrode arrays. The goal is to connect these living tissues to computers and sensors for biological computing.",
-   "limits": "The abstract does not provide specific numerical data, graphs, or detailed experimental results, focusing instead on the proposed framework and technological goals.",
+   "focus": "Engineering, limits and ethics of using lab-grown brain tissue for biological computing.",
+   "explanation": "Researchers are combining stem cell-derived brain organoids with advanced microfluidics and microelectrode arrays. This setup aims to let scientists record electrical signals, train the tissue using stimuli, and connect brain organoids to computers and sensors for biological computing.",
+   "limits": "Technical hurdles include scaling up production, maintaining long-term tissue health, and reliably recording and stimulating complex neural networks. Ethical questions also surround the moral status and potential sentience of these engineered brain tissues.",
    "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.3389/fsci.2023.1017235",
    "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
-   "day": "3 of 5",
+   "day": "4 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "bci_paper": {
    "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
-   "focus": "Results and figures from brain-computer interface tests translating attempted speech into text.",
-   "explanation": "The study's participant achieved a low word error rate of 9.1 percent on a 50-word vocabulary and 23.8 percent on a large 125,000-word vocabulary. The system translated attempted speech at a speed of 62 words per minute, which is faster than previous records and closer to natural conversation.",
-   "limits": "Details are limited to the provided abstract text.",
+   "focus": "Engineering, limits and ethics of translating brain signals into typed text for people who cannot speak.",
+   "explanation": "The researchers built a system that records brain signals using tiny electrodes. When a participant with paralysis tries to speak, the system uses computer models to translate those brain signals into words on a screen at a much faster speed and larger vocabulary than previous methods.",
+   "limits": "While this is a major step forward, the technology is still being tested and is not yet available for everyday public use. It requires complex surgery to implant sensors in the brain, and more research is needed to ensure it works reliably for many different people.",
+   "check": {
+    "used_abstract": true,
+    "confidence": "high"
+   },
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/s41586-023-06377-x",
    "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
-   "day": "3 of 5",
+   "day": "4 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "github": {
-   "day": "1 of 3",
-   "phase": "Understand the project",
+   "day": "2 of 3",
    "project_name": "ROBOTIS-GIT/turtlebot3",
-   "description": "A collection of software packages built for the TurtleBot3 robot using the Robot Operating System (ROS), primarily written in C++.",
-   "status": {
-    "is_archived": false,
-    "last_updated": "2026-11-12T02:15:00Z",
-    "license": "Apache-2.0"
-   },
-   "key_components": [
-    "Core turtlebot3 software packages",
-    "Simulation tools",
-    "Machine learning and racing add-ons",
-    "Hardware drivers for sensors and controllers"
-   ],
-   "learning_resources": [
-    "Official manuals for hardware and software",
-    "YouTube channels and playlists for video guides",
-    "Community spaces like Discord and the ROS discourse"
-   ],
-   "challenge": "Browse through the list of related open-source projects in the repository details and identify at least three simulation or driver-related packages mentioned.",
-   "knowledge_check": "What primary programming language is indicated for this repository, and is the project currently archived?",
+   "focus": "How it works",
+   "explanation": "Based on the repository details and README, TurtleBot3 is powered by ROS (Robot Operating System) packages written primarily in C++. It relies on a modular setup split across multiple related repositories. These connected projects handle specific tasks like message definitions, simulations, robotic arms, machine learning, and hardware drivers for sensors and controllers. Rather than being a single isolated tool, it works as an ecosystem of packages that connect software controls with physical robot hardware.",
+   "challenge": "Explore the list of related open-source projects in the README and identify which ones might be needed if you wanted to test the robot inside a computer simulation instead of building a physical one.",
+   "knowledge_check": "What primary programming language is indicated for this repository based on the verified metadata?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "ROBOTIS-GIT/turtlebot3",
@@ -216,67 +212,49 @@
   "jobs": {
    "items": [
     {
-     "title": "Robot Learning Engineer",
+     "title": "Software Test Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "M\u00fcnchen, Germany",
-     "published": "2026-11-12",
+     "location": "Remote job",
+     "published": "2026-11-13",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/rohlik/robot-learning-engineer-munich-46345",
-     "company": "Rohlik"
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-98324",
+     "company": "SwissPeak Partners GmbH"
     },
     {
-     "title": "Leitung Automation 80\u2013100 % (m/w/d) (MW)",
+     "title": "Softwarearchitekt Embedded Systems (m/w/d) Dresden",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Aarau",
-     "published": "2026-11-12",
+     "location": "Dresden",
+     "published": "2026-11-13",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/leitung-automation-80-100-mw-aarau-445356",
-     "company": "Excellent Go4"
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwarearchitekt-embedded-systems-dresden-78836",
+     "company": "MY Humancapital GmbH"
     },
     {
-     "title": "Projektleiter Automation / SPS & HMI (m/w/d), 100% (MW)",
+     "title": "IoT Embedded Systems Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "St. Gallen",
-     "published": "2026-11-12",
+     "location": "Bern, Berne, Switzerland",
+     "published": "2026-11-13",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/projektleiter-automation-sps-hmi-100-mw-st-gallen-415254",
-     "company": "Excellent Go4"
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-137465",
+     "company": "SwissPeak Partners GmbH"
     },
     {
-     "title": "SPS-Programmierer Automation & Anlagenbau (m/w/d) Nr. MW",
+     "title": "Softwareentwickler Automatisierungstechnik SPS (m/w/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Oberb\u00fcren",
-     "published": "2026-11-12",
+     "location": "Munich",
+     "published": "2026-11-13",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/sps-programmierer-automation-anlagenbau-nr-mw-oberburen-484166",
-     "company": "Excellent Go4"
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwareentwickler-automatisierungstechnik-sps-munich-189250",
+     "company": "MY Humancapital GmbH"
     },
     {
-     "title": "Automation Engineer / Elektrotechniker Anlagenbau (100%) Nr. MW",
+     "title": "Systemtechniker HF Automation (m/w/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Altdorf",
-     "published": "2026-11-12",
+     "location": "Z\u00fcrich",
+     "published": "2026-11-13",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/excellent-go4/automation-engineer-elektrotechniker-anlagenbau-100-nr-mw-altdorf-425867",
-     "company": "Excellent Go4"
-    },
-    {
-     "title": "Team Lead Electrical Engineering (gn)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Wohlen",
-     "published": "2026-11-12",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/twojobs/team-lead-electrical-engineering-gn-wohlen-190258",
-     "company": "two.jobs"
-    },
-    {
-     "title": "Model-Based Systems Engineer",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Delft",
-     "published": "2026-11-12",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.nl/jobs/companies/quantware/model-based-systems-engineer-delft-440279",
-     "company": "Quantware"
+     "url": "https://www.arbeitnow.ch/jobs/companies/scalez-gmbh/systemtechniker-hf-automation-zurich-354811",
+     "company": "ScaleZ GmbH"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
