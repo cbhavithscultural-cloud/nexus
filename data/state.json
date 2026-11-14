@@ -1,20 +1,20 @@
 {
- "oi": 14,
- "bci": 14,
+ "oi": 15,
+ "bci": 15,
  "po": [
-  2,
-  5
+  3,
+  1
  ],
  "pb": [
-  2,
-  5
+  3,
+  1
  ],
  "gh": [
-  4,
-  3
+  5,
+  1
  ],
- "ip": 14,
- "li": 14,
+ "ip": 15,
+ "li": 15,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -76,6 +76,9 @@
   "https://robohub.org/ai100-report-released-embodied-ai-highlighted-as-grand-challenge/",
   "https://www.therobotreport.com/six-agibot-g2-robots-complete-1730-tasks-in-24-hour-shanghai-convenience-store-trial/",
   "https://www.therobotreport.com/runways-praxis-1-world-action-model-for-robotics-is-now-available/",
-  "https://www.therobotreport.com/how-rhoda-ai-is-using-video-data-to-create-generalized-ai-models-for-robots/"
+  "https://www.therobotreport.com/how-rhoda-ai-is-using-video-data-to-create-generalized-ai-models-for-robots/",
+  "https://spectrum.ieee.org/video-friday-moon-rover-promise",
+  "https://www.therobotreport.com/viam-launchpad-aims-to-accelerate-robotics-deployments/",
+  "https://www.therobotreport.com/memories-ai-builds-standardized-egocentric-video-pipeline/"
  ]
 }
