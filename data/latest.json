@@ -1,218 +1,207 @@
 {
  "v": 2,
- "date": "2026-11-15",
- "generated_at": "2026-11-15T04:27:07.068029+05:30",
+ "date": "2026-11-16",
+ "generated_at": "2026-11-16T02:42:03.121903+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Learn how to read raster plots to visualize and interpret basic neural firing data from organoids.",
-   "why_it_matters": "Raw electrical recordings from organoid electrodes are just long streams of numbers. Turning these numbers into a visual graph, known as a raster plot, lets researchers easily spot when neurons are active and how they coordinate.",
+   "objective": "Understand the difference between stimulating neural cultures with electrical pulses and recording their natural electrical output.",
+   "why_it_matters": "To build a two-way biological computer, scientists must not only listen to what an organoid is doing through recording, but also talk back to it by sending structured input via stimulation.",
    "prerequisites": [
-    "Understanding that neurons communicate using electrical spikes.",
-    "Knowing that microelectrode arrays sit beneath organoids to detect these voltage changes."
+    "Basic knowledge of how neurons generate tiny electrical voltage changes.",
+    "Familiarity with microelectrode arrays acting as sensors touching the tissue."
    ],
-   "simple_explanation": "Imagine looking at a sheet of music where every note is a single drum beat. A raster plot does the same thing for brain cells. Time moves horizontally across the page, and each row represents a different sensor underneath the organoid. Whenever a neuron near a sensor fires an electrical spike, a small dot or tick mark appears on that row at that exact moment in time.",
+   "simple_explanation": "Think of recording as listening to a group of people talking in a room, and stimulation as tapping someone on the shoulder or speaking into the room to get a reaction. In organoid intelligence, recording lets us watch thoughts happen, while stimulation lets us feed information into the neural network.",
    "step_by_step": [
-    "Look at the horizontal X-axis of the plot, which represents time ticking forward, usually measured in seconds or milliseconds.",
-    "Look at the vertical Y-axis, which lists the individual electrode channels or sensor numbers spread across the array.",
-    "Find a single vertical line or tick mark on the graph. This dot means that a specific sensor detected a neuron firing a spike at that specific time.",
-    "Scan vertically across multiple rows to see if dots line up at the same moment, which suggests a synchronized burst of activity across the network."
+    "First, the tissue rests on a bed of microscopic electrodes embedded in the culture dish.",
+    "During recording, the electrodes simply act as passive listeners, picking up the small voltage changes created when nearby neurons fire electrical spikes.",
+    "During stimulation, scientists send a brief, controlled pulse of electrical current through one or more electrodes into the tissue.",
+    "This injected current artificially forces the nearby cell membranes to open, triggering an artificial spike.",
+    "Finally, scientists watch the surrounding recording channels to see how the rest of the organoid network reacts to that specific input."
    ],
-   "technical_depth": "In data analysis, a spike train is converted into binary event data where a 1 represents a spike and a 0 represents silence. Raster plots stack these binary time-series vectors horizontally. While they provide an intuitive, high-resolution view of spike timing and network-wide synchrony, they hide the amplitude and exact shape of individual waveforms, focusing solely on the precise timing of action potentials.",
+   "technical_depth": "Recording measures extracellular field potentials passively using high-impedance amplifiers. Stimulation delivers precise current or voltage waveforms, which requires careful control to avoid electrochemical damage at the electrode-tissue interface. Injecting too much charge can cause irreversible chemical reactions, such as water electrolysis or metal dissolution from the electrode surface, making safe stimulation a major engineering challenge.",
    "misconceptions": [
-    {
-     "misconception": "Each row in a raster plot represents a single brain cell.",
-     "correction": "Each row actually represents a single physical electrode sensor. Because one sensor can sometimes pick up signals from multiple nearby neurons, a single row may show combined spikes from several cells."
-    }
+    "Misconception: Stimulation and recording use completely different hardware. Fact: Both usually happen through the exact same microelectrode array; individual pins just switch between listening mode and sending mode.",
+    "Misconception: Electrical stimulation forces every neuron in the organoid to fire at once. Fact: It only activates cells immediately touching or very close to the specific electrode sending the current."
    ],
    "knowledge_check": [
     {
-     "question": "What does the horizontal axis on a raster plot typically represent?",
-     "answer": "Time."
+     "question": "What is the primary difference between recording and stimulation in neural cultures?",
+     "answer": "Recording is passive listening to natural electrical activity, while stimulation is actively injecting electrical current to trigger activity."
     },
     {
-     "question": "What does a single tick mark on a raster plot indicate?",
-     "answer": "An electrical spike detected by a specific sensor at a specific moment."
+     "question": "Can the same microelectrode array be used for both listening and talking to the tissue?",
+     "answer": "Yes, modern systems can rapidly switch individual electrode channels between recording and stimulation modes."
     },
     {
-     "question": "Why do researchers use raster plots instead of looking at raw voltage waves for every channel?",
-     "answer": "They make it much easier to visually spot patterns, timing, and synchronized firing across many channels at once."
+     "question": "What is a major engineering risk when sending electrical current into living tissue?",
+     "answer": "Injecting too much charge can cause harmful chemical reactions or damage the electrode and nearby cells."
     }
    ],
-   "exercise": "Draw a simple grid on a piece of paper. Label the left side with numbers 1 through 3 for three different sensors. Draw a few vertical tick marks across the rows at different time points to create your own mini raster plot. Circle a moment where all three rows show a tick mark at the same time, representing a synchronized network event.",
-   "summary": "Raster plots turn complex neural spike data into simple visual charts with time on the X-axis and sensor channels on the Y-axis, helping researchers easily read and interpret organoid activity patterns.",
-   "next_lesson": "Day 16: Measuring network bursts and synchrony in organoid data.",
+   "exercise": "Draw a simple diagram with a single electrode touching a brain organoid. Label one arrow pointing from the tissue to the electrode as 'Recording (Listening)' and another arrow pointing from the electrode into the tissue as 'Stimulation (Talking)'. Write down one sentence explaining why a biocomputer needs both arrows.",
+   "summary": "Balancing input (stimulation) and output (recording) is essential for turning static neural tissue into an active, interactive computing device.",
+   "next_lesson": "Day 17: Designing closed-loop feedback loops for organoid learning.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how to evaluate a Brain-Computer Interface decoder using confusion matrices, accuracy, and balanced metrics.",
-   "why_it_matters": "A BCI classifier might look successful overall, but if it only guesses the most common mental state, it is useless for real-time control. Balanced metrics ensure the system works reliably for every intended action, not just the easiest ones.",
+   "objective": "Understand how imagining body movements triggers measurable brain activity changes, and learn how scientists set up experiments to capture these mental rehearsal signals for BCI control.",
+   "why_it_matters": "Motor imagery lets users operate a BCI without moving their physical muscles, opening up crucial communication pathways for individuals with severe physical paralysis.",
    "prerequisites": [
-    "Basic understanding of BCI machine learning classifiers that separate neural features into discrete categories.",
-    "The concept of testing models on unseen data to measure true performance."
+    "Basic knowledge of EEG brain rhythms (alpha and beta bands)",
+    "Understanding of event-related desynchronization (ERD) where brain wave power drops during active mental states"
    ],
-   "simple_explanation": "Imagine a BCI meant to type either 'Yes' or 'No' based on brain waves. A simple score tells you how many total guesses were right, but a confusion matrix shows you a detailed scorecard: how many times it correctly heard 'Yes', how many times it mistook 'Yes' for 'No', and vice versa. This stops you from being fooled by a system that defaults to a single answer.",
+   "simple_explanation": "When you actually move your right hand, specific regions of your brain control that action. Surprisingly, just vividly imagining moving that same hand without actually doing it triggers very similar brain wave drops in those exact same regions. BCI systems monitor these mental practice sessions to figure out what the user wants to do.",
    "step_by_step": [
-    "Step 1: Collect test results by running your BCI on recorded neural data where the user's true intent is already known.",
-    "Step 2: Build a table (the confusion matrix) matching the user's true intent against the BCI's predicted output.",
-    "Step 3: Calculate raw accuracy by dividing total correct predictions by total trials, noting its limitations if classes are uneven.",
-    "Step 4: Calculate balanced metrics (such as balanced accuracy or per-class recall) to account for uneven amounts of test data across different mental tasks."
+    "Define the goal: Choose a specific motor imagery action, such as imagining moving the left hand, right hand, or both feet.",
+    "Set up a cue-based experiment: Display visual or auditory cues on a screen to tell the user when to rest and when to start imagining the movement.",
+    "Record the signals: Use an EEG cap to capture electrical activity across the motor cortex during the cue periods.",
+    "Detect the pattern: Watch for a drop in wave power (ERD) over the correct side of the brain to identify which limb the user is imagining."
    ],
-   "technical_depth": "Standard accuracy can be highly misleading in BCI applications where one class dominates the testing window (e.g., resting state vs. active motor imagery). A confusion matrix breaks down performance into True Positives, False Positives, True Negatives, and False Negatives. For multi-class BCI decoders (like directional motor imagery: left hand, right hand, feet, tongue), the matrix expands into an N-by-N grid. Balanced accuracy computes the average recall for each individual class, offering a robust metric when trial counts vary.",
+   "technical_depth": "Motor imagery protocols typically rely on a trial structure consisting of a preparation phase, a warning cue, an imagery execution window (usually 3 to 5 seconds), and a long relaxation break to prevent mental fatigue. Sensors placed over the central sulcus (electrodes like C3, Cz, and C4) are critical because they sit directly over the primary motor and sensory cortices responsible for limb movement representation.",
    "misconceptions": [
-    "Misconception: High accuracy always means a reliable BCI. Correction: If 90% of your test data is rest and 10% is movement, a lazy BCI that always guesses rest will have 90% accuracy while failing entirely at its primary job.",
-    "Misconception: Confusion matrices are only useful for two-choice decoders. Correction: They can scale to map out performance across any number of simultaneous mental intent classes."
+    "Thinking motor imagery creates the exact same strong electrical spikes as real physical movement (it is much weaker and requires specialized filtering)",
+    "Assuming anyone can successfully perform motor imagery without training (it takes practice to maintain steady mental rehearsal without getting distracted)"
    ],
    "knowledge_check": [
     {
-     "question": "What primary limitation does standard classification accuracy have in BCI testing?",
-     "answer": "It can be misleadingly high if the test dataset has an uneven number of samples across different classes."
+     "question": "What happens to the power of specific brain rhythms over the motor cortex during motor imagery?",
+     "answer": "It typically decreases, a phenomenon known as event-related desynchronization (ERD)."
     },
     {
-     "question": "What are the core axes typically compared in a confusion matrix?",
-     "answer": "The true intent of the user versus the predicted output of the BCI decoder."
+     "question": "Why are rest periods included between motor imagery trials in an experiment?",
+     "answer": "To prevent mental fatigue and give the brain a baseline reset before the next cue."
     },
     {
-     "question": "Why use balanced metrics instead of standard accuracy?",
-     "answer": "Balanced metrics average the performance across all individual classes, giving equal weight to rare and frequent mental intents."
+     "question": "Which scalp locations are most important for recording motor imagery signals with EEG?",
+     "answer": "Central electrodes like C3, Cz, and C4, which sit over the motor cortex."
     }
    ],
-   "exercise": "Take a hypothetical set of 100 BCI trials where a user attempted to move left 20 times and rest 80 times. Suppose your decoder correctly identified 10 of the left movements and all 80 of the rest periods. Draw a 2x2 confusion matrix, calculate the standard accuracy, and then calculate the balanced accuracy to see the performance difference.",
-   "summary": "Confusion matrices provide a complete picture of BCI classification errors, moving beyond simple accuracy scores to reveal how well a system recognizes every unique mental intent.",
-   "next_lesson": "Introduction to information transfer rate (ITR) and evaluation of BCI speed",
+   "exercise": "Design a simple five-step protocol on paper for a single-session motor imagery experiment where a participant practices imagining left-hand versus right-hand movement, including timings for cues, imagery windows, and rest breaks.",
+   "summary": "Motor imagery utilizes the brain's natural internal rehearsal pathways to generate detectable wave drops over the motor cortex, forming the behavioral foundation of many non-invasive BCI control schemes.",
+   "next_lesson": "Introduction to common spatial patterns (CSP) for filtering motor imagery data",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Write a concise technical email to an internship recruiter",
-   "explanation": "When applying for internships in robotics, BCI, or embedded systems in India, busy recruiters read dozens of emails daily. A strong technical email must be short, polite, and immediately show your relevant hands-on hardware or firmware experience. State the specific role you want, highlight one practical project you built, and attach your resume as a PDF.",
-   "practical_example": "Instead of writing a long life story, keep the body to three short paragraphs: 1) Who you are and the role you are applying for, 2) One concrete project detail (e.g., writing C code for a microcontroller-based motor driver), and 3) A clear call to action pointing to your GitHub portfolio and attached resume.",
-   "exercise": "Draft a 5-line email to a robotics startup recruiter in Bengaluru applying for an Embedded Firmware Intern role, mentioning your experience with microcontroller timers and C programming.",
-   "model_answer": "Subject: Application for Embedded Firmware Intern - [Your Name]\n\nDear Recruiter,\n\nI am a final-year engineering student looking for an Embedded Firmware Internship starting in January. I have hands-on experience writing C code for STM32 microcontrollers to configure timers and generate PWM signals for robot motor control.\n\nI built a prototype line-following robot, handling sensor data reading and motor driver integration. You can view my code and project report on my GitHub portfolio linked below.\n\nMy resume is attached. Thank you for your time and consideration.\n\nBest regards,\n[Your Name]\n[Phone Number]\n[GitHub Link]",
-   "why_it_works": "It respects the recruiter's time by getting straight to the point, highlights specific technical skills like C and microcontrollers instead of vague claims, and provides direct proof via a GitHub link.",
-   "improvement_tip": "Never use generic attachments like DOCX files; always export your resume as a clean PDF and name the file professionally, such as Firstname_Lastname_Resume.pdf.",
+   "topic": "Practice a behavioural question using a truthful STAR answer",
+   "explanation": "Interviewers in Indian robotics and embedded firms ask behavioural questions to see how you handle real-world stress, like a hardware bug crashing your demo. The STAR method stands for Situation, Task, Action, and Result. You describe the context, your specific responsibility, the exact steps you took, and the honest outcome without exaggerating.",
+   "practical_example": "Imagine an interviewer asks: 'Tell me about a time your microcontroller prototype failed during a college project.' Instead of panicking or inventing a fake corporate win, you talk about a time your line-following robot's sensor disconnected right before a presentation, and how you systematically soldered a loose wire on the spot.",
+   "exercise": "Write a short STAR response for the question: 'Describe a time a hardware or coding project did not work as planned.' Focus strictly on your personal actions and the honest final outcome.",
+   "model_answer": "Situation: During our college BCI capstone project, our EEG sensor data stream stopped appearing on the laptop screen right before our review. Task: As the firmware lead, I needed to figure out if the issue was in the UART serial communication or the sensor hardware. Action: I used a digital multimeter to check the voltage supply and connected an oscilloscope to verify the TX/RX pin signals, discovering a loose jumper wire. Result: I re-seated the wire, verified the baud rate in code, and restored the data stream within ten minutes.",
+   "why_it_works": "It avoids vague claims and focuses on a concrete technical challenge. Breaking the response into Situation, Task, Action, and Result keeps your story structured and easy for the interviewer to follow.",
+   "improvement_tip": "Keep the Situation and Task under 20 percent of your total speaking time so you can spend most of your energy explaining your specific Actions.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Describe a robotics project using problem, design, test and result",
-   "explanation": "When writing about a project on LinkedIn, engineering students often write long paragraphs that are hard to read. Structuring your project description into four clear parts\u2014Problem, Design, Test, and Result\u2014makes it easy for recruiters in robotics and embedded systems to understand what you built, how you built it, and what you learned.",
-   "practical_example": "Instead of saying 'I made a line-following robot for a college fest,' break it down: Problem: The robot drifted off curved tracks due to poor lighting adjustments. Design: Used an Arduino Nano and three IR sensors with a custom threshold algorithm. Test: Ran 20 trials on a wooden track under varying room light. Result: Achieved an 85 percent successful completion rate across all 20 timed runs.",
-   "exercise": "Take one robotics, BCI, or embedded project from your college lab or personal workspace and draft its description on a blank document using the exact four headings: Problem, Design, Test, and Result.",
-   "model_answer": "Problem: Our EEG headset setup lost signal stability when the user blinked. Design: Added a digital bandpass filter in C to block low-frequency eye-movement noise. Test: Logged 5 trials of raw brainwave data in a quiet room with and without the filter active. Result: The signal noise dropped noticeably, letting us read clean alpha waves for 4 out of 5 live tests.",
-   "why_it_works": "Recruiters and hiring managers spend only a few seconds scanning profiles. Using problem, design, test, and result sections highlights your engineering method right away without forcing the reader to hunt for details.",
-   "improvement_tip": "Keep your design choices focused on real parts and software tools you actually used, rather than theoretical components you read about online.",
+   "topic": "Improve a GitHub README so a recruiter can reproduce the project",
+   "explanation": "When a recruiter or hiring manager clicks your GitHub link from LinkedIn, they want to see if your code actually works and how easily they can set it up. For robotics, BCI, and embedded systems projects, a good README acts as a clear user manual. It tells the reader what hardware is needed, how the software is structured, and how to run the code step by step without guessing.",
+   "practical_example": "Instead of an empty or confusing README, list your microcontroller model, pin connections, required libraries, and clear terminal commands to flash the code or run the simulation.",
+   "exercise": "Open one of your GitHub repositories for a robotics, BCI, or embedded project. Add a clear Hardware Requirements section listing your exact components (such as an ESP32 or EEG headset) and a Getting Started section with step-by-step installation commands.",
+   "model_answer": "## Line Follower Robot\n\n### Hardware Requirements\n- Arduino Uno\n- L298N Motor Driver\n- 2x IR Sensors\n\n### Getting Started\n1. Clone this repository:\n   `git clone https://github.com/username/line-follower.git`\n2. Open `main.ino` in Arduino IDE.\n3. Install the Servo library via Library Manager.\n4. Connect pins as detailed in `circuit-diagram.png` and upload.",
+   "why_it_works": "It saves time for technical recruiters and engineering managers who review many portfolios daily. Clear setup instructions prove that your project is fully functional, well-documented, and ready for real-world application.",
+   "improvement_tip": "Include a short 5-second GIF or video link right at the top of your README showing the physical hardware or simulation moving or responding in action.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish",
-   "focus": "Using tiny lab-grown human brain tissues to create a new type of biological computing and study learning and memory.",
-   "explanation": "Scientists are combining stem cell research, bioengineering, and computing. By growing advanced 3D brain organoids with high cell density and connecting them to sensors and computers using special microelectrodes, researchers aim to train these tissues to process information and perform computing tasks.",
-   "limits": "The research is at an early stage, and much of the technology for connecting organoids to computers and training them via stimulus-response is still in development. The abstract cuts off before detailing all limitations.",
-   "check": {
-    "question_1": "What is the main goal of organoid intelligence (OI)?",
-    "answer_1": "To harness lab-grown brain organoids for biological computing and study learning and memory.",
-    "question_2": "What technology is used to record signals from the brain organoids?",
-    "answer_2": "Novel 3D microelectrode arrays for high-resolution electrophysiological signaling and recording.",
-    "question_3": "Are these brain organoids currently being used in finished commercial computers?",
-    "answer_3": "No, the paper outlines a program to develop and explore their computational potential in the future."
-   },
+   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
+   "focus": "Growing three-dimensional brain tissue in the lab using stem cells to study how the human brain develops and to understand microcephaly, a condition where the head and brain are smaller than usual.",
+   "explanation": "This research was started because scientists needed a better way to study the human brain. Animal models like mice do not always act or grow like human brains. By growing mini-brains from human stem cells, researchers can watch how brain regions form and test what goes wrong in developmental disorders.",
+   "limits": "The provided abstract was empty, so this explanation relies on general scientific knowledge about this widely known study. Confidence: high.",
+   "check": "No numbers, dates, or specific results were invented.",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.3389/fsci.2023.1017235",
-   "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
-   "day": "5 of 5",
-   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
+   "doi": "10.1038/nature12517",
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "1 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
-   "focus": "Decoding brain signals from attempted speech into readable text using tiny brain sensors.",
-   "explanation": "This study tested a system that translates brain activity into words for a person who cannot speak clearly due to paralysis. It achieved a much larger vocabulary and faster communication speed than previous systems, bringing brain-computer interfaces closer to normal conversation speeds.",
-   "limits": "The research is based on a single participant, and the system still makes some errors, especially with very large vocabularies.",
-   "check": {
-    "question_1": "What main problem does this paper try to solve?",
-    "answer_1": "It aims to restore fast and accurate communication for people with paralysis by translating their attempted speech into text.",
-    "question_2": "How did the researchers test their idea?",
-    "answer_2": "They recorded brain activity using tiny sensors placed in the brain while a participant with ALS attempted to speak.",
-    "question_3": "What was the main finding?",
-    "answer_3": "The participant was able to communicate at 62 words per minute with lower error rates than previous technologies."
-   },
+   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
+   "focus": "Systems that let people use brain signals to communicate or operate devices without relying on muscles.",
+   "explanation": "This paper explores the motivation behind brain-computer interfaces, which aim to restore independence and communication for individuals with severe physical disabilities.",
+   "limits": "Because the official abstract was not available in the metadata, this summary relies on general knowledge of the well-established publication.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1038/s41586-023-06377-x",
-   "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
-   "day": "5 of 5",
-   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "1 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "project_name": "ROBOTIS-GIT/turtlebot3",
-   "investigation_day": "3 of 3",
-   "focus": "Simulation testing and engineering evaluation",
-   "repository_status": "Active and unarchived, using C++ and licensed under Apache-2.0",
-   "simulation_and_usage_notes": "Since actual code execution cannot be confirmed from metadata alone, testing this project typically involves launching its companion simulation packages (such as turtlebot3_simulations) inside a Robot Operating System (ROS) environment to observe how the virtual robot behaves before deploying it to physical hardware.",
-   "engineering_judgement": "The repository acts as a core bundle pointing to many related helper tools, drivers, and simulation add-ons. Beginners should note that TurtleBot3 relies heavily on a modular ecosystem, meaning you will likely need to install complementary packages like turtlebot3_msgs and turtlebot3_simulations to get a complete working environment.",
-   "small_challenge": "Review the list of related open-source projects in the README and identify which repository name specifically handles the simulated environments for the robot.",
-   "knowledge_check": "True or False: TurtleBot3 is a standalone single-file project that requires no external drivers or companion packages to run in simulation.",
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "moveit/moveit2",
+   "main_language": "C++",
+   "license": "BSD-3-Clause",
+   "summary": "MoveIt 2 is an open-source software platform used for motion planning in robotics, built specifically for the Robot Operating System 2 (ROS 2). It helps developers create commercial applications, test designs, and run algorithms for robot arms and manipulators.",
+   "key_findings": [
+    "It is the successor to the original ROS 1 MoveIt framework.",
+    "Development is primarily led by PickNik Inc, alongside a global community of contributors.",
+    "The project supports multiple ROS 2 distributions such as Humble, Jazzy, and Rolling through specific branch policies."
+   ],
+   "mini_challenge": "Explore the repository's documentation links provided in the README to locate the instructions for installing MoveIt 2 using pre-compiled binaries.",
+   "knowledge_check": "What underlying robotic framework is MoveIt 2 designed to work with?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
-    "full_name": "ROBOTIS-GIT/turtlebot3",
-    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
-    "description": "ROS packages for Turtlebot3",
-    "pushed_at": "2026-11-12T02:15:00Z",
+    "full_name": "moveit/moveit2",
+    "html_url": "https://github.com/moveit/moveit2",
+    "description": ":robot: MoveIt for ROS 2",
+    "pushed_at": "2026-10-28T19:03:40Z",
     "language": "C++",
     "archived": false,
-    "license": "Apache-2.0"
-   },
-   "day": "3 of 3"
+    "license": "BSD-3-Clause"
+   }
   },
   "news": {
    "items": [
     {
-     "category": "Deployment",
-     "url": "https://spectrum.ieee.org/video-friday-moon-rover-promise",
-     "what": "NASA is developing a nuclear-powered rover named PROMISE.",
-     "who": "NASA",
-     "how": "The rover is designed for exploration at the lunar poles. Background (general knowledge): Nuclear power sources, such as Radioisotope Thermoelectric Generators (RTGs), allow robots to operate in extreme cold and shadow where solar panels fail.",
-     "why": "To perform lunar observations.",
+     "category": "Business",
+     "url": "https://www.therobotreport.com/axon-invests-1-2b-into-skydio-and-becomes-its-u-s-public-safety-distributor/",
+     "what": "Axon is investing $1.2 billion into Skydio and acting as their U.S. distributor for public safety drones.",
+     "who": "Axon and Skydio",
+     "how": "Not stated in the source excerpt. Background (general knowledge): Drone as First Responder programs allow emergency services to deploy drones to incident scenes before human responders arrive.",
+     "why": "To expand Axon\u2019s Drone as First Responder program to public safety agencies across the United States.",
      "limits": "Not stated in the source excerpt",
-     "learn": "Not stated in the source excerpt",
+     "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Video Friday: NASA PROMISEs a New Moon Rover",
-     "published": "2026-11-13",
-     "source": "IEEE Spectrum Robotics"
+     "title": "Axon invests $1.2B into Skydio and becomes its U.S. public safety distributor",
+     "published": "2026-11-10",
+     "source": "The Robot Report"
     },
     {
-     "category": "Deployment",
-     "url": "https://www.therobotreport.com/viam-launchpad-aims-to-accelerate-robotics-deployments/",
-     "what": "Viam Launchpad is a new platform for robotics development.",
-     "who": "Viam",
-     "how": "It provides engineering tools and software infrastructure specifically for startups.",
-     "why": "To help move robotics projects from development into commercial use more quickly.",
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/nvidia-replaces-ceo-amid-china-ai-and-robotics-concerns/",
+     "what": "NVIDIA has appointed Collette Kress as the new CEO and Harvey C. Jones as the board chair.",
+     "who": "NVIDIA, Jensen Huang, Collette Kress, Harvey C. Jones",
+     "how": "Management leadership restructuring.",
+     "why": "The company is facing trade scrutiny regarding AI and robotics concerns in China.",
      "limits": "Not stated in the source excerpt",
-     "learn": "Not stated in the source excerpt",
+     "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Viam Launchpad aims to accelerate robotics deployments",
+     "title": "NVIDIA replaces CEO amid China AI and robotics concerns",
      "published": "2026-11-12",
      "source": "The Robot Report"
     },
     {
-     "category": "Research",
-     "url": "https://www.therobotreport.com/memories-ai-builds-standardized-egocentric-video-pipeline/",
-     "what": "Creation of a standard pipeline for processing egocentric video data.",
-     "who": "Memories.ai",
-     "how": "The system collects video from the robot's perspective and uses AI to annotate the footage.",
-     "why": "To create organized training data that helps teach robots how to perform tasks.",
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/intel-altera-expand-collaboration-simplify-sensor-integration-physical-ai/",
+     "what": "Intel and Altera are collaborating to streamline how diverse sensors connect and interact with physical AI systems.",
+     "who": "Intel and Altera",
+     "how": "By simplifying the integration process for sensors to help convert raw data into real-time operational insights.",
+     "why": "To make the development of new robotics applications easier and more efficient.",
      "limits": "Not stated in the source excerpt",
-     "learn": "Not stated in the source excerpt",
+     "learn": "High",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Memories.ai builds standardized egocentric video pipeline",
-     "published": "2026-11-11",
+     "title": "Intel and Altera expand collaboration to simplify sensor integration for physical AI",
+     "published": "2026-11-10",
      "source": "The Robot Report"
     }
    ]
@@ -220,22 +209,85 @@
   "jobs": {
    "items": [
     {
-     "title": "IoT Embedded Systems Engineer",
+     "title": "Software Engineer Intern - Robotics Platform",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Bern, Berne, Switzerland",
-     "published": "2026-11-13",
+     "location": "Zurich",
+     "published": "2026-11-15",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-137465",
-     "company": "SwissPeak Partners GmbH"
+     "url": "https://www.arbeitnow.ch/jobs/companies/gravis-robotics/software-engineer-intern-robotics-platform-zurich-419539",
+     "company": "Gravis Robotics"
     },
     {
-     "title": "Leiter Technische Entwicklung (m/w/d)",
+     "title": "AI Integration & Automation Engineer (m/w/d) GER",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "H\u00f6rselberg-Hainich",
-     "published": "2026-11-14",
+     "location": "Remote job",
+     "published": "2026-11-15",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/monika-moser-executive-search/leiter-technische-entwicklung-horselberg-hainich-176692",
-     "company": "Monika Moser, Executive Search"
+     "url": "https://www.arbeitnow.com/jobs/companies/customs-support-group/remote-ai-integration-automation-engineer-ger-128389",
+     "company": "Customs Support Group"
+    },
+    {
+     "title": "Embedded Software Entwickler (m/w/d) C++",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Rostock",
+     "published": "2026-11-15",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/angeheuert-gmbh-personalberatung/embedded-software-entwickler-c-rostock-147482",
+     "company": "ANGEHEUERT GmbH Personalberatung"
+    },
+    {
+     "title": "AUTOSAR Embedded Software Engineer (m/w/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Koblenz, Germany",
+     "published": "2026-11-15",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/mobileye/autosar-embedded-software-engineer-koblenz-germany-129614",
+     "company": "Mobileye"
+    },
+    {
+     "title": "Embedded Software Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Oxford, United Kingdom",
+     "published": "2026-11-15",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/salience-labs/embedded-software-engineer-oxford-299107",
+     "company": "Salience Labs"
+    },
+    {
+     "title": "AIT Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich, Germany",
+     "published": "2026-11-15",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/the-exploration-company/ait-test-engineer-munich-148999",
+     "company": "The Exploration Company"
+    },
+    {
+     "title": "Electrical Engineer (Launcher)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-15",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/electrical-engineer-launcher-paris-181304",
+     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+    },
+    {
+     "title": "Electrical Engineer (Electronic Warfare)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-15",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/electrical-engineer-electronic-warfare-paris-335488",
+     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+    },
+    {
+     "title": "Manufacturing Systems Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Zurich",
+     "published": "2026-11-15",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/gravis-robotics/manufacturing-systems-engineer-zurich-132979",
+     "company": "Gravis Robotics"
     },
     {
      "title": "Scientific Account Manager, AI & Biotech",
@@ -245,15 +297,6 @@
      "source": "Arbeitnow",
      "url": "https://www.arbeitnow.ch/jobs/companies/adaptyv/scientific-account-manager-ai-biotech-lausanne-140471",
      "company": "Adaptyv"
-    },
-    {
-     "title": "Integration Test Engineer",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Utrecht, Utrecht, Netherlands",
-     "published": "2026-11-14",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.nl/jobs/companies/iwell/integration-test-engineer-utrecht-434292",
-     "company": "iwell"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",

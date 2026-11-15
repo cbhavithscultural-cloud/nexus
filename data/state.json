@@ -1,20 +1,20 @@
 {
- "oi": 15,
- "bci": 15,
+ "oi": 16,
+ "bci": 16,
  "po": [
   3,
-  1
+  2
  ],
  "pb": [
   3,
-  1
+  2
  ],
  "gh": [
   5,
-  1
+  2
  ],
- "ip": 15,
- "li": 15,
+ "ip": 16,
+ "li": 16,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -79,6 +79,9 @@
   "https://www.therobotreport.com/how-rhoda-ai-is-using-video-data-to-create-generalized-ai-models-for-robots/",
   "https://spectrum.ieee.org/video-friday-moon-rover-promise",
   "https://www.therobotreport.com/viam-launchpad-aims-to-accelerate-robotics-deployments/",
-  "https://www.therobotreport.com/memories-ai-builds-standardized-egocentric-video-pipeline/"
+  "https://www.therobotreport.com/memories-ai-builds-standardized-egocentric-video-pipeline/",
+  "https://www.therobotreport.com/axon-invests-1-2b-into-skydio-and-becomes-its-u-s-public-safety-distributor/",
+  "https://www.therobotreport.com/nvidia-replaces-ceo-amid-china-ai-and-robotics-concerns/",
+  "https://www.therobotreport.com/intel-altera-expand-collaboration-simplify-sensor-integration-physical-ai/"
  ]
 }
