@@ -1,302 +1,306 @@
 {
  "v": 2,
- "date": "2026-11-16",
- "generated_at": "2026-11-16T04:27:35.947509+05:30",
+ "date": "2026-11-17",
+ "generated_at": "2026-11-17T02:52:11.706079+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand the difference between stimulating neural cultures with electrical pulses and recording their natural electrical output.",
-   "why_it_matters": "To build a two-way biological computer, scientists must not only listen to what an organoid is doing through recording, but also talk back to it by sending structured input via stimulation.",
+   "objective": "Understand how closed-loop experiments work in organoid intelligence by exploring the continuous cycle of observing brain tissue activity, deciding on a computerized response, and measuring the resulting behavioral or electrical change.",
+   "why_it_matters": "True interactive learning and computation cannot happen in a one-way street where scientists just send static signals or only listen to background noise. By setting up a live loop where the computer reacts immediately to what the organoid is doing, researchers can begin to train the biological tissue to solve basic computational tasks.",
    "prerequisites": [
-    "Basic knowledge of how neurons generate tiny electrical voltage changes.",
-    "Familiarity with microelectrode arrays acting as sensors touching the tissue."
+    "Basic familiarity with how microscopic electrodes listen to tiny voltage spikes from brain cells",
+    "Understanding that neural networks change their connection strengths over time based on incoming stimulation"
    ],
-   "simple_explanation": "Think of recording as listening to a group of people talking in a room, and stimulation as tapping someone on the shoulder or speaking into the room to get a reaction. In organoid intelligence, recording lets us watch thoughts happen, while stimulation lets us feed information into the neural network.",
+   "simple_explanation": "Think of a closed-loop experiment like a game of catch. One person throws a ball, the other person watches where it goes, adjusts their hands, and throws it back. In organoid intelligence, the computer acts as the second person. It listens to the electrical chatter of the organoid, instantly calculates a pattern, and sends a quick zap of electricity back. This back-and-forth dialogue allows the tissue and the computer to interact in real time.",
    "step_by_step": [
-    "First, the tissue rests on a bed of microscopic electrodes embedded in the culture dish.",
-    "During recording, the electrodes simply act as passive listeners, picking up the small voltage changes created when nearby neurons fire electrical spikes.",
-    "During stimulation, scientists send a brief, controlled pulse of electrical current through one or more electrodes into the tissue.",
-    "This injected current artificially forces the nearby cell membranes to open, triggering an artificial spike.",
-    "Finally, scientists watch the surrounding recording channels to see how the rest of the organoid network reacts to that specific input."
+    "Step 1: Observe. The electrode array continuously records the spontaneous electrical signals coming from the living brain tissue.",
+    "Step 2: Process and Respond. A computer software program analyzes those signals in milliseconds. If a specific pattern appears, the system immediately triggers a tiny electrical pulse.",
+    "Step 3: Measure. The sensors record how the organoid's electrical activity shifts immediately following that custom computer response.",
+    "Step 4: Adapt. Researchers evaluate whether the tissue changed its firing habits, showing the very early stages of adaptive behavior."
    ],
-   "technical_depth": "Recording measures extracellular field potentials passively using high-impedance amplifiers. Stimulation delivers precise current or voltage waveforms, which requires careful control to avoid electrochemical damage at the electrode-tissue interface. Injecting too much charge can cause irreversible chemical reactions, such as water electrolysis or metal dissolution from the electrode surface, making safe stimulation a major engineering challenge.",
+   "technical_depth": "In technical terms, a closed-loop system requires low-latency hardware to minimize the time gap between spike detection and stimulus delivery, often called round-trip time. The computer uses feature extraction algorithms to identify specific neural motifs, such as burst patterns or rhythmic synchrony, and maps those features to predefined stimulation triggers. Maintaining a closed loop without damaging the biological tissue requires strict control over electrical current density and waveform shape to avoid causing cell death or electrode polarization.",
    "misconceptions": [
-    "Misconception: Stimulation and recording use completely different hardware. Fact: Both usually happen through the exact same microelectrode array; individual pins just switch between listening mode and sending mode.",
-    "Misconception: Electrical stimulation forces every neuron in the organoid to fire at once. Fact: It only activates cells immediately touching or very close to the specific electrode sending the current."
+    {
+     "misconception": "Closed-loop experiments mean the organoid is consciously thinking or feeling.",
+     "correction": "Closed-loop simply refers to an automated, real-time technical loop of software-hardware interaction, similar to a thermostat reacting to room temperature, rather than conscious thought."
+    },
+    {
+     "misconception": "The computer programs the organoid's cells like a regular silicon microchip.",
+     "correction": "Living cells respond organically and variably to stimuli due to biological noise and chemical shifts, making them much less predictable than standard computer code."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What is the primary difference between recording and stimulation in neural cultures?",
-     "answer": "Recording is passive listening to natural electrical activity, while stimulation is actively injecting electrical current to trigger activity."
+     "question": "What are the three core actions in a closed-loop experiment?",
+     "answer": "Observe, respond, and measure."
     },
     {
-     "question": "Can the same microelectrode array be used for both listening and talking to the tissue?",
-     "answer": "Yes, modern systems can rapidly switch individual electrode channels between recording and stimulation modes."
+     "question": "Why is low latency important when a computer responds to an organoid?",
+     "answer": "To ensure the electrical stimulus arrives close enough in time to the neural activity for the tissue to associate the input with its own action."
     },
     {
-     "question": "What is a major engineering risk when sending electrical current into living tissue?",
-     "answer": "Injecting too much charge can cause harmful chemical reactions or damage the electrode and nearby cells."
+     "question": "What role does the computer play in this setup?",
+     "answer": "It acts as a real-time translator and controller that analyzes incoming signals and instantly sends back targeted electrical stimulation."
     }
    ],
-   "exercise": "Draw a simple diagram with a single electrode touching a brain organoid. Label one arrow pointing from the tissue to the electrode as 'Recording (Listening)' and another arrow pointing from the electrode into the tissue as 'Stimulation (Talking)'. Write down one sentence explaining why a biocomputer needs both arrows.",
-   "summary": "Balancing input (stimulation) and output (recording) is essential for turning static neural tissue into an active, interactive computing device.",
-   "next_lesson": "Day 17: Designing closed-loop feedback loops for organoid learning.",
+   "exercise": "Draw a simple flowchart on paper showing a closed-loop cycle. Label the three main steps (Observe, Respond, Measure) and draw arrows showing how information flows from the organoid to the sensors, through the computer, and back to the tissue via stimulation electrodes.",
+   "summary": "Closed-loop experiments connect living organoids to computers in a continuous, real-time loop of observation and targeted response, forming the technical foundation for wetware training.",
+   "next_lesson": "Day 18: Ethical considerations and safety guardrails in wetware computing.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how imagining body movements triggers measurable brain activity changes, and learn how scientists set up experiments to capture these mental rehearsal signals for BCI control.",
-   "why_it_matters": "Motor imagery lets users operate a BCI without moving their physical muscles, opening up crucial communication pathways for individuals with severe physical paralysis.",
+   "objective": "Understand event-related potentials and how the P300 brain wave is used to build choice-based BCI communication systems.",
+   "why_it_matters": "Unlike motor imagery that requires continuous rhythmic focus, the P300 paradigm allows users to select items from a grid simply by paying attention to a specific target as it flashes, creating an accessible spelling interface for individuals with severe physical impairments.",
    "prerequisites": [
-    "Basic knowledge of EEG brain rhythms (alpha and beta bands)",
-    "Understanding of event-related desynchronization (ERD) where brain wave power drops during active mental states"
+    "Basic awareness that brain activity can be recorded over time on an EEG device",
+    "Understanding that raw EEG contains random background noise requiring trial averaging to reveal hidden signals"
    ],
-   "simple_explanation": "When you actually move your right hand, specific regions of your brain control that action. Surprisingly, just vividly imagining moving that same hand without actually doing it triggers very similar brain wave drops in those exact same regions. BCI systems monitor these mental practice sessions to figure out what the user wants to do.",
+   "simple_explanation": "Imagine looking at a grid of letters that flash randomly. When the specific letter you want to select flashes, your brain instantly registers a wave of surprise or recognition. This specific brain response happens about three hundred milliseconds after the flash, which is why scientists call it the P300.",
    "step_by_step": [
-    "Define the goal: Choose a specific motor imagery action, such as imagining moving the left hand, right hand, or both feet.",
-    "Set up a cue-based experiment: Display visual or auditory cues on a screen to tell the user when to rest and when to start imagining the movement.",
-    "Record the signals: Use an EEG cap to capture electrical activity across the motor cortex during the cue periods.",
-    "Detect the pattern: Watch for a drop in wave power (ERD) over the correct side of the brain to identify which limb the user is imagining."
+    "Present the user with a matrix of choices, such as letters or icons on a computer screen.",
+    "Flash rows and columns of the matrix in a rapid, randomized sequence.",
+    "Record the continuous EEG signal from the scalp, focusing on parietal regions where the response is strongest.",
+    "Time-lock the recorded EEG data to the exact moment each flash occurs.",
+    "Average multiple flashes of the same item together to cancel out background brain noise and reveal the P300 peak.",
+    "Classify which row and column triggered the strongest P300 wave, and select the character at their intersection."
    ],
-   "technical_depth": "Motor imagery protocols typically rely on a trial structure consisting of a preparation phase, a warning cue, an imagery execution window (usually 3 to 5 seconds), and a long relaxation break to prevent mental fatigue. Sensors placed over the central sulcus (electrodes like C3, Cz, and C4) are critical because they sit directly over the primary motor and sensory cortices responsible for limb movement representation.",
+   "technical_depth": "Event-related potentials (ERPs) are voltage fluctuations tied in time to a specific sensory or cognitive event. The P300 is a positive deflection occurring roughly 300 to 600 milliseconds post-stimulus. In BCI spellers, it relies on the 'oddball paradigm,' where rare target stimuli (the desired letter flashing) occur infrequently among frequent non-target stimuli (other letters flashing), eliciting a robust P300 wave.",
    "misconceptions": [
-    "Thinking motor imagery creates the exact same strong electrical spikes as real physical movement (it is much weaker and requires specialized filtering)",
-    "Assuming anyone can successfully perform motor imagery without training (it takes practice to maintain steady mental rehearsal without getting distracted)"
+    "Misconception: The user has to physically move or look away to generate a P300. Reality: A user can often detect the flash using covert attention while keeping their eyes fixed on a single point, though overt looking makes it stronger.",
+    "Misconception: A single flash is enough to know what the user wants. Reality: Because background EEG noise is high, a BCI typically needs to average responses across several flashes before making a confident choice."
    ],
    "knowledge_check": [
     {
-     "question": "What happens to the power of specific brain rhythms over the motor cortex during motor imagery?",
-     "answer": "It typically decreases, a phenomenon known as event-related desynchronization (ERD)."
+     "question": "What does P300 stand for?",
+     "answer": "A positive voltage deflection occurring approximately 300 milliseconds after a stimulus."
     },
     {
-     "question": "Why are rest periods included between motor imagery trials in an experiment?",
-     "answer": "To prevent mental fatigue and give the brain a baseline reset before the next cue."
+     "question": "Why is the oddball paradigm important for P300 BCI systems?",
+     "answer": "It uses rare, unexpected target events mixed with frequent non-target events to elicit a distinct brain wave."
     },
     {
-     "question": "Which scalp locations are most important for recording motor imagery signals with EEG?",
-     "answer": "Central electrodes like C3, Cz, and C4, which sit over the motor cortex."
+     "question": "Why do P300 spellers require multiple flashes for a single letter selection?",
+     "answer": "Averaging multiple trials helps cancel out background EEG noise to clearly isolate the P300 signal."
     }
    ],
-   "exercise": "Design a simple five-step protocol on paper for a single-session motor imagery experiment where a participant practices imagining left-hand versus right-hand movement, including timings for cues, imagery windows, and rest breaks.",
-   "summary": "Motor imagery utilizes the brain's natural internal rehearsal pathways to generate detectable wave drops over the motor cortex, forming the behavioral foundation of many non-invasive BCI control schemes.",
-   "next_lesson": "Introduction to common spatial patterns (CSP) for filtering motor imagery data",
+   "exercise": "Design a simple mental grid layout on paper with 4 items. Trace out a sequence of flashes for each item and write down how you would identify a target based on response timing.",
+   "summary": "Event-related potentials track time-locked brain responses, and the P300 wave acts as an effective choice detector by reacting strongly to rare, attended stimuli in a flashing grid.",
+   "next_lesson": "Introduction to SSVEP (steady-state visually evoked potentials) and frequency-tagging BCI control",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Practice a behavioural question using a truthful STAR answer",
-   "explanation": "Interviewers in Indian robotics and embedded firms ask behavioural questions to see how you handle real-world stress, like a hardware bug crashing your demo. The STAR method stands for Situation, Task, Action, and Result. You describe the context, your specific responsibility, the exact steps you took, and the honest outcome without exaggerating.",
-   "practical_example": "Imagine an interviewer asks: 'Tell me about a time your microcontroller prototype failed during a college project.' Instead of panicking or inventing a fake corporate win, you talk about a time your line-following robot's sensor disconnected right before a presentation, and how you systematically soldered a loose wire on the spot.",
-   "exercise": "Write a short STAR response for the question: 'Describe a time a hardware or coding project did not work as planned.' Focus strictly on your personal actions and the honest final outcome.",
-   "model_answer": "Situation: During our college BCI capstone project, our EEG sensor data stream stopped appearing on the laptop screen right before our review. Task: As the firmware lead, I needed to figure out if the issue was in the UART serial communication or the sensor hardware. Action: I used a digital multimeter to check the voltage supply and connected an oscilloscope to verify the TX/RX pin signals, discovering a loose jumper wire. Result: I re-seated the wire, verified the baud rate in code, and restored the data stream within ten minutes.",
-   "why_it_works": "It avoids vague claims and focuses on a concrete technical challenge. Breaking the response into Situation, Task, Action, and Result keeps your story structured and easy for the interviewer to follow.",
-   "improvement_tip": "Keep the Situation and Task under 20 percent of your total speaking time so you can spend most of your energy explaining your specific Actions.",
+   "topic": "Review a datasheet and find voltage, current and timing limits",
+   "explanation": "A datasheet is the manufacturer manual for an electronic component, like a motor driver or microchip used in robotics and BCI hardware. Before wiring anything to your microcontroller, you must check three crucial limits. Voltage limits tell you the maximum and minimum power the chip can handle without frying. Current limits tell you how much electrical flow the pins can safely supply or accept. Timing limits show how fast signals can switch or how long the chip needs to wake up. Ignoring these values can permanently destroy your hardware prototype.",
+   "practical_example": "Imagine you are building a line-following robot and want to connect a new motor driver chip to your STM32 microcontroller. Instead of guessing, you open the manufacturer datasheet. You check the absolute maximum ratings table and find the logic supply voltage is capped at 3.6V, meaning a 5V pin from an older Arduino would damage it. You also look up the output current limit per channel to ensure your motors will not pull more current than the chip can safely handle.",
+   "exercise": "Find the datasheet for a common component like the L298N motor driver or an ADS1291 bio-potential front-end chip. Locate three specific values: the maximum supply voltage, the maximum continuous output current per channel, and the maximum clock frequency or switching timing limit. Write down where in the document you found each value.",
+   "model_answer": "For the L298N motor driver datasheet: 1) Maximum supply voltage for the logic pins is 7V. 2) Maximum continuous current per output channel is 2A. 3) Enable pin turn-on and turn-off propagation delay timing limits are roughly 1 microsecond.",
+   "why_it_works": "Checking these three categories prevents hardware damage during assembly and ensures your firmware timing matches physical chip capabilities, avoiding erratic behavior during lab testing.",
+   "improvement_tip": "Always search for the 'Absolute Maximum Ratings' table first. Operating near those ceiling values is risky; always look for 'Recommended Operating Conditions' for safe everyday values.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Improve a GitHub README so a recruiter can reproduce the project",
-   "explanation": "When a recruiter or hiring manager clicks your GitHub link from LinkedIn, they want to see if your code actually works and how easily they can set it up. For robotics, BCI, and embedded systems projects, a good README acts as a clear user manual. It tells the reader what hardware is needed, how the software is structured, and how to run the code step by step without guessing.",
-   "practical_example": "Instead of an empty or confusing README, list your microcontroller model, pin connections, required libraries, and clear terminal commands to flash the code or run the simulation.",
-   "exercise": "Open one of your GitHub repositories for a robotics, BCI, or embedded project. Add a clear Hardware Requirements section listing your exact components (such as an ESP32 or EEG headset) and a Getting Started section with step-by-step installation commands.",
-   "model_answer": "## Line Follower Robot\n\n### Hardware Requirements\n- Arduino Uno\n- L298N Motor Driver\n- 2x IR Sensors\n\n### Getting Started\n1. Clone this repository:\n   `git clone https://github.com/username/line-follower.git`\n2. Open `main.ino` in Arduino IDE.\n3. Install the Servo library via Library Manager.\n4. Connect pins as detailed in `circuit-diagram.png` and upload.",
-   "why_it_works": "It saves time for technical recruiters and engineering managers who review many portfolios daily. Clear setup instructions prove that your project is fully functional, well-documented, and ready for real-world application.",
-   "improvement_tip": "Include a short 5-second GIF or video link right at the top of your README showing the physical hardware or simulation moving or responding in action.",
+   "topic": "Choose skills that can be demonstrated with projects or coursework",
+   "explanation": "Many engineering students list a long inventory of random programming languages and tools on their LinkedIn profile without any proof. For fields like robotics, BCI, and embedded systems, recruiters prefer fewer skills that are explicitly backed by a project or coursework item rather than a long, unverified list.",
+   "practical_example": "Instead of listing general tags like C++, Python, MATLAB, ROS, Circuit Design, Machine Learning, and PCB Layout all at once, pick three core skills you have actually used in a tangible college project, such as 'Embedded C', 'STM32 Microcontrollers', and 'UART Communication'.",
+   "exercise": "Review the skills currently listed on your LinkedIn profile. Cross out any skill that you cannot immediately link to a specific college lab assignment, semester project, or GitHub repository.",
+   "model_answer": "Retained skills on profile: Embedded C (backed by my line-following robot project), Arduino IDE (backed by smart sensor coursework), and Circuit Schematics (backed by custom PCB design lab). Removed unsupported buzzwords.",
+   "why_it_works": "Recruiters and technical hiring managers in India screening engineering interns look for alignment between listed skills and verifiable evidence. Matching skills to actual coursework or projects builds instant trust.",
+   "improvement_tip": "As you complete new hands-on projects or university labs, add one corresponding technical skill at a time rather than updating your skills section in bulk.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
    "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
-   "focus": "Growing three-dimensional brain tissue in the lab using stem cells to study how the human brain develops and to understand microcephaly, a condition where the head and brain are smaller than usual.",
-   "explanation": "This research was started because scientists needed a better way to study the human brain. Animal models like mice do not always act or grow like human brains. By growing mini-brains from human stem cells, researchers can watch how brain regions form and test what goes wrong in developmental disorders.",
-   "limits": "The provided abstract was empty, so this explanation relies on general scientific knowledge about this widely known study. Confidence: high.",
-   "check": "No numbers, dates, or specific results were invented.",
+   "focus": "Research design and method",
+   "explanation": "The study uses human stem cells grown in a 3D gel system with a spinning bioreactor to encourage them to form tiny, brain-like structures. This allows scientists to watch how human brain tissue grows and to study microcephaly using cells from an affected patient.",
+   "limits": "Since the Crossref abstract was missing, this explanation relies on general knowledge of the paper's widely known methods, and specific experimental details are not verified from a provided abstract.",
+   "check": {
+    "confidence": "medium"
+   },
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature12517",
    "doi_link": "https://doi.org/10.1038/nature12517",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
    "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
-   "focus": "Systems that let people use brain signals to communicate or operate devices without relying on muscles.",
-   "explanation": "This paper explores the motivation behind brain-computer interfaces, which aim to restore independence and communication for individuals with severe physical disabilities.",
-   "limits": "Because the official abstract was not available in the metadata, this summary relies on general knowledge of the well-established publication.",
+   "focus": "Research design and methods used to study brain-computer interfaces (BCIs).",
+   "explanation": "Because the provided database record did not include an abstract, this relies on general knowledge of the paper. Wolpaw and colleagues outline how BCIs capture brain signals (like EEG), translate them using computer algorithms, and turn them into device commands. They discuss the design of these systems, focusing on signal measurement, feature extraction, and translation algorithms as a closed-loop communication pathway.",
+   "limits": "Since the specific abstract text was unavailable, this description uses general knowledge about the authors' well-known framework rather than exact paper text.",
    "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/S1388-2457(02)00057-3",
    "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "1 of 3",
-   "phase": "Understand the project",
-   "project_name": "moveit/moveit2",
-   "main_language": "C++",
-   "license": "BSD-3-Clause",
-   "summary": "MoveIt 2 is an open-source software platform used for motion planning in robotics, built specifically for the Robot Operating System 2 (ROS 2). It helps developers create commercial applications, test designs, and run algorithms for robot arms and manipulators.",
-   "key_findings": [
-    "It is the successor to the original ROS 1 MoveIt framework.",
-    "Development is primarily led by PickNik Inc, alongside a global community of contributors.",
-    "The project supports multiple ROS 2 distributions such as Humble, Jazzy, and Rolling through specific branch policies."
-   ],
-   "mini_challenge": "Explore the repository's documentation links provided in the README to locate the instructions for installing MoveIt 2 using pre-compiled binaries.",
-   "knowledge_check": "What underlying robotic framework is MoveIt 2 designed to work with?",
+   "investigation_day": "Day 2 of 3",
+   "topic": "How it works",
+   "repository": "moveit/moveit2",
+   "explanation": "MoveIt 2 acts as a software framework designed to handle motion planning for robotic arms and manipulators using ROS 2. Based on the provided files, it relies on automated workflows and continuous integration tools like pre-commit formatting and code coverage tracking to maintain software health across different ROS distributions such as Humble, Jazzy, and Rolling. It manages multiple branches where the main branch handles active development with potential breaking changes, while specific stable branches receive bug fixes. Developers can install the platform either through precompiled binaries or by building it from source code.",
+   "general_knowledge_note": "Motion planning frameworks typically solve inverse kinematics and collision-avoidance problems to safely guide a robot from one point to another, though exact algorithmic details require examining the source code files beyond this README.",
+   "challenge": "Identify which ROS 2 distribution branches are mentioned as stable release branches in the repository policy.",
+   "knowledge_check": "True or False: The main branch of MoveIt 2 is intended exclusively for stable releases with no breaking changes allowed.",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "moveit/moveit2",
     "html_url": "https://github.com/moveit/moveit2",
     "description": ":robot: MoveIt for ROS 2",
-    "pushed_at": "2026-10-28T19:03:40Z",
+    "pushed_at": "2026-11-16T04:52:33Z",
     "language": "C++",
     "archived": false,
     "license": "BSD-3-Clause"
-   }
+   },
+   "day": "2 of 3"
   },
   "news": {
    "items": [
     {
-     "category": "Business",
-     "url": "https://www.therobotreport.com/axon-invests-1-2b-into-skydio-and-becomes-its-u-s-public-safety-distributor/",
-     "what": "Axon is investing $1.2 billion into Skydio and acting as their U.S. distributor for public safety drones.",
-     "who": "Axon and Skydio",
-     "how": "Not stated in the source excerpt. Background (general knowledge): Drone as First Responder programs allow emergency services to deploy drones to incident scenes before human responders arrive.",
-     "why": "To expand Axon\u2019s Drone as First Responder program to public safety agencies across the United States.",
+     "category": "Deployment",
+     "url": "https://spectrum.ieee.org/telesurgery-stroke",
+     "what": "Remote-controlled catheter surgery for stroke treatment.",
+     "who": "Surgeons and patients in remote hospitals.",
+     "how": "A surgeon controls a flexible catheter remotely using a foot pedal and hand controller while viewing progress on a live X-ray. Background (general knowledge): Telesurgery allows specialists to operate on patients located in different geographic areas, potentially improving access to critical care.",
+     "why": "To provide specialized stroke treatment to patients in locations where such expertise might not be physically present.",
      "limits": "Not stated in the source excerpt",
-     "learn": "High",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Axon invests $1.2B into Skydio and becomes its U.S. public safety distributor",
-     "published": "2026-11-10",
-     "source": "The Robot Report"
+     "learn": "Robotics may enable complex medical procedures to be performed across distances.",
+     "title": "Can Robots Bring Stroke Surgery to Remote Hospitals?",
+     "published": "2026-11-16",
+     "source": "IEEE Spectrum Robotics",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     },
     {
      "category": "Industry view",
-     "url": "https://www.therobotreport.com/nvidia-replaces-ceo-amid-china-ai-and-robotics-concerns/",
-     "what": "NVIDIA has appointed Collette Kress as the new CEO and Harvey C. Jones as the board chair.",
-     "who": "NVIDIA, Jensen Huang, Collette Kress, Harvey C. Jones",
-     "how": "Management leadership restructuring.",
-     "why": "The company is facing trade scrutiny regarding AI and robotics concerns in China.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "High",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "NVIDIA replaces CEO amid China AI and robotics concerns",
-     "published": "2026-11-12",
-     "source": "The Robot Report"
+     "url": "https://spectrum.ieee.org/zero-day-robotics-vulnerabilities-vicone-security",
+     "what": "Discovery of 28 zero-day vulnerabilities in robotics software.",
+     "who": "VicOne.",
+     "how": "The company used AI-assisted research to scan software and tools within the Physical AI ecosystem, including projects associated with major tech firms.",
+     "why": "To identify security gaps in the technologies supporting modern robotics.",
+     "limits": "The full impact and specific details of the vulnerabilities are not detailed in the text.",
+     "learn": "The security of robotics infrastructure faces challenges that require rigorous monitoring.",
+     "title": "28 Zero-Day Findings in Under Two Days. Is Robotics Security Keeping Pace?",
+     "published": "2026-11-16",
+     "source": "IEEE Spectrum Robotics",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     },
     {
-     "category": "Deployment",
-     "url": "https://www.therobotreport.com/intel-altera-expand-collaboration-simplify-sensor-integration-physical-ai/",
-     "what": "Intel and Altera are collaborating to streamline how diverse sensors connect and interact with physical AI systems.",
-     "who": "Intel and Altera",
-     "how": "By simplifying the integration process for sensors to help convert raw data into real-time operational insights.",
-     "why": "To make the development of new robotics applications easier and more efficient.",
+     "category": "Business",
+     "url": "https://www.therobotreport.com/agile-robots-raises-500m-to-increase-production-capacity/",
+     "what": "Agile Robots secured $500 million in funding.",
+     "who": "Agile Robots.",
+     "how": "The capital will be used to expand production capacity for their various robotic products.",
+     "why": "To meet the production demands for their humanoids, mobile robots, robotic arms, and hands.",
      "limits": "Not stated in the source excerpt",
-     "learn": "High",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Intel and Altera expand collaboration to simplify sensor integration for physical AI",
-     "published": "2026-11-10",
-     "source": "The Robot Report"
+     "learn": "High levels of capital are being invested to scale the manufacturing of diverse robotic hardware.",
+     "title": "Agile Robots raises $500M to increase production capacity",
+     "published": "2026-11-16",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     }
    ]
   },
   "jobs": {
    "items": [
     {
-     "title": "Software Engineer Intern - Robotics Platform",
+     "title": "Stage - International Supply Chain Specialist (H/F)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Zurich",
-     "published": "2026-11-15",
+     "location": "Issy-les-Moulineaux, France",
+     "published": "2026-11-16",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/gravis-robotics/software-engineer-intern-robotics-platform-zurich-419539",
-     "company": "Gravis Robotics"
+     "url": "https://www.arbeitnow.fr/jobs/companies/withings/stage-international-supply-chain-specialist-h-f-issy-les-moulineaux-194520",
+     "company": "Withings"
     },
     {
-     "title": "AI Integration & Automation Engineer (m/w/d) GER",
+     "title": "Software-Ingenieur:in Robotics",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Remote job",
-     "published": "2026-11-15",
+     "location": "Homeoffice",
+     "published": "2026-11-16",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/customs-support-group/remote-ai-integration-automation-engineer-ger-128389",
-     "company": "Customs Support Group"
-    },
-    {
-     "title": "Embedded Software Entwickler (m/w/d) C++",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Rostock",
-     "published": "2026-11-15",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/angeheuert-gmbh-personalberatung/embedded-software-entwickler-c-rostock-147482",
-     "company": "ANGEHEUERT GmbH Personalberatung"
-    },
-    {
-     "title": "AUTOSAR Embedded Software Engineer (m/w/d)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Koblenz, Germany",
-     "published": "2026-11-15",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/mobileye/autosar-embedded-software-engineer-koblenz-germany-129614",
-     "company": "Mobileye"
+     "url": "https://www.arbeitnow.ch/jobs/companies/cross-ing-ag/remote-software-ingenieurin-robotics-dietlikon-329838",
+     "company": "cross-ING AG"
     },
     {
      "title": "Embedded Software Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Oxford, United Kingdom",
-     "published": "2026-11-15",
+     "location": "Winterthur, Z\u00fcrich, Schweiz",
+     "published": "2026-11-16",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.co.uk/jobs/companies/salience-labs/embedded-software-engineer-oxford-299107",
-     "company": "Salience Labs"
+     "url": "https://www.arbeitnow.ch/jobs/companies/cross-ing-ag/embedded-software-engineer-winterthur-272326",
+     "company": "cross-ING AG"
     },
     {
-     "title": "AIT Test Engineer",
+     "title": "Marketing Automation Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich, Germany",
-     "published": "2026-11-15",
+     "location": "London",
+     "published": "2026-11-16",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/the-exploration-company/ait-test-engineer-munich-148999",
-     "company": "The Exploration Company"
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/cfoinsights/marketing-automation-engineer-london-286463",
+     "company": "Cfoinsights"
     },
     {
-     "title": "Electrical Engineer (Launcher)",
+     "title": "AI Automation Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-15",
+     "location": "London",
+     "published": "2026-11-16",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/electrical-engineer-launcher-paris-181304",
-     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/cfoinsights/ai-automation-engineer-london-87246",
+     "company": "Cfoinsights"
     },
     {
-     "title": "Electrical Engineer (Electronic Warfare)",
+     "title": "Marketing Automation Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-15",
+     "location": "London, England, United Kingdom",
+     "published": "2026-11-16",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/electrical-engineer-electronic-warfare-paris-335488",
-     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/united-media/marketing-automation-engineer-london-134289",
+     "company": "United Media"
     },
     {
-     "title": "Manufacturing Systems Engineer",
+     "title": "AI Automation Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Zurich",
-     "published": "2026-11-15",
+     "location": "London, England, United Kingdom",
+     "published": "2026-11-16",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/gravis-robotics/manufacturing-systems-engineer-zurich-132979",
-     "company": "Gravis Robotics"
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/united-media/ai-automation-engineer-london-379209",
+     "company": "United Media"
     },
     {
-     "title": "Scientific Account Manager, AI & Biotech",
+     "title": "Electrical Engineer II (Integrations)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Lausanne",
-     "published": "2026-11-14",
+     "location": "Manchester, UK",
+     "published": "2026-11-16",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/adaptyv/scientific-account-manager-ai-biotech-lausanne-140471",
-     "company": "Adaptyv"
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/kraken/electrical-engineer-ii-integrations-manchester-361596",
+     "company": "Kraken"
+    },
+    {
+     "title": "Software Test Engineer 80\u2013100%",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Bern",
+     "published": "2026-11-16",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/machinemd/software-test-engineer-80-100-bern-79595",
+     "company": "machineMD"
+    },
+    {
+     "title": "Systems Electrical Engineer (m/w/d) 80-100%",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Dietikon, Z\u00fcrich, Switzerland",
+     "published": "2026-11-16",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/signode/systems-electrical-engineer-80-100-dietikon-258399",
+     "company": "Signode"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
