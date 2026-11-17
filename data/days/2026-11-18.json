@@ -1,0 +1,245 @@
+{
+ "v": 2,
+ "date": "2026-11-18",
+ "generated_at": "2026-11-18T02:53:57.051256+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 821); gemini-flash-lite-latest:503 {   \"error\": {     \"code\": 503,     \"message\": \"This model is currently experiencing high demand. Sp; gemini-flash-lite-latest:503 {   \"error\": {     \"code\": ",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how scientists define and recognize learning in living biological tissue, specifically organoids, from first principles.",
+   "why_it_matters": "Before we can train brain organoids to compute or solve problems, we must establish clear scientific rules for what counts as true learning versus random biological activity.",
+   "prerequisites": [
+    "Basic understanding of neurons firing electrical spikes",
+    "Familiarity with how electrodes record electrical signals from brain tissue"
+   ],
+   "simple_explanation": "In everyday life, learning means changing what we do based on experience. For a living cluster of brain cells, learning means the network permanently alters how it responds to signals because of past stimulation, rather than just reacting randomly or getting tired.",
+   "step_by_step": [
+    "Establish a baseline by observing how the organoid reacts to a standard electrical pulse before any training.",
+    "Deliver a targeted pattern of electrical stimulation over a sustained period, acting as an 'experience'.",
+    "Measure the response again to see if the electrical output paths have structurally or functionally shifted.",
+    "Verify that the altered response persists even after the training stimulation stops, ruling out temporary fatigue or overheating."
+   ],
+   "technical_depth": "In neuroscience, learning is operationalized through enduring modifications in synaptic efficacy, such as long-term potentiation (LTP) or long-term depression (LTD). In organoid intelligence, researchers look for input-dependent changes in spike-timing-dependent plasticity (STDP). Established evidence shows that neural networks can alter firing rates when stimulated, but open questions remain on whether these changes represent true adaptive learning or merely homeostatic recovery from artificial electrical stress.",
+   "misconceptions": [
+    "Misconception: Any change in organoid electrical activity counts as learning. Correction: Temporary changes due to chemical shifts, temperature fluctuations, or cellular fatigue are not learning; learning requires persistent, input-specific adaptation.",
+    "Misconception: Organoids learn the same way humans do. Correction: Organoids lack sensory organs, a body, and a reward system, so their learning relies purely on raw electrical input patterns."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the core requirement for a biological change to be classified as learning?",
+     "answer": "It must be an enduring, input-specific modification in response rather than a temporary fluctuation or fatigue."
+    },
+    {
+     "question": "Why is establishing a baseline important before attempting to measure learning?",
+     "answer": "It provides a reference point of normal, untrained behavior so researchers can isolate changes caused specifically by training stimulation."
+    },
+    {
+     "question": "What is an open question regarding organoid learning versus true cognitive adaptation?",
+     "answer": "Researchers debate whether observed response changes reflect genuine adaptive information processing or simply homeostatic adjustments to stress."
+    }
+   ],
+   "exercise": "Design a simple observation plan: Write down three criteria you would look for in an electrode recording to prove an organoid changed its behavior due to stimulation rather than random chance.",
+   "summary": "Defining biological learning requires proving that neural response changes are persistent, specific to the input received, and distinct from temporary chemical or physical fatigue.",
+   "next_lesson": "Day 19: Translating basic plasticity into functional computing tasks.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how the human visual system responds to flashing lights at steady frequencies and how BCI decoders detect these exact rhythmic brain echoes to select commands.",
+   "why_it_matters": "SSVEP-based systems offer high communication speeds and require almost zero user training compared to motor imagery, making them a cornerstone for practical, accessible assistive tech.",
+   "prerequisites": [
+    "Basic understanding of EEG scalp electrodes over the visual cortex (back of the head)",
+    "Familiarity with the concept of frequency (cycles per second, or Hertz)"
+   ],
+   "simple_explanation": "When you look at a light flickering at a specific rate\u2014say, twelve times a second\u2014your visual cortex naturally starts firing in sync with that exact rhythm. It is like your brain is humming along to a steady musical beat. A computer can record this rhythmic brain activity from the back of your head, check its frequency using math, and instantly figure out which flickering light you are staring at.",
+   "step_by_step": [
+    "1. Setup visual targets: Display several buttons on a screen, with each button flashing at a distinct frequency, such as 10 Hz, 12 Hz, and 15 Hz.",
+    "2. User focus: The user looks directly at one chosen button, ignoring the others in their peripheral vision.",
+    "3. Brain entrainment: Neurons in the visual cortex process the flickering input and fire electrical impulses matching the flash rate.",
+    "4. Signal recording: EEG sensors placed over the occipital lobe capture this continuous neural response.",
+    "5. Frequency matching: Software analyzes the incoming brain wave data to see which target frequency is strongest, translating that match into a device command.",
+    "6. Action execution: The system performs the intended task, like typing a letter or moving a cursor."
+   ],
+   "technical_depth": "The steady-state visual evoked potential is a continuous neural response elicited by periodic visual stimulation at frequencies typically above 6 Hz. Unlike transient evoked potentials that respond to single, isolated flashes, SSVEP produces a sustained waveform containing fundamental frequencies and harmonic components that match the visual stimulus. Decoding algorithms commonly rely on Canonical Correlation Analysis (CCA) or Power Spectral Density analysis to evaluate the correlation between multi-channel EEG signals and reference sine-cosine wave templates at the target frequencies.",
+   "misconceptions": [
+    {
+     "myth": "SSVEP requires the user to perform complex mental imagery or math.",
+     "fact": "It requires no active mental rehearsal; the brain responds automatically simply by looking at the flashing stimulus."
+    },
+    {
+     "myth": "Any flashing rate works equally well for all users.",
+     "fact": "Different individuals have unique visual comfort ranges and optimal frequency sensitivities, and certain flash rates can trigger medical issues like photosensitive epilepsy."
+    }
+   ],
+   "knowledge_check": [
+    {
+     "question": "Where on the scalp are SSVEP signals most strongly detected?",
+     "answer": "Over the occipital lobe at the back of the head, which processes visual information."
+    },
+    {
+     "question": "What core property of the visual stimulus does an SSVEP decoder look for in the brain wave data?",
+     "answer": "The specific frequency (or flash rate) matching the stimulus the user is looking at."
+    },
+    {
+     "question": "Why do SSVEP systems generally require less user training than motor imagery BCI?",
+     "answer": "Because the brain response is an involuntary, natural physiological reaction to visual flickers rather than a learned skill."
+    }
+   ],
+   "exercise": "Design a simple three-option menu interface on paper for an SSVEP BCI. Assign a distinct flicker frequency to each option (e.g., 8 Hz, 11 Hz, and 14 Hz). Write out a short testing protocol describing how you would instruct a user to select the middle option.",
+   "summary": "SSVEP utilizes the brain's natural tendency to echo the rhythm of a flickering visual stimulus, allowing fast and reliable BCI control by matching recorded EEG frequencies to specific on-screen targets.",
+   "next_lesson": "Introduction to Canonical Correlation Analysis (CCA) for detecting multi-channel SSVEP signals",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Explain a Git commit, branch and pull request",
+   "explanation": "When writing firmware for a robotics or brain-computer interface project, version control keeps track of your code changes so you never lose working software. A commit is a saved checkpoint of your files with a short message describing what you changed. A branch is an isolated workspace where you can experiment with a new feature, like adding an interrupt routine, without breaking the main working code. A pull request is a formal request to merge your tested branch back into the main project code after someone reviews it.",
+   "practical_example": "Imagine you are programming a mobile robot to follow a line. The main code on the 'main' branch already handles basic motor control. You want to test a new PID steering loop, so you create a new branch named 'pid-steering'. You make your edits, save them as a commit, and push it to GitHub. Once your robot smoothly tracks the line, you open a pull request to combine your 'pid-steering' code into the 'main' branch.",
+   "exercise": "Write out the three Git commands you would use to: 1) create and switch to a new branch called 'sensor-filter', 2) stage and commit your changed filter code with a message, and 3) push that branch to a remote repository.",
+   "model_answer": "1) git checkout -b sensor-filter, 2) git commit -am \"Add moving average filter for IMU data\", 3) git push origin sensor-filter",
+   "why_it_works": "Using separate branches prevents experimental firmware updates from corrupting stable code that runs your hardware. Commits create a reliable history log, and pull requests allow team members to review your logic before it is merged.",
+   "improvement_tip": "Always write clear, descriptive commit messages starting with a verb, such as \"Fix motor PWM initialization\" instead of a vague note like \"updates\".",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Write a respectful networking message asking for advice",
+   "explanation": "When reaching out to engineers or researchers in robotics, BCI, and embedded systems on LinkedIn, asking for a job or internship right away usually fails. People are busy and prefer helping students who want guidance, feedback, or advice rather than a handout. A good networking message is short, shows you looked at their actual work, and asks a specific, easy-to-answer question about their career path or technical journey.",
+   "practical_example": "Instead of messaging 'Hello Sir, please give me an embedded systems internship in your company,' you can message someone who works on brain-computer interfaces by mentioning a specific open-source library or paper they shared, and asking one targeted question about starting out in that niche in India.",
+   "exercise": "Find one professional on LinkedIn who works in robotics, BCI, or embedded systems in India. Draft a short, four-sentence connection request or message that references a specific project or article they posted, and asks a single question about how they learned a specific tool like ROS or RTOS.",
+   "model_answer": "Hi Rahul, I came across your post sharing your recent open-source ROS2 mobile robot navigation setup. As an engineering student in India learning embedded navigation, I found your breakdown of sensor fusion very helpful. If you have a few minutes to spare, could you share one skill you wish you had focused on earlier when starting out with hardware-software integration?",
+   "why_it_works": "It respects the reader's time by being very brief, proves you actually read their content instead of sending a copy-pasted spam message, and asks for advice rather than demanding a favor or job.",
+   "improvement_tip": "Never attach a resume on the very first cold message unless they explicitly ask for it; keep the focus entirely on building a genuine, low-pressure human connection.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
+   "focus": "Day 3 focuses on the results and figures, showing what the lab-grown brain tissue looks like and what it reveals about development and disease.",
+   "explanation": "Because the paper's abstract is empty in the metadata, general knowledge indicates that the results show these 3D organoids develop distinct brain-like regions. For studying microcephaly, using tissue from an affected patient showed that the organoids grew smaller, largely because neural stem cells divided incorrectly or died too early.",
+   "limits": "Crossref provided no abstract for this DOI, so this summary relies on general scientific knowledge of the publication.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature12517",
+   "doi_link": "https://doi.org/10.1038/nature12517",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Brain\u2013computer interfaces for communication and control (Wolpaw et al., 2002)",
+   "focus": "Results and figures regarding how well users can operate brain-computer interfaces (BCIs).",
+   "explanation": "Because the provided metadata lacks an abstract, general knowledge of this seminal paper indicates it discusses how users learn to control brain signals, such as mu or beta rhythms, to move a cursor on a screen or select letters. The results typically show that users improve their accuracy and speed with practice over time.",
+   "limits": "Specific numerical results, accuracy percentages, and details of individual figures cannot be stated precisely without the full text, as the provided metadata contains no abstract.",
+   "check": "high",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/S1388-2457(02)00057-3",
+   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "investigation_day": "Day 3 of 3",
+   "phase": "Run it in simulation and engineering judgement",
+   "repository": "moveit/moveit2",
+   "description": "MoveIt for ROS 2 is a popular open-source platform used for robot arm manipulation, testing algorithms, and building commercial robotics applications.",
+   "simulation_and_judgment_notes": "Based on the repository details and documentation links, teams typically test software like MoveIt using robotic simulations before deploying to physical hardware. This helps catch path-planning errors and prevents costly robot collisions safely in a virtual environment.",
+   "small_challenge": "Try to locate the installation guide links mentioned in the README to see what operating systems and ROS distributions are officially supported for setting up a local development workspace.",
+   "knowledge_check": "What is the primary robotics framework that MoveIt 2 is built to integrate with, according to the provided text?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "moveit/moveit2",
+    "html_url": "https://github.com/moveit/moveit2",
+    "description": ":robot: MoveIt for ROS 2",
+    "pushed_at": "2026-11-17T20:28:15Z",
+    "language": "C++",
+    "archived": false,
+    "license": "BSD-3-Clause"
+   },
+   "day": "3 of 3"
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Deployment",
+     "url": "https://spectrum.ieee.org/telesurgery-stroke",
+     "what": "Remote-controlled catheter surgery for stroke treatment.",
+     "who": "Surgeons and patients in remote hospitals.",
+     "how": "A surgeon controls a flexible catheter remotely using a foot pedal and hand controller while viewing progress on a live X-ray. Background (general knowledge): Telesurgery allows specialists to operate on patients located in different geographic areas, potentially improving access to critical care.",
+     "why": "To provide specialized stroke treatment to patients in locations where such expertise might not be physically present.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Robotics may enable complex medical procedures to be performed across distances.",
+     "title": "Can Robots Bring Stroke Surgery to Remote Hospitals?",
+     "published": "2026-11-16",
+     "source": "IEEE Spectrum Robotics",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Industry view",
+     "url": "https://spectrum.ieee.org/zero-day-robotics-vulnerabilities-vicone-security",
+     "what": "Discovery of 28 zero-day vulnerabilities in robotics software.",
+     "who": "VicOne.",
+     "how": "The company used AI-assisted research to scan software and tools within the Physical AI ecosystem, including projects associated with major tech firms.",
+     "why": "To identify security gaps in the technologies supporting modern robotics.",
+     "limits": "The full impact and specific details of the vulnerabilities are not detailed in the text.",
+     "learn": "The security of robotics infrastructure faces challenges that require rigorous monitoring.",
+     "title": "28 Zero-Day Findings in Under Two Days. Is Robotics Security Keeping Pace?",
+     "published": "2026-11-16",
+     "source": "IEEE Spectrum Robotics",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/agile-robots-raises-500m-to-increase-production-capacity/",
+     "what": "Agile Robots secured $500 million in funding.",
+     "who": "Agile Robots.",
+     "how": "The capital will be used to expand production capacity for their various robotic products.",
+     "why": "To meet the production demands for their humanoids, mobile robots, robotic arms, and hands.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High levels of capital are being invested to scale the manufacturing of diverse robotic hardware.",
+     "title": "Agile Robots raises $500M to increase production capacity",
+     "published": "2026-11-16",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Embedded & Firmware QA Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Amsterdam, Noord-Holland, Netherlands",
+     "published": "2026-11-17",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/aquablu-bv/embedded-firmware-qa-engineer-amsterdam-238168",
+     "company": "Aquablu B.V"
+    },
+    {
+     "title": "Marketing Automation Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "London",
+     "published": "2026-11-17",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/privateequityinsights/marketing-automation-engineer-london-385435",
+     "company": "Privateequityinsights"
+    },
+    {
+     "title": "AI Automation Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "London",
+     "published": "2026-11-17",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.co.uk/jobs/companies/privateequityinsights/ai-automation-engineer-london-337100",
+     "company": "Privateequityinsights"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
