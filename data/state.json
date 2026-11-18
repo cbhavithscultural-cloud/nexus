@@ -1,20 +1,20 @@
 {
- "oi": 18,
- "bci": 18,
+ "oi": 19,
+ "bci": 19,
  "po": [
   3,
-  4
+  5
  ],
  "pb": [
   3,
-  4
+  5
  ],
  "gh": [
   6,
-  1
+  2
  ],
- "ip": 18,
- "li": 18,
+ "ip": 19,
+ "li": 19,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -85,6 +85,9 @@
   "https://www.therobotreport.com/intel-altera-expand-collaboration-simplify-sensor-integration-physical-ai/",
   "https://spectrum.ieee.org/telesurgery-stroke",
   "https://spectrum.ieee.org/zero-day-robotics-vulnerabilities-vicone-security",
-  "https://www.therobotreport.com/agile-robots-raises-500m-to-increase-production-capacity/"
+  "https://www.therobotreport.com/agile-robots-raises-500m-to-increase-production-capacity/",
+  "https://www.therobotreport.com/boston-dynamics-atlas-humanoid-lands-first-non-automotive-trial/",
+  "https://robohub.org/robot-swarms-trained-by-trial-and-error-in-simulation-keep-working-on-real-robots/",
+  "https://www.therobotreport.com/rockwell-automation-acquiring-mobile-robot-maker-agilox/"
  ]
 }
