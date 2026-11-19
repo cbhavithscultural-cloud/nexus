@@ -1,17 +1,17 @@
 {
  "v": 2,
  "date": "2026-11-20",
- "generated_at": "2026-11-20T02:52:03.627806+05:30",
+ "generated_at": "2026-11-20T04:38:04.201948+05:30",
  "status": {
-  "oi_lesson": "ok",
-  "bci_lesson": "ok",
-  "internship": "ok",
-  "linkedin": "ok",
-  "oi_paper": "ok",
-  "bci_paper": "ok",
-  "github": "ok",
-  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 909); gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 803); gemini-3.1-flash-lite:Extra data: line 11 column 4 (char 869); gemini-2.5-flash-lite:404 {   \"error\": {     \"code\": 404, ",
-  "jobs": "ok"
+  "oi_lesson": "ok (reused from today's successful run)",
+  "bci_lesson": "ok (reused from today's successful run)",
+  "internship": "ok (reused from today's successful run)",
+  "linkedin": "ok (reused from today's successful run)",
+  "oi_paper": "ok (reused from today's successful run)",
+  "bci_paper": "ok (reused from today's successful run)",
+  "github": "ok (reused from today's successful run)",
+  "news": "ok",
+  "jobs": "ok (reused from today's successful run)"
  },
  "sections": {
   "oi_lesson": {
@@ -162,46 +162,46 @@
   "news": {
    "items": [
     {
-     "category": "Deployment",
-     "url": "https://www.therobotreport.com/boston-dynamics-atlas-humanoid-lands-first-non-automotive-trial/",
-     "what": "Boston Dynamics is testing its Atlas humanoid robot at a semiconductor factory.",
-     "who": "Boston Dynamics and an unnamed major semiconductor manufacturer.",
-     "how": "The robot will undergo performance trials in a real-world environment outside of the car manufacturing sector. Background (general knowledge): Humanoid robots are designed to mimic human movement to perform tasks in spaces originally built for people.",
-     "why": "To expand the use of humanoid robots beyond automotive industries.",
-     "limits": "The trial is scheduled for early 2027.",
-     "learn": "Not stated in the source excerpt",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Boston Dynamics\u2019 Atlas humanoid lands first non-automotive trial",
-     "published": "2026-11-17",
-     "source": "The Robot Report"
-    },
-    {
      "category": "Research",
-     "url": "https://robohub.org/robot-swarms-trained-by-trial-and-error-in-simulation-keep-working-on-real-robots/",
-     "what": "Researchers successfully trained robot swarms in a virtual environment that still function correctly when transferred to physical hardware.",
-     "who": "Not stated in the source excerpt",
-     "how": "Using reinforcement learning where robots learn tasks through repeated trial and error inside a computer program. Background (general knowledge): The 'reality gap' refers to the difficulty of getting AI trained in software to behave the same way in the unpredictable physical world.",
-     "why": "To overcome the 'reality gap' that usually causes simulated training to fail when applied to real machines.",
-     "limits": "Reinforcement learning is traditionally sensitive to differences between simulations and physical reality.",
-     "learn": "Not stated in the source excerpt",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Robot swarms trained by trial and error in simulation keep working on real robots",
-     "published": "2026-11-17",
-     "source": "Robohub"
+     "url": "https://robohub.org/soft-exosuit-makes-it-easier-to-stand-up/",
+     "what": "A soft wearable robotic suit designed to assist people with standing up and moving.",
+     "who": "Professor Lorenzo Masia's lab",
+     "how": "Background (general knowledge): Soft exosuits use flexible materials and actuators to supply assistive torque in sync with human joints, easing muscle effort. In the excerpt, they assist hip and leg strength and coordination.",
+     "why": "To help older people, individuals with medical conditions, and industrial workers managing heavy tasks move and rise from chairs more easily.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Declining strength and coordination in the hips and legs can make rising from a chair difficult, which wearable exoskeletons can help address.",
+     "title": "Soft exosuit makes it easier to stand up",
+     "published": "2026-11-19",
+     "source": "Robohub",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     },
     {
-     "category": "Business",
-     "url": "https://www.therobotreport.com/rockwell-automation-acquiring-mobile-robot-maker-agilox/",
-     "what": "Rockwell Automation is purchasing the mobile robot company AGILOX.",
-     "who": "Rockwell Automation and AGILOX.",
-     "how": "Through a corporate acquisition agreement. Background (general knowledge): Large automation companies often buy smaller specialized firms to integrate new technology like mobile navigation into their existing factory systems.",
-     "why": "To grow the company's mobile robotics portfolio following a previous purchase of OTTO Motors in 2023.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "Not stated in the source excerpt",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Rockwell Automation acquiring mobile robot maker AGILOX",
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/california-dmv-bars-waymo-avs-from-operating-on-the-states-freeways/",
+     "what": "A regulatory ban preventing autonomous vehicles from driving on California freeways.",
+     "who": "California DMV and Waymo",
+     "how": "The California DMV issued a restriction after evaluating freeway operations and safety records.",
+     "why": "The DMV found freeway operations to pose an imminent hazard to public safety because of repeated incursions by the autonomous vehicles.",
+     "limits": "Applies to freeway driving in California; broader operational limitations are not stated in the source excerpt.",
+     "learn": "Autonomous driving systems still face serious regulatory and safety hurdles during high-speed highway operations.",
+     "title": "California DMV bars Waymo AVs from operating on the state\u2019s freeways",
      "published": "2026-11-18",
-     "source": "The Robot Report"
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/what-industrial-drone-deployments-reveal-about-real-world-autonomy-challenges/",
+     "what": "An analysis of key engineering challenges faced when deploying autonomous drones in industrial environments.",
+     "who": "The Robot Report",
+     "how": "Background (general knowledge): Autonomous drone navigation relies on combining various sensors (like cameras, LiDAR, and GPS) and algorithms to map surroundings and track location without human intervention. In the excerpt, the challenges highlighted include GNSS reliability, SLAM, sensor fusion, obstacle avoidance, and UAV validation.",
+     "why": "To understand the technical obstacles hindering reliable real-world autonomous drone operations.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Achieving reliable autonomy in aerial robotics requires solving multiple interrelated engineering problems, including sensor fusion and obstacle avoidance.",
+     "title": "What industrial drone deployments reveal about real-world autonomy challenges",
+     "published": "2026-11-19",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     }
    ]
   },
