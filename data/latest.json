@@ -1,159 +1,164 @@
 {
  "v": 2,
- "date": "2026-11-20",
- "generated_at": "2026-11-20T04:38:04.201948+05:30",
+ "date": "2026-11-21",
+ "generated_at": "2026-11-21T07:11:37.765154+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
   "news": "ok",
-  "jobs": "ok (reused from today's successful run)"
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand foundational statistical concepts used to evaluate biological experiments in organoid intelligence.",
-   "why_it_matters": "Brain organoids naturally vary in size, cell count, and electrical activity. Statistics help researchers separate true biological signals from random chance.",
+   "objective": "Learn how to read research charts in Organoid Intelligence without falling for exaggerated claims, ensuring conclusions match actual data.",
+   "why_it_matters": "When studying lab-grown brain tissue, it is easy to see patterns that are not really there or assume an organoid is 'thinking' when it is merely reacting to a stimulus. Spotting bad visual evidence protects science from hype.",
    "prerequisites": [
-    "Basic familiarity with brain organoid electrical activity",
-    "Understanding of experimental controls and baselines"
+    "Understanding that brain organoids produce raw electrical spikes.",
+    "Knowing how basic visual charts like raster plots display time and sensor channels."
    ],
-   "simple_explanation": "When you measure brain organoid electrical spikes, no two organoids behave identically. Statistics give us tools like averages and spread to summarize this data honestly and decide if a drug or electrical stimulus actually caused a change.",
+   "simple_explanation": "Scientific papers are full of graphs and pictures. 'Interpreting figures' means carefully looking at what the axes measure and what the control group looks like before believing a claim. 'Avoiding overclaiming' means not saying your organoid can solve math problems just because its electrical activity went up when you added sugar.",
    "step_by_step": [
-    "Collect raw electrical measurements from multiple organoid samples under identical conditions.",
-    "Calculate central tendencies, such as the mean (average) or median, to find the typical response.",
-    "Calculate measures of spread, like standard deviation, to see how much individual organoids vary from that average.",
-    "Use hypothesis testing to determine if the difference between a treated organoid and a control organoid is statistically significant rather than a fluke."
+    "Step 1: Always check the X-axis and Y-axis labels on any graph to see what is actually being measured, such as time versus voltage.",
+    "Step 2: Look for the control group. If an organoid shows high activity after a test, compare it to a resting organoid to see if it is just normal background noise.",
+    "Step 3: Read the figure caption carefully to see how many times the experiment was repeated.",
+    "Step 4: Separate what the data shows (e.g., 'neurons fired faster') from what it means (e.g., 'the tissue learned a task')."
    ],
-   "technical_depth": "Biological data often requires distinguishing between parametric tests (which assume a normal bell-curve distribution) and non-parametric tests (which do not). Because organoid cultures can yield skewed spike-rate distributions, choosing the correct test prevents false conclusions. Furthermore, researchers must account for multiple comparisons when testing many electrodes simultaneously to avoid false positives.",
+   "technical_depth": "Researchers evaluate organoid claims by looking at statistical significance, signal-to-noise ratios, and reproducibility across different tissue samples. Established evidence shows organoids generate spontaneous network bursts and respond to chemical or electrical inputs. Open questions remain regarding where to draw the line between a basic physical response to a stimulus and genuine cognitive processing, making cautious interpretation mandatory.",
    "misconceptions": [
-    "A statistically significant result means the effect is large or important (it only means it is unlikely to be due to random chance).",
-    "All organoid data fits a neat bell curve by default."
+    "Misconception: If a chart has a sharp upward spike, the organoid must be learning something complex. Reality: Spikes can happen due to random cell firing, temperature shifts, or mechanical vibrations.",
+    "Misconception: A pretty microscopy photo proves the organoid functions like a human brain. Reality: Images only show structure, not real-time thought or computation."
    ],
    "knowledge_check": [
     {
-     "question": "Why do we need statistics in organoid experiments?",
-     "answer": "To account for natural variation between different organoid samples and separate real effects from random noise."
+     "question": "What is the first thing you should check when looking at a research graph?",
+     "answer": "The axis labels to see what is being measured."
     },
     {
-     "question": "What does standard deviation measure?",
-     "answer": "It measures how spread out the data points are from the average."
+     "question": "Why are control groups important when interpreting a figure?",
+     "answer": "They help you determine if a change is caused by your experiment or just random background noise."
     },
     {
-     "question": "Does a statistically significant result automatically mean a large biological impact?",
-     "answer": "No, it only means the finding is unlikely to be a coincidence."
+     "question": "What is overclaiming in organoid research?",
+     "answer": "Stating that a simple electrical reaction means the tissue is thinking or learning a complex task."
     }
    ],
-   "exercise": "Review a mock dataset of spike counts from five control organoids and five treated organoids. Calculate the mean for both groups and note the spread to practice identifying group differences.",
-   "summary": "Basic statistics provide the mathematical rules needed to measure organoid activity accurately, manage biological variability, and validate experimental findings.",
-   "next_lesson": "Day 21: Introduction to machine learning for decoding neural signals.",
+   "exercise": "Find a science news article about brain research online, locate the graph or image it highlights, and write down three questions you would ask the authors to ensure their claims match their data.",
+   "summary": "Careful figure reading and modest claims keep Organoid Intelligence grounded in real, verifiable biology rather than science fiction hype.",
+   "next_lesson": "Day 22: Summary and review of foundational organoid intelligence concepts.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how physical electrode materials dictate the trade-offs between signal quality, electrical impedance, and tissue longevity in brain-computer interfaces.",
-   "why_it_matters": "Choosing what a BCI sensor is made of determines how clearly it can 'hear' a neuron and how long the body will tolerate it before treating it as an intruder.",
+   "objective": "Understand why brain-computer interfaces need personal setup steps and how human brains change day by day.",
+   "why_it_matters": "Every human brain is shaped differently and functions with unique electrical patterns. A decoder trained for one user or one specific morning cannot automatically understand a different person or even the same person next week.",
    "prerequisites": [
-    "Basic knowledge of electrical resistance and charge transfer",
-    "Familiarity with intracortical microelectrodes like Utah arrays"
+    "Basic knowledge of brain waves and electrode placement",
+    "Understanding of how machine learning models learn from neural training data"
    ],
-   "simple_explanation": "When a metal sensor touches living brain tissue, it has to convert messy ionic currents from salty biological fluid into clean electrical currents inside a wire. Different metals do this job differently. Some materials are great at picking up tiny signals but wear out quickly, while others last forever but miss subtle brain whispers.",
+   "simple_explanation": "Imagine buying a pair of custom shoes. They fit your feet perfectly, but they will pinch someone else's feet, and they might even feel a bit too tight if your feet swell up by the evening. Brain-computer interface calibration works the same way. Because everyone's skull thickness, brain shape, and daily mental focus shift constantly, a BCI must take a few minutes at the start of each session to learn the user's specific signal patterns for that exact moment.",
    "step_by_step": [
-    "Step 1: Examine the interface where salty brain fluid meets the solid metal electrode.",
-    "Step 2: Understand that signals travel through brain tissue via moving ions, but through wires via moving electrons.",
-    "Step 3: Analyze how high electrical resistance (impedance) blocks tiny signals from passing through.",
-    "Step 4: Explore how coating rigid metals with porous materials creates a larger effective surface area, lowering resistance without making the physical sensor bigger."
+    "Step 1: Put on the headset or sensors, ensuring proper contact and low electrical resistance across all channels.",
+    "Step 2: Run a short calibration routine where the user performs standardized mental tasks, like imagining hand movements or looking at flashing lights, for a few minutes.",
+    "Step 3: Feed these fresh recorded samples into the computer so the math model can adjust its internal decision boundaries to match today's specific brain signals.",
+    "Step 4: Test the newly updated system with a brief practice round to confirm accuracy before starting the main task."
    ],
-   "technical_depth": "The fundamental engineering challenge involves balancing electrochemical impedance and charge injection capacity. Standard bare metals like platinum or tungsten have high impedance at microscopic scales, which increases thermal noise. Coating techniques using materials like Platinum-Iridium or Titanium Nitride reduce impedance by increasing the microscopic surface roughness. However, trade-offs exist: highly porous coatings can delaminate under chronic mechanical stress, leading to signal degradation or chemical toxicity.",
+   "technical_depth": "Neural signals vary across sessions due to minor shifts in electrode position, changes in scalp impedance, physiological fatigue, and natural cognitive state fluctuations. Mathematically, this introduces non-stationary distributions into the data stream. If a classifier relies solely on static boundaries trained on past data, classification accuracy drops sharply. Calibration updates parameters\u2014such as mean vectors or covariance matrices in linear discriminant analysis\u2014to minimize this distribution shift and maintain reliable decoding performance.",
    "misconceptions": [
-    "Misconception: A smaller electrode always captures a more isolated, higher-quality single neuron signal.",
-    "Correction: While smaller tips improve spatial selectivity, they drastically increase electrical impedance and thermal noise, potentially burying the signal entirely."
+    {
+     "myth": "A good BCI system only needs to be calibrated once during its lifetime.",
+     "fact": "Brain signals and sensor positions change every single day, requiring regular updates or adaptive algorithms to maintain high accuracy."
+    },
+    {
+     "myth": "Calibration is just a formality to check if the hardware is working.",
+     "fact": "Calibration actively retrains the software's math rules to match your unique brain activity for that specific session."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What is the primary function of an electrode material at the tissue interface?",
-     "answer": "To convert ionic currents from the brain into electronic currents in a wire."
+     "question": "Why do brain-computer interfaces usually require a calibration phase at the start of a session?",
+     "answer": "Because individual brain patterns, daily mental states, and sensor alignments change constantly over time."
     },
     {
-     "question": "Why is high electrical impedance undesirable for small microelectrodes?",
-     "answer": "High impedance increases thermal noise and can block or distort tiny neural signals."
+     "question": "What happens to a decoding model if you try to use yesterday's training data without adjusting for today's user state?",
+     "answer": "Classification accuracy often drops because brain signal distributions shift between sessions."
     },
     {
-     "question": "What is a major risk associated with porous surface coatings used to lower impedance?",
-     "answer": "They can flake off or delaminate over time inside the living brain tissue."
+     "question": "Name one physical factor that can alter brain wave recordings from day to day.",
+     "answer": "Slight shifts in electrode placement or changes in skin-electrode impedance."
     }
    ],
-   "exercise": "List two competing priorities an engineer faces when selecting a microelectrode material, and explain which one you would prioritize for a short-term recording versus a long-term implant.",
-   "summary": "Electrode materials bridge the gap between biological ions and digital electronics, forcing engineers to balance electrical clarity against physical durability and biocompatibility.",
-   "next_lesson": "Introduction to neural tissue response and foreign body reactions",
+   "exercise": "Spend 5 minutes listing three reasons why your own physical focus and alertness change throughout the day, and note how those changes might affect the clarity of your brain wave signals.",
+   "summary": "BCI calibration bridges the gap between general algorithms and individual human variation, ensuring that day-to-day changes in brain signals and hardware placement do not ruin system accuracy.",
+   "next_lesson": "Introduction to adaptive decoders and online learning in BCI",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Mock interview: explain one design decision and its trade-offs",
-   "explanation": "In an embedded systems or robotics interview, you will often be asked why you chose a specific hardware or software approach. A design decision is a conscious choice between alternatives, and every choice involves a trade-off\u2014giving up one benefit to gain another. For example, choosing a higher sampling rate for a brain-computer interface signal gives you better temporal detail, but it consumes more processor time and memory.",
-   "practical_example": "Imagine you are designing the firmware for a wheeled delivery robot. You need to decide how to read data from your wheel encoders: use hardware interrupts or polling inside a loop. Choosing interrupts means the microcontroller reacts instantly to every encoder tick, ensuring high accuracy, but it consumes more CPU overhead and risks missing other tasks if ticks arrive too fast.",
-   "exercise": "Write down a one-sentence design decision you made in a past project (e.g., choosing I2C over SPI for a sensor), and list one major advantage and one major disadvantage of that choice.",
-   "model_answer": "In my line-following robot project, I chose to use a simple thresholding algorithm instead of a complex neural network to detect the track line. The trade-off was that while it lacked adaptability to changing lighting conditions, it ran instantly on a basic 8-bit microcontroller with zero training time and minimal memory usage.",
-   "why_it_works": "It shows the interviewer that you think critically about engineering constraints rather than just picking the flashiest technology, which is essential for resource-limited embedded hardware.",
-   "improvement_tip": "Avoid stating that your choice was 'better' or 'perfect'. Always explicitly acknowledge what you sacrificed to make your chosen benefit possible.",
+   "topic": "Read an embedded-systems internship description and extract required skills",
+   "explanation": "Job descriptions for robotics and embedded systems internships list specific technical requirements that companies look for in candidates. Instead of reading them passively, you should scan the text to separate 'must-have' firmware or hardware skills from 'nice-to-have' extras, helping you tailor your resume and study focus.",
+   "practical_example": "Imagine looking at a junior embedded firmware role in Bengaluru. The post mentions: 'Experience with STM32 microcontrollers, writing I2C and SPI drivers in C, reading hardware datasheets, and basic Git usage.' The core technical skills to highlight on your resume are C programming, bare-metal peripheral configuration, and version control.",
+   "exercise": "Take a real internship post for an embedded or robotics role in India. Highlight three hard technical requirements and two tool or software requirements mentioned in the text.",
+   "model_answer": "1. Hard technical requirements: C programming, understanding of UART/I2C protocols, and debugging with an oscilloscope. 2. Tool requirements: Git for version control and STM32CubeIDE for firmware development.",
+   "why_it_works": "Breaking down a job description prevents you from getting overwhelmed by long paragraphs and shows you precisely which hands-on projects or coursework to put at the top of your resume.",
+   "improvement_tip": "Do not just look for software languages; actively scan for specific hardware platforms, communication protocols, or testing equipment mentioned in the post.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Explain a technical challenge and how you debugged it",
-   "explanation": "When discussing hardware or low-level software projects on LinkedIn, recruiters want to see how you think when things break, not just when they work. In robotics and embedded systems, pointing out a specific obstacle like an unexpected sensor noise issue or an I2C communication failure and walking through your troubleshooting logic shows practical engineering maturity.",
-   "practical_example": "Instead of saying 'fixed a bug in the motor code,' explain the symptom, your diagnostic steps, and the fix: 'Motors kept jittering during autonomous turns. Used a logic analyzer to check the PWM signal, found a loose ground wire causing voltage drops, and secured the connection.'",
-   "exercise": "Write a three-sentence LinkedIn post update or project note about a hardware or coding bug you faced in a recent embedded or robotics lab, detailing the symptom, the troubleshooting tool or method you used, and the final fix without using fake performance metrics.",
-   "model_answer": "During my line-follower robot lab, the microcontroller kept resetting unexpectedly whenever the DC motors started spinning. I used a multimeter to check the voltage rails and discovered power sags caused by shared lines. I added an external battery pack to isolate the motor power supply from the logic board, which completely stopped the random reboots.",
-   "why_it_works": "It highlights real troubleshooting methodology by naming the specific symptoms, the diagnostic tool used, and the actual physical or logical correction made, which demonstrates hands-on engineering competence to recruiters.",
-   "improvement_tip": "Avoid vague statements like 'solved a hardware issue.' Always mention one specific tool or test step, such as checking serial monitor logs, using an oscilloscope, or inspecting wiring.",
+   "topic": "Organize project photos, diagrams and code links professionally",
+   "explanation": "When showcasing robotics, BCI, and embedded systems projects on LinkedIn, visual proof and organized code links matter immensely. Recruiters want to see clear system block diagrams, wiring setups, or short workflow clips rather than messy folders or dead repository links. Presenting your media cleanly proves you build tangible, structured hardware and software.",
+   "practical_example": "Instead of uploading a blurry video of a robotic arm moving or a wall of code with no context, you can organize a LinkedIn project entry with three distinct items: a clean circuit schematic diagram, a short animated clip of the motor calibration test, and a specific GitHub repository link for the inverse kinematics script.",
+   "exercise": "Review one of your current embedded systems or robotics projects on LinkedIn. Check if your media includes a clear diagram or photo of the physical build and ensure your code link points directly to the relevant repository rather than your general GitHub profile.",
+   "model_answer": "For my Arduino-based obstacle-avoidance robot project, I added three structured links in the media section: a Fritzing wiring diagram showing the sensor and motor driver connections, a 10-second GIF demonstrating the ultrasonic sensor response, and a direct link to the GitHub repository containing the C++ movement algorithms.",
+   "why_it_works": "Recruiters and engineering hiring managers rarely have time to hunt for relevant files. Providing a neat mix of diagrams, short visual proofs, and direct code links lets them verify your technical competence in seconds without digging through disorganized repositories.",
+   "improvement_tip": "Always label your media files clearly before uploading them (for example, use 'system-architecture-diagram.png' instead of 'img_001.png') so viewers instantly know what they are looking at.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "Cerebral organoids model human brain development and microcephaly (Lancaster 2013)",
-   "focus": "Growing tiny, three-dimensional brain-like structures in the lab using human stem cells to study how the brain develops and to model a condition called microcephaly (abnormally small head).",
-   "explanation": "Scientists used special gel and rotating liquid environments to help human stem cells grow into complex tissue that resembles different parts of the early human brain. By using cells from a patient with microcephaly, they could see how the condition affects brain growth firsthand.",
-   "limits": "These organoids are still very simple compared to a real human brain, lack blood vessels, and cannot fully replicate all human brain functions. The abstract was missing from the metadata, so general scientific knowledge of this published work was used.",
-   "check": "1. What did scientists grow in the lab? 2. What condition did they model using patient cells? 3. Why are these growing tissues still limited compared to a real brain?",
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
+   "focus": "Exploring if human and mouse brain cells grown in a lab can learn to play a simple computer game when connected to it.",
+   "explanation": "Scientists wanted to see if living brain cells outside of a body could adapt their electrical activity based on feedback from a digital environment, specifically a virtual version of the game Pong.",
+   "limits": "The provided metadata abstract was empty, so this explanation relies on general scientific knowledge of the study rather than the specific text of the abstract.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1038/nature12517",
-   "doi_link": "https://doi.org/10.1038/nature12517",
-   "day": "5 of 5",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "1 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Brain-computer interfaces for communication and control (Wolpaw 2002)",
-   "focus": "How brain-computer interfaces (BCIs) let people control external devices using brain signals instead of muscles.",
-   "explanation": "Since the abstract was missing, general knowledge shows this paper explains the basic loop of a BCI: measuring brain activity, turning it into digital commands, and using those commands to run a computer or wheelchair.",
-   "limits": "The provided metadata did not include an abstract, so this summary relies on general knowledge of the paper rather than specific text.",
-   "check": {
-    "question_1": "What is the main goal of a brain-computer interface according to this study?",
-    "answer_1": "To provide communication and control options for people without using normal muscle pathways.",
-    "question_2": "Why was general knowledge used for this summary?",
-    "answer_2": "Because the provided database entry did not include an abstract.",
-    "question_3": "Who are some of the authors listed in the metadata?",
-    "answer_3": "Wolpaw, Birbaumer, McFarland, Pfurtscheller, and Vaughan."
-   },
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
+   "focus": "Testing if a brain-computer interface can let a person with paralysis move external objects using their thoughts.",
+   "explanation": "This research was done because people with severe paralysis often lose the ability to use their hands and arms. Scientists wanted to see if tiny sensors placed on the brain could pick up brain signals and translate them into computer commands, giving patients a new way to interact with the world. Because the official abstract text was missing from the database, this explanation relies on general background knowledge of the study's known goals.",
+   "limits": "The original abstract was not provided in the metadata, so specific background details rely on general knowledge rather than the paper's exact wording.",
+   "check": "medium",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1016/S1388-2457(02)00057-3",
-   "doi_link": "https://doi.org/10.1016/S1388-2457(02)00057-3",
-   "day": "5 of 5",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "1 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "2 of 3",
+   "day": "3 of 3",
    "project_name": "ros-navigation/navigation2",
-   "investigation_focus": "How it works",
-   "explanation": "Based on the provided repository details and the README file, Nav2 (ROS 2 Navigation Framework and System) is built to help robots navigate autonomously. It relies heavily on C++ and is actively tested and built across multiple ROS distributions (such as humble, jazzy, and lyrical) using continuous integration tools. General knowledge suggests that a navigation framework like this typically works by taking sensor data to map an environment, planning a safe path from a starting point to a destination, and sending movement commands to the robot's motors while avoiding obstacles.",
+   "phase": "Run it in simulation and engineering judgement",
+   "summary": "On the final day of the project investigation, the focus shifts to understanding how the navigation framework operates in simulated environments and applying professional engineering assessment to its readiness, structure, and sponsor backing.",
+   "simulation_and_testing_notes": "While actual code execution cannot be independently verified from static metadata alone, the project provides extensive configuration guides, setup tutorials, and continuous integration badges indicating active testing workflows for multiple ROS distributions.",
+   "engineering_judgement": {
+    "strengths": "The repository is actively maintained, heavily backed by prominent industry sponsors (such as Nvidia, AMD, and Dexory), and supplies extensive documentation covering concepts, plugins, and migration paths.",
+    "considerations": "The license field is marked as NOASSERTION, meaning users must carefully review individual source files for precise licensing terms before commercial deployment."
+   },
+   "small_challenge": "Review the documentation links provided in the README and identify which guide you would use first if you were setting up a robot for the very first time.",
+   "knowledge_check": "True or False: The Nav2 project relies completely on community volunteers with no commercial or corporate sponsor backing.",
+   "knowledge_check_answer": "False. The README explicitly lists several major corporate sponsors and highlights Open Navigation LLC for providing professional leadership and maintenance support.",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
-   "challenge": "Explore the official documentation links listed in the README to find out how Nav2 handles obstacle avoidance and path planning.",
-   "knowledge_check": "What primary programming language is used for the Navigation2 repository based on the verified metadata?",
    "verified_metadata": {
     "full_name": "ros-navigation/navigation2",
     "html_url": "https://github.com/ros-navigation/navigation2",
     "description": "ROS 2 Navigation Framework and System",
-    "pushed_at": "2026-11-19T18:37:14Z",
+    "pushed_at": "2026-11-20T22:20:17Z",
     "language": "C++",
     "archived": false,
     "license": "NOASSERTION"
@@ -163,121 +168,103 @@
    "items": [
     {
      "category": "Research",
-     "url": "https://robohub.org/soft-exosuit-makes-it-easier-to-stand-up/",
-     "what": "A soft wearable robotic suit designed to assist people with standing up and moving.",
-     "who": "Professor Lorenzo Masia's lab",
-     "how": "Background (general knowledge): Soft exosuits use flexible materials and actuators to supply assistive torque in sync with human joints, easing muscle effort. In the excerpt, they assist hip and leg strength and coordination.",
-     "why": "To help older people, individuals with medical conditions, and industrial workers managing heavy tasks move and rise from chairs more easily.",
+     "url": "https://spectrum.ieee.org/video-friday-morphing-robots-quadrotor",
+     "what": "A drone capable of changing its shape to navigate narrow, restricted gaps.",
+     "who": "Not stated in the source excerpt",
+     "how": "The robot uses a morphing mechanism to squeeze itself. Background (general knowledge): Morphing allows robots to physically adapt their structure to handle environmental constraints that fixed-frame robots cannot pass through.",
+     "why": "To allow drones to fly through tight spaces they would normally be unable to traverse.",
      "limits": "Not stated in the source excerpt",
-     "learn": "Declining strength and coordination in the hips and legs can make rising from a chair difficult, which wearable exoskeletons can help address.",
-     "title": "Soft exosuit makes it easier to stand up",
-     "published": "2026-11-19",
-     "source": "Robohub",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
+     "learn": "Not stated in the source excerpt",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Video Friday: Drone Squeezes Itself to Fit Through Tight Spaces",
+     "published": "2026-11-20",
+     "source": "IEEE Spectrum Robotics"
     },
     {
-     "category": "Deployment",
-     "url": "https://www.therobotreport.com/california-dmv-bars-waymo-avs-from-operating-on-the-states-freeways/",
-     "what": "A regulatory ban preventing autonomous vehicles from driving on California freeways.",
-     "who": "California DMV and Waymo",
-     "how": "The California DMV issued a restriction after evaluating freeway operations and safety records.",
-     "why": "The DMV found freeway operations to pose an imminent hazard to public safety because of repeated incursions by the autonomous vehicles.",
-     "limits": "Applies to freeway driving in California; broader operational limitations are not stated in the source excerpt.",
-     "learn": "Autonomous driving systems still face serious regulatory and safety hurdles during high-speed highway operations.",
-     "title": "California DMV bars Waymo AVs from operating on the state\u2019s freeways",
-     "published": "2026-11-18",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
+     "category": "Business",
+     "url": "https://www.therobotreport.com/humyn-labs-raises-47m-to-collect-real-world-data-for-robotics/",
+     "what": "Humyn Labs secured $47 million in funding to focus on collecting real-world operational data.",
+     "who": "Humyn Labs",
+     "how": "They provide data sets gathered from real-world operations to support developers of frontier AI and world models.",
+     "why": "To provide essential training data for robotics companies and AI developers.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Not stated in the source excerpt",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Humyn Labs raises $47M to collect real-world data for robotics",
+     "published": "2026-11-19",
+     "source": "The Robot Report"
     },
     {
-     "category": "Industry view",
-     "url": "https://www.therobotreport.com/what-industrial-drone-deployments-reveal-about-real-world-autonomy-challenges/",
-     "what": "An analysis of key engineering challenges faced when deploying autonomous drones in industrial environments.",
-     "who": "The Robot Report",
-     "how": "Background (general knowledge): Autonomous drone navigation relies on combining various sensors (like cameras, LiDAR, and GPS) and algorithms to map surroundings and track location without human intervention. In the excerpt, the challenges highlighted include GNSS reliability, SLAM, sensor fusion, obstacle avoidance, and UAV validation.",
-     "why": "To understand the technical obstacles hindering reliable real-world autonomous drone operations.",
+     "category": "Open source",
+     "url": "https://robohub.org/robot-talk-episode-171-programming-robot-behaviour-with-sebastian-castro/",
+     "what": "Advancements in creating open-source software for robot task planning and behavior.",
+     "who": "Sebastian Castro",
+     "how": "Developing specialized software focused on robotic manipulation and task logic.",
+     "why": "To improve how robots are programmed to perform specific behaviors and tasks.",
      "limits": "Not stated in the source excerpt",
-     "learn": "Achieving reliable autonomy in aerial robotics requires solving multiple interrelated engineering problems, including sensor fusion and obstacle avoidance.",
-     "title": "What industrial drone deployments reveal about real-world autonomy challenges",
-     "published": "2026-11-19",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
+     "learn": "The episode covers the development of software for robot task planning.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Robot Talk Episode 171 \u2013 Programming robot behaviour, with Sebastian Castro",
+     "published": "2026-11-20",
+     "source": "Robohub"
     }
    ]
   },
   "jobs": {
    "items": [
     {
-     "title": "Working Student \u2013 Robot Pilot / Data Collection (m/f/d)",
+     "title": "Mechatronics Engineer Intern- Sensor Integration and Test",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich",
-     "published": "2026-11-19",
+     "location": "Lausanne",
+     "published": "2026-11-20",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/robco/working-student-robot-pilot-data-collection-munich-200149",
-     "company": "RobCo"
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/mechatronics-engineer-intern-sensor-integration-and-test-lausanne-299815",
+     "company": "Harmattan Ai"
     },
     {
-     "title": "Software Engineer, Robot Autonomy (Actuator Control & Locomotion), Intern",
+     "title": "Machine Learning Engineer Intern - Computer Vision",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Z\u00fcrich, Switzerland",
-     "published": "2026-11-19",
+     "location": "Lausanne",
+     "published": "2026-11-20",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/laelaps/software-engineer-robot-autonomy-actuator-control-locomotion-intern-zurich-495753",
-     "company": "Laelaps"
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/machine-learning-engineer-intern-computer-vision-lausanne-140058",
+     "company": "Harmattan Ai"
     },
     {
-     "title": "Embedded Software Engineer \u2013 Wireless Systems",
+     "title": "Embedded Electrical Engineer - SoM",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Z\u00fcrich",
-     "published": "2026-11-19",
+     "location": "Zurich",
+     "published": "2026-11-20",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/cdds-ag/embedded-software-engineer-wireless-systems-zurich-337648",
-     "company": "CDDS AG"
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/embedded-electrical-engineer-som-zurich-24862",
+     "company": "Harmattan Ai"
     },
     {
-     "title": "Automation Engineer (m/w/d)",
+     "title": "Embedded Electrical Engineer - SoM",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "M\u00fcnchen",
-     "published": "2026-11-19",
+     "location": "Lausanne",
+     "published": "2026-11-20",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/ecoza-gmbh/automation-engineer-munchen-358852",
-     "company": "ECOZA GmbH"
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/embedded-electrical-engineer-som-lausanne-440542",
+     "company": "Harmattan Ai"
     },
     {
-     "title": "Automation Engineer (m/f/d)",
+     "title": "RF Electronics Engineer (GNSS)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Falkensee, Brandenburg",
-     "published": "2026-11-19",
+     "location": "Lausanne",
+     "published": "2026-11-20",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/teampicnic/automation-engineer-falkensee-brandenburg-115966",
-     "company": "Teampicnic"
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/rf-electronics-engineer-gnss-lausanne-104770",
+     "company": "Harmattan Ai"
     },
     {
-     "title": "Computer Vision and Machine Learning Engineer",
+     "title": "macOS & Jamf Automation Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Stallikon",
-     "published": "2026-11-19",
+     "location": "Amsterdam, The Netherlands",
+     "published": "2026-11-20",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/sunflower-labs-gmbh/computer-vision-and-machine-learning-engineer-stallikon-453334",
-     "company": "Sunflower Labs GmbH"
-    },
-    {
-     "title": "Test Automation Engineer - KI/MCP/Agents",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Bern",
-     "published": "2026-11-19",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/prostaff-schweiz-gmbh/test-automation-engineer-ki-mcp-agents-bern-388710",
-     "company": "PROSTAFF Schweiz GmbH"
-    },
-    {
-     "title": "Software Engineer, Robot Autonomy (Planning & Navigation)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Z\u00fcrich, Switzerland",
-     "published": "2026-11-19",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/laelaps/software-engineer-robot-autonomy-planning-navigation-zurich-325676",
-     "company": "Laelaps"
+     "url": "https://www.arbeitnow.nl/jobs/companies/tomtom/macos-jamf-automation-engineer-amsterdam-the-netherlands-441329",
+     "company": "Tomtom"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
