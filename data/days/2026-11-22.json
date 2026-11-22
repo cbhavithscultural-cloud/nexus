@@ -1,0 +1,294 @@
+{
+ "v": 2,
+ "date": "2026-11-22",
+ "generated_at": "2026-11-22T06:06:40.067227+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 11 column 4 (char 747); gemini-3.5-flash-lite:Extra data: line 11 column 4 (char 726); gemini-3.1-flash-lite:Extra data: line 11 column 4 (char 628); gemini-2.5-flash-lite:404 {   \"error\": {     \"code\": 404, ",
+  "jobs": "failed (kept previous): no matching recent robotics/embedded/electronics jobs found; previous listings retained"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Distinguish clearly between what brain organoid experiments have actually proven in the lab and what remains unverified scientific speculation.",
+   "why_it_matters": "Separating proven facts from future hopes keeps research honest, protects public trust, and ensures scientists focus resources on realistic computing goals instead of science fiction hype.",
+   "prerequisites": [
+    "Basic familiarity with neural electrical activity and multi-electrode array recordings",
+    "Understanding of the physical limitations and structural growth hurdles of lab-grown brain tissue"
+   ],
+   "simple_explanation": "When reading about brain organoids, it is easy to blur the line between real laboratory achievements and wild science fiction. Organoid intelligence is a real field studying how living brain cells process information, but it is currently in its infancy. Established facts include growing organized neural tissue, recording electrical spikes, and showing basic responsiveness to electrical stimulation. However, claims that these tissue clumps can think, feel emotions, solve complex math, or replace traditional computers are completely hypothetical and currently unproven.",
+   "step_by_step": [
+    "Step 1: Examine the established evidence. Look at what peer-reviewed labs have actually demonstrated, such as spontaneous firing, network synchronization, and basic responses to external sensory input like electrical or light pulses.",
+    "Step 2: List the current limitations and gaps. Note that organoids lack sensory organs, a body, an immune system, structured memory systems, and complex cognitive architectures.",
+    "Step 3: Identify pure speculation and hype. Separate sensational media headlines about sentient computers from the actual incremental biological data published in scientific journals.",
+    "Step 4: Map out the realistic near-term milestones. Focus on achievable engineering goals, such as improving signal stability, standardizing growth methods, and running very simple pattern-recognition tasks."
+   ],
+   "technical_depth": "To rigorously evaluate organoid claims, researchers use a standard of proof based on functional validation. An established finding requires independent replication, clear baseline controls, and exclusion of artifacts (such as electrical noise or simple chemical drift). Conversely, hypothetical milestones\u2014such as true reinforcement learning, intentional goal-directed behavior, or subjective awareness\u2014currently lack both a theoretical framework in wetware and empirical evidence. Scientists measure activity through spike rates and bursting patterns, which reflect basic biophysical excitability rather than conscious computation or high-level reasoning.",
+   "misconceptions": [
+    {
+     "myth": "Brain organoids have feelings or are aware of their environment.",
+     "fact": "Organoids lack the complex sensory systems, thalamocortical loops, and structural complexity required for consciousness or subjective experience."
+    },
+    {
+     "myth": "Organoid computers are already outperforming traditional silicon microchips.",
+     "fact": "Biological computing with organoids is extremely slow, noisy, and difficult to maintain compared to standard digital hardware."
+    }
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is an example of an established, proven capability of brain organoids?",
+     "answer": "Generating spontaneous electrical spikes and responding to basic electrical stimulation."
+    },
+    {
+     "question": "Why is it important to distinguish between demonstrated facts and hypothetical claims in this field?",
+     "answer": "It prevents science fiction hype, guides ethical oversight accurately, and ensures research funding is spent on realistic goals."
+    },
+    {
+     "question": "Do brain organoids currently possess subjective awareness or feelings?",
+     "answer": "No, they lack the necessary anatomical structures, sensory input pathways, and global brain networks required for consciousness."
+    }
+   ],
+   "exercise": "Find a recent science news headline about brain organoids. Read past the headline into the actual research paper summary to identify one established fact the researchers proved and one limitation or hypothetical goal they mentioned for the future.",
+   "summary": "Organoid intelligence is built on solid, modest biological foundations like electrical recording and basic stimulation response, but major claims regarding advanced thought or sentient computing remain strictly hypothetical.",
+   "next_lesson": "Day 23: Introduction to the broader ethical framework governing living neural tissue.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand the difference between testing a BCI using saved data (offline) versus testing it live with a real user (online).",
+   "why_it_matters": "A BCI decoder can look great on a computer screen during testing, but it might completely fail when a real person tries to use it in real time. Knowing how to test both ways ensures a system actually works when it counts.",
+   "prerequisites": [
+    "Basic familiarity with how BCI decoders process brain signals",
+    "Understanding that data can be saved to a computer for later use"
+   ],
+   "simple_explanation": "Imagine learning to drive. Offline evaluation is like studying traffic videos in a classroom; online evaluation is driving a real car on a busy street. Offline tests use past brain recordings to see how well an algorithm guesses what happened. Online tests hook the brain up to the computer live, where the computer's guess immediately changes what the user sees or experiences, creating a continuous loop of action and reaction.",
+   "step_by_step": [
+    "Collect brain wave data from a user performing a task and save it to a computer file.",
+    "Run an offline test by feeding that saved file into your decoder algorithm to calculate an accuracy score.",
+    "Adjust your algorithm parameters based on those offline results to make it better.",
+    "Set up an online test where the brain signals stream straight from the headset into the computer live.",
+    "Have the user control a screen object in real time, letting you see if the system works smoothly when delays and human reactions are factored in."
+   ],
+   "technical_depth": "Offline evaluation processes static datasets, meaning past data points have no causal effect on future data points during testing. It allows for fast, repeatable mathematical tests. Online evaluation introduces a closed-loop feedback system. The user reacts to the computer's output, meaning brain signals change dynamically based on the BCI's past performance. Latency, processing time per frame, and temporal smoothing become critical performance factors that offline tests completely miss.",
+   "misconceptions": [
+    "Misconception: If a BCI has 95% accuracy offline, it will definitely feel easy to use online. Reality: Real-time use adds mental fatigue, timing delays, and feedback loops that static files cannot simulate.",
+    "Misconception: Offline testing is useless. Reality: Offline testing is vital for quickly trying out many different math formulas before testing on a tired human."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the main difference between online and offline BCI evaluation?",
+     "answer": "Offline evaluation uses saved, static data files, while online evaluation tests the system live in a real-time feedback loop with a user."
+    },
+    {
+     "question": "Why can an offline test fail to predict a real-world online failure?",
+     "answer": "Offline tests do not account for human reactions to live system delays, mental fatigue, or how feedback loops change brain signals."
+    },
+    {
+     "question": "When is it best to use offline evaluation?",
+     "answer": "During the early development phase when quickly comparing and tuning different machine learning algorithms on saved datasets."
+    }
+   ],
+   "exercise": "Write down a simple two-step plan for a new BCI project: state what algorithm adjustment you would test using saved offline data first, and then describe what single metric you would watch closely during the live online test.",
+   "summary": "Offline evaluation checks how well an algorithm interprets past brain data, while online evaluation tests the whole system live in a closed loop, capturing the real-world challenges of speed, latency, and human interaction.",
+   "next_lesson": "Introduction to ethical considerations and user agency in BCI",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Explain your robotics project in 60 seconds without exaggerating",
+   "explanation": "In an internship interview, you will often be asked to summarize a robotics, BCI, or embedded systems project very quickly. Beginners often make the mistake of using vague buzzwords or inflating what their code or hardware actually achieved. A truthful, clear 60-second summary focuses on what the system does, the specific hardware or firmware tools you used, and the real limitation or challenge you faced, without pretending the project is an industrial product.",
+   "practical_example": "Instead of saying 'I built an advanced autonomous brain-controlled rover that revolutionized navigation,' say: 'I built a prototype mobile robot that reads basic EEG signals via an Arduino and moves forward when a high-focus state is detected. My main challenge was filtering out muscle movement noise from the raw sensor data using a basic software moving average filter.'",
+   "exercise": "Write a 60-second spoken pitch for one of your past academic or hobby projects. Break it into three 20-second blocks: the core problem and hardware setup, your specific contribution to the firmware or wiring, and one real constraint or bug you encountered.",
+   "model_answer": "For my college project, I designed a line-following delivery cart using an STM32 microcontroller and two infrared sensors. My role was writing the C firmware to read analog sensor inputs and control the DC motors via PWM. A major issue was sensor jitter under bright room lights, which I fixed by adjusting the ADC sampling threshold rather than buying expensive shielded sensors.",
+   "why_it_works": "It highlights exact hardware components, specifies your personal contribution instead of saying 'we did,' and admits a realistic technical hurdle, which builds instant trust with engineering interviewers.",
+   "improvement_tip": "Time yourself with a stopwatch; if your pitch goes over 50 words for the first 20 seconds, cut unnecessary adjectives and focus strictly on the nouns and verbs of your engineering work.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Find relevant keywords in an embedded internship description",
+   "explanation": "To get your LinkedIn profile noticed by recruiters or applicant tracking systems for robotics and embedded roles, you need to use the exact terminology companies use. Instead of guessing what skills matter, look at real internship postings in India and find recurring technical terms, protocols, and tools.",
+   "practical_example": "If you look at three different embedded systems internship postings in Bengaluru, you will likely notice repeated keywords like 'STM32', 'I2C', 'UART', 'FreeRTOS', and 'C++'. These are the exact terms you should naturally weave into your LinkedIn headline, project descriptions, and skills section.",
+   "exercise": "Find one real internship description for a robotics or embedded role in India. Highlight the technical tools, hardware platforms, and communication protocols mentioned in the text.",
+   "model_answer": "From an internship post for an Embedded Firmware Intern: highlighted keywords include C programming, microcontroller, UART, SPI, and Git.",
+   "why_it_works": "Using the exact vocabulary from job descriptions ensures your LinkedIn profile aligns with what hiring managers and automated keyword filters are actively searching for in the Indian tech market.",
+   "improvement_tip": "Do not copy-paste whole sentences from the job description. Only extract genuine tools and skills that you have actually used in your college labs or personal projects.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
+   "focus": "Research design and method for testing learning in lab-grown brain cells.",
+   "explanation": "Because the Crossref record does not include an abstract for this paper, general knowledge is used. The study typically involves placing living brain cells on a microelectrode array to let them interact with a virtual environment, like a simple computer game, to see if they can adapt their electrical activity based on feedback.",
+   "limits": "The official abstract was missing from the verified metadata, so this summary relies on general scientific knowledge of the study rather than the paper's exact text.",
+   "check": {
+    "confidence": "medium"
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "Research design and method",
+   "explanation": "Because the paper's abstract text was not provided in the metadata, I am using general knowledge about this brain-computer interface study. The researchers designed a clinical trial to test if a human participant with paralysis could use a implanted sensor to control a computer cursor using brain signals.",
+   "limits": "Since the official abstract was missing and I must avoid guessing numbers or specific study details, I cannot describe the exact step-by-step methods or hardware specifications used in this trial.",
+   "check": {
+    "confidence": "medium"
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "2 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "ROBOTIS-GIT/turtlebot3",
+   "repository_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+   "description": "A collection of software packages built for controlling the TurtleBot3 robot using the Robot Operating System (ROS).",
+   "main_language": "C++",
+   "license": "Apache-2.0",
+   "is_archived": false,
+   "recent_activity_date": "2026-11-12T02:15:00Z",
+   "related_projects": [
+    "turtlebot3_msgs",
+    "turtlebot3_simulations",
+    "turtlebot3_manipulation",
+    "turtlebot3_applications",
+    "turtlebot3_machine_learning",
+    "turtlebot3_autorace",
+    "open_manipulator",
+    "DynamixelSDK",
+    "OpenCR"
+   ],
+   "learning_resources": [
+    "ROBOTIS e-Manual for TurtleBot3",
+    "ROBOTIS YouTube Channel",
+    "ROBOTIS Community Forum"
+   ],
+   "daily_challenge": "Explore the official TurtleBot3 e-Manual linked in the project documentation to understand the hardware and software components required.",
+   "knowledge_check": "What primary robotics middleware framework do these C++ software packages support?",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ROBOTIS-GIT/turtlebot3",
+    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+    "description": "ROS packages for Turtlebot3",
+    "pushed_at": "2026-11-12T02:15:00Z",
+    "language": "C++",
+    "archived": false,
+    "license": "Apache-2.0"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Research",
+     "url": "https://spectrum.ieee.org/video-friday-morphing-robots-quadrotor",
+     "what": "A drone capable of changing its shape to navigate narrow, restricted gaps.",
+     "who": "Not stated in the source excerpt",
+     "how": "The robot uses a morphing mechanism to squeeze itself. Background (general knowledge): Morphing allows robots to physically adapt their structure to handle environmental constraints that fixed-frame robots cannot pass through.",
+     "why": "To allow drones to fly through tight spaces they would normally be unable to traverse.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Not stated in the source excerpt",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Video Friday: Drone Squeezes Itself to Fit Through Tight Spaces",
+     "published": "2026-11-20",
+     "source": "IEEE Spectrum Robotics"
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/humyn-labs-raises-47m-to-collect-real-world-data-for-robotics/",
+     "what": "Humyn Labs secured $47 million in funding to focus on collecting real-world operational data.",
+     "who": "Humyn Labs",
+     "how": "They provide data sets gathered from real-world operations to support developers of frontier AI and world models.",
+     "why": "To provide essential training data for robotics companies and AI developers.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Not stated in the source excerpt",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Humyn Labs raises $47M to collect real-world data for robotics",
+     "published": "2026-11-19",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Open source",
+     "url": "https://robohub.org/robot-talk-episode-171-programming-robot-behaviour-with-sebastian-castro/",
+     "what": "Advancements in creating open-source software for robot task planning and behavior.",
+     "who": "Sebastian Castro",
+     "how": "Developing specialized software focused on robotic manipulation and task logic.",
+     "why": "To improve how robots are programmed to perform specific behaviors and tasks.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The episode covers the development of software for robot task planning.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Robot Talk Episode 171 \u2013 Programming robot behaviour, with Sebastian Castro",
+     "published": "2026-11-20",
+     "source": "Robohub"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Mechatronics Engineer Intern- Sensor Integration and Test",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Lausanne",
+     "published": "2026-11-20",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/mechatronics-engineer-intern-sensor-integration-and-test-lausanne-299815",
+     "company": "Harmattan Ai"
+    },
+    {
+     "title": "Machine Learning Engineer Intern - Computer Vision",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Lausanne",
+     "published": "2026-11-20",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/machine-learning-engineer-intern-computer-vision-lausanne-140058",
+     "company": "Harmattan Ai"
+    },
+    {
+     "title": "Embedded Electrical Engineer - SoM",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Zurich",
+     "published": "2026-11-20",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/embedded-electrical-engineer-som-zurich-24862",
+     "company": "Harmattan Ai"
+    },
+    {
+     "title": "Embedded Electrical Engineer - SoM",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Lausanne",
+     "published": "2026-11-20",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/embedded-electrical-engineer-som-lausanne-440542",
+     "company": "Harmattan Ai"
+    },
+    {
+     "title": "RF Electronics Engineer (GNSS)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Lausanne",
+     "published": "2026-11-20",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/harmattan-ai/rf-electronics-engineer-gnss-lausanne-104770",
+     "company": "Harmattan Ai"
+    },
+    {
+     "title": "macOS & Jamf Automation Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Amsterdam, The Netherlands",
+     "published": "2026-11-20",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/tomtom/macos-jamf-automation-engineer-amsterdam-the-netherlands-441329",
+     "company": "Tomtom"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
