@@ -1,0 +1,289 @@
+{
+ "v": 2,
+ "date": "2026-11-23",
+ "generated_at": "2026-11-23T06:34:25.277738+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 683); gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 800); gemini-3.1-flash-lite:Extra data: line 10 column 4 (char 642); gemini-2.5-flash-lite:404 {   \"error\": {     \"code\": 404, ",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how rules, oversight boards, and donor consent apply specifically to research using human brain organoids.",
+   "why_it_matters": "Unlike standard human cell lines used in laboratories, brain organoids develop complex neural networks that require special ethical boundaries regarding tissue sourcing, data privacy, and societal trust.",
+   "prerequisites": [
+    "Basic knowledge of what a brain organoid is",
+    "Familiarity with standard scientific laboratory safety rules"
+   ],
+   "simple_explanation": "Ethics in research are the rules we follow to make sure experiments are fair, safe, and respectful. When scientists grow human brain tissue from donated cells, they must handle the tissue with care, protect the privacy of the donors, and make sure committees of independent experts approve the plans before any work begins.",
+   "step_by_step": [
+    "Step 1: Understand tissue donation. Donors provide skin or blood samples through informed consent, knowing their cells will be grown into brain-like structures.",
+    "Step 2: Review by an Institutional Review Board (IRB) or ethics committee. Scientists must submit their experimental designs to a panel of experts who check for safety, fairness, and respect for human dignity.",
+    "Step 3: Establish guidelines for data and tissue handling. Researchers must ensure that donor identities remain completely anonymous and that tissue is never misused or commercialized without clear agreements."
+   ],
+   "technical_depth": "Governance frameworks for organoid intelligence rely heavily on established biomedical ethics principles: autonomy (informed consent from donors), beneficence (maximizing research benefits while minimizing harm), and justice (fair distribution of the burdens and benefits of research). Unlike traditional organoid models used for drug testing, neural tissue introduces questions about potential consciousness, which, while scientifically unproven today, requires proactive policy frameworks to govern future developments safely.",
+   "misconceptions": [
+    {
+     "myth": "Donors retain legal ownership of the organoids grown from their cells.",
+     "fact": "Once donated under standard legal agreements, tissue is typically given as a gift, meaning the donor does not own the resulting laboratory creations or any future discoveries made from them."
+    },
+    {
+     "myth": "Ethics committees tell scientists exactly how to run their daily experiments.",
+     "fact": "Committees approve or deny research plans based on broad safety and ethical boundaries, but they do not design the day-to-day lab procedures."
+    }
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the primary purpose of an Institutional Review Board (IRB) in this context?",
+     "answer": "To independently review and approve research plans to ensure they are safe, ethical, and respectful of human participants."
+    },
+    {
+     "question": "Why is informed consent critical when sourcing cells for brain organoids?",
+     "answer": "Because donors have a right to know how their biological material will be used, especially when it involves growing neural tissue."
+    },
+    {
+     "question": "True or False: Donors can dictate how individual lab experiments are conducted on their donated cells.",
+     "answer": "False. Donors give up control over specific experimental designs once proper consent is granted."
+    }
+   ],
+   "exercise": "Draft a simple three-point checklist that a lab would use to verify that a new batch of donated stem cells meets ethical guidelines for brain organoid research.",
+   "summary": "Governance and consent form the ethical backbone of organoid research, ensuring that science progresses transparently, respects human donors, and maintains public trust through strict oversight.",
+   "next_lesson": "Day 24: Establishing boundaries: distinguishing biological reality from sci-fi speculation.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how the human brain and computer software continuously adjust to each other during real-time BCI operation to create a shared learning loop.",
+   "why_it_matters": "A BCI is not a static tool like a keyboard; it is a partnership. Because both the machine's decoder and the human's brain patterns change over time, studying this two-way loop is essential for building stable, reliable devices that do not frustrate the user.",
+   "prerequisites": [
+    "Basic knowledge of online versus offline BCI evaluation",
+    "Familiarity with how decoders translate brain signals into software commands"
+   ],
+   "simple_explanation": "Imagine learning to play a duet on a piano where your partner is a computer program that is also trying to learn your rhythm. In a BCI loop, the computer changes its math rules to better understand your brain waves, while your brain subtly changes how it thinks to make the computer respond more accurately. This back-and-forth adjustment is called co-adaptation.",
+   "step_by_step": [
+    "Step 1: The user attempts a mental task, generating a specific pattern of brain activity.",
+    "Step 2: The BCI sensors record the signals and the decoder translates them into an action, such as moving a cursor.",
+    "Step 3: The user sees the cursor move and instantly evaluates the result, unconsciously adjusting their mental strategy if the movement was wrong.",
+    "Step 4: Simultaneously, the software algorithm updates its internal parameters using recent data to better match the user's current signal patterns.",
+    "Step 5: The cycle repeats continuously, creating a shared learning loop between human and machine."
+   ],
+   "technical_depth": "Co-adaptation introduces non-stationarity into the system. In standard machine learning, the target labels and underlying distributions are assumed to be fixed. In a co-adaptive BCI, updating the decoder changes the feedback presented to the user, which in turn alters the user's neural generation strategy. Engineers must carefully tune adaptation rates; if the decoder updates too quickly, it chases noisy human fluctuations, destabilizing the control loop. If it updates too slowly, it fails to compensate for user fatigue or electrode shifts.",
+   "misconceptions": [
+    "Misconception: Only the computer learns in a BCI loop. Fact: The human brain undergoes rapid plastic changes and skill acquisition when interacting with real-time feedback.",
+    "Misconception: Faster algorithm updates always lead to better performance. Fact: Overly aggressive software adaptation can confuse the user by constantly shifting the rules of control."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is co-adaptation in the context of a BCI loop?",
+     "answer": "It is the simultaneous process where the computer's decoding algorithm and the user's brain patterns adjust to each other during real-time interaction."
+    },
+    {
+     "question": "Why can updating a decoder too quickly cause problems?",
+     "answer": "It can chase temporary noise or user confusion, constantly changing the rules and making it harder for the user to learn a stable mental strategy."
+    },
+    {
+     "question": "What role does visual feedback play in the user learning process?",
+     "answer": "It lets the user instantly evaluate the system's output so they can unconsciously or consciously tweak their mental approach for better results."
+    }
+   ],
+   "exercise": "Spend ten minutes sketching a flowchart of a two-way learning loop. Label one side 'Human Neural Adjustments' (such as trying a different mental focus after an error) and the other side 'Decoder Algorithm Updates' (such as recalculating feature weights). Draw arrows showing how feedback connects the two processes.",
+   "summary": "Effective BCI operation relies on a continuous two-way feedback loop where both the human user and the software algorithm adapt to each other to improve overall control.",
+   "next_lesson": "Introduction to user intent, agency, and psychological ownership of BCI actions",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Debug a robot sensor scenario using symptoms and hypotheses",
+   "explanation": "When a robot or embedded system behaves unexpectedly, fixing it requires systematic troubleshooting rather than random guessing. Start by gathering symptoms\u2014the exact behavior you observe, such as a distance sensor reading zero when an obstacle is present. Next, form hypotheses about potential root causes, like a loose wiring connection, incorrect I2C address, or a failing power supply. Finally, test one hypothesis at a time to isolate and fix the fault.",
+   "practical_example": "Imagine your mobile robot's ultrasonic distance sensor keeps reporting a constant distance of zero centimeters, even when the robot is in an open room. Instead of rewriting your entire navigation code, you list symptoms: the sensor LED is blinking, but the microcontroller reads 0. You form two hypotheses: either the echo pin wire is disconnected from the microcontroller, or the sensor code is reading the wrong GPIO register. You check the physical wire first.",
+   "exercise": "Write down a simple troubleshooting checklist for an infrared line-following sensor on a robot that is failing to detect a black line on the floor. List two distinct symptoms and one plausible hypothesis for each.",
+   "model_answer": "Symptom 1: The sensor indicator LED stays off over both white and black surfaces. Hypothesis 1: The sensor is not receiving 5V power from the microcontroller board. Symptom 2: The LED changes state, but the digital pin reads HIGH everywhere. Hypothesis 2: The onboard potentiometer threshold is misadjusted for the room lighting.",
+   "why_it_works": "This method prevents frustration and wasted time during hardware testing. By separating observable symptoms from educated guesses, you systematically test hardware and firmware components one by one, mirroring the structured debugging expected in professional engineering labs.",
+   "improvement_tip": "Always change only one variable at a time\u2014either a line of code or a single wire connection\u2014so you know exactly which action fixed the issue.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Prepare a short follow-up message after a genuine conversation",
+   "explanation": "After chatting with an engineer or recruiter at a robotics webinar or campus tech event, sending a polite, timely follow-up message keeps you fresh in their mind. A great follow-up refers directly to a specific detail you discussed, like a tip they shared about debugging sensor noise or a microcontroller they recommended, rather than just asking if they have any open internships.",
+   "practical_example": "If you briefly spoke with an embedded systems developer at a tech workshop who mentioned struggling with motor driver heating issues, your follow-up can thank them for that specific insight and share a one-sentence update on how you are researching that problem in your college lab.",
+   "exercise": "Write a short three-sentence follow-up message to an engineer you met online or offline. Mention one specific technical topic you talked about regarding robotics or BCI, and express gratitude for their time.",
+   "model_answer": "Hi Rahul, thank you for taking the time to chat after the webinar yesterday. I especially appreciated your advice on filtering EEG signals for BCI applications. I am currently reading the research paper you suggested and hope to stay in touch as I build my next prototype.",
+   "why_it_works": "It avoids asking for an internship right away, proves you were actively listening by mentioning a specific technical detail, and keeps the door open for future professional networking without being pushy.",
+   "improvement_tip": "Send your message within forty-eight hours while the conversation is still memorable, and keep the total length under four sentences.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
+   "focus": "Day 3 focuses on the results and figures, specifically how the brain cells reacted to playing a virtual game.",
+   "explanation": "Because the paper's abstract text was not provided, we rely on general knowledge of this study. The researchers connected lab-grown human and mouse brain cells to a computer simulation of the game Pong. The results and figures in the paper typically show that the cells changed their electrical activity over time to better hit the ball, suggesting they could learn from their environment.",
+   "limits": "Since the exact figures and numerical results from the paper text were not provided, specific data points and chart details cannot be discussed.",
+   "check": "The metadata from Crossref was used, but the abstract was missing, so general knowledge of the study was applied with a lower confidence regarding specific figures.",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
+   "focus": "Results and figures showing how brain signals were successfully translated into computer cursor and device movements.",
+   "explanation": "Because the paper abstract text was missing from the provided metadata, general scientific knowledge of this study shows that the results demonstrated a human participant with paralysis could use a brain implant to control a computer screen, open emails, and operate devices using recorded brain cell activity. The figures in the paper typically display brainwave patterns matching physical intentions.",
+   "limits": "The exact numerical details of the figures and statistical results are not available in the provided metadata, so general findings are described instead.",
+   "check": "medium",
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "3 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "day": "2 of 3",
+   "topic": "How it works",
+   "project_name": "ROBOTIS-GIT/turtlebot3",
+   "explanation": "TurtleBot3 relies on a collection of separate software packages to function, rather than just one single program. Based on the project list, it uses dedicated packages for basic robot controls, message passing, computer simulations, robotic arms, machine learning, and autonomous driving competitions. It also connects closely with hardware drivers to communicate with physical robot parts like motors and sensors.",
+   "source_attribution": "Derived from the official TurtleBot3 README file listing related open-source projects and documentation links.",
+   "general_knowledge_note": "The exact internal logic of how ROS nodes pass messages is general robotics knowledge, as the README only lists the component names and dependencies without detailing their source code.",
+   "mini_challenge": "Review the list of related projects in the README and identify at least three separate packages that deal with simulations or machine learning.",
+   "knowledge_check": "True or False: TurtleBot3 is controlled by a single monolithic file rather than a collection of modular packages.",
+   "knowledge_check_answer": "False. It uses many modular packages like turtlebot3_simulations, turtlebot3_msgs, and driver packages.",
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "ROBOTIS-GIT/turtlebot3",
+    "html_url": "https://github.com/ROBOTIS-GIT/turtlebot3",
+    "description": "ROS packages for Turtlebot3",
+    "pushed_at": "2026-11-12T02:15:00Z",
+    "language": "C++",
+    "archived": false,
+    "license": "Apache-2.0"
+   }
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Research",
+     "url": "https://spectrum.ieee.org/video-friday-morphing-robots-quadrotor",
+     "what": "A drone capable of changing its shape to navigate narrow, restricted gaps.",
+     "who": "Not stated in the source excerpt",
+     "how": "The robot uses a morphing mechanism to squeeze itself. Background (general knowledge): Morphing allows robots to physically adapt their structure to handle environmental constraints that fixed-frame robots cannot pass through.",
+     "why": "To allow drones to fly through tight spaces they would normally be unable to traverse.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Not stated in the source excerpt",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Video Friday: Drone Squeezes Itself to Fit Through Tight Spaces",
+     "published": "2026-11-20",
+     "source": "IEEE Spectrum Robotics"
+    },
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/humyn-labs-raises-47m-to-collect-real-world-data-for-robotics/",
+     "what": "Humyn Labs secured $47 million in funding to focus on collecting real-world operational data.",
+     "who": "Humyn Labs",
+     "how": "They provide data sets gathered from real-world operations to support developers of frontier AI and world models.",
+     "why": "To provide essential training data for robotics companies and AI developers.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Not stated in the source excerpt",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Humyn Labs raises $47M to collect real-world data for robotics",
+     "published": "2026-11-19",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Open source",
+     "url": "https://robohub.org/robot-talk-episode-171-programming-robot-behaviour-with-sebastian-castro/",
+     "what": "Advancements in creating open-source software for robot task planning and behavior.",
+     "who": "Sebastian Castro",
+     "how": "Developing specialized software focused on robotic manipulation and task logic.",
+     "why": "To improve how robots are programmed to perform specific behaviors and tasks.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The episode covers the development of software for robot task planning.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Robot Talk Episode 171 \u2013 Programming robot behaviour, with Sebastian Castro",
+     "published": "2026-11-20",
+     "source": "Robohub"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "Founder Associate Physical AI & Robotics (m/f/d) | full-time or gap-year intern",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich",
+     "published": "2026-11-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/batch-robotics-gmbh/founder-associate-physical-ai-robotics-full-time-or-gap-year-intern-munich-175184",
+     "company": "Batch Robotics GmbH"
+    },
+    {
+     "title": "Business Developer / Sales Manager - Robotics (m/w/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Berlin",
+     "published": "2026-11-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/tekpoint-gmbh/business-developer-sales-manager-robotics-berlin-42926",
+     "company": "TEKPOINT GmbH"
+    },
+    {
+     "title": "Software Test Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Remote job",
+     "published": "2026-11-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-110215",
+     "company": "SwissPeak Partners GmbH"
+    },
+    {
+     "title": "Embedded Electrical Engineer - SoM",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/embedded-electrical-engineer-som-paris-163003",
+     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+    },
+    {
+     "title": "IoT Embedded Systems Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Bern, Berne, Switzerland",
+     "published": "2026-11-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/iot-embedded-systems-engineer-bern-321337",
+     "company": "SwissPeak Partners GmbH"
+    },
+    {
+     "title": "Industrial Vision & Automation Engineer",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Orly",
+     "published": "2026-11-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/industrial-vision-automation-engineer-orly-103459",
+     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+    },
+    {
+     "title": "RF Electronics Engineer (Electronic Warfare)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/rf-electronics-engineer-electronic-warfare-paris-160371",
+     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+    },
+    {
+     "title": "RF Electronics Engineer (Radio)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-22",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/rf-electronics-engineer-radio-paris-422311",
+     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
