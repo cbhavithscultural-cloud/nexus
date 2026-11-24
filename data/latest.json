@@ -1,155 +1,152 @@
 {
  "v": 2,
- "date": "2026-11-23",
- "generated_at": "2026-11-23T08:25:04.575253+05:30",
+ "date": "2026-11-24",
+ "generated_at": "2026-11-24T10:25:39.926094+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "failed (kept previous): gemini-flash-lite-latest:Extra data: line 10 column 4 (char 815); gemini-3.5-flash-lite:Extra data: line 10 column 4 (char 713); gemini-3.1-flash-lite:Extra data: line 10 column 4 (char 688); gemini-2.5-flash-lite:404 {   \"error\": {     \"code\": 404, ",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how rules, oversight boards, and donor consent apply specifically to research using human brain organoids.",
-   "why_it_matters": "Unlike standard human cell lines used in laboratories, brain organoids develop complex neural networks that require special ethical boundaries regarding tissue sourcing, data privacy, and societal trust.",
+   "objective": "Compare how biological neural tissue processes information versus how traditional silicon microchips handle computation.",
+   "why_it_matters": "Understanding the fundamental differences between wetware and hardware prevents unrealistic hype and highlights the unique strengths of biological computing, such as high energy efficiency.",
    "prerequisites": [
-    "Basic knowledge of what a brain organoid is",
-    "Familiarity with standard scientific laboratory safety rules"
+    "Basic awareness of how brain cells generate electrical signals",
+    "Familiarity with standard computer processors handling binary code"
    ],
-   "simple_explanation": "Ethics in research are the rules we follow to make sure experiments are fair, safe, and respectful. When scientists grow human brain tissue from donated cells, they must handle the tissue with care, protect the privacy of the donors, and make sure committees of independent experts approve the plans before any work begins.",
+   "simple_explanation": "Silicon computers work like lightning-fast calculators using rigid binary code (0s and 1s) controlled by a central clock. Biological computers, like organoids, are more like sprawling, flexible networks that process information using chemical and electrical signals simultaneously, consuming very little energy.",
    "step_by_step": [
-    "Step 1: Understand tissue donation. Donors provide skin or blood samples through informed consent, knowing their cells will be grown into brain-like structures.",
-    "Step 2: Review by an Institutional Review Board (IRB) or ethics committee. Scientists must submit their experimental designs to a panel of experts who check for safety, fairness, and respect for human dignity.",
-    "Step 3: Establish guidelines for data and tissue handling. Researchers must ensure that donor identities remain completely anonymous and that tissue is never misused or commercialized without clear agreements."
+    "Examine the core unit of silicon chips: the transistor, which acts as a strict switch turning electricity on or off.",
+    "Examine the core unit of biological tissue: the neuron, which integrates thousands of incoming signals and fires dynamically based on chemical thresholds.",
+    "Compare processing architecture: silicon relies on serial or parallel hardwired instructions, while biology relies on massively parallel, adaptable connections that change strength over time.",
+    "Contrast power usage: traditional servers require heavy cooling and steady electricity, whereas living cells generate their own energy from liquid nutrients at room or body temperature."
    ],
-   "technical_depth": "Governance frameworks for organoid intelligence rely heavily on established biomedical ethics principles: autonomy (informed consent from donors), beneficence (maximizing research benefits while minimizing harm), and justice (fair distribution of the burdens and benefits of research). Unlike traditional organoid models used for drug testing, neural tissue introduces questions about potential consciousness, which, while scientifically unproven today, requires proactive policy frameworks to govern future developments safely.",
+   "technical_depth": "Silicon architecture separates memory and processing units (the Von Neumann bottleneck), moving data back and forth across physical pathways. Biological neural networks integrate memory and processing directly into the synapse structure itself, meaning computation happens wherever connections are modified.",
    "misconceptions": [
-    {
-     "myth": "Donors retain legal ownership of the organoids grown from their cells.",
-     "fact": "Once donated under standard legal agreements, tissue is typically given as a gift, meaning the donor does not own the resulting laboratory creations or any future discoveries made from them."
-    },
-    {
-     "myth": "Ethics committees tell scientists exactly how to run their daily experiments.",
-     "fact": "Committees approve or deny research plans based on broad safety and ethical boundaries, but they do not design the day-to-day lab procedures."
-    }
+    "Misconception: Biological computers can think faster and more accurately than digital supercomputers. Fact: Silicon chips vastly outperform brains at raw math and logic, while brains excel at adaptive, low-power pattern recognition."
    ],
    "knowledge_check": [
     {
-     "question": "What is the primary purpose of an Institutional Review Board (IRB) in this context?",
-     "answer": "To independently review and approve research plans to ensure they are safe, ethical, and respectful of human participants."
+     "question": "What is the basic switching component in a traditional silicon computer?",
+     "answer": "A transistor."
     },
     {
-     "question": "Why is informed consent critical when sourcing cells for brain organoids?",
-     "answer": "Because donors have a right to know how their biological material will be used, especially when it involves growing neural tissue."
+     "question": "How do biological neural networks handle memory and processing compared to silicon chips?",
+     "answer": "Biology integrates memory and processing directly within the synapses, whereas silicon traditionally separates them."
     },
     {
-     "question": "True or False: Donors can dictate how individual lab experiments are conducted on their donated cells.",
-     "answer": "False. Donors give up control over specific experimental designs once proper consent is granted."
+     "question": "Which system is typically more energy-efficient for complex pattern recognition: silicon or biological tissue?",
+     "answer": "Biological tissue."
     }
    ],
-   "exercise": "Draft a simple three-point checklist that a lab would use to verify that a new batch of donated stem cells meets ethical guidelines for brain organoid research.",
-   "summary": "Governance and consent form the ethical backbone of organoid research, ensuring that science progresses transparently, respects human donors, and maintains public trust through strict oversight.",
-   "next_lesson": "Day 24: Establishing boundaries: distinguishing biological reality from sci-fi speculation.",
+   "exercise": "List three daily tasks where a silicon computer easily outperforms a human brain, and three tasks where a biological brain easily outperforms a standard computer.",
+   "summary": "Silicon computing relies on rigid, fast binary switches with separated memory and processing, while biological computing uses adaptable, low-power networks that merge memory and processing together.",
+   "next_lesson": "Day 25: Energy consumption and thermal limits in wetware versus silicon.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how the human brain and computer software continuously adjust to each other during real-time BCI operation to create a shared learning loop.",
-   "why_it_matters": "A BCI is not a static tool like a keyboard; it is a partnership. Because both the machine's decoder and the human's brain patterns change over time, studying this two-way loop is essential for building stable, reliable devices that do not frustrate the user.",
+   "objective": "Understand how system delay, dependability, and everyday design compromises affect the performance of a Brain-Computer Interface.",
+   "why_it_matters": "Even if a BCI decodes brain signals accurately, it is useless for real-world tasks if it reacts too slowly or fails unpredictably when the user tries to communicate or move.",
    "prerequisites": [
-    "Basic knowledge of online versus offline BCI evaluation",
-    "Familiarity with how decoders translate brain signals into software commands"
+    "Basic knowledge of how brain signals are translated into computer commands",
+    "Familiarity with the concept of communication speed (such as bits per minute)"
    ],
-   "simple_explanation": "Imagine learning to play a duet on a piano where your partner is a computer program that is also trying to learn your rhythm. In a BCI loop, the computer changes its math rules to better understand your brain waves, while your brain subtly changes how it thinks to make the computer respond more accurately. This back-and-forth adjustment is called co-adaptation.",
+   "simple_explanation": "Imagine driving a car where the steering wheel has a two-second delay before the tires turn, or where it only responds ninety percent of the time. Controlling a computer cursor or a robotic limb with a BCI faces this exact challenge. Engineers must constantly balance speed (how fast the system reacts), accuracy (how often it is right), and reliability (how dependable it is over hours of use). Making a system faster often makes it more prone to mistakes, while making it safer and slower can frustrate the user.",
    "step_by_step": [
-    "Step 1: The user attempts a mental task, generating a specific pattern of brain activity.",
-    "Step 2: The BCI sensors record the signals and the decoder translates them into an action, such as moving a cursor.",
-    "Step 3: The user sees the cursor move and instantly evaluates the result, unconsciously adjusting their mental strategy if the movement was wrong.",
-    "Step 4: Simultaneously, the software algorithm updates its internal parameters using recent data to better match the user's current signal patterns.",
-    "Step 5: The cycle repeats continuously, creating a shared learning loop between human and machine."
+    "Step 1: Identify the sources of delay, including biological processing time, hardware signal collection, software filtering, and classification calculations.",
+    "Step 2: Examine reliability, which measures whether the system works consistently across different days, user fatigue levels, and changing electrical noise environments.",
+    "Step 3: Analyze the speed-versus-accuracy trade-off. Waiting longer to gather more brain data increases accuracy but introduces frustrating lags in real-time control.",
+    "Step 4: Evaluate practical usability, ensuring the system requires minimal recalibration and remains dependable during everyday tasks."
    ],
-   "technical_depth": "Co-adaptation introduces non-stationarity into the system. In standard machine learning, the target labels and underlying distributions are assumed to be fixed. In a co-adaptive BCI, updating the decoder changes the feedback presented to the user, which in turn alters the user's neural generation strategy. Engineers must carefully tune adaptation rates; if the decoder updates too quickly, it chases noisy human fluctuations, destabilizing the control loop. If it updates too slowly, it fails to compensate for user fatigue or electrode shifts.",
+   "technical_depth": "Latency in a BCI loop consists of data acquisition windowing, feature extraction time, and decoding overhead. To reduce lag, developers shorten the signal window, but this reduces the signal-to-noise ratio, raising classification error. Reliability is often quantified using metrics like Mean Time Between Failures (MTBF) or error rates over extended sessions. Optimizing these trade-offs requires designing algorithms that balance computational complexity with temporal resolution.",
    "misconceptions": [
-    "Misconception: Only the computer learns in a BCI loop. Fact: The human brain undergoes rapid plastic changes and skill acquisition when interacting with real-time feedback.",
-    "Misconception: Faster algorithm updates always lead to better performance. Fact: Overly aggressive software adaptation can confuse the user by constantly shifting the rules of control."
+    "Misconception: A high accuracy score means a BCI will automatically feel fast and responsive to the user.",
+    "Correction: A system can be extremely accurate yet feel sluggish if it takes too many seconds of brain data to make a single decision."
    ],
    "knowledge_check": [
     {
-     "question": "What is co-adaptation in the context of a BCI loop?",
-     "answer": "It is the simultaneous process where the computer's decoding algorithm and the user's brain patterns adjust to each other during real-time interaction."
+     "question": "What is the main drawback of making a BCI classification window very short to reduce latency?",
+     "answer": "It reduces the amount of neural data gathered, which often lowers classification accuracy."
     },
     {
-     "question": "Why can updating a decoder too quickly cause problems?",
-     "answer": "It can chase temporary noise or user confusion, constantly changing the rules and making it harder for the user to learn a stable mental strategy."
+     "question": "Why is reliability just as important as peak accuracy in practical BCI control?",
+     "answer": "A system that is right most of the time but fails unpredictably causes user frustration and makes real-world tasks unsafe or frustrating."
     },
     {
-     "question": "What role does visual feedback play in the user learning process?",
-     "answer": "It lets the user instantly evaluate the system's output so they can unconsciously or consciously tweak their mental approach for better results."
+     "question": "Name two major factors that engineers must balance in BCI design trade-offs.",
+     "answer": "Speed (latency) and accuracy/reliability."
     }
    ],
-   "exercise": "Spend ten minutes sketching a flowchart of a two-way learning loop. Label one side 'Human Neural Adjustments' (such as trying a different mental focus after an error) and the other side 'Decoder Algorithm Updates' (such as recalculating feature weights). Draw arrows showing how feedback connects the two processes.",
-   "summary": "Effective BCI operation relies on a continuous two-way feedback loop where both the human user and the software algorithm adapt to each other to improve overall control.",
-   "next_lesson": "Introduction to user intent, agency, and psychological ownership of BCI actions",
+   "exercise": "Draw a simple timeline of a BCI action, marking the stages where delays occur: signal generation in the brain, sensor recording, computer filtering, and device movement. Estimate where you think the largest delay happens and write down one way to reduce it.",
+   "summary": "Practical BCI control requires constant compromises between how fast a system reacts, how dependable it is, and how many mistakes it makes.",
+   "next_lesson": "Introduction to closed-loop system integration and end-to-end testing",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Debug a robot sensor scenario using symptoms and hypotheses",
-   "explanation": "When a robot or embedded system behaves unexpectedly, fixing it requires systematic troubleshooting rather than random guessing. Start by gathering symptoms\u2014the exact behavior you observe, such as a distance sensor reading zero when an obstacle is present. Next, form hypotheses about potential root causes, like a loose wiring connection, incorrect I2C address, or a failing power supply. Finally, test one hypothesis at a time to isolate and fix the fault.",
-   "practical_example": "Imagine your mobile robot's ultrasonic distance sensor keeps reporting a constant distance of zero centimeters, even when the robot is in an open room. Instead of rewriting your entire navigation code, you list symptoms: the sensor LED is blinking, but the microcontroller reads 0. You form two hypotheses: either the echo pin wire is disconnected from the microcontroller, or the sensor code is reading the wrong GPIO register. You check the physical wire first.",
-   "exercise": "Write down a simple troubleshooting checklist for an infrared line-following sensor on a robot that is failing to detect a black line on the floor. List two distinct symptoms and one plausible hypothesis for each.",
-   "model_answer": "Symptom 1: The sensor indicator LED stays off over both white and black surfaces. Hypothesis 1: The sensor is not receiving 5V power from the microcontroller board. Symptom 2: The LED changes state, but the digital pin reads HIGH everywhere. Hypothesis 2: The onboard potentiometer threshold is misadjusted for the room lighting.",
-   "why_it_works": "This method prevents frustration and wasted time during hardware testing. By separating observable symptoms from educated guesses, you systematically test hardware and firmware components one by one, mirroring the structured debugging expected in professional engineering labs.",
-   "improvement_tip": "Always change only one variable at a time\u2014either a line of code or a single wire connection\u2014so you know exactly which action fixed the issue.",
+   "topic": "Embedded C fundamentals: variables, pointers and memory safety",
+   "explanation": "In robotics and embedded systems, you write code that talks directly to hardware. Variables store data in your microcontroller's memory, while pointers are variables that hold the memory address of another variable. Memory safety means making sure your pointers always point to valid, allocated locations so your robot's firmware does not crash or corrupt critical data.",
+   "practical_example": "Imagine writing firmware to read a brain-computer interface (BCI) signal buffer. If a pointer accidentally references a memory location outside your buffer array, your microcontroller might overwrite system settings and freeze your robot.",
+   "exercise": "Write a short C code snippet using a pointer to modify a variable that stores a motor speed value, and explain how you ensure the pointer does not go out of bounds.",
+   "model_answer": "int motor_speed = 0;\nint *speed_ptr = &motor_speed;\n*speed_ptr = 100; // Safely updates motor_speed to 100 via pointer\n// To ensure safety, always verify that the pointer is not NULL and check array bounds before dereferencing.",
+   "why_it_works": "It demonstrates direct memory manipulation using pointers while highlighting the defensive programming habit of verifying pointer validity, which prevents system crashes during runtime.",
+   "improvement_tip": "Always initialize your pointers to NULL and double-check your array boundaries before performing pointer arithmetic in embedded C.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Prepare a short follow-up message after a genuine conversation",
-   "explanation": "After chatting with an engineer or recruiter at a robotics webinar or campus tech event, sending a polite, timely follow-up message keeps you fresh in their mind. A great follow-up refers directly to a specific detail you discussed, like a tip they shared about debugging sensor noise or a microcontroller they recommended, rather than just asking if they have any open internships.",
-   "practical_example": "If you briefly spoke with an embedded systems developer at a tech workshop who mentioned struggling with motor driver heating issues, your follow-up can thank them for that specific insight and share a one-sentence update on how you are researching that problem in your college lab.",
-   "exercise": "Write a short three-sentence follow-up message to an engineer you met online or offline. Mention one specific technical topic you talked about regarding robotics or BCI, and express gratitude for their time.",
-   "model_answer": "Hi Rahul, thank you for taking the time to chat after the webinar yesterday. I especially appreciated your advice on filtering EEG signals for BCI applications. I am currently reading the research paper you suggested and hope to stay in touch as I build my next prototype.",
-   "why_it_works": "It avoids asking for an internship right away, proves you were actively listening by mentioning a specific technical detail, and keeps the door open for future professional networking without being pushy.",
-   "improvement_tip": "Send your message within forty-eight hours while the conversation is still memorable, and keep the total length under four sentences.",
+   "topic": "Audit a profile for unsupported claims and unclear wording",
+   "explanation": "Recruiters reviewing LinkedIn profiles for engineering roles look for factual statements rather than vague jargon. Unsupported claims like 'expert in all microcontrollers' or unclear phrasing like 'worked on smart hardware' raise doubts. You must check your profile to ensure every technical claim is backed by specific tools, components, or tasks you actually handled.",
+   "practical_example": "A student profile says: 'Built advanced brain-computer interface systems and expert-level robotics firmware.' This sounds impressive, but it is unclear and unsupported because it does not name the actual hardware, microcontroller, or signal processing steps used.",
+   "exercise": "Review your own LinkedIn experience or project section. Find one sentence that uses a vague adjective or broad claim (like 'expert' or 'various sensors') and list the exact hardware or software tool you actually used instead.",
+   "model_answer": "Change 'Built advanced brain-computer interface systems' to 'Collected raw EEG signals using an OpenBCI board and filtered 50Hz power line noise in Python.'",
+   "why_it_works": "It replaces vague buzzwords with concrete engineering actions, showing recruiters the exact tools and methods you worked with without exaggerating your skills.",
+   "improvement_tip": "If you cannot name the specific tool, library, or component behind a claim on your profile, rephrase it to focus strictly on what you actually built or tested.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
    "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
-   "focus": "Day 3 focuses on the results and figures, specifically how the brain cells reacted to playing a virtual game.",
-   "explanation": "Because the paper's abstract text was not provided, we rely on general knowledge of this study. The researchers connected lab-grown human and mouse brain cells to a computer simulation of the game Pong. The results and figures in the paper typically show that the cells changed their electrical activity over time to better hit the ball, suggesting they could learn from their environment.",
-   "limits": "Since the exact figures and numerical results from the paper text were not provided, specific data points and chart details cannot be discussed.",
-   "check": "The metadata from Crossref was used, but the abstract was missing, so general knowledge of the study was applied with a lower confidence regarding specific figures.",
+   "focus": "The technical setup, boundaries, and moral questions of connecting lab-grown brain cells to a digital game environment.",
+   "explanation": "This day looks at how scientists build these systems, what stops them from working better or growing larger, and whether it is right to give living cells tasks in a computer simulation.",
+   "limits": "Because the paper's abstract text was not provided in the metadata, specific technical limits from this exact study cannot be detailed here, but generally, lab brain cells are hard to keep alive long-term and struggle to handle complex rules.",
+   "check": "We are unsure about the exact ethical conclusions of this specific paper since the abstract is missing, so we must rely on general science ethics regarding lab-grown tissue.",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1016/j.neuron.2022.09.001",
    "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
-   "day": "3 of 5",
+   "day": "4 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
-   "focus": "Results and figures showing how brain signals were successfully translated into computer cursor and device movements.",
-   "explanation": "Because the paper abstract text was missing from the provided metadata, general scientific knowledge of this study shows that the results demonstrated a human participant with paralysis could use a brain implant to control a computer screen, open emails, and operate devices using recorded brain cell activity. The figures in the paper typically display brainwave patterns matching physical intentions.",
-   "limits": "The exact numerical details of the figures and statistical results are not available in the provided metadata, so general findings are described instead.",
-   "check": "medium",
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "How brain signals can be used to control external devices like computers and robotic hands.",
+   "explanation": "This study tested a brain-computer interface on a human participant with paralysis. By reading brain activity, the participant was able to move a computer cursor and operate basic items just by thinking about the movement.",
+   "limits": "Brain-computer interfaces are still in early development. They require invasive surgery, signals can degrade over time, and translating complex human thought into smooth mechanical action is technically very difficult.",
+   "check": "The metadata abstract was empty, so this explanation is based on general scientific knowledge of this well-known study.",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/nature04970",
    "doi_link": "https://doi.org/10.1038/nature04970",
-   "day": "3 of 5",
+   "day": "4 of 5",
    "access_level": "Metadata only Verify against the DOI link."
   },
   "github": {
-   "day": "2 of 3",
-   "topic": "How it works",
-   "project_name": "ROBOTIS-GIT/turtlebot3",
-   "explanation": "TurtleBot3 relies on a collection of separate software packages to function, rather than just one single program. Based on the project list, it uses dedicated packages for basic robot controls, message passing, computer simulations, robotic arms, machine learning, and autonomous driving competitions. It also connects closely with hardware drivers to communicate with physical robot parts like motors and sensors.",
-   "source_attribution": "Derived from the official TurtleBot3 README file listing related open-source projects and documentation links.",
-   "general_knowledge_note": "The exact internal logic of how ROS nodes pass messages is general robotics knowledge, as the README only lists the component names and dependencies without detailing their source code.",
-   "mini_challenge": "Review the list of related projects in the README and identify at least three separate packages that deal with simulations or machine learning.",
-   "knowledge_check": "True or False: TurtleBot3 is controlled by a single monolithic file rather than a collection of modular packages.",
-   "knowledge_check_answer": "False. It uses many modular packages like turtlebot3_simulations, turtlebot3_msgs, and driver packages.",
+   "project_investigation": {
+    "day": 3,
+    "total_days": 3,
+    "focus": "Run it in simulation and engineering judgement",
+    "repository": "ROBOTIS-GIT/turtlebot3",
+    "description": "ROS packages for Turtlebot3",
+    "summary": "On the final day of investigation, we look at how to run the project in simulation and apply engineering judgement using the provided documentation and related repositories.",
+    "simulation_and_testing_notes": "The project relies heavily on related simulation packages, such as turtlebot3_simulations, to test robot behavior virtually before deploying to real hardware. We did not physically execute the code, but we reviewed the setup instructions pointing to official manuals and simulation tools.",
+    "engineering_judgement": "Using a modular structure with separate packages for simulations, messages, and hardware drivers makes the codebase easier to maintain, test, and adapt for beginners and advanced developers alike.",
+    "small_challenge": "Explore the official ROBOTIS e-Manual for TurtleBot3 linked in the README and identify which separate repository handles the simulation files.",
+    "knowledge_check": "True or False: The TurtleBot3 project splits its simulation tools into a separate package rather than keeping everything in the main repository.",
+    "confidence": "high"
+   },
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "ROBOTIS-GIT/turtlebot3",
@@ -159,74 +156,57 @@
     "language": "C++",
     "archived": false,
     "license": "Apache-2.0"
-   }
+   },
+   "day": "3 of 3"
   },
   "news": {
    "items": [
     {
-     "category": "Research",
-     "url": "https://spectrum.ieee.org/video-friday-morphing-robots-quadrotor",
-     "what": "A drone capable of changing its shape to navigate narrow, restricted gaps.",
-     "who": "Not stated in the source excerpt",
-     "how": "The robot uses a morphing mechanism to squeeze itself. Background (general knowledge): Morphing allows robots to physically adapt their structure to handle environmental constraints that fixed-frame robots cannot pass through.",
-     "why": "To allow drones to fly through tight spaces they would normally be unable to traverse.",
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/medtronics-hugo-surgical-robot-ready-for-bigger-operation/",
+     "what": "Medtronic's Hugo surgical robotic system is approaching a milestone of 50,000 completed procedures.",
+     "who": "Medtronic",
+     "how": "The system assists surgeons in performing operations. Background (general knowledge): Surgical robots typically use tiny instruments and 3D visualization to allow for more precise movements than human hands alone.",
+     "why": "The system is being scaled for broader use in hospital operations.",
      "limits": "Not stated in the source excerpt",
-     "learn": "Not stated in the source excerpt",
+     "learn": "The adoption of robotic surgery continues to grow as systems reach high procedure volumes.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Video Friday: Drone Squeezes Itself to Fit Through Tight Spaces",
-     "published": "2026-11-20",
-     "source": "IEEE Spectrum Robotics"
-    },
-    {
-     "category": "Business",
-     "url": "https://www.therobotreport.com/humyn-labs-raises-47m-to-collect-real-world-data-for-robotics/",
-     "what": "Humyn Labs secured $47 million in funding to focus on collecting real-world operational data.",
-     "who": "Humyn Labs",
-     "how": "They provide data sets gathered from real-world operations to support developers of frontier AI and world models.",
-     "why": "To provide essential training data for robotics companies and AI developers.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "Not stated in the source excerpt",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Humyn Labs raises $47M to collect real-world data for robotics",
-     "published": "2026-11-19",
+     "title": "Medtronic\u2019s Hugo surgical robot ready for bigger operation",
+     "published": "2026-11-21",
      "source": "The Robot Report"
     },
     {
-     "category": "Open source",
-     "url": "https://robohub.org/robot-talk-episode-171-programming-robot-behaviour-with-sebastian-castro/",
-     "what": "Advancements in creating open-source software for robot task planning and behavior.",
-     "who": "Sebastian Castro",
-     "how": "Developing specialized software focused on robotic manipulation and task logic.",
-     "why": "To improve how robots are programmed to perform specific behaviors and tasks.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "The episode covers the development of software for robot task planning.",
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/the-manufacturing-data-gap-holding-back-physical-ai/",
+     "what": "Manufacturers face a data gap that prevents the effective use of physical AI in autonomous robots.",
+     "who": "Manufacturers",
+     "how": "Companies need to improve their methods for collecting data and ensure different systems can work together effectively. Background (general knowledge): Physical AI refers to robotic systems that use machine learning to interact with and navigate the real world.",
+     "why": "To enable reliable decision-making and boost production efficiency.",
+     "limits": "Gaps in industrial data quality and system interoperability.",
+     "learn": "Better data infrastructure is a requirement for advanced AI deployment in factories.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Robot Talk Episode 171 \u2013 Programming robot behaviour, with Sebastian Castro",
-     "published": "2026-11-20",
+     "title": "The manufacturing data gap holding back physical AI",
+     "published": "2026-11-22",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Research",
+     "url": "https://robohub.org/human-stories-behind-the-robot-from-bold-ideas-to-real-world-impact/",
+     "what": "Professor Sabine Hauert is researching how flying robot swarms can be applied to real-world challenges.",
+     "who": "Professor Sabine Hauert",
+     "how": "She experiments with swarms to address issues like firefighting, environmental monitoring, and medical treatment. Background (general knowledge): Robot swarms involve large groups of simple robots working together to complete complex tasks.",
+     "why": "To create new solutions for impactful humanitarian and environmental issues.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Ambitious robotics research can eventually lead to significant societal benefits.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Human Stories Behind the Robot: from bold ideas to real-world impact",
+     "published": "2026-11-23",
      "source": "Robohub"
     }
    ]
   },
   "jobs": {
    "items": [
-    {
-     "title": "Founder Associate Physical AI & Robotics (m/f/d) | full-time or gap-year intern",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Munich",
-     "published": "2026-11-22",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/batch-robotics-gmbh/founder-associate-physical-ai-robotics-full-time-or-gap-year-intern-munich-175184",
-     "company": "Batch Robotics GmbH"
-    },
-    {
-     "title": "Business Developer / Sales Manager - Robotics (m/w/d)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Berlin",
-     "published": "2026-11-22",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.com/jobs/companies/tekpoint-gmbh/business-developer-sales-manager-robotics-berlin-42926",
-     "company": "TEKPOINT GmbH"
-    },
     {
      "title": "Software Test Engineer",
      "type": "vacancy listing (availability not independently verified)",
@@ -235,15 +215,6 @@
      "source": "Arbeitnow",
      "url": "https://www.arbeitnow.ch/jobs/companies/swisspeak-partners-gmbh/remote-software-test-engineer-bern-110215",
      "company": "SwissPeak Partners GmbH"
-    },
-    {
-     "title": "Embedded Electrical Engineer - SoM",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-22",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/embedded-electrical-engineer-som-paris-163003",
-     "company": "Signal Processing Engineer (RF Processing & Analytics)"
     },
     {
      "title": "IoT Embedded Systems Engineer",
@@ -255,31 +226,22 @@
      "company": "SwissPeak Partners GmbH"
     },
     {
-     "title": "Industrial Vision & Automation Engineer",
+     "title": "Automation / System Engineer IT/OT (m/w/d)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Orly",
-     "published": "2026-11-22",
+     "location": "Root",
+     "published": "2026-11-23",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/industrial-vision-automation-engineer-orly-103459",
-     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+     "url": "https://www.arbeitnow.ch/jobs/companies/exco-group/automation-system-engineer-it-ot-root-302010",
+     "company": "EXCO Group"
     },
     {
-     "title": "RF Electronics Engineer (Electronic Warfare)",
+     "title": "Software Engineer, Robot Autonomy (Reliability & Test Infrastructure)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-22",
+     "location": "Z\u00fcrich, Switzerland",
+     "published": "2026-11-23",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/rf-electronics-engineer-electronic-warfare-paris-160371",
-     "company": "Signal Processing Engineer (RF Processing & Analytics)"
-    },
-    {
-     "title": "RF Electronics Engineer (Radio)",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-22",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/signal-processing-engineer-rf-processing-analytics/rf-electronics-engineer-radio-paris-422311",
-     "company": "Signal Processing Engineer (RF Processing & Analytics)"
+     "url": "https://www.arbeitnow.ch/jobs/companies/laelaps/software-engineer-robot-autonomy-reliability-test-infrastructure-zurich-390637",
+     "company": "Laelaps"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
