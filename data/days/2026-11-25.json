@@ -1,0 +1,289 @@
+{
+ "v": 2,
+ "date": "2026-11-25",
+ "generated_at": "2026-11-25T09:11:10.938274+05:30",
+ "status": {
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
+ },
+ "sections": {
+  "oi_lesson": {
+   "objective": "Understand how scientists track the energy consumption of living brain organoids and the hurdles involved in measuring their power use.",
+   "why_it_matters": "Just as a smartphone requires a battery meter to track power drain, researchers must measure how much energy living brain tissue uses to ensure it stays healthy and functions correctly during computing tasks.",
+   "prerequisites": [
+    "Basic knowledge that biological tissue runs on chemical fuel rather than electrical current from a wall plug.",
+    "Understanding that brain cells require a steady supply of oxygen and glucose to survive and communicate."
+   ],
+   "simple_explanation": "Unlike silicon chips that plug into a power supply and report electricity usage through digital sensors, living brain organoids are powered by a liquid nutrient bath. To measure how much energy an organoid uses, scientists cannot simply attach a standard voltmeter. Instead, they must monitor chemical changes in the fluid around the tissue, such as how fast the cells consume oxygen and glucose or how much waste they produce. This indirect measurement is tricky because living tissue constantly fluctuates, making exact power tracking much harder than reading a computer monitor's power draw.",
+   "step_by_step": [
+    "Provide the organoid with a closed, controlled volume of nutrient-rich liquid media containing known amounts of oxygen and glucose.",
+    "Use specialized optical or chemical sensors placed in the fluid to track the concentration of oxygen and sugar over time.",
+    "Calculate the rate at which the neural tissue pulls these nutrients out of the liquid, which indicates its overall metabolic burn rate.",
+    "Compare the nutrient consumption levels during quiet resting states against active states when the tissue is stimulated with electrical signals."
+   ],
+   "technical_depth": "Cellular energy production primarily relies on adenosine triphosphate (ATP) generated via oxidative phosphorylation in mitochondria and anaerobic glycolysis in the cytoplasm. In organoid research, real-time respirometry using micro-sensors allows researchers to track the Oxygen Consumption Rate (OCR) and Extracellular Acidification Rate (ECAR). A major technical challenge is spatial limitation: large organoids often develop a necrotic core due to poor diffusion limits, meaning outer cells consume disproportionate amounts of oxygen, skewing bulk energy measurements and making precise per-cell power calculations difficult.",
+   "misconceptions": [
+    "Misconception: You can plug an organoid into a multimeter to measure its exact wattage.",
+    "Fact: Organoids do not use electric current cables; their power use must be calculated indirectly by measuring chemical fuel consumption.",
+    "Misconception: Brain cells use a fixed amount of energy at all times.",
+    "Fact: Energy consumption spikes significantly when neurons fire rapid bursts of electrical signals compared to resting periods."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What is the primary fuel source measured when tracking an organoid's energy use?",
+     "answer": "Oxygen and glucose."
+    },
+    {
+     "question": "Why is it difficult to measure an organoid's power consumption using standard electronic tools?",
+     "answer": "Because biological tissue runs on chemical reactions in a liquid bath rather than electrical currents through wires."
+    },
+    {
+     "question": "What happens to the center of large organoids that complicates energy measurements?",
+     "answer": "They can develop a necrotic core due to poor oxygen and nutrient diffusion."
+    }
+   ],
+   "exercise": "Design a simple experiment using a closed chamber with an oxygen sensor to compare how an organoid's oxygen consumption changes before and after a period of electrical stimulation.",
+   "summary": "Measuring energy use in biological systems requires tracking chemical fuel consumption like oxygen and glucose rather than reading electrical wattage, presenting unique hurdles due to tissue diffusion limits and constant metabolic activity.",
+   "next_lesson": "Day 26: Nutrient delivery and waste removal limits in large 3D cultures.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "bci_lesson": {
+   "objective": "Understand how a brain-computer interface translates raw electrical brain activity into smooth, continuous two-dimensional movement on a digital screen.",
+   "why_it_matters": "Moving a cursor transforms abstract brain signals into practical digital actions, allowing users to navigate menus, type on virtual keyboards, and interact with the digital world.",
+   "prerequisites": [
+    "Basic familiarity with brainwave rhythms and electrical signal recording",
+    "Understanding that computer algorithms classify patterns in data"
+   ],
+   "simple_explanation": "Imagine holding a joystick where your thoughts act as your hands. To move a computer cursor right, left, up, or down, a BCI looks at specific patterns in your brain activity. A computer program constantly measures these signals, translates their strength into numbers, and pushes the cursor across the screen in real time.",
+   "step_by_step": [
+    "Step 1: Record brain signals using sensors placed either on the scalp or directly on the brain tissue.",
+    "Step 2: Clean the incoming data stream to remove background noise, blinking artifacts, and electrical interference.",
+    "Step 3: Extract features by measuring changes in signal power or firing rates associated with directional thought.",
+    "Step 4: Use a decoding algorithm, such as a linear filter, to convert these features into velocity values for the X and Y axes on a screen.",
+    "Step 5: Render the movement continuously so the user sees immediate visual feedback, allowing them to correct their path instantly."
+   ],
+   "technical_depth": "Continuous cursor control typically relies on mathematical population vectors or linear decoders like the Wiener filter or Kalman filter. These models map a vector of neural features to a kinematic output vector representing velocity or position. Because biological signals are inherently noisy, decoders must balance smoothing out erratic jumps with maintaining a fast response time to prevent lag.",
+   "misconceptions": [
+    "Misconception: Thinking about a physical hand movement instantly teleports the cursor to a target.",
+    "Fact: Continuous cursor control operates like steering a vehicle, where brain signals dictate speed and direction rather than direct teleportation."
+   ],
+   "knowledge_check": [
+    {
+     "question": "What does a BCI decoder typically output to drive a cursor?",
+     "answer": "Kinematic variables such as velocity or position along spatial axes."
+    },
+    {
+     "question": "Why is real-time visual feedback critical for cursor control?",
+     "answer": "It allows the user to close the loop and adjust their mental strategy instantly to correct steering errors."
+    },
+    {
+     "question": "What is the primary role of data filtering in this pipeline?",
+     "answer": "To remove background noise and artifacts before the algorithm translates the signal into a command."
+    }
+   ],
+   "exercise": "Sketch a simple flowchart on paper mapping out the journey of a brain signal from the scalp sensor all the way to a cursor moving right on a computer monitor, labeling each intermediate software step.",
+   "summary": "Cursor control bridges neural intent and screen movement by continuously translating cleaned brain signals into directional velocity vectors, relying heavily on fast visual feedback loops.",
+   "next_lesson": "Introduction to multi-dimensional decoding and advanced kinematic control",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "internship": {
+   "topic": "Microcontroller peripherals: GPIO, timers, PWM and interrupts",
+   "explanation": "Microcontroller peripherals are built-in hardware circuits that help your main processor handle specific tasks without wasting processing power. GPIO (General Purpose Input/Output) lets your chip read buttons or turn on LEDs. Timers count internal clock ticks to measure time accurately. PWM (Pulse Width Modulation) rapidly turns a digital pin on and off to control motor speeds or LED brightness smoothly. Interrupts pause your main code instantly when an external event happens, like a sensor trigger or a safety button press, ensuring critical hardware events are never missed.",
+   "practical_example": "Imagine building a line-following robot for an internship project. You use GPIO pins to read infrared ground sensors, timers to schedule periodic sensor checks, PWM to control the speed of the left and right DC motors, and an emergency stop button connected to an external interrupt pin so the robot halts instantly when pressed.",
+   "exercise": "Write down how you would configure a microcontroller to sweep a servo motor for a robotic arm from 0 to 180 degrees using PWM, and state which peripheral feature you need to adjust to change the servo angle.",
+   "model_answer": "To control a servo motor, I would set up a hardware PWM peripheral to output a periodic signal with a fixed frequency (usually 50Hz) and a variable pulse width ranging from 1 to 2 milliseconds. Changing the width of the active high pulse (the duty cycle) tells the servo internal circuitry which angle position to move to.",
+   "why_it_works": "This answer correctly identifies the core mechanism of servo control\u2014pulse width variation\u2014and links it directly to the appropriate hardware peripheral (PWM) without inventing complex custom libraries or imaginary sensor brands.",
+   "improvement_tip": "When discussing peripherals in an interview, mention why you use hardware-based PWM instead of software delays (hardware PWM runs independently in the background, keeping your CPU free for complex navigation or BCI signal processing algorithms).",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "linkedin": {
+   "topic": "Write an honest headline focused on embedded systems and robotics",
+   "explanation": "Your LinkedIn headline sits right under your name, making it one of the first things a recruiter sees when searching for interns in India. Instead of using generic or overly hyped titles like 'Future Robotics Guru' or 'Embedded Systems Master', an honest headline clearly states what you actually study, what hardware or tools you genuinely work with, and your specific career focus.",
+   "practical_example": "An example of a clear, unhyped headline for a student is: 'Electronics Engineering Undergraduate | Aspiring Embedded Systems & Robotics Intern | Hands-on experience with STM32, C, and ROS'.",
+   "exercise": "Review your current LinkedIn headline and rewrite it to include three factual items: your current degree or major, the specific hardware or software domain you are targeting (such as BCI, robotics, or firmware), and one tool or language you have actually used in a college lab or personal project.",
+   "model_answer": "Electronics and Communication Student | Focused on Embedded C, Microcontrollers, and Autonomous Robotics | Open to Summer Internships",
+   "why_it_works": "It uses plain language that matches the exact keywords recruiters search for, while remaining completely honest about your current student status without making false claims of professional mastery.",
+   "improvement_tip": "Avoid buzzwords like 'passionate' or 'innovator' because they take up valuable space that could be used to name real technical tools like Arduino, ESP32, or Python.",
+   "confidence": "Unverified: AI-written from model knowledge, no live sources"
+  },
+  "oi_paper": {
+   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
+   "focus": "Connecting living human and mouse brain cells in a lab to a computer simulation, like a simple video game, to see how they adapt and respond.",
+   "explanation": "Researchers hooked up lab-grown neurons to a computer program mimicking the game Pong. By sending electrical signals, the cells learned to move a paddle to hit a ball. The big-picture idea is understanding how biological brain tissue processes information and learns from its environment without being inside a living body.",
+   "limits": "The provided metadata lacked an abstract, so this summary relies on general knowledge of the published study. Lab neurons show basic responsiveness and learning, but calling this true 'sentience' or consciousness is still heavily debated by experts.",
+   "check": {
+    "question_1": "Are these real brain cells connected to a computer?",
+    "answer_1": "Yes, living neurons in a dish were linked to software to interact with a simple digital environment.",
+    "question_2": "Did the cells actually learn anything?",
+    "answer_2": "Yes, they adjusted their electrical activity over time to improve at playing the computer game.",
+    "question_3": "Does this mean the cells have feelings or consciousness?",
+    "answer_3": "Not necessarily; while they show smart-looking responses, scientists debate whether this simple adaptation counts as true sentience.",
+    "confidence": "High"
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1016/j.neuron.2022.09.001",
+   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
+   "day": "5 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "bci_paper": {
+   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
+   "focus": "Testing if brain signals can let a paralyzed person control a computer screen and other items using a tiny sensor placed on the brain.",
+   "explanation": "Because the abstract was missing, general knowledge shows this famous study used the BrainGate system. A small chip was placed in the brain of a participant who could not move their limbs, allowing them to move a computer cursor, check email, and operate a television using only their thoughts.",
+   "limits": "The Crossref data did not include an abstract, and specific details about the exact number of neurons or tests cannot be shared without inventing them. This summary relies on well-known milestones of the early BrainGate clinical trials.",
+   "check": {
+    "question_1": "What main device was tested to help a person with paralysis?",
+    "question_2": "What tasks could the participant perform using only brain signals?",
+    "question_3": "Why is it important to rely on general knowledge when the abstract is missing?"
+   },
+   "confidence": "Preliminary: AI explanation of a verified record",
+   "doi": "10.1038/nature04970",
+   "doi_link": "https://doi.org/10.1038/nature04970",
+   "day": "5 of 5",
+   "access_level": "Metadata only Verify against the DOI link."
+  },
+  "github": {
+   "investigation_day": "Day 1 of 3",
+   "goal": "Understand the project",
+   "project_name": "MoveIt 2",
+   "repository": "moveit/moveit2",
+   "main_language": "C++",
+   "license": "BSD-3-Clause",
+   "active_status": "Active, not archived",
+   "summary": "MoveIt 2 is an open-source software platform used for robot arm motion planning, manipulation, and related tasks. It is built specifically for ROS 2 (Robot Operating System 2). It helps developers create commercial applications, test designs, and compare algorithms.",
+   "key_features": [
+    "Motion planning framework for ROS 2",
+    "Used for commercial applications, prototyping, and benchmarking",
+    "Supported by automated tests and continuous integration checks",
+    "Multiple active branches for different ROS distributions like Humble, Jazzy, and the main development branch"
+   ],
+   "beginner_explanation": "Imagine you have a robotic arm and you want it to pick up an object without hitting obstacles. MoveIt 2 is the software toolkit that calculates the safe path for the arm to move from point A to point B. It is designed to work with ROS 2, which is a popular framework for programming robots.",
+   "challenge": "Look at the repository metadata and README excerpt provided. Identify how many specific ROS distributions are mentioned in the stable release branches table or build status section, and check if the repository is archived.",
+   "knowledge_check": {
+    "question": "What is the primary purpose of MoveIt 2 based on the provided text?",
+    "options": [
+     "To build web applications and databases",
+     "To provide a motion planning framework for ROS 2 robotics",
+     "To manage computer operating system updates",
+     "To design physical robot hardware parts"
+    ],
+    "correct_answer": "To provide a motion planning framework for ROS 2 robotics"
+   },
+   "confidence": "Based on verified repo metadata and README excerpt; code was not run",
+   "verified_metadata": {
+    "full_name": "moveit/moveit2",
+    "html_url": "https://github.com/moveit/moveit2",
+    "description": ":robot: MoveIt for ROS 2",
+    "pushed_at": "2026-11-24T19:02:05Z",
+    "language": "C++",
+    "archived": false,
+    "license": "BSD-3-Clause"
+   },
+   "day": "1 of 3"
+  },
+  "news": {
+   "items": [
+    {
+     "category": "Business",
+     "url": "https://www.therobotreport.com/softbank-acquires-marc-raiberts-robotics-and-ai-institute/",
+     "what": "SoftBank acquired the Robotics and AI Institute from Hyundai Motor Group.",
+     "who": "SoftBank, Hyundai Motor Group, and the Robotics and AI Institute.",
+     "how": "The acquisition involves taking over the research organization which plans to hire for 24 roles in Switzerland and Massachusetts. Background (general knowledge): Acquisitions are often used to integrate specialized research talent and technologies into a larger corporate portfolio.",
+     "why": "SoftBank aims to increase the size of its robotics-focused portfolio.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "SoftBank acquires Marc Raibert\u2019s Robotics and AI Institute",
+     "published": "2026-11-24",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Deployment",
+     "url": "https://www.therobotreport.com/how-does-orchard-ai-fit-into-john-deeres-technology-portfolio/",
+     "what": "John Deere integrated Orchard AI into its suite of technologies.",
+     "who": "John Deere and Orchard AI.",
+     "how": "The integration is designed to improve the data available to farmers during the growth cycle of their crops. Background (general knowledge): Precision agriculture uses AI and machine learning to analyze crop health and soil data, helping farmers optimize yields.",
+     "why": "To provide growers with better decision-making capabilities.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "How does Orchard AI fit into John Deere\u2019s technology portfolio?",
+     "published": "2026-11-24",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/from-commercial-scale-to-embodied-intelligence-the-next-challenge-for-robotics/",
+     "what": "The industry is shifting focus toward embodied intelligence.",
+     "who": "The robotics industry.",
+     "how": "New AI models are being combined with improved hardware to change how robots perceive and interact with the physical world. Background (general knowledge): Embodied intelligence refers to the concept that intelligence emerges from a physical body interacting with its environment.",
+     "why": "Advancements in hardware and AI are increasing the capabilities of machines.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "High",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "From Commercial Scale to Embodied Intelligence: The Next Challenge for Robotics",
+     "published": "2026-11-18",
+     "source": "The Robot Report"
+    }
+   ]
+  },
+  "jobs": {
+   "items": [
+    {
+     "title": "AI Engineer H/F",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-24",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/marsorobotics/ai-engineer-h-f-paris-261054",
+     "company": "Marsorobotics"
+    },
+    {
+     "title": "Embedded Software Engineer H/F",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Paris",
+     "published": "2026-11-24",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/marsorobotics/embedded-software-engineer-h-f-paris-464750",
+     "company": "Marsorobotics"
+    },
+    {
+     "title": "Robotics Operations Technician H/F",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Cambrai",
+     "published": "2026-11-24",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.fr/jobs/companies/marsorobotics/robotics-operations-technician-h-f-cambrai-274305",
+     "company": "Marsorobotics"
+    },
+    {
+     "title": "VP Embedded Finance & Strategic Partnerships (m/w/d) 80-100%",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Rapperswil-Jona",
+     "published": "2026-11-24",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.ch/jobs/companies/bexio-ag/vp-embedded-finance-strategic-partnerships-80-100-rapperswil-jona-186892",
+     "company": "bexio ag"
+    },
+    {
+     "title": "Software Engineer II: Autonomous Supply Chains",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Amsterdam",
+     "published": "2026-11-24",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.nl/jobs/companies/flexport/software-engineer-ii-autonomous-supply-chains-amsterdam-120266",
+     "company": "Flexport"
+    }
+   ],
+   "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
+   "note": "Includes relevant internships, graduate/fresher roles, and non-senior experienced roles. India and remote roles are prioritized when available; international roles may also appear. Listings are not guaranteed to remain open."
+  }
+ }
+}
