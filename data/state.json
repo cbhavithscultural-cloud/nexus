@@ -1,20 +1,20 @@
 {
- "oi": 25,
- "bci": 25,
+ "oi": 26,
+ "bci": 26,
  "po": [
   5,
-  1
+  2
  ],
  "pb": [
   5,
-  1
+  2
  ],
  "gh": [
   8,
-  2
+  3
  ],
- "ip": 25,
- "li": 25,
+ "ip": 26,
+ "li": 26,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -100,6 +100,9 @@
   "https://robohub.org/human-stories-behind-the-robot-from-bold-ideas-to-real-world-impact/",
   "https://www.therobotreport.com/softbank-acquires-marc-raiberts-robotics-and-ai-institute/",
   "https://www.therobotreport.com/how-does-orchard-ai-fit-into-john-deeres-technology-portfolio/",
-  "https://www.therobotreport.com/from-commercial-scale-to-embodied-intelligence-the-next-challenge-for-robotics/"
+  "https://www.therobotreport.com/from-commercial-scale-to-embodied-intelligence-the-next-challenge-for-robotics/",
+  "https://www.therobotreport.com/how-vention-is-cutting-factory-programming-from-weeks-to-minutes/",
+  "https://robohub.org/space-robotics-notes-from-an-iros-2026-plenary-session/",
+  "https://spectrum.ieee.org/darpa-triage-challenge-final-robots"
  ]
 }

@@ -1,236 +1,207 @@
 {
  "v": 2,
- "date": "2026-11-25",
- "generated_at": "2026-11-25T10:26:47.473127+05:30",
+ "date": "2026-11-26",
+ "generated_at": "2026-11-26T08:29:58.512140+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "failed (kept previous): no matching recent robotics/embedded/electronics jobs found; previous listings retained"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how scientists track the energy consumption of living brain organoids and the hurdles involved in measuring their power use.",
-   "why_it_matters": "Just as a smartphone requires a battery meter to track power drain, researchers must measure how much energy living brain tissue uses to ensure it stays healthy and functions correctly during computing tasks.",
+   "objective": "Understand how to measure and improve the signal-to-noise ratio when recording electrical activity from brain organoids.",
+   "why_it_matters": "Brain organoids produce very tiny electrical signals mixed with unwanted background electrical interference. Separating the true neural data from this noise is essential for accurately interpreting what the tissue is doing.",
    "prerequisites": [
-    "Basic knowledge that biological tissue runs on chemical fuel rather than electrical current from a wall plug.",
-    "Understanding that brain cells require a steady supply of oxygen and glucose to survive and communicate."
+    "Basic familiarity with how neurons generate electrical spikes.",
+    "Understanding of multi-electrode arrays (MEAs) used to listen to organoids."
    ],
-   "simple_explanation": "Unlike silicon chips that plug into a power supply and report electricity usage through digital sensors, living brain organoids are powered by a liquid nutrient bath. To measure how much energy an organoid uses, scientists cannot simply attach a standard voltmeter. Instead, they must monitor chemical changes in the fluid around the tissue, such as how fast the cells consume oxygen and glucose or how much waste they produce. This indirect measurement is tricky because living tissue constantly fluctuates, making exact power tracking much harder than reading a computer monitor's power draw.",
+   "simple_explanation": "Imagine trying to listen to a whisper at a noisy concert. The whisper is the signal you want, and the crowd chatter is the noise. In organoid research, the 'signal' is the genuine electrical firing of brain cells, while the 'noise' comes from thermal activity in the recording equipment, movement of the liquid growth media, or stray electrical interference from the room. To make sense of organoid activity, scientists must maximize the signal and minimize the noise.",
    "step_by_step": [
-    "Provide the organoid with a closed, controlled volume of nutrient-rich liquid media containing known amounts of oxygen and glucose.",
-    "Use specialized optical or chemical sensors placed in the fluid to track the concentration of oxygen and sugar over time.",
-    "Calculate the rate at which the neural tissue pulls these nutrients out of the liquid, which indicates its overall metabolic burn rate.",
-    "Compare the nutrient consumption levels during quiet resting states against active states when the tissue is stimulated with electrical signals."
+    "Identify the source of the electrical signal: the small voltage changes produced when a neuron fires an action potential near an electrode.",
+    "Recognize environmental and equipment noise sources, such as thermal fluctuations in the metal wires, power line interference from nearby wall outlets, and tiny shifts in the liquid surrounding the tissue.",
+    "Apply hardware solutions, like using insulated cables, grounded Faraday cages to block external electrical fields, and high-quality amplifiers to boost the signal before it degrades.",
+    "Apply software filters to clean the recorded data, removing steady background hums (like standard power line frequencies) while keeping the sharp spikes of the neural signals intact.",
+    "Calculate the signal-to-noise ratio by comparing the height of the actual neural spike to the baseline level of the random background noise."
    ],
-   "technical_depth": "Cellular energy production primarily relies on adenosine triphosphate (ATP) generated via oxidative phosphorylation in mitochondria and anaerobic glycolysis in the cytoplasm. In organoid research, real-time respirometry using micro-sensors allows researchers to track the Oxygen Consumption Rate (OCR) and Extracellular Acidification Rate (ECAR). A major technical challenge is spatial limitation: large organoids often develop a necrotic core due to poor diffusion limits, meaning outer cells consume disproportionate amounts of oxygen, skewing bulk energy measurements and making precise per-cell power calculations difficult.",
+   "technical_depth": "Signal-to-noise ratio (SNR) is formally expressed as the ratio of the root mean square (RMS) amplitude of the action potential signal to the RMS amplitude of the background noise. A high SNR means clear, unambiguous spikes that can be easily sorted and isolated (spike sorting). A low SNR means spikes blend into the background fuzz, leading to false positives or missed neural events. Improving SNR requires optimizing the physical contact between the organoid and the electrode, reducing electrical resistance at the interface, and lowering the thermal noise floor of the recording system hardware.",
    "misconceptions": [
-    "Misconception: You can plug an organoid into a multimeter to measure its exact wattage.",
-    "Fact: Organoids do not use electric current cables; their power use must be calculated indirectly by measuring chemical fuel consumption.",
-    "Misconception: Brain cells use a fixed amount of energy at all times.",
-    "Fact: Energy consumption spikes significantly when neurons fire rapid bursts of electrical signals compared to resting periods."
+    {
+     "misconception": "Amplifying the recorded data always improves the signal-to-noise ratio.",
+     "correction": "Amplification boosts both the signal and the noise equally. It does not make a muddy signal clearer on its own."
+    },
+    {
+     "misconception": "All electrical activity recorded from an organoid is a meaningful neural signal.",
+     "correction": "Much of what an electrode picks up can be non-neural artifacts, such as bubble movements, electrode drift, or external electromagnetic interference."
+    }
    ],
    "knowledge_check": [
     {
-     "question": "What is the primary fuel source measured when tracking an organoid's energy use?",
-     "answer": "Oxygen and glucose."
+     "question": "What does 'signal' represent in organoid electrical recordings?",
+     "answer": "The genuine electrical action potentials or field potentials generated by the living neural tissue."
     },
     {
-     "question": "Why is it difficult to measure an organoid's power consumption using standard electronic tools?",
-     "answer": "Because biological tissue runs on chemical reactions in a liquid bath rather than electrical currents through wires."
+     "question": "Why is a low signal-to-noise ratio problematic?",
+     "answer": "It makes it difficult or impossible to reliably distinguish true neural firing from background electrical interference and random fuzz."
     },
     {
-     "question": "What happens to the center of large organoids that complicates energy measurements?",
-     "answer": "They can develop a necrotic core due to poor oxygen and nutrient diffusion."
+     "question": "Does turning up the amplifier volume improve the signal-to-noise ratio?",
+     "answer": "No, because it amplifies the noise right along with the signal."
     }
    ],
-   "exercise": "Design a simple experiment using a closed chamber with an oxygen sensor to compare how an organoid's oxygen consumption changes before and after a period of electrical stimulation.",
-   "summary": "Measuring energy use in biological systems requires tracking chemical fuel consumption like oxygen and glucose rather than reading electrical wattage, presenting unique hurdles due to tissue diffusion limits and constant metabolic activity.",
-   "next_lesson": "Day 26: Nutrient delivery and waste removal limits in large 3D cultures.",
+   "exercise": "Review a set of sample multi-electrode array recordings. Identify stretches of data that look like clean, sharp spikes versus random baseline fuzz. Note how background disturbances change the baseline noise level.",
+   "summary": "Signal-to-noise ratio is the key metric that determines how cleanly we can hear a brain organoid's electrical activity. By understanding hardware limitations, shielding sensitive setups, and using careful data filtering, researchers ensure their conclusions are based on real neural dynamics rather than equipment artifacts.",
+   "next_lesson": "Day 27: Introduction to basic calcium imaging techniques as an alternative or complement to electrical recording.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how a brain-computer interface translates raw electrical brain activity into smooth, continuous two-dimensional movement on a digital screen.",
-   "why_it_matters": "Moving a cursor transforms abstract brain signals into practical digital actions, allowing users to navigate menus, type on virtual keyboards, and interact with the digital world.",
+   "objective": "Understand how speech neuroprostheses work, focusing on what specific aspects of language and movement the technology actually decodes from the brain.",
+   "why_it_matters": "People who have lost the ability to speak due to conditions like ALS or stroke need ways to communicate. Speech BCIs offer a path to restore natural conversation, making it essential to know whether these systems decode actual sound, muscle movements, or abstract thought.",
    "prerequisites": [
-    "Basic familiarity with brainwave rhythms and electrical signal recording",
-    "Understanding that computer algorithms classify patterns in data"
+    "Basic understanding of brain regions involved in language production, such as the motor cortex.",
+    "Familiarity with how brain implants capture electrical signals from groups of neurons."
    ],
-   "simple_explanation": "Imagine holding a joystick where your thoughts act as your hands. To move a computer cursor right, left, up, or down, a BCI looks at specific patterns in your brain activity. A computer program constantly measures these signals, translates their strength into numbers, and pushes the cursor across the screen in real time.",
+   "simple_explanation": "When you speak, your brain does two main things: it plans what words to say, and it sends detailed movement commands to your tongue, lips, jaw, and vocal cords. Current speech neuroprostheses do not decode silent inner thoughts or abstract ideas directly. Instead, they primarily decode the physical instructions the brain sends to the vocal tract to make sounds, or the phonetic building blocks of speech.",
    "step_by_step": [
-    "Step 1: Record brain signals using sensors placed either on the scalp or directly on the brain tissue.",
-    "Step 2: Clean the incoming data stream to remove background noise, blinking artifacts, and electrical interference.",
-    "Step 3: Extract features by measuring changes in signal power or firing rates associated with directional thought.",
-    "Step 4: Use a decoding algorithm, such as a linear filter, to convert these features into velocity values for the X and Y axes on a screen.",
-    "Step 5: Render the movement continuously so the user sees immediate visual feedback, allowing them to correct their path instantly."
+    "Brain preparation: The user attempts to speak or imagines speaking words aloud.",
+    "Signal capture: Intracortical electrodes record the electrical activity of neurons in the speech and motor areas of the brain.",
+    "Feature translation: A computer algorithm analyzes these neural patterns to find signatures that match specific sounds or mouth movements.",
+    "Output generation: The decoded sounds, phonemes, or text are synthesized into computer-generated speech or displayed on a screen."
    ],
-   "technical_depth": "Continuous cursor control typically relies on mathematical population vectors or linear decoders like the Wiener filter or Kalman filter. These models map a vector of neural features to a kinematic output vector representing velocity or position. Because biological signals are inherently noisy, decoders must balance smoothing out erratic jumps with maintaining a fast response time to prevent lag.",
+   "technical_depth": "Speech decoding relies heavily on tracking high-gamma band activity (roughly 70 to 150 Hz) in cortical regions responsible for articulation, such as the ventral sensorimotor cortex (vSMC) and Broca's area. Decoders typically use machine learning models, like recurrent neural networks (RNNs) or hidden Markov models, to map these neural firing rates to phonemes (distinct units of sound) or words. A major distinction exists between decoding articulatory kinematics (the physical movements of the vocal tract) and decoding acoustic properties or direct text representations.",
    "misconceptions": [
-    "Misconception: Thinking about a physical hand movement instantly teleports the cursor to a target.",
-    "Fact: Continuous cursor control operates like steering a vehicle, where brain signals dictate speed and direction rather than direct teleportation."
+    "Misconception: Speech BCIs can read your random, unexpressed thoughts and inner monologue. Reality: Systems only decode intentional attempts to speak or articulate, requiring active user participation.",
+    "Misconception: The implant translates the literal voice of the user. Reality: Current systems generate synthetic computer voices based on text or phonetic outputs, not the user's original biological voice."
    ],
    "knowledge_check": [
     {
-     "question": "What does a BCI decoder typically output to drive a cursor?",
-     "answer": "Kinematic variables such as velocity or position along spatial axes."
+     "question": "What do speech neuroprostheses primarily decode?",
+     "answer": "They primarily decode the neural signals for articulatory movements and phonetic sounds, rather than abstract thoughts."
     },
     {
-     "question": "Why is real-time visual feedback critical for cursor control?",
-     "answer": "It allows the user to close the loop and adjust their mental strategy instantly to correct steering errors."
+     "question": "Why is silent inner speech harder to decode than attempted vocalization?",
+     "answer": "Attempted vocalization generates strong, consistent motor commands in the brain, whereas inner speech lacks the robust physical execution signals that current electrodes easily detect."
     },
     {
-     "question": "What is the primary role of data filtering in this pipeline?",
-     "answer": "To remove background noise and artifacts before the algorithm translates the signal into a command."
+     "question": "What frequency band is frequently analyzed in intracortical speech decoding?",
+     "answer": "The high-gamma band (70 to 150 Hz)."
     }
    ],
-   "exercise": "Sketch a simple flowchart on paper mapping out the journey of a brain signal from the scalp sensor all the way to a cursor moving right on a computer monitor, labeling each intermediate software step.",
-   "summary": "Cursor control bridges neural intent and screen movement by continuously translating cleaned brain signals into directional velocity vectors, relying heavily on fast visual feedback loops.",
-   "next_lesson": "Introduction to multi-dimensional decoding and advanced kinematic control",
+   "exercise": "List three distinct components of speech production (for example: planning the idea, moving the tongue, producing acoustic waves). Based on this lesson, identify which of these components current brain implants are best equipped to decode and explain why.",
+   "summary": "Speech neuroprostheses bridge the communication gap by decoding the brain's physical instructions for articulation and phonetics rather than reading abstract, silent thoughts. They rely on neural activity in speech-related motor regions to predict sounds, phonemes, and words for synthetic output.",
+   "next_lesson": "Introduction to linguistic modeling and language error correction in speech BCI",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Microcontroller peripherals: GPIO, timers, PWM and interrupts",
-   "explanation": "Microcontroller peripherals are built-in hardware circuits that help your main processor handle specific tasks without wasting processing power. GPIO (General Purpose Input/Output) lets your chip read buttons or turn on LEDs. Timers count internal clock ticks to measure time accurately. PWM (Pulse Width Modulation) rapidly turns a digital pin on and off to control motor speeds or LED brightness smoothly. Interrupts pause your main code instantly when an external event happens, like a sensor trigger or a safety button press, ensuring critical hardware events are never missed.",
-   "practical_example": "Imagine building a line-following robot for an internship project. You use GPIO pins to read infrared ground sensors, timers to schedule periodic sensor checks, PWM to control the speed of the left and right DC motors, and an emergency stop button connected to an external interrupt pin so the robot halts instantly when pressed.",
-   "exercise": "Write down how you would configure a microcontroller to sweep a servo motor for a robotic arm from 0 to 180 degrees using PWM, and state which peripheral feature you need to adjust to change the servo angle.",
-   "model_answer": "To control a servo motor, I would set up a hardware PWM peripheral to output a periodic signal with a fixed frequency (usually 50Hz) and a variable pulse width ranging from 1 to 2 milliseconds. Changing the width of the active high pulse (the duty cycle) tells the servo internal circuitry which angle position to move to.",
-   "why_it_works": "This answer correctly identifies the core mechanism of servo control\u2014pulse width variation\u2014and links it directly to the appropriate hardware peripheral (PWM) without inventing complex custom libraries or imaginary sensor brands.",
-   "improvement_tip": "When discussing peripherals in an interview, mention why you use hardware-based PWM instead of software delays (hardware PWM runs independently in the background, keeping your CPU free for complex navigation or BCI signal processing algorithms).",
+   "topic": "UART, I2C and SPI: choose the right interface",
+   "explanation": "Microcontrollers need to talk to sensors, displays, and other chips. UART uses two wires and sends data one bit after another, making it simple for point-to-point links like GPS modules. I2C uses two shared wires and addresses multiple devices using IDs, which is great for connecting slow sensors like temperature or IMUs. SPI uses four wires and relies on separate chip-select lines for each device, allowing very fast data transfer needed for displays or high-speed ADCs.",
+   "practical_example": "Imagine building a robotic arm controller in your college lab. You use UART to send debug logs to your laptop, an I2C accelerometer to track arm tilt, and an SPI TFT display to show real-time joint angles.",
+   "exercise": "Select which communication protocol (UART, I2C, or SPI) you would pick to connect a high-resolution OLED screen to your STM32 microcontroller, and briefly state your physical reasoning.",
+   "model_answer": "I would choose SPI because an OLED screen requires fast frame updates, and SPI supports high data transfer speeds using dedicated data and clock lines, whereas I2C would be too slow for graphics rendering.",
+   "why_it_works": "It directly matches the hardware requirement of high-speed data transfer for displays with the protocol's bandwidth strengths, showing you understand trade-offs beyond basic pin counts.",
+   "improvement_tip": "Always check your sensor and display datasheets before picking a protocol to confirm maximum clock speeds and voltage levels match your microcontroller.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Write an honest headline focused on embedded systems and robotics",
-   "explanation": "Your LinkedIn headline sits right under your name, making it one of the first things a recruiter sees when searching for interns in India. Instead of using generic or overly hyped titles like 'Future Robotics Guru' or 'Embedded Systems Master', an honest headline clearly states what you actually study, what hardware or tools you genuinely work with, and your specific career focus.",
-   "practical_example": "An example of a clear, unhyped headline for a student is: 'Electronics Engineering Undergraduate | Aspiring Embedded Systems & Robotics Intern | Hands-on experience with STM32, C, and ROS'.",
-   "exercise": "Review your current LinkedIn headline and rewrite it to include three factual items: your current degree or major, the specific hardware or software domain you are targeting (such as BCI, robotics, or firmware), and one tool or language you have actually used in a college lab or personal project.",
-   "model_answer": "Electronics and Communication Student | Focused on Embedded C, Microcontrollers, and Autonomous Robotics | Open to Summer Internships",
-   "why_it_works": "It uses plain language that matches the exact keywords recruiters search for, while remaining completely honest about your current student status without making false claims of professional mastery.",
-   "improvement_tip": "Avoid buzzwords like 'passionate' or 'innovator' because they take up valuable space that could be used to name real technical tools like Arduino, ESP32, or Python.",
+   "topic": "Draft an About section with evidence rather than generic claims",
+   "explanation": "Your LinkedIn About section should tell a short story of your engineering journey using factual proof instead of empty buzzwords like 'passionate technologist'. For robotics, BCI, and embedded systems internships, back up your interests by pointing to specific coursework, lab setups, or open-source repositories you built.",
+   "practical_example": "Instead of writing 'Passionate about robotics and always ready to learn new hardware tools,' write 'As an electronics engineering student focused on embedded systems, I build low-level firmware for STM32 microcontrollers. In my college lab, I programmed a timer interrupt to sample sensor data at steady intervals, which I documented on my GitHub.'",
+   "exercise": "Write a three-sentence About paragraph for your profile. Sentence one must state your current engineering focus (such as embedded C or brain-computer interfaces). Sentence two must describe a concrete tool or hardware component you actually used. Sentence three must mention where a reader can view your documented work.",
+   "model_answer": "I am an undergraduate engineering student building practical projects in embedded systems and robotics. I write bare-metal C code for AVR microcontrollers to control DC motor drivers based on tactile switch inputs. You can find the schematics and code for these builds linked in my profile projects.",
+   "why_it_works": "It replaces vague claims about passion with real technical nouns like AVR, C, and DC motor drivers, giving recruiters instant proof of your actual engineering scope.",
+   "improvement_tip": "Avoid using overly dramatic words like 'obsessed' or 'visionary'; let your hardware choices and project links do the talking.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
-   "paper": "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world (Kagan 2022)",
-   "focus": "Connecting living human and mouse brain cells in a lab to a computer simulation, like a simple video game, to see how they adapt and respond.",
-   "explanation": "Researchers hooked up lab-grown neurons to a computer program mimicking the game Pong. By sending electrical signals, the cells learned to move a paddle to hit a ball. The big-picture idea is understanding how biological brain tissue processes information and learns from its environment without being inside a living body.",
-   "limits": "The provided metadata lacked an abstract, so this summary relies on general knowledge of the published study. Lab neurons show basic responsiveness and learning, but calling this true 'sentience' or consciousness is still heavily debated by experts.",
-   "check": {
-    "question_1": "Are these real brain cells connected to a computer?",
-    "answer_1": "Yes, living neurons in a dish were linked to software to interact with a simple digital environment.",
-    "question_2": "Did the cells actually learn anything?",
-    "answer_2": "Yes, they adjusted their electrical activity over time to improve at playing the computer game.",
-    "question_3": "Does this mean the cells have feelings or consciousness?",
-    "answer_3": "Not necessarily; while they show smart-looking responses, scientists debate whether this simple adaptation counts as true sentience.",
-    "confidence": "High"
-   },
+   "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish",
+   "focus": "Exploring the use of lab-grown human brain tissue to build a new type of biological computer.",
+   "explanation": "Traditional computers are hitting physical limits, while human brains process complex information using very little energy. Researchers want to combine brain organoids\u2014tiny, simplified 3D models of brains grown from stem cells\u2014with advanced computing technology to study memory, learning, and new ways of processing data.",
+   "limits": "The research is still in its early stages. We do not yet know how to reliably train brain organoids to perform complex computing tasks, and the field raises significant ethical questions about consciousness and moral status.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1016/j.neuron.2022.09.001",
-   "doi_link": "https://doi.org/10.1016/j.neuron.2022.09.001",
-   "day": "5 of 5",
-   "access_level": "Metadata only Verify against the DOI link."
+   "doi": "10.3389/fsci.2023.1017235",
+   "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
+   "day": "1 of 5",
+   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "bci_paper": {
-   "paper": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia (Hochberg 2006)",
-   "focus": "Testing if brain signals can let a paralyzed person control a computer screen and other items using a tiny sensor placed on the brain.",
-   "explanation": "Because the abstract was missing, general knowledge shows this famous study used the BrainGate system. A small chip was placed in the brain of a participant who could not move their limbs, allowing them to move a computer cursor, check email, and operate a television using only their thoughts.",
-   "limits": "The Crossref data did not include an abstract, and specific details about the exact number of neurons or tests cannot be shared without inventing them. This summary relies on well-known milestones of the early BrainGate clinical trials.",
-   "check": {
-    "question_1": "What main device was tested to help a person with paralysis?",
-    "question_2": "What tasks could the participant perform using only brain signals?",
-    "question_3": "Why is it important to rely on general knowledge when the abstract is missing?"
-   },
+   "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
+   "focus": "Decoding brain signals from attempted speech into readable text to help paralyzed individuals communicate faster and with a larger vocabulary.",
+   "explanation": "Earlier speech brain-computer interfaces were not accurate enough to handle large vocabularies or unconstrained sentences. This research exists to test if recording high-resolution brain activity using tiny electrodes can drastically improve both the speed and accuracy of translated speech for people who cannot speak clearly.",
+   "limits": "The provided abstract cuts off near the end, and the study is based on a single participant with ALS.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
-   "doi": "10.1038/nature04970",
-   "doi_link": "https://doi.org/10.1038/nature04970",
-   "day": "5 of 5",
-   "access_level": "Metadata only Verify against the DOI link."
+   "doi": "10.1038/s41586-023-06377-x",
+   "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
+   "day": "1 of 5",
+   "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "github": {
-   "investigation_day": "Day 1 of 3",
-   "goal": "Understand the project",
-   "project_name": "MoveIt 2",
-   "repository": "moveit/moveit2",
-   "main_language": "C++",
-   "license": "BSD-3-Clause",
-   "active_status": "Active, not archived",
-   "summary": "MoveIt 2 is an open-source software platform used for robot arm motion planning, manipulation, and related tasks. It is built specifically for ROS 2 (Robot Operating System 2). It helps developers create commercial applications, test designs, and compare algorithms.",
-   "key_features": [
-    "Motion planning framework for ROS 2",
-    "Used for commercial applications, prototyping, and benchmarking",
-    "Supported by automated tests and continuous integration checks",
-    "Multiple active branches for different ROS distributions like Humble, Jazzy, and the main development branch"
-   ],
-   "beginner_explanation": "Imagine you have a robotic arm and you want it to pick up an object without hitting obstacles. MoveIt 2 is the software toolkit that calculates the safe path for the arm to move from point A to point B. It is designed to work with ROS 2, which is a popular framework for programming robots.",
-   "challenge": "Look at the repository metadata and README excerpt provided. Identify how many specific ROS distributions are mentioned in the stable release branches table or build status section, and check if the repository is archived.",
-   "knowledge_check": {
-    "question": "What is the primary purpose of MoveIt 2 based on the provided text?",
-    "options": [
-     "To build web applications and databases",
-     "To provide a motion planning framework for ROS 2 robotics",
-     "To manage computer operating system updates",
-     "To design physical robot hardware parts"
-    ],
-    "correct_answer": "To provide a motion planning framework for ROS 2 robotics"
-   },
+   "day": "2 of 3",
+   "project_investigation": "MoveIt 2",
+   "theme": "How it works",
+   "explanation": "Based on the provided repository metadata and README details, MoveIt 2 functions as a software framework designed specifically for robotic manipulation using the Robot Operating System 2 (ROS 2). It uses the C++ programming language. Developers use it to build commercial applications, test prototypes, and compare algorithms. The project handles software updates and stability through specific branches: the 'main' branch is used for ongoing development with new features and breaking changes, while branches named after ROS distributions (like humble or jazzy) are stable release branches reserved exclusively for bug fixes. General knowledge indicates that frameworks like this typically coordinate motion planning, collision checking, and kinematics to help robotic arms move smoothly from one point to another without hitting obstacles.",
+   "small_challenge": "Look at the branch policy table in the README and identify which branch receives breaking changes versus the branches that only receive backported bug fixes.",
+   "knowledge_check": "What underlying robotic operating system version does MoveIt 2 support according to its name and description?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "moveit/moveit2",
     "html_url": "https://github.com/moveit/moveit2",
     "description": ":robot: MoveIt for ROS 2",
-    "pushed_at": "2026-11-24T19:02:05Z",
+    "pushed_at": "2026-11-25T23:33:34Z",
     "language": "C++",
     "archived": false,
     "license": "BSD-3-Clause"
-   },
-   "day": "1 of 3"
+   }
   },
   "news": {
    "items": [
     {
-     "category": "Business",
-     "url": "https://www.therobotreport.com/softbank-acquires-marc-raiberts-robotics-and-ai-institute/",
-     "what": "SoftBank acquired the Robotics and AI Institute from Hyundai Motor Group.",
-     "who": "SoftBank, Hyundai Motor Group, and the Robotics and AI Institute.",
-     "how": "The acquisition involves taking over the research organization which plans to hire for 24 roles in Switzerland and Massachusetts. Background (general knowledge): Acquisitions are often used to integrate specialized research talent and technologies into a larger corporate portfolio.",
-     "why": "SoftBank aims to increase the size of its robotics-focused portfolio.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "High",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "SoftBank acquires Marc Raibert\u2019s Robotics and AI Institute",
-     "published": "2026-11-24",
-     "source": "The Robot Report"
-    },
-    {
      "category": "Deployment",
-     "url": "https://www.therobotreport.com/how-does-orchard-ai-fit-into-john-deeres-technology-portfolio/",
-     "what": "John Deere integrated Orchard AI into its suite of technologies.",
-     "who": "John Deere and Orchard AI.",
-     "how": "The integration is designed to improve the data available to farmers during the growth cycle of their crops. Background (general knowledge): Precision agriculture uses AI and machine learning to analyze crop health and soil data, helping farmers optimize yields.",
-     "why": "To provide growers with better decision-making capabilities.",
+     "url": "https://www.therobotreport.com/how-vention-is-cutting-factory-programming-from-weeks-to-minutes/",
+     "what": "Vention is utilizing AI deployment to reduce the time required for factory automation programming.",
+     "who": "Etienne Lacroix",
+     "how": "By shifting focus toward the practical deployment of AI rather than just developing advanced models. Background (general knowledge): Industrial automation often requires complex coding or manual teaching, which AI can simplify by generating task sequences automatically.",
+     "why": "To speed up the setup and implementation process of industrial robots.",
      "limits": "Not stated in the source excerpt",
-     "learn": "High",
+     "learn": "The success of future automation depends on how effectively we can deploy AI, not just the quality of the models themselves.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "How does Orchard AI fit into John Deere\u2019s technology portfolio?",
-     "published": "2026-11-24",
+     "title": "How Vention is cutting factory programming from weeks to minutes",
+     "published": "2026-11-25",
      "source": "The Robot Report"
     },
     {
-     "category": "Industry view",
-     "url": "https://www.therobotreport.com/from-commercial-scale-to-embodied-intelligence-the-next-challenge-for-robotics/",
-     "what": "The industry is shifting focus toward embodied intelligence.",
-     "who": "The robotics industry.",
-     "how": "New AI models are being combined with improved hardware to change how robots perceive and interact with the physical world. Background (general knowledge): Embodied intelligence refers to the concept that intelligence emerges from a physical body interacting with its environment.",
-     "why": "Advancements in hardware and AI are increasing the capabilities of machines.",
+     "category": "Research",
+     "url": "https://robohub.org/space-robotics-notes-from-an-iros-2026-plenary-session/",
+     "what": "Experts discussed the future role of robots in space exploration at the IROS 2026 conference.",
+     "who": "Speakers from NASA, JAXA, and academia",
+     "how": "By designing robots capable of handling lunar infrastructure, unloading cargo, building structures, and collecting samples from Phobos. Background (general knowledge): Space robots must operate autonomously or with high latency because communication signals take time to travel between Earth and deep space.",
+     "why": "To assist with human spaceflight and enable work in orbit and on the moon.",
      "limits": "Not stated in the source excerpt",
-     "learn": "High",
+     "learn": "Space robotics is expanding to include complex logistics and construction tasks on the moon and other celestial bodies.",
      "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "From Commercial Scale to Embodied Intelligence: The Next Challenge for Robotics",
-     "published": "2026-11-18",
-     "source": "The Robot Report"
+     "title": "Space robotics: notes from an IROS 2026 plenary session",
+     "published": "2026-11-25",
+     "source": "Robohub"
+    },
+    {
+     "category": "Research",
+     "url": "https://spectrum.ieee.org/darpa-triage-challenge-final-robots",
+     "what": "The DARPA Triage Challenge tested how well robots and humans can work together during emergency situations.",
+     "who": "10 teams competing for $2.5 million",
+     "how": "Teams navigated a 52-acre simulated town built to mimic disasters like tornadoes or military strikes. Background (general knowledge): Disaster robotics involves building machines that can traverse unstable ground and identify victims in dangerous environments.",
+     "why": "To evaluate and improve robotic capabilities for life-saving triage in catastrophe scenarios.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Robotic integration into high-stress, unpredictable disaster environments is a current focus for defense and emergency research.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "How DARPA Challenged Teams to Bring Robots Into Disaster Triage",
+     "published": "2026-11-25",
+     "source": "IEEE Spectrum Robotics"
     }
    ]
   },
