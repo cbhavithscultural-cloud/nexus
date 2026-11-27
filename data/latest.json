@@ -1,256 +1,228 @@
 {
  "v": 2,
- "date": "2026-11-26",
- "generated_at": "2026-11-26T09:43:31.817549+05:30",
+ "date": "2026-11-27",
+ "generated_at": "2026-11-27T08:38:59.077104+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "failed (kept previous): no matching recent robotics/embedded/electronics jobs found; previous listings retained"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Understand how to measure and improve the signal-to-noise ratio when recording electrical activity from brain organoids.",
-   "why_it_matters": "Brain organoids produce very tiny electrical signals mixed with unwanted background electrical interference. Separating the true neural data from this noise is essential for accurately interpreting what the tissue is doing.",
-   "prerequisites": [
-    "Basic familiarity with how neurons generate electrical spikes.",
-    "Understanding of multi-electrode arrays (MEAs) used to listen to organoids."
-   ],
-   "simple_explanation": "Imagine trying to listen to a whisper at a noisy concert. The whisper is the signal you want, and the crowd chatter is the noise. In organoid research, the 'signal' is the genuine electrical firing of brain cells, while the 'noise' comes from thermal activity in the recording equipment, movement of the liquid growth media, or stray electrical interference from the room. To make sense of organoid activity, scientists must maximize the signal and minimize the noise.",
+   "objective": "Learn how raw electrical and optical recordings from brain organoids are cleaned and prepared for analysis.",
+   "why_it_matters": "Raw data from organoids is filled with background hum, stable voltage shifts, and movement artifacts. Without proper data preprocessing, researchers might mistake equipment noise for actual brain signals.",
+   "prerequisites": "Basic understanding of electrical signals, background noise, and how multi-electrode arrays or imaging tools capture brain activity.",
+   "simple_explanation": "Imagine recording a live concert with a cheap microphone in a windy stadium. You would hear static, wind blowing, and random thuds. Data preprocessing is like using audio software to filter out the wind, remove the static, and boost the band's actual music. In organoid research, cleaning raw data ensures we only study real neural spikes.",
    "step_by_step": [
-    "Identify the source of the electrical signal: the small voltage changes produced when a neuron fires an action potential near an electrode.",
-    "Recognize environmental and equipment noise sources, such as thermal fluctuations in the metal wires, power line interference from nearby wall outlets, and tiny shifts in the liquid surrounding the tissue.",
-    "Apply hardware solutions, like using insulated cables, grounded Faraday cages to block external electrical fields, and high-quality amplifiers to boost the signal before it degrades.",
-    "Apply software filters to clean the recorded data, removing steady background hums (like standard power line frequencies) while keeping the sharp spikes of the neural signals intact.",
-    "Calculate the signal-to-noise ratio by comparing the height of the actual neural spike to the baseline level of the random background noise."
+    "Step 1: Inspect the raw recording file to identify obvious hardware glitches or flatlined channels.",
+    "Step 2: Apply a high-pass filter to remove slow, drifting background voltage changes that do not reflect rapid neural firing.",
+    "Step 3: Apply a low-pass or notch filter to eliminate electrical hum from nearby power lines, typically at 50 or 60 hertz.",
+    "Step 4: Set a voltage threshold to detect and isolate sharp, fast spikes that represent action potentials.",
+    "Step 5: Align and group similar spike shapes to determine which individual cells or clusters are firing."
    ],
-   "technical_depth": "Signal-to-noise ratio (SNR) is formally expressed as the ratio of the root mean square (RMS) amplitude of the action potential signal to the RMS amplitude of the background noise. A high SNR means clear, unambiguous spikes that can be easily sorted and isolated (spike sorting). A low SNR means spikes blend into the background fuzz, leading to false positives or missed neural events. Improving SNR requires optimizing the physical contact between the organoid and the electrode, reducing electrical resistance at the interface, and lowering the thermal noise floor of the recording system hardware.",
-   "misconceptions": [
-    {
-     "misconception": "Amplifying the recorded data always improves the signal-to-noise ratio.",
-     "correction": "Amplification boosts both the signal and the noise equally. It does not make a muddy signal clearer on its own."
-    },
-    {
-     "misconception": "All electrical activity recorded from an organoid is a meaningful neural signal.",
-     "correction": "Much of what an electrode picks up can be non-neural artifacts, such as bubble movements, electrode drift, or external electromagnetic interference."
-    }
-   ],
+   "technical_depth": "Raw neural signals undergo bandpass filtering (often between 300 hertz and 3000 hertz for spike detection) to isolate action potentials from local field potentials. Thresholding is typically set relative to the background noise level, such as five times the median absolute deviation, to maintain a consistent standard for detecting true biological events.",
+   "misconceptions": "A common belief is that computer software can completely fix a poorly conducted experiment. In reality, heavy filtering cannot recover lost information, and over-filtering can accidentally erase real neural activity or create artificial spikes.",
    "knowledge_check": [
     {
-     "question": "What does 'signal' represent in organoid electrical recordings?",
-     "answer": "The genuine electrical action potentials or field potentials generated by the living neural tissue."
+     "question": "What is the main goal of data preprocessing in organoid recordings?",
+     "answer": "To clean raw data by removing noise, artifacts, and interference so researchers can analyze true neural activity."
     },
     {
-     "question": "Why is a low signal-to-noise ratio problematic?",
-     "answer": "It makes it difficult or impossible to reliably distinguish true neural firing from background electrical interference and random fuzz."
+     "question": "Why do researchers use high-pass filters on electrical recordings?",
+     "answer": "To remove slow, baseline voltage drifts that are not part of fast neural spikes."
     },
     {
-     "question": "Does turning up the amplifier volume improve the signal-to-noise ratio?",
-     "answer": "No, because it amplifies the noise right along with the signal."
+     "question": "Can heavy data filtering fix a poorly recorded experiment?",
+     "answer": "No, cleaning data cannot recover lost information, and too much filtering can distort actual biological signals."
     }
    ],
-   "exercise": "Review a set of sample multi-electrode array recordings. Identify stretches of data that look like clean, sharp spikes versus random baseline fuzz. Note how background disturbances change the baseline noise level.",
-   "summary": "Signal-to-noise ratio is the key metric that determines how cleanly we can hear a brain organoid's electrical activity. By understanding hardware limitations, shielding sensitive setups, and using careful data filtering, researchers ensure their conclusions are based on real neural dynamics rather than equipment artifacts.",
-   "next_lesson": "Day 27: Introduction to basic calcium imaging techniques as an alternative or complement to electrical recording.",
+   "exercise": "Take a public sample data file from a multi-electrode array recording or a simulated waveform. Try adjusting a digital filter setting to see how cutting out low-frequency drift changes the visibility of sharp peaks.",
+   "summary": "Data preprocessing transforms messy, noise-filled raw recordings into clean, reliable datasets by filtering out background interference and isolating true neural spikes.",
+   "next_lesson": "Day 28: Spike sorting and identifying individual unit activity.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how speech neuroprostheses work, focusing on what specific aspects of language and movement the technology actually decodes from the brain.",
-   "why_it_matters": "People who have lost the ability to speak due to conditions like ALS or stroke need ways to communicate. Speech BCIs offer a path to restore natural conversation, making it essential to know whether these systems decode actual sound, muscle movements, or abstract thought.",
+   "objective": "Understand how a brain-computer interface translates neural intent into physical robotic arm movements, focusing on basic architecture and physical safety features.",
+   "why_it_matters": "Moving physical objects in the real world carries high risks. Unlike digital cursors or text screens, a robotic arm has weight, speed, and force, making safety stops and clear system architecture essential to protect users and their environments.",
    "prerequisites": [
-    "Basic understanding of brain regions involved in language production, such as the motor cortex.",
-    "Familiarity with how brain implants capture electrical signals from groups of neurons."
+    "Basic knowledge of multi-dimensional decoding (turning brain signals into movement vectors)",
+    "Understanding of closed-loop feedback systems"
    ],
-   "simple_explanation": "When you speak, your brain does two main things: it plans what words to say, and it sends detailed movement commands to your tongue, lips, jaw, and vocal cords. Current speech neuroprostheses do not decode silent inner thoughts or abstract ideas directly. Instead, they primarily decode the physical instructions the brain sends to the vocal tract to make sounds, or the phonetic building blocks of speech.",
+   "simple_explanation": "Controlling a robotic arm with a BCI is like teaching a computer to translate your imagination of reaching or grabbing into mechanical commands. Because a robotic arm can accidentally knock things over or move too fast, the system needs strict safety guardrails that double-check every command before the metal arm actually moves.",
    "step_by_step": [
-    "Brain preparation: The user attempts to speak or imagines speaking words aloud.",
-    "Signal capture: Intracortical electrodes record the electrical activity of neurons in the speech and motor areas of the brain.",
-    "Feature translation: A computer algorithm analyzes these neural patterns to find signatures that match specific sounds or mouth movements.",
-    "Output generation: The decoded sounds, phonemes, or text are synthesized into computer-generated speech or displayed on a screen."
+    "Brain signal acquisition: Intracortical or scalp sensors pick up neural activity when the user thinks about moving an arm or hand.",
+    "Intent decoding: Software translates these electrical patterns into target coordinates or velocity vectors for the robotic hand or arm.",
+    "Safety filtering: A secondary software layer checks the proposed movement against pre-set workspace boundaries and speed limits to prevent dangerous actions.",
+    "Mechanical execution: The robotic arm motors receive the safe, filtered commands and perform the physical action, while the user watches and adjusts their intent based on visual feedback."
    ],
-   "technical_depth": "Speech decoding relies heavily on tracking high-gamma band activity (roughly 70 to 150 Hz) in cortical regions responsible for articulation, such as the ventral sensorimotor cortex (vSMC) and Broca's area. Decoders typically use machine learning models, like recurrent neural networks (RNNs) or hidden Markov models, to map these neural firing rates to phonemes (distinct units of sound) or words. A major distinction exists between decoding articulatory kinematics (the physical movements of the vocal tract) and decoding acoustic properties or direct text representations.",
+   "technical_depth": "Robotic arm control relies on a hierarchical architecture. High-level decoding translates neural signals into abstract goals (e.g., 'move 5 centimeters forward'). Low-level controllers handle inverse kinematics\u2014calculating the exact angles and torque needed for each joint of the arm to reach that point. Safety architectures often incorporate 'virtual cage' boundaries, automatic velocity damping near obstacles, and a hardware-level emergency stop (e-stop) that bypasses the computer entirely if software latency spikes.",
    "misconceptions": [
-    "Misconception: Speech BCIs can read your random, unexpressed thoughts and inner monologue. Reality: Systems only decode intentional attempts to speak or articulate, requiring active user participation.",
-    "Misconception: The implant translates the literal voice of the user. Reality: Current systems generate synthetic computer voices based on text or phonetic outputs, not the user's original biological voice."
+    "Misconception: The BCI directly controls the motor wires of the robotic arm. Reality: The BCI only sends high-level intent or trajectory goals; specialized microcontrollers on the robot handle the complex physics of joint movement.",
+    "Misconception: Safety features slow down the system too much to be useful. Reality: Modern safety filters run in milliseconds, intervening only when a trajectory violates safety parameters."
    ],
    "knowledge_check": [
     {
-     "question": "What do speech neuroprostheses primarily decode?",
-     "answer": "They primarily decode the neural signals for articulatory movements and phonetic sounds, rather than abstract thoughts."
+     "question": "Why is robotic arm control considered riskier than moving a text cursor on a screen?",
+     "answer": "Because a robotic arm has physical mass, momentum, and force that can cause physical damage or injury if an unmanaged error occurs."
     },
     {
-     "question": "Why is silent inner speech harder to decode than attempted vocalization?",
-     "answer": "Attempted vocalization generates strong, consistent motor commands in the brain, whereas inner speech lacks the robust physical execution signals that current electrodes easily detect."
+     "question": "What is the role of a safety filter in BCI robotic arm architecture?",
+     "answer": "It reviews decoded brain commands and blocks or modifies any movement that violates workspace boundaries or speed limits."
     },
     {
-     "question": "What frequency band is frequently analyzed in intracortical speech decoding?",
-     "answer": "The high-gamma band (70 to 150 Hz)."
+     "question": "Do brain signals directly control every single joint motor of the robot?",
+     "answer": "No, the BCI usually provides high-level goals or movement directions, while onboard robotic computers handle inverse kinematics and joint-level motor control."
     }
    ],
-   "exercise": "List three distinct components of speech production (for example: planning the idea, moving the tongue, producing acoustic waves). Based on this lesson, identify which of these components current brain implants are best equipped to decode and explain why.",
-   "summary": "Speech neuroprostheses bridge the communication gap by decoding the brain's physical instructions for articulation and phonetics rather than reading abstract, silent thoughts. They rely on neural activity in speech-related motor regions to predict sounds, phonemes, and words for synthetic output.",
-   "next_lesson": "Introduction to linguistic modeling and language error correction in speech BCI",
+   "exercise": "Draw a simple block diagram connecting a human user, a BCI decoder, a safety filter, a robotic arm, and visual feedback. Mark where a software bug or erratic brain signal could cause a hazard, and show where your safety filter stops it.",
+   "summary": "Robotic arm control bridges neural decoding with physical hardware. Success depends on a reliable pipeline from brain signals to movement, backed by robust, independent safety architectures that prevent dangerous physical actions.",
+   "next_lesson": "Introduction to robotic arm degrees of freedom and trajectory planning",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "UART, I2C and SPI: choose the right interface",
-   "explanation": "Microcontrollers need to talk to sensors, displays, and other chips. UART uses two wires and sends data one bit after another, making it simple for point-to-point links like GPS modules. I2C uses two shared wires and addresses multiple devices using IDs, which is great for connecting slow sensors like temperature or IMUs. SPI uses four wires and relies on separate chip-select lines for each device, allowing very fast data transfer needed for displays or high-speed ADCs.",
-   "practical_example": "Imagine building a robotic arm controller in your college lab. You use UART to send debug logs to your laptop, an I2C accelerometer to track arm tilt, and an SPI TFT display to show real-time joint angles.",
-   "exercise": "Select which communication protocol (UART, I2C, or SPI) you would pick to connect a high-resolution OLED screen to your STM32 microcontroller, and briefly state your physical reasoning.",
-   "model_answer": "I would choose SPI because an OLED screen requires fast frame updates, and SPI supports high data transfer speeds using dedicated data and clock lines, whereas I2C would be too slow for graphics rendering.",
-   "why_it_works": "It directly matches the hardware requirement of high-speed data transfer for displays with the protocol's bandwidth strengths, showing you understand trade-offs beyond basic pin counts.",
-   "improvement_tip": "Always check your sensor and display datasheets before picking a protocol to confirm maximum clock speeds and voltage levels match your microcontroller.",
+   "topic": "Explain sensor calibration and measurement error",
+   "explanation": "Sensors in robotics and medical devices like BCIs rarely report the exact physical reality. Measurement error is the difference between what your sensor reads and the true value, caused by random noise or systematic offsets. Calibration is the process of testing your sensor against known standard values to find mathematical corrections so your microcontroller receives accurate data.",
+   "practical_example": "Imagine an IMU (Inertial Measurement Unit) on a balancing robot resting flat on a perfectly horizontal table, but its pitch axis reads +2 degrees instead of 0 degrees. That constant +2 degree shift is a bias error that needs a calibration offset subtracted from every raw reading before feeding it into your balance control loop.",
+   "exercise": "Write a short pseudocode snippet or logic description to take a raw sensor reading from an analog distance sensor, apply a measured offset value and a scaling factor, and return the corrected distance in centimeters.",
+   "model_answer": "float calibrate_distance(float raw_adc_value) {\n    float offset = 5.0;\n    float scale_factor = 0.12;\n    float corrected_distance = (raw_adc_value * scale_factor) - offset;\n    if (corrected_distance < 0.0) return 0.0;\n    return corrected_distance;\n}",
+   "why_it_works": "It applies a linear transformation\u2014multiplying by a scale factor to fix sensitivity errors and subtracting an offset to fix zero-point bias\u2014which directly addresses the two most common types of hardware measurement errors without overloading a small microcontroller.",
+   "improvement_tip": "Always test your sensors across multiple known points rather than just zero, and remember that temperature changes can alter calibration values over time.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Draft an About section with evidence rather than generic claims",
-   "explanation": "Your LinkedIn About section should tell a short story of your engineering journey using factual proof instead of empty buzzwords like 'passionate technologist'. For robotics, BCI, and embedded systems internships, back up your interests by pointing to specific coursework, lab setups, or open-source repositories you built.",
-   "practical_example": "Instead of writing 'Passionate about robotics and always ready to learn new hardware tools,' write 'As an electronics engineering student focused on embedded systems, I build low-level firmware for STM32 microcontrollers. In my college lab, I programmed a timer interrupt to sample sensor data at steady intervals, which I documented on my GitHub.'",
-   "exercise": "Write a three-sentence About paragraph for your profile. Sentence one must state your current engineering focus (such as embedded C or brain-computer interfaces). Sentence two must describe a concrete tool or hardware component you actually used. Sentence three must mention where a reader can view your documented work.",
-   "model_answer": "I am an undergraduate engineering student building practical projects in embedded systems and robotics. I write bare-metal C code for AVR microcontrollers to control DC motor drivers based on tactile switch inputs. You can find the schematics and code for these builds linked in my profile projects.",
-   "why_it_works": "It replaces vague claims about passion with real technical nouns like AVR, C, and DC motor drivers, giving recruiters instant proof of your actual engineering scope.",
-   "improvement_tip": "Avoid using overly dramatic words like 'obsessed' or 'visionary'; let your hardware choices and project links do the talking.",
+   "topic": "Describe a robotics project using problem, design, test and result",
+   "explanation": "When listing a robotics, BCI, or embedded systems project on LinkedIn, structuring it clearly helps recruiters quickly understand your engineering process. Using four simple sections\u2014Problem, Design, Test, and Result\u2014shows you can identify a challenge, plan a hardware or software fix, run trials, and check your outcome without exaggerating.",
+   "practical_example": "Instead of writing a vague project summary like 'Built an obstacle-avoidance robot', use the structured formula: Problem (The ultrasonic sensor missed narrow obstacles due to a wide beam angle), Design (Added a secondary infrared sensor and wrote interrupt-based fusion logic in C), Test (Ran 20 trials across varied lighting and wall textures in the campus lab), and Result (Achieved 90 percent successful obstacle detection; documented code and test notes on GitHub).",
+   "exercise": "Take one of your university or personal hardware projects\u2014such as a line-following robot, an EEG signal filter, or an STM32-based timer\u2014and draft a short LinkedIn project entry by filling in these four clear headings: Problem, Design, Test, and Result, using only facts you can verify.",
+   "model_answer": "Problem: The custom ECG amplifier circuit picked up 50Hz powerline noise, obscuring clean signals. Design: Added a twin-T notch filter layout in KiCad and soldered it onto a perfboard. Test: Connected the circuit to an oscilloscope to measure peak-to-peak noise reduction before and after the filter. Result: Successfully attenuated the 50Hz interference and visualized stable waveform data in Python. View schematic and code on my profile links.",
+   "why_it_works": "Breaking your project down into Problem, Design, Test, and Result proves to engineering recruiters in India that you follow a rigorous, methodical engineering approach rather than just assembling parts blindly.",
+   "improvement_tip": "Keep your descriptions concise; use bullet points under each of the four headings so recruiters scanning your profile can read your engineering workflow in under 30 seconds.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
    "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish",
-   "focus": "Exploring the use of lab-grown human brain tissue to build a new type of biological computer.",
-   "explanation": "Traditional computers are hitting physical limits, while human brains process complex information using very little energy. Researchers want to combine brain organoids\u2014tiny, simplified 3D models of brains grown from stem cells\u2014with advanced computing technology to study memory, learning, and new ways of processing data.",
-   "limits": "The research is still in its early stages. We do not yet know how to reliably train brain organoids to perform complex computing tasks, and the field raises significant ethical questions about consciousness and moral status.",
+   "focus": "Research design and method",
+   "explanation": "The study uses human stem cells to grow 3D brain organoids in the lab that mimic brain tissue structure and learning functions. Researchers use microfluidic systems to keep the tissue alive and growing, and 3D microelectrode arrays to send electrical signals and record how the organoids respond. These tools help test whether brain organoids can process information and learn.",
+   "limits": "The abstract mentions the methods being developed but does not provide specific experimental results or performance data.",
    "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.3389/fsci.2023.1017235",
    "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "bci_paper": {
    "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
-   "focus": "Decoding brain signals from attempted speech into readable text to help paralyzed individuals communicate faster and with a larger vocabulary.",
-   "explanation": "Earlier speech brain-computer interfaces were not accurate enough to handle large vocabularies or unconstrained sentences. This research exists to test if recording high-resolution brain activity using tiny electrodes can drastically improve both the speed and accuracy of translated speech for people who cannot speak clearly.",
-   "limits": "The provided abstract cuts off near the end, and the study is based on a single participant with ALS.",
-   "check": "high",
+   "focus": "Research design and method for turning brain activity into text.",
+   "explanation": "Tiny sensors implanted in the brain record signals when the participant tries to talk. Advanced computer programs then translate those brain signals into written words on a screen.",
+   "limits": "The method currently relies on data from a single participant who has amyotrophic lateral sclerosis.",
+   "check": "Based on the provided abstract and general scientific understanding.",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/s41586-023-06377-x",
    "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
-   "day": "1 of 5",
+   "day": "2 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "github": {
-   "day": "2 of 3",
-   "project_investigation": "MoveIt 2",
-   "theme": "How it works",
-   "explanation": "Based on the provided repository metadata and README details, MoveIt 2 functions as a software framework designed specifically for robotic manipulation using the Robot Operating System 2 (ROS 2). It uses the C++ programming language. Developers use it to build commercial applications, test prototypes, and compare algorithms. The project handles software updates and stability through specific branches: the 'main' branch is used for ongoing development with new features and breaking changes, while branches named after ROS distributions (like humble or jazzy) are stable release branches reserved exclusively for bug fixes. General knowledge indicates that frameworks like this typically coordinate motion planning, collision checking, and kinematics to help robotic arms move smoothly from one point to another without hitting obstacles.",
-   "small_challenge": "Look at the branch policy table in the README and identify which branch receives breaking changes versus the branches that only receive backported bug fixes.",
-   "knowledge_check": "What underlying robotic operating system version does MoveIt 2 support according to its name and description?",
+   "project_name": "moveit/moveit2",
+   "investigation_day": "Day 3 of 3",
+   "phase_focus": "Run it in simulation and engineering judgement",
+   "description": "A widely used motion planning framework designed for ROS 2, primarily written in C++ and made for robotic manipulation tasks.",
+   "simulation_and_testing_notes": "Because this project handles robot kinematics and path planning, engineering judgement suggests testing it inside a simulated robot environment before deploying it to physical hardware to prevent potential collisions or hardware damage.",
+   "small_challenge": "Identify which ROS 2 distribution matches your current system workspace environment before attempting a source or binary install.",
+   "knowledge_ check": "True or False: MoveIt 2 is an open-source framework specifically built for ROS 2 robot arm manipulation.",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
     "full_name": "moveit/moveit2",
     "html_url": "https://github.com/moveit/moveit2",
     "description": ":robot: MoveIt for ROS 2",
-    "pushed_at": "2026-11-25T23:33:34Z",
+    "pushed_at": "2026-11-26T15:40:12Z",
     "language": "C++",
     "archived": false,
     "license": "BSD-3-Clause"
-   }
+   },
+   "day": "3 of 3"
   },
   "news": {
    "items": [
     {
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/fcc-should-focus-on-robot-security-not-country-of-origin/",
+     "what": "A recommendation that the FCC prioritize robot security over the geographical origin of hardware.",
+     "who": "David Pinn, CEO of Brain Corp.",
+     "how": "By focusing on who maintains control over the software and systems once a robot is in use, rather than where the machine was put together. Background (general knowledge): Software security protocols are critical for preventing unauthorized remote access to connected devices.",
+     "why": "The author argues that where a robot is built provides little insight into potential security risks or data control.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "The security of a robot is determined by its digital management rather than its physical manufacturing location.",
+     "title": "FCC should focus on robot security, not country of origin",
+     "published": "2026-11-25",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
+     "category": "Industry view",
+     "url": "https://www.therobotreport.com/special-report-engineering-focus-on-motion-control/",
+     "what": "A report on recent technical progress in manufacturing automation.",
+     "who": "The Robot Report editorial team.",
+     "how": "By analyzing improvements in automation technologies, new use cases, and the development of AI and humanoid robotics. Background (general knowledge): Motion control involves the precise movement of mechanical components using sensors, actuators, and controllers.",
+     "why": "To provide insight into how advanced technologies are currently impacting manufacturing efficiency.",
+     "limits": "Not stated in the source excerpt",
+     "learn": "Manufacturing automation is evolving rapidly through the integration of artificial intelligence and human-shaped robots.",
+     "title": "Special Report: Engineering Focus on Motion Control",
+     "published": "2026-11-23",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
+    },
+    {
      "category": "Deployment",
-     "url": "https://www.therobotreport.com/how-vention-is-cutting-factory-programming-from-weeks-to-minutes/",
-     "what": "Vention is utilizing AI deployment to reduce the time required for factory automation programming.",
-     "who": "Etienne Lacroix",
-     "how": "By shifting focus toward the practical deployment of AI rather than just developing advanced models. Background (general knowledge): Industrial automation often requires complex coding or manual teaching, which AI can simplify by generating task sequences automatically.",
-     "why": "To speed up the setup and implementation process of industrial robots.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "The success of future automation depends on how effectively we can deploy AI, not just the quality of the models themselves.",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "How Vention is cutting factory programming from weeks to minutes",
-     "published": "2026-11-25",
-     "source": "The Robot Report"
-    },
-    {
-     "category": "Research",
-     "url": "https://robohub.org/space-robotics-notes-from-an-iros-2026-plenary-session/",
-     "what": "Experts discussed the future role of robots in space exploration at the IROS 2026 conference.",
-     "who": "Speakers from NASA, JAXA, and academia",
-     "how": "By designing robots capable of handling lunar infrastructure, unloading cargo, building structures, and collecting samples from Phobos. Background (general knowledge): Space robots must operate autonomously or with high latency because communication signals take time to travel between Earth and deep space.",
-     "why": "To assist with human spaceflight and enable work in orbit and on the moon.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "Space robotics is expanding to include complex logistics and construction tasks on the moon and other celestial bodies.",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "Space robotics: notes from an IROS 2026 plenary session",
-     "published": "2026-11-25",
-     "source": "Robohub"
-    },
-    {
-     "category": "Research",
-     "url": "https://spectrum.ieee.org/darpa-triage-challenge-final-robots",
-     "what": "The DARPA Triage Challenge tested how well robots and humans can work together during emergency situations.",
-     "who": "10 teams competing for $2.5 million",
-     "how": "Teams navigated a 52-acre simulated town built to mimic disasters like tornadoes or military strikes. Background (general knowledge): Disaster robotics involves building machines that can traverse unstable ground and identify victims in dangerous environments.",
-     "why": "To evaluate and improve robotic capabilities for life-saving triage in catastrophe scenarios.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "Robotic integration into high-stress, unpredictable disaster environments is a current focus for defense and emergency research.",
-     "confidence": "Single-source report (feed excerpt only). Open the original source.",
-     "title": "How DARPA Challenged Teams to Bring Robots Into Disaster Triage",
-     "published": "2026-11-25",
-     "source": "IEEE Spectrum Robotics"
+     "url": "https://www.therobotreport.com/massrobotics-launching-marine-robotics-facility-on-boston-harbor/",
+     "what": "The creation of a new specialized facility for underwater and marine-based robotics.",
+     "who": "MassRobotics.",
+     "how": "Through the launch of a dedicated location on Boston Harbor. Background (general knowledge): Marine robotics are used for ocean exploration, underwater infrastructure inspection, and environmental monitoring.",
+     "why": "To establish a hub for marine-focused robotic development and programming.",
+     "limits": "The facility is scheduled to open in early 2028, with programming expected to begin in 2027.",
+     "learn": "A new dedicated research and development environment for marine robotics is coming to the Boston area.",
+     "title": "MassRobotics launching marine robotics facility on Boston Harbor",
+     "published": "2026-11-20",
+     "source": "The Robot Report",
+     "confidence": "Single-source report (feed excerpt only). Open the original source."
     }
    ]
   },
   "jobs": {
    "items": [
     {
-     "title": "AI Engineer H/F",
+     "title": "Robotics Systems Engineer (Mechanical)",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-24",
+     "location": "Zurich, Switzerland",
+     "published": "2026-11-26",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/marsorobotics/ai-engineer-h-f-paris-261054",
-     "company": "Marsorobotics"
+     "url": "https://www.arbeitnow.ch/jobs/companies/anybotics/robotics-systems-engineer-mechanical-zurich-switzerland-323895",
+     "company": "Anybotics"
     },
     {
-     "title": "Embedded Software Engineer H/F",
+     "title": "High Voltage Electrical Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Paris",
-     "published": "2026-11-24",
+     "location": "Zurich",
+     "published": "2026-11-26",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/marsorobotics/embedded-software-engineer-h-f-paris-464750",
-     "company": "Marsorobotics"
+     "url": "https://www.arbeitnow.ch/jobs/companies/proxima-fusion-gmbh/high-voltage-electrical-engineer-zurich-369604",
+     "company": "Proxima Fusion GmbH"
     },
     {
-     "title": "Robotics Operations Technician H/F",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Cambrai",
-     "published": "2026-11-24",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.fr/jobs/companies/marsorobotics/robotics-operations-technician-h-f-cambrai-274305",
-     "company": "Marsorobotics"
-    },
-    {
-     "title": "VP Embedded Finance & Strategic Partnerships (m/w/d) 80-100%",
-     "type": "vacancy listing (availability not independently verified)",
-     "location": "Rapperswil-Jona",
-     "published": "2026-11-24",
-     "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/bexio-ag/vp-embedded-finance-strategic-partnerships-80-100-rapperswil-jona-186892",
-     "company": "bexio ag"
-    },
-    {
-     "title": "Software Engineer II: Autonomous Supply Chains",
+     "title": "Network Security & Automation Engineer (Relocation Provided)",
      "type": "vacancy listing (availability not independently verified)",
      "location": "Amsterdam",
-     "published": "2026-11-24",
+     "published": "2026-11-26",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.nl/jobs/companies/flexport/software-engineer-ii-autonomous-supply-chains-amsterdam-120266",
-     "company": "Flexport"
+     "url": "https://www.arbeitnow.nl/jobs/companies/wypoon/network-security-automation-engineer-relocation-provided-amsterdam-260825",
+     "company": "Wypoon"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",
