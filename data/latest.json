@@ -1,228 +1,245 @@
 {
  "v": 2,
- "date": "2026-11-27",
- "generated_at": "2026-11-27T09:51:10.575567+05:30",
+ "date": "2026-11-28",
+ "generated_at": "2026-11-28T08:24:54.849536+05:30",
  "status": {
-  "oi_lesson": "ok (reused from today's successful run)",
-  "bci_lesson": "ok (reused from today's successful run)",
-  "internship": "ok (reused from today's successful run)",
-  "linkedin": "ok (reused from today's successful run)",
-  "oi_paper": "ok (reused from today's successful run)",
-  "bci_paper": "ok (reused from today's successful run)",
-  "github": "ok (reused from today's successful run)",
-  "news": "ok (reused from today's successful run)",
-  "jobs": "ok (reused from today's successful run)"
+  "oi_lesson": "ok",
+  "bci_lesson": "ok",
+  "internship": "ok",
+  "linkedin": "ok",
+  "oi_paper": "ok",
+  "bci_paper": "ok",
+  "github": "ok",
+  "news": "ok",
+  "jobs": "ok"
  },
  "sections": {
   "oi_lesson": {
-   "objective": "Learn how raw electrical and optical recordings from brain organoids are cleaned and prepared for analysis.",
-   "why_it_matters": "Raw data from organoids is filled with background hum, stable voltage shifts, and movement artifacts. Without proper data preprocessing, researchers might mistake equipment noise for actual brain signals.",
-   "prerequisites": "Basic understanding of electrical signals, background noise, and how multi-electrode arrays or imaging tools capture brain activity.",
-   "simple_explanation": "Imagine recording a live concert with a cheap microphone in a windy stadium. You would hear static, wind blowing, and random thuds. Data preprocessing is like using audio software to filter out the wind, remove the static, and boost the band's actual music. In organoid research, cleaning raw data ensures we only study real neural spikes.",
-   "step_by_step": [
-    "Step 1: Inspect the raw recording file to identify obvious hardware glitches or flatlined channels.",
-    "Step 2: Apply a high-pass filter to remove slow, drifting background voltage changes that do not reflect rapid neural firing.",
-    "Step 3: Apply a low-pass or notch filter to eliminate electrical hum from nearby power lines, typically at 50 or 60 hertz.",
-    "Step 4: Set a voltage threshold to detect and isolate sharp, fast spikes that represent action potentials.",
-    "Step 5: Align and group similar spike shapes to determine which individual cells or clusters are firing."
+   "objective": "Understand why observing a connection between an input and a neural response does not automatically mean that a brain organoid has learned or processed information intelligently.",
+   "why_it_matters": "As organoid researchers, we must avoid overhyping simple physical reactions as genuine cognitive achievements, ensuring our conclusions rely on rigorous proof rather than coincidental timing.",
+   "prerequisites": [
+    "Basic electrical recording on multi-electrode arrays",
+    "Distinguishing biological noise from actual neural spikes"
    ],
-   "technical_depth": "Raw neural signals undergo bandpass filtering (often between 300 hertz and 3000 hertz for spike detection) to isolate action potentials from local field potentials. Thresholding is typically set relative to the background noise level, such as five times the median absolute deviation, to maintain a consistent standard for detecting true biological events.",
-   "misconceptions": "A common belief is that computer software can completely fix a poorly conducted experiment. In reality, heavy filtering cannot recover lost information, and over-filtering can accidentally erase real neural activity or create artificial spikes.",
+   "simple_explanation": "Imagine hearing a loud knock on a door just as the lights flicker. You might think the knock caused the flicker, but they could both just be happening because of a strong gust of wind outside. In organoid research, just because an electrical signal changes right after we stimulate the tissue does not mean the tissue actually understood or learned from that stimulation. It might just be a random coincidence or a basic physical reaction.",
+   "step_by_step": [
+    "Step 1: Define what correlation means in a laboratory setting\u2014two events happening together, such as applying a zap of electricity and seeing a burst of electrical spikes shortly after.",
+    "Step 2: Recognize the difference between correlation and causation; correlation only shows a pattern in time, while causation or true learning requires proof that the tissue changed its behavior because of processing the input.",
+    "Step 3: Test for alternative explanations, such as tissue fatigue, random baseline firing, or simple chemical diffusion, to see if the paired events are truly linked.",
+    "Step 4: Demand rigorous criteria for learning, such as persistence over time and specificity to the exact type of training input provided."
+   ],
+   "technical_depth": "In biological networks, firing patterns often synchronize due to intrinsic bursting properties or shared mechanical environments rather than computational adaptation. When analyzing spike trains, researchers frequently find spurious cross-correlations caused by slow global oscillations in the culture medium. Proving intelligence requires ruling out these non-cognitive, physical drivers through rigorous control experiments, shuffled-data baselines, and pharmacological blockers of synaptic plasticity.",
+   "misconceptions": [
+    "Misconception: If an organoid responds to a stimulus every time, it has learned a task.",
+    "Fact: Consistent physical reactivity is a basic reflex or passive conduction, not necessarily flexible learning or reasoning."
+   ],
    "knowledge_check": [
     {
-     "question": "What is the main goal of data preprocessing in organoid recordings?",
-     "answer": "To clean raw data by removing noise, artifacts, and interference so researchers can analyze true neural activity."
+     "question": "What does correlation mean in the context of neural recordings?",
+     "answer": "It means two events, like a stimulus and a spike, occur close together in time, but it does not prove one caused the other."
     },
     {
-     "question": "Why do researchers use high-pass filters on electrical recordings?",
-     "answer": "To remove slow, baseline voltage drifts that are not part of fast neural spikes."
+     "question": "Why might an organoid fire electrical spikes immediately after a stimulus without having learned anything?",
+     "answer": "The response could be a simple passive physical reflex, a random coincidence, or driven by general chemical changes in the culture."
     },
     {
-     "question": "Can heavy data filtering fix a poorly recorded experiment?",
-     "answer": "No, cleaning data cannot recover lost information, and too much filtering can distort actual biological signals."
+     "question": "What is required to prove true biological learning instead of mere correlation?",
+     "answer": "Evidence of persistent, specific behavioral change that responds selectively to input and survives rigorous control tests."
     }
    ],
-   "exercise": "Take a public sample data file from a multi-electrode array recording or a simulated waveform. Try adjusting a digital filter setting to see how cutting out low-frequency drift changes the visibility of sharp peaks.",
-   "summary": "Data preprocessing transforms messy, noise-filled raw recordings into clean, reliable datasets by filtering out background interference and isolating true neural spikes.",
-   "next_lesson": "Day 28: Spike sorting and identifying individual unit activity.",
+   "exercise": "Review a set of mock experimental data where an organoid's spike rate increases after every electrical pulse. List two non-learning explanations for this increase, such as baseline drift or physical artifact, and design a control test to rule them out.",
+   "summary": "Seeing a pattern between an input and an organoid's output is only a starting point, not proof of intelligence; true learning requires exhaustive testing to rule out coincidences, reflexes, and physical artifacts.",
+   "next_lesson": "Day 29: Designing proper controls for organoid experiments.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "bci_lesson": {
-   "objective": "Understand how a brain-computer interface translates neural intent into physical robotic arm movements, focusing on basic architecture and physical safety features.",
-   "why_it_matters": "Moving physical objects in the real world carries high risks. Unlike digital cursors or text screens, a robotic arm has weight, speed, and force, making safety stops and clear system architecture essential to protect users and their environments.",
+   "objective": "Understand shared control, a design strategy that blends human brain signals with smart robot software to make device operation easier and safer.",
+   "why_it_matters": "Controlling an assistive robot entirely through raw brain signals can be tiring and slow. Shared control lets the computer handle predictable routine tasks, reducing user fatigue while keeping the human in charge of the ultimate goal.",
    "prerequisites": [
-    "Basic knowledge of multi-dimensional decoding (turning brain signals into movement vectors)",
-    "Understanding of closed-loop feedback systems"
+    "Basic knowledge of robotic arms and movement paths",
+    "Understanding of user intent and the need for feedback loops"
    ],
-   "simple_explanation": "Controlling a robotic arm with a BCI is like teaching a computer to translate your imagination of reaching or grabbing into mechanical commands. Because a robotic arm can accidentally knock things over or move too fast, the system needs strict safety guardrails that double-check every command before the metal arm actually moves.",
+   "simple_explanation": "Imagine driving a car with lane assist and automatic braking. You steer where you want to go, but the car makes sure you do not drift or hit anything. Shared control works the same way for a brain-controlled robot. The human decides the big-picture goal (like pointing at a cup), and the robot's onboard intelligence figures out the fine details (like gripping the cup securely without dropping it).",
    "step_by_step": [
-    "Brain signal acquisition: Intracortical or scalp sensors pick up neural activity when the user thinks about moving an arm or hand.",
-    "Intent decoding: Software translates these electrical patterns into target coordinates or velocity vectors for the robotic hand or arm.",
-    "Safety filtering: A secondary software layer checks the proposed movement against pre-set workspace boundaries and speed limits to prevent dangerous actions.",
-    "Mechanical execution: The robotic arm motors receive the safe, filtered commands and perform the physical action, while the user watches and adjusts their intent based on visual feedback."
+    "The user looks at a screen or thinks about a movement to signal their general goal to the system.",
+    "The BCI translator turns those brain patterns into a rough directional command.",
+    "The robot's software analyzes the local environment to interpret what object or target is closest to the user's rough command.",
+    "The robot automatically adjusts the trajectory to complete the micro-actions, such as aligning a gripper or steadying a cup.",
+    "The system provides visual or physical feedback so the user feels in control while benefiting from the robot's autonomy."
    ],
-   "technical_depth": "Robotic arm control relies on a hierarchical architecture. High-level decoding translates neural signals into abstract goals (e.g., 'move 5 centimeters forward'). Low-level controllers handle inverse kinematics\u2014calculating the exact angles and torque needed for each joint of the arm to reach that point. Safety architectures often incorporate 'virtual cage' boundaries, automatic velocity damping near obstacles, and a hardware-level emergency stop (e-stop) that bypasses the computer entirely if software latency spikes.",
+   "technical_depth": "Shared control divides responsibility between the human operator and the machine controller. Mathematically, the final action command (u) is often modeled as a blend of human intent (u_h) and autonomous assistance (u_a), weighted by a blending factor: u = alpha * u_h + (1 - alpha) * u_a. The key engineering challenge is dynamically adjusting alpha so the robot helps out when the brain signal is noisy, but immediately steps back when the user wants to take over completely.",
    "misconceptions": [
-    "Misconception: The BCI directly controls the motor wires of the robotic arm. Reality: The BCI only sends high-level intent or trajectory goals; specialized microcontrollers on the robot handle the complex physics of joint movement.",
-    "Misconception: Safety features slow down the system too much to be useful. Reality: Modern safety filters run in milliseconds, intervening only when a trajectory violates safety parameters."
+    "Misconception: Shared control means the robot takes over completely and ignores the user.",
+    "Fact: The human remains the primary decision-maker; the robot only assists with routine physical execution to make the task less exhausting."
    ],
    "knowledge_check": [
     {
-     "question": "Why is robotic arm control considered riskier than moving a text cursor on a screen?",
-     "answer": "Because a robotic arm has physical mass, momentum, and force that can cause physical damage or injury if an unmanaged error occurs."
+     "question": "What is the main purpose of shared control in a BCI setup?",
+     "answer": "To combine human intent with robot autonomy, reducing user fatigue and improving safety."
     },
     {
-     "question": "What is the role of a safety filter in BCI robotic arm architecture?",
-     "answer": "It reviews decoded brain commands and blocks or modifies any movement that violates workspace boundaries or speed limits."
+     "question": "In a shared control system, who chooses the ultimate goal?",
+     "answer": "The human user."
     },
     {
-     "question": "Do brain signals directly control every single joint motor of the robot?",
-     "answer": "No, the BCI usually provides high-level goals or movement directions, while onboard robotic computers handle inverse kinematics and joint-level motor control."
+     "question": "What role does the robotic software play during shared control?",
+     "answer": "It handles routine execution details and environmental adjustments to help achieve the user's goal safely."
     }
    ],
-   "exercise": "Draw a simple block diagram connecting a human user, a BCI decoder, a safety filter, a robotic arm, and visual feedback. Mark where a software bug or erratic brain signal could cause a hazard, and show where your safety filter stops it.",
-   "summary": "Robotic arm control bridges neural decoding with physical hardware. Success depends on a reliable pipeline from brain signals to movement, backed by robust, independent safety architectures that prevent dangerous physical actions.",
-   "next_lesson": "Introduction to robotic arm degrees of freedom and trajectory planning",
+   "exercise": "Draw a simple diagram showing a human, a BCI decoder, a smart robot controller, and a robotic arm. Draw arrows to show how the human sends a high-level goal, the decoder reads it, and the smart controller helps guide the arm to a target object.",
+   "summary": "Shared control combines human decision-making with automated robot assistance, making BCI technology faster, safer, and less tiring to use over long periods.",
+   "next_lesson": "Introduction to tactile and proprioceptive sensory feedback in BCI",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "internship": {
-   "topic": "Explain sensor calibration and measurement error",
-   "explanation": "Sensors in robotics and medical devices like BCIs rarely report the exact physical reality. Measurement error is the difference between what your sensor reads and the true value, caused by random noise or systematic offsets. Calibration is the process of testing your sensor against known standard values to find mathematical corrections so your microcontroller receives accurate data.",
-   "practical_example": "Imagine an IMU (Inertial Measurement Unit) on a balancing robot resting flat on a perfectly horizontal table, but its pitch axis reads +2 degrees instead of 0 degrees. That constant +2 degree shift is a bias error that needs a calibration offset subtracted from every raw reading before feeding it into your balance control loop.",
-   "exercise": "Write a short pseudocode snippet or logic description to take a raw sensor reading from an analog distance sensor, apply a measured offset value and a scaling factor, and return the corrected distance in centimeters.",
-   "model_answer": "float calibrate_distance(float raw_adc_value) {\n    float offset = 5.0;\n    float scale_factor = 0.12;\n    float corrected_distance = (raw_adc_value * scale_factor) - offset;\n    if (corrected_distance < 0.0) return 0.0;\n    return corrected_distance;\n}",
-   "why_it_works": "It applies a linear transformation\u2014multiplying by a scale factor to fix sensitivity errors and subtracting an offset to fix zero-point bias\u2014which directly addresses the two most common types of hardware measurement errors without overloading a small microcontroller.",
-   "improvement_tip": "Always test your sensors across multiple known points rather than just zero, and remember that temperature changes can alter calibration values over time.",
+   "topic": "Read a simple circuit diagram and identify power and ground paths",
+   "explanation": "A circuit diagram is a visual map of how electricity flows through your hardware. Every functional circuit needs a complete loop to work, starting from a power source and returning to ground. The power path, often labeled as VCC, 5V, or 3.3V, carries electrical energy from your source, like a battery or voltage regulator, into your components, such as a motor driver or microchip. The ground path, often labeled as GND or represented by a triangle or flat lines, acts as the return route back to the power source. If either path is broken or missing, current cannot flow, and your robot or embedded board will not turn on.",
+   "practical_example": "Imagine looking at the schematic for a small line-following robot. You see a 9V battery symbol connected to a voltage regulator. The line leaving the regulator marked '5V' is your power path, feeding into your microcontroller and infrared sensors. The lines marked 'GND' link every component back to the negative terminal of the battery, completing the electrical loop.",
+   "exercise": "Take a look at a basic schematic for an EEG headphone sensor breakout board. Trace the pin labeled '3.3V' to find where it enters the main amplifier chip. Then, trace the pin labeled 'GND' to see how it connects back to your microcontroller's ground pin. What happens to the power path if you accidentally disconnect the wire leading to the GND pin?",
+   "model_answer": "The 3.3V pin delivers operating voltage to the amplifier chip, while the GND pin provides the return path to complete the circuit. If the GND wire is disconnected, the electrical loop is broken, current stops flowing entirely, and the EEG sensor will power off or fail to read brain signals.",
+   "why_it_works": "Tracing paths teaches you to systematically verify hardware connections before powering up a prototype, preventing shorts or unpowered components in your robotics projects.",
+   "improvement_tip": "Always locate and highlight all VCC and GND symbols on a new schematic using a highlighter or software tool before looking at signal or data lines.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "linkedin": {
-   "topic": "Describe a robotics project using problem, design, test and result",
-   "explanation": "When listing a robotics, BCI, or embedded systems project on LinkedIn, structuring it clearly helps recruiters quickly understand your engineering process. Using four simple sections\u2014Problem, Design, Test, and Result\u2014shows you can identify a challenge, plan a hardware or software fix, run trials, and check your outcome without exaggerating.",
-   "practical_example": "Instead of writing a vague project summary like 'Built an obstacle-avoidance robot', use the structured formula: Problem (The ultrasonic sensor missed narrow obstacles due to a wide beam angle), Design (Added a secondary infrared sensor and wrote interrupt-based fusion logic in C), Test (Ran 20 trials across varied lighting and wall textures in the campus lab), and Result (Achieved 90 percent successful obstacle detection; documented code and test notes on GitHub).",
-   "exercise": "Take one of your university or personal hardware projects\u2014such as a line-following robot, an EEG signal filter, or an STM32-based timer\u2014and draft a short LinkedIn project entry by filling in these four clear headings: Problem, Design, Test, and Result, using only facts you can verify.",
-   "model_answer": "Problem: The custom ECG amplifier circuit picked up 50Hz powerline noise, obscuring clean signals. Design: Added a twin-T notch filter layout in KiCad and soldered it onto a perfboard. Test: Connected the circuit to an oscilloscope to measure peak-to-peak noise reduction before and after the filter. Result: Successfully attenuated the 50Hz interference and visualized stable waveform data in Python. View schematic and code on my profile links.",
-   "why_it_works": "Breaking your project down into Problem, Design, Test, and Result proves to engineering recruiters in India that you follow a rigorous, methodical engineering approach rather than just assembling parts blindly.",
-   "improvement_tip": "Keep your descriptions concise; use bullet points under each of the four headings so recruiters scanning your profile can read your engineering workflow in under 30 seconds.",
+   "topic": "Improve a GitHub README so a recruiter can reproduce the project",
+   "explanation": "When a recruiter or hiring manager clicks the GitHub link on your LinkedIn profile, they should not have to guess how to run your code or set up your hardware. A clear README acts as an instruction manual for your robotics, BCI, or embedded systems project. It tells the reader what hardware components are required, how to wire them, and how to flash the firmware or run the scripts so they can verify your work.",
+   "practical_example": "If your project is an ESP32-based Wi-Fi-controlled robotic rover, your README should include a clear parts list, a wiring pinout table, and steps to install the necessary libraries in the Arduino IDE before uploading the code.",
+   "exercise": "Take one of your existing GitHub repositories for a microcontroller or sensor project and write a simple instruction checklist showing a reviewer how to set up the hardware connections and build the software from scratch.",
+   "model_answer": "## Hardware Setup\n- ESP32 Development Board\n- HC-SR04 Ultrasonic Sensor\n\n### Pinout\n| ESP32 Pin | Sensor Pin |\n|---|---||\n| GPIO 23 | Trig |\n| GPIO 22 | Echo |\n\n## Running the Code\n1. Open the project folder in VS Code with PlatformIO.\n2. Connect the ESP32 via USB.\n3. Run `pio run --target upload` to flash the firmware.",
+   "why_it_works": "It gives technical recruiters and engineers an instant, transparent roadmap to test your project without guessing pin numbers or software dependencies.",
+   "improvement_tip": "Add a short GIF or a link to a 10-second video clip right at the top of your README showing the working hardware prototype.",
    "confidence": "Unverified: AI-written from model knowledge, no live sources"
   },
   "oi_paper": {
    "paper": "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish",
-   "focus": "Research design and method",
-   "explanation": "The study uses human stem cells to grow 3D brain organoids in the lab that mimic brain tissue structure and learning functions. Researchers use microfluidic systems to keep the tissue alive and growing, and 3D microelectrode arrays to send electrical signals and record how the organoids respond. These tools help test whether brain organoids can process information and learn.",
-   "limits": "The abstract mentions the methods being developed but does not provide specific experimental results or performance data.",
+   "focus": "Reviewing findings on growing advanced brain organoids to study learning, memory, and biological computing.",
+   "explanation": "The paper discusses how lab-grown 3D brain cells can be produced with high density and supportive structures like glial cells and myelin. It explains that new microfluidic systems and microelectrode arrays allow researchers to record electrical signals and test stimulus-response training.",
+   "limits": "The abstract mentions ongoing development of technologies rather than finalized, large-scale computing results, so practical computing limits are still uncertain.",
    "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.3389/fsci.2023.1017235",
    "doi_link": "https://doi.org/10.3389/fsci.2023.1017235",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "bci_paper": {
    "paper": "A high-performance speech neuroprosthesis (Willett 2023)",
-   "focus": "Research design and method for turning brain activity into text.",
-   "explanation": "Tiny sensors implanted in the brain record signals when the participant tries to talk. Advanced computer programs then translate those brain signals into written words on a screen.",
-   "limits": "The method currently relies on data from a single participant who has amyotrophic lateral sclerosis.",
-   "check": "Based on the provided abstract and general scientific understanding.",
+   "focus": "Results and figures from the brain-computer interface experiment",
+   "explanation": "The system successfully translated brain signals into text at a rate of 62 words per minute. For a 50-word vocabulary, it achieved a 9.1 percent word error rate. For a much larger 125,000-word vocabulary, it achieved a 23.8 percent word error rate.",
+   "limits": "The data is limited to the abstract provided, and specific performance figures on other potential participants are not detailed here.",
+   "check": "high",
    "confidence": "Preliminary: AI explanation of a verified record",
    "doi": "10.1038/s41586-023-06377-x",
    "doi_link": "https://doi.org/10.1038/s41586-023-06377-x",
-   "day": "2 of 5",
+   "day": "3 of 5",
    "access_level": "Abstract and metadata from Crossref; full text not read. Verify against the DOI link."
   },
   "github": {
-   "project_name": "moveit/moveit2",
-   "investigation_day": "Day 3 of 3",
-   "phase_focus": "Run it in simulation and engineering judgement",
-   "description": "A widely used motion planning framework designed for ROS 2, primarily written in C++ and made for robotic manipulation tasks.",
-   "simulation_and_testing_notes": "Because this project handles robot kinematics and path planning, engineering judgement suggests testing it inside a simulated robot environment before deploying it to physical hardware to prevent potential collisions or hardware damage.",
-   "small_challenge": "Identify which ROS 2 distribution matches your current system workspace environment before attempting a source or binary install.",
-   "knowledge_ check": "True or False: MoveIt 2 is an open-source framework specifically built for ROS 2 robot arm manipulation.",
+   "day": "1 of 3",
+   "phase": "Understand the project",
+   "project_name": "Navigation2 (Nav2)",
+   "repository": "ros-navigation/navigation2",
+   "main_language": "C++",
+   "description": "A robot navigation framework and system built for ROS 2.",
+   "active_status": "Active, with recent updates up to late 2026",
+   "key_resources": {
+    "documentation": "https://docs.nav2.org/",
+    "community_slack": "Available via community invite link",
+    "professional_support": "Provided by Open Navigation"
+   },
+   "sponsors": [
+    "Dexory",
+    "Nvidia",
+    "AMD",
+    "Polymath Robotics",
+    "Stereolabs",
+    "3Laws Robotics",
+    "Staer"
+   ],
+   "beginner_explanation": "Nav2 is a software framework that helps robots move safely and autonomously from one place to another. It provides tools for mapping, path planning, obstacle avoidance, and robot control, primarily written in C++ for the Robot Operating System 2 (ROS 2).",
+   "daily_challenge": "Explore the official Nav2 documentation website and locate the 'Getting Started' guide to understand the basic prerequisites for running the framework.",
+   "knowledge_check": "What primary robotic middleware and programming language does Nav2 rely upon?",
    "confidence": "Based on verified repo metadata and README excerpt; code was not run",
    "verified_metadata": {
-    "full_name": "moveit/moveit2",
-    "html_url": "https://github.com/moveit/moveit2",
-    "description": ":robot: MoveIt for ROS 2",
-    "pushed_at": "2026-11-26T15:40:12Z",
+    "full_name": "ros-navigation/navigation2",
+    "html_url": "https://github.com/ros-navigation/navigation2",
+    "description": "ROS 2 Navigation Framework and System",
+    "pushed_at": "2026-11-27T21:00:29Z",
     "language": "C++",
     "archived": false,
-    "license": "BSD-3-Clause"
-   },
-   "day": "3 of 3"
+    "license": "NOASSERTION"
+   }
   },
   "news": {
    "items": [
     {
-     "category": "Industry view",
-     "url": "https://www.therobotreport.com/fcc-should-focus-on-robot-security-not-country-of-origin/",
-     "what": "A recommendation that the FCC prioritize robot security over the geographical origin of hardware.",
-     "who": "David Pinn, CEO of Brain Corp.",
-     "how": "By focusing on who maintains control over the software and systems once a robot is in use, rather than where the machine was put together. Background (general knowledge): Software security protocols are critical for preventing unauthorized remote access to connected devices.",
-     "why": "The author argues that where a robot is built provides little insight into potential security risks or data control.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "The security of a robot is determined by its digital management rather than its physical manufacturing location.",
-     "title": "FCC should focus on robot security, not country of origin",
-     "published": "2026-11-25",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
-    },
-    {
-     "category": "Industry view",
-     "url": "https://www.therobotreport.com/special-report-engineering-focus-on-motion-control/",
-     "what": "A report on recent technical progress in manufacturing automation.",
-     "who": "The Robot Report editorial team.",
-     "how": "By analyzing improvements in automation technologies, new use cases, and the development of AI and humanoid robotics. Background (general knowledge): Motion control involves the precise movement of mechanical components using sensors, actuators, and controllers.",
-     "why": "To provide insight into how advanced technologies are currently impacting manufacturing efficiency.",
-     "limits": "Not stated in the source excerpt",
-     "learn": "Manufacturing automation is evolving rapidly through the integration of artificial intelligence and human-shaped robots.",
-     "title": "Special Report: Engineering Focus on Motion Control",
-     "published": "2026-11-23",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
-    },
-    {
      "category": "Deployment",
-     "url": "https://www.therobotreport.com/massrobotics-launching-marine-robotics-facility-on-boston-harbor/",
-     "what": "The creation of a new specialized facility for underwater and marine-based robotics.",
-     "who": "MassRobotics.",
-     "how": "Through the launch of a dedicated location on Boston Harbor. Background (general knowledge): Marine robotics are used for ocean exploration, underwater infrastructure inspection, and environmental monitoring.",
-     "why": "To establish a hub for marine-focused robotic development and programming.",
-     "limits": "The facility is scheduled to open in early 2028, with programming expected to begin in 2027.",
-     "learn": "A new dedicated research and development environment for marine robotics is coming to the Boston area.",
-     "title": "MassRobotics launching marine robotics facility on Boston Harbor",
-     "published": "2026-11-20",
-     "source": "The Robot Report",
-     "confidence": "Single-source report (feed excerpt only). Open the original source."
+     "url": "https://www.therobotreport.com/gxo-doubling-down-on-robotics-in-2027/",
+     "what": "GXO plans to increase its use of robotics by 2027.",
+     "who": "GXO",
+     "how": "Not stated in the source excerpt. Background (general knowledge): GXO is a logistics company that utilizes automated systems to move, sort, and organize goods in warehouses.",
+     "why": "Not stated in the source excerpt.",
+     "limits": "GXO has not named the specific robot providers they plan to work with.",
+     "learn": "The company is expanding its existing portfolio of automated technologies.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "GXO doubling down on robotics in 2027",
+     "published": "2026-11-27",
+     "source": "The Robot Report"
+    },
+    {
+     "category": "Research",
+     "url": "https://robohub.org/robot-talk-episode-172-robots-that-learn-like-children-with-leticia-mara-berto/",
+     "what": "Researchers are developing robots that learn and make decisions using models based on how children develop.",
+     "who": "Leticia Mara Berto from the University of Manchester Cognitive Robotics Lab.",
+     "how": "The research focuses on self-motivation and cognitive development principles derived from child psychology to help robots become more autonomous.",
+     "why": "To improve decision-making and cognitive abilities in autonomous machines.",
+     "limits": "Not stated in the source excerpt.",
+     "learn": "Robotics can be improved by mimicking the natural learning processes found in human childhood development.",
+     "confidence": "Single-source report (feed excerpt only). Open the original source.",
+     "title": "Robot Talk Episode 172 \u2013 Robots that learn like children, with Leticia Mara Berto",
+     "published": "2026-11-27",
+     "source": "Robohub"
     }
    ]
   },
   "jobs": {
    "items": [
     {
-     "title": "Robotics Systems Engineer (Mechanical)",
+     "title": "Softwarearchitekt Embedded Systems (m/w/d) Dresden",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Zurich, Switzerland",
-     "published": "2026-11-26",
+     "location": "Dresden",
+     "published": "2026-11-27",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/anybotics/robotics-systems-engineer-mechanical-zurich-switzerland-323895",
-     "company": "Anybotics"
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwarearchitekt-embedded-systems-dresden-345874",
+     "company": "MY Humancapital GmbH"
     },
     {
-     "title": "High Voltage Electrical Engineer",
+     "title": "End-of-Line Robotics Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Zurich",
-     "published": "2026-11-26",
+     "location": "Z\u00fcrich",
+     "published": "2026-11-27",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.ch/jobs/companies/proxima-fusion-gmbh/high-voltage-electrical-engineer-zurich-369604",
-     "company": "Proxima Fusion GmbH"
+     "url": "https://www.arbeitnow.ch/jobs/companies/cdds-ag/end-of-line-robotics-engineer-zurich-384157",
+     "company": "CDDS AG"
     },
     {
-     "title": "Network Security & Automation Engineer (Relocation Provided)",
+     "title": "AI Robotics Engineer",
      "type": "vacancy listing (availability not independently verified)",
-     "location": "Amsterdam",
-     "published": "2026-11-26",
+     "location": "Lugano",
+     "published": "2026-11-27",
      "source": "Arbeitnow",
-     "url": "https://www.arbeitnow.nl/jobs/companies/wypoon/network-security-automation-engineer-relocation-provided-amsterdam-260825",
-     "company": "Wypoon"
+     "url": "https://www.arbeitnow.ch/jobs/companies/inspire-ag/ai-robotics-engineer-lugano-192347",
+     "company": "inspire AG"
+    },
+    {
+     "title": "Softwareentwickler Automatisierungstechnik SPS (m/w/d)",
+     "type": "vacancy listing (availability not independently verified)",
+     "location": "Munich",
+     "published": "2026-11-27",
+     "source": "Arbeitnow",
+     "url": "https://www.arbeitnow.com/jobs/companies/my-humancapital-gmbh/softwareentwickler-automatisierungstechnik-sps-munich-306111",
+     "company": "MY Humancapital GmbH"
     }
    ],
    "action": "Open a listing and verify eligibility, location, application deadline, and required skills on the employer's official page.",

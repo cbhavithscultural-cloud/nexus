@@ -1,20 +1,20 @@
 {
- "oi": 27,
- "bci": 27,
+ "oi": 28,
+ "bci": 28,
  "po": [
   5,
-  3
+  4
  ],
  "pb": [
   5,
-  3
+  4
  ],
  "gh": [
   9,
-  1
+  2
  ],
- "ip": 27,
- "li": 27,
+ "ip": 28,
+ "li": 28,
  "seen": [
   "https://www.therobotreport.com/gecko-robotics-earns-300m-contract-with-the-u-s-navy/",
   "https://www.therobotreport.com/avenda-health-expands-unfold-ai-platform-support-intraoperative-prostate-cancer-care/",
@@ -106,6 +106,8 @@
   "https://spectrum.ieee.org/darpa-triage-challenge-final-robots",
   "https://www.therobotreport.com/fcc-should-focus-on-robot-security-not-country-of-origin/",
   "https://www.therobotreport.com/special-report-engineering-focus-on-motion-control/",
-  "https://www.therobotreport.com/massrobotics-launching-marine-robotics-facility-on-boston-harbor/"
+  "https://www.therobotreport.com/massrobotics-launching-marine-robotics-facility-on-boston-harbor/",
+  "https://www.therobotreport.com/gxo-doubling-down-on-robotics-in-2027/",
+  "https://robohub.org/robot-talk-episode-172-robots-that-learn-like-children-with-leticia-mara-berto/"
  ]
 }
